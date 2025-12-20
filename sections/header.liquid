@@ -232,9 +232,11 @@
           </localization-form>
         {%- endif -%}
       </div>
-      {% render 'header-search', input_id: 'Search-In-Modal' %}
+      {%- if section.settings.enable_search -%}
+        {% render 'header-search', input_id: 'Search-In-Modal' %}
+      {%- endif -%}
 
-      {%- if shop.customer_accounts_enabled -%}
+      {%- if section.settings.enable_account and shop.customer_accounts_enabled -%}
         <a
           href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
           class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
@@ -245,11 +247,11 @@
               {%- if customer and customer.has_avatar? -%}
                 {{ customer | avatar }}
               {%- else -%}
-                <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
+                <span class="svg-wrapper">{{ section.settings.account_icon | inline_asset_content }}</span>
               {%- endif -%}
             </account-icon>
           {%- else -%}
-            <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
+            <span class="svg-wrapper">{{ section.settings.account_icon | inline_asset_content }}</span>
           {%- endif -%}
           <span class="visually-hidden">
             {%- liquid
@@ -267,25 +269,36 @@
         {%- case block.type -%}
           {%- when '@app' -%}
             {% render block %}
+          {%- when 'custom_icon' -%}
+            <a
+              href="{{ block.settings.link }}"
+              class="header__icon header__icon--custom link focus-inset"
+              {% if block.settings.open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+            >
+              <span class="svg-wrapper">{{ block.settings.icon | inline_asset_content }}</span>
+              <span class="visually-hidden">{{ block.settings.label }}</span>
+            </a>
         {%- endcase -%}
       {%- endfor -%}
 
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+      {%- if section.settings.enable_cart -%}
+        <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
           {% if cart == empty %}
-            <span class="svg-wrapper">{{'icon-cart-empty.svg' | inline_asset_content }}</span>
+            <span class="svg-wrapper">{{ section.settings.cart_icon_empty | inline_asset_content }}</span>
           {% else %}
-            <span class="svg-wrapper">{{'icon-cart.svg' | inline_asset_content }}</span>
+            <span class="svg-wrapper">{{ section.settings.cart_icon | inline_asset_content }}</span>
           {% endif %}
-        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-        {%- if cart != empty -%}
-          <div class="cart-count-bubble">
-            {%- if cart.item_count < 100 -%}
-              <span aria-hidden="true">{{ cart.item_count }}</span>
-            {%- endif -%}
-            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-          </div>
-        {%- endif -%}
-      </a>
+          <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+          {%- if cart != empty -%}
+            <div class="cart-count-bubble">
+              {%- if cart.item_count < 100 -%}
+                <span aria-hidden="true">{{ cart.item_count }}</span>
+              {%- endif -%}
+              <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+            </div>
+          {%- endif -%}
+        </a>
+      {%- endif -%}
     </div>
   </header>
 </{{ header_tag }}>
@@ -450,7 +463,7 @@
 {
   "name": "t:sections.header.name",
   "class": "section-header",
-  "max_blocks": 3,
+  "max_blocks": 10,
   "settings": [
     {
       "type": "select",
@@ -592,6 +605,49 @@
     },
     {
       "type": "header",
+      "content": "Header Icons"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_search",
+      "default": true,
+      "label": "Enable search icon"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_account",
+      "default": true,
+      "label": "Enable account icon"
+    },
+    {
+      "type": "html",
+      "id": "account_icon",
+      "label": "Account icon SVG",
+      "default": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" class=\"icon icon-account\" viewBox=\"0 0 18 19\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M6 4.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-4a4 4 0 1 0 0 8 4 4 0 0 0 0-8m5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15M9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35\" clip-rule=\"evenodd\"/></svg>",
+      "info": "Paste your custom SVG code here"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_cart",
+      "default": true,
+      "label": "Enable cart icon"
+    },
+    {
+      "type": "html",
+      "id": "cart_icon",
+      "label": "Cart icon SVG (with items)",
+      "default": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" class=\"icon icon-cart\" viewBox=\"0 0 40 40\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M20.5 6.5a4.75 4.75 0 0 0-4.75 4.75v.56h-3.16l-.77 11.6a5 5 0 0 0 4.99 5.34h7.38a5 5 0 0 0 4.99-5.33l-.77-11.6h-3.16v-.57A4.75 4.75 0 0 0 20.5 6.5m3.75 5.31v-.56a3.75 3.75 0 1 0-7.5 0v.56zm-7.5 1h7.5v.56a3.75 3.75 0 1 1-7.5 0zm-1 0v.56a4.75 4.75 0 1 0 9.5 0v-.56h2.22l.71 10.67a4 4 0 0 1-3.99 4.27h-7.38a4 4 0 0 1-4-4.27l.72-10.67z\"/></svg>",
+      "info": "Paste your custom SVG code for cart with items"
+    },
+    {
+      "type": "html",
+      "id": "cart_icon_empty",
+      "label": "Cart icon SVG (empty)",
+      "default": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" class=\"icon icon-cart-empty\" viewBox=\"0 0 40 40\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M15.75 11.8h-3.16l-.77 11.6a5 5 0 0 0 4.99 5.34h7.38a5 5 0 0 0 4.99-5.33L28.4 11.8zm0 1h-2.22l-.71 10.67a4 4 0 0 0 3.99 4.27h7.38a4 4 0 0 0 4-4.27l-.72-10.67h-2.22v.63a4.75 4.75 0 1 1-9.5 0zm8.5 0h-7.5v.63a3.75 3.75 0 1 0 7.5 0z\"/></svg>",
+      "info": "Paste your custom SVG code for empty cart"
+    },
+    {
+      "type": "header",
       "content": "t:sections.all.spacing"
     },
     {
@@ -632,6 +688,37 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "custom_icon",
+      "name": "Custom Icon",
+      "settings": [
+        {
+          "type": "html",
+          "id": "icon",
+          "label": "Icon SVG",
+          "default": "<svg xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\" focusable=\"false\" fill=\"none\" viewBox=\"0 0 18 18\"><path d=\"M9 1a8 8 0 108 8 8 8 0 00-8-8zm0 15A7 7 0 119 2a7 7 0 010 14z\" fill=\"currentColor\"/></svg>",
+          "info": "Paste your custom SVG code here"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Icon Label",
+          "default": "Custom Link",
+          "info": "For accessibility purposes"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link URL"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_new_tab",
+          "label": "Open in new tab",
+          "default": false
+        }
+      ]
     }
   ]
 }
