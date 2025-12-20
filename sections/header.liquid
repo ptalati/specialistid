@@ -247,11 +247,23 @@
               {%- if customer and customer.has_avatar? -%}
                 {{ customer | avatar }}
               {%- else -%}
-                <span class="svg-wrapper">{{ section.settings.account_icon | inline_asset_content }}</span>
+                <span class="svg-wrapper">
+                  {%- if section.settings.account_icon != blank -%}
+                    {{ section.settings.account_icon | inline_asset_content }}
+                  {%- else -%}
+                    {{ 'icon-account.svg' | inline_asset_content }}
+                  {%- endif -%}
+                </span>
               {%- endif -%}
             </account-icon>
           {%- else -%}
-            <span class="svg-wrapper">{{ section.settings.account_icon | inline_asset_content }}</span>
+            <span class="svg-wrapper">
+              {%- if section.settings.account_icon != blank -%}
+                {{ section.settings.account_icon | inline_asset_content }}
+              {%- else -%}
+                {{ 'icon-account.svg' | inline_asset_content }}
+              {%- endif -%}
+            </span>
           {%- endif -%}
           <span class="visually-hidden">
             {%- liquid
@@ -284,9 +296,21 @@
       {%- if section.settings.enable_cart -%}
         <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
           {% if cart == empty %}
-            <span class="svg-wrapper">{{ section.settings.cart_icon_empty | inline_asset_content }}</span>
+            <span class="svg-wrapper">
+              {%- if section.settings.cart_icon_empty != blank -%}
+                {{ section.settings.cart_icon_empty | inline_asset_content }}
+              {%- else -%}
+                {{ 'icon-cart-empty.svg' | inline_asset_content }}
+              {%- endif -%}
+            </span>
           {% else %}
-            <span class="svg-wrapper">{{ section.settings.cart_icon | inline_asset_content }}</span>
+            <span class="svg-wrapper">
+              {%- if section.settings.cart_icon != blank -%}
+                {{ section.settings.cart_icon | inline_asset_content }}
+              {%- else -%}
+                {{ 'icon-cart.svg' | inline_asset_content }}
+              {%- endif -%}
+            </span>
           {% endif %}
           <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
           {%- if cart != empty -%}
