@@ -52,8 +52,7 @@
 
   /* Inline search input styling */
   .header__search-inline {
-    flex: 1;
-    max-width: var(--search-inline-width, 400px);
+    width: 400px;
     margin: 0 1.5rem;
     display: none;
   }
@@ -175,7 +174,7 @@
 
   {%- if section.settings.enable_search_inline -%}
     .header__search-inline {
-      max-width: {{ section.settings.search_inline_width }}px !important;
+      width: {{ section.settings.search_inline_width }}px;
     }
   {%- endif -%}
 {%- endstyle -%}
