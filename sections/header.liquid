@@ -22,6 +22,25 @@
     margin-left: -1.2rem;
   }
 
+  /* When menu is positioned below the header, make it fullscreen on desktop */
+  .header__menu-below {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--header-height);
+    bottom: 0;
+    background: var(--color-background, #fff);
+    z-index: 40;
+    overflow: auto;
+    display: none; /* only enable for desktop via media query */
+  }
+
+  @media screen and (min-width: 990px) {
+    .header__menu-below {
+      display: block;
+    }
+  }
+
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
     .scrolled-past-header .header__heading-logo-wrapper {
       width: 75%;
@@ -181,7 +200,7 @@
     {%- endif -%}
 
     {%- liquid
-      if section.settings.menu != blank
+      if section.settings.menu != blank and section.settings.menu_position != 'below_fullscreen'
         if section.settings.menu_type_desktop == 'dropdown'
           render 'header-dropdown-menu'
         elsif section.settings.menu_type_desktop != 'drawer'
@@ -343,6 +362,18 @@
     </div>
   </header>
 </{{ header_tag }}>
+
+{%- if section.settings.menu != blank and section.settings.menu_position == 'below_fullscreen' -%}
+  <div class="header__menu-below" role="navigation" aria-label="Main menu below header">
+    {%- if section.settings.menu_type_desktop == 'dropdown' -%}
+      {% render 'header-dropdown-menu' %}
+    {%- elsif section.settings.menu_type_desktop != 'drawer' -%}
+      {% render 'header-mega-menu' %}
+    {%- else -%}
+      {% render 'header-drawer' %}
+    {%- endif -%}
+  </div>
+{%- endif -%}
 
 {%- if settings.cart_type == 'notification' -%}
   {%- render 'cart-notification',
@@ -577,6 +608,22 @@
       ],
       "default": "dropdown",
       "label": "t:sections.header.settings.menu_type_desktop.label"
+    },
+    {
+      "type": "select",
+      "id": "menu_position",
+      "options": [
+        {
+          "value": "inline",
+          "label": "Inline"
+        },
+        {
+          "value": "below_fullscreen",
+          "label": "Below (fullscreen on desktop)"
+        }
+      ],
+      "default": "inline",
+      "label": "Menu position"
     },
     {
       "type": "select",
