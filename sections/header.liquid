@@ -448,7 +448,7 @@
 </{{ header_tag }}>
 
 {%- if section.settings.menu != blank and section.settings.menu_position == 'below_fullscreen' -%}
-  <div class="header__menu-below" role="navigation" aria-label="Main menu below header">
+  <div class="header__menu-below header-wrapper--border-bottom" role="navigation" aria-label="Main menu below header">
     <div class="header__menu-below-inner page-width">
       {%- if section.settings.menu_type_desktop == 'dropdown' -%}
         {% render 'header-dropdown-menu' %}
