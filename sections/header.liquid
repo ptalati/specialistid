@@ -22,29 +22,23 @@
     margin-left: -1.2rem;
   }
 
-  /* When menu is positioned below the header, make it fullscreen on desktop */
+  /* When menu is positioned below the header, render as a full-width block below header */
   .header__menu-below {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: var(--header-height);
-    bottom: 0;
-    background: transparent;
-    z-index: 40;
-    overflow: auto;
-    display: none; /* only enable for desktop via media query */
+    width: 100%;
+    background-color: transparent;
+    display: none;
   }
 
+  /* Only show on desktop when this layout is active */
   @media screen and (min-width: 990px) {
     .header__menu-below {
       display: block;
     }
   }
 
-  /* When header becomes sticky, make the below menu match the header background */
+  /* When header becomes sticky, add header background to the menu area */
   .shopify-section-header-sticky .header__menu-below {
     background-color: rgb(var(--color-background));
-    top: var(--header-height);
   }
 
   /* Inner wrapper constrains menu to the page width like Dawn */
@@ -377,13 +371,15 @@
 
 {%- if section.settings.menu != blank and section.settings.menu_position == 'below_fullscreen' -%}
   <div class="header__menu-below" role="navigation" aria-label="Main menu below header">
-    {%- if section.settings.menu_type_desktop == 'dropdown' -%}
-      {% render 'header-dropdown-menu' %}
-    {%- elsif section.settings.menu_type_desktop != 'drawer' -%}
-      {% render 'header-mega-menu' %}
-    {%- else -%}
-      {% render 'header-drawer' %}
-    {%- endif -%}
+    <div class="header__menu-below-inner page-width">
+      {%- if section.settings.menu_type_desktop == 'dropdown' -%}
+        {% render 'header-dropdown-menu' %}
+      {%- elsif section.settings.menu_type_desktop != 'drawer' -%}
+        {% render 'header-mega-menu' %}
+      {%- else -%}
+        {% render 'header-drawer' %}
+      {%- endif -%}
+    </div>
   </div>
 {%- endif -%}
 
