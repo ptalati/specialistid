@@ -50,6 +50,32 @@
     align-items: center;
   }
 
+  /* Inline search input styling */
+  .header__search-inline {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 1.5rem;
+  }
+
+  .header__search-inline .search__form {
+    display: flex;
+    gap: 0;
+  }
+
+  .header__search-inline .field {
+    flex: 1;
+    display: flex;
+  }
+
+  .header__search-inline .search__input {
+    flex: 1;
+    border-radius: 0;
+  }
+
+  .header__search-inline .search__button {
+    border-radius: 0;
+  }
+
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
     .scrolled-past-header .header__heading-logo-wrapper {
       width: 75%;
@@ -208,6 +234,30 @@
       {%- endif -%}
     {%- endif -%}
 
+    {%- if section.settings.enable_search_inline and section.settings.enable_search != false -%}
+      <div class="header__search-inline">
+        <search-form class="search">
+          <form action="{{ routes.search_url }}" method="get" role="search" class="search__form">
+            <div class="field">
+              <input
+                class="search__input field__input"
+                id="Search-Inline"
+                type="search"
+                name="q"
+                value="{{ search.terms | escape }}"
+                placeholder="{{ 'general.search.search' | t }}"
+              >
+              <button class="search__button field__button" type="submit" aria-label="{{ 'general.search.search' | t }}">
+                <svg class="icon icon-search" aria-hidden="true" focusable="false" viewBox="0 0 40 40">
+                  <path d="M17 28c6.1 0 11-4.9 11-11s-4.9-11-11-11-11 4.9-11 11 4.9 11 11 11zm14-7h-3l-1-1c2-2.4 3-5.4 3-8.5 0-7.9-6.4-14.3-14.3-14.3S2.7 2.6 2.7 10.5 9.1 24.8 17 24.8c3 0 6-1 8.5-3l1 1v3l11 11 3-3-11-11z" fill="currentColor"/>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </search-form>
+      </div>
+    {%- endif -%}
+
     {%- liquid
       if section.settings.menu != blank and section.settings.menu_position != 'below_fullscreen'
         if section.settings.menu_type_desktop == 'dropdown'
@@ -275,7 +325,7 @@
           </localization-form>
         {%- endif -%}
       </div>
-      {%- if section.settings.enable_search != false -%}
+      {%- if section.settings.enable_search != false and section.settings.enable_search_inline == false -%}
         {% render 'header-search', input_id: 'Search-In-Modal' %}
       {%- endif -%}
 
@@ -716,6 +766,12 @@
       "id": "enable_search",
       "default": true,
       "label": "Enable search icon"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_search_inline",
+      "default": false,
+      "label": "Show search as inline input (instead of modal)"
     },
     {
       "type": "checkbox",
