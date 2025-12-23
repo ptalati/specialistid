@@ -172,6 +172,12 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  {%- if section.settings.enable_search_inline -%}
+    .header__search-inline {
+      max-width: {{ section.settings.search_inline_width }}px !important;
+    }
+  {%- endif -%}
 {%- endstyle -%}
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
@@ -255,7 +261,7 @@
     {%- endif -%}
 
     {%- if section.settings.enable_search_inline and section.settings.enable_search != false -%}
-      <div class="header__search-inline" style="--search-inline-width: {{ section.settings.search_inline_width }}px">
+      <div class="header__search-inline">
         <search-form class="search">
           <form action="{{ routes.search_url }}" method="get" role="search" class="search__form">
             <div class="field">
