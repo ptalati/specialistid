@@ -53,8 +53,15 @@
   /* Inline search input styling */
   .header__search-inline {
     flex: 1;
-    max-width: 400px;
+    max-width: var(--search-inline-width, 400px);
     margin: 0 1.5rem;
+    display: none;
+  }
+
+  @media screen and (min-width: 750px) {
+    .header__search-inline {
+      display: block;
+    }
   }
 
   .header__search-inline .search__form {
@@ -65,15 +72,28 @@
   .header__search-inline .field {
     flex: 1;
     display: flex;
+    align-items: center;
   }
 
   .header__search-inline .search__input {
     flex: 1;
     border-radius: 0;
+    padding: 0.6rem 1rem;
+    min-height: 44px;
   }
 
   .header__search-inline .search__button {
     border-radius: 0;
+    padding: 0.6rem 1rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__search-inline .icon-search {
+    width: 18px;
+    height: 18px;
   }
 
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
@@ -235,7 +255,7 @@
     {%- endif -%}
 
     {%- if section.settings.enable_search_inline and section.settings.enable_search != false -%}
-      <div class="header__search-inline">
+      <div class="header__search-inline" style="--search-inline-width: {{ section.settings.search_inline_width }}px">
         <search-form class="search">
           <form action="{{ routes.search_url }}" method="get" role="search" class="search__form">
             <div class="field">
@@ -248,9 +268,9 @@
                 placeholder="{{ 'general.search.search' | t }}"
               >
               <button class="search__button field__button" type="submit" aria-label="{{ 'general.search.search' | t }}">
-                <svg class="icon icon-search" aria-hidden="true" focusable="false" viewBox="0 0 40 40">
-                  <path d="M17 28c6.1 0 11-4.9 11-11s-4.9-11-11-11-11 4.9-11 11 4.9 11 11 11zm14-7h-3l-1-1c2-2.4 3-5.4 3-8.5 0-7.9-6.4-14.3-14.3-14.3S2.7 2.6 2.7 10.5 9.1 24.8 17 24.8c3 0 6-1 8.5-3l1 1v3l11 11 3-3-11-11z" fill="currentColor"/>
-                </svg>
+                <span class="svg-wrapper">
+                  {{ 'icon-search.svg' | inline_asset_content }}
+                </span>
               </button>
             </div>
           </form>
@@ -772,6 +792,16 @@
       "id": "enable_search_inline",
       "default": false,
       "label": "Show search as inline input (instead of modal)"
+    },
+    {
+      "type": "range",
+      "id": "search_inline_width",
+      "min": 200,
+      "max": 600,
+      "step": 20,
+      "unit": "px",
+      "label": "Inline search width",
+      "default": 300
     },
     {
       "type": "checkbox",
