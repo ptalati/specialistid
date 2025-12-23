@@ -34,6 +34,24 @@
           "type": "price",
           "settings": {}
         },
+        "regios_discounts_volume_pricing_table_L36WtN": {
+          "type": "shopify://apps/regios-discounts/blocks/volume_pricing_table/dc1514bb-4830-4102-bffa-e8b300bac5bd",
+          "settings": {
+            "table_bg": "",
+            "cell_title_quantity": "Quantity",
+            "cell_title_discount": "Discount",
+            "header_bg": "#000000",
+            "header_fg": "#ffffff",
+            "cell_bg": "",
+            "cell_fg": "#000000",
+            "discount_cell_template": "[discount_percentage] off",
+            "custom_table_css": "",
+            "custom_thead_css": "",
+            "custom_td_css": "",
+            "key": "",
+            "movable": true
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -104,6 +122,7 @@
         "title",
         "caption",
         "price",
+        "regios_discounts_volume_pricing_table_L36WtN",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
