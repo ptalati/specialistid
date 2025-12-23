@@ -34,6 +34,12 @@
           "type": "price",
           "settings": {}
         },
+        "regios_discounts_product_page_discount_BHiKmA": {
+          "type": "shopify://apps/regios-discounts/blocks/product_page_discount/dc1514bb-4830-4102-bffa-e8b300bac5bd",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "regios_discounts_volume_pricing_table_L36WtN": {
           "type": "shopify://apps/regios-discounts/blocks/volume_pricing_table/dc1514bb-4830-4102-bffa-e8b300bac5bd",
           "settings": {
@@ -122,6 +128,7 @@
         "title",
         "caption",
         "price",
+        "regios_discounts_product_page_discount_BHiKmA",
         "regios_discounts_volume_pricing_table_L36WtN",
         "variant_picker",
         "quantity_selector",
