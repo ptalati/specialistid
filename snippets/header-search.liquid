@@ -3,6 +3,8 @@
 
   Accepts:
   - input_id: {String} Id for the search input element (required)
+  - show_label: {Boolean} Whether to show the label below the icon
+  - custom_label: {String} Custom label text (optional)
 
   Usage:
   {% render 'header-search', input_id: 'My-Id'%}
@@ -23,6 +25,15 @@
           {{- 'icon-close.svg' | inline_asset_content -}}
         </span>
       </span>
+      {%- if show_label -%}
+        <span class="icon-label">
+          {%- if custom_label != blank -%}
+            {{ custom_label }}
+          {%- else -%}
+            {{ 'general.search.search' | t }}
+          {%- endif -%}
+        </span>
+      {%- endif -%}
     </summary>
     <div
       class="search-modal modal__content gradient"

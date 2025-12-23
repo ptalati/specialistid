@@ -223,6 +223,13 @@
       width: {{ section.settings.search_inline_width }}px;
     }
   {%- endif -%}
+
+  {%- if section.settings.show_icon_labels -%}
+    .header__icon .icon-label {
+      color: rgb(var(--color-foreground));
+      font-size: {{ section.settings.icon_label_font_size }}px;
+    }
+  {%- endif -%}
 {%- endstyle -%}
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
@@ -397,7 +404,11 @@
         {%- endif -%}
       </div>
       {%- if section.settings.enable_search != false and section.settings.enable_search_inline == false -%}
-        {% render 'header-search', input_id: 'Search-In-Modal' %}
+        {% render 'header-search',
+          input_id: 'Search-In-Modal',
+          show_label: section.settings.show_icon_labels,
+          custom_label: section.settings.search_label
+        %}
       {%- endif -%}
 
       {%- if section.settings.enable_account != false and shop.customer_accounts_enabled -%}
@@ -430,7 +441,13 @@
             </span>
           {%- endif -%}
           {%- if section.settings.show_icon_labels -%}
-            <span class="icon-label">{{ 'customer.account' | t }}</span>
+            <span class="icon-label">
+              {%- if section.settings.account_label != blank -%}
+                {{ section.settings.account_label }}
+              {%- else -%}
+                {{ 'customer.account' | t }}
+              {%- endif -%}
+            </span>
           {%- endif -%}
           <span class="visually-hidden">
             {%- liquid
@@ -485,7 +502,13 @@
             </span>
           {% endif %}
           {%- if section.settings.show_icon_labels -%}
-            <span class="icon-label">{{ 'templates.cart.cart' | t }}</span>
+            <span class="icon-label">
+              {%- if section.settings.cart_label != blank -%}
+                {{ section.settings.cart_label }}
+              {%- else -%}
+                {{ 'templates.cart.cart' | t }}
+              {%- endif -%}
+            </span>
           {%- endif -%}
           <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
           {%- if cart != empty -%}
@@ -846,6 +869,37 @@
       "id": "show_icon_labels",
       "default": false,
       "label": "Show labels below icons"
+    },
+    {
+      "type": "range",
+      "id": "icon_label_font_size",
+      "min": 10,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "Label font size",
+      "default": 11
+    },
+    {
+      "type": "text",
+      "id": "account_label",
+      "label": "Account icon label (custom)",
+      "default": "",
+      "info": "Leave empty to use default 'Account'"
+    },
+    {
+      "type": "text",
+      "id": "search_label",
+      "label": "Search icon label (custom)",
+      "default": "",
+      "info": "Leave empty to use default 'Search'"
+    },
+    {
+      "type": "text",
+      "id": "cart_label",
+      "label": "Cart icon label (custom)",
+      "default": "",
+      "info": "Leave empty to use default 'Cart'"
     },
     {
       "type": "checkbox",
