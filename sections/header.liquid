@@ -109,6 +109,52 @@
     }
   {%- endif -%}
 
+  /* Icon labels styling */
+  {%- if section.settings.show_icon_labels -%}
+    .header__icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .header__icon .icon-label {
+      font-size: 0.65rem;
+      margin-top: 0.25rem;
+      line-height: 1.2;
+      font-weight: 500;
+      max-width: 50px;
+      word-break: break-word;
+    }
+
+    /* Account icon label */
+    .header__icon--account .icon-label {
+      display: block;
+    }
+
+    /* Cart icon label */
+    .header__icon--cart .icon-label {
+      display: block;
+    }
+
+    /* Custom icon label */
+    .header__icon--custom .icon-label {
+      display: block;
+    }
+
+    /* Search icon - only show label on desktop */
+    .header__icon--search .icon-label {
+      display: none;
+    }
+
+    @media screen and (min-width: 750px) {
+      .header__icon--search .icon-label {
+        display: block;
+      }
+    }
+  {%- endif -%}
+
   .menu-drawer-container {
     display: flex;
   }
@@ -383,6 +429,9 @@
               {%- endif -%}
             </span>
           {%- endif -%}
+          {%- if section.settings.show_icon_labels -%}
+            <span class="icon-label">{{ 'customer.account' | t }}</span>
+          {%- endif -%}
           <span class="visually-hidden">
             {%- liquid
               if customer
@@ -408,6 +457,9 @@
               {% endif %}
             >
               <span class="svg-wrapper">{{ block.settings.icon }}</span>
+              {%- if section.settings.show_icon_labels -%}
+                <span class="icon-label">{{ block.settings.label }}</span>
+              {%- endif -%}
               <span class="visually-hidden">{{ block.settings.label }}</span>
             </a>
         {%- endcase -%}
@@ -432,6 +484,9 @@
               {%- endif -%}
             </span>
           {% endif %}
+          {%- if section.settings.show_icon_labels -%}
+            <span class="icon-label">{{ 'templates.cart.cart' | t }}</span>
+          {%- endif -%}
           <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
           {%- if cart != empty -%}
             <div class="cart-count-bubble">
@@ -785,6 +840,12 @@
     {
       "type": "header",
       "content": "Header Icons"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_icon_labels",
+      "default": false,
+      "label": "Show labels below icons"
     },
     {
       "type": "checkbox",
