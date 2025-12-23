@@ -52,11 +52,22 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "custom_liquid_BGQNDg": {
+      "type": "custom-liquid",
+      "name": "Content Below List",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\">\n{{ collection.metafields.seo.description_below_products | metafield_tag }}\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "banner",
     "product-grid",
-    "176648532367c6d47d"
+    "176648532367c6d47d",
+    "custom_liquid_BGQNDg"
   ]
 }
