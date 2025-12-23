@@ -57,7 +57,7 @@
       "type": "custom-liquid",
       "name": "Content Below List",
       "settings": {
-        "custom_liquid": "<div class=\"page-width\">\n{{ collection.metafields.seo.description_below_products.value | metafield_tag }}\n</div>",
+        "custom_liquid": "<div class=\"page-width\">\n{{ collection.metafields.seo.description_below_products | metafield_tag }}\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
