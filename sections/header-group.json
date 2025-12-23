@@ -76,6 +76,7 @@
         "mobile_logo_position": "center",
         "menu": "mega-menu",
         "menu_type_desktop": "dropdown",
+        "menu_position": "below_fullscreen",
         "sticky_header_type": "always",
         "show_line_separator": true,
         "color_scheme": "scheme-1",
