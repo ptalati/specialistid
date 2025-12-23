@@ -112,20 +112,27 @@
   /* Icon labels styling */
   {%- if section.settings.show_icon_labels -%}
     .header__icon {
-      display: flex;
+      display: inline-flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      gap: 0.25rem;
+      min-width: 60px;
       text-align: center;
+    }
+
+    .header__icon .svg-wrapper {
+      flex-shrink: 0;
     }
 
     .header__icon .icon-label {
       font-size: 0.65rem;
-      margin-top: 0.25rem;
-      line-height: 1.2;
+      line-height: 1;
       font-weight: 500;
-      max-width: 50px;
+      max-width: 100%;
       word-break: break-word;
+      white-space: normal;
+      padding: 0 0.25rem;
     }
 
     /* Account icon label */
@@ -153,6 +160,18 @@
         display: block;
       }
     }
+
+    {%- if section.settings.show_icon_labels -%}
+      /* Align all icons at the top baseline when labels are shown */
+      .header__icons {
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .header__icon {
+        min-height: 60px;
+      }
+    {%- endif -%}
   {%- endif -%}
 
   .menu-drawer-container {
