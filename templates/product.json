@@ -34,6 +34,20 @@
           "type": "price",
           "settings": {}
         },
+        "volume_pricing_info_label_p6ebk7": {
+          "type": "volume_pricing_info_label",
+          "settings": {
+            "volume_pricing_available_text": "Volume Pricing Available"
+          }
+        },
+        "volume_pricing_available_PDNPnr": {
+          "type": "volume_pricing_available",
+          "settings": {
+            "show_volume_pricing_available": true,
+            "volume_pricing_available_text": "Volume Pricing Available",
+            "volume_pricing_available_link_text": "See Volume Pricing"
+          }
+        },
         "regios_discounts_product_page_discount_BHiKmA": {
           "type": "shopify://apps/regios-discounts/blocks/product_page_discount/dc1514bb-4830-4102-bffa-e8b300bac5bd",
           "settings": {
@@ -58,6 +72,10 @@
             "movable": true
           }
         },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -65,8 +83,8 @@
             "swatch_shape": "circle"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
+        "total_price_nW98cY": {
+          "type": "total_price",
           "settings": {}
         },
         "buy_buttons": {
@@ -128,10 +146,13 @@
         "vendor",
         "caption",
         "price",
+        "volume_pricing_info_label_p6ebk7",
+        "volume_pricing_available_PDNPnr",
         "regios_discounts_product_page_discount_BHiKmA",
         "regios_discounts_volume_pricing_table_L36WtN",
-        "variant_picker",
         "quantity_selector",
+        "variant_picker",
+        "total_price_nW98cY",
         "buy_buttons",
         "description",
         "collapsible-row-0",
