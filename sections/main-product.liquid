@@ -15,6 +15,7 @@
   {{ 'component-slider.css' | asset_url | stylesheet_tag }}
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'custom-product.css' | asset_url | stylesheet_tag }}
 
   {% unless product.has_only_default_variant %}
     {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
@@ -140,6 +141,8 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
+              {% when 'discount_progress_bar' %}
+                {% render 'discount-progress-bar' %}
               {%- when 'product_review' -%}
                 <div class="product-reviews-wrapper">
                   <!-- Shopper Approved - sections/product-template -->
@@ -887,6 +890,12 @@
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
       "limit": 1
+    },
+    {
+      "type": "discount_progress_bar",
+      "name": "Discount Progress Bar",
+      "limit": 1,
+      "settings": []
     },
     {
       "type": "product_review",

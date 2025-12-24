@@ -1,0 +1,110 @@
+.product-reviews-wrapper {
+    float: left;
+    width: 50%;
+    line-height: 37.8px;
+    margin: 0 0 0 0 !important;
+}
+
+.stock_availability_label {
+    float: right;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 0 0 !important;
+}
+
+#product-available {
+    margin: 0 0 0 0 !important;
+}
+
+#product-available .variant-sku-part {
+    display: none;
+}
+
+.total-price-wrapper {
+    background-color: #f0f9eb;
+    border-color: #6FB43F;
+    padding: 1.5rem 2rem;
+    border-width: 2px;
+    border-radius: 0.5rem;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    border-style: solid;
+}
+
+.total-price-wrapper .label-wrapper {
+    color: #3A3A3C;
+    font-weight: 600;
+    font-size: 2.125rem;
+    line-height: 2.75rem;
+}
+
+.total-price-wrapper .total-price {
+    color: #6FB43F;
+    font-weight: 700;
+    font-size: 2.875rem;
+    line-height: 3.25rem;
+}
+
+.product-price {
+    color: #6FB43F;
+    font-weight: 700;
+    font-size: 3.25rem;
+    line-height: 3.5rem;
+}
+
+.regular-price {
+    color: rgb(var(--color-foreground));
+}
+
+.volume_pricing_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0 1rem 0 !important;
+}
+
+.volume_pricing_info .volume_pricing_label {
+    font-weight: 600;
+}
+
+.volume_pricing_info .volume_pricing_blob {
+    background-color: #6FB43F;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 9999px;
+}
+
+.product--specifications h2 {
+    font-size: 2rem !important;
+    line-height: 2.75rem !important;
+    font-weight: 700 !important;
+}
+
+.customize_quote_buttons_wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.customize_quote_buttons_wrapper .button {
+    width: 100%;
+    font-weight: 600 !important;
+}
+
+.button.button-white {
+    background-color: transparent !important;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #6FB43F;
+    color: #3A3A3C;
+}
+
+.volume_pricing_message,
+#discount-progress,
+.volume_pricing_info {
+    cursor: pointer;
+}
