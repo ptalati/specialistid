@@ -32,6 +32,11 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "just_price_zpYWQi": {
+          "type": "just_price",
           "settings": {}
         },
         "volume_pricing_info_label_p6ebk7": {
@@ -146,6 +151,7 @@
         "vendor",
         "caption",
         "price",
+        "just_price_zpYWQi",
         "volume_pricing_info_label_p6ebk7",
         "volume_pricing_available_PDNPnr",
         "regios_discounts_product_page_discount_BHiKmA",
