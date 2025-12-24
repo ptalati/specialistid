@@ -12,16 +12,16 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
         "vendor": {
           "type": "text",
           "settings": {
             "text": "{{ product.vendor }}",
             "text_style": "uppercase"
           }
-        },
-        "title": {
-          "type": "title",
-          "settings": {}
         },
         "caption": {
           "type": "text",
@@ -124,8 +124,8 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
+        "vendor",
         "caption",
         "price",
         "regios_discounts_product_page_discount_BHiKmA",
