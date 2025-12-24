@@ -45,6 +45,10 @@
             "volume_pricing_available_text": "Volume Pricing Available"
           }
         },
+        "discount_progress_bar_qEUjei": {
+          "type": "discount_progress_bar",
+          "settings": {}
+        },
         "volume_pricing_available_PDNPnr": {
           "type": "volume_pricing_available",
           "settings": {
@@ -153,6 +157,7 @@
         "price",
         "just_price_zpYWQi",
         "volume_pricing_info_label_p6ebk7",
+        "discount_progress_bar_qEUjei",
         "volume_pricing_available_PDNPnr",
         "regios_discounts_product_page_discount_BHiKmA",
         "regios_discounts_volume_pricing_table_L36WtN",
