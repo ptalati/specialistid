@@ -140,6 +140,105 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
+              {%- when 'product_review' -%}
+                <div class="product-reviews-wrapper">
+                  <!-- Shopper Approved - sections/product-template -->
+                  <div id="product_just_stars" class="reg"></div>
+                  <!-- END Shopper Approved - sections/product-template -->
+                </div>
+              {%- when 'stock_availability_label' -%}
+                <div class="stock_availability_label">
+                  <div class="stock_label available-2 forcehidden"><span class="available_dot"></span> IN STOCK</div>
+                </div>
+              {%- when 'lead_time' -%}
+                <div class="lead_time_info">
+                  <div class="stock_label available-3"></div>
+                </div>
+              {%- when 'clear_block' -%}
+                <div class="clear">&nbsp;</div>
+              {%- when 'volume_pricing_available' -%}
+                <div class="volume_pricing_message">
+                  <p>
+                    {{ block.settings.volume_pricing_available_text }}
+                    <span class="volume_pricing_heading">{{ block.settings.volume_pricing_available_link_text }}</span>
+                  </p>
+                </div>
+              {%- when 'custom_button' -%}
+                {% if block.settings.custom_button_show_to_left == false
+                  and product.metafields.c_f.custom_product != blank
+                %}
+                  {% assign button_text = block.settings.custom_button_title %}
+                  {% if product.metafields.c_f.custom_product_button_text != blank %}
+                    {% assign button_text = product.metafields.c_f.custom_product_button_text %}
+                  {% endif %}
+                  <div class="product-form__buttons">
+                    {% assign collection_custom_image = '' %}
+                    {% for collection in product.collections %}
+                      {% if collection.metafields.custom.custom_banner_image %}
+                        {% assign collection_custom_image = collection.metafields.custom.custom_banner_image %}
+                      {% endif %}
+                    {% endfor %}
+                    <a
+                      href="{{ product.metafields.c_f.custom_product }}"
+                      class="{% if block.settings.custom_button_show_banner_image == false or collection_custom_image == '' %}product-form__submit color-button_background button button--full-width button--primary custom_button{% else %}custom_button_image{% endif %}"
+                    >
+                      {% if block.settings.custom_button_show_banner_image == false or collection_custom_image == '' %}
+                        {{ button_text }}
+                      {% else %}
+                        <img src="{{ collection_custom_image | img_url: 'large' }}" alt="">
+                      {% endif %}
+                    </a>
+                  </div>
+                {% endif %}
+              {%- when 'customize_quote_buttons' -%}
+                <div class="customize_quote_buttons_wrapper">
+                  {% if product.metafields.c_f.custom_product != blank %}
+                    <a href="{{ product.metafields.c_f.custom_product }}" class="button">Customize It</a>
+                  {% endif %}
+                  {% if block.settings.customize_quote_button_link != blank %}
+                    <a href="{{ block.settings.customize_quote_button_link }}" class="button button-white"
+                      >Get a Quote</a
+                    >
+                  {% endif %}
+                </div>
+              {%- when 'custom_availability' -%}
+                <p id="product-available">
+                  {%- if block.settings.custom_product_availability -%}
+                    {% if discontinuedProduct %}
+                      <span>Discontinued</span> <br>
+                    {% elsif product.metafields.c_f.shippingDays and soldOutUntil == '' %}
+                      <span>Usually ships in {{ product.metafields.c_f.shippingDays }} business days</span> <br>
+                    {% elsif soldOutUntil != '' %}
+                      <span style="color:red"
+                        >Item currently in backorder - anticipated available date {{ soldOutUntil -}}
+                      </span>
+                      <br>
+                    {% else %}
+                      <span>Usually ships in 24 Hours</span> <br>
+                    {% endif %}
+                  {%- endif -%}
+
+                  {%- if block.settings.product_part_num -%}
+                    <span class="variant-sku-part">Part number: </span>
+                    <span class="variant-sku">{{ current_variant.sku }}</span>
+                    <meta content="{{ shop.url }}{{ current_variant.url }}">
+                  {%- endif -%}
+                </p>
+              {%- when 'just_price' -%}
+                <div class="actual-price price regios-dopp-generic-price-container">
+                  <span class="regios-dopp-generic-price-item--regular visually-hidden"></span>
+                  <strong class="product-price regios-dopp-generic-price-item--sale">$0.00 each</strong>
+                </div>
+              {%- when 'total_price' -%}
+                <div class="total-price-wrapper">
+                  <span class="label-wrapper">Total Price:</span>
+                  <span class="total-price">$0.00</span>
+                </div>
+              {%- when 'volume_pricing_info_label' -%}
+                <div class="volume_pricing_info">
+                  <div class="volume_pricing_label">{{ block.settings.volume_pricing_available_text }}</div>
+                  <div class="volume_pricing_blob">Save up to <span class="max_percent">0%</span></div>
+                </div>
               {%- when 'inventory' -%}
                 <p
                   class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -788,6 +887,132 @@
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
       "limit": 1
+    },
+    {
+      "type": "product_review",
+      "name": "Product Review",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "stock_availability_label",
+      "name": "Stock Availability Label",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "lead_time",
+      "name": "Lead Time",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "clear_block",
+      "name": "Clear Block",
+      "limit": 10,
+      "settings": []
+    },
+    {
+      "type": "volume_pricing_available",
+      "name": "Volume Pricing Available",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_volume_pricing_available",
+          "label": "Show Volume Pricing Available",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "volume_pricing_available_text",
+          "label": "Volume Pricing Available Text",
+          "default": "Volume Pricing Available"
+        },
+        {
+          "type": "text",
+          "id": "volume_pricing_available_link_text",
+          "label": "Volume Pricing Available Link Text",
+          "default": "See Volume Pricing"
+        }
+      ]
+    },
+    {
+      "type": "customize_quote_buttons",
+      "name": "Customize Quote Buttons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "url",
+          "id": "customize_quote_button_link",
+          "label": "Get A Quote Link"
+        }
+      ]
+    },
+    {
+      "type": "custom_button",
+      "name": "Custom Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "custom_button_title",
+          "label": "Title",
+          "default": "Customize Product"
+        },
+        {
+          "type": "checkbox",
+          "id": "custom_button_show_to_left",
+          "label": "Show on Left Column",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "custom_button_show_banner_image",
+          "label": "Show Banner",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "custom_availability",
+      "name": "Availability",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "custom_product_availability",
+          "label": "Show availablity text",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "product_part_num",
+          "label": "Show part number",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "just_price",
+      "name": "Just Price",
+      "limit": 1
+    },
+    {
+      "type": "total_price",
+      "name": "Total Price",
+      "limit": 1
+    },
+    {
+      "type": "volume_pricing_info_label",
+      "name": "Volume Pricing Info Label",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "volume_pricing_available_text",
+          "label": "Volume Pricing Available Text",
+          "default": "Volume Pricing Available"
+        }
+      ]
     },
     {
       "type": "sku",
