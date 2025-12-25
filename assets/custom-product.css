@@ -110,7 +110,18 @@
 }
 
 .regios-dopp-generic-volume-pricing-table {
-    margin: 0rem !important;
+    margin: 0 0 0 0 !important;
+    border-width: 0px !important;
+    width: 100%;
+}
+
+.regios-dopp-generic-volume-pricing-table th {
+    border-width: 0px !important;
+}
+
+.regios-dopp-generic-volume-pricing-table td {
+    border-width: 1px 0px 1px 0px !important;
+    border-color: #e5e7eb !important;
 }
 
 .regios-dopp-generic-price-container:not(.regios-dopp-generic-price--on-sale) .regios-dopp-generic-price-item--regular {
