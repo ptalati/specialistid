@@ -1,0 +1,179 @@
+<div class="product-data" style="display: none;">
+  {% assign collection_lead_times = '' %}
+
+  {% for collection in product.collections %}
+    {% if collection.metafields.collections.lead_time %}
+      {% assign collection_lead_times = collection_lead_times
+        | append: collection.metafields.collections.lead_time
+        | append: ', '
+      %}
+    {% endif %}
+  {% endfor %}
+
+  {% if collection_lead_times != '' %}
+    {% assign lead_time_array = collection_lead_times | split: ', ' %}
+    {% assign collection_lead_times = lead_time_array | join: ', ' %}
+  {% endif %}
+
+  {% assign disable_popup = false %}
+  {% for collection in product.collections %}
+    Metafield exists: {{ collection.metafields.custom.disable_oos_popup }}
+    {% if collection.metafields.custom.disable_oos_popup %}
+      {% assign disable_popup = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  <input
+    type="hidden"
+    name="product_id"
+    value="{{ product.id }}"
+    class="product_id"
+    data-stock="{{ product.variants.first.inventory_quantity }}"
+  >
+  <input
+    type="hidden"
+    name="current_variant_id"
+    value="{{ product.selected_or_first_available_variant.id }}"
+    class="current_variant_id"
+  >
+  <input type="hidden" name="hasVolumnDiscount" value="0" class="hasVolumnDiscount">
+  <input type="hidden" name="isDiscontinued" value="{{ product.metafields.c_f.discontinued }}" class="isDiscontinued">
+  <input
+    type="hidden"
+    name="disable_oos_popup"
+    id="disable_oos_popup"
+    value="{% if disable_popup %}true{% else %}false{% endif %}"
+  >
+  {% if product.tags contains 'Custom Logo' %}
+    <input type="hidden" name="product_iscustom" value="1" class="iscustom">
+  {% else %}
+    <input type="hidden" name="product_iscustom" value="0" class="iscustom">
+  {% endif %}
+  <input
+    type="hidden"
+    name="custom_bb_type"
+    value="{{ product.metafields.productdata.custom_bb_type }}"
+    class="custom_bb_type"
+  >
+  <input
+    type="hidden"
+    name="product_shipping_info"
+    value="{{ product.metafields.c_f.product_lead_time }}"
+    class="product_shipping_info"
+  >
+  <input
+    type="hidden"
+    name="product_oos_lead_time"
+    value="{{ product.metafields.custom.oos_lead_time }}"
+    class="product_oos_lead_time"
+  >
+  <input
+    type="hidden"
+    name="collection_shipping_info"
+    value="{{ collection_lead_times }}"
+    class="collection_shipping_info"
+  >
+  <input
+    type="hidden"
+    name="product_map_value"
+    value="{{ product.metafields.c_f.map | plus: 0 | round: 2 }}"
+    class="product_map_value"
+  >
+  <input
+    type="hidden"
+    name="product_msrp_value"
+    value="{{ product.metafields.c_f.msrp | plus: 0 | round: 2 }}"
+    class="product_msrp_value"
+  >
+  <input
+    type="hidden"
+    name="product_backordered_lead_time"
+    value="{{ product.metafields.custom.product_backordered_lead_time }}"
+    class="product_backordered_lead_time"
+  >
+  {% for variant in product.variants %}
+    <input type="hidden" name="variant_id" value="{{ variant.id }}" class="variant_id">
+    <input
+      type="hidden"
+      name="variant_inventory_policy_{{ variant.id }}"
+      value="{{ variant.inventory_policy }}"
+      class="variant_inventory_policy"
+    >
+    <input
+      type="hidden"
+      name="variant_shipping_info_{{ variant.id }}"
+      value="{{ variant.metafields.c_f.variant_lead_time }}"
+      class="variant_shipping_info"
+    >
+    <input
+      type="hidden"
+      name="variant_oos_lead_time_{{ variant.id }}"
+      value="{{ variant.metafields.custom.oos_lead_time }}"
+      class="variant_oos_lead_time"
+    >
+    <input
+      type="hidden"
+      name="variant_map_value_{{ variant.id }}"
+      value="{{ variant.metafields.c_f.map | plus: 0 | round: 2 }}"
+      class="variant_map_value"
+    >
+    <input
+      type="hidden"
+      name="variant_msrp_value_{{ variant.id }}"
+      value="{{ variant.metafields.c_f.msrp | plus: 0 | round: 2 }}"
+      class="variant_msrp_value"
+    >
+    <input
+      type="hidden"
+      name="variant_backordered_lead_time"
+      value="{{ variant.metafields.custom.backordered_lead_time }}"
+      class="variant_backordered_lead_time"
+    >
+    {% if product.metafields.c_f.customPriceText %}
+      <input
+        type="hidden"
+        name="variant_customPriceText_{{ variant.id }}"
+        value="{{ product.metafields.c_f.customPriceText }}"
+        class="variant_customPriceText"
+      >
+    {% else %}
+      <input
+        type="hidden"
+        name="variant_customPriceText_{{ variant.id }}"
+        value="{{ variant.metafields.c_f.customPriceText }}"
+        class="variant_customPriceText"
+      >
+    {% endif %}
+    {% if product.metafields.c_f.minimum %}
+      <input
+        type="hidden"
+        name="variant_minimum_{{ variant.id }}"
+        value="{{ product.metafields.c_f.minimum }}"
+        class="variant_minimum"
+      >
+    {% else %}
+      <input
+        type="hidden"
+        name="variant_minimum_{{ variant.id }}"
+        value="{{ variant.metafields.c_f.minimum }}"
+        class="variant_minimum"
+      >
+    {% endif %}
+    {% if product.metafields.c_f.increment %}
+      <input
+        type="hidden"
+        name="variant_increment_{{ variant.id }}"
+        value="{{ product.metafields.c_f.increment }}"
+        class="variant_increment"
+      >
+    {% else %}
+      <input
+        type="hidden"
+        name="variant_increment_{{ variant.id }}"
+        value="{{ variant.metafields.c_f.increment }}"
+        class="variant_increment"
+      >
+    {% endif %}
+  {% endfor %}
+</div>
