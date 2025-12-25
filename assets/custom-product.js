@@ -38,39 +38,62 @@
   let continueAddingToCart = false;
   let productData = null; // Store product JSON data
 
-  // Wait for jQuery to be ready
-  jQuery(document).ready(function($) {    
+  // Wait for DOM to be ready
+  function initOnReady() {
     // Load product data from JSON
     loadProductData();
 
-    $("#regios-dopp-volume-pricing-table-target").parent().addClass("volume-pricing-table-wrapper");
-    $(".volume_pricing_message, #discount-progress, .volume_pricing_info").click(function() {
-      $(".volume-pricing-table-wrapper").toggleClass("open");
+    const volPricingTableTarget = document.querySelector("#regios-dopp-volume-pricing-table-target");
+    if (volPricingTableTarget && volPricingTableTarget.parentElement) {
+      volPricingTableTarget.parentElement.classList.add("volume-pricing-table-wrapper");
+    }
+
+    // Volume pricing click handlers
+    document.querySelectorAll(".volume_pricing_message, #discount-progress, .volume_pricing_info").forEach(el => {
+      el.addEventListener('click', function() {
+        const wrapper = document.querySelector(".volume-pricing-table-wrapper");
+        if (wrapper) wrapper.classList.toggle("open");
+      });
     });
     
-    $(".bulk-ordering-message").appendTo(".volume-pricing-table-wrapper");
+    const bulkMessage = document.querySelector(".bulk-ordering-message");
+    const wrapper = document.querySelector(".volume-pricing-table-wrapper");
+    if (bulkMessage && wrapper) {
+      wrapper.appendChild(bulkMessage);
+    }
 
     // Warning popup handlers
-    $(".warning-anchor").click(function() {
-      $("#warning_popup").toggleClass("hidden");
+    document.querySelectorAll(".warning-anchor").forEach(el => {
+      el.addEventListener('click', function() {
+        const popup = document.querySelector("#warning_popup");
+        if (popup) popup.classList.toggle("hidden");
+      });
     });
 
-    $("#warning_popup a.close").click(function() {
-      $("#warning_popup").toggleClass("hidden");
-    });
+    const warningClose = document.querySelector("#warning_popup a.close");
+    if (warningClose) {
+      warningClose.addEventListener('click', function() {
+        const popup = document.querySelector("#warning_popup");
+        if (popup) popup.classList.toggle("hidden");
+      });
+    }
     
     // Primary button click handler
-    $("button.button--primary").on('click', function() {
-      $(".loading-overlay__spinner").removeClass("hidden");
-      $("button.button--secondary").click();
-      setTimeout(function() {
-        $(".loading-overlay__spinner").addClass("hidden");
-      }, CONFIG.ANIMATION_DELAY);
+    document.querySelectorAll("button.button--primary").forEach(btn => {
+      btn.addEventListener('click', function() {
+        const spinner = document.querySelector(".loading-overlay__spinner");
+        if (spinner) spinner.classList.remove("hidden");
+        const secondaryBtn = document.querySelector("button.button--secondary");
+        if (secondaryBtn) secondaryBtn.click();
+        setTimeout(function() {
+          if (spinner) spinner.classList.add("hidden");
+        }, CONFIG.ANIMATION_DELAY);
+      });
     });
 
     // Initial page load setup
     setTimeout(function() {
-      $('body').addClass('loaded');
+      document.body.classList.add('loaded');
       
       // Ensure product data is loaded
       if (!productData) {
@@ -82,240 +105,335 @@
         updateTablePrice();
 
         const isDiscontinued = productData?.metafields?.status?.discontinued || 
-                              $('[name="isDiscontinued"]').val();
+                              document.querySelector('[name="isDiscontinued"]')?.value;
         if (isDiscontinued && isDiscontinued !== "false") {
-          $("a.product-form__submit-out-of-stock").addClass("discontinued");
+          const outOfStockBtn = document.querySelector("a.product-form__submit-out-of-stock");
+          if (outOfStockBtn) outOfStockBtn.classList.add("discontinued");
         }
       }, 100);
     }, CONFIG.ANIMATION_DELAY);
 
     // Error message monitoring
-    $(".product-form__error-message").on("classChange", function() {
-      var text = $(this).html();
-      var variant_id = getVariantId();
-      var variantName = $("div.color-swatch-wrapper.option-color").find(`[data-id='${variant_id}']`).data('option');
-      var title = $(".product__title h1").html();
-      var generatedMessage = `All 0 ${title.trim()}${variant_id ? ` - ${variantName}` : ''} are in your cart.`;
+    const errorMsg = document.querySelector(".product-form__error-message");
+    if (errorMsg) {
+      const observer = new MutationObserver(function() {
+        var text = errorMsg.innerHTML;
+        var variant_id = getVariantId();
+        var colorSwatchEl = document.querySelector("div.color-swatch-wrapper.option-color");
+        var variantName = '';
+        if (colorSwatchEl) {
+          const swatchItem = colorSwatchEl.querySelector(`[data-id='${variant_id}']`);
+          if (swatchItem) variantName = swatchItem.dataset.option || '';
+        }
+        var titleEl = document.querySelector(".product__title h1");
+        var title = titleEl ? titleEl.innerHTML : '';
+        var generatedMessage = `All 0 ${title.trim()}${variant_id ? ` - ${variantName}` : ''} are in your cart.`;
 
-      if (text === generatedMessage) {
-        $(this).html('Sorry, this item is currently out of stock, please contact us...');
-      }
-    });
+        if (text === generatedMessage) {
+          errorMsg.innerHTML = 'Sorry, this item is currently out of stock, please contact us...';
+        }
+      });
+
+      observer.observe(errorMsg, { characterData: true, subtree: true });
+    }
 
     // Animated background setup
     setTimeout(function() {
-      $(".animated-background").removeClass('hidden');
+      const bg = document.querySelector(".animated-background");
+      if (bg) bg.classList.remove('hidden');
     }, 300);
 
     // Color swatch and option clicks
-    $("label.color-swatch, label.other-option").on('click', function() {
-      $(".animated-background").removeClass('hidden');
-      var variant_id = $(this).data('id');
-      
-      // Ensure product data is loaded before processing
-      if (!productData) {
-        loadProductData();
-        setTimeout(() => {
+    document.querySelectorAll("label.color-swatch, label.other-option").forEach(label => {
+      label.addEventListener('click', function() {
+        const bg = document.querySelector(".animated-background");
+        if (bg) bg.classList.remove('hidden');
+        var variant_id = this.dataset.id;
+        
+        // Ensure product data is loaded before processing
+        if (!productData) {
+          loadProductData();
+          setTimeout(() => {
+            optionLogic(variant_id);
+            setTimeout(() => updateTablePrice(), CONFIG.ANIMATION_DELAY);
+          }, 100);
+        } else {
           optionLogic(variant_id);
           setTimeout(() => updateTablePrice(), CONFIG.ANIMATION_DELAY);
-        }, 100);
-      } else {
-        optionLogic(variant_id);
-        setTimeout(() => updateTablePrice(), CONFIG.ANIMATION_DELAY);
-      }
+        }
+      });
     });
 
     // Out of stock click
-    $("a.out-of-stock").on('click', function() {
-      var variant_id = getVariantId();
-      if (variant_id !== undefined) {
-        quantityLogic();
-      }
+    document.querySelectorAll("a.out-of-stock").forEach(link => {
+      link.addEventListener('click', function() {
+        var variant_id = getVariantId();
+        if (variant_id !== undefined) {
+          quantityLogic();
+        }
+      });
     });
 
     // Number input validation
-    $(document).on('keydown keyup change', '#facility_code, #starting_number', function() {
-      var max = parseInt($(this).attr('max'));
-      var min = parseInt($(this).attr('min'));
-      if ($(this).val() > max) {
-        $(this).val(max);
-      } else if ($(this).val() < min) {
-        $(this).val(min);
+    document.addEventListener('keydown', handleNumberInput);
+    document.addEventListener('keyup', handleNumberInput);
+    document.addEventListener('change', handleNumberInput);
+
+    function handleNumberInput(e) {
+      if (e.target.id === 'facility_code' || e.target.id === 'starting_number') {
+        var max = parseInt(e.target.getAttribute('max'));
+        var min = parseInt(e.target.getAttribute('min'));
+        if (e.target.value > max) {
+          e.target.value = max;
+        } else if (e.target.value < min) {
+          e.target.value = min;
+        }
+      }
+    }
+
+    // Quantity input change
+    document.addEventListener('change', function(e) {
+      if (e.target.classList.contains('quantity__input')) {
+        doneTyping();
       }
     });
 
-    // Quantity input change
-    $(document).on('change', '.quantity__input', function() {
-      doneTyping();
-    });
-
     // Quantity input keydown
-    $(document).on('keydown', '.quantity__input', function(event) {
-      if (event.which === 13) {
+    document.addEventListener('keydown', function(e) {
+      if (e.target.classList.contains('quantity__input') && e.which === 13) {
         doneTyping();
       }
     });
 
     // Color swatch value update
-    $(".color-swatch-wrapper .color-swatch-item").on('click', function() {
-      $(".form__label .option-label").html($(this).val());
-      var variant_id = $(this).data('id');
-      // Price is now handled by optionLogic
-    });
-
-    // Read more functionality
-    $(".read-more-wrapper .read-more").on("click", function() {
-      if ($(this).html() == 'Read more') {
-        $(".collection-hero .collection-hero__description").addClass("show-all");
-        $(this).html("Read less");
-      } else {
-        $(".collection-hero .collection-hero__description").removeClass("show-all");
-        $(this).html("Read more");
-      }
-    });
-
-    // Address management
-    $(".customer.addresses button.edit_button").on('click', function() {
-      $(this).attr('aria-expanded', $(this).attr('aria-expanded') === 'true' ? false : true);
-    });
-
-    $(".customer.addresses button.cancel_button").on('click', function() {
-      $(".customer.addresses button.edit_button").attr('aria-expanded', false);
-    });
-
-    $(".add_address, .add_address_cancel").on('click', function() {
-      $(".add-address-wrapper").toggle();
-    });
-
-    $("form.address-delete-form").on('submit', function(event) {
-      var confirmation = confirm($("button.delete_button").data('confirm-message'));
-      if (!confirmation) {
-        event.preventDefault();
-      }
-    });
-
-    // Copy to clipboard functionality
-    $(".copy-btn").on('click', function() {
-      var discountText = $(this).siblings("h3").text().trim();
-      
-      navigator.clipboard.writeText(discountText).then(() => {
-        var message = $(this).siblings(".copyMessage");
-        message.text("Copied!").fadeIn();
-        
-        setTimeout(() => {
-          message.fadeOut();
-        }, 2000);
-      }).catch(err => {
-        console.error("Failed to copy: ", err);
+    document.querySelectorAll(".color-swatch-wrapper .color-swatch-item").forEach(el => {
+      el.addEventListener('click', function() {
+        const labelEl = document.querySelector(".form__label .option-label");
+        if (labelEl) labelEl.innerHTML = this.value;
+        var variant_id = this.dataset.id;
+        // Price is now handled by optionLogic
       });
     });
 
+    // Read more functionality
+    document.querySelectorAll(".read-more-wrapper .read-more").forEach(el => {
+      el.addEventListener("click", function() {
+        const desc = document.querySelector(".collection-hero .collection-hero__description");
+        if (this.innerHTML === 'Read more') {
+          if (desc) desc.classList.add("show-all");
+          this.innerHTML = "Read less";
+        } else {
+          if (desc) desc.classList.remove("show-all");
+          this.innerHTML = "Read more";
+        }
+      });
+    });
+
+    // Address management
+    document.querySelectorAll(".customer.addresses button.edit_button").forEach(btn => {
+      btn.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+      });
+    });
+
+    document.querySelectorAll(".customer.addresses button.cancel_button").forEach(btn => {
+      btn.addEventListener('click', function() {
+        const editBtn = document.querySelector(".customer.addresses button.edit_button");
+        if (editBtn) editBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.querySelectorAll(".add_address, .add_address_cancel").forEach(el => {
+      el.addEventListener('click', function() {
+        const wrapper = document.querySelector(".add-address-wrapper");
+        if (wrapper) wrapper.style.display = wrapper.style.display === 'none' ? 'block' : 'none';
+      });
+    });
+
+    document.querySelectorAll("form.address-delete-form").forEach(form => {
+      form.addEventListener('submit', function(event) {
+        const deleteBtn = document.querySelector("button.delete_button");
+        const msg = deleteBtn ? deleteBtn.dataset.confirmMessage : '';
+        var confirmation = confirm(msg);
+        if (!confirmation) {
+          event.preventDefault();
+        }
+      });
+    });
+
+    // Copy to clipboard functionality
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener('click', function() {
+        const h3 = this.previousElementSibling;
+        const discountText = h3 ? h3.textContent.trim() : '';
+        
+        navigator.clipboard.writeText(discountText).then(() => {
+          const message = this.nextElementSibling;
+          if (message && message.classList.contains('copyMessage')) {
+            message.textContent = "Copied!";
+            message.style.display = 'block';
+            
+            setTimeout(() => {
+              fadeOut(message);
+            }, 2000);
+          }
+        }).catch(err => {
+          console.error("Failed to copy: ", err);
+        });
+      });
+    });
+
+    // Helper function for fade out
+    function fadeOut(el) {
+      el.style.opacity = '1';
+      el.style.transition = 'opacity 0.3s ease';
+      el.style.opacity = '0';
+      setTimeout(() => {
+        el.style.display = 'none';
+        el.style.opacity = '1';
+      }, 300);
+    }
+
     // Image popup functionality
-    $('.product-thumbnails-popup img').on('click', function() {
-      var fullImageSrc = $(this).data('full-image');
-      $('#popup-img').attr('src', fullImageSrc);
-      $('#image-popup').show();
+    document.querySelectorAll('.product-thumbnails-popup img').forEach(img => {
+      img.addEventListener('click', function() {
+        const fullImageSrc = this.dataset.fullImage;
+        const popup = document.querySelector('#image-popup');
+        const popupImg = document.querySelector('#popup-img');
+        if (popupImg) popupImg.src = fullImageSrc;
+        if (popup) popup.style.display = 'block';
+      });
     });
 
-    $('#close-popup, #image-popup').on('click', function() {
-      $('#image-popup').hide();
-    });
+    const closePopup = document.querySelector('#close-popup');
+    const imagePopup = document.querySelector('#image-popup');
+    if (closePopup) {
+      closePopup.addEventListener('click', function() {
+        if (imagePopup) imagePopup.style.display = 'none';
+      });
+    }
 
-    $('.popup-content').on('click', function(event) {
-      event.stopPropagation();
-    });
+    if (imagePopup) {
+      imagePopup.addEventListener('click', function() {
+        this.style.display = 'none';
+      });
+    }
+
+    const popupContent = document.querySelector('.popup-content');
+    if (popupContent) {
+      popupContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+    }
 
     // Thumbnail slider
-    $('.product-thumbnails li img').on('click', function() {
-      var newImageSrc = $(this).data('full-image');
-      var newImageAlt = $(this).attr('alt');
-      $('.product-main-image img').attr('src', newImageSrc).attr('alt', newImageAlt);
+    document.querySelectorAll('.product-thumbnails li img').forEach(img => {
+      img.addEventListener('click', function() {
+        const newImageSrc = this.dataset.fullImage;
+        const newImageAlt = this.getAttribute('alt');
+        const mainImg = document.querySelector('.product-main-image img');
+        if (mainImg) {
+          mainImg.src = newImageSrc;
+          mainImg.alt = newImageAlt;
+        }
+      });
     });
 
     // Thumbnail navigation
     var visibleThumbs = 4;
-    var totalThumbs = $('.product-thumbnails li').length;
+    var totalThumbs = document.querySelectorAll('.product-thumbnails li').length;
     var maxIndex = totalThumbs - visibleThumbs;
     var currentIndex = 0;
 
-    $('.thumbnail-slider .next-btn').on('click', function() {
-      if (currentIndex < maxIndex) {
-        currentIndex++;
-        updateThumbnailPosition();
-      }
-    });
-
-    $('.thumbnail-slider .prev-btn').on('click', function() {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateThumbnailPosition();
-      }
-    });
-
-    function updateThumbnailPosition() {
-      var thumbWidth = $('.product-thumbnails li').outerWidth(true) + 10;
-      var moveDistance = currentIndex * (thumbWidth * -1);
-      $('.product-thumbnails').css('transform', 'translateX(' + moveDistance + 'px)');
-    }
-
-    // Initialize tooltips
-    if ($.fn.tooltip) {
-      $(document).tooltip();
-    }
-
-    // Load and apply tooltips from Google Sheet
-    $.get(CONFIG.GOOGLE_SHEET_URL, function(data) {
-      Papa.parse(data, {
-        complete: function(results) {
-          var wordsToReplace = results.data.map(function(row) {
-            var word = row[0] && row[0].trim();
-            var url = row[1] && row[1].trim();
-            var tooltip = row[2] && row[2].trim();
-            if (word && url && tooltip) {
-              return { word, url, tooltip };
-            }
-          }).filter(Boolean);
-
-          function replaceText(node) {
-            wordsToReplace.forEach(function(item) {
-              var regex = new RegExp(`\\b${item.word}\\b`, "gi");
-              if (node.nodeType === 3) {
-                if ($(node.parentNode).is('script')) {
-                  return;
-                }
-                var tempContainer = $('<div>').html(node.nodeValue.replace(regex, function(match) {
-                  let itemUrl = item.url.trim();
-                  if (itemUrl === "#") itemUrl = "javascript:void(0);";
-                  return '<a href="' + itemUrl + '" class="tooltip" title="' + item.tooltip.replaceAll('"', '') + '">' + match + '</a>';
-                }));
-                if (tempContainer.children().length > 0) {
-                  $(node).replaceWith(tempContainer.contents());
-                }
-              }
-            });
-          }
-
-          function traverseNodes(node) {
-            if (node.nodeType === 1) {
-              if (/^(h1|h2|h3|h4|h5|h6|a)$/i.test(node.tagName)) {
-                return;
-              }
-              var children = node.childNodes;
-              for (var i = 0; i < children.length; i++) {
-                traverseNodes(children[i]);
-              }
-            } else {
-              replaceText(node);
-            }
-          }
-
-          traverseNodes(document.body);
-        },
-        error: function(error) {
-          console.error("Parsing error:", error);
+    document.querySelectorAll('.thumbnail-slider .next-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        if (currentIndex < maxIndex) {
+          currentIndex++;
+          updateThumbnailPosition();
         }
       });
     });
+
+    document.querySelectorAll('.thumbnail-slider .prev-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateThumbnailPosition();
+        }
+      });
+    });
+
+    function updateThumbnailPosition() {
+      const thumbs = document.querySelector('.product-thumbnails li');
+      const thumbWidth = thumbs ? thumbs.offsetWidth + 10 : 0;
+      const moveDistance = currentIndex * (thumbWidth * -1);
+      const thumbContainer = document.querySelector('.product-thumbnails');
+      if (thumbContainer) thumbContainer.style.transform = 'translateX(' + moveDistance + 'px)';
+    }
+
+    // Initialize tooltips - vanilla JS version
+    // Tooltips would require a library, so we'll skip for now unless custom implementation needed
+
+    // Load and apply tooltips from Google Sheet
+    fetch(CONFIG.GOOGLE_SHEET_URL)
+      .then(response => response.text())
+      .then(data => {
+        if (typeof Papa !== 'undefined') {
+          Papa.parse(data, {
+            complete: function(results) {
+              var wordsToReplace = results.data.map(function(row) {
+                var word = row[0] && row[0].trim();
+                var url = row[1] && row[1].trim();
+                var tooltip = row[2] && row[2].trim();
+                if (word && url && tooltip) {
+                  return { word, url, tooltip };
+                }
+              }).filter(Boolean);
+
+              function replaceText(node) {
+                wordsToReplace.forEach(function(item) {
+                  var regex = new RegExp(`\\b${item.word}\\b`, "gi");
+                  if (node.nodeType === 3) {
+                    if (node.parentNode && node.parentNode.tagName === 'SCRIPT') {
+                      return;
+                    }
+                    var tempContainer = document.createElement('div');
+                    tempContainer.innerHTML = node.nodeValue.replace(regex, function(match) {
+                      let itemUrl = item.url.trim();
+                      if (itemUrl === "#") itemUrl = "javascript:void(0);";
+                      return '<a href="' + itemUrl + '" class="tooltip" title="' + item.tooltip.replaceAll('"', '') + '">' + match + '</a>';
+                    });
+                    if (tempContainer.children.length > 0) {
+                      node.parentNode.replaceChild(tempContainer.firstChild, node);
+                    }
+                  }
+                });
+              }
+
+              function traverseNodes(node) {
+                if (node.nodeType === 1) {
+                  if (/^(h1|h2|h3|h4|h5|h6|a)$/i.test(node.tagName)) {
+                    return;
+                  }
+                  var children = Array.from(node.childNodes);
+                  for (var i = 0; i < children.length; i++) {
+                    traverseNodes(children[i]);
+                  }
+                } else {
+                  replaceText(node);
+                }
+              }
+
+              traverseNodes(document.body);
+            },
+            error: function(error) {
+              console.error("Parsing error:", error);
+            }
+          });
+        }
+      })
+      .catch(err => console.error('Error fetching tooltip data:', err));
 
     // Initialize pricing and stock
     setTimeout(() => {
@@ -334,52 +452,90 @@
 
     // Sliding support popup
     setTimeout(function() {
-      $("#supportPopup").css("left", "10px");
+      const popup = document.querySelector("#supportPopup");
+      const openBtn = document.querySelector("#openPopup");
+      if (popup) popup.style.left = "10px";
       setTimeout(function() {
-        $("#supportPopup").css("left", "-300px");
-        $("#openPopup").fadeIn();
+        if (popup) popup.style.left = "-300px";
+        if (openBtn) openBtn.style.display = 'block';
       }, CONFIG.POPUP_HIDE_DELAY);
     }, CONFIG.POPUP_DELAY);
 
-    $("#closePopup").on('click', function() {
-      $("#supportPopup").css("left", "-300px");
-      $("#openPopup").fadeIn();
-    });
+    const closePopupBtn = document.querySelector("#closePopup");
+    if (closePopupBtn) {
+      closePopupBtn.addEventListener('click', function() {
+        const popup = document.querySelector("#supportPopup");
+        const openBtn = document.querySelector("#openPopup");
+        if (popup) popup.style.left = "-300px";
+        if (openBtn) openBtn.style.display = 'block';
+      });
+    }
 
-    $("#openPopup").on('click', function() {
-      $("#supportPopup").css("left", "10px");
-      $(this).fadeOut();
-    });
+    const openPopupBtn = document.querySelector("#openPopup");
+    if (openPopupBtn) {
+      openPopupBtn.addEventListener('click', function() {
+        const popup = document.querySelector("#supportPopup");
+        if (popup) popup.style.left = "10px";
+        this.style.display = 'none';
+      });
+    }
 
     // FPD designer help popup
-    $(".support-content-wrapper, .close-designer-help-form").on('click', function() {
-      $("#overlay-support").toggleClass('hidden');
-      $("#fpd-designer-help-popup").toggleClass('hidden');
+    document.querySelectorAll(".support-content-wrapper, .close-designer-help-form").forEach(el => {
+      el.addEventListener('click', function() {
+        const overlay = document.querySelector("#overlay-support");
+        const helpPopup = document.querySelector("#fpd-designer-help-popup");
+        if (overlay) overlay.classList.toggle('hidden');
+        if (helpPopup) helpPopup.classList.toggle('hidden');
+      });
     });
 
     // Tax exempt form
-    $("body").on('click', '.apply-here-anchor', function(e) {
-      e.preventDefault();
-      $("#opt-tax-exempt-form-container").show();
-      return false;
+    document.querySelectorAll('.apply-here-anchor').forEach(el => {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        const formContainer = document.querySelector("#opt-tax-exempt-form-container");
+        if (formContainer) formContainer.style.display = 'block';
+        return false;
+      });
     });
 
     // Feedback functionality
-    $("body").on('click', '.feedback-container > .positive', function() {
-      $(".positive-feedback").removeClass("hide");
-      setTimeout(function() {
-        $(".positive-feedback").addClass("hide");
-      }, 5000);
+    document.querySelectorAll('.feedback-container > .positive').forEach(el => {
+      el.addEventListener('click', function() {
+        const positiveFeedback = document.querySelector(".positive-feedback");
+        if (positiveFeedback) {
+          positiveFeedback.classList.remove("hide");
+          setTimeout(function() {
+            positiveFeedback.classList.add("hide");
+          }, 5000);
+        }
+      });
     });
 
-    $("body").on('click', '.feedback-container > .negative', function() {
-      $("#feedback_form").removeClass("hide");
+    document.querySelectorAll('.feedback-container > .negative').forEach(el => {
+      el.addEventListener('click', function() {
+        const feedbackForm = document.querySelector("#feedback_form");
+        if (feedbackForm) feedbackForm.classList.remove("hide");
+      });
     });
 
-    $("body").on('click', '#feedback_form a.close', function() {
-      $("#feedback_form").addClass("hide");
+    document.querySelectorAll('#feedback_form a.close').forEach(el => {
+      el.addEventListener('click', function() {
+        const feedbackForm = document.querySelector("#feedback_form");
+        if (feedbackForm) feedbackForm.classList.add("hide");
+      });
     });
-  });
+
+    // Call initOnReady at the end of setup - simulating ready state
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initOnReady);
+  } else {
+    initOnReady();
+  }
 
   // Load product data from JSON
   function loadProductData() {
@@ -408,13 +564,14 @@
     // Method 3: Try to fetch from API if we have a product handle
     const productHandle = window.location.pathname.match(/\/products\/([^\/]+)/);
     if (productHandle && productHandle[1]) {
-      jQuery.getJSON(`/products/${productHandle[1]}.json`, function(data) {
-        productData = data.product;
-        window.productData = productData;
-        console.log('Product data loaded from API');
-      }).fail(function() {
-        console.error('Failed to load product JSON from API');
-      });
+      fetch(`/products/${productHandle[1]}.json`)
+        .then(response => response.json())
+        .then(data => {
+          productData = data.product;
+          window.productData = productData;
+          console.log('Product data loaded from API');
+        })
+        .catch(error => console.error('Failed to load product JSON from API:', error));
     }
   }
 
@@ -461,7 +618,8 @@
       return variant.price / 100; // Convert from cents
     } else {
       // Fallback to hidden field
-      const priceStr = jQuery(`[name="variant_price_${variantId}"]`).val();
+      const priceField = document.querySelector(`[name="variant_price_${variantId}"]`);
+      const priceStr = priceField ? priceField.value : '';
       if (priceStr) {
         return parseFloat(priceStr.replace(/[$,]/g, ''));
       }
@@ -478,7 +636,8 @@
     }
     
     // Fallback to hidden field
-    const priceStr = jQuery(`[name="variant_compare_at_price_${variantId}"]`).val();
+    const compareField = document.querySelector(`[name="variant_compare_at_price_${variantId}"]`);
+    const priceStr = compareField ? compareField.value : '';
     if (priceStr) {
       return parseFloat(priceStr.replace(/[$,]/g, ''));
     }
@@ -488,7 +647,8 @@
 
   // Core Functions
   function optionLogic(variant_id) {
-    jQuery('input.current_variant_id').val(variant_id);
+    const variantIdInput = document.querySelector('input.current_variant_id');
+    if (variantIdInput) variantIdInput.value = variant_id;
     
     // Get variant data from JSON
     const variant = getVariantData(variant_id);
@@ -506,17 +666,18 @@
     
     // Try to get custom data from metafields or fallback to hidden fields
     var customPriceText = variant.metafields?.custom?.price_text || 
-                         jQuery('[name="variant_customPriceText_' + variant_id + '"]').val() || '';
+                         document.querySelector(`[name="variant_customPriceText_${variant_id}"]`)?.value || '';
     var qty = variant.inventory_quantity || 
-              parseInt(jQuery('[name="variant_quantity_' + variant_id + '"]').val()) || 0;
+              parseInt(document.querySelector(`[name="variant_quantity_${variant_id}"]`)?.value) || 0;
     
     // Get min and increment from metafields or hidden fields
     var min = parseInt(variant.metafields?.inventory?.minimum) || 
-              parseInt(jQuery('[name="variant_minimum_' + variant_id + '"]').val()) || 1;
+              parseInt(document.querySelector(`[name="variant_minimum_${variant_id}"]`)?.value) || 1;
     var increment = parseInt(variant.metafields?.inventory?.increment) || 
-                   parseInt(jQuery('[name="variant_increment_' + variant_id + '"]').val()) || 1;
+                   parseInt(document.querySelector(`[name="variant_increment_${variant_id}"]`)?.value) || 1;
 
-    jQuery('span.variant-sku').html(sku);
+    const variantSkuEl = document.querySelector('span.variant-sku');
+    if (variantSkuEl) variantSkuEl.innerHTML = sku;
 
     var percent_value = (((compare_at_price_num - price_num) * 100.0) / compare_at_price_num).toFixed(0);
 
@@ -525,37 +686,58 @@
     quantityLogic();
 
     if (customPriceText != "") {
-      jQuery('span.price-min').html(customPriceText);
-      jQuery(".custom-price-text").html(customPriceText);
-      jQuery(".custom-price-text").removeClass("hide");
+      const priceMinEl = document.querySelector('span.price-min');
+      if (priceMinEl) priceMinEl.innerHTML = customPriceText;
+      const customPriceEl = document.querySelector(".custom-price-text");
+      if (customPriceEl) {
+        customPriceEl.innerHTML = customPriceText;
+        customPriceEl.classList.remove("hide");
+      }
     } else {
-      jQuery(".custom-price-text").addClass("hide");
-      jQuery(".custom-price-text").html("");
+      const customPriceEl = document.querySelector(".custom-price-text");
+      if (customPriceEl) {
+        customPriceEl.classList.add("hide");
+        customPriceEl.innerHTML = "";
+      }
     }
 
     if (min != increment) {
-      jQuery(".minimum-quantity-text").removeClass("hide");
+      const minQtyEl = document.querySelector(".minimum-quantity-text");
+      if (minQtyEl) minQtyEl.classList.remove("hide");
     } else if (min == increment && min > 1) {
-      jQuery(".sold-in-pack-text").removeClass("hide");
+      const soldInPack = document.querySelector(".sold-in-pack-text");
+      if (soldInPack) soldInPack.classList.remove("hide");
     } else {
-      jQuery(".minimum-quantity-text").addClass("hide");
-      jQuery(".sold-in-pack-text").addClass("hide");
+      const minQtyEl = document.querySelector(".minimum-quantity-text");
+      const soldInPack = document.querySelector(".sold-in-pack-text");
+      if (minQtyEl) minQtyEl.classList.add("hide");
+      if (soldInPack) soldInPack.classList.add("hide");
     }
 
-    jQuery(".minimum_qty").html(min);
-    jQuery(".quantity__input").attr('min', min);
-    jQuery(".quantity__input").attr('step', increment);
-    jQuery(".quantity__input").attr('value', min);
-    jQuery(".quantity__input").val(min);
+    const minQtySpan = document.querySelector(".minimum_qty");
+    if (minQtySpan) minQtySpan.innerHTML = min;
 
+    const qtyInputs = document.querySelectorAll(".quantity__input");
+    qtyInputs.forEach(input => {
+      input.setAttribute('min', min);
+      input.setAttribute('step', increment);
+      input.setAttribute('value', min);
+      input.value = min;
+    });
+
+    const priceMinEl = document.querySelector('span.price-min');
     if (min > 1 && min != increment) {
-      jQuery('span.price-min').removeClass("hide");
-      jQuery('span.price-min').html('<span class="orange-bg price-min">Minimum Quantity ' + min + '</span>');
+      if (priceMinEl) {
+        priceMinEl.classList.remove("hide");
+        priceMinEl.innerHTML = '<span class="orange-bg price-min">Minimum Quantity ' + min + '</span>';
+      }
     } else if(min == increment && min > 1) {
-      jQuery('span.price-min').removeClass("hide");
-      jQuery('span.price-min').html('<span class="green-font price-min">ea. <span class="orange-bg">Sold in Packs of ' + min + '</span></span>');
+      if (priceMinEl) {
+        priceMinEl.classList.remove("hide");
+        priceMinEl.innerHTML = '<span class="green-font price-min">ea. <span class="orange-bg">Sold in Packs of ' + min + '</span></span>';
+      }
     } else {
-      jQuery('span.price-min').addClass("hide");
+      if (priceMinEl) priceMinEl.classList.add("hide");
     }
 
     setTimeout(() => {
@@ -569,7 +751,7 @@
     } else {
       variantInventory = undefined;
       
-      var productId = productData?.id || jQuery('[name="product_id"]').val();
+      var productId = productData?.id || document.querySelector('[name="product_id"]')?.value;
       if (!productId) return null;
       
       if (productId) {
@@ -577,12 +759,14 @@
           productId: productId
         });
     
-        return jQuery.ajax({
-          url: CONFIG.API_URL,
-          type: 'POST',
-          data: postData,
-          contentType: 'application/json',
+        return fetch(CONFIG.API_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: postData
         })
+        .then(response => response.json())
         .then(function(response) {
           if (response && response.product && response.product.variants) {
             variantInventory = response.product.variants.find(function(variant) {
@@ -612,27 +796,27 @@
   }
 
   function getVariantId() {
-    var variant_id = jQuery('input[name="Color"]:checked').data('variantid');
+    var variant_id = document.querySelector('input[name="Color"]:checked')?.dataset.variantid;
     if (variant_id === undefined) {
-      variant_id = jQuery('input[name="Size"]:checked').data('variantid');
+      variant_id = document.querySelector('input[name="Size"]:checked')?.dataset.variantid;
     }
     if (variant_id === undefined) {
-      variant_id = jQuery('input[name="Layout"]:checked').data('variantid');
+      variant_id = document.querySelector('input[name="Layout"]:checked')?.dataset.variantid;
     }
     if (variant_id === undefined) {
-      variant_id = jQuery('input[name="Pre-Printed"]:checked').data('variantid');
+      variant_id = document.querySelector('input[name="Pre-Printed"]:checked')?.dataset.variantid;
     }
     if (variant_id === undefined) {
-      var variant_count = jQuery('input[name="variant_id"]').length;
-      if (variant_count === 1) {
-        variant_id = jQuery('input[name="variant_id"]').val();
+      const variantCount = document.querySelectorAll('input[name="variant_id"]').length;
+      if (variantCount === 1) {
+        variant_id = document.querySelector('input[name="variant_id"]')?.value;
       }
     }
     if (variant_id === undefined) {
-      variant_id = jQuery('input.color-swatch-item:checked').data('variantid');
+      variant_id = document.querySelector('input.color-swatch-item:checked')?.dataset.variantid;
     }
     if (variant_id === undefined) {
-      variant_id = jQuery('input.current_variant_id').val();
+      variant_id = document.querySelector('input.current_variant_id')?.value;
     }
     return variant_id;
   }
@@ -644,21 +828,27 @@
     }
 
     const isDiscontinued = productData?.metafields?.status?.discontinued || 
-                          jQuery('[name="isDiscontinued"]').val();
+                          document.querySelector('[name="isDiscontinued"]')?.value;
     if (isDiscontinued && isDiscontinued !== 'false') {
-      jQuery(".stock_label.available-2").addClass("forcehidden");
-      jQuery(".stock_label.available-3").addClass("bottom-padding");
-      jQuery(".stock_label.available-3").html('');
+      const label2 = document.querySelector(".stock_label.available-2");
+      const label3 = document.querySelector(".stock_label.available-3");
+      if (label2) label2.classList.add("forcehidden");
+      if (label3) {
+        label3.classList.add("bottom-padding");
+        label3.innerHTML = '';
+      }
       return;
     }
 
-    var jQueryqtySelector = jQuery('.quantity__input'),
-      inputQty = parseInt(jQueryqtySelector.val() || '1');
+    const qtySelector = document.querySelector('.quantity__input');
+    const inputQty = parseInt(qtySelector?.value || '1');
 
     if (inputQty === 1) {
-      jQuery(".per-item-price").hide();
+      const perItem = document.querySelector(".per-item-price");
+      if (perItem) perItem.style.display = 'none';
     } else {
-      jQuery(".per-item-price").show();
+      const perItem = document.querySelector(".per-item-price");
+      if (perItem) perItem.style.display = 'block';
     }
     
     // Get variant from JSON
@@ -672,29 +862,29 @@
           var doralQty = variantInventory.inventoryLevels["Specialist ID"] || 0;
 
           var inventory_policy = variant?.inventory_policy || 
-                              jQuery('[name="variant_inventory_policy_' + variant_id + '"]').val() || 
+                              document.querySelector(`[name="variant_inventory_policy_${variant_id}"]`)?.value || 
                               'deny';
           
           // Try to get shipping info from metafields first, then hidden fields
           var product_iscustom = productData?.metafields?.product?.is_custom || 
-                               jQuery('[name="product_iscustom"]').val();
+                               document.querySelector('[name="product_iscustom"]')?.value;
           var product_shipping_info = productData?.metafields?.shipping?.info || 
-                                    jQuery('[name="product_shipping_info"]').val();
+                                    document.querySelector('[name="product_shipping_info"]')?.value;
           var variant_shipping_info = variant?.metafields?.shipping?.info || 
-                                    jQuery('[name="variant_shipping_info_' + variant_id + '"]').val();
+                                    document.querySelector(`[name="variant_shipping_info_${variant_id}"]`)?.value;
           var product_oos_lead_time = productData?.metafields?.inventory?.oos_lead_time || 
-                                    jQuery('[name="product_oos_lead_time"]').val();
+                                    document.querySelector('[name="product_oos_lead_time"]')?.value;
           var variant_oos_lead_time = variant?.metafields?.inventory?.oos_lead_time || 
-                                    jQuery('[name="variant_oos_lead_time_' + variant_id + '"]').val();
-          var collection_shipping_info = jQuery('[name="collection_shipping_info"]').val();
+                                    document.querySelector(`[name="variant_oos_lead_time_${variant_id}"]`)?.value;
+          var collection_shipping_info = document.querySelector('[name="collection_shipping_info"]')?.value;
           var qty = variant?.inventory_quantity || 
-                   parseInt(jQuery('[name="variant_quantity_' + variant_id + '"]').val()) || 0;
-          var collection_additional_lead_time = jQuery('[name="collection_additional_lead_time"]').val();
-          var product_backordered_lead_time = jQuery('[name="product_backordered_lead_time"]').val();
-          var variant_backordered_lead_time = jQuery('[name="variant_backordered_lead_time"]').val();
+                   parseInt(document.querySelector(`[name="variant_quantity_${variant_id}"]`)?.value) || 0;
+          var collection_additional_lead_time = document.querySelector('[name="collection_additional_lead_time"]')?.value;
+          var product_backordered_lead_time = document.querySelector('[name="product_backordered_lead_time"]')?.value;
+          var variant_backordered_lead_time = document.querySelector('[name="variant_backordered_lead_time"]')?.value;
 
-          jQuery(".stock_label.available-2").addClass("forcehidden");
-          jQuery(".stock_label.available-3").addClass("bottom-padding");
+          document.querySelectorAll(".stock_label.available-2").forEach(el => el.classList.add("forcehidden"));
+          document.querySelectorAll(".stock_label.available-3").forEach(el => el.classList.add("bottom-padding"));
 
           var lead_time_text = "";
           
@@ -707,8 +897,8 @@
               lead_time_text = collection_shipping_info;
             } else {
               if (qty > 0) {
-                jQuery(".stock_label.available-2").removeClass("forcehidden");
-                jQuery(".stock_label.available-3").removeClass("bottom-padding");
+                document.querySelectorAll(".stock_label.available-2").forEach(el => el.classList.remove("forcehidden"));
+                document.querySelectorAll(".stock_label.available-3").forEach(el => el.classList.remove("bottom-padding"));
                 lead_time_text = 'Same day shipping if ordered by 3pm EST';
               } else {
                 lead_time_text = 'Usually ships within 24 hours';
@@ -724,10 +914,10 @@
             lead_time_text = 'Usually ships within 1-2 business days';
           } else {
             if (inventory_policy === 'deny') {
-              jQuery("button.product-form__submit").addClass('out-of-stock');
+              document.querySelectorAll("button.product-form__submit").forEach(btn => btn.classList.add('out-of-stock'));
               lead_time_text = 'Out of stock';
             } else {
-              jQuery("button.product-form__submit").removeClass('out-of-stock');
+              document.querySelectorAll("button.product-form__submit").forEach(btn => btn.classList.remove('out-of-stock'));
 
               if (variant_oos_lead_time && variant_oos_lead_time !== '') {
                 lead_time_text = variant_oos_lead_time;
@@ -750,12 +940,17 @@
           }
 
           if (lead_time_text !== "") {
-            jQuery(".stock_label.available-3").html(lead_time_text);
-            jQuery("#lead_time").val(lead_time_text);
+            document.querySelectorAll(".stock_label.available-3").forEach(el => el.innerHTML = lead_time_text);
+            const leadTimeInput = document.querySelector("#lead_time");
+            if (leadTimeInput) leadTimeInput.value = lead_time_text;
           }
 
           if (collection_additional_lead_time && collection_additional_lead_time !== '') {
-            jQuery(".stock_label.available-3").html(lead_time_text + '<span class="additional-lead-time" title="' + collection_additional_lead_time + '"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 30 30"><path d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M16,21h-2v-7h2V21z M15,11.5 c-0.828,0-1.5-0.672-1.5-1.5s0.672-1.5,1.5-1.5s1.5,0.672,1.5,1.5S15.828,11.5,15,11.5z"></path></svg></span>');
+            const svg = '<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 30 30"><path d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M16,21h-2v-7h2V21z M15,11.5 c-0.828,0-1.5-0.672-1.5-1.5s0.672-1.5,1.5-1.5s1.5,0.672,1.5,1.5S15.828,11.5,15,11.5z"></path></svg>';
+            const label3 = document.querySelector(".stock_label.available-3");
+            if (label3) {
+              label3.innerHTML = lead_time_text + '<span class="additional-lead-time" title="' + collection_additional_lead_time + '">' + svg + '</span>';
+            }
           }
         }
       })
@@ -809,23 +1004,26 @@
     const variant = getVariantData(variant_id);
     
     var qty = variant?.inventory_quantity || 
-              parseInt(jQuery('[name="variant_quantity_' + variant_id + '"]').val()) || 0;
-    var current_qty = parseInt(jQuery(".quantity__input").val());
+              parseInt(document.querySelector(`[name="variant_quantity_${variant_id}"]`)?.value) || 0;
+    var current_qty = parseInt(document.querySelector(".quantity__input")?.value);
     var inventory_policy = variant?.inventory_policy || 
-                         jQuery('[name="variant_inventory_policy_' + variant_id + '"]').val() || 
+                         document.querySelector(`[name="variant_inventory_policy_${variant_id}"]`)?.value || 
                          'deny';
 
     manageStockDisplay();
 
     if (inventory_policy === 'continue') return;
 
-    jQuery('span.current_qty').html(qty);
-    jQuery(".quantity_warning span.qty-warning").addClass("hide");
+    const currentQtyEl = document.querySelector('span.current_qty');
+    if (currentQtyEl) currentQtyEl.innerHTML = qty;
+    document.querySelectorAll(".quantity_warning span.qty-warning").forEach(el => el.classList.add("hide"));
 
     if (current_qty > qty) {
       setTimeout(function() {
-        jQuery(".product-form__submit span").html("Add to cart");
-        jQuery(".product-form__submit").prop("disabled", false);
+        const submitBtn = document.querySelector(".product-form__submit");
+        const submitSpan = submitBtn?.querySelector('span');
+        if (submitSpan) submitSpan.innerHTML = "Add to cart";
+        if (submitBtn) submitBtn.disabled = false;
       }, 700);
     }
   }
@@ -842,15 +1040,17 @@
     }
 
     const isDiscontinued = productData?.metafields?.status?.discontinued || 
-                          jQuery('[name="isDiscontinued"]').val();
+                          document.querySelector('[name="isDiscontinued"]')?.value;
     if (isDiscontinued && isDiscontinued !== 'false') {
-      jQuery(".product-price-display").html('');
-      jQuery(".per-item-price").hide();
+      const priceDisplay = document.querySelector(".product-price-display");
+      if (priceDisplay) priceDisplay.innerHTML = '';
+      const perItem = document.querySelector(".per-item-price");
+      if (perItem) perItem.style.display = 'none';
       return;
     }
 
-    var qty = parseInt(jQuery(".quantity__input").val()) || 1;
-    var rewardPoints = jQuery('div.reward_points > span');
+    var qty = parseInt(document.querySelector(".quantity__input")?.value) || 1;
+    const rewardPoints = document.querySelector('div.reward_points > span');
     var price_num = parseFloat(price);
     
     // Get pricing data using helper functions
@@ -868,29 +1068,29 @@
     
     // Fallback to hidden fields if not in JSON
     if (map_value_num === 0) {
-      const mapStr = jQuery('[name="variant_map_value_' + variant_id + '"]').val();
-      if (mapStr) map_value_num = parseFloat(mapStr.replace("$", "")) || 0;
+      const mapField = document.querySelector(`[name="variant_map_value_${variant_id}"]`);
+      if (mapField) map_value_num = parseFloat(mapField.value.replace("$", "")) || 0;
     }
     
     if (msrp_value_num === 0) {
-      const msrpStr = jQuery('[name="variant_msrp_value_' + variant_id + '"]').val();
-      if (msrpStr) msrp_value_num = parseFloat(msrpStr.replace("$", "")) || 0;
+      const msrpField = document.querySelector(`[name="variant_msrp_value_${variant_id}"]`);
+      if (msrpField) msrp_value_num = parseFloat(msrpField.value.replace("$", "")) || 0;
     }
 
     // Product-level fallbacks
     if (map_value_num === 0) {
       map_value_num = parseFloat(productData?.metafields?.pricing?.map_value || 0);
       if (map_value_num === 0) {
-        const mapStr = jQuery('[name="product_map_value"]').val();
-        if (mapStr) map_value_num = parseFloat(mapStr.replace("$", "")) || 0;
+        const mapField = document.querySelector('[name="product_map_value"]');
+        if (mapField) map_value_num = parseFloat(mapField.value.replace("$", "")) || 0;
       }
     }
 
     if (msrp_value_num === 0) {
       msrp_value_num = parseFloat(productData?.metafields?.pricing?.msrp_value || 0);
       if (msrp_value_num === 0) {
-        const msrpStr = jQuery('[name="product_msrp_value"]').val();
-        if (msrpStr) msrp_value_num = parseFloat(msrpStr.replace("$", "")) || 0;
+        const msrpField = document.querySelector('[name="product_msrp_value"]');
+        if (msrpField) msrp_value_num = parseFloat(msrpField.value.replace("$", "")) || 0;
       }
     }
 
@@ -901,28 +1101,39 @@
     if (price_num < map_value_num) {
       msrp_txt = '<div class="regios-dopp-generic-price-item--regular">Regular price: <s><span id="map-price">' + formatCurrency(map_value_num) + '</span></s></div>';
       map_txt = '<div class="product-price regios-dopp-generic-price-item--sale">Add to Cart for Price</div>';
-      jQuery("div.reward_points").addClass("hide");
+      const rewardDiv = document.querySelector("div.reward_points");
+      if (rewardDiv) rewardDiv.classList.add("hide");
     } else if (price_num >= map_value_num && price_num < msrp_value_num) {
       msrp_txt = '<div class="regios-dopp-generic-price-item--regular">MSRP: <s><span id="map-price">' + formatCurrency(msrp_value_num) + '</span></s></div>';
       map_txt = '<div class="product-price regios-dopp-generic-price-item--sale">' + formatCurrency(price_num) + ' each</div>';
-      jQuery("div.reward_points").addClass("hide");
+      const rewardDiv = document.querySelector("div.reward_points");
+      if (rewardDiv) rewardDiv.classList.add("hide");
     } else if (price_num >= map_value_num && price_num >= msrp_value_num) {
       msrp_txt = '';
       map_txt = '<div class="product-price regios-dopp-generic-price-item--sale">' + formatCurrency(price_num) + ' each</div>';
-      jQuery("div.reward_points").removeClass("hide");
-      rewardPoints.html(totalPrice.toFixed(2));
+      const rewardDiv = document.querySelector("div.reward_points");
+      if (rewardDiv) {
+        rewardDiv.classList.remove("hide");
+        if (rewardPoints) rewardPoints.innerHTML = totalPrice.toFixed(2);
+      }
     } else {
       map_txt = '<div class="product-price regios-dopp-generic-price-item--sale">' + formatCurrency(price_num) + ' each</div>';
-      jQuery("div.reward_points").removeClass("hide");
-      rewardPoints.html(totalPrice.toFixed(2));
+      const rewardDiv = document.querySelector("div.reward_points");
+      if (rewardDiv) {
+        rewardDiv.classList.remove("hide");
+        if (rewardPoints) rewardPoints.innerHTML = totalPrice.toFixed(2);
+      }
     }
     
     if (compare_at_price_num > 0 && compare_at_price_num > price_num) {
       msrp_txt = '<div class="regios-dopp-generic-price-item--regular">Regular Price: <s id="compare-at-price">' + formatCurrency(compare_at_price_num) + ' ea</s></div>';
       totalPrice = price_num * qty;
       map_txt = '<div class="product-price regios-dopp-generic-price-item--sale">' + formatCurrency(price_num) + ' each</div>';
-      jQuery("div.reward_points").removeClass("hide");
-      rewardPoints.html(totalPrice.toFixed(2));
+      const rewardDiv = document.querySelector("div.reward_points");
+      if (rewardDiv) {
+        rewardDiv.classList.remove("hide");
+        if (rewardPoints) rewardPoints.innerHTML = totalPrice.toFixed(2);
+      }
     }
 
     if (price_num < map_value_num 
@@ -930,23 +1141,30 @@
       || (compare_at_price_num > 0 && compare_at_price_num > price_num)) {
       if (price_num < map_value_num 
       || (price_num >= map_value_num && price_num < msrp_value_num)) {
-        jQuery("div.total-price-wrapper").addClass("hidden");
+        const wrapper = document.querySelector("div.total-price-wrapper");
+        if (wrapper) wrapper.classList.add("hidden");
       }
       
-      jQuery(".actual-price").html(msrp_txt + map_txt);
+      const actualPrice = document.querySelector(".actual-price");
+      if (actualPrice) actualPrice.innerHTML = msrp_txt + map_txt;
     } else {
-      jQuery("div.total-price-wrapper").removeClass("hidden");
-      jQuery(".product-price").html(formatCurrency(price_num) + ' each');
+      const wrapper = document.querySelector("div.total-price-wrapper");
+      if (wrapper) wrapper.classList.remove("hidden");
+      const productPrice = document.querySelector(".product-price");
+      if (productPrice) productPrice.innerHTML = formatCurrency(price_num) + ' each';
     }
     
-    jQuery(".total-price-wrapper .total-price").html(formatCurrency(totalPrice));
+    const totalPriceEl = document.querySelector(".total-price-wrapper .total-price");
+    if (totalPriceEl) totalPriceEl.innerHTML = formatCurrency(totalPrice);
 
     updateTablePrice();
 
     if (qty === 1) {
-      jQuery(".per-item-price").hide();
+      const perItem = document.querySelector(".per-item-price");
+      if (perItem) perItem.style.display = 'none';
     } else {
-      jQuery(".per-item-price").show();
+      const perItem = document.querySelector(".per-item-price");
+      if (perItem) perItem.style.display = 'block';
     }
   }
 
@@ -958,18 +1176,16 @@
   }
 
   function doneTyping() {
-    var jQueryel = jQuery('.quantity__input'),
-      jQueryqtySelector = jQuery('.quantity__input'),
-      min = parseInt(jQueryqtySelector.attr('min')) || 1,
-      qty = parseInt(jQueryqtySelector.val().replace(/\D/g, '')) || min,
-      increment = parseInt(jQueryqtySelector.attr('step')) || 1;
+    const qtyInput = document.querySelector('.quantity__input');
+    const min = parseInt(qtyInput?.getAttribute('min')) || 1;
+    const qty = parseInt((qtyInput?.value || '').replace(/\D/g, '')) || min;
+    const increment = parseInt(qtyInput?.getAttribute('step')) || 1;
     
-    var stock = parseInt(jQueryqtySelector.attr('max'));
+    const stock = parseInt(qtyInput?.getAttribute('max'));
 
     if (!isNaN(stock)) {
       if (stock > 0 && qty > stock) {
-        qty = stock;
-        jQuery('.quantity__input').val(stock);
+        if (qtyInput) qtyInput.value = stock;
       }
     }
 
@@ -978,9 +1194,9 @@
     updateTablePrice();
 
     if (qty < min) {
-      jQueryqtySelector.val(min);
+      if (qtyInput) qtyInput.value = min;
     } else if (increment && !Number.isInteger(qty/increment)) {
-      jQueryqtySelector.val(min * Math.round(qty/increment));
+      if (qtyInput) qtyInput.value = min * Math.round(qty/increment);
     }
   }
 
@@ -994,14 +1210,15 @@
   }
 
   // Window load events
-  jQuery(window).on("load", function() {
+  window.addEventListener('load', function() {
     // Ensure product data is loaded
     if (!productData) {
       loadProductData();
     }
     
-    if (jQuery("body").hasClass("product") || jQuery("body").hasClass("product.fpd") || 
-        jQuery("body").hasClass("product.fpd-dynamic") || jQuery("body").hasClass("product.custom-badge-buddies")) {
+    const body = document.body;
+    if (body.classList.contains("product") || body.classList.contains("product.fpd") || 
+        body.classList.contains("product.fpd-dynamic") || body.classList.contains("product.custom-badge-buddies")) {
       setTimeout(() => updateTablePrice(), 200);
     }
 
@@ -1081,11 +1298,11 @@
 
       if (shouldStick && !navIsSticky) {
         nav.classList.add('sticky-nav');
-        jQuery("body").addClass("sticky-nav-wrapper");
+        document.body.classList.add("sticky-nav-wrapper");
         navIsSticky = true;
       } else if (shouldUnstick && navIsSticky) {
         nav.classList.remove('sticky-nav');
-        jQuery("body").removeClass("sticky-nav-wrapper");
+        document.body.classList.remove("sticky-nav-wrapper");
         navIsSticky = false;
       }
 
@@ -1108,22 +1325,22 @@
   });
 
   function initOutOfStockPopup() {
-    var productId = productData?.id || jQuery('[name="product_id"]').val();
+    var productId = productData?.id || document.querySelector('[name="product_id"]')?.value;
     if (!productId) return;
 
-    const disable_oos_popup = jQuery('[name="disable_oos_popup"]').val();
+    const disable_oos_popup = document.querySelector('[name="disable_oos_popup"]')?.value;
     if (disable_oos_popup === 'true') return;
 
-    const variant_id = jQuery('[name="current_variant_id"]').val() || getVariantId();
+    const variant_id = document.querySelector('[name="current_variant_id"]')?.value || getVariantId();
     const variant = getVariantData(variant_id);
     
     const inventory_policy = variant?.inventory_policy || 
-                           jQuery('[name="variant_inventory_policy_' + variant_id + '"]').val() || 
+                           document.querySelector(`[name="variant_inventory_policy_${variant_id}"]`)?.value || 
                            'deny';
     const product_oos_lead_time = productData?.metafields?.inventory?.oos_lead_time || 
-                                 jQuery('[name="product_oos_lead_time"]').val() || '';
+                                 document.querySelector('[name="product_oos_lead_time"]')?.value || '';
     const variant_oos_lead_time = variant?.metafields?.inventory?.oos_lead_time || 
-                                 jQuery('[name="variant_oos_lead_time_' + variant_id + '"]').val() || '';
+                                 document.querySelector(`[name="variant_oos_lead_time_${variant_id}"]`)?.value || '';
     
     const addToCartButton = document.querySelector('[name="add"]');
     const quantityInput = document.querySelector('[name="quantity"]');
@@ -1151,20 +1368,24 @@
       addToCartButton.addEventListener('click', (event) => {
         if (product_oos_lead_time !== "" || variant_oos_lead_time !== "") return;
         
-        const quantity = parseInt(quantityInput.value, 10);
+        const quantity = parseInt(quantityInput?.value, 10);
     
         if (!continueAddingToCart && quantity > maxQuantity) {
           event.preventDefault();
-          popup.classList.remove('hidden');
-          overlay.classList.remove('hidden');
+          if (popup) popup.classList.remove('hidden');
+          if (overlay) overlay.classList.remove('hidden');
     
           const unitPrice = getVariantPrice(variant_id);
           if (quantityInput.value * unitPrice > 1000) {
-            jQuery(".retail-contact").addClass("hide");
-            jQuery(".enterprise-contact").removeClass("hide");
+            const retailContact = document.querySelector(".retail-contact");
+            const enterpriseContact = document.querySelector(".enterprise-contact");
+            if (retailContact) retailContact.classList.add("hide");
+            if (enterpriseContact) enterpriseContact.classList.remove("hide");
           } else {
-            jQuery(".retail-contact").removeClass("hide");
-            jQuery(".enterprise-contact").addClass("hide");
+            const retailContact = document.querySelector(".retail-contact");
+            const enterpriseContact = document.querySelector(".enterprise-contact");
+            if (retailContact) retailContact.classList.remove("hide");
+            if (enterpriseContact) enterpriseContact.classList.add("hide");
           }
         }
       });
@@ -1172,8 +1393,8 @@
 
     if (closePopup) {
       closePopup.addEventListener('click', () => {
-        popup.classList.add('hidden');
-        overlay.classList.add('hidden');
+        if (popup) popup.classList.add('hidden');
+        if (overlay) overlay.classList.add('hidden');
       });
     }
 
@@ -1186,8 +1407,8 @@
 
     if (overlay) {
       overlay.addEventListener('click', () => {
-        popup.classList.add('hidden');
-        overlay.classList.add('hidden');
+        if (popup) popup.classList.add('hidden');
+        if (overlay) overlay.classList.add('hidden');
       });
     }
   }
@@ -1236,11 +1457,12 @@
   }
 
   function discountProgressBar() {
-    jQuery("#discount-progress").removeClass("hidden");
+    const progressEl = document.querySelector("#discount-progress");
+    if (progressEl) progressEl.classList.remove("hidden");
     
     const table = document.querySelector(".regios-dopp-generic-volume-pricing-table");
     const slabs = extractRanges(table);
-    const $quantityInput = jQuery('.quantity__input');
+    const quantityInput = document.querySelector('.quantity__input');
 
     function updateProgress(selectedQty) {
       let currentDiscount = 0;
@@ -1259,37 +1481,43 @@
         currentDiscount = 0;
       }
 
-      jQuery('#current-discount').text(`Current Discount: ${currentDiscount}%`);
+      const currentDiscountEl = document.querySelector('#current-discount');
+      if (currentDiscountEl) currentDiscountEl.textContent = `Current Discount: ${currentDiscount}%`;
 
       if (nextSlab) {
         const progress = ((selectedQty / nextSlab.start) * 100).toFixed(1);
-        jQuery('#discount-bar').css('width', `${Math.min(progress, 100)}%`);
-        jQuery('#next-discount-info').text(`Add ${nextSlab.start - selectedQty} more to save ${nextSlab.perct}%!`);
+        const discountBar = document.querySelector('#discount-bar');
+        if (discountBar) discountBar.style.width = `${Math.min(progress, 100)}%`;
+        const nextDiscountInfo = document.querySelector('#next-discount-info');
+        if (nextDiscountInfo) nextDiscountInfo.textContent = `Add ${nextSlab.start - selectedQty} more to save ${nextSlab.perct}%!`;
       } else {
-        jQuery('#discount-bar').css('width', '100%');
-        jQuery('#next-discount-info').text('Max Discount Reached');
+        const discountBar = document.querySelector('#discount-bar');
+        if (discountBar) discountBar.style.width = '100%';
+        const nextDiscountInfo = document.querySelector('#next-discount-info');
+        if (nextDiscountInfo) nextDiscountInfo.textContent = 'Max Discount Reached';
       }
     }
 
-    if ($quantityInput.length) {
-      $quantityInput.on('input', function() {
-        const qty = parseInt(jQuery(this).val()) || 0;
+    if (quantityInput) {
+      quantityInput.addEventListener('input', function() {
+        const qty = parseInt(this.value) || 0;
         updateProgress(qty);
       });
 
-      const initialQty = parseInt($quantityInput.val()) || 0;
+      const initialQty = parseInt(quantityInput.value) || 0;
       updateProgress(initialQty);
     }
   }
 
   function updateTablePrice() {
-    jQuery(".volume_pricing_message").addClass("hidden");
-    jQuery(".bulk-ordering-message").addClass("hidden");
-    jQuery(".volume_pricing_info").addClass("hidden");
+    document.querySelectorAll(".volume_pricing_message").forEach(el => el.classList.add("hidden"));
+    document.querySelectorAll(".bulk-ordering-message").forEach(el => el.classList.add("hidden"));
+    document.querySelectorAll(".volume_pricing_info").forEach(el => el.classList.add("hidden"));
   
     const table = document.querySelector(".regios-dopp-generic-volume-pricing-table");
     if (!table) {
-      jQuery("#discount-progress").addClass("hidden");
+      const progressEl = document.querySelector("#discount-progress");
+      if (progressEl) progressEl.classList.add("hidden");
       return;
     }
 
@@ -1303,7 +1531,6 @@
     
     const variant = getVariantData(variant_id);
     const originalPriceElement = document.querySelector(".actual-price")?.querySelector(".product-price");
-    // const estimatedTotalElement = document.querySelector(".actual-price")?.querySelector(".per-item-price");
     if (!originalPriceElement) {
       console.error("Original price element not found.");
       return;
@@ -1317,14 +1544,14 @@
       return;
     }
     
-    const currentQuantity = parseFloat(document.querySelector(".quantity__input").value);
+    const currentQuantity = parseFloat(document.querySelector(".quantity__input")?.value);
     const minQuantity = variant?.metafields?.inventory?.minimum || 
-                       parseFloat(jQuery('[name="variant_minimum_' + variant_id + '"]').val()) || 1;
+                       parseFloat(document.querySelector(`[name="variant_minimum_${variant_id}"]`)?.value) || 1;
     const ranges = extractRanges(table);
     const currentRange = findRangeForQuantity(currentQuantity, ranges);
 
     // Use Shopify currency helpers if available
-    const formatCurrency = (value) => {
+    const formatCurrencyLocal = (value) => {
       if (typeof Shopify !== "undefined" && Shopify.formatMoney) {
         return Shopify.formatMoney(value * 100); // Shopify expects price in cents
       }
@@ -1332,7 +1559,8 @@
       return `$${discountedPrice}`; // Fallback to basic formatting
     };
 
-    const bodyHasPrice = jQuery("body").hasClass("product.price-discount");
+    const body = document.querySelector("body");
+    const bodyHasPrice = body?.classList.contains("product.price-discount");
     console.log('BodyHasPrice: ' + bodyHasPrice);
 
     // Check if the "Price" column already exists
@@ -1354,7 +1582,7 @@
     // Check if first row already has "1+" quantity
     const priceCellText = `${minQuantity > 1 ? minQuantity : 1}+`;
     const firstRow = tbody.querySelector("tr:first-child");
-    const firstQty = firstRow.querySelector("td:first-child")?.innerText.trim();
+    const firstQty = firstRow?.querySelector("td:first-child")?.innerText.trim();
     const hasOnePlusRow = firstRow && (firstQty === priceCellText || minQuantity > +firstQty.replace(/[^0-9.]/g, ''));
     
     if (!hasOnePlusRow) {
@@ -1368,7 +1596,7 @@
       
       // Discount column
       const discountCell = document.createElement("td");
-      discountCell.innerText = bodyHasPrice ? formatCurrency(originalPrice) : "NA";
+      discountCell.innerText = bodyHasPrice ? formatCurrencyLocal(originalPrice) : "NA";
       onePlusRow.appendChild(discountCell);
       
       // Price column (empty if price column exists, or will be added later)
@@ -1383,7 +1611,7 @@
     }
 
     const rows = tbody.querySelectorAll("tr");
-    const rewardPoints = jQuery('div.reward_points > span');
+    const rewardPointsEl = document.querySelector('div.reward_points > span');
 
     rows.forEach((row) => {
       const cells = row.querySelectorAll("td");
@@ -1414,38 +1642,40 @@
 
         if (!bodyHasPrice && !priceColumnExists) {
           const priceCell = document.createElement("td");
-          priceCell.innerText = formatCurrency(discountedPrice) + " each";
+          priceCell.innerText = formatCurrencyLocal(discountedPrice) + " each";
           row.appendChild(priceCell);
         } else {
-          const cells = row.querySelectorAll('td');
-          if (priceColumnIndex > -1 && cells[priceColumnIndex]) {
-            cells[priceColumnIndex].innerText = formatCurrency(discountedPrice) + " each";
+          const cellsList = row.querySelectorAll('td');
+          if (priceColumnIndex > -1 && cellsList[priceColumnIndex]) {
+            cellsList[priceColumnIndex].innerText = formatCurrencyLocal(discountedPrice) + " each";
           }
         }
 
         if (currentRange && quantity === currentRange.start) {
-          originalPriceElement.innerText = formatCurrency(discountedPrice) + " each";
+          originalPriceElement.innerText = formatCurrencyLocal(discountedPrice) + " each";
           
           const discountedEstimatedTotal = discountedPrice * currentQuantity;
-          jQuery(".total-price-wrapper .total-price").html(formatCurrency(discountedEstimatedTotal));
-          rewardPoints.html(discountedEstimatedTotal.toFixed(2));
+          const totalPriceEl = document.querySelector(".total-price-wrapper .total-price");
+          if (totalPriceEl) totalPriceEl.innerHTML = formatCurrencyLocal(discountedEstimatedTotal);
+          if (rewardPointsEl) rewardPointsEl.innerHTML = discountedEstimatedTotal.toFixed(2);
         }
       }
     });
 
-    let currentRowExists = jQuery(".regios-dopp-generic-volume-pricing-table tbody tr.current");
-    if (currentRowExists.length === 0) {
-      originalPriceElement.innerText = formatCurrency(originalPrice) + " each";
+    let currentRowExists = document.querySelector(".regios-dopp-generic-volume-pricing-table tbody tr.current");
+    if (!currentRowExists) {
+      originalPriceElement.innerText = formatCurrencyLocal(originalPrice) + " each";
     }
 
-    jQuery(".bulk-ordering-message").removeClass("hidden");
-    jQuery(".volume_pricing_info").removeClass("hidden");
+    document.querySelectorAll(".bulk-ordering-message").forEach(el => el.classList.remove("hidden"));
+    document.querySelectorAll(".volume_pricing_info").forEach(el => el.classList.remove("hidden"));
 
     adjustTablePadding();
 
-    var maxDiscountPerct = $('.regios-dopp-generic-volume-pricing-table tbody tr:last td:eq(1)').text();
-    // console.log('Max discount: ' + maxDiscountPerct);
-    $(".max_percent").html(maxDiscountPerct);
+    const maxDiscountEl = document.querySelector('.regios-dopp-generic-volume-pricing-table tbody tr:last td:eq(1)');
+    var maxDiscountPerct = maxDiscountEl?.text();
+    const maxPercentEl = document.querySelector(".max_percent");
+    if (maxPercentEl) maxPercentEl.innerHTML = maxDiscountPerct;
 
     // Update header to include "Price"
     if (!bodyHasPrice && thead && thead.childElementCount === 2) {
@@ -1459,7 +1689,8 @@
   function extractRanges(table) {
     const ranges = [];
     const rows = table.querySelectorAll("tbody tr");
-    const bodyHasPrice = jQuery("body").hasClass("product.price-discount");
+    const body = document.querySelector("body");
+    const bodyHasPrice = body?.classList.contains("product.price-discount") || body?.classList.contains("product price-discount");
     const variant_id = getVariantId();
     const originalPrice = getVariantPrice(variant_id);
 
@@ -1508,10 +1739,11 @@
 
   function adjustTablePadding() {
     let totalHiddenHeight = 0;
-    jQuery(".regios-dopp-generic-volume-pricing-table tbody tr.hidden").each(function() {
+    document.querySelectorAll(".regios-dopp-generic-volume-pricing-table tbody tr.hidden").forEach(el => {
       totalHiddenHeight += 46;
     });
-    jQuery(".bulk-ordering-message").css("padding-bottom", totalHiddenHeight + "px");
+    const bulkMessage = document.querySelector(".bulk-ordering-message");
+    if (bulkMessage) bulkMessage.style.paddingBottom = totalHiddenHeight + "px";
   }
 
   // Monitor URL changes
@@ -1538,8 +1770,8 @@
 
 })();
 
-
-$(document).ready(function() {
+// Billing/Shipping address synchronization
+document.addEventListener('DOMContentLoaded', function() {
     // Field mappings: billing -> shipping
     var fieldMappings = {
         'Field154': 'Field160', // Street Address
@@ -1551,37 +1783,67 @@ $(document).ready(function() {
     };
     
     // Cache the shipping address container
-    var $shippingDiv = $('#foli160');
+    var shippingDiv = document.querySelector('#foli160');
+    if (!shippingDiv) return;
     
     // Handle radio button change
-    $('input[name="Field479"]').on('change', function() {
-        if ($(this).val() === 'Yes') {
-            // Copy billing values to shipping
-            $.each(fieldMappings, function(billingId, shippingId) {
-                $('#' + shippingId).val($('#' + billingId).val());
-            });
-            
-            // Hide shipping address div
-            $shippingDiv.hide();
-            
-            // Remove required attribute from shipping fields (so form can submit)
-            $shippingDiv.find('[required]').removeAttr('required').attr('data-was-required', 'true');
-            
+    document.querySelectorAll('input[name="Field479"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        if (this.value === 'Yes') {
+          // Copy billing values to shipping
+          Object.entries(fieldMappings).forEach(([billingId, shippingId]) => {
+            const billingField = document.querySelector('#' + billingId);
+            const shippingField = document.querySelector('#' + shippingId);
+            if (billingField && shippingField) {
+              shippingField.value = billingField.value;
+            }
+          });
+          
+          // Hide shipping address div
+          shippingDiv.style.display = 'none';
+          
+          // Remove required attribute from shipping fields (so form can submit)
+          shippingDiv.querySelectorAll('[required]').forEach(field => {
+            field.removeAttribute('required');
+            field.setAttribute('data-was-required', 'true');
+          });
+          
         } else {
-            // Show shipping address div
-            $shippingDiv.show();
-            
-            // Restore required attributes
-            $shippingDiv.find('[data-was-required]').attr('required', '').removeAttr('data-was-required');
+          // Show shipping address div
+          shippingDiv.style.display = 'block';
+          
+          // Restore required attributes
+          shippingDiv.querySelectorAll('[data-was-required]').forEach(field => {
+            field.setAttribute('required', '');
+            field.removeAttribute('data-was-required');
+          });
         }
+      });
     });
     
     // Optional: Also sync when billing fields change while "Yes" is selected
-    $.each(fieldMappings, function(billingId, shippingId) {
-        $('#' + billingId).on('input change', function() {
-            if ($('#Field479_1').is(':checked')) {
-                $('#' + shippingId).val($(this).val());
+    Object.entries(fieldMappings).forEach(([billingId, shippingId]) => {
+      const billingField = document.querySelector('#' + billingId);
+      if (billingField) {
+        billingField.addEventListener('input', function() {
+          const radioYes = document.querySelector('#Field479_1');
+          if (radioYes && radioYes.checked) {
+            const shippingField = document.querySelector('#' + shippingId);
+            if (shippingField) {
+              shippingField.value = this.value;
             }
+          }
         });
+
+        billingField.addEventListener('change', function() {
+          const radioYes = document.querySelector('#Field479_1');
+          if (radioYes && radioYes.checked) {
+            const shippingField = document.querySelector('#' + shippingId);
+            if (shippingField) {
+              shippingField.value = this.value;
+            }
+          }
+        });
+      }
     });
 });
