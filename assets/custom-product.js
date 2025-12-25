@@ -28,7 +28,12 @@
     POPUP_DELAY: 3000,
     POPUP_HIDE_DELAY: 5000,
     API_URL: 'https://pratiktalati.com/custom/api.php',
-    GOOGLE_SHEET_URL: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR0zkaovoP8dVMb1Dqbhfzno7Oprzkn03ONaYrwI6-fZKedWVcT93iXkFhwLFk4hLSNNZXHia0k3jtB/pub?gid=0&single=true&output=csv'
+    GOOGLE_SHEET_URL: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR0zkaovoP8dVMb1Dqbhfzno7Oprzkn03ONaYrwI6-fZKedWVcT93iXkFhwLFk4hLSNNZXHia0k3jtB/pub?gid=0&single=true&output=csv',
+    ENTERPRISE_THRESHOLD: 1000, // Price threshold for enterprise vs retail contact
+    HIDDEN_ROW_HEIGHT: 46, // Height of each hidden table row in pixels
+    CUTOFF_HOUR: 15, // 3pm cutoff for same-day shipping
+    STORE_TIMEZONE: 'America/New_York', // EST/EDT timezone
+    DEBUG: false // Set to true to enable console logging
   };
 
   // Global variables (needed for cross-function access)
@@ -37,6 +42,27 @@
   let variantInventory;
   let continueAddingToCart = false;
   let productData = null; // Store product JSON data
+  let productDataPromise = null; // Promise for loading product data
+
+  // Debug logging helper
+  function debugLog(...args) {
+    if (CONFIG.DEBUG) {
+      console.log(...args);
+    }
+  }
+
+  // Debounce helper function
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
 
   // Wait for DOM to be ready
   function initOnReady() {
@@ -94,23 +120,18 @@
     // Initial page load setup
     setTimeout(function() {
       document.body.classList.add('loaded');
-      
+
       // Ensure product data is loaded
-      if (!productData) {
-        loadProductData();
-      }
-      
-      // Give product data time to load
-      setTimeout(() => {
+      loadProductData().then(() => {
         updateTablePrice();
 
-        const isDiscontinued = productData?.metafields?.status?.discontinued || 
+        const isDiscontinued = productData?.metafields?.status?.discontinued ||
                               document.querySelector('[name="isDiscontinued"]')?.value;
         if (isDiscontinued && isDiscontinued !== "false") {
           const outOfStockBtn = document.querySelector("a.product-form__submit-out-of-stock");
           if (outOfStockBtn) outOfStockBtn.classList.add("discontinued");
         }
-      }, 100);
+      });
     }, CONFIG.ANIMATION_DELAY);
 
     // Error message monitoring
@@ -134,7 +155,7 @@
         }
       });
 
-      observer.observe(errorMsg, { characterData: true, subtree: true });
+      observer.observe(errorMsg, { childList: true, characterData: true, subtree: true });
     }
 
     // Animated background setup
@@ -149,18 +170,12 @@
         const bg = document.querySelector(".animated-background");
         if (bg) bg.classList.remove('hidden');
         var variant_id = this.dataset.id;
-        
+
         // Ensure product data is loaded before processing
-        if (!productData) {
-          loadProductData();
-          setTimeout(() => {
-            optionLogic(variant_id);
-            setTimeout(() => updateTablePrice(), CONFIG.ANIMATION_DELAY);
-          }, 100);
-        } else {
+        loadProductData().then(() => {
           optionLogic(variant_id);
           setTimeout(() => updateTablePrice(), CONFIG.ANIMATION_DELAY);
-        }
+        });
       });
     });
 
@@ -398,14 +413,37 @@
                     if (node.parentNode && node.parentNode.tagName === 'SCRIPT') {
                       return;
                     }
-                    var tempContainer = document.createElement('div');
-                    tempContainer.innerHTML = node.nodeValue.replace(regex, function(match) {
-                      let itemUrl = item.url.trim();
-                      if (itemUrl === "#") itemUrl = "javascript:void(0);";
-                      return '<a href="' + itemUrl + '" class="tooltip" title="' + item.tooltip.replaceAll('"', '') + '">' + match + '</a>';
+
+                    // Check if replacement is needed
+                    if (!regex.test(node.nodeValue)) {
+                      return;
+                    }
+
+                    // Create elements safely without innerHTML
+                    const fragment = document.createDocumentFragment();
+                    const parts = node.nodeValue.split(regex);
+                    const matches = node.nodeValue.match(regex) || [];
+
+                    parts.forEach(function(part, index) {
+                      if (part) {
+                        fragment.appendChild(document.createTextNode(part));
+                      }
+
+                      if (index < matches.length) {
+                        const link = document.createElement('a');
+                        let itemUrl = item.url.trim();
+                        if (itemUrl === "#") itemUrl = "javascript:void(0);";
+                        link.href = itemUrl;
+                        link.className = 'tooltip';
+                        // Safely set tooltip - no HTML injection possible with setAttribute
+                        link.setAttribute('title', item.tooltip);
+                        link.textContent = matches[index];
+                        fragment.appendChild(link);
+                      }
                     });
-                    if (tempContainer.children.length > 0) {
-                      node.parentNode.replaceChild(tempContainer.firstChild, node);
+
+                    if (fragment.hasChildNodes()) {
+                      node.parentNode.replaceChild(fragment, node);
                     }
                   }
                 });
@@ -437,17 +475,10 @@
 
     // Initialize pricing and stock
     setTimeout(() => {
-      // Ensure product data is loaded first
-      if (!productData) {
-        loadProductData();
-        setTimeout(() => {
-          mapMsrpLogic();
-          manageStockDisplay();
-        }, 200);
-      } else {
+      loadProductData().then(() => {
         mapMsrpLogic();
         manageStockDisplay();
-      }
+      });
     }, 100);
 
     // Sliding support popup
@@ -537,42 +568,65 @@
     initOnReady();
   }
 
-  // Load product data from JSON
+  // Load product data from JSON - returns a Promise
   function loadProductData() {
-    // Method 1: Try to get from ProductJson script tag
-    const productJsonScript = document.querySelector('[id^="ProductJson-"]');
-    if (productJsonScript) {
-      try {
-        productData = JSON.parse(productJsonScript.textContent);
-        // Expose globally for debugging
-        window.productData = productData;
-        console.log('Product data loaded from script tag');
-        return;
-      } catch (e) {
-        console.error('Error parsing ProductJson:', e);
-      }
+    // Return existing promise if already loading
+    if (productDataPromise) {
+      return productDataPromise;
     }
 
-    // Method 2: Try to get from window object (many themes expose this)
-    if (window.product) {
-      productData = window.product;
-      window.productData = productData;
-      console.log('Product data loaded from window.product');
-      return;
+    // If already loaded, return resolved promise
+    if (productData) {
+      return Promise.resolve(productData);
     }
 
-    // Method 3: Try to fetch from API if we have a product handle
-    const productHandle = window.location.pathname.match(/\/products\/([^\/]+)/);
-    if (productHandle && productHandle[1]) {
-      fetch(`/products/${productHandle[1]}.json`)
-        .then(response => response.json())
-        .then(data => {
-          productData = data.product;
+    productDataPromise = new Promise((resolve, reject) => {
+      // Method 1: Try to get from ProductJson script tag
+      const productJsonScript = document.querySelector('[id^="ProductJson-"]');
+      if (productJsonScript) {
+        try {
+          productData = JSON.parse(productJsonScript.textContent);
           window.productData = productData;
-          console.log('Product data loaded from API');
-        })
-        .catch(error => console.error('Failed to load product JSON from API:', error));
-    }
+          debugLog('Product data loaded from script tag');
+          resolve(productData);
+          return;
+        } catch (e) {
+          console.error('Error parsing ProductJson:', e);
+        }
+      }
+
+      // Method 2: Try to get from window object (many themes expose this)
+      if (window.product) {
+        productData = window.product;
+        window.productData = productData;
+        debugLog('Product data loaded from window.product');
+        resolve(productData);
+        return;
+      }
+
+      // Method 3: Try to fetch from API if we have a product handle
+      const productHandle = window.location.pathname.match(/\/products\/([^\/]+)/);
+      if (productHandle && productHandle[1]) {
+        fetch(`/products/${productHandle[1]}.json`)
+          .then(response => response.json())
+          .then(data => {
+            productData = data.product;
+            window.productData = productData;
+            debugLog('Product data loaded from API');
+            resolve(productData);
+          })
+          .catch(error => {
+            console.error('Failed to load product JSON from API:', error);
+            reject(error);
+          });
+      } else {
+        // No product data available
+        debugLog('No product data source found');
+        resolve(null);
+      }
+    });
+
+    return productDataPromise;
   }
 
   // Helper function to check if product data is loaded
@@ -613,15 +667,20 @@
 
   // Helper function to get variant price
   function getVariantPrice(variantId) {
+    if (!variantId) return 0;
+    
     const variant = getVariantData(variantId);
-    if (variant && variant.price) {
+    if (variant && variant.price !== undefined && variant.price !== null) {
       return variant.price / 100; // Convert from cents
-    } else {
-      // Fallback to hidden field
-      const priceField = document.querySelector(`[name="variant_price_${variantId}"]`);
-      const priceStr = priceField ? priceField.value : '';
-      if (priceStr) {
-        return parseFloat(priceStr.replace(/[$,]/g, ''));
+    }
+    
+    // Fallback to hidden field
+    const priceField = document.querySelector(`[name="variant_price_${variantId}"]`);
+    const priceStr = priceField ? priceField.value : '';
+    if (priceStr) {
+      const parsed = parseFloat(priceStr.replace(/[$,]/g, ''));
+      if (!isNaN(parsed)) {
+        return parsed;
       }
     }
     
@@ -965,47 +1024,48 @@
   }, 60000);
 
   function isAfterFriday3pmBeforeMonday() {
-    // Get current date in store timezone, assuming EST
+    // Get current time in store timezone using Intl API (handles DST automatically)
     const now = new Date();
-  
-    // Convert to EST timezone by offsetting UTC time accordingly
-    // EST is UTC-5 normally, but consider daylight saving changes as needed
-    // For simplicity, this example assumes fixed offset to EST (-5 hours)
-    const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
-    const estOffset = -5; // EST offset in hours
-  
-    const estTime = new Date(utc + (3600000 * estOffset));
-  
-    const day = estTime.getDay(); // 0=Sun, 5=Fri, 6=Sat
-    const hours = estTime.getHours();
-  
-    // Check Friday 15:00 (3 PM) or later
-    if (day === 5 && hours >= 15) {
+
+    // Format the date in the store's timezone
+    const formatter = new Intl.DateTimeFormat('en-US', {
+      timeZone: CONFIG.STORE_TIMEZONE,
+      weekday: 'short',
+      hour: 'numeric',
+      hour12: false
+    });
+
+    // Get the parts of the formatted date
+    const parts = formatter.formatToParts(now);
+    const weekday = parts.find(part => part.type === 'weekday')?.value;
+    const hour = parseInt(parts.find(part => part.type === 'hour')?.value || '0');
+
+    // Check Friday 3 PM or later
+    if (weekday === 'Fri' && hour >= CONFIG.CUTOFF_HOUR) {
       return true;
     }
     // Saturday any time
-    if (day === 6) {
+    if (weekday === 'Sat') {
       return true;
     }
     // Sunday any time
-    if (day === 0) {
+    if (weekday === 'Sun') {
       return true;
     }
-    // Monday before 00:00 (should be excluded)
-    if (day === 1) {
-      return false;
-    }
-    
+
     return false;
   }
 
   function quantityLogic() {
     var variant_id = getVariantId();
+    if (!variant_id) return;
+    
     const variant = getVariantData(variant_id);
+    if (!variant) return;
     
     var qty = variant?.inventory_quantity || 
               parseInt(document.querySelector(`[name="variant_quantity_${variant_id}"]`)?.value) || 0;
-    var current_qty = parseInt(document.querySelector(".quantity__input")?.value);
+    var current_qty = parseInt(document.querySelector(".quantity__input")?.value) || 0;
     var inventory_policy = variant?.inventory_policy || 
                          document.querySelector(`[name="variant_inventory_policy_${variant_id}"]`)?.value || 
                          'deny';
@@ -1200,22 +1260,16 @@
     }
   }
 
-  function validateQty(qty) {
-    if((parseFloat(qty) == parseInt(qty)) && !isNaN(qty)) {
-      // Valid number
-    } else {
-      qty = 1;
-    }
-    return qty;
-  }
 
   // Window load events
   window.addEventListener('load', function() {
     // Ensure product data is loaded
-    if (!productData) {
-      loadProductData();
-    }
-    
+    loadProductData().then(() => {
+      handleWindowLoad();
+    });
+  });
+
+  function handleWindowLoad() {
     const body = document.body;
     if (body.classList.contains("product") || body.classList.contains("product.fpd") || 
         body.classList.contains("product.fpd-dynamic") || body.classList.contains("product.custom-badge-buddies")) {
@@ -1280,13 +1334,13 @@
         }
       }
     }, 100);
-  });
+  }
 
   // Sticky header
   document.addEventListener('DOMContentLoaded', function() {
     const nav = document.querySelector('sticky-header.header-wrapper');
     if (!nav) return;
-    
+
     let lastScrollY = window.scrollY;
     let navIsSticky = false;
 
@@ -1309,16 +1363,17 @@
       lastScrollY = window.scrollY;
     }
 
-    window.addEventListener('scroll', toggleStickyNav);
+    // Debounce scroll events to improve performance
+    window.addEventListener('scroll', debounce(toggleStickyNav, 10));
   });
 
   // Out of stock popup
   document.addEventListener('DOMContentLoaded', () => {
     // Ensure product data is loaded
-    if (!productData && window.location.pathname.includes('/products/')) {
-      loadProductData();
-      // Wait a bit for data to load
-      setTimeout(() => initOutOfStockPopup(), 300);
+    if (window.location.pathname.includes('/products/')) {
+      loadProductData().then(() => {
+        initOutOfStockPopup();
+      });
     } else {
       initOutOfStockPopup();
     }
@@ -1376,7 +1431,7 @@
           if (overlay) overlay.classList.remove('hidden');
     
           const unitPrice = getVariantPrice(variant_id);
-          if (quantityInput.value * unitPrice > 1000) {
+          if (quantityInput.value * unitPrice > CONFIG.ENTERPRISE_THRESHOLD) {
             const retailContact = document.querySelector(".retail-contact");
             const enterpriseContact = document.querySelector(".enterprise-contact");
             if (retailContact) retailContact.classList.add("hide");
@@ -1421,7 +1476,7 @@
           const table = document.querySelector(".regios-dopp-generic-volume-pricing-table");
           if (table) {
             observer.disconnect();
-            console.log('Table changed!');
+            debugLog('Table changed!');
             observeTableChange();
             updateTablePrice();
           }
@@ -1530,6 +1585,11 @@
     }
     
     const variant = getVariantData(variant_id);
+    if (!variant) {
+      console.error("Variant data not found for ID:", variant_id);
+      return;
+    }
+
     const originalPriceElement = document.querySelector(".actual-price")?.querySelector(".product-price");
     if (!originalPriceElement) {
       console.error("Original price element not found.");
@@ -1539,12 +1599,8 @@
     // Get price using helper function
     const originalPrice = getVariantPrice(variant_id);
     
-    if (!originalPrice) {
-      console.error("Original price not found.");
-      return;
-    }
-    
-    const currentQuantity = parseFloat(document.querySelector(".quantity__input")?.value);
+    // Don't exit if price is 0 - it might be a valid price or just not loaded yet
+    const currentQuantity = parseFloat(document.querySelector(".quantity__input")?.value) || 1;
     const minQuantity = variant?.metafields?.inventory?.minimum || 
                        parseFloat(document.querySelector(`[name="variant_minimum_${variant_id}"]`)?.value) || 1;
     const ranges = extractRanges(table);
@@ -1561,7 +1617,7 @@
 
     const body = document.querySelector("body");
     const bodyHasPrice = body?.classList.contains("product.price-discount");
-    console.log('BodyHasPrice: ' + bodyHasPrice);
+    debugLog('BodyHasPrice: ' + bodyHasPrice);
 
     // Check if the "Price" column already exists
     const thead = table.querySelector("thead tr");
@@ -1672,8 +1728,8 @@
 
     adjustTablePadding();
 
-    const maxDiscountEl = document.querySelector('.regios-dopp-generic-volume-pricing-table tbody tr:last td:eq(1)');
-    var maxDiscountPerct = maxDiscountEl?.text();
+    const maxDiscountEl = document.querySelector('.regios-dopp-generic-volume-pricing-table tbody tr:last-child td:nth-child(2)');
+    var maxDiscountPerct = maxDiscountEl?.textContent || '';
     const maxPercentEl = document.querySelector(".max_percent");
     if (maxPercentEl) maxPercentEl.innerHTML = maxDiscountPerct;
 
@@ -1703,9 +1759,18 @@
         if (match) {
           let perct = 0;
           if (discountPerct) {
-            perct = bodyHasPrice
-              ? parseInt((originalPrice - parseFloat(discountPerct.innerText.trim().replace("$", ""))) / originalPrice * 100)
-              : parseInt(discountPerct.innerText.trim().replace("% off", ""));
+            if (bodyHasPrice && originalPrice > 0) {
+              const discountPrice = parseFloat(discountPerct.innerText.trim().replace("$", ""));
+              if (!isNaN(discountPrice)) {
+                perct = parseInt((originalPrice - discountPrice) / originalPrice * 100);
+              }
+            } else if (!bodyHasPrice) {
+              const percentText = discountPerct.innerText.trim().replace("% off", "").replace("%", "");
+              const parsedPerct = parseInt(percentText);
+              if (!isNaN(parsedPerct)) {
+                perct = parsedPerct;
+              }
+            }
           }
           
           const start = parseInt(match[1], 10);
@@ -1740,7 +1805,7 @@
   function adjustTablePadding() {
     let totalHiddenHeight = 0;
     document.querySelectorAll(".regios-dopp-generic-volume-pricing-table tbody tr.hidden").forEach(el => {
-      totalHiddenHeight += 46;
+      totalHiddenHeight += CONFIG.HIDDEN_ROW_HEIGHT;
     });
     const bulkMessage = document.querySelector(".bulk-ordering-message");
     if (bulkMessage) bulkMessage.style.paddingBottom = totalHiddenHeight + "px";
@@ -1748,25 +1813,22 @@
 
   // Monitor URL changes
   let currentParams = new URLSearchParams(window.location.search).toString();
-  const observer = new MutationObserver(() => {
+  const urlObserver = new MutationObserver(() => {
     const newParams = new URLSearchParams(window.location.search).toString();
     if (currentParams !== newParams) {
       currentParams = newParams;
       const myParam = new URLSearchParams(window.location.search).get('variant');
-      console.log('Query parameter changed:', myParam);
+      debugLog('Query parameter changed:', myParam);
       if (myParam) {
         // Ensure product data is loaded before processing variant
-        if (!productData) {
-          loadProductData();
-          setTimeout(() => optionLogic(myParam), 200);
-        } else {
+        loadProductData().then(() => {
           optionLogic(myParam);
-        }
+        });
       }
     }
   });
 
-  observer.observe(document, { subtree: true, childList: true });
+  urlObserver.observe(document, { subtree: true, childList: true });
 
 })();
 
