@@ -129,3 +129,12 @@
     font-size: calc(var(--font-heading-scale) * 2.2rem);
     font-weight: 700;
 }
+
+.volume-pricing-table-wrapper {
+    height: 0px !important;
+    overflow: hidden;
+}
+
+.volume-pricing-table-wrapper.open {
+    height: auto !important;
+}
