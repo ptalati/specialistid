@@ -109,6 +109,19 @@
     cursor: pointer;
 }
 
+#discount-progress {
+    clear: both;
+    margin: 0 0 0 0 !important;
+}
+
+#discount-progress #current-discount {
+    display: none;
+}
+
+#discount-progress #next-discount-info {
+    font-weight: 700;
+}
+
 .regios-dopp-generic-volume-pricing-table {
     margin: 0 0 0 0 !important;
     border-width: 0px !important;
