@@ -108,3 +108,9 @@
 .volume_pricing_info {
     cursor: pointer;
 }
+
+.regios-dopp-generic-price-container:not(.regios-dopp-generic-price--on-sale) .regios-dopp-generic-price-item--regular {
+    display: block;
+    font-size: calc(var(--font-heading-scale) * 2.2rem);
+    font-weight: 700;
+}
