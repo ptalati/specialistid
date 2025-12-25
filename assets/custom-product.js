@@ -33,7 +33,7 @@
     HIDDEN_ROW_HEIGHT: 46, // Height of each hidden table row in pixels
     CUTOFF_HOUR: 15, // 3pm cutoff for same-day shipping
     STORE_TIMEZONE: 'America/New_York', // EST/EDT timezone
-    DEBUG: false // Set to true to enable console logging
+    DEBUG: true // Set to true to enable console logging
   };
 
   // Global variables (needed for cross-function access)
@@ -668,22 +668,40 @@
   // Helper function to get variant price
   function getVariantPrice(variantId) {
     if (!variantId) return 0;
-    
+
     const variant = getVariantData(variantId);
     if (variant && variant.price !== undefined && variant.price !== null) {
-      return variant.price / 100; // Convert from cents
+      debugLog('Raw variant.price from JSON:', variant.price, 'for variant:', variantId);
+
+      // Check if price is already in dollars (< 100) or in cents (>= 100)
+      // Shopify's product.json API returns prices as strings like "1.58"
+      // but ProductJson-* script tags return cents as numbers
+      const priceValue = typeof variant.price === 'string' ? parseFloat(variant.price) : variant.price;
+
+      // If price is less than 100 and looks like dollars already, don't divide
+      // This handles cases where Shopify returns "1.58" as a string
+      if (priceValue < 100 && typeof variant.price === 'string') {
+        debugLog('Price appears to be in dollars already:', priceValue);
+        return priceValue;
+      }
+
+      // Otherwise treat as cents
+      const finalPrice = priceValue / 100;
+      debugLog('Converted price from cents:', finalPrice);
+      return finalPrice;
     }
-    
+
     // Fallback to hidden field
     const priceField = document.querySelector(`[name="variant_price_${variantId}"]`);
     const priceStr = priceField ? priceField.value : '';
     if (priceStr) {
       const parsed = parseFloat(priceStr.replace(/[$,]/g, ''));
       if (!isNaN(parsed)) {
+        debugLog('Using hidden field price:', parsed);
         return parsed;
       }
     }
-    
+
     return 0;
   }
 
@@ -691,16 +709,32 @@
   function getVariantCompareAtPrice(variantId) {
     const variant = getVariantData(variantId);
     if (variant && variant.compare_at_price) {
-      return variant.compare_at_price / 100; // Convert from cents
+      debugLog('Raw variant.compare_at_price from JSON:', variant.compare_at_price, 'for variant:', variantId);
+
+      // Check if price is already in dollars or in cents (same logic as getVariantPrice)
+      const priceValue = typeof variant.compare_at_price === 'string' ? parseFloat(variant.compare_at_price) : variant.compare_at_price;
+
+      // If price is less than 100 and looks like dollars already, don't divide
+      if (priceValue < 100 && typeof variant.compare_at_price === 'string') {
+        debugLog('Compare price appears to be in dollars already:', priceValue);
+        return priceValue;
+      }
+
+      // Otherwise treat as cents
+      const finalPrice = priceValue / 100;
+      debugLog('Converted compare price from cents:', finalPrice);
+      return finalPrice;
     }
-    
+
     // Fallback to hidden field
     const compareField = document.querySelector(`[name="variant_compare_at_price_${variantId}"]`);
     const priceStr = compareField ? compareField.value : '';
     if (priceStr) {
-      return parseFloat(priceStr.replace(/[$,]/g, ''));
+      const parsed = parseFloat(priceStr.replace(/[$,]/g, ''));
+      debugLog('Using hidden field compare price:', parsed);
+      return parsed;
     }
-    
+
     return 0;
   }
 
