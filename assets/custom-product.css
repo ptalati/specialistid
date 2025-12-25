@@ -109,6 +109,10 @@
     cursor: pointer;
 }
 
+.regios-dopp-generic-volume-pricing-table {
+    margin: 0rem !important;
+}
+
 .regios-dopp-generic-price-container:not(.regios-dopp-generic-price--on-sale) .regios-dopp-generic-price-item--regular {
     display: block;
     font-size: calc(var(--font-heading-scale) * 2.2rem);
