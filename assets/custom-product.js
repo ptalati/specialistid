@@ -33,7 +33,7 @@
     HIDDEN_ROW_HEIGHT: 46, // Height of each hidden table row in pixels
     CUTOFF_HOUR: 15, // 3pm cutoff for same-day shipping
     STORE_TIMEZONE: 'America/New_York', // EST/EDT timezone
-    DEBUG: true // Set to true to enable console logging
+    DEBUG: false // Set to true to enable console logging
   };
 
   // Global variables (needed for cross-function access)
@@ -654,88 +654,141 @@
     });
   }
 
-  // Get product metafield value
+  // Get product metafield value with support for both flat and nested structures
   function getProductMetafield(namespace, key) {
-    if (!productData || !productData.metafields) return null;
-    
-    const metafield = productData.metafields.find(m => 
-      m.namespace === namespace && m.key === key
-    );
-    
-    return metafield ? metafield.value : null;
+    if (!productData) return null;
+
+    // Method 1: Check nested structure (productData.metafields.namespace.key)
+    if (productData.metafields && typeof productData.metafields === 'object') {
+      if (productData.metafields[namespace] && productData.metafields[namespace][key] !== undefined) {
+        return productData.metafields[namespace][key];
+      }
+    }
+
+    // Method 2: Check array structure (Shopify API format)
+    if (Array.isArray(productData.metafields)) {
+      const metafield = productData.metafields.find(m =>
+        m.namespace === namespace && m.key === key
+      );
+      if (metafield) return metafield.value;
+    }
+
+    return null;
+  }
+
+  // Get variant metafield value with support for both flat and nested structures
+  function getVariantMetafield(variantId, namespace, key) {
+    const variant = getVariantData(variantId);
+    if (!variant) return null;
+
+    // Method 1: Check nested structure (variant.metafields.namespace.key)
+    if (variant.metafields && typeof variant.metafields === 'object') {
+      if (variant.metafields[namespace] && variant.metafields[namespace][key] !== undefined) {
+        return variant.metafields[namespace][key];
+      }
+    }
+
+    // Method 2: Check array structure (Shopify API format)
+    if (Array.isArray(variant.metafields)) {
+      const metafield = variant.metafields.find(m =>
+        m.namespace === namespace && m.key === key
+      );
+      if (metafield) return metafield.value;
+    }
+
+    return null;
+  }
+
+  // Get collection data from page context (if available)
+  function getCollectionMetafield(namespace, key) {
+    // Try to get from window.collection if theme exposes it
+    if (window.collection && window.collection.metafields) {
+      if (typeof window.collection.metafields === 'object') {
+        if (window.collection.metafields[namespace] && window.collection.metafields[namespace][key] !== undefined) {
+          return window.collection.metafields[namespace][key];
+        }
+      }
+      if (Array.isArray(window.collection.metafields)) {
+        const metafield = window.collection.metafields.find(m =>
+          m.namespace === namespace && m.key === key
+        );
+        if (metafield) return metafield.value;
+      }
+    }
+    return null;
   }
 
   // Helper function to get variant price
   function getVariantPrice(variantId) {
-    if (!variantId) return 0;
+    if (!variantId) {
+      debugLog('getVariantPrice: No variantId provided');
+      return 0;
+    }
 
     const variant = getVariantData(variantId);
-    if (variant && variant.price !== undefined && variant.price !== null) {
-      debugLog('Raw variant.price from JSON:', variant.price, 'for variant:', variantId);
-
-      // Check if price is already in dollars (< 100) or in cents (>= 100)
-      // Shopify's product.json API returns prices as strings like "1.58"
-      // but ProductJson-* script tags return cents as numbers
-      const priceValue = typeof variant.price === 'string' ? parseFloat(variant.price) : variant.price;
-
-      // If price is less than 100 and looks like dollars already, don't divide
-      // This handles cases where Shopify returns "1.58" as a string
-      if (priceValue < 100 && typeof variant.price === 'string') {
-        debugLog('Price appears to be in dollars already:', priceValue);
-        return priceValue;
-      }
-
-      // Otherwise treat as cents
-      const finalPrice = priceValue / 100;
-      debugLog('Converted price from cents:', finalPrice);
-      return finalPrice;
+    if (!variant) {
+      console.error(`getVariantPrice: Variant not found for ID: ${variantId}`);
+      return 0;
     }
 
-    // Fallback to hidden field
-    const priceField = document.querySelector(`[name="variant_price_${variantId}"]`);
-    const priceStr = priceField ? priceField.value : '';
-    if (priceStr) {
-      const parsed = parseFloat(priceStr.replace(/[$,]/g, ''));
-      if (!isNaN(parsed)) {
-        debugLog('Using hidden field price:', parsed);
-        return parsed;
-      }
+    if (variant.price === undefined || variant.price === null) {
+      console.error(`getVariantPrice: Price not available for variant: ${variantId}`);
+      return 0;
     }
 
-    return 0;
+    debugLog('Raw variant.price from JSON:', variant.price, 'for variant:', variantId);
+
+    // Check if price is already in dollars (< 100) or in cents (>= 100)
+    // Shopify's product.json API returns prices as strings like "1.58"
+    // but ProductJson-* script tags return cents as numbers
+    const priceValue = typeof variant.price === 'string' ? parseFloat(variant.price) : variant.price;
+
+    // If price is less than 100 and looks like dollars already, don't divide
+    // This handles cases where Shopify returns "1.58" as a string
+    if (priceValue < 100 && typeof variant.price === 'string') {
+      debugLog('Price appears to be in dollars already:', priceValue);
+      return priceValue;
+    }
+
+    // Otherwise treat as cents
+    const finalPrice = priceValue / 100;
+    debugLog('Converted price from cents:', finalPrice);
+    return finalPrice;
   }
 
   // Helper function to get variant compare at price
   function getVariantCompareAtPrice(variantId) {
+    if (!variantId) {
+      debugLog('getVariantCompareAtPrice: No variantId provided');
+      return 0;
+    }
+
     const variant = getVariantData(variantId);
-    if (variant && variant.compare_at_price) {
-      debugLog('Raw variant.compare_at_price from JSON:', variant.compare_at_price, 'for variant:', variantId);
-
-      // Check if price is already in dollars or in cents (same logic as getVariantPrice)
-      const priceValue = typeof variant.compare_at_price === 'string' ? parseFloat(variant.compare_at_price) : variant.compare_at_price;
-
-      // If price is less than 100 and looks like dollars already, don't divide
-      if (priceValue < 100 && typeof variant.compare_at_price === 'string') {
-        debugLog('Compare price appears to be in dollars already:', priceValue);
-        return priceValue;
-      }
-
-      // Otherwise treat as cents
-      const finalPrice = priceValue / 100;
-      debugLog('Converted compare price from cents:', finalPrice);
-      return finalPrice;
+    if (!variant) {
+      debugLog(`getVariantCompareAtPrice: Variant not found for ID: ${variantId}`);
+      return 0;
     }
 
-    // Fallback to hidden field
-    const compareField = document.querySelector(`[name="variant_compare_at_price_${variantId}"]`);
-    const priceStr = compareField ? compareField.value : '';
-    if (priceStr) {
-      const parsed = parseFloat(priceStr.replace(/[$,]/g, ''));
-      debugLog('Using hidden field compare price:', parsed);
-      return parsed;
+    if (!variant.compare_at_price) {
+      debugLog(`getVariantCompareAtPrice: No compare_at_price for variant: ${variantId}`);
+      return 0;
     }
 
-    return 0;
+    debugLog('Raw variant.compare_at_price from JSON:', variant.compare_at_price, 'for variant:', variantId);
+
+    // Check if price is already in dollars or in cents (same logic as getVariantPrice)
+    const priceValue = typeof variant.compare_at_price === 'string' ? parseFloat(variant.compare_at_price) : variant.compare_at_price;
+
+    // If price is less than 100 and looks like dollars already, don't divide
+    if (priceValue < 100 && typeof variant.compare_at_price === 'string') {
+      debugLog('Compare price appears to be in dollars already:', priceValue);
+      return priceValue;
+    }
+
+    // Otherwise treat as cents
+    const finalPrice = priceValue / 100;
+    debugLog('Converted compare price from cents:', finalPrice);
+    return finalPrice;
   }
 
   // Core Functions
@@ -757,17 +810,15 @@
     var compare_at_price = getVariantCompareAtPrice(variant_id);
     var compare_at_price_num = compare_at_price;
     
-    // Try to get custom data from metafields or fallback to hidden fields
-    var customPriceText = variant.metafields?.custom?.price_text || 
-                         document.querySelector(`[name="variant_customPriceText_${variant_id}"]`)?.value || '';
-    var qty = variant.inventory_quantity || 
-              parseInt(document.querySelector(`[name="variant_quantity_${variant_id}"]`)?.value) || 0;
-    
-    // Get min and increment from metafields or hidden fields
-    var min = parseInt(variant.metafields?.inventory?.minimum) || 
-              parseInt(document.querySelector(`[name="variant_minimum_${variant_id}"]`)?.value) || 1;
-    var increment = parseInt(variant.metafields?.inventory?.increment) || 
-                   parseInt(document.querySelector(`[name="variant_increment_${variant_id}"]`)?.value) || 1;
+    // Get custom data from metafields only
+    var customPriceText = getVariantMetafield(variant_id, 'custom', 'price_text') || '';
+    var qty = variant.inventory_quantity || 0;
+
+    // Get min and increment from metafields with defaults
+    var min = parseInt(getVariantMetafield(variant_id, 'inventory', 'minimum')) || 1;
+    var increment = parseInt(getVariantMetafield(variant_id, 'inventory', 'increment')) || 1;
+
+    debugLog(`optionLogic for variant ${variant_id}: min=${min}, increment=${increment}, qty=${qty}, customPriceText=${customPriceText}`);
 
     const variantSkuEl = document.querySelector('span.variant-sku');
     if (variantSkuEl) variantSkuEl.innerHTML = sku;
@@ -920,9 +971,8 @@
       if (!variant_id) return;
     }
 
-    const isDiscontinued = productData?.metafields?.status?.discontinued || 
-                          document.querySelector('[name="isDiscontinued"]')?.value;
-    if (isDiscontinued && isDiscontinued !== 'false') {
+    const isDiscontinued = getProductMetafield('status', 'discontinued');
+    if (isDiscontinued && isDiscontinued !== 'false' && isDiscontinued !== false) {
       const label2 = document.querySelector(".stock_label.available-2");
       const label3 = document.querySelector(".stock_label.available-3");
       if (label2) label2.classList.add("forcehidden");
@@ -954,27 +1004,19 @@
         if (variantInventory) {
           var doralQty = variantInventory.inventoryLevels["Specialist ID"] || 0;
 
-          var inventory_policy = variant?.inventory_policy || 
-                              document.querySelector(`[name="variant_inventory_policy_${variant_id}"]`)?.value || 
-                              'deny';
-          
-          // Try to get shipping info from metafields first, then hidden fields
-          var product_iscustom = productData?.metafields?.product?.is_custom || 
-                               document.querySelector('[name="product_iscustom"]')?.value;
-          var product_shipping_info = productData?.metafields?.shipping?.info || 
-                                    document.querySelector('[name="product_shipping_info"]')?.value;
-          var variant_shipping_info = variant?.metafields?.shipping?.info || 
-                                    document.querySelector(`[name="variant_shipping_info_${variant_id}"]`)?.value;
-          var product_oos_lead_time = productData?.metafields?.inventory?.oos_lead_time || 
-                                    document.querySelector('[name="product_oos_lead_time"]')?.value;
-          var variant_oos_lead_time = variant?.metafields?.inventory?.oos_lead_time || 
-                                    document.querySelector(`[name="variant_oos_lead_time_${variant_id}"]`)?.value;
-          var collection_shipping_info = document.querySelector('[name="collection_shipping_info"]')?.value;
-          var qty = variant?.inventory_quantity || 
-                   parseInt(document.querySelector(`[name="variant_quantity_${variant_id}"]`)?.value) || 0;
-          var collection_additional_lead_time = document.querySelector('[name="collection_additional_lead_time"]')?.value;
-          var product_backordered_lead_time = document.querySelector('[name="product_backordered_lead_time"]')?.value;
-          var variant_backordered_lead_time = document.querySelector('[name="variant_backordered_lead_time"]')?.value;
+          var inventory_policy = variant?.inventory_policy || 'deny';
+
+          // Get shipping and inventory info from metafields only
+          var product_iscustom = getProductMetafield('product', 'is_custom');
+          var product_shipping_info = getProductMetafield('shipping', 'info');
+          var variant_shipping_info = getVariantMetafield(variant_id, 'shipping', 'info');
+          var product_oos_lead_time = getProductMetafield('inventory', 'oos_lead_time');
+          var variant_oos_lead_time = getVariantMetafield(variant_id, 'inventory', 'oos_lead_time');
+          var collection_shipping_info = getCollectionMetafield('shipping', 'info');
+          var qty = variant?.inventory_quantity || 0;
+          var collection_additional_lead_time = getCollectionMetafield('inventory', 'additional_lead_time');
+          var product_backordered_lead_time = getProductMetafield('inventory', 'backordered_lead_time');
+          var variant_backordered_lead_time = getVariantMetafield(variant_id, 'inventory', 'backordered_lead_time');
 
           document.querySelectorAll(".stock_label.available-2").forEach(el => el.classList.add("forcehidden"));
           document.querySelectorAll(".stock_label.available-3").forEach(el => el.classList.add("bottom-padding"));
@@ -1093,16 +1135,13 @@
   function quantityLogic() {
     var variant_id = getVariantId();
     if (!variant_id) return;
-    
+
     const variant = getVariantData(variant_id);
     if (!variant) return;
-    
-    var qty = variant?.inventory_quantity || 
-              parseInt(document.querySelector(`[name="variant_quantity_${variant_id}"]`)?.value) || 0;
+
+    var qty = variant?.inventory_quantity || 0;
     var current_qty = parseInt(document.querySelector(".quantity__input")?.value) || 0;
-    var inventory_policy = variant?.inventory_policy || 
-                         document.querySelector(`[name="variant_inventory_policy_${variant_id}"]`)?.value || 
-                         'deny';
+    var inventory_policy = variant?.inventory_policy || 'deny';
 
     manageStockDisplay();
 
@@ -1133,9 +1172,8 @@
       price = getVariantPrice(variant_id);
     }
 
-    const isDiscontinued = productData?.metafields?.status?.discontinued || 
-                          document.querySelector('[name="isDiscontinued"]')?.value;
-    if (isDiscontinued && isDiscontinued !== 'false') {
+    const isDiscontinued = getProductMetafield('status', 'discontinued');
+    if (isDiscontinued && isDiscontinued !== 'false' && isDiscontinued !== false) {
       const priceDisplay = document.querySelector(".product-price-display");
       if (priceDisplay) priceDisplay.innerHTML = '';
       const perItem = document.querySelector(".per-item-price");
@@ -1150,43 +1188,20 @@
     // Get pricing data using helper functions
     var compare_at_price_num = getVariantCompareAtPrice(variant_id);
     
-    // Get MAP and MSRP values
-    const variant = getVariantData(variant_id);
-    var map_value_num = 0;
-    var msrp_value_num = 0;
-    
-    if (variant) {
-      map_value_num = parseFloat(variant.metafields?.pricing?.map_value || 0);
-      msrp_value_num = parseFloat(variant.metafields?.pricing?.msrp_value || 0);
-    }
-    
-    // Fallback to hidden fields if not in JSON
-    if (map_value_num === 0) {
-      const mapField = document.querySelector(`[name="variant_map_value_${variant_id}"]`);
-      if (mapField) map_value_num = parseFloat(mapField.value.replace("$", "")) || 0;
-    }
-    
-    if (msrp_value_num === 0) {
-      const msrpField = document.querySelector(`[name="variant_msrp_value_${variant_id}"]`);
-      if (msrpField) msrp_value_num = parseFloat(msrpField.value.replace("$", "")) || 0;
-    }
+    // Get MAP and MSRP values from metafields only
+    var map_value_num = parseFloat(getVariantMetafield(variant_id, 'pricing', 'map_value')) || 0;
+    var msrp_value_num = parseFloat(getVariantMetafield(variant_id, 'pricing', 'msrp_value')) || 0;
 
-    // Product-level fallbacks
+    // Product-level fallback (if variant doesn't have it)
     if (map_value_num === 0) {
-      map_value_num = parseFloat(productData?.metafields?.pricing?.map_value || 0);
-      if (map_value_num === 0) {
-        const mapField = document.querySelector('[name="product_map_value"]');
-        if (mapField) map_value_num = parseFloat(mapField.value.replace("$", "")) || 0;
-      }
+      map_value_num = parseFloat(getProductMetafield('pricing', 'map_value')) || 0;
     }
 
     if (msrp_value_num === 0) {
-      msrp_value_num = parseFloat(productData?.metafields?.pricing?.msrp_value || 0);
-      if (msrp_value_num === 0) {
-        const msrpField = document.querySelector('[name="product_msrp_value"]');
-        if (msrpField) msrp_value_num = parseFloat(msrpField.value.replace("$", "")) || 0;
-      }
+      msrp_value_num = parseFloat(getProductMetafield('pricing', 'msrp_value')) || 0;
     }
+
+    debugLog(`mapMsrpLogic for variant ${variant_id}: map=${map_value_num}, msrp=${msrp_value_num}`);
 
     var msrp_txt = '';
     var map_txt = '';
@@ -1414,27 +1429,25 @@
   });
 
   function initOutOfStockPopup() {
-    var productId = productData?.id || document.querySelector('[name="product_id"]')?.value;
-    if (!productId) return;
+    var productId = productData?.id;
+    if (!productId) {
+      debugLog('initOutOfStockPopup: No product ID available');
+      return;
+    }
 
-    const disable_oos_popup = document.querySelector('[name="disable_oos_popup"]')?.value;
-    if (disable_oos_popup === 'true') return;
+    const disable_oos_popup = getProductMetafield('popup', 'disable_oos');
+    if (disable_oos_popup === 'true' || disable_oos_popup === true) return;
 
-    const variant_id = document.querySelector('[name="current_variant_id"]')?.value || getVariantId();
+    const variant_id = getVariantId();
     const variant = getVariantData(variant_id);
-    
-    const inventory_policy = variant?.inventory_policy || 
-                           document.querySelector(`[name="variant_inventory_policy_${variant_id}"]`)?.value || 
-                           'deny';
-    const product_oos_lead_time = productData?.metafields?.inventory?.oos_lead_time || 
-                                 document.querySelector('[name="product_oos_lead_time"]')?.value || '';
-    const variant_oos_lead_time = variant?.metafields?.inventory?.oos_lead_time || 
-                                 document.querySelector(`[name="variant_oos_lead_time_${variant_id}"]`)?.value || '';
+
+    const inventory_policy = variant?.inventory_policy || 'deny';
+    const product_oos_lead_time = getProductMetafield('inventory', 'oos_lead_time') || '';
+    const variant_oos_lead_time = getVariantMetafield(variant_id, 'inventory', 'oos_lead_time') || '';
     
     const addToCartButton = document.querySelector('[name="add"]');
     const quantityInput = document.querySelector('[name="quantity"]');
-    const maxQuantity = variant?.inventory_quantity || 
-                       parseInt(document.querySelector('[data-stock]')?.dataset.stock || '0', 10);
+    const maxQuantity = variant?.inventory_quantity || 0;
     const popup = document.getElementById('out-of-stock-popup');
     const overlay = document.getElementById('overlay');
     const closePopup = document.getElementById('close-popup2');
@@ -1635,8 +1648,7 @@
     
     // Don't exit if price is 0 - it might be a valid price or just not loaded yet
     const currentQuantity = parseFloat(document.querySelector(".quantity__input")?.value) || 1;
-    const minQuantity = variant?.metafields?.inventory?.minimum || 
-                       parseFloat(document.querySelector(`[name="variant_minimum_${variant_id}"]`)?.value) || 1;
+    const minQuantity = parseInt(getVariantMetafield(variant_id, 'inventory', 'minimum')) || 1;
     const ranges = extractRanges(table);
     const currentRange = findRangeForQuantity(currentQuantity, ranges);
 
