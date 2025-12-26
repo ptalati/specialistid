@@ -533,16 +533,49 @@ fieldset.product-form__input--pill input[value*="Lavender" i]:checked+label::aft
     color: #000000;
 }
 
+/* ====================================
+   RESPONSIVE SIDE-BY-SIDE LAYOUT
+   Quantity and Color Sections
+   ==================================== */
+
+/* Quantity section */
 .product-form__input.product-form__quantity {
-    float: left;
-    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    min-width: 180px;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
 }
 
 quantity-input.quantity {
     width: 180px;
 }
 
+/* Color/Variant section */
 variant-radios.no-js-hidden {
-    float: right;
-    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    max-width: calc(100% - 200px - 2rem);
+}
+
+/* Mobile responsive - stack vertically on small screens */
+@media screen and (max-width: 749px) {
+    .product-form__input.product-form__quantity {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    variant-radios.no-js-hidden {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    quantity-input.quantity {
+        width: 100%;
+    }
 }
