@@ -552,12 +552,19 @@ quantity-input.quantity {
     width: 180px;
 }
 
-/* Color/Variant section */
-variant-radios.no-js-hidden {
+/* Color/Variant section - target both possible elements */
+variant-radios.no-js-hidden,
+variant-selects {
     display: inline-block;
     vertical-align: top;
     width: auto;
     max-width: calc(100% - 200px - 2rem);
+}
+
+/* Fieldset inside variant selector should not be full width */
+variant-selects fieldset.product-form__input--pill {
+    display: inline-block;
+    width: auto;
 }
 
 /* Mobile responsive - stack vertically on small screens */
@@ -569,10 +576,16 @@ variant-radios.no-js-hidden {
         margin-bottom: 1.5rem;
     }
 
-    variant-radios.no-js-hidden {
+    variant-radios.no-js-hidden,
+    variant-selects {
         display: block;
         width: 100%;
         max-width: 100%;
+    }
+
+    variant-selects fieldset.product-form__input--pill {
+        display: block;
+        width: 100%;
     }
 
     quantity-input.quantity {
