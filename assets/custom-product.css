@@ -33,7 +33,7 @@ fieldset.product-form__input--pill label {
 }
 
 /* Checked/Selected state */
-fieldset.product-form__input--pill input[type="radio"]:checked + label {
+fieldset.product-form__input--pill input[type="radio"]:checked+label {
     border-color: #000;
     border-width: 3px;
     box-shadow: 0 0 0 2px #fff, 0 0 0 4px #000;
@@ -52,194 +52,223 @@ fieldset.product-form__input--pill label:hover {
 /* Target labels by their sibling input's value attribute */
 
 /* Black & variations */
-fieldset.product-form__input--pill input[value*="Black" i]:not([value*="Translucent Black" i]) + label {
+fieldset.product-form__input--pill input[value*="Black" i]:not([value*="Translucent Black" i])+label {
     background-color: #000000 !important;
 }
-fieldset.product-form__input--pill input[value*="Translucent Black" i] + label {
+
+fieldset.product-form__input--pill input[value*="Translucent Black" i]+label {
     background-color: #000000 !important;
 }
 
 /* White & variations */
-fieldset.product-form__input--pill input[value*="White" i] + label,
-fieldset.product-form__input--pill input[value*="Clear" i] + label {
+fieldset.product-form__input--pill input[value*="White" i]+label,
+fieldset.product-form__input--pill input[value*="Clear" i]+label {
     background-color: #ffffff !important;
     border-color: #d0d0d0 !important;
 }
 
 /* Blues */
-fieldset.product-form__input--pill input[value*="Navy" i] + label {
+fieldset.product-form__input--pill input[value*="Navy" i]+label {
     background-color: #000080 !important;
 }
-fieldset.product-form__input--pill input[value*="Royal Blue" i] + label,
-fieldset.product-form__input--pill input[value*="Metallic Blue" i] + label,
-fieldset.product-form__input--pill input[value*="Translucent Blue" i] + label {
+
+fieldset.product-form__input--pill input[value*="Royal Blue" i]+label,
+fieldset.product-form__input--pill input[value*="Metallic Blue" i]+label,
+fieldset.product-form__input--pill input[value*="Translucent Blue" i]+label {
     background-color: #0000ff !important;
 }
-fieldset.product-form__input--pill input[value*="Light Blue" i] + label {
+
+fieldset.product-form__input--pill input[value*="Light Blue" i]+label {
     background-color: #b9e0f7 !important;
 }
-fieldset.product-form__input--pill input[value*="Process Blue" i] + label {
+
+fieldset.product-form__input--pill input[value*="Process Blue" i]+label {
     background-color: #0193d0 !important;
 }
-fieldset.product-form__input--pill input[value*="Neon Blue" i] + label {
+
+fieldset.product-form__input--pill input[value*="Neon Blue" i]+label {
     background-color: #0167b1 !important;
 }
-fieldset.product-form__input--pill input[value*="Blue" i]:not([value*="Navy" i]):not([value*="Royal" i]):not([value*="Light" i]):not([value*="Process" i]):not([value*="Neon" i]):not([value*="Metallic" i]):not([value*="Translucent" i]) + label {
+
+fieldset.product-form__input--pill input[value*="Blue" i]:not([value*="Navy" i]):not([value*="Royal" i]):not([value*="Light" i]):not([value*="Process" i]):not([value*="Neon" i]):not([value*="Metallic" i]):not([value*="Translucent" i])+label {
     background-color: #0167b1 !important;
 }
 
 /* Reds */
-fieldset.product-form__input--pill input[value*="Fire Red" i] + label {
+fieldset.product-form__input--pill input[value*="Fire Red" i]+label {
     background-color: #F73718 !important;
 }
-fieldset.product-form__input--pill input[value*="Translucent Red" i] + label {
+
+fieldset.product-form__input--pill input[value*="Translucent Red" i]+label {
     background-color: #ff0000 !important;
 }
-fieldset.product-form__input--pill input[value*="Red" i]:not([value*="Fire" i]):not([value*="Translucent" i]):not([value*="Hundred" i]) + label {
+
+fieldset.product-form__input--pill input[value*="Red" i]:not([value*="Fire" i]):not([value*="Translucent" i]):not([value*="Hundred" i])+label {
     background-color: #ef3e42 !important;
 }
 
 /* Greens */
-fieldset.product-form__input--pill input[value*="Military Green" i] + label {
+fieldset.product-form__input--pill input[value*="Military Green" i]+label {
     background-color: #008000 !important;
 }
-fieldset.product-form__input--pill input[value*="Dark Green" i] + label {
+
+fieldset.product-form__input--pill input[value*="Dark Green" i]+label {
     background-color: #016325 !important;
 }
-fieldset.product-form__input--pill input[value*="Forest Green" i] + label {
+
+fieldset.product-form__input--pill input[value*="Forest Green" i]+label {
     background-color: #37544f !important;
 }
-fieldset.product-form__input--pill input[value*="Neon Green" i] + label,
-fieldset.product-form__input--pill input[value*="Translucent Green" i] + label {
+
+fieldset.product-form__input--pill input[value*="Neon Green" i]+label,
+fieldset.product-form__input--pill input[value*="Translucent Green" i]+label {
     background-color: #01a94f !important;
 }
-fieldset.product-form__input--pill input[value*="Green" i]:not([value*="Military" i]):not([value*="Dark" i]):not([value*="Forest" i]):not([value*="Neon" i]):not([value*="Translucent" i]) + label {
+
+fieldset.product-form__input--pill input[value*="Green" i]:not([value*="Military" i]):not([value*="Dark" i]):not([value*="Forest" i]):not([value*="Neon" i]):not([value*="Translucent" i])+label {
     background-color: #01a94f !important;
 }
 
 /* Yellows */
-fieldset.product-form__input--pill input[value*="Neon Yellow" i] + label {
+fieldset.product-form__input--pill input[value*="Neon Yellow" i]+label {
     background-color: #DCE281 !important;
 }
-fieldset.product-form__input--pill input[value*="Translucent Yellow" i] + label {
+
+fieldset.product-form__input--pill input[value*="Translucent Yellow" i]+label {
     background-color: #ffff00 !important;
 }
-fieldset.product-form__input--pill input[value*="Yellow" i]:not([value*="Neon" i]):not([value*="Translucent" i]) + label {
+
+fieldset.product-form__input--pill input[value*="Yellow" i]:not([value*="Neon" i]):not([value*="Translucent" i])+label {
     background-color: #FFD457 !important;
 }
 
 /* Oranges */
-fieldset.product-form__input--pill input[value*="Neon Orange Antimicrobial" i] + label {
+fieldset.product-form__input--pill input[value*="Neon Orange Antimicrobial" i]+label {
     background-color: #e14e2f !important;
 }
-fieldset.product-form__input--pill input[value*="Neon Orange" i]:not([value*="Antimicrobial" i]) + label {
+
+fieldset.product-form__input--pill input[value*="Neon Orange" i]:not([value*="Antimicrobial" i])+label {
     background-color: #EF9A77 !important;
 }
-fieldset.product-form__input--pill input[value*="Translucent Orange" i] + label {
+
+fieldset.product-form__input--pill input[value*="Translucent Orange" i]+label {
     background-color: #f47b20 !important;
 }
-fieldset.product-form__input--pill input[value*="Orange" i]:not([value*="Neon" i]):not([value*="Translucent" i]) + label {
+
+fieldset.product-form__input--pill input[value*="Orange" i]:not([value*="Neon" i]):not([value*="Translucent" i])+label {
     background-color: #f47b20 !important;
 }
 
 /* Pinks */
-fieldset.product-form__input--pill input[value*="Hot Pink" i] + label {
+fieldset.product-form__input--pill input[value*="Hot Pink" i]+label {
     background-color: #DA1984 !important;
 }
-fieldset.product-form__input--pill input[value*="Translucent Pink" i] + label {
+
+fieldset.product-form__input--pill input[value*="Translucent Pink" i]+label {
     background-color: #ffc0cb !important;
 }
-fieldset.product-form__input--pill input[value*="Neon Pink" i] + label {
+
+fieldset.product-form__input--pill input[value*="Neon Pink" i]+label {
     background-color: #f16d9a !important;
 }
-fieldset.product-form__input--pill input[value*="Watermelon" i] + label {
+
+fieldset.product-form__input--pill input[value*="Watermelon" i]+label {
     background-color: #D23B68 !important;
 }
-fieldset.product-form__input--pill input[value*="Pink" i]:not([value*="Hot" i]):not([value*="Translucent" i]):not([value*="Neon" i]) + label {
+
+fieldset.product-form__input--pill input[value*="Pink" i]:not([value*="Hot" i]):not([value*="Translucent" i]):not([value*="Neon" i])+label {
     background-color: #f16d9a !important;
 }
 
 /* Purples */
-fieldset.product-form__input--pill input[value*="Neon Purple" i] + label,
-fieldset.product-form__input--pill input[value*="Translucent Purple" i] + label {
+fieldset.product-form__input--pill input[value*="Neon Purple" i]+label,
+fieldset.product-form__input--pill input[value*="Translucent Purple" i]+label {
     background-color: #800080 !important;
 }
-fieldset.product-form__input--pill input[value*="Lavender" i] + label {
+
+fieldset.product-form__input--pill input[value*="Lavender" i]+label {
     background-color: #b4b2d9 !important;
 }
-fieldset.product-form__input--pill input[value*="Purple" i]:not([value*="Neon" i]):not([value*="Translucent" i]) + label {
+
+fieldset.product-form__input--pill input[value*="Purple" i]:not([value*="Neon" i]):not([value*="Translucent" i])+label {
     background-color: #9d3393 !important;
 }
 
 /* Browns & Tans */
-fieldset.product-form__input--pill input[value*="Tan" i] + label {
+fieldset.product-form__input--pill input[value*="Tan" i]+label {
     background-color: #d2b48c !important;
 }
-fieldset.product-form__input--pill input[value*="Brown" i]:not([value*="Grey" i]) + label {
+
+fieldset.product-form__input--pill input[value*="Brown" i]:not([value*="Grey" i])+label {
     background-color: #82591f !important;
 }
 
 /* Grays */
-fieldset.product-form__input--pill input[value*="Light Gray" i] + label {
+fieldset.product-form__input--pill input[value*="Light Gray" i]+label {
     background-color: #dcddde !important;
 }
-fieldset.product-form__input--pill input[value*="Metallic Gray" i] + label {
+
+fieldset.product-form__input--pill input[value*="Metallic Gray" i]+label {
     background-color: #808080 !important;
 }
-fieldset.product-form__input--pill input[value*="Grey Brown" i] + label {
+
+fieldset.product-form__input--pill input[value*="Grey Brown" i]+label {
     background-color: #7e8083 !important;
 }
-fieldset.product-form__input--pill input[value*="Gray" i]:not([value*="Light" i]):not([value*="Metallic" i]) + label,
-fieldset.product-form__input--pill input[value*="Grey" i]:not([value*="Brown" i]) + label {
+
+fieldset.product-form__input--pill input[value*="Gray" i]:not([value*="Light" i]):not([value*="Metallic" i])+label,
+fieldset.product-form__input--pill input[value*="Grey" i]:not([value*="Brown" i])+label {
     background-color: #7e8083 !important;
 }
 
 /* Maroon */
-fieldset.product-form__input--pill input[value*="Maroon" i] + label {
+fieldset.product-form__input--pill input[value*="Maroon" i]+label {
     background-color: #820124 !important;
 }
 
 /* Teal */
-fieldset.product-form__input--pill input[value*="Teal" i] + label {
+fieldset.product-form__input--pill input[value*="Teal" i]+label {
     background-color: #018c99 !important;
 }
 
 /* Metallics */
-fieldset.product-form__input--pill input[value*="Chrome" i] + label {
+fieldset.product-form__input--pill input[value*="Chrome" i]+label {
     background-color: #C7C4B9 !important;
 }
-fieldset.product-form__input--pill input[value*="Gold" i] + label {
+
+fieldset.product-form__input--pill input[value*="Gold" i]+label {
     background-color: #FFCE44 !important;
 }
-fieldset.product-form__input--pill input[value*="Silver" i] + label {
+
+fieldset.product-form__input--pill input[value*="Silver" i]+label {
     background-color: #C0C0C0 !important;
 }
 
 /* Special patterns - Rainbow */
-fieldset.product-form__input--pill input[value*="Rainbow" i] + label {
+fieldset.product-form__input--pill input[value*="Rainbow" i]+label {
     background-image: linear-gradient(rgb(255, 0, 0), rgb(255, 0, 0) 16.6%, rgb(255, 165, 0) 16.6%, rgb(255, 165, 0) 33.2%, rgb(255, 255, 0) 33.2%, rgb(255, 255, 0) 49.8%, rgb(0, 128, 0) 49.8%, rgb(0, 128, 0) 65.4%, rgb(0, 0, 255) 65.4%, rgb(0, 0, 255) 83%, rgb(128, 0, 128) 83%, rgb(128, 0, 128) 100%) !important;
     background-color: transparent !important;
 }
 
 /* Special patterns - Assorted (would need image upload) */
-fieldset.product-form__input--pill input[value*="Assorted" i] + label {
+fieldset.product-form__input--pill input[value*="Assorted" i]+label {
     background-color: #ddd !important;
-    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.5) 10px, rgba(255,255,255,.5) 20px) !important;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, .5) 10px, rgba(255, 255, 255, .5) 20px) !important;
 }
 
 /* Special patterns - Red White Blue (would need image upload) */
-fieldset.product-form__input--pill input[value*="Red White" i] + label,
-fieldset.product-form__input--pill input[value*="RWB" i] + label {
+fieldset.product-form__input--pill input[value*="Red White" i]+label,
+fieldset.product-form__input--pill input[value*="RWB" i]+label {
     background: linear-gradient(to bottom, #ef3e42 0%, #ef3e42 33.33%, #ffffff 33.33%, #ffffff 66.66%, #0167b1 66.66%, #0167b1 100%) !important;
 }
 
 /* Checkmark for selected swatch */
-fieldset.product-form__input--pill input[type="radio"]:checked + label::after {
+fieldset.product-form__input--pill input[type="radio"]:checked+label::after {
     content: '✓';
     position: absolute;
     font-size: 20px;
     color: #fff;
-    text-shadow: 0 0 3px rgba(0,0,0,0.8);
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
     font-weight: bold;
     text-indent: 0;
     top: 50%;
@@ -248,20 +277,20 @@ fieldset.product-form__input--pill input[type="radio"]:checked + label::after {
 }
 
 /* Light colors need dark checkmark */
-fieldset.product-form__input--pill input[value*="White" i]:checked + label::after,
-fieldset.product-form__input--pill input[value*="Clear" i]:checked + label::after,
-fieldset.product-form__input--pill input[value*="Yellow" i]:checked + label::after,
-fieldset.product-form__input--pill input[value*="Light Gray" i]:checked + label::after,
-fieldset.product-form__input--pill input[value*="Light Blue" i]:checked + label::after,
-fieldset.product-form__input--pill input[value*="Neon Yellow" i]:checked + label::after,
-fieldset.product-form__input--pill input[value*="Translucent Yellow" i]:checked + label::after,
-fieldset.product-form__input--pill input[value*="Tan" i]:checked + label::after,
-fieldset.product-form__input--pill input[value*="Gold" i]:checked + label::after,
-fieldset.product-form__input--pill input[value*="Silver" i]:checked + label::after,
-fieldset.product-form__input--pill input[value*="Chrome" i]:checked + label::after,
-fieldset.product-form__input--pill input[value*="Lavender" i]:checked + label::after {
+fieldset.product-form__input--pill input[value*="White" i]:checked+label::after,
+fieldset.product-form__input--pill input[value*="Clear" i]:checked+label::after,
+fieldset.product-form__input--pill input[value*="Yellow" i]:checked+label::after,
+fieldset.product-form__input--pill input[value*="Light Gray" i]:checked+label::after,
+fieldset.product-form__input--pill input[value*="Light Blue" i]:checked+label::after,
+fieldset.product-form__input--pill input[value*="Neon Yellow" i]:checked+label::after,
+fieldset.product-form__input--pill input[value*="Translucent Yellow" i]:checked+label::after,
+fieldset.product-form__input--pill input[value*="Tan" i]:checked+label::after,
+fieldset.product-form__input--pill input[value*="Gold" i]:checked+label::after,
+fieldset.product-form__input--pill input[value*="Silver" i]:checked+label::after,
+fieldset.product-form__input--pill input[value*="Chrome" i]:checked+label::after,
+fieldset.product-form__input--pill input[value*="Lavender" i]:checked+label::after {
     color: #000;
-    text-shadow: 0 0 3px rgba(255,255,255,0.8);
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
 }
 
 /* ====================================
@@ -453,4 +482,11 @@ fieldset.product-form__input--pill input[value*="Lavender" i]:checked + label::a
     border-width: 0 2px;
     border-style: solid;
     border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+}
+
+.product-reviews-wrapper {
+    float: left;
+    width: 50%;
+    line-height: 37.8px;
+    margin: 0 0 0 0 !important;
 }
