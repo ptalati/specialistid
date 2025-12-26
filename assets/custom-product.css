@@ -496,3 +496,15 @@ fieldset.product-form__input--pill input[value*="Lavender" i]:checked+label::aft
     line-height: 37.8px;
     margin: 0 0 0 0 !important;
 }
+
+#product_just_stars .ind_cnt {
+    display: inline !important;
+    padding-left: 8px !important;
+    font-size: 1.5rem !important;
+    vertical-align: 3px !important;
+    text-decoration: none;
+}
+
+#product_just_stars .ind_cnt .sa_jump_to_reviews {
+    color: #000000;
+}
