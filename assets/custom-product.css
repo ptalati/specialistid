@@ -1,5 +1,5 @@
 .button.secondary {
-    background-color: rgb(var(--color-background));
+    background-color: rgb(var(--color-button_background_2));
 }
 
 .product-reviews-wrapper {
