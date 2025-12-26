@@ -17,14 +17,14 @@ fieldset.product-form__input--pill legend {
 fieldset.product-form__input--pill label {
     position: relative;
     width: 3rem;
-    height: 3rem;
+    /* height: 3rem; */
     border-radius: 50%;
     border: 2px solid #e5e7eb;
     display: inline-block;
     cursor: pointer;
     overflow: hidden;
     transition: all 0.2s ease;
-    padding: 0;
+    padding: 1rem 1.5rem !important;
     margin: 0 0.5rem 0.5rem 0;
     flex-shrink: 0;
     box-sizing: border-box;
