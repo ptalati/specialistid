@@ -16,16 +16,16 @@
           "type": "title",
           "settings": {}
         },
-        "product_review_dEQU4X": {
-          "type": "product_review",
-          "settings": {}
-        },
         "custom_availability_mQycK4": {
           "type": "custom_availability",
           "settings": {
             "custom_product_availability": false,
             "product_part_num": false
           }
+        },
+        "product_review_dEQU4X": {
+          "type": "product_review",
+          "settings": {}
         },
         "clear_block_4MQFRp": {
           "type": "clear_block",
@@ -131,8 +131,8 @@
       },
       "block_order": [
         "title",
-        "product_review_dEQU4X",
         "custom_availability_mQycK4",
+        "product_review_dEQU4X",
         "clear_block_4MQFRp",
         "price",
         "just_price_zpYWQi",
