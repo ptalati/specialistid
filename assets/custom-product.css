@@ -348,6 +348,12 @@ fieldset.product-form__input--pill input[value*="Lavender" i]:checked+label::aft
     display: none;
 }
 
+.stock_label.available-3 {
+    font-weight: bold;
+    font-style: italic;
+    margin: 0 0 0 0 !important;
+}
+
 #product-available {
     margin: 0 0 0 0 !important;
 }
