@@ -540,6 +540,7 @@ fieldset.product-form__input--pill input[value*="Lavender" i]:checked+label::aft
 
 /* Desktop: Side by side layout */
 @media screen and (min-width: 750px) {
+
     /* Quantity section */
     .product-form__input.product-form__quantity {
         display: inline-block !important;
@@ -554,8 +555,8 @@ fieldset.product-form__input--pill input[value*="Lavender" i]:checked+label::aft
     }
 
     /* Variant section - needs to be on same line */
-    .product-form__input.product-form__quantity + variant-selects,
-    .product-form__input.product-form__quantity + variant-radios {
+    .product-form__input.product-form__quantity+variant-selects,
+    .product-form__input.product-form__quantity+variant-radios {
         display: inline-block !important;
         vertical-align: top;
         width: auto;
@@ -602,4 +603,8 @@ fieldset.product-form__input--pill input[value*="Lavender" i]:checked+label::aft
     quantity-input.quantity {
         width: 100%;
     }
+}
+
+tr.current {
+    font-weight: bold;
 }
