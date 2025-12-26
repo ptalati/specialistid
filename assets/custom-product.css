@@ -115,7 +115,7 @@
 
 .button.button-white::after,
 .button.button-white:not([disabled]):hover:after {
-    box-shadow: 0 0 0 calc(var(--buttons-border-width) * 3 + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 var(--buttons-border-width) rgba(var(--color-button_background_2), var(--alpha-button-background));
+    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 2px rgba(var(--color-button_background_2), var(--alpha-button-background));
 }
 
 .volume_pricing_message,
