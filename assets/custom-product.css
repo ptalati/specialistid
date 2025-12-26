@@ -3,7 +3,11 @@
 }
 
 .button.secondary::after {
-    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 var(--buttons-border-width) rgba(var(--color-button_background_2), var(--alpha-button-background))
+    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 var(--buttons-border-width) rgba(var(--color-button_background_2), var(--alpha-button-background));
+}
+
+.button.secondary:not([disabled]):hover:after {
+    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button_background_2), var(--alpha-button-background));
 }
 
 .product-reviews-wrapper {
