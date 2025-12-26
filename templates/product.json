@@ -27,6 +27,10 @@
           "type": "product_review",
           "settings": {}
         },
+        "stock_availability_label_V8xxVd": {
+          "type": "stock_availability_label",
+          "settings": {}
+        },
         "clear_block_4MQFRp": {
           "type": "clear_block",
           "settings": {}
@@ -143,6 +147,7 @@
         "title",
         "custom_availability_mQycK4",
         "product_review_dEQU4X",
+        "stock_availability_label_V8xxVd",
         "clear_block_4MQFRp",
         "price",
         "just_price_zpYWQi",
