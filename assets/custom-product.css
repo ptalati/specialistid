@@ -546,7 +546,7 @@ fieldset.product-form__input--pill input[value*="Lavender" i]:checked+label::aft
         display: inline-block !important;
         vertical-align: top;
         width: 180px;
-        margin-right: 2rem;
+        margin-right: 4.8rem;
         margin-bottom: 1rem;
     }
 
