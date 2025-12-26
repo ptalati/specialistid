@@ -14,16 +14,13 @@ fieldset.product-form__input--pill label {
     height: 3rem;
     border-radius: 50%;
     border: 2px solid #e5e7eb;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     cursor: pointer;
     overflow: hidden;
     transition: all 0.2s ease;
     padding: 0;
     margin: 0 0.5rem 0.5rem 0;
-    min-width: 3rem;
-    min-height: 3rem;
+    flex-shrink: 0;
     /* Hide text completely */
     text-indent: -9999px;
     white-space: nowrap;
