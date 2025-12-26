@@ -20,12 +20,16 @@ fieldset.product-form__input--pill label {
     cursor: pointer;
     overflow: hidden;
     transition: all 0.2s ease;
-    font-size: 0; /* Hide text */
-    line-height: 0;
     padding: 0;
     margin: 0 8px 8px 0;
     min-width: 48px;
     min-height: 48px;
+    /* Hide text completely */
+    text-indent: -9999px;
+    white-space: nowrap;
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
 }
 
 /* Checked/Selected state */
