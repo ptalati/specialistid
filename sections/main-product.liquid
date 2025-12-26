@@ -199,7 +199,7 @@
               {%- when 'customize_quote_buttons' -%}
                 <div class="customize_quote_buttons_wrapper">
                   {% if product.metafields.c_f.custom_product != blank %}
-                    <a href="{{ product.metafields.c_f.custom_product }}" class="button">Customize It</a>
+                    <a href="{{ product.metafields.c_f.custom_product }}" class="button secondary">Customize It</a>
                   {% endif %}
                   {% if block.settings.customize_quote_button_link != blank %}
                     <a href="{{ block.settings.customize_quote_button_link }}" class="button button-white"

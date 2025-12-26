@@ -1,3 +1,7 @@
+.button.secondary {
+    background-color: rgb(var(--color-background));
+}
+
 .product-reviews-wrapper {
     float: left;
     width: 50%;
@@ -88,6 +92,7 @@
 .customize_quote_buttons_wrapper {
     display: flex;
     gap: 10px;
+    margin-top: -1rem;
 }
 
 .customize_quote_buttons_wrapper .button {
