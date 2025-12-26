@@ -127,7 +127,7 @@
           "settings": {
             "heading": "Features",
             "icon": "none",
-            "content": "",
+            "content": "{{ block.settings.page.content }}",
             "page": ""
           }
         },
