@@ -16,8 +16,8 @@
           "type": "title",
           "settings": {}
         },
-        "rating_tQrDrY": {
-          "type": "rating",
+        "product_review_dEQU4X": {
+          "type": "product_review",
           "settings": {}
         },
         "custom_availability_mQycK4": {
@@ -131,7 +131,7 @@
       },
       "block_order": [
         "title",
-        "rating_tQrDrY",
+        "product_review_dEQU4X",
         "custom_availability_mQycK4",
         "clear_block_4MQFRp",
         "price",
