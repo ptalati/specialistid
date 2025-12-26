@@ -45,49 +45,51 @@ fieldset.product-form__input--pill label:hover {
    COLOR DEFINITIONS
    ==================================== */
 
+/* Target labels by their sibling input's value attribute */
+
 /* Black */
-label[for*="Black"] {
+fieldset.product-form__input--pill input[value*="Black"] + label {
     background-color: #000000 !important;
 }
 
 /* Navy Blue */
-label[for*="Navy"] {
+fieldset.product-form__input--pill input[value*="Navy"] + label {
     background-color: #000080 !important;
 }
 
 /* Royal Blue */
-label[for*="Royal"] {
+fieldset.product-form__input--pill input[value*="Royal"] + label {
     background-color: #4169E1 !important;
 }
 
 /* Orange */
-label[for*="Orange"] {
+fieldset.product-form__input--pill input[value*="Orange"] + label {
     background-color: #FFA500 !important;
 }
 
 /* Red */
-label[for*="Red"]:not([for*="Hundred"]) {
+fieldset.product-form__input--pill input[value*="Red"]:not([value*="Hundred"]) + label {
     background-color: #FF0000 !important;
 }
 
 /* Green */
-label[for*="Green"] {
+fieldset.product-form__input--pill input[value*="Green"] + label {
     background-color: #008000 !important;
 }
 
 /* White */
-label[for*="White"] {
+fieldset.product-form__input--pill input[value*="White"] + label {
     background-color: #FFFFFF !important;
     border-color: #d0d0d0 !important;
 }
 
 /* Yellow */
-label[for*="Yellow"] {
+fieldset.product-form__input--pill input[value*="Yellow"] + label {
     background-color: #FFFF00 !important;
 }
 
 /* Maroon */
-label[for*="Maroon"] {
+fieldset.product-form__input--pill input[value*="Maroon"] + label {
     background-color: #800000 !important;
 }
 
@@ -106,8 +108,8 @@ fieldset.product-form__input--pill input[type="radio"]:checked + label::after {
 }
 
 /* White and yellow need dark checkmark */
-fieldset.product-form__input--pill input[type="radio"]:checked + label[for*="White"]::after,
-fieldset.product-form__input--pill input[type="radio"]:checked + label[for*="Yellow"]::after {
+fieldset.product-form__input--pill input[value*="White"]:checked + label::after,
+fieldset.product-form__input--pill input[value*="Yellow"]:checked + label::after {
     color: #000;
     text-shadow: 0 0 3px rgba(255,255,255,0.8);
 }
