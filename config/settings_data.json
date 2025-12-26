@@ -164,6 +164,58 @@
         "settings": {
           "reload_in_unsupported_themes": true
         }
+      },
+      "5537102726230261467": {
+        "type": "shopify://apps/revenuehunt-recommender-quiz/blocks/v2-link-quiz/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+        "disabled": false,
+        "settings": {
+          "quiz_width": "100",
+          "quiz_height": "100",
+          "quiz_z_index": 100,
+          "popup_close_color": "#777777",
+          "show_list": true,
+          "quiz_id": ""
+        }
+      },
+      "5004459476573512578": {
+        "type": "shopify://apps/conversios-google-analytics-4/blocks/app-embed/a5ed6aee-249e-497f-93bc-8eb285acecca",
+        "disabled": false,
+        "settings": {}
+      },
+      "3141728750423887031": {
+        "type": "shopify://apps/conversios-google-analytics-4/blocks/app-embed-body/a5ed6aee-249e-497f-93bc-8eb285acecca",
+        "disabled": false,
+        "settings": {}
+      },
+      "14464196051010714522": {
+        "type": "shopify://apps/tablepress-size-chart/blocks/tablepress-block-dev/0315ebd4-567b-4721-9e07-500c79914395",
+        "disabled": false,
+        "settings": {}
+      },
+      "12561304603952093179": {
+        "type": "shopify://apps/bevy-share-cart-social-link/blocks/app-embed.js/6f179945-6ca4-4ba4-919e-6daa3f1c383b",
+        "disabled": false,
+        "settings": {}
+      },
+      "10584378009325473800": {
+        "type": "shopify://apps/reorder-master/blocks/app/f04515ed-ac2e-42a3-8071-abd609ed8ebf",
+        "disabled": false,
+        "settings": {}
+      },
+      "14798151083105868428": {
+        "type": "shopify://apps/fancy-product-designer/blocks/app-embed-block/14c187f6-fd0a-44c3-a764-166220a05b7d",
+        "disabled": false,
+        "settings": {}
+      },
+      "6174324309569838175": {
+        "type": "shopify://apps/smile-io/blocks/smile-shopify-app/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {

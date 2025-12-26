@@ -16,19 +16,20 @@
           "type": "title",
           "settings": {}
         },
-        "vendor": {
-          "type": "text",
+        "custom_availability_mQycK4": {
+          "type": "custom_availability",
           "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
+            "custom_product_availability": false,
+            "product_part_num": false
           }
         },
-        "caption": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
-          }
+        "product_review_dEQU4X": {
+          "type": "product_review",
+          "settings": {}
+        },
+        "clear_block_4MQFRp": {
+          "type": "clear_block",
+          "settings": {}
         },
         "price": {
           "type": "price",
@@ -92,8 +93,16 @@
             "swatch_shape": "circle"
           }
         },
+        "clear_block_GWGb7E": {
+          "type": "clear_block",
+          "settings": {}
+        },
         "total_price_nW98cY": {
           "type": "total_price",
+          "settings": {}
+        },
+        "lead_time_KgVKHP": {
+          "type": "lead_time",
           "settings": {}
         },
         "buy_buttons": {
@@ -101,6 +110,12 @@
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
+          }
+        },
+        "customize_quote_buttons_KQYLh3": {
+          "type": "customize_quote_buttons",
+          "settings": {
+            "customize_quote_button_link": ""
           }
         },
         "description": {
@@ -116,8 +131,9 @@
       },
       "block_order": [
         "title",
-        "vendor",
-        "caption",
+        "custom_availability_mQycK4",
+        "product_review_dEQU4X",
+        "clear_block_4MQFRp",
         "price",
         "just_price_zpYWQi",
         "volume_pricing_info_label_p6ebk7",
@@ -127,8 +143,11 @@
         "regios_discounts_volume_pricing_table_L36WtN",
         "quantity_selector",
         "variant_picker",
+        "clear_block_GWGb7E",
         "total_price_nW98cY",
+        "lead_time_KgVKHP",
         "buy_buttons",
+        "customize_quote_buttons_KQYLh3",
         "description",
         "share"
       ],
