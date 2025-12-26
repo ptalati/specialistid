@@ -1,3 +1,9 @@
+.clear {
+    clear: both !important;
+    margin: 0 0 0 0 !important;
+    height: 0px;
+}
+
 /* ====================================
    COLOR SWATCHES - CSS ONLY
    ==================================== */
