@@ -118,8 +118,18 @@
             "customize_quote_button_link": "https://www.specialistid.com/pages/request-a-quote"
           }
         },
+        "collapsible_tab_aiETtU": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Features",
+            "icon": "none",
+            "content": "",
+            "page": ""
+          }
+        },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {}
         },
         "share": {
@@ -148,6 +158,7 @@
         "lead_time_KgVKHP",
         "buy_buttons",
         "customize_quote_buttons_KQYLh3",
+        "collapsible_tab_aiETtU",
         "description",
         "share"
       ],
@@ -184,6 +195,16 @@
       "name": "Product Custom Info",
       "settings": {}
     },
+    "custom_liquid_pBgjQg": {
+      "type": "custom-liquid",
+      "name": "Product Reviews",
+      "settings": {
+        "custom_liquid": "<!-- Shopper Approved - sections/product-template -->\n    <div class=\"page-width\" style=\"margin-top: 2em;\">\n      <h2 style=\"text-align:left;\"><b>Reviews</b></h2>\n      <script type=\"text/javascript\"> var sa_products_count = 3; var sa_date_format = 'F j, Y'; var sa_product = '{{product.id}}'; (function(w,d,t,f,o,s,a){ o = 'shopperapproved'; if (!w[o]) { w[o] = function() { (w[o].arg = w[o].arg || []).push(arguments) }; s=d.createElement(t), a=d.getElementsByTagName(t)[0];s.async=1;s.src=f;a.parentNode.insertBefore(s,a)} })(window,document,'script',\"//www.shopperapproved.com/product/7801/\"+sa_product+\".js\"); </script> <div id=\"shopper_review_page\"><div id=\"review_header\"></div><div id=\"product_page\"></div><div id=\"review_image\"><a href=\"https://www.shopperapproved.com/reviews/SpecialistID.com/\" onclick=\"var nonwin=navigator.appName!='Microsoft Internet Explorer'?'yes':'no'; var certheight=screen.availHeight-90; window.open(this.href,'shopperapproved','location='+nonwin+',scrollbars=yes,width=620,height='+certheight+',menubar=no,toolbar=no'); return false;\" target=\"_blank\" rel=\"nofollow\"></a></div></div>\n    </div>\n    <div class=\"clear\"></div>\n    <!-- END Shopper Approved - sections/product-template -->",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -200,16 +221,6 @@
         "show_rating": false,
         "padding_top": 36,
         "padding_bottom": 28
-      }
-    },
-    "custom_liquid_pBgjQg": {
-      "type": "custom-liquid",
-      "name": "Product Reviews",
-      "settings": {
-        "custom_liquid": "<!-- Shopper Approved - sections/product-template -->\n    <div class=\"page-width\" style=\"margin-top: 2em;\">\n      <h2 style=\"text-align:left;\"><b>Reviews</b></h2>\n      <script type=\"text/javascript\"> var sa_products_count = 3; var sa_date_format = 'F j, Y'; var sa_product = '{{product.id}}'; (function(w,d,t,f,o,s,a){ o = 'shopperapproved'; if (!w[o]) { w[o] = function() { (w[o].arg = w[o].arg || []).push(arguments) }; s=d.createElement(t), a=d.getElementsByTagName(t)[0];s.async=1;s.src=f;a.parentNode.insertBefore(s,a)} })(window,document,'script',\"//www.shopperapproved.com/product/7801/\"+sa_product+\".js\"); </script> <div id=\"shopper_review_page\"><div id=\"review_header\"></div><div id=\"product_page\"></div><div id=\"review_image\"><a href=\"https://www.shopperapproved.com/reviews/SpecialistID.com/\" onclick=\"var nonwin=navigator.appName!='Microsoft Internet Explorer'?'yes':'no'; var certheight=screen.availHeight-90; window.open(this.href,'shopperapproved','location='+nonwin+',scrollbars=yes,width=620,height='+certheight+',menubar=no,toolbar=no'); return false;\" target=\"_blank\" rel=\"nofollow\"></a></div></div>\n    </div>\n    <div class=\"clear\"></div>\n    <!-- END Shopper Approved - sections/product-template -->",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     }
   },
