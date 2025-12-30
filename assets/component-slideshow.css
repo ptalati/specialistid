@@ -199,3 +199,110 @@ slideshow-component:not(.page-width) .slider-buttons {
   opacity: 0;
   transform: scale(0.8);
 }
+
+
+
+/* custom-css */
+.banner__heading {
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: 0;
+    text-transform: capitalize;
+}
+.banner__content_box p {
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #fff;
+    font-family: Rubik;
+}
+.slideshow__controls.slider-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.slideshow__control-wrapper {
+    display: flex;
+    gap: 15px;
+}
+.slideshow__controls .slider-counter__link--dots .dot {
+    width: 10px;
+    height: 10px;
+    background: #fff!important;
+    opacity: 1!important;
+    border-radius: 50px!important;
+    border: 1px solid #FFFFFF;
+}
+
+.slideshow__controls .slider-counter__link--active .dot{
+    width: 16px;
+    height: 16px;
+    background: transparent !important;
+}
+.slideshow__controls button.slider-button {
+    display: none;
+}
+.slideshow__media.banner__media.media img {
+    width: 100%;
+    height: 100%;
+}
+.slideshow-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media(max-width:1300px){
+  .banner__heading {
+    font-size: 40px;
+    line-height: 48px;
+}
+}
+@media(max-width:1200px){
+  .banner--adapt, .banner--adapt_image.banner--mobile-bottom .banner__media:not(.placeholder) {
+    height: 100% !important;
+}
+}
+@media(max-width:1100px){
+ .banner__heading {
+    font-size: 35px;
+    line-height: 42px;
+}
+}
+@media(max-width:989px){
+  .banner__heading {
+    font-size: 30px;
+    line-height: normal;
+}
+  .banner__content_box p {
+    font-size: 18px;
+    margin: 10px 0px;
+}
+}
+@media(max-width:749px){
+  .show-mobile{
+  display:flex;
+}
+  .banner--adapt, .banner--adapt_image.banner--mobile-bottom .banner__media:not(.placeholder) {
+    height: 30rem!important;
+}
+  .banner--mobile-bottom .slideshow__text.banner__box {
+    height: 100%;
+    background: #F9FAFB;
+    padding: 3rem 2.5rem 4rem;
+}
+  .banner__heading {    font-size: 26px;    line-height: normal;}
+  .banner__content_box p {    font-size: 16px;    color: #696969;}
+  .slideshow__controls.slider-buttons {    bottom: 50%;}
+  .slideshow__controls .slider-counter__link--active .dot {    width: 9px !important;    height: 9px !important;}
+  .slideshow__control-wrapper {    gap: 0px;}
+  .slideshow__controls .slider-counter__link--dots .dot {    width: 6px;    height: 6px;}
+}
+
+@media(max-width:400px){
+  .slideshow__controls.slider-buttons {
+    bottom: 53%;
+}
+}
