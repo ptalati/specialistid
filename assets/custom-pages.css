@@ -75,3 +75,6 @@ p.announcement-bar__message span , .contact-text p {
     padding-left: 3rem;
     padding-right: 3rem;
 }
+.header__search-inline {
+    grid-area: center_search;
+}
