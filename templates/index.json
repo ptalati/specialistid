@@ -273,6 +273,65 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collection_page_section_B43ELG": {
+      "type": "collection-page-section",
+      "blocks": {
+        "page_card_w79chK": {
+          "type": "page_card",
+          "settings": {
+            "image": "shopify://shop_images/MOCKUPS_RECTRACTABLE_REELS_2.jpg",
+            "title": "Retractable Reels",
+            "description": "Fill out the form to request a quote, we will provide it to you within 24 hours",
+            "color": "",
+            "link": "shopify://collections/badge-reels"
+          }
+        },
+        "page_card_QpQ7Qe": {
+          "type": "page_card",
+          "settings": {
+            "title": "Badge Buddies",
+            "description": "Answer this short quiz for our recommendations!",
+            "color": "",
+            "link": "shopify://pages/standard-sized-badge-buddies"
+          }
+        },
+        "page_card_4rCthR": {
+          "type": "page_card",
+          "settings": {
+            "image": "shopify://shop_images/MOCKUPS_BADGE_HOLDERS.jpg",
+            "title": "Badge Holders",
+            "description": "What makes us different",
+            "color": "#3a3a3a",
+            "link": "shopify://collections/id-badge-holders"
+          }
+        },
+        "page_card_VhFFTQ": {
+          "type": "page_card",
+          "settings": {
+            "title": "Page Title",
+            "description": "",
+            "color": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "page_card_w79chK",
+        "page_card_QpQ7Qe",
+        "page_card_4rCthR",
+        "page_card_VhFFTQ"
+      ],
+      "name": "Custom Page",
+      "settings": {
+        "heading": "Shop by Product Categories",
+        "text_alignment": "center",
+        "enable_slider": true,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mobile": 24,
+        "padding_bottom_mobile": 24
+      }
     }
   },
   "order": [
@@ -281,6 +340,7 @@
     "rich_text",
     "featured_collection",
     "collage",
-    "video"
+    "video",
+    "collection_page_section_B43ELG"
   ]
 }
