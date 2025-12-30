@@ -1,3 +1,58 @@
+{% style %}
+.announcement-bar-new .page-width {
+    max-width: 1800px !important;
+}
+.utility-bar__grid {
+    position: relative;
+}
+.announcemebt-bar-inner {
+    position: relative;
+}
+p.announcement-bar__message span , .contact-text p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+.contact-text p, .contact-text p a {
+    color: rgb(var(--color-foreground));
+    text-decoration: none;
+    font-family: var(--font-body-family);
+    font-style: var(--font-body-style);
+    font-weight: var(--font-body-weight);
+}
+.contact-text p a {
+    font-weight: bold;
+}
+.contact-text {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+@media screen and (max-width: 1300px){
+  .announcement-bar, .announcement-bar__announcement {    justify-content: left;}
+}
+
+@media screen and (max-width: 900px){
+  .announcement-bar, .announcement-bar__announcement {   justify-content: center;}
+  .utility-bar__grid, .announcemebt-bar-inner {   position: relative;   display: flex;   flex-direction: column;}
+  .contact-text {   position: unset;    margin-bottom: 1rem;    transform: unset;}
+}
+
+@media screen and (max-width:640px){
+   p.announcement-bar__message span , .contact-text p {   font-size: 14px; line-height: 14px;}
+   .utility-bar__grid.page-width {  padding-left: 2rem;    padding-right: 2rem;}
+   p.announcement-bar__message span , .contact-text p
+}
+{% endstyle %}
+
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
