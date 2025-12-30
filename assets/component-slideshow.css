@@ -209,7 +209,7 @@ slideshow-component:not(.page-width) .slider-buttons {
     letter-spacing: 0;
     text-transform: capitalize;
 }
-.banner__content_box p {
+.banner__text p {
     font-size: 20px;
     line-height: 100%;
     letter-spacing: 0;
@@ -276,7 +276,7 @@ slideshow-component:not(.page-width) .slider-buttons {
     font-size: 30px;
     line-height: normal;
 }
-  .banner__content_box p {
+  .banner__text  p {
     font-size: 18px;
     margin: 10px 0px;
 }
