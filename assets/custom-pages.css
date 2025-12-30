@@ -57,3 +57,8 @@ p.announcement-bar__message span , .contact-text p {
     justify-content: left;
 }
 }
+@media screen and (max-width: 900px){
+.announcement-bar, .announcement-bar__announcement {
+    justify-content: left;
+}
+}
