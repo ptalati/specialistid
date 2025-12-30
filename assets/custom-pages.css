@@ -15,7 +15,7 @@
 
 
 /* Anncouncement-bar */
-p.announcement-bar__message. span {
+p.announcement-bar__message span {
     margin: 0;
     font-size: 15px;
     line-height: 100%;
