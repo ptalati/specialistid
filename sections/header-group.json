@@ -18,7 +18,8 @@
           "type": "announcement",
           "settings": {
             "text": "Welcome to our store",
-            "link": ""
+            "link": "",
+            "contact-text": "<p>1.800.380.6726 to talk to a live specialist</p>"
           }
         }
       },
@@ -28,7 +29,7 @@
       "settings": {
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "show_line_separator": true,
         "show_social": false,
         "enable_country_selector": false,

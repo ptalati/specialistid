@@ -243,13 +243,13 @@
       },
       "scheme-3": {
         "settings": {
-          "background": "#242833",
+          "background": "#6fb43f",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#000000",
+          "button": "#f5911f",
+          "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "shadow": "#ffffff"
         }
       },
       "scheme-4": {
