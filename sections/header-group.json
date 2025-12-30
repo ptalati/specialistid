@@ -85,7 +85,7 @@
         "enable_customer_avatar": true,
         "show_icon_labels": true,
         "icon_label_font_size": 9,
-        "account_label": "Account",
+        "account_label": "Log in",
         "search_label": "",
         "cart_label": "",
         "enable_search": true,
