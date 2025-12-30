@@ -59,7 +59,7 @@ p.announcement-bar__message span , .contact-text p {
 @media screen and (max-width: 900px){
   .announcement-bar, .announcement-bar__announcement {   justify-content: center;}
   .utility-bar__grid, .announcemebt-bar-inner {   position: relative;   display: flex;   flex-direction: column;}
-   .contact-text {   position: unset;    margin-bottom: 1rem;    transform: unset;}
+  .contact-text {   position: unset;    margin-bottom: 1rem;    transform: unset;}
 }
 
 @media screen and (max-width:640px){
