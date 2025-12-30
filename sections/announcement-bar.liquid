@@ -50,6 +50,11 @@
           {%- endif -%}
         {%- endif -%}
       </div>
+      <div class="contact-text">
+        {% render 'phone-icon' %}
+        {{ block.settings.contact-text }}
+      </div>
+
     {%- elsif section.blocks.size > 1 -%}
       <slideshow-component
         class="announcement-bar"
@@ -159,10 +164,6 @@
         </localization-form>
       {%- endif -%}
     </div>
-  </div>
-  <div class="contact-text">
-    {% render 'phone-icon' %}
-    {{ block.settings.contact-text }}
   </div>
 </div>
 
