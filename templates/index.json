@@ -151,11 +151,11 @@
         "button_label": "",
         "button_link": "",
         "columns_desktop": 4,
-        "column_alignment": "center",
+        "column_alignment": "left",
         "background_style": "none",
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
