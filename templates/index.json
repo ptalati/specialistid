@@ -157,9 +157,10 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 52,
-        "padding_bottom": 36,
+        "padding_bottom": 52,
         "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
+        "padding_bottom_mobile": 36,
+        "section_css_class": "why-choose"
       }
     },
     "rich_text": {
