@@ -276,7 +276,7 @@
     padding: 0 !important;
 }
 .multicolumn-card__image-wrapper--third-width {
-    width: fit-content !important;
+    width: 40px !important;
 }
 .background-none .multicolumn-card__image-wrapper {
     margin-left: 0 !important;
