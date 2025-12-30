@@ -266,3 +266,36 @@
     letter-spacing: 0;
     color: #3a3a3c;
 }
+/* aditonal-css-after-remove */
+.multicolumn-card__info>:nth-child(2) {
+    margin-top: 0rem;
+}
+.multicolumn.background-none .multicolumn-card {
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.background-none .slider .multicolumn-card__image-wrapper+.multicolumn-card__info {
+    padding: 0 !important;
+}
+.multicolumn-card__image-wrapper--third-width {
+    width: fit-content !important;
+}
+.background-none .multicolumn-card__image-wrapper {
+    margin-left: 0 !important;
+    margin-right: 1.5rem;
+}
+.multicolumn-card__info>:nth-child(2) {
+    margin-top: 0rem !important;
+}
+
+@media(max-width:989px){
+  .multicolumn-list__item {    width: 49% !important;    max-width: 49% !important;}
+  .multicolumn-list {    gap: 12px;}
+}
+.multicolumn .slider-buttons.no-js-hidden.medium-hide {   display: none;}
+
+@media(max-width:550px){
+  .multicolumn-list__item {     width: 70% !important;     max-width: 70% !important; }
+}
