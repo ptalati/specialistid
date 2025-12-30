@@ -18,7 +18,15 @@
 .utility-bar__grid {
     position: relative;
 }
-p.announcement-bar__message span {
+p.announcement-bar__message span , .contact-text p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+.contact-text p {
     margin: 0;
     font-size: 15px;
     line-height: 100%;
