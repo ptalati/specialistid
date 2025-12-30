@@ -235,6 +235,33 @@
         "padding_bottom_mobile": 24
       }
     },
+    "custom_product_slider_eLEfjE": {
+      "type": "custom-product-slider",
+      "name": "Product Slider",
+      "settings": {
+        "product_heading": "Our best sellers from Badge Reels to Custom Lanyards",
+        "text_alignment": "center",
+        "products_to_show": 12,
+        "text_color": "",
+        "collection": "our-best-sellers",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "button": "Shop Our Best sellers",
+        "link": "shopify://collections/our-best-sellers",
+        "button-color": "#ffffff",
+        "button-back": "#6FB43F",
+        "button-back-hover": "#F5911F",
+        "button-color-hover": "#ffffff",
+        "background_style": "primary",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -344,33 +371,6 @@
         "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "custom_product_slider_eLEfjE": {
-      "type": "custom-product-slider",
-      "name": "Product Slider",
-      "settings": {
-        "product_heading": "",
-        "text_alignment": "center",
-        "products_to_show": 4,
-        "text_color": "",
-        "collection": "",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "button": "",
-        "link": "",
-        "button-color": "",
-        "button-back": "",
-        "button-back-hover": "",
-        "button-color-hover": "",
-        "background_style": "primary",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
       }
     }
   },
