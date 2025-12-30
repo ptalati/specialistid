@@ -15,6 +15,9 @@
 
 
 /* Anncouncement-bar */
+.utility-bar__grid {
+    position: relative;
+}
 p.announcement-bar__message span {
     margin: 0;
     font-size: 15px;
