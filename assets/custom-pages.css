@@ -12,3 +12,14 @@
     padding: 1rem 2rem;
     border-radius: 0.5rem;
 } */
+
+
+/* Anncouncement-bar */
+p.announcement-bar__message. span {
+    margin: 0;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: capitalize;
+}
