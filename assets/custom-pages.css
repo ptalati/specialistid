@@ -78,3 +78,7 @@ p.announcement-bar__message span , .contact-text p {
 .header__search-inline {
     grid-area: center_search;
 }
+.header__icon span.svg-wrapper {
+    width: 22px;
+    height: 22px;
+}
