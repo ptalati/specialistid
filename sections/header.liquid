@@ -99,6 +99,31 @@
     height: 18px;
   }
 
+  .header.page-width {
+    max-width: 1980px !important;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .header__search-inline {
+      grid-area: center_search;
+  }
+  .header__icon span.svg-wrapper {
+      width: 22px;
+      height: 22px;
+  }
+  .header__icon span.svg-wrapper svg {
+      margin: 0 auto;
+      width: 30px;
+      height: 30px;
+  }
+  .header__search-inline .search__input::placeholder {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 24px;
+      letter-spacing: 0;
+      opacity:1;
+  }
+
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
     .scrolled-past-header .header__heading-logo-wrapper {
       width: 75%;
