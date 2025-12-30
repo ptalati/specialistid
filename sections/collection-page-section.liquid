@@ -1,0 +1,449 @@
+{% style %}
+.custom-page-{{ section.id }} {
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+  h2.collection-headd {
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+@media screen and (min-width: 900px) {
+ .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .custom-page-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+  .grid-layout {
+      grid-template-columns: 1fr;
+    }
+}
+
+.pages-card {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.pages-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    border-radius: 10px;
+}
+.pages-card a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.pages-card-content {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    transition: top 0.9s;
+}
+.pages-card-content h3 {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    margin: 0;
+}
+ .pages-card-content p {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+  .image-section::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000B2;
+    content: '';
+    border-radius: 10px;
+    opacity: 0;
+}
+ .pages-card:hover .pages-card-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color:#ffffff !important;
+}
+.pages-card:hover .pages-card-content p {
+   visibility: visible;
+   opacity: 1;
+   display: block;
+   color:#ffffff !important;
+   font-family: Rubik;
+   font-weight: 400;
+   font-size: 20px;
+   letter-spacing: 0;
+   line-height: normal;
+}
+  .pages-card:hover .pages-card-content h3 {
+    color:#ffffff !important;
+}
+  .pages-card:hover .image-section::after {
+     opacity: 1;
+}
+.image-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+  .pages-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    border-radius: 10px;
+    transition: transform 0.9s;
+}
+  .pages-card:hover img {
+    transform: scale(1.1);
+}
+.slider-arrow svg {
+    width: 27px;
+    height: 27px;
+}
+  .slider-main-inner-page {
+    position: relative;
+}
+ .slider-arrow.left {
+    left: -50px;
+    cursor: pointer;
+}
+  .slider-arrow.right {
+    right: -50px;
+    cursor: pointer;
+}
+  .slider-arrow svg path {
+      fill: #3a3a3c;
+}
+  .slider-arrow svg:hover path {
+    fill: #F5911F;
+}
+.page-slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    z-index: 2;
+}
+
+ @media(max-width:1300px){
+    .pages-card-content h3 {    font-size: 24px;}
+    .pages-card:hover .pages-card-content p {    font-size: 18px;}
+  }
+  
+  @media(max-width:1100px){
+     h2.collection-headd {    font-size: 35px;}
+    .pages-card-slider {    gap: 10px;}
+    .pages-card-content h3 {    font-size: 20px;}
+    .pages-card:hover .pages-card-content p {    font-size: 16px;   line-height: 24px;}
+ }
+  
+@media(max-width:900px){  
+  .image-section::after {
+      opacity: 0.2;
+  }
+  .pages-card-content h3 {
+      color: #ffffff !important;
+  }
+ .slider-arrow svg {
+    width: 20px;
+    height: 20px;
+}
+  .page-slider-arrow {
+    width: 30px;
+    height: 30px;
+}
+  .slider-arrow.right {
+    right: -20px;
+    cursor: pointer;
+}
+  .slider-arrow.left {
+    left: -20px;
+    cursor: pointer;
+  }
+}
+  @media(max-width:749px){
+    h2.collection-headd {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    .pages-card-content {
+        top: 20px;
+        left: 20px;
+    }
+  }
+  
+{% endstyle %}
+
+
+<div class="custom-page-{{ section.id }}">
+  <div class="page-width">
+    <div class="section-header" style="text-align: {{ section.settings.text_alignment }}">
+      {% if section.settings.heading != blank %}
+        <h2 class="collection-headd {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+    </div>
+
+    <div class="pages-slider-wrapper" style="position: relative;">
+      {% if section.settings.enable_slider %}
+        <div class="slider-main-inner-page">
+          
+          <div class="slider-arrow left page-slider-arrow">
+            {% render 'chev-left' %}
+          </div>
+          <div class="slider-arrow right page-slider-arrow">
+            {% render 'chev-right' %}
+          </div>
+          <div class="swiper pages-card-slider" id="slider-{{ section.id }}">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide">
+                <div class="pages-card">
+                  {% if block.settings.link %}
+                    <a href="{{ block.settings.link }}">
+                  {% endif %}
+                  <div class="image-section">
+                    {% if block.settings.image %}
+                      {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy' }}
+                    {% else %}
+                      {{ 'image' | placeholder_svg_tag }}
+                    {% endif %}
+                  </div>
+                  <div class="pages-card-content">
+                    <h3 style="color:{{ block.settings.color }}">{{ block.settings.title }}</h3>
+                    <p style="color:{{ block.settings.color }}">{{ block.settings.description }}</p>
+                  </div>
+                  {% if block.settings.link %}
+                    </a>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        
+        </div>
+ 
+        </div>
+      {% else %}
+        <div class="grid-layout pages-card-slider">
+          {% for block in section.blocks %}
+            <div class="pages-card">
+              {% if block.settings.link %}
+                <a href="{{ block.settings.link }}">
+              {% endif %}
+              <div class="image-section">
+                {% if block.settings.image %}
+                  {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy' }}
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag }}
+                {% endif %}
+              </div>
+              <div class="pages-card-content">
+                <h3 style="color:{{ block.settings.color }}">{{ block.settings.title }}</h3>
+                <p style="color:{{ block.settings.color }}">{{ block.settings.description }}</p>
+              </div>
+              {% if block.settings.link %}
+                </a>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if section.settings.label %}
+      <div class="collection-button color-{{ section.settings.color_scheme }}">
+        <a class="button" href="{{ section.settings.link }}">{{ section.settings.label }}</a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    {% if section.settings.enable_slider %}
+      new Swiper('#slider-{{ section.id }}', {
+        slidesPerView: 1,
+        spaceBetween: 5,
+        loop: false,
+        navigation: {
+            nextEl: '.slider-main-inner-page .slider-arrow.right',
+            prevEl: '.slider-main-inner-page .slider-arrow.left',
+          },
+        breakpoints: {
+          750: {
+            slidesPerView: 2,
+            spaceBetween: 18,
+          },
+          989: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1190: {
+            slidesPerView: 4,
+            spaceBetween: 24,
+          }
+        }
+      });
+    {% endif %}
+  });
+</script>
+
+
+
+
+{% schema %}
+{
+  "name": "Custom Page",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "Text Alignment",
+      "default": "center"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_slider",
+      "label": "Enable Slider on this section",
+      "default": true
+    },
+    {
+      "type":"header",
+      "content":"Padding Section"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top (Desktop)",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom (Desktop)",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top (Mobile)",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom (Mobile)",
+      "default": 24
+    }
+  ],
+  "blocks": [
+    {
+      "type": "page_card",
+      "name": "Card",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Page Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type":"color",
+          "id":"color",
+          "label":"Text color"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Page",
+      "category": "Custom",
+      "blocks": [
+        { "type": "page_card" },
+        { "type": "page_card" },
+        { "type": "page_card" }
+      ]
+    }
+  ]
+}
+{% endschema %}
