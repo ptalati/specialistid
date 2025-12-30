@@ -21,6 +21,9 @@
 .utility-bar__grid {
     position: relative;
 }
+.announcemebt-bar-inner {
+    position: relative;
+}
 p.announcement-bar__message span , .contact-text p {
     margin: 0;
     font-size: 15px;
