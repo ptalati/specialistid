@@ -15,6 +15,9 @@
 
 
 /* Anncouncement-bar */
+.announcement-bar .page-width {
+    max-width: 1800px !important;
+}
 .utility-bar__grid {
     position: relative;
 }
