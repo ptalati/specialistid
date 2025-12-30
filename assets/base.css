@@ -2388,7 +2388,9 @@ input[type='checkbox'] {
     grid-template-areas: "heading center_search icons";
     grid-template-columns: 1fr auto 1fr;
     column-gap: 2rem;
+    column-gap: 2rem;
   }
+
 
   .header--middle-center:not(.drawer-menu) {
     grid-template-areas: 'navigation heading icons';
