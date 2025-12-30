@@ -252,13 +252,7 @@ slideshow-component:not(.page-width) .slider-buttons {
   height: auto;
   object-fit: cover;
 }
-.banner__buttons a.button {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 0;
-    transition: all .3s;
-}
+
 a.button.button--secondary {
     color: #ffffff;
     background: #F5911F;
