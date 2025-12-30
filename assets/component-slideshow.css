@@ -260,6 +260,9 @@ a.button.button--secondary {
 a.button:hover, .button:hover, .button.button:hover, customer .button:hover {
     background: #F5911F;
 }
+a.button.button--secondary:hover {
+  background:#6fb33f;
+}
 
 @media(max-width:1300px){
   .banner__heading {
