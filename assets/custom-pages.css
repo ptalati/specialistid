@@ -53,22 +53,15 @@ p.announcement-bar__message span , .contact-text p {
     gap: 8px;
 }
 @media screen and (max-width: 1300px){
-.announcement-bar, .announcement-bar__announcement {
-    justify-content: left;
+  .announcement-bar, .announcement-bar__announcement {    justify-content: left;}
 }
-}
+
 @media screen and (max-width: 900px){
-.announcement-bar, .announcement-bar__announcement {
-    justify-content: center;
+  .announcement-bar, .announcement-bar__announcement {   justify-content: center;}
+  .utility-bar__grid, .announcemebt-bar-inner {   position: relative;   display: flex;   flex-direction: column;}
+   .contact-text {   position: unset;    margin-bottom: 1rem;    transform: unset;}
 }
-.utility-bar__grid, .announcemebt-bar-inner {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-.contact-text {
-    position: unset;
-    margin-bottom: 1rem;
-    transform: unset;
-}
+
+@media screen and (max-width:640px){
+   .contact-text p, p.announcement-bar__message {   font-size: 14px;}
 }
