@@ -84,7 +84,7 @@
         "enable_language_selector": true,
         "enable_customer_avatar": true,
         "show_icon_labels": true,
-        "icon_label_font_size": 13,
+        "icon_label_font_size": 10,
         "account_label": "Account",
         "search_label": "",
         "cart_label": "",
