@@ -27,12 +27,10 @@ p.announcement-bar__message span , .contact-text p {
     text-transform: capitalize;
 }
 .contact-text p {
-    margin: 0;
-    font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0;
-    text-align: center;
-    text-transform: capitalize;
+    color: rgb(var(--color-foreground));
+    font-family: var(--font-heading-family);
+    font-style: var(--font-heading-style);
+    font-weight: var(--font-heading-weight);
 }
 .contact-text {
     position: absolute;
