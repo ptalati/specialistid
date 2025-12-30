@@ -15,7 +15,7 @@
 
 
 /* buttons */
- a.button {
+a.button, .button, .button.button, customer .button {
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
