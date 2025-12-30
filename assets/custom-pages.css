@@ -39,6 +39,9 @@ p.announcement-bar__message span , .contact-text p {
     font-weight: var(--font-heading-weight);
     text-decoration: none;
 }
+.contact-text p a {
+    font-weight: bold;
+}
 .contact-text {
     position: absolute;
     top: 50%;
