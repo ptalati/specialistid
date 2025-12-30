@@ -61,4 +61,9 @@ p.announcement-bar__message span , .contact-text p {
 .announcement-bar, .announcement-bar__announcement {
     justify-content: left;
 }
+.utility-bar__grid, .announcemebt-bar-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 }
