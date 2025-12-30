@@ -137,10 +137,12 @@
         </style>
       {%- endif -%}
     {%- endif -%}
-    <div class="contact-text">
-      {% render 'phone-icon' %}
-      {{ section.settings.contact-text }}
-    </div>
+    {% if section.settings.contact-text != blank %}
+      <div class="contact-text">
+        {% render 'phone-icon' %}
+        {{ section.settings.contact-text }}
+      </div>
+    {% endif %}
     </div>
   </div>
 
