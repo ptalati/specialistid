@@ -60,9 +60,9 @@
             "image": "shopify://shop_images/Banner-3.png",
             "image_mobile": "shopify://shop_images/BANNER_SPECIALIST_ID_-_MOBILE_-_LOW_QUALITY-07.jpg",
             "image_overlay_opacity": 0,
-            "heading": "Image slide",
+            "heading": "The Badge Company Your Coworkers are Talking About.",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
+            "subheading": "Family Owned and Operated in the USA since 2001",
             "button_label": "Our Best Sellers",
             "link": "shopify://collections/our-best-sellers",
             "button_label1": "Shop Bulk",
@@ -91,6 +91,73 @@
         "image_behavior": "none",
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_e297aa44bb864b79a69f64375ccb7de7.webp",
+            "title": "Free Shipping",
+            "text": "<p>Over $99</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_410e57ec5de44e1c8083c1a10f114fec.webp",
+            "title": "Easy Ordering",
+            "text": "<p>Frictionless Buying</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_a45a028643b043c290f9f0210524aaeb.webp",
+            "title": "Expert Selection",
+            "text": "<p>Top-Notch Products</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_XVjLtH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_d48c132e9812414b8bc85411ed1cda45.webp",
+            "title": "Quantity Discounts",
+            "text": "<p>Save in Bulk</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3",
+        "column_XVjLtH"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "rich_text": {
@@ -203,67 +270,14 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "slideshow_PkyqJL",
+    "multicolumn",
     "rich_text",
     "featured_collection",
     "collage",
-    "video",
-    "multicolumn"
+    "video"
   ]
 }
