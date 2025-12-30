@@ -436,7 +436,49 @@
           class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
           rel="nofollow"
         >
-          {%- if section.settings.enable_customer_avatar -%}
+          {%- if section.settings.show_icon_labels -%}
+            <span class="icon-label">
+              {%- if section.settings.account_label != blank -%}
+                {{ section.settings.account_label }}
+              {%- else -%}
+                {{ 'customer.account' | t }}
+              {%- endif -%}
+            </span>
+          {%- endif -%}
+          <span class="visually-hidden">
+            {%- liquid
+              if customer
+                echo 'customer.account_fallback' | t
+              else
+                echo 'customer.log_in' | t
+              endif
+            -%}
+          </span>
+        </a>
+      {%- endif -%}
+      
+
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            {% render block %}
+          {%- when 'custom_icon' -%}
+            <a
+              href="{{ block.settings.link }}"
+              class="header__icon header__icon--custom link focus-inset"
+              {% if block.settings.open_new_tab %}
+                target="_blank" rel="noopener noreferrer"
+              {% endif %}
+            >
+              <span class="svg-wrapper">{{ block.settings.icon }}</span>
+              {%- if section.settings.show_icon_labels -%}
+                <span class="icon-label">{{ block.settings.label }}</span>
+              {%- endif -%}
+              <span class="visually-hidden">{{ block.settings.label }}</span>
+            </a>
+        {%- endcase -%}
+      {%- endfor -%}
+                {%- if section.settings.enable_customer_avatar -%}
             <account-icon>
               {%- if customer and customer.has_avatar? -%}
                 {{ customer | avatar }}
@@ -459,47 +501,6 @@
               {%- endif -%}
             </span>
           {%- endif -%}
-          {%- if section.settings.show_icon_labels -%}
-            <span class="icon-label">
-              {%- if section.settings.account_label != blank -%}
-                {{ section.settings.account_label }}
-              {%- else -%}
-                {{ 'customer.account' | t }}
-              {%- endif -%}
-            </span>
-          {%- endif -%}
-          <span class="visually-hidden">
-            {%- liquid
-              if customer
-                echo 'customer.account_fallback' | t
-              else
-                echo 'customer.log_in' | t
-              endif
-            -%}
-          </span>
-        </a>
-      {%- endif -%}
-
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when '@app' -%}
-            {% render block %}
-          {%- when 'custom_icon' -%}
-            <a
-              href="{{ block.settings.link }}"
-              class="header__icon header__icon--custom link focus-inset"
-              {% if block.settings.open_new_tab %}
-                target="_blank" rel="noopener noreferrer"
-              {% endif %}
-            >
-              <span class="svg-wrapper">{{ block.settings.icon }}</span>
-              {%- if section.settings.show_icon_labels -%}
-                <span class="icon-label">{{ block.settings.label }}</span>
-              {%- endif -%}
-              <span class="visually-hidden">{{ block.settings.label }}</span>
-            </a>
-        {%- endcase -%}
-      {%- endfor -%}
 
       {%- if section.settings.enable_cart != false -%}
         <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
