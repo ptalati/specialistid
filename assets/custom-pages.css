@@ -67,3 +67,11 @@ p.announcement-bar__message span , .contact-text p {
    .utility-bar__grid.page-width {  padding-left: 2rem;    padding-right: 2rem;}
    p.announcement-bar__message span , .contact-text p
 }
+
+
+/* Header */
+.header.page-width {
+    max-width: 1980px !important;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
