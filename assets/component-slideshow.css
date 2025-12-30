@@ -210,11 +210,10 @@ slideshow-component:not(.page-width) .slider-buttons {
     text-transform: capitalize;
 }
 .banner__text p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 100%;
     letter-spacing: 0;
-    color: #fff;
-    font-family: Rubik;
+    margin: 20px 0 !important;
 }
 .slideshow__controls.slider-buttons {
     position: absolute;
@@ -277,7 +276,6 @@ slideshow-component:not(.page-width) .slider-buttons {
     line-height: normal;
 }
   .banner__text  p {
-    font-size: 18px;
     margin: 10px 0px;
 }
 }
