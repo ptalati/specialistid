@@ -231,3 +231,38 @@
     display: list-item;
   }
 }
+
+
+/* custom-css */
+.multicolumn.why-choose .page-width {
+    max-width: 1250px !important;
+    margin: 0 auto;
+}
+.multicolumn h2.title {
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #181614;
+    margin: 0px auto 0px;
+}
+.multicolumn h2.title span {
+    color: #6FB43F;
+}
+.multicolumn-card__info {
+    padding-top: 30px;
+}
+.multicolumn-card__info h3 {
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #000000;
+}
+.multicolumn-card__info p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: #3a3a3c;
+}
