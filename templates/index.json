@@ -313,17 +313,18 @@
             "image": "shopify://shop_images/MOCKUPS_LANYARDS.jpg",
             "title": "Lanyards",
             "description": "DIscover our range of Printers covering tailored to your needs.",
-            "color": "",
+            "color": "#3a3a3a",
             "link": "shopify://collections/lanyards"
           }
         },
         "page_card_xcqUKJ": {
           "type": "page_card",
           "settings": {
-            "title": "Page Title",
-            "description": "",
-            "color": "",
-            "link": ""
+            "image": "shopify://shop_images/MOCKUPS_CUSTOM_REELS.jpg",
+            "title": "Custom everything",
+            "description": "Fill out the form to request a quote, we will provide it to you within 24 hours",
+            "color": "#3a3a3a",
+            "link": "shopify://collections/custom-printed-badge-reels"
           }
         }
       },
