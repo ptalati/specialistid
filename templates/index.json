@@ -25,9 +25,9 @@
             "link": "shopify://collections/our-best-sellers",
             "button_style_secondary": false,
             "show_text_box": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
             "color_scheme": ""
           }
         },
@@ -44,9 +44,9 @@
             "link": "",
             "button_style_secondary": false,
             "show_text_box": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
             "color_scheme": ""
           }
         },
@@ -63,9 +63,9 @@
             "link": "",
             "button_style_secondary": false,
             "show_text_box": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
             "color_scheme": "scheme-1"
           }
         }
