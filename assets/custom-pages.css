@@ -64,4 +64,5 @@ p.announcement-bar__message span , .contact-text p {
 
 @media screen and (max-width:640px){
    .contact-text p, p.announcement-bar__message {   font-size: 14px;}
+   .utility-bar__grid.page-width {  padding-left: 2rem;    padding-right: 2rem;}
 }
