@@ -160,7 +160,10 @@
       {%- endif -%}
     </div>
   </div>
-  <div class="contact-text">{% render 'phone-icon' %}{{ block.settings.contact-text }}</div>
+  <div class="contact-text">
+    {% render 'phone-icon' %}
+    {{ block.settings.contact-text }}
+  </div>
 </div>
 
 {% schema %}
