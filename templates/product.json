@@ -95,6 +95,10 @@
             "movable": true
           }
         },
+        "infinite_options_app_block_ew88hB": {
+          "type": "shopify://apps/infinite-options/blocks/app-block/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "settings": {}
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -167,6 +171,7 @@
         "volume_pricing_available_PDNPnr",
         "regios_discounts_product_page_discount_BHiKmA",
         "regios_discounts_volume_pricing_table_L36WtN",
+        "infinite_options_app_block_ew88hB",
         "quantity_selector",
         "variant_picker",
         "clear_block_GWGb7E",
@@ -211,6 +216,13 @@
       "name": "Product Custom Info",
       "settings": {}
     },
+    "custom_content_feedback_JCqCDQ": {
+      "type": "custom-content-feedback",
+      "name": "Content Feedback",
+      "settings": {
+        "form_code": "<iframe height=\"423\" title=\"Embedded Wufoo Form\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" style=\"width:100%;border:none\" sandbox=\"allow-popups-to-escape-sandbox allow-top-navigation allow-scripts allow-popups allow-forms allow-same-origin\" src=\"https://specialistid.wufoo.com/embed/rej8wlz1lcwsji/\"> <a href=\"https://specialistid.wufoo.com/forms/rej8wlz1lcwsji/\">Fill out my Wufoo form!</a> </iframe>"
+      }
+    },
     "custom_liquid_pBgjQg": {
       "type": "custom-liquid",
       "name": "Product Reviews",
@@ -243,6 +255,7 @@
   "order": [
     "main",
     "product_custom_info_gcmaXt",
+    "custom_content_feedback_JCqCDQ",
     "custom_liquid_pBgjQg",
     "related-products"
   ]
