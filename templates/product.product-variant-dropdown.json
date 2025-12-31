@@ -243,11 +243,19 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "custom_content_feedback_mWTPY3": {
+      "type": "custom-content-feedback",
+      "name": "Content Feedback",
+      "settings": {
+        "form_code": ""
+      }
     }
   },
   "order": [
     "main",
     "product_custom_info_gcmaXt",
+    "custom_content_feedback_mWTPY3",
     "custom_liquid_pBgjQg",
     "related-products"
   ]
