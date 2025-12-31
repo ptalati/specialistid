@@ -12,8 +12,8 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "product_media_ENbA96": {
-          "type": "product_media",
+        "fpd_designer_DPQWm8": {
+          "type": "fpd_designer",
           "settings": {}
         },
         "product_video_mgQapf": {
@@ -52,6 +52,46 @@
         "just_price_zpYWQi": {
           "type": "just_price",
           "settings": {}
+        },
+        "custom_liquid_P7TqkD": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div id='lanyard-basic'>\n    <p class='form__headline'>1. Basics</p>\n    <div class='lanyard-collaps'>\n        <div id='lanyard-shipping'>\n            <p class='form__label'>When do you need them?</p>\n            <input type='radio' name='lanyard_shipping' value='rush'>\n            <label class='form__inline'>6-8 Days (Rush)</label>\n            <input type='radio' name='lanyard_shipping' value='default' checked='checked'>\n            <label class='form__inline'>10-12 Days</label>\n        </div>\n        <div id='lanyard-imprint'>\n            <p class='form__label'>Imprint Options - <span class='explainer'> What is the difference?</span></p>\n            <input type='radio' name='lanyard_imprint' value='one_color_silk'>\n            <label class='form__inline'>1 Color Econo Silk Screen (starting $2.42)</label><br/>\n            <input type='radio' name='lanyard_imprint' value='three_color_silk' checked='checked'>\n            <label class='form__inline'>1-3 Color Silk Screen (starting $2.65)</label><br/>\n            <input type='radio' name='lanyard_imprint' value='full_color'>\n            <label class='form__inline'>Full-Color Dye-Sub (starting $3.89)</label><br/>\n            <input type='radio' name='lanyard_imprint' value='one_color_woven'>\n            <label class='form__inline'>1 Color Woven (starting $3.84)</label><br/>\n            <!--<input type='radio' name='lanyard_imprint' value='three_color_next_life'>\n            <label class='form__inline'>NextLife 1-3 Color Silk Screen</label>-->\n        </div>\n        <div id='lanyard-color'>\n            <div id=\"color-switch\"></div>\n            <p class='form__label'>Lanyard Color</p>\n            <select>\n                <option value='#000000'>Black</option>\n                <option value='#008001'>Green</option>\n                <option value='#800000'>Maroon</option>\n                <option value='#010080'>Royal Blue</option>\n                <option value='#F47C1F'>Orange</option>\n                <option value='#FC1103'>Red</option>\n                <option value='#0100FF'>Blue</option>\n                <option value='#FFFFFF'>White</option>\n                <option value='#FFDD7D'>Yellow</option>\n            </select>\n        </div>\n    </div>\n</div>\n\n<div id='lanyard-options'>\n    <p class='form__headline'>2. Lanyard Options</p>\n    <div class='lanyard-collaps'>\n        <div id='lanyard-width'>\n            <p class='form__label'>Lanyard Width</p>\n            <select>\n                <option value='18'>3/8''</option>\n                <option value='31' selected=\"selected\">5/8''</option>\n                <option value='37'>3/4''</option>\n                <option value='50'>1''</option>\n            </select>\n        </div>\n        <div class=\"double\">\n            <label class='form__label'>Double Ended</label>\n            <input type='checkbox' name='double' />\n        </div>\n        <div class=\"two-sided\">\n            <label class='form__label'> Front and Back Customization Options</label>\n            <input type='radio' name='two-sided' value='single'/>\n            <label class='form__inline'>Front Only</label>\n            <input type='radio' name='two-sided' value='duplicated' /><label class='form__inline'>Duplicate Front</label>\n            <input type='radio' name='two-sided' value='custom' /><label class='form__inline'>Custom Designed</label>\n        </div>\n    </div>\n</div>"
+          }
+        },
+        "custom_liquid_qXJfP4": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div id='lanyard-additional'>\n  <p class='form__headline'>3. Additional Options</p>\n  <div class='lanyard-collaps'>"
+          }
+        },
+        "fancy_product_designer_product_section_dynamic_design_modules_hN4cca": {
+          "type": "shopify://apps/fancy-product-designer/blocks/product-section-dynamic-design-modules/14c187f6-fd0a-44c3-a764-166220a05b7d",
+          "settings": {
+            "headline": "<h5>Breakaway</h5>",
+            "dynamic_design_name": "breakaway",
+            "additional_class": "form__label lanyard-breakaway"
+          }
+        },
+        "fancy_product_designer_product_section_dynamic_design_modules_bt8Ubi": {
+          "type": "shopify://apps/fancy-product-designer/blocks/product-section-dynamic-design-modules/14c187f6-fd0a-44c3-a764-166220a05b7d",
+          "settings": {
+            "headline": "<h5>Endfitting</h5>",
+            "dynamic_design_name": "endfittings",
+            "additional_class": "form_label lanyard-endfittings"
+          }
+        },
+        "custom_liquid_EynNjE": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div id=\"finish-options\">\n <p class='form__label'>Finishing Options</p>\n    <select>\n      <option>\n        Sewn\n      </option>\n      <option name=\"https://fpd-shopify-v2.s3.eu-central-1.amazonaws.com/customer_assets/crimp.png\">\n        Crimp\n      </option>\n      <option name=\"https://fpd-shopify-v2.s3.eu-central-1.amazonaws.com/customer_assets/bead-silver.png\">\n        Bead\n      </option>\n      \n    </select>\n  </div>\n</div>\n</div>"
+          }
+        },
+        "custom_liquid_dt9789": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div id=\"lanyard-content\">\n    <p class='form__headline'>4. Customization</p>\n    <div class='lanyard-collaps'>\n        <p class='form__label' >Lanyard Print</p>\n        <div id='fpd-text-input' class=\"fpd-modules\">\n            <div class=\"fpd-sc-module-wrapper\" data-type=\"text-layers\"></div>\n        </div>\n\n        <p class='form__label' >Logo</p>\n        <div id='fpd-logo-upload' class=\"fpd-modules\">\n            <div class=\"fpd-sc-module-wrapper lanyard-images\" data-type=\"images\"></div>\n            <div id=\"logo-colors\" class=\"fpd-hidden\">\n                <p class='form__label'>How many colors does your artwork have? (Not including the color of the lanyard)</p>\n                \n                <input type='radio' name='color-count' value='0' checked='checked'/>\n                <label class='form__inline'>1 Color: $0.00</label>\n                \n                <input type='radio' name='color-count' value='0.12'/>\n                <label class='form__inline'>2 Color: $0.12</label>\n                \n                <input type='radio' name='color-count' value='0.24'/>            \n                <label class='form__inline'>3 Color: $0.24</label>\n            </div>\n            <div class='fpd-image-controll'>\n              <button id='remove-logo' class=\"color-button_background_2 button button--full-width\">Remove Logo</button>\n            </div>\n        </div>\n        <div class=\"symmeterical\">\n            <label class='form__label'>Symmetrical/Positional</label>\n            <input type='checkbox' name='symmetrical' />\n        </div>\n\n        <div class=\"slidecontainer\">\n            <label class='form__label'>Space Width</label>\n            <input type=\"range\" min=\"5\" max=\"150\" value=\"20\" class=\"slider\" id=\"space-width\">\n        </div>\n    </div>\n</div>"
+          }
         },
         "volume_pricing_info_label_p6ebk7": {
           "type": "volume_pricing_info_label",
@@ -153,7 +193,7 @@
         }
       },
       "block_order": [
-        "product_media_ENbA96",
+        "fpd_designer_DPQWm8",
         "product_video_mgQapf",
         "title",
         "custom_availability_mQycK4",
@@ -162,6 +202,12 @@
         "clear_block_4MQFRp",
         "price",
         "just_price_zpYWQi",
+        "custom_liquid_P7TqkD",
+        "custom_liquid_qXJfP4",
+        "fancy_product_designer_product_section_dynamic_design_modules_hN4cca",
+        "fancy_product_designer_product_section_dynamic_design_modules_bt8Ubi",
+        "custom_liquid_EynNjE",
+        "custom_liquid_dt9789",
         "volume_pricing_info_label_p6ebk7",
         "discount_progress_bar_qEUjei",
         "volume_pricing_available_PDNPnr",
