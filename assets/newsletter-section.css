@@ -84,9 +84,10 @@
     font-weight: 700;
     font-size: 52px;
     line-height: 100%;
-    letter-spacing: 0.6px;
+    letter-spacing: .6px;
     text-transform: capitalize;
     max-width: 900px;
+    text-align: start;
 }
 .newsletter-section .newsletter__subheading {
     text-align: left;
