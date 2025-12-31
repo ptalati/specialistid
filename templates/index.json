@@ -566,16 +566,55 @@
     },
     "custom_icon_slider_XnPQHd": {
       "type": "custom-icon-slider",
+      "blocks": {
+        "icon_list_ACqyyQ": {
+          "type": "icon_list",
+          "settings": {
+            "icon_image": "shopify://shop_images/nasa_logo-min_1.png"
+          }
+        },
+        "icon_list_9wPJaa": {
+          "type": "icon_list",
+          "settings": {
+            "icon_image": "shopify://shop_images/disney_logo-min-1.png"
+          }
+        },
+        "icon_list_9dNjGQ": {
+          "type": "icon_list",
+          "settings": {
+            "icon_image": "shopify://shop_images/Tabpanel_Heading_3_samsung_logo_large-1_png_43b130e5-8ef4-4dc2-a2d8-7c2e08dc1196.png"
+          }
+        },
+        "icon_list_UiTdbQ": {
+          "type": "icon_list",
+          "settings": {
+            "icon_image": "shopify://shop_images/coke_logo-min-1.png"
+          }
+        },
+        "icon_list_YXiM4z": {
+          "type": "icon_list",
+          "settings": {
+            "icon_image": "shopify://shop_images/nike_logo-min-1.png"
+          }
+        }
+      },
+      "block_order": [
+        "icon_list_ACqyyQ",
+        "icon_list_9wPJaa",
+        "icon_list_9dNjGQ",
+        "icon_list_UiTdbQ",
+        "icon_list_YXiM4z"
+      ],
       "name": "Custom icon slider",
       "settings": {
-        "section_color_scheme": "scheme-2",
-        "title": "Icon Slider",
+        "section_color_scheme": "scheme-1",
+        "title": "Trusted by Top Fortune 500 Brands",
         "icons_autoplay": true,
-        "icons_per_page": 4,
+        "icons_per_page": 5,
         "icons_per_page_mobile": 2,
         "icons_to_scroll": 4,
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
