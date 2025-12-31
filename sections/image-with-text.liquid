@@ -80,6 +80,26 @@
                   >
                     {{ block.settings.caption | escape }}
                   </p>
+                {%- when 'code' -%}
+                  {%- if block.settings.code_html != blank -%}
+                    {{ block.settings.code_html | escape }}
+                {%- endif -%}
+                {% when 'contact' %}
+                <div class="conatct-button">
+                  <div class="service">
+                    <h4>Customer Service</h4>
+                    <a{% if block.settings.service == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.service_link }}"{% endif %} class="button  button--primary" {{ block.shopify_attributes }}>
+                      {{ block.settings.service }}
+                    </a>
+                  </div>
+                  <div class="sale">
+                    <h4>Enterprise Sales</h4>
+                    <a{% if block.settings.sale == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.sale_link }}"{% endif %} class="button button--secondary" {{ block.shopify_attributes }}>
+                      {{ block.settings.sale  }}
+                    </a>
+                  </div>
+                </div>
+
                 {%- when 'text' -%}
                   <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                     {{ block.settings.text }}
@@ -483,6 +503,45 @@
           "id": "button_style_secondary",
           "default": false,
           "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
+        }
+      ]
+    },
+     {
+      "type": "contact",
+      "name": "Contact Button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "service",
+          "label": "Service button label"
+        },
+        {
+          "type": "url",
+          "id": "service_link",
+          "label": "Service button link"
+        },
+        {
+          "type": "text",
+          "id": "sale",
+          "label": "Sale button label"
+        },
+        {
+          "type": "url",
+          "id": "sale_link",
+          "label": "Sale button link"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "name": "HTML",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "html",
+          "id": "code_html",
+          "label": "HTML"
         }
       ]
     }
