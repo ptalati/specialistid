@@ -203,7 +203,7 @@
           {% if section.settings.logo_img  != blank%}
            <img src="{{ section.settings.logo_img | image_url: width: 150, height:80 }}">
            {% else %}
-            
+            {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
            {% endif %}
           <div class="testi-heading-block">
             <span>Testimonials</span>
