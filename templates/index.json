@@ -648,7 +648,7 @@
       "name": "t:sections.newsletter.presets.name",
       "settings": {
         "color_scheme": "scheme-5",
-        "background_image": "shopify://shop_images/Group_1.png",
+        "background_image": "shopify://shop_images/Group_1_1.png",
         "mobile_imge": "shopify://shop_images/Background_1.png",
         "full_width": true,
         "section_css_class": "newsletter-section",
