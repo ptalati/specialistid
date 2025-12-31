@@ -404,6 +404,17 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 36
       }
+    },
+    "custom_image_banner_MAmEfK": {
+      "type": "custom-image-banner",
+      "name": "Custom banner",
+      "settings": {
+        "section_color_scheme": "",
+        "heading": "Image banner",
+        "subheading": "<p>Give customers details about the banner image(s) or content on the template.</p>",
+        "button_label": "Shop now",
+        "button_link": ""
+      }
     }
   },
   "order": [
@@ -414,6 +425,7 @@
     "collection_page_section_B43ELG",
     "custom_product_slider_eLEfjE",
     "image_with_text_MNXeia",
-    "image_with_text_NTqqDX"
+    "image_with_text_NTqqDX",
+    "custom_image_banner_MAmEfK"
   ]
 }
