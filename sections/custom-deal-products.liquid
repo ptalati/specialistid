@@ -142,7 +142,7 @@ h2.section-deal-heading {
         {{ section.settings.heading }}
     </h2>
     <div class="image-text-slider">
-      <div class="thirty-perc">
+      <div class="thirty-perc color-{{ section.settings.section_color_scheme }}">
         <div id="ImageWithText--{{ section.id }}" class="image-with-text__content-1">
           {%- for block in section.blocks -%}
             {% case block.type %}
