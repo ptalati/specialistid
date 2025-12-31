@@ -1,14 +1,15 @@
 <style>
   /* banner */
-.slider-wrap  {
-    background: url({{section.settings.background_image | image_url: width: 1920 }}) center top no-repeat;
-    position: relative;
-    padding: 5rem 3rem;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-}
+
+    .slider-wrap  {
+        background: url({{section.settings.background_image | image_url: width: 1920 }}) center top no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        padding: 5rem 3rem;
+        width: 100%;
+        height: 100%;
+    }
   .custom-inner-b {    display: grid;    grid-template-columns: 1.2fr 1fr;    padding: 30px 0;    gap: 30px;    align-items: center;}
   img.perfmatters-lazy.entered.pmloaded {    width: 100%;    height: 100%;    object-fit: contain;}
   .front-caption h2 {
@@ -61,7 +62,7 @@
 
 
 <div class="custom-banner" id="Cusatom_banner-{{ section.id }}">
-    <div class="slider-wrap ">
+    <div class="{%  if section.settings.background_image != blank %}slider-wrap{% else %} color-{{ section.settings.section_color_scheme }} {% endif %} ">
       <div class="page-width">
         <div class="custom-inner-b">
           <div class="front-caption">
