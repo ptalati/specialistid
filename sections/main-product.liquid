@@ -81,6 +81,53 @@
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
         {% render 'product-media-gallery', variant_images: variant_images %}
+
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'fpd_designer' -%}
+              <div id="fpd">
+                <img src="{{ 'fpd_placeholder.png' | asset_url }}" alt="Placeholder" width="600">
+              </div>
+            {%- when 'custom_designer' -%}
+              <script src="https://cdn.jsdelivr.net/npm/jquery-textfill@0.6.0/source/jquery.textfill.min.js"></script>
+              {{ 'custom-bb.js' | asset_url | script_tag }}
+              <div id="tab2">
+                <img class="selectedBadge" data-media-id="">
+                <div class="selectedColor">
+                  <div id="badge-preview-text" class="badge-preview-text-tab2"></div>
+                </div>
+              </div>
+            {%- when 'product_video' -%}
+              <!-- video url : end -->
+              {%- if product.metafields.c_f.videoUrl and product.metafields.c_f.videoUrl contains 'youtu.be' -%}
+                {% assign parsed_url = product.metafields.c_f.videoUrl
+                  | replace_first: 'http://youtu.be', 'https://www.youtube.com/embed'
+                %}
+                {% assign youtubeVideoID = parsed_url | replace_first: 'https://www.youtube.com/embed/', '' %}
+              {%- else -%}
+                {% assign parsed_url = product.metafields.c_f.videoUrl %}
+                {% assign youtubeVideoID = parsed_url | replace_first: 'https://www.youtube.com/embed/', '' %}
+              {%- endif -%}
+
+              {%- if youtubeVideoID != empty -%}
+                <div class="youtube-video">
+                  <iframe
+                    width="500"
+                    height="280"
+                    src="https://www.youtube-nocookie.com/embed/{{youtubeVideoID}}"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    style="max-width: 100%;"
+                  ></iframe>
+                </div>
+              {%- endif -%}
+              <!-- video url : end -->
+            {%- when 'infinite_options_custom' -%}
+              <h3>{{ block.settings.infinite_options_heading }}</h3>
+              <div id="infiniteoptions-container"></div>
+          {%- endcase -%}
+        {%- endfor -%}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
@@ -1023,6 +1070,33 @@
           "id": "volume_pricing_available_text",
           "label": "Volume Pricing Available Text",
           "default": "Volume Pricing Available"
+        }
+      ]
+    },
+    {
+      "type": "product_media",
+      "name": "Product Media"
+    },
+    {
+      "type": "product_video",
+      "name": "Product Video"
+    },
+    {
+      "type": "custom_designer",
+      "name": "Custom Designer"
+    },
+    {
+      "type": "fpd_designer",
+      "name": "FPD Designer"
+    },
+    {
+      "type": "infinite_options_custom",
+      "name": "Infinite Options - Custom",
+      "settings": [
+        {
+          "type": "text",
+          "id": "infinite_options_heading",
+          "label": "Title"
         }
       ]
     },
