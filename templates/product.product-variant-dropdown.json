@@ -95,6 +95,10 @@
             "movable": true
           }
         },
+        "infinite_options_app_block_eVPFjw": {
+          "type": "shopify://apps/infinite-options/blocks/app-block/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "settings": {}
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -167,6 +171,7 @@
         "volume_pricing_available_PDNPnr",
         "regios_discounts_product_page_discount_BHiKmA",
         "regios_discounts_volume_pricing_table_L36WtN",
+        "infinite_options_app_block_eVPFjw",
         "quantity_selector",
         "variant_picker",
         "clear_block_GWGb7E",
@@ -192,53 +197,6 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
-      }
-    },
-    "custom_key_features_V7WUnb": {
-      "type": "custom-key-features",
-      "blocks": {
-        "key_features_Ag4cYD": {
-          "type": "key_features",
-          "settings": {
-            "head": "High Quality",
-            "text": "<p>High-resolution dual sided printing with 600 x 300 dpi for sharp, detailed ID cards.</p>"
-          }
-        },
-        "key_features_dM6wkW": {
-          "type": "key_features",
-          "settings": {
-            "head": "Fast Process",
-            "text": "<p>Fast printing speed of up to 190 full-color cards per hour, ideal for mid-to-high volume ID programs.</p>"
-          }
-        },
-        "key_features_46EUQw": {
-          "type": "key_features",
-          "settings": {
-            "head": "Advanced Security",
-            "text": "<p>Security features, including Holokote® watermarks and digital shredding for data protection.</p>"
-          }
-        },
-        "key_features_md6zBp": {
-          "type": "key_features",
-          "settings": {
-            "head": "Versatile Connectivity",
-            "text": "<p>Including USB, Ethernet, and Wireless LAN, for easy integration into any workspace.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "key_features_Ag4cYD",
-        "key_features_dM6wkW",
-        "key_features_46EUQw",
-        "key_features_md6zBp"
-      ],
-      "name": "Key Features",
-      "settings": {
-        "bg": "#f4faf4",
-        "head": "Key Features",
-        "text": "<p>Lorem ipsum dolor sit amet consectetur. Varius semper etiam morbi sed nisl nisi. Non urna hendrerit nisl vulputate vitae. Facilisis fermentum molestie aliquet morbi dignissim euismod vitae commodo. </p>",
-        "top_spacing": 40,
-        "bottom_spacing": 40
       }
     },
     "product_custom_info_gcmaXt": {
@@ -285,12 +243,19 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "custom_content_feedback_mWTPY3": {
+      "type": "custom-content-feedback",
+      "name": "Content Feedback",
+      "settings": {
+        "form_code": ""
+      }
     }
   },
   "order": [
     "main",
-    "custom_key_features_V7WUnb",
     "product_custom_info_gcmaXt",
+    "custom_content_feedback_mWTPY3",
     "custom_liquid_pBgjQg",
     "related-products"
   ]
