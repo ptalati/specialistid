@@ -387,6 +387,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
