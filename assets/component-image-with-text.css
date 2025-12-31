@@ -440,3 +440,10 @@ p.image-with-text__text.image-with-text__text--caption {
     line-height: 36px;
     letter-spacing: 0;
 }
+
+/* image-with-text-2 */
+.speak-to-live-specialist .image-with-text__grid--reverse .image-with-text__text-item .image-with-text__content {
+    padding: 6rem 7rem 7rem 0rem;
+    max-width: 460px;
+    margin: 0;
+}
