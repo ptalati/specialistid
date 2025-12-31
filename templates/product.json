@@ -12,6 +12,15 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "product_media_ENbA96": {
+          "type": "product_media",
+          "settings": {}
+        },
+        "product_video_mgQapf": {
+          "type": "product_video",
+          "disabled": true,
+          "settings": {}
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -144,6 +153,8 @@
         }
       },
       "block_order": [
+        "product_media_ENbA96",
+        "product_video_mgQapf",
         "title",
         "custom_availability_mQycK4",
         "product_review_dEQU4X",
