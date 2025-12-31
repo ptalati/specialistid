@@ -453,7 +453,7 @@
         "heading": "",
         "heading_size": "h1",
         "selected_collection": "deals",
-        "section_css_class": "css",
+        "section_css_class": "deals-offers",
         "padding_top": 60,
         "padding_bottom": 60,
         "padding_top_mobile": 36,
