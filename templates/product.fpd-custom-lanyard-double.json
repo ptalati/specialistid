@@ -12,8 +12,8 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "product_media_ENbA96": {
-          "type": "product_media",
+        "fpd_designer_EDKJiR": {
+          "type": "fpd_designer",
           "settings": {}
         },
         "product_video_mgQapf": {
@@ -153,7 +153,7 @@
         }
       },
       "block_order": [
-        "product_media_ENbA96",
+        "fpd_designer_EDKJiR",
         "product_video_mgQapf",
         "title",
         "custom_availability_mQycK4",
