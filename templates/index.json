@@ -651,7 +651,7 @@
         "background_image": "shopify://shop_images/HQ_Lanyard.png",
         "mobile_imge": "shopify://shop_images/Background_1.png",
         "full_width": true,
-        "section_css_class": "Type your own CSS class",
+        "section_css_class": "newsletter-section",
         "padding_top": 36,
         "padding_bottom": 36,
         "padding_top_mobile": 36,
