@@ -200,7 +200,11 @@
     {% if section.settings.head != blank %}
       <div class="testimonials_head">
         <div class="trstiheading-main">
-          <img src="{{ section.settings.logo_img | image_url: width: 150, height:80 }}">
+          {% if section.settings.logo_img  != blank%}
+           <img src="{{ section.settings.logo_img | image_url: width: 150, height:80 }}">
+           {% else %}
+            
+           {% endif %}
           <div class="testi-heading-block">
             <span>Testimonials</span>
             <h2>{{ section.settings.head }}</h2>
