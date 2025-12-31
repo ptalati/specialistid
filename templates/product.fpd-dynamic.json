@@ -16,6 +16,10 @@
           "type": "fpd_designer",
           "settings": {}
         },
+        "product_video_rbDdpR": {
+          "type": "product_video",
+          "settings": {}
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -149,6 +153,7 @@
       },
       "block_order": [
         "fpd_designer_BWFDKw",
+        "product_video_rbDdpR",
         "title",
         "custom_availability_mQycK4",
         "product_review_dEQU4X",
