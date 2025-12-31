@@ -312,26 +312,13 @@
     .header__menu-below {  display: none !important;}
     header-drawer {   display: flex !important;}
     .header--middle-left { grid-template-areas: 'left heading  icons' 'center_search center_search center_search';    grid-template-columns: 1fr 1fr 1fr;    column-gap: 2rem;}
-    .header__search-inline {
-    max-width: 100%;
-    width: 100%;
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    text-align: center;
-}
-search-form.search {
-    width: 100%;
-}
-    .header__heading, .header__heading-link {
-    justify-self: center !important;
-}
-
+    .header__search-inline {   max-width: 100%;    width: 100%;    display: flex;    margin: 0 auto;    justify-content: center;    text-align: center;}
+    search-form.search {    width: 100%;}
+    .header__heading, .header__heading-link {   justify-self: center !important;}
 }
 
 @media (max-width:749px){
   .header.page-width {
-    max-width: 1980px !important;
     padding-left: 1rem;
     padding-right: 1rem;
 }
