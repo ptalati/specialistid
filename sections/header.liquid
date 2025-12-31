@@ -302,6 +302,12 @@
       font-size: {{ section.settings.icon_label_font_size }}px;
     }
   {%- endif -%}
+  
+  @media (max-width: 1700px) {
+    #meteor-desktop-nav {
+        gap: 10px !important;
+    }
+}
 {%- endstyle -%}
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
