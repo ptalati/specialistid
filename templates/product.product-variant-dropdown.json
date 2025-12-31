@@ -95,6 +95,10 @@
             "movable": true
           }
         },
+        "infinite_options_app_block_eVPFjw": {
+          "type": "shopify://apps/infinite-options/blocks/app-block/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "settings": {}
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -167,6 +171,7 @@
         "volume_pricing_available_PDNPnr",
         "regios_discounts_product_page_discount_BHiKmA",
         "regios_discounts_volume_pricing_table_L36WtN",
+        "infinite_options_app_block_eVPFjw",
         "quantity_selector",
         "variant_picker",
         "clear_block_GWGb7E",
