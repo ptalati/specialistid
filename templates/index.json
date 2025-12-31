@@ -278,6 +278,33 @@
         "padding_bottom_mobile": 36
       }
     },
+    "custom_product_slider_U7fgnJ": {
+      "type": "custom-product-slider",
+      "name": "Custom product slider",
+      "settings": {
+        "product_heading": "Our best sellers from Badge Reels to Custom Lanyards",
+        "text_alignment": "center",
+        "products_to_show": 12,
+        "text_color": "",
+        "collection": "our-best-sellers",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "button": "Shop Our Best sellers",
+        "link": "shopify://collections/our-best-sellers",
+        "button-color": "#ffffff",
+        "button-back": "#6FB43F",
+        "button-back-hover": "#F5911F",
+        "button-color-hover": "#ffffff",
+        "background_style": "primary",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "image_with_text_MNXeia": {
       "type": "image-with-text",
       "blocks": {
@@ -426,6 +453,7 @@
     "slideshow_PkyqJL",
     "collection_page_section_B43ELG",
     "custom_product_slider_eLEfjE",
+    "custom_product_slider_U7fgnJ",
     "image_with_text_MNXeia",
     "image_with_text_NTqqDX",
     "custom_image_banner_MAmEfK"
