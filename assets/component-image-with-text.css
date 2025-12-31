@@ -459,3 +459,9 @@ p.image-with-text__text.image-with-text__text--caption {
     line-height: 150%;
     letter-spacing: 0.6px;
 }
+.conatct-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
