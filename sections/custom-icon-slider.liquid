@@ -56,39 +56,40 @@
     {%- endunless -%}
     <div class="multiple-items">
       {%- for block in section.blocks -%}
-        <div><img src="{{ block.settings.icon_image | image_url }}" class="lazyload"></div>
+        {{ block.settings.icon_image | image_url: width: 400 }}
       {%- endfor -%}
     </div>
   </div>
 </div>
 
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('.icon-slider-wrapper .multiple-items').slick({
-      infinite: true,
-      autoplay: {{ section.settings.icons_autoplay }},
-      autoplaySpeed:1000,
-      slidesToShow: {{ section.settings.icons_per_page }},
-      slidesToScroll: {{ section.settings.icons_to_scroll }},
-      dots: false,
-      arrows: false,
-      responsive: [
-          {
-              breakpoint: 900,
-              settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 1
-              }
-          },
-          {
-              breakpoint: 600,
-              settings: {
-                  slidesToShow: {{ section.settings.icons_per_page_mobile }},
-                  slidesToScroll: {{ section.settings.icons_to_scroll }}
-              }
-          }
-    });
+  function initIconSlider() {
+  $('.icon-slider-wrapper .multiple-items').not('.slick-initialized').slick({
+    infinite: true,
+    autoplay: {{ section.settings.icons_autoplay }},
+    autoplaySpeed: 1000,
+    slidesToShow: {{ section.settings.icons_per_page }},
+    slidesToScroll: {{ section.settings.icons_to_scroll }},
+    dots: false,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: { slidesToShow: 3, slidesToScroll: 1 }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: {{ section.settings.icons_per_page_mobile }},
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
+}
+
+$(document).ready(initIconSlider);
+document.addEventListener('shopify:section:load', initIconSlider);
 </script>
 
 {% schema %}
