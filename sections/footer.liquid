@@ -28,7 +28,7 @@
 }
 {%- endstyle -%}
 
-<footer class="footer footer-flex-content color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+<footer class="footer  color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -43,6 +43,7 @@
       assign only_empty_brand = true
     endif
   -%}
+  <div class="footer-flex-content page-width">
   {%- if section.blocks.size > 0
     or section.settings.newsletter_enable
     or section.settings.show_social
@@ -182,7 +183,7 @@
         {%- endif -%}
       </div>
     </div>
-      <div class="footer__content-top page-width">
+      <div class="footer__content-top">
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size == 9
@@ -294,7 +295,7 @@
       </div>
     {%- endunless -%}
   {%- endif -%}
-
+  </div>
   <div
     class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
