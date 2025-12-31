@@ -164,7 +164,7 @@
       }
     },
     "collection_page_section_B43ELG": {
-      "type": "collection-page-section",
+      "type": "custom-collection-page",
       "blocks": {
         "page_card_w79chK": {
           "type": "page_card",
