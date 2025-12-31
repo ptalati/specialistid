@@ -647,7 +647,7 @@
       ],
       "name": "t:sections.newsletter.presets.name",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-5",
         "background_image": "shopify://shop_images/HQ_Lanyard.png",
         "mobile_imge": "shopify://shop_images/Background_1.png",
         "full_width": true,
