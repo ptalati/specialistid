@@ -460,21 +460,6 @@
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
-    },
-    "custom_testimonials_RUjyRC": {
-      "type": "custom-testimonials",
-      "name": "Custom testimonials",
-      "settings": {
-        "bg": "#f9fafb",
-        "head": "See What all the Buzz is About",
-        "logo_img": "shopify://shop_images/7801-large_2.png",
-        "button_label": "See our 40,000+ Reviews",
-        "button_link": "shopify://pages/reviews",
-        "top_spacing": 60,
-        "bottom_spacing": 60,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
-      }
     }
   },
   "order": [
@@ -487,7 +472,6 @@
     "image_with_text_MNXeia",
     "image_with_text_NTqqDX",
     "custom_image_banner_MAmEfK",
-    "custom_deal_products_dmEwPA",
-    "custom_testimonials_RUjyRC"
+    "custom_deal_products_dmEwPA"
   ]
 }
