@@ -542,8 +542,11 @@
     margin: 0;
 }
 .footer-flex-content .footer-block--newsletter .grid ul.footer__list-icon {
-    justify-content: flex-start !important;
+    justify-content: flex-start!important;
     gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 h2.footer-block__heading {
     font-weight: 700;
