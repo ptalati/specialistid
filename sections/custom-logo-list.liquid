@@ -1,0 +1,145 @@
+{% style %}
+  .logo_list_wrapper-{{ section.id }} {
+    background: {{ section.settings.bg }};
+    padding-top: {{ section.settings.top_spacing }}px;
+    padding-bottom: {{ section.settings.bottom_spacing }}px;
+  }
+
+  .logo_list_head {
+    text-align: center;
+  }
+
+  .logo_list_head h2 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: 0;
+  }
+
+  .logo_list_logo_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .logo_list_block {
+    display: flex;
+  }
+
+  .logo_list_block img {
+    max-width: 18rem;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+
+   @media screen and (max-width: 640px) {
+     .logo_list_wrapper-{{ section.id }} {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .logo_list_logo_wrapper {
+      white-space: nowrap;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      overflow-x: auto;
+    }
+
+    .logo_list_logo_wrapper::-webkit-scrollbar {
+      display: none;
+    }
+
+    .logo_list_block {
+      flex: 0 0 40%;
+      scroll-snap-align: start;
+    }
+  }
+{% endstyle %}
+
+<div class="logo_list_wrapper-{{ section.id }}">
+  <div class="page-width">
+    {% if section.settings.head != blank %}
+      <div class="logo_list_head">
+        <h2>{{ section.settings.head }}</h2>
+      </div>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <div class="logo_list_logo_wrapper">
+        {% for block in section.blocks %}
+          <div class="logo_list_block">
+            {% if block.settings.img != blank %}
+              {{ block.settings.img | image_url: width: 500 | image_tag: loading: 'lazy' }}
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Logo list",
+  "class": "logo-list-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Section background color",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "head",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Logo",
+      "type": "logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Select image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo list"
+    }
+  ]
+}
+{% endschema %}

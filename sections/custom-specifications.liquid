@@ -1,0 +1,232 @@
+{% style %}
+  .specifications_wrapper-{{ section.id }} {
+    background: {{ section.settings.bg }};
+    padding-top: {{ section.settings.top_spacing }}px;
+    padding-bottom: {{ section.settings.bottom_spacing }}px;
+  }
+
+  .specifications_head h4 {
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 400;
+    color: #6FB43F;
+  }
+
+  .specifications_head h2 {
+    margin: 0.8rem 0 0;
+    font-size: 3.2rem;
+    line-height: 1.2;
+  }
+
+  .specifications_inner {
+    margin: 4rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .specifications_img {
+    max-width: 31rem;
+    /* flex: 0 0 31rem; */
+  }
+
+  .specifications_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .specifications_text {
+    max-width: 76.8rem;
+    width: 100%;
+    /* flex: 0 0 76.8rem; */
+  }
+
+  .specifications_content p {
+    margin: 0 0 1.7rem;
+    display: flex  ;
+    gap: 9rem;
+    justify-content: flex-start;
+  }
+
+  .specifications_content p strong {
+    max-width: 17rem;
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #000;
+  }
+
+  .specifications_content p, .specifications_content p a {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #6c6f6c;
+  }
+
+  .specifications_content p a {
+    text-decoration: none;
+    border-bottom: 1px dashed #6c6f6c;
+  }
+
+  .sp_additional_text {
+    margin: 4rem 0 0;
+    max-width: 76.8rem;
+  }
+
+  .sp_additional_text p {
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 1.8;
+  }
+
+  @media screen and (max-width: 989px) {
+    .specifications_head {
+      text-align: center;
+    }
+
+    .specifications_inner {
+      flex-direction: column;
+      row-gap: 5rem;
+    }
+
+    .specifications_img {
+      order: 1;
+      max-width: 40rem;
+      width: 100%;
+    }
+
+    .specifications_text {
+      order: 2;
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .specifications_wrapper-{{ section.id }} {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    .specifications_content p {
+      flex-direction: column;
+      gap: 1rem;
+      margin: 0 0 3rem;
+    }
+
+    .specifications_content p a {
+      width: max-content;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .specifications_img {
+      width: calc(100% - 5rem);
+    }
+  }
+{% endstyle %}
+
+<div class="specifications_wrapper-{{ section.id }}">
+  <div class="page-width">
+    {% if section.settings.head != blank %}
+      <div class="specifications_head">
+        {% if section.settings.subhead != blank %}
+          <h4>{{ section.settings.subhead }}</h4>
+        {% endif %}
+
+        {% if section.settings.head != blank %}
+          <h2>{{ section.settings.head }}</h2>
+        {% endif %}
+      </div>
+    {% endif %}
+    <div class="specifications_inner">
+      <div class="specifications_text">
+        {% if section.settings.text != blank %}
+          <div class="specifications_content">{{ section.settings.text }}</div>
+        {% endif %}
+      </div>
+      {% if section.settings.img != blank %}
+        <div class="specifications_img">
+          {% if section.settings.img != blank %}
+            {{ section.settings.img | image_url: width: 1200 | image_tag: loading: 'lazy' }}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+    {% if section.settings.additional_text != blank %}
+      <div class="sp_additional_text">
+        {{ section.settings.additional_text }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Specifications",
+  "class": "specifications-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Section background color",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "subhead",
+      "label": "Sub heading",
+      "default": "Sub Heading"
+    },
+    {
+      "type": "text",
+      "id": "head",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "Select image"
+    },
+    {
+      "type": "richtext",
+      "id": "additional_text",
+      "label": "Additional text"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Specifications"
+    }
+  ]
+}
+{% endschema %}

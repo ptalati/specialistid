@@ -1,0 +1,245 @@
+{% style %}
+  .text_with_background_wrapper-{{ section.id }} {
+    padding-top: {{ section.settings.top_spacing }}px;
+    padding-bottom: {{ section.settings.bottom_spacing }}px;
+    {% if section.settings.bg != blank %}
+      background: url({{ section.settings.bg | image_url: width: 1920 }});
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+    {% else %}
+      background: #fff;
+    {% endif %}
+  }
+
+  .text_with_background_inner {
+    max-width: 130.4rem;
+    margin-inline: auto;
+    padding-inline: 5rem;
+  }
+
+  .text_with_background_inner h4 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .text_with_background_inner h2 {
+    margin: 1.2rem 0 0;
+    font-size: 5.2rem;
+    line-height: 1.2;
+    color: #fff;
+    font-weight: 700;
+    max-width: 50rem;
+  }
+
+  .text_with_bg_text {
+    margin: 3.5rem 0 0;
+  }
+
+  .text_with_bg_text p {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 45rem;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .text_with_bg_btns {
+    margin: 3.5rem auto 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .twbg_btn {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    justify-content: flex-start;
+  }
+
+  .twbg_btn a {
+    background: #F5911F;
+    padding: 1.8rem 2rem;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #fff;
+    text-decoration: none;
+    width: max-content;
+    transition: transform 0.1s;
+  }
+
+  .twbg_btn a:hover {
+    transform: scale(1.04);
+  }
+
+  span.btn_tag {
+    font-size: 1.6rem;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  span.additional_text {
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    margin: 1.2rem 0 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .text_with_background_inner {
+      padding-inline: 1.5rem;
+    }
+
+    .text_with_bg_btns {
+      flex-wrap: wrap;
+    }
+  }
+{% endstyle %}
+
+<div class="text_with_background_wrapper-{{ section.id }}">
+  <div class="text_with_background_inner">
+    {% if section.settings.subhead != blank %}
+      <h4>{{ section.settings.subhead }}</h4>
+    {% endif %}
+
+    {% if section.settings.head != blank %}
+      <h2>{{ section.settings.head }}</h2>
+    {% endif %}
+
+    {% if section.settings.text != blank %}
+      <div class="text_with_bg_text">{{ section.settings.text }}</div>
+    {% endif %}
+
+    {% if section.settings.btn1_link != blank or section.settings.btn2_link != blank %}
+      <div class="text_with_bg_btns">
+        {% if section.settings.btn1_link != blank %}
+          <div class="twbg_btn twbg_btn1">
+            {% if section.settings.btn1_tag != blank %}
+              <span class="btn_tag">{{ section.settings.btn1_tag }}</span>
+            {% endif %}
+            <a href="{{ section.settings.btn1_link }}">{{ section.settings.btn1_label }}</a>
+          </div>
+        {% endif %}
+
+        {% if section.settings.btn2_link != blank %}
+          <div class="twbg_btn twbg_btn2">
+            {% if section.settings.btn2_tag != blank %}
+              <span class="btn_tag">{{ section.settings.btn2_tag }}</span>
+            {% endif %}
+            <a href="{{ section.settings.btn2_link }}">{{ section.settings.btn2_label }}</a>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+    {% if section.settings.additional_text != blank %}
+      <span class="additional_text">{{ section.settings.additional_text }}</span>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text with background",
+  "class": "text-with-background-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg",
+      "label": "Select background image"
+    },
+    {
+      "type": "text",
+      "id": "subhead",
+      "label": "Sub heading",
+      "default": "Sub Heading"
+    },
+    {
+      "type": "text",
+      "id": "head",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>The Text with Background Image section lets you overlay engaging text on a visually appealing background image. Customize the text alignment and styling to create an eye-catching and informative section that enhances your store’s storytelling.</p>"
+    },
+    {
+      "type": "text",
+      "id": "btn1_tag",
+      "label": "Button 01 sub text",
+      "default": "Button sub text"
+    },
+    {
+      "type": "text",
+      "id": "btn1_label",
+      "label": "Button 01 label",
+      "default": "Button Label"
+    },
+    {
+      "type": "url",
+      "id": "btn1_link",
+      "label": "Button 01 link"
+    },
+    {
+      "type": "text",
+      "id": "btn2_tag",
+      "label": "Button 02 sub text",
+      "default": "Button sub text"
+    },
+    {
+      "type": "text",
+      "id": "btn2_label",
+      "label": "Button 02 label",
+      "default": "Button Label"
+    },
+    {
+      "type": "url",
+      "id": "btn2_link",
+      "label": "Button 02 link"
+    },
+    {
+      "type": "text",
+      "id": "additional_text",
+      "label": "Additional text",
+      "default": "Additional text"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text with background"
+    }
+  ]
+}
+{% endschema %}

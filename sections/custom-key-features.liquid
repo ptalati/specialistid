@@ -1,0 +1,264 @@
+{% style %}
+  .key_features_wrapper--{{ section.id }} {
+    background: {{ section.settings.bg }};
+    padding-top: {{ section.settings.top_spacing }}px;
+    padding-bottom: {{ section.settings.bottom_spacing }}px;
+  }
+
+  .key_features_img_wrapper {
+    text-align: center;
+  }
+
+  .key_features_img_wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 46rem;
+    margin-inline: auto;
+  }
+
+  .key_features_head {
+    margin: 3rem 0 0;
+  }
+
+  .key_features_head h2 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0;
+  }
+
+  .kft {
+    margin: 1.2rem auto 0;
+    max-width: 80rem;
+    text-align: center;
+  }
+
+  .kft p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+  }
+
+  .key_features_blocks_wrapper {
+    margin: 4rem 0 0;
+    display: flex  ;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .key_features_block {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+
+  .key_features_block_img {
+    width: max-content;
+  }
+
+  .key_features_block_img img {
+    max-width: 5.8rem;
+    height: 100%;
+    object-fit: contain;
+    aspect-ratio: 1;
+  }
+
+  .key_features_block_text h4 {
+    font-size: 1.6rem;
+    line-height: 1;
+    margin: 0 0 0.8rem;
+    color: rgba(18, 18, 18, 0.75);
+  }
+
+  .fkbt p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: rgba(18, 18, 18, 0.75);
+  }
+
+  @media screen and (max-width: 1024px) {
+    .key_features_blocks_wrapper {
+      flex-wrap: wrap;
+      row-gap: 5rem;
+    }
+
+    .key_features_block {
+      flex: 0 0 calc(50% - 1rem);
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .key_features_blocks_wrapper {
+      white-space: nowrap;
+      flex-wrap: nowrap;
+      scroll-snap-type: x mandatory;
+      overflow: hidden;
+      overflow-x: auto;
+    }
+
+    .key_features_blocks_wrapper::-webkit-scrollbar {
+      display: none;
+    }
+
+    .key_features_block {
+      flex: 0 0 70%;
+      white-space: normal;
+      scroll-snap-align: start;
+    }
+  }
+{% endstyle %}
+
+<div class="key_features_wrapper--{{ section.id }}">
+  <div class="page-width">
+    <div class="key_features_inner">
+      {% if product.metafields.custom.key_features_image != blank %}
+        <div class="key_features_img_wrapper">
+          {{ product.metafields.custom.key_features_image | image_url: width: 1920 | image_tag: loading: 'lazy' }}
+        </div>
+      {% elsif section.settings.img != blank %}
+        <div class="key_features_img_wrapper">
+          {{ section.settings.img | image_url: width: 1920 | image_tag: loading: 'lazy' }}
+        </div>
+      {% else %}
+        <div class="key_features_img_wrapper">
+          {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+      {% endif %}
+
+      <div class="key_features_text_wrapper">
+        {% if section.settings.head != blank %}
+          <div class="key_features_head">
+            <h2>{{ section.settings.head }}</h2>
+
+            {% if section.settings.text != blank %}
+              <div class="kft">{{ section.settings.text }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if section.blocks.size > 0 %}
+          <div class="key_features_blocks_wrapper">
+            {% for block in section.blocks %}
+              <div class="key_features_block">
+                {% if block.settings.img != blank %}
+                  <div class="key_features_block_img">
+                    {{ block.settings.img | image_url: width: 100 | image_tag: loading: 'lazy' }}
+                  </div>
+                {% endif %}
+                <div class="key_features_block_text">
+                  {% if block.settings.head != blank %}
+                    <h4>{{ block.settings.head }}</h4>
+                  {% endif %}
+                  {% if block.settings.text != blank %}
+                    <div class="fkbt">{{ block.settings.text }}</div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Key Features",
+  "class": "key-features-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Section Background",
+      "default": "#fff"
+    },
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "Select image"
+    },
+    {
+      "type": "text",
+      "id": "head",
+      "label": "Heading",
+      "default": "Section Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Highlight the best aspects of your product with the Key Features section. Showcase essential details that make your product stand out, helping customers make informed decisions. Customize this section to emphasize quality, functionality, or unique selling points in a visually appealing way.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Key features",
+      "type": "key_features",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Select image"
+        },
+        {
+          "type": "text",
+          "id": "head",
+          "label": "Heading",
+          "default": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Content",
+          "default": "<p>Lorem Ipsum Dolor Sit Amet.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Key Features",
+      "blocks": [
+        {
+          "type": "key_features"
+        },
+        {
+          "type": "key_features"
+        },
+        {
+          "type": "key_features"
+        },
+        {
+          "type": "key_features"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

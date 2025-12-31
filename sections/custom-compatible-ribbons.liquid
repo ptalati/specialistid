@@ -1,0 +1,309 @@
+{% style %}
+  .compatible_ribbons_wrapper-{{ section }} {
+    background: {{ section.settings.bg }};
+    padding-top: {{ section.settings.top_spacing }}px;
+    padding-bottom: {{ section.settings.bottom_spacing }}px;
+  }
+
+  .compatible_ribbons_head h2 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .compatible_ribbons_inner {
+    margin: 4rem 0 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .compatible_ribbons_inner .card__media .media, .compatible_ribbons_inner .card-wrapper {
+    background: #f8f8f8;
+  }
+
+  .compatible_ribbons_inner .card--standard>.card__content .card__information {
+    padding-inline: 1rem;
+  }
+
+  .compatible_ribbons_inner .card__heading {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    max-height: calc(2* 14px* 1.5);
+    overflow: hidden;
+  }
+
+  .compatible_ribbons_inner s#msrp-price {
+    font-size: 1.4rem;
+    line-height: 1;
+    color: rgba(18, 18, 18, 0.5);
+    letter-spacing: 0;
+    margin-right: 0.5rem;
+  }
+
+  .compatible_ribbons_inner span.price-item.price-item--regular {
+    color: #E34F4F;
+    font-size: 1.4rem;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+
+  .compatible_ribbons_inner span#map-price {
+    font-size: 1.4rem;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .compatible_ribbons_inner h4.collection_name {
+    font-size: 1.2rem;
+    font-weight: 100;
+    margin: 0 0 0.5rem;
+    color: #6FB43F;
+  }
+
+  .compatible_ribbons_inner .card__heading a:after {
+    display: none;
+  }
+
+  .cr_quantity_a2c {
+    display: flex;
+    align-items: flex-start;
+    gap: .7rem;
+    height: 4.5rem;
+  }
+
+  .cr_quantity_wrapper {
+    max-width: 8rem;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex: 0 0 8rem;
+    height: 4rem;
+  }
+
+  .cr_quantity_wrapper input, .cr_quantity_wrapper div {
+    max-width: 2.66rem;
+    width: 100%;
+  }
+
+  .cr_quantity_wrapper div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .cr_quantity_wrapper input {
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .cr_a2c {
+    max-width: calc(100% - 9rem);
+    flex: 0 0 calc(100% - 9rem);
+    background: #6FB43F;
+    height: 4.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 100;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .cr_a2c:hover {
+    background: #121212;
+    color: #fff;
+  }
+
+  .quick-add {
+    display: none;
+  }
+
+  .compatible_ribbons_inner .swiper-button-prev, .compatible_ribbons_inner .swiper-button-next {
+    top: 40%;
+    width: 5rem;
+    height: 5rem;
+    background: #fff;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+  }
+
+  .compatible_ribbons_inner .swiper-button-prev:after, .compatible_ribbons_inner .swiper-button-next:after {
+    display: none;
+  }
+
+  .compatible_ribbons_inner .swiper-button-prev svg, .compatible_ribbons_inner .swiper-button-next svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  @media screen and (max-width: 640px) {
+     .compatible_ribbons_wrapper-{{ section }} {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    .compatible_ribbons_inner .swiper-button-prev, .compatible_ribbons_inner .swiper-button-next {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .compatible_ribbons_inner .swiper-button-prev svg, .compatible_ribbons_inner .swiper-button-next svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+{% endstyle %}
+
+{% if product.metafields.custom.compatible_ribbons != blank %}
+  <div class="compatible_ribbons_wrapper-{{ section }}">
+    <div class="page-width">
+      {% if section.settings.head != blank %}
+        <div class="compatible_ribbons_head">
+          <h2>{{ section.settings.head }}</h2>
+        </div>
+      {% endif %}
+
+      {% assign products = product.metafields.custom.compatible_ribbons.value %}
+      <div class="compatible_ribbons_inner cr-{{ section.id }}">
+        <div class="swiper-wrapper">
+          {% for product in products %}
+            <div class="compatible_ribbons_product_block swiper-slide">
+              {% render 'cr-card-product',
+                card_product: product,
+                media_aspect_ratio: 'portrait',
+                show_quick_add: true,
+                section_id: section.id,
+                show_collection: true
+              %}
+            </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-button-next">{% render 'chev-right' %}</div>
+        <div class="swiper-button-prev">{% render 'chev-left' %}</div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<script>
+  var swiper = new Swiper('.cr-{{ section.id }}', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      499: {
+        slidesPerView: 2,
+        spaceBetween: 0,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      799: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1099: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
+
+  $('.cr_quantity_a2c').each(function () {
+    $(this)
+      .find('.cr_a2c ')
+      .click(function () {
+        $(this).closest('.card__information').siblings('.quick-add').find('button').click();
+        console.log('clicked');
+      });
+  });
+
+  $('.cr_plus').each(function () {
+    $(this).click(function () {
+      let quan = $(this).siblings('#cr_quan');
+      let quantity = $(this).closest('.card__information').siblings('.quick-add').find('input[name="quantity"]');
+      let value = Number(quantity.val()) + 1;
+      quantity.val(value);
+      quan.val(value);
+    });
+  });
+
+  $('.cr_minus').each(function () {
+    $(this).click(function () {
+      let quan = $(this).siblings('#cr_quan');
+      let quantity = $(this).closest('.card__information').siblings('.quick-add').find('input[name="quantity"]');
+      let v = Number(quantity.val());
+      console.log(v);
+      if (v > 1) {
+        let value = Number(quantity.val()) - 1;
+        quantity.val(value);
+        quan.val(value);
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Compatible Ribbons",
+  "class": "compatible-ribbons-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Section background color",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "head",
+      "label": "Section heading",
+      "default": "Default Heading"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Compatible Ribbons"
+    }
+  ]
+}
+{% endschema %}

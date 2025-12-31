@@ -1,0 +1,245 @@
+{% style %}
+  .two_columns_wrapper-{{ section.id }} {
+    background: {{ section.settings.bg }};
+    padding-top: {{ section.settings.top_spacing }}px;
+    padding-bottom: {{ section.settings.bottom_spacing }}px;
+  }
+
+  .two_cols_head {
+    text-align: center;
+  }
+
+  .two_cols_head h4 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #6fb43f;
+    margin: 0;
+  }
+
+  .two_cols_head h2 {
+    margin: 0.8rem 0 0;
+    font-size: 3.2rem;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  .two_cols_inner {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    gap: 2rem;
+  }
+
+  .two_cols_inner.has_heading {
+    margin: 6rem 0 0;
+  }
+
+  .two_cols_inner.img--left {
+    flex-direction: row;
+  }
+
+  .two_cols_inner.img--right {
+    flex-direction: row-reverse;
+  }
+
+  .two_cols_img, .two_cols_text {
+    max-width: calc(50% - 1rem);
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+  .two_cols_img {
+    min-height: 40rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .two_cols_img svg {
+    height: 100%;
+    width: 100%;
+    background: #f8f8f8;
+    max-height: 40rem;
+  }
+
+  .two_cols_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .two_cols_text h3 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin: 0 0 1.4rem;
+  }
+
+  .two_cols_text p {
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: rgba(18, 18, 18, 0.75);
+  }
+
+  .two_cols_inner.img--right .two_cols_text p {
+    padding-right: 2rem;
+  }
+
+  .two_cols_inner.img--left .two_cols_text p {
+    padding-left: 2rem;
+  }
+
+  @media screen and (max-width: 989px) {
+    .two_cols_inner {
+      flex-direction: column !important;
+    }
+
+    .two_cols_img, .two_cols_text {
+      flex: 0 0 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .two_cols_text {
+      margin-bottom: 5rem;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .two_columns_wrapper-{{ section.id }} {
+      padding-top: 5rem;
+      padding-bottom: 0;
+    }
+
+    .two_cols_img {
+      display: flex;
+      align-items: stretch;
+      min-height: max-content;
+    }
+
+    .two_cols_text {
+      margin-bottom: 0;
+    }
+
+    .two_cols_text p {
+      padding: 0 !important;
+    }
+  }
+{% endstyle %}
+
+<div class="two_columns_wrapper-{{ section.id }}">
+  <div class="page-width">
+    {% if section.settings.head != blank %}
+      <div class="two_cols_head">
+        {% if section.settings.subhead != blank %}
+          <h4>{{ section.settings.subhead }}</h4>
+        {% endif %}
+        <h2>{{ section.settings.head }}</h2>
+      </div>
+    {% endif %}
+
+    <div class="two_cols_inner {% if section.settings.head != blank %}has_heading{% endif %} img--{{ section.settings.img_alignment }}">
+      <div class="two_cols_img">
+        {% if section.settings.img != blank %}
+          {{ section.settings.img | image_url: width: 1920 | image_tag: loading: 'lazy' }}
+        {% else %}
+          {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        {% endif %}
+      </div>
+      <div class="two_cols_text">
+        {% if section.settings.title != blank %}
+          <h3>{{ section.settings.title }}</h3>
+        {% endif %}
+
+        {% if section.settings.text != blank %}
+          <div class="two_cols_content">{{ section.settings.text }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Two columns section",
+  "class": "two-columns-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Section background color",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "subhead",
+      "label": "Sub heading",
+      "default": "Sub Heading"
+    },
+    {
+      "type": "text",
+      "id": "head",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "Select image"
+    },
+    {
+      "type": "select",
+      "id": "img_alignment",
+      "label": "Image alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Default Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>The Two Columns section lets you display an image on one side and content on the other, creating a balanced and engaging layout. Easily customize the image alignment to fit your design and highlight key messages effectively.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two columns section"
+    }
+  ]
+}
+{% endschema %}
