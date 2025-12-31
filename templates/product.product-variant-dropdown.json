@@ -216,6 +216,13 @@
       "name": "Product Custom Info",
       "settings": {}
     },
+    "custom_content_feedback_mWTPY3": {
+      "type": "custom-content-feedback",
+      "name": "Content Feedback",
+      "settings": {
+        "form_code": "<iframe height=\"423\" title=\"Embedded Wufoo Form\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" style=\"width:100%;border:none\" sandbox=\"allow-popups-to-escape-sandbox allow-top-navigation allow-scripts allow-popups allow-forms allow-same-origin\" src=\"https://specialistid.wufoo.com/embed/rej8wlz1lcwsji/\"> <a href=\"https://specialistid.wufoo.com/forms/rej8wlz1lcwsji/\">Fill out my Wufoo form!</a> </iframe>"
+      }
+    },
     "custom_liquid_pBgjQg": {
       "type": "custom-liquid",
       "name": "Product Reviews",
@@ -242,13 +249,6 @@
         "show_rating": false,
         "padding_top": 36,
         "padding_bottom": 28
-      }
-    },
-    "custom_content_feedback_mWTPY3": {
-      "type": "custom-content-feedback",
-      "name": "Content Feedback",
-      "settings": {
-        "form_code": ""
       }
     }
   },
