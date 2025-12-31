@@ -12,8 +12,8 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "product_media_ENbA96": {
-          "type": "product_media",
+        "fpd_designer_YMN33M": {
+          "type": "fpd_designer",
           "settings": {}
         },
         "product_video_mgQapf": {
@@ -52,6 +52,12 @@
         "just_price_zpYWQi": {
           "type": "just_price",
           "settings": {}
+        },
+        "custom_liquid_NkwAeV": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"fpd-controls\">\n    <p class='form__label' >Lanyard Color</p>\n    <div id='fpd-lanyard-color' class=\"fpd-modules lanyard-designs\">\n      <div class=\"fpd-sc-module-wrapper\" data-type=\"designs_lanyard-color\"></div>\n    </div>\n    <p class='form__label' >Reel Color</p>\n    <div id='fpd-reel-color' class=\"fpd-modules lanyard-designs\">\n      <div class=\"fpd-sc-module-wrapper\" data-type=\"designs_reel-color\"></div>\n    </div>\n    <div id=\"lanyard-content\">\n        <p class='form__label' >Lanyard Print</p>\n        <div id='fpd-text-input' class=\"fpd-modules\">\n            <div class=\"fpd-sc-module-wrapper\" data-type=\"text-layers\"></div>\n        </div>\n      \n        <div id='fpd-logo-upload' class=\"fpd-modules\">\n\t\t<p class='form__label' >Logo</p>\n            <div class=\"fpd-sc-module-wrapper lanyard-images\" data-type=\"images\" data-fpd-aeo='{\"autoSelect\":false, \"movable\":false}'></div>\n        </div>\n        <div class=\"symmeterical\">\n            <label class='form__label'>Symmetrical/Positional</label>\n            <input type='checkbox' name='symmetrical' />\n        </div>\n        <div class=\"slidecontainer\">\n            <label class='form__label'>Space Width</label>\n            <input type=\"range\" min=\"5\" max=\"150\" value=\"20\" class=\"slider\" id=\"space-width\">\n        </div>\n    </div>\n    \n    \n    <p class='form__label' >Upload Reel Logo</p>\n    <div id='fpd-reel-logo' class=\"fpd-modules\">\n      <div class=\"fpd-sc-module-wrapper lanyard-images\" data-type=\"images\" data-fpd-aeo='{\"_addToUZ\":\"Reel Logo\", \"autoSelect\":false, \"movable\":false}'> </div>\n    </div>\n  </div>"
+          }
         },
         "volume_pricing_info_label_p6ebk7": {
           "type": "volume_pricing_info_label",
@@ -153,7 +159,7 @@
         }
       },
       "block_order": [
-        "product_media_ENbA96",
+        "fpd_designer_YMN33M",
         "product_video_mgQapf",
         "title",
         "custom_availability_mQycK4",
@@ -162,6 +168,7 @@
         "clear_block_4MQFRp",
         "price",
         "just_price_zpYWQi",
+        "custom_liquid_NkwAeV",
         "volume_pricing_info_label_p6ebk7",
         "discount_progress_bar_qEUjei",
         "volume_pricing_available_PDNPnr",
