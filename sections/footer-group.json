@@ -17,21 +17,21 @@
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Customer Service",
             "menu": "footer-links-1"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
+            "heading": "Customer Center",
             "menu": "footer-links-2"
           }
         },
         "link_list_473NbJ": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Information",
             "menu": "footer-links-3"
           }
         }
