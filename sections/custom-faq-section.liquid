@@ -1,200 +1,352 @@
-{% style %}
-  .faq_wrapper-{{ section.id }} {
-    background: {{ section.settings.bg }};
-    padding-top: {{ section.settings.top_spacing }}px;
-    padding-bottom: {{ section.settings.bottom_spacing }}px;
-  }
-
-  .faq_head {
-    text-align: center;
-  }
-
-  .faq_head h2 {
-    max-width: 60rem;
-    font-size: 3.2rem;
-    line-height: 1.2;
-    margin: 0 auto;
-    letter-spacing: 0;
-  }
-
-  .faq_inner {
-    margin: 6rem auto 0;
-    max-width: 100rem;
-  }
-
-  .faq_block {
-    padding: 2rem 0;
-    border-top: 1px solid #6FB43F;
-  }
-
-  .faq_block:last-child {
-    border-bottom: 1px solid #6FB43F;
-  }
-
-  .faq_question {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 2rem;
-    cursor: pointer;
-  }
-
-  .faq_question h3 {
-    font-family: var(--font-body-family);
-    font-size: 2rem;
-    line-height: 1.5;
-    font-weight: 500;
-    margin: 0;
-    color: rgba(18,18,18,0.75);
-  }
-
-  .faq_question span {
-    position: relative;
-    top: 0.4rem;
-    transition: transform 0.3s;
-  }
-
-  .faq_question span.rot {
-    transform: rotate(180deg);
-  }
-
-  .faq_answer {
-    display: none;
-  }
-
-  .faq_answer p {
-    margin: 1.7rem 0 0;
-    font-size: 1.8rem;
-    line-height: 1.5;
-    color: rgba(18, 18, 18, 0.5);
-  }
-
-  @media screen and (max-width: 640px) {
-    .faq_wrapper-{{ section.id }} {
-      padding-top: 5rem;
-      padding-bottom: 5rem;
-    }
-
-    .faq_question h3 {
-      font-size: 1.6rem;
-    }
-
-    .faq_answer p {
-      font-size: 1.5rem;
-    }
-  }
-{% endstyle %}
-
-<div class="faq_wrapper-{{ section.id }}">
-  <div class="page-width">
-    {% if section.settings.head != blank %}
-      <div class="faq_head">
-        <h2>{{ section.settings.head }}</h2>
+<!-- sections/tabbed-faq-section.liquid -->
+<div
+  class="faq-section"
+  data-tabs-group="{{ section.settings.tabs_group_id }}"
+  data-tab-id="{{ section.settings.tab_id }}"
+  style="padding: 0 {{ section.settings.padding_horizontal }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_horizontal }}px;"
+>
+  <div class="container">
+    {% if section.settings.section_description != blank %}
+      <div class="section-description">
+        {{ section.settings.section_description }}
       </div>
     {% endif %}
 
     {% if section.blocks.size > 0 %}
-      <div class="faq_inner">
+      <div class="faq-content">
         {% for block in section.blocks %}
-          <div class="faq_block">
-            {% if block.settings.question != blank %}
-              <div class="faq_question">
-                <h3>{{ block.settings.question }}</h3>
-                <span>{% render 'arrow-down' %}</span>
+          {% if block.type == 'category' %}
+            <div class="faq-category" {{ block.shopify_attributes }}>
+              <h3 class="category-title">{{ block.settings.category_title }}</h3>
+              {% if block.settings.category_description != blank %}
+                <div class="category-description">{{ block.settings.category_description }}</div>
+              {% endif %}
+            </div>
+          {% elsif block.type == 'accordion' %}
+            <div class="accordion-item" {{ block.shopify_attributes }}>
+              <button class="accordion-header" type="button">
+                <span>{{ block.settings.accordion_title }}</span>
+                <svg class="accordion-icon" width="16" height="16" viewBox="0 0 16 16">
+                  <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="accordion-body">
+                  {{ block.settings.accordion_content }}
+                </div>
               </div>
-            {% endif %}
-
-            {% if block.settings.answer != blank %}
-              <div class="faq_answer">{{ block.settings.answer }}</div>
-            {% endif %}
-          </div>
+            </div>
+          {% endif %}
         {% endfor %}
       </div>
     {% endif %}
   </div>
 </div>
 
+<style>
+  .faq-section {
+    animation: fadeIn 0.3s ease;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .section-description {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    text-align: center;
+  }
+
+  .faq-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* FAQ Categories */
+  .faq-category {
+    text-align: center;
+    margin: 30px 0 20px 0;
+  }
+
+  .faq-content > .faq-category:first-child {
+    margin-top: 0;
+  }
+
+  .category-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+  }
+
+  .category-description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Accordions */
+  .accordion-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .accordion-header {
+    width: 100%;
+    background: #f39c42;
+    border: none;
+    padding: 20px 24px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+  .accordion-header:hover {
+    background: #e8912d;
+  }
+
+  .accordion-header.active {
+    background: #e8912d;
+  }
+
+  .accordion-icon {
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 12px;
+  }
+
+  .accordion-header.active .accordion-icon {
+    transform: rotate(180deg);
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #f39c42;
+  }
+
+  .accordion-content.active {
+    max-height: 1000px;
+  }
+
+  .accordion-body {
+    padding: 0 24px 20px 24px;
+    line-height: 1.6;
+    color: white;
+    font-size: 15px;
+  }
+  .accordion-body p > a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 15px;
+    }
+
+    .accordion-header {
+      padding: 16px 20px;
+      font-size: 15px;
+    }
+
+    .accordion-body {
+      padding: 0 20px 16px 20px;
+      font-size: 14px;
+    }
+
+    .faq-category {
+      margin: 25px 0 15px 0;
+    }
+
+    .faq-content > .faq-category:first-child {
+      margin-top: 0;
+    }
+
+    .category-title {
+      font-size: 18px;
+    }
+
+    .category-description {
+      font-size: 15px;
+    }
+  }
+</style>
+
 <script>
-  $('.faq_block').each(function () {
-    $(this)
-      .find('.faq_question')
-      .click(function () {
-        $(this).siblings('.faq_answer').slideToggle().closest('.faq_block').siblings().find('.faq_answer').slideUp();
-        $(this)
-          .find('span')
-          .toggleClass('rot')
-          .closest('.faq_block')
-          .siblings()
-          .find('.faq_question')
-          .find('span')
-          .removeClass('rot');
+  document.addEventListener('DOMContentLoaded', function () {
+    const faqSection = document.querySelector(
+      '[data-tabs-group="{{ section.settings.tabs_group_id }}"][data-tab-id="{{ section.settings.tab_id }}"]'
+    );
+    if (!faqSection) return;
+
+    // Accordion functionality
+    const accordionHeaders = faqSection.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach((header) => {
+      header.addEventListener('click', function () {
+        const content = this.nextElementSibling;
+        const isActive = this.classList.contains('active');
+
+        // Close all accordions in this section
+        const allHeaders = faqSection.querySelectorAll('.accordion-header');
+        const allContents = faqSection.querySelectorAll('.accordion-content');
+
+        allHeaders.forEach((h) => h.classList.remove('active'));
+        allContents.forEach((c) => c.classList.remove('active'));
+
+        // Toggle current accordion
+        if (!isActive) {
+          this.classList.add('active');
+          content.classList.add('active');
+        }
       });
+    });
   });
 </script>
 
 {% schema %}
 {
-  "name": "FAQs",
-  "class": "faq-section",
+  "name": "FAQ Section",
+  "tag": "section",
+  "class": "section",
   "settings": [
     {
-      "type": "color",
-      "id": "bg",
-      "label": "Section background color",
-      "default": "#fff"
+      "type": "text",
+      "id": "tabs_group_id",
+      "label": "Tabs Group ID",
+      "default": "main-tabs",
+      "info": "Must match the Tabs Group ID from your Tabs Controller section"
     },
     {
       "type": "text",
-      "id": "head",
-      "label": "Heading",
-      "default": "Heading"
+      "id": "tab_id",
+      "label": "Tab ID",
+      "default": "general",
+      "info": "Must match a Tab ID from your Tabs Controller section"
+    },
+    {
+      "type": "richtext",
+      "id": "section_description",
+      "label": "Section Description",
+      "info": "Optional description that appears at the top of this FAQ section"
     },
     {
       "type": "header",
-      "content": "Section spacing"
+      "content": "Section Spacing"
     },
     {
       "type": "range",
-      "id": "top_spacing",
-      "label": "Top spacing",
+      "id": "padding_bottom",
       "min": 0,
-      "max": 200,
-      "step": 4,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom padding",
       "default": 40
     },
     {
       "type": "range",
-      "id": "bottom_spacing",
-      "label": "Bottom spacing",
+      "id": "padding_horizontal",
       "min": 0,
-      "max": 200,
-      "step": 4,
-      "default": 40
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Left/Right padding",
+      "default": 0
     }
   ],
   "blocks": [
     {
-      "name": "FAQ",
-      "type": "faq",
+      "type": "category",
+      "name": "FAQ Category",
       "settings": [
         {
-          "type": "textarea",
-          "id": "question",
-          "label": "Question",
-          "default": "Lorem ipsum dolor sit amet consectetur. Varius semper etiam morbi sed nisl nisi. Non urna hendrerit nisl vulputate vitae. "
+          "type": "text",
+          "id": "category_title",
+          "label": "Category Title",
+          "default": "FAQ Category"
+        },
+        {
+          "type": "text",
+          "id": "category_description",
+          "label": "Category Description",
+          "info": "Optional description below the category title"
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "name": "Accordion",
+      "settings": [
+        {
+          "type": "text",
+          "id": "accordion_title",
+          "label": "Accordion Title",
+          "default": "Accordion Title"
         },
         {
           "type": "richtext",
-          "id": "answer",
-          "label": "Answer",
-          "default": "<p>Lorem ipsum dolor sit amet consectetur. Varius semper etiam morbi sed nisl nisi. Non urna hendrerit nisl vulputate vitae.</p>"
+          "id": "accordion_content",
+          "label": "Accordion Content",
+          "default": "<p>Add your accordion content here.</p>"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "FAQs"
+      "name": "FAQ Section",
+      "blocks": [
+        {
+          "type": "category",
+          "settings": {
+            "category_title": "General Questions"
+          }
+        },
+        {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "What is this product?",
+            "accordion_content": "<p>This is a sample accordion content.</p>"
+          }
+        },
+        {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "How do I use it?",
+            "accordion_content": "<p>Here are the usage instructions.</p>"
+          }
+        }
+      ]
     }
   ]
 }
