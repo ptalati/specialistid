@@ -534,7 +534,6 @@
 }
 .footer-flex-content .footer-block--newsletter .footer-content {
   margin-bottom: 40px;
-  font-family: Rubik;
   font-size: 14px;
   line-height: 25.2px;
   letter-spacing: 0.6px;
@@ -552,7 +551,6 @@ h2.footer-block__heading {
     letter-spacing: 0.6px;
 }
 .footer-block__details-content .list-menu__item--link {
-    font-family: Rubik;
     line-height: 25.2px;
     letter-spacing: 0.6px;
 }
