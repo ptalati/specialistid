@@ -1,0 +1,29 @@
+{% comment %}
+  Custom Spacer Section
+  Adds configurable vertical spacing between sections
+{% endcomment %}
+
+<div class="custom-spacer" style="height: {{ section.settings.spacer_height }}px;"></div>
+
+{% schema %}
+{
+  "name": "Custom Spacer",
+  "settings": [
+    {
+      "type": "range",
+      "id": "spacer_height",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Spacer Height",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Spacer"
+    }
+  ]
+}
+{% endschema %}
