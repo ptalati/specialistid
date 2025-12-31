@@ -423,10 +423,59 @@
       "type": "custom-image-banner",
       "name": "Custom banner",
       "settings": {
+        "section_color_scheme": "",
         "heading": "",
         "subheading": "",
         "button_label": "",
         "button_link": ""
+      }
+    },
+    "image_banner_X77GCV": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_cXkbAc": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_9Wgwxa": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_WU3yEz": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_cXkbAc",
+        "text_9Wgwxa",
+        "buttons_WU3yEz"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
       }
     }
   },
@@ -440,6 +489,7 @@
     "image_with_text_MNXeia",
     "image_with_text_NTqqDX",
     "video",
-    "custom_image_banner_HhyCAD"
+    "custom_image_banner_HhyCAD",
+    "image_banner_X77GCV"
   ]
 }
