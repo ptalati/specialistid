@@ -86,8 +86,8 @@
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 52,
-        "padding_bottom": 52,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36,
         "section_css_class": "why-choose"
@@ -251,9 +251,9 @@
         "padding_bottom_mobile": 24
       }
     },
-    "custom_product_slider_eLEfjE": {
+    "custom_product_slider_U7fgnJ": {
       "type": "custom-product-slider",
-      "name": "Product Slider",
+      "name": "Custom product slider",
       "settings": {
         "product_heading": "Our best sellers from Badge Reels to Custom Lanyards",
         "text_alignment": "center",
@@ -332,10 +332,10 @@
         "section_color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
         "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
         "section_css_class": "Type your own CSS class",
-        "padding_top": 80,
-        "padding_bottom": 36,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "padding_top_mobile": 36,
-        "padding_bottom_mobile": 12
+        "padding_bottom_mobile": 36
       }
     },
     "image_with_text_NTqqDX": {
@@ -399,24 +399,224 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "section_css_class": "speak-to-live-specialist",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 0,
+        "padding_bottom": 60,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "custom_image_banner_MAmEfK": {
+      "type": "custom-image-banner",
+      "name": "Custom banner",
+      "settings": {
+        "section_color_scheme": "",
+        "background_image": "shopify://shop_images/Banner_separation.png",
+        "background_img": "shopify://shop_images/Card_printers_collections_1_1.png",
+        "heading": "Print your own cards with our products",
+        "subheading": "<p>At Specialist ID, we offer a wide range of card printers, blank cards, and top-quality ribbons to meet your needs. We’re proud partners with Magicard, KODAK, IDP, HID FARGO, Evolis, and Entrust ID Card Printers.</p>",
+        "button_label": "Browse our ID Card Printers",
+        "button_link": "shopify://collections/id-card-printers"
+      }
+    },
+    "custom_deal_products_dmEwPA": {
+      "type": "custom-deal-products",
+      "blocks": {
+        "heading_PmiEfp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sales & Clearance",
+            "heading_size": "h1"
+          }
+        },
+        "text_AAywf6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Check out our clearance savings!</p>",
+            "text_style": "body"
+          }
+        },
+        "button_QjMnr8": {
+          "type": "button",
+          "settings": {
+            "button_label": "See All Sale Items",
+            "button_link": "shopify://collections/deals"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PmiEfp",
+        "text_AAywf6",
+        "button_QjMnr8"
+      ],
+      "name": "Custom deal product",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "selected_collection": "deals",
+        "section_css_class": "deals-offers",
+        "section_color_scheme": "scheme-5",
+        "padding_top": 60,
+        "padding_bottom": 60,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
     },
-    "video": {
-      "type": "video",
+    "custom_testimonials_UcABLr": {
+      "type": "custom-testimonials",
+      "blocks": {
+        "testimonial_pEqxx4": {
+          "type": "testimonial",
+          "settings": {
+            "star_limit": 5,
+            "title": "",
+            "content": "<p>All items that I have ordered have been great quality and the support if I have needed anything has been quick and wonderful!</p>",
+            "author": "Haley F.",
+            "show_tag": true,
+            "date": "2025-05-20"
+          }
+        },
+        "testimonial_HM8VKr": {
+          "type": "testimonial",
+          "settings": {
+            "star_limit": 5,
+            "title": "",
+            "content": "<p>Love shopping with specialist ID! I do not use any other company for badge reels, the site is easy to use and navigate and I love that you can earn reward points!</p>",
+            "author": "Christina M.",
+            "show_tag": true,
+            "date": "2025-05-16"
+          }
+        },
+        "testimonial_bA4rXP": {
+          "type": "testimonial",
+          "settings": {
+            "star_limit": 5,
+            "title": "",
+            "content": "<p>So far, this company has been delivering a great product. We've been using you for at least 2 years now. Keep it up.</p>",
+            "author": "Laura V.",
+            "show_tag": true,
+            "date": "2025-05-14"
+          }
+        },
+        "testimonial_LCAfKU": {
+          "type": "testimonial",
+          "settings": {
+            "star_limit": 5,
+            "title": "",
+            "content": "<p>It’s always quick and easy</p>",
+            "author": "Jeff D.",
+            "show_tag": true,
+            "date": "2025-05-07"
+          }
+        },
+        "testimonial_ktcVAY": {
+          "type": "testimonial",
+          "settings": {
+            "star_limit": 5,
+            "title": "",
+            "content": "<p>My shopping experience was great. I was able to find what I wanted without and hassle. I was very pleased with how Customer Service handled my returned order. The new order was received within a matter of days not weeks.</p>",
+            "author": "Mary C.",
+            "show_tag": true,
+            "date": "2025-05-14"
+          }
+        },
+        "testimonial_qM9M6c": {
+          "type": "testimonial",
+          "settings": {
+            "star_limit": 5,
+            "title": "",
+            "content": "<p>Very user-friendly and intuitive website. Nice variety of products- some not seen anywhere else.</p>",
+            "author": "David K.",
+            "show_tag": true,
+            "date": "2025-04-29"
+          }
+        },
+        "testimonial_gGFEBx": {
+          "type": "testimonial",
+          "settings": {
+            "star_limit": 5,
+            "title": "",
+            "content": "<p>Awesome staff very fast and professional email process and reach out after every order I place. Thank you to the entire staff at Specialist Id.</p>",
+            "author": "Terrence M.",
+            "show_tag": true,
+            "date": "2025-04-22"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_pEqxx4",
+        "testimonial_HM8VKr",
+        "testimonial_bA4rXP",
+        "testimonial_LCAfKU",
+        "testimonial_ktcVAY",
+        "testimonial_qM9M6c",
+        "testimonial_gGFEBx"
+      ],
+      "name": "Custom testimonials",
       "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "section_color_scheme": "",
+        "head": "See What all the Buzz is About",
+        "logo_img": "shopify://shop_images/7801-large_2.png",
+        "button_label": "See our 40,000+ Reviews",
+        "button_link": "shopify://pages/reviews",
+        "top_spacing": 60,
+        "bottom_spacing": 60,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "custom_icon_slider_XnPQHd": {
+      "type": "custom-icon-slider",
+      "blocks": {
+        "icon_list_ACqyyQ": {
+          "type": "icon_list",
+          "settings": {
+            "icon_image": "shopify://shop_images/nasa_logo-min_1.png"
+          }
+        },
+        "icon_list_9wPJaa": {
+          "type": "icon_list",
+          "settings": {
+            "icon_image": "shopify://shop_images/disney_logo-min-1.png"
+          }
+        },
+        "icon_list_9dNjGQ": {
+          "type": "icon_list",
+          "settings": {
+            "icon_image": "shopify://shop_images/Tabpanel_Heading_3_samsung_logo_large-1_png_43b130e5-8ef4-4dc2-a2d8-7c2e08dc1196.png"
+          }
+        },
+        "icon_list_UiTdbQ": {
+          "type": "icon_list",
+          "settings": {
+            "icon_image": "shopify://shop_images/coke_logo-min-1.png"
+          }
+        },
+        "icon_list_YXiM4z": {
+          "type": "icon_list",
+          "settings": {
+            "icon_image": "shopify://shop_images/nike_logo-min-1.png"
+          }
+        }
+      },
+      "block_order": [
+        "icon_list_ACqyyQ",
+        "icon_list_9wPJaa",
+        "icon_list_9dNjGQ",
+        "icon_list_UiTdbQ",
+        "icon_list_YXiM4z"
+      ],
+      "name": "Custom icon slider",
+      "settings": {
+        "section_color_scheme": "scheme-1",
+        "title": "Trusted by Top Fortune 500 Brands",
+        "icons_autoplay": true,
+        "icons_per_page": 5,
+        "icons_per_page_mobile": 2,
+        "icons_to_scroll": 4,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
       }
     }
   },
@@ -426,9 +626,12 @@
     "multicolumn",
     "slideshow_PkyqJL",
     "collection_page_section_B43ELG",
-    "custom_product_slider_eLEfjE",
+    "custom_product_slider_U7fgnJ",
     "image_with_text_MNXeia",
     "image_with_text_NTqqDX",
-    "video"
+    "custom_image_banner_MAmEfK",
+    "custom_deal_products_dmEwPA",
+    "custom_testimonials_UcABLr",
+    "custom_icon_slider_XnPQHd"
   ]
 }

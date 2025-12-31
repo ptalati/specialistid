@@ -1,0 +1,149 @@
+<style>
+  /* banner */
+
+    .slider-wrap  {
+        background: url({{section.settings.background_image | image_url: width: 1920 }}) center top no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        padding: 5rem 3rem;
+        width: 100%;
+        height: 100%;
+    }
+  .custom-inner-b {    display: grid;    grid-template-columns: 1.2fr 1fr;    padding: 30px 0;    gap: 30px;    align-items: center;}
+  img.perfmatters-lazy.entered.pmloaded {    width: 100%;    height: 100%;    object-fit: contain;}
+  .front-caption h2 {
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+  .custom-description p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: 0;
+    color: #fff;
+}
+  .custom-description {
+    max-width: 750px;
+}
+  .homepahe-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 40px;
+}
+  .homepahe-buttons .button {
+    background: #F5911F;
+}
+
+@media(max-width:1100px){
+  .front-caption h2 {    font-size: 35px;}
+  .custom-description p {   line-height: 30px;}
+}
+
+@media(max-width:989px){
+  .custom-inner-b {    grid-template-columns: 1fr;    gap: 00px;    }
+  .front-caption {    order: 2;}
+  .BannerImgBX {    order: 1;}
+}
+  
+@media(max-width:749px){
+  .slider-wrap {    padding: 3rem 0rem;}
+  .front-caption h2 {   font-size: 30px;   line-height: 39px;    margin: 18px 0px 10px;}
+  .custom-description p {    line-height: 34px;}
+  .homepahe-buttons {    margin-top: 30px;}
+}
+
+</style>
+
+
+
+<div class="custom-banner" id="Cusatom_banner-{{ section.id }}">
+    <div class="{%  if section.settings.background_image != blank %}slider-wrap{% else %} color-{{ section.settings.section_color_scheme }} {% endif %} ">
+      <div class="page-width">
+        <div class="custom-inner-b">
+          <div class="front-caption">
+            <h2>{{ section.settings.heading }} </h2>
+            <div class="custom-description">{{ section.settings.subheading }}</div>
+            <div class="homepahe-buttons">
+               {% if section.settings.button_label != blank %}
+                <a {% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %} class="button{% if section.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}" {{ section.shopify_attributes }}>
+                  {{ section.settings.button_label}}</a>
+              {% endif %}
+            </div>
+          </div>
+          <div class="BannerImgBX">
+            {% if section.settings.background_img != blank %}
+            <img
+              src="{{ section.settings.background_img | img_url:'master' }}"
+              alt="site banner"
+              width="573"
+              height="517"
+              class="perfmatters-lazy entered pmloaded"
+              data-src="https://gracethemes.com/wp-content/uploads/2023/12/site-banner3.webp"
+              data-ll-status="loaded"
+            >
+            {%  else %}
+                {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+             {% endif %}   
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom banner",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "section_color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-3"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Image Background"
+    },
+    {
+      "type":"image_picker",
+      "id":"background_img",
+      "label":"Select image"
+    },
+    {
+      "type":"textarea",
+      "id":"heading",
+      "label":"Heading",
+      "default":"Image banner"
+    },
+    {
+      "type":"richtext",
+      "id":"subheading",
+      "label":"Subheading",
+      "default":"<p>Give customers details about the banner image(s) or content on the template.</p>"
+    },
+     {
+      "type":"text",
+      "id":"button_label",
+      "label":"Button Label",
+      "default":"Shop now"
+    },
+     {
+      "type":"url",
+      "id":"button_link",
+      "label":"Button Link"
+    }
+  ],
+    "presets": [
+    {
+      "name": "Custom banner",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
