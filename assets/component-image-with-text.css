@@ -454,3 +454,8 @@ p.image-with-text__text.image-with-text__text--caption {
 .caption-hasting {
     margin: 40px 0px 0 !important;
 }
+.speak-to-live-specialist .image-with-text__grid--reverse .image-with-text__text-item .image-with-text__content .image-with-text__text p {
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.6px;
+}
