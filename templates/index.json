@@ -273,7 +273,7 @@
         "button-color-hover": "#ffffff",
         "background_style": "primary",
         "padding_top": 60,
-        "padding_bottom": 80,
+        "padding_bottom": 60,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
