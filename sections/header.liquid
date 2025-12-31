@@ -290,7 +290,8 @@
 
   {%- if section.settings.enable_search_inline -%}
     .header__search-inline {
-      width: {{ section.settings.search_inline_width }}px;
+      max-width: {{ section.settings.search_inline_width }}px;
+      width: 100%;
     }
   {%- endif -%}
 
