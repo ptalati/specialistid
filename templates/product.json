@@ -199,6 +199,13 @@
         "padding_bottom": 12
       }
     },
+    "custom_spacer_4aMNQm": {
+      "type": "custom-spacer",
+      "name": "Custom Spacer",
+      "settings": {
+        "spacer_height": 80
+      }
+    },
     "product_custom_info_gcmaXt": {
       "type": "product-custom-info",
       "blocks": {
@@ -254,6 +261,7 @@
   },
   "order": [
     "main",
+    "custom_spacer_4aMNQm",
     "product_custom_info_gcmaXt",
     "custom_content_feedback_JCqCDQ",
     "custom_liquid_pBgjQg",
