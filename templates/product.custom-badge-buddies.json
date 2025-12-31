@@ -12,6 +12,16 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "custom_designer_eBRy7P": {
+          "type": "custom_designer",
+          "settings": {}
+        },
+        "infinite_options_custom_qkkcxg": {
+          "type": "infinite_options_custom",
+          "settings": {
+            "infinite_options_heading": "Enter Custom Text"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -144,6 +154,8 @@
         }
       },
       "block_order": [
+        "custom_designer_eBRy7P",
+        "infinite_options_custom_qkkcxg",
         "title",
         "custom_availability_mQycK4",
         "product_review_dEQU4X",
