@@ -475,7 +475,7 @@ p.image-with-text__text.image-with-text__text--caption {
 
 
 
-  @media(max-width:1100px){
+  @media screen and (max-width:1100px){
     .image-with-text__heading {    font-size: 35px;}
     .image-with-text__text p {    font-size: 18px;    line-height: 30px;}
     .image-first .image-with-text__text-item .image-with-text__content {    padding: 3rem 0rem 3rem 4rem;}
@@ -488,29 +488,10 @@ p.image-with-text__text.image-with-text__text--caption {
   }
 
     @media screen and (max-width: 750px) {
-    .image-first .image-with-text__text-item .image-with-text__content {
-        padding: 3rem 0rem 3rem 0rem;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-    }
-        .about-page .image-with-text__text-item .image-with-text__content{
-        text-align: start;
-        justify-content: start;
-        align-items: start;
-        }
-        .image-with-text__grid--reverse .image-with-text__text-item .image-with-text__content {
-        padding: 3rem 0rem 3rem 0rem;
-    }
-        .image-with-text__heading {
-        font-size: 30px;
-    }
-        .speak-to-live-specialist .image-with-text__grid--reverse .image-with-text__text-item .image-with-text__content {
-        padding: 3rem 0rem 3rem 0rem;
-        max-width: 100%;
-        margin: 0;
-    }
-        .conatct-button {
-        gap: 15px;
-    }
+    .image-first .image-with-text__text-item .image-with-text__content {      padding: 3rem 0rem 3rem 0rem;      text-align: center;justify-content: center;      align-items: center;  }
+    .about-page .image-with-text__text-item .image-with-text__content{ text-align: start;justify-content: start; align-items: start;   }
+    .image-with-text__grid--reverse .image-with-text__text-item .image-with-text__content {    padding: 3rem 0rem 3rem 0rem; }
+    .image-with-text__heading {     font-size: 30px; }
+    .speak-to-live-specialist .image-with-text__grid--reverse .image-with-text__text-item .image-with-text__content {   padding: 3rem 0rem 3rem 0rem;   max-width: 100%;     margin: 0; }
+    .conatct-button {   gap: 15px; }
   }
