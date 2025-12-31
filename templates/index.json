@@ -410,10 +410,10 @@
       "name": "Custom banner",
       "settings": {
         "section_color_scheme": "",
-        "heading": "Image banner",
-        "subheading": "<p>Give customers details about the banner image(s) or content on the template.</p>",
-        "button_label": "Shop now",
-        "button_link": ""
+        "heading": "Print your own cards with our products",
+        "subheading": "<p>At Specialist ID, we offer a wide range of card printers, blank cards, and top-quality ribbons to meet your needs. We’re proud partners with Magicard, KODAK, IDP, HID FARGO, Evolis, and Entrust ID Card Printers.</p>",
+        "button_label": "Browse our ID Card Printers",
+        "button_link": "shopify://collections/id-card-printers"
       }
     }
   },
