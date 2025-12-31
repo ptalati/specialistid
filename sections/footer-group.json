@@ -14,19 +14,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "brand_information_NbHfaW": {
-          "type": "brand_information",
-          "settings": {
-            "show_social": true
-          }
-        },
-        "footer-2": {
-          "type": "text",
-          "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>We pride ourselves on customer service and concern for you and your business.<br/><br/></p><p><strong>UEI: FHHSLAAFPUD2</strong></p>"
-          }
-        },
         "footer-0": {
           "type": "link_list",
           "settings": {
@@ -50,8 +37,6 @@
         }
       },
       "block_order": [
-        "brand_information_NbHfaW",
-        "footer-2",
         "footer-0",
         "footer-1",
         "link_list_473NbJ"
