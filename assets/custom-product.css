@@ -660,3 +660,8 @@ tr.current {
 }
 
 /* --- end popup for out of stock --- */
+
+.hidden,
+.hide {
+    display: none;
+}
