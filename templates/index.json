@@ -9,18 +9,88 @@
  */
 {
   "sections": {
-     "eab9b35612db452696c45d02867db1be_builder_io_3pQyTX": {
+    "eab9b35612db452696c45d02867db1be_builder_io_3pQyTX": {
       "type": "eab9b35612db452696c45d02867db1be-builder-io",
       "name": "Shop best sellers home se",
       "settings": {
         "builder_content_entry_preview": "2260b9b2f9c44628b6152ea29a4edd58"
       }
     },
-     "1154d9de2bca4383b7cb98fa9fda29c1_builder_io_BnmW6N": {
+    "1154d9de2bca4383b7cb98fa9fda29c1_builder_io_BnmW6N": {
       "type": "1154d9de2bca4383b7cb98fa9fda29c1-builder-io",
       "name": "Product categories sectio",
       "settings": {
         "builder_content_entry_preview": "e0adef50393346de99ac582c9e531533"
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_e297aa44bb864b79a69f64375ccb7de7.webp",
+            "title": "Free Shipping",
+            "text": "<p>Over $99</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_410e57ec5de44e1c8083c1a10f114fec.webp",
+            "title": "Easy Ordering",
+            "text": "<p>Frictionless Buying</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_a45a028643b043c290f9f0210524aaeb.webp",
+            "title": "Expert Selection",
+            "text": "<p>Top-Notch Products</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_XVjLtH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_d48c132e9812414b8bc85411ed1cda45.webp",
+            "title": "Quantity Discounts",
+            "text": "<p>Save in Bulk</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3",
+        "column_XVjLtH"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36,
+        "section_css_class": "why-choose"
       }
     },
     "slideshow_PkyqJL": {
@@ -105,76 +175,6 @@
         "image_behavior": "none",
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_e297aa44bb864b79a69f64375ccb7de7.webp",
-            "title": "Free Shipping",
-            "text": "<p>Over $99</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_410e57ec5de44e1c8083c1a10f114fec.webp",
-            "title": "Easy Ordering",
-            "text": "<p>Frictionless Buying</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_a45a028643b043c290f9f0210524aaeb.webp",
-            "title": "Expert Selection",
-            "text": "<p>Top-Notch Products</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_XVjLtH": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_d48c132e9812414b8bc85411ed1cda45.webp",
-            "title": "Quantity Discounts",
-            "text": "<p>Save in Bulk</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3",
-        "column_XVjLtH"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 52,
-        "padding_bottom": 52,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36,
-        "section_css_class": "why-choose"
       }
     },
     "collection_page_section_B43ELG": {
@@ -353,8 +353,8 @@
   "order": [
     "eab9b35612db452696c45d02867db1be_builder_io_3pQyTX",
     "1154d9de2bca4383b7cb98fa9fda29c1_builder_io_BnmW6N",
-    "slideshow_PkyqJL",
     "multicolumn",
+    "slideshow_PkyqJL",
     "collection_page_section_B43ELG",
     "custom_product_slider_eLEfjE",
     "image_with_text_MNXeia",
