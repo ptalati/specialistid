@@ -314,7 +314,7 @@
     .header--middle-left { grid-template-areas: 'left heading  icons' 'center_search center_search center_search';    grid-template-columns: 1fr 1fr 1fr;    column-gap: 2rem;}
     .header__search-inline {   max-width: 100%;    width: 100%;    display: flex;    margin: 0 auto;    justify-content: center;    text-align: center;}
     search-form.search {    width: 100%;}
-    .header__heading, .header__heading-link {   justify-self: center !important;}
+    .header__heading, .header__heading-link {   justify-self: center !important;} 
 }
 
 @media (max-width:749px){
@@ -513,7 +513,7 @@
           {%- when 'custom_icon' -%}
             <a
               href="{{ block.settings.link }}"
-              class="header__icon header__icon--custom link {{ block.settings.label }} focus-inset"
+              class="header__icon header__icon--custom link {{ block.settings.label }} focus-inset small-hide"
               {% if block.settings.open_new_tab %}
                 target="_blank" rel="noopener noreferrer"
               {% endif %}
@@ -530,7 +530,7 @@
       {%- if section.settings.enable_account != false and shop.customer_accounts_enabled -%}
         <a
           href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-          class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
+          class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} {% endif %}"
           rel="nofollow"
         >
           {%- if section.settings.enable_customer_avatar -%}
