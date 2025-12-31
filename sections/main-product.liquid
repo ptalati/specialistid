@@ -89,8 +89,11 @@
                 <img src="{{ 'fpd_placeholder.png' | asset_url }}" alt="Placeholder" width="600">
               </div>
             {%- when 'custom_designer' -%}
+              {{ 'custom-bb.css' | asset_url | stylesheet_tag }}
+
+              <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
               <script src="https://cdn.jsdelivr.net/npm/jquery-textfill@0.6.0/source/jquery.textfill.min.js"></script>
-              {{ 'custom-bb.js' | asset_url | script_tag }}
+              <script src="{{ 'custom-bb.js' | asset_url }}" defer="defer"></script>
               <div id="tab2">
                 <img class="selectedBadge" data-media-id="">
                 <div class="selectedColor">

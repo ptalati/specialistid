@@ -1,0 +1,16 @@
+#tab2 {
+    display: block;
+    margin: 0 auto;
+    width: 281px;
+    height: 400px;
+}
+
+div#tab2 img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+div#tab2.vertical-badge-buddies-1xl {
+    width: 401px;
+}
