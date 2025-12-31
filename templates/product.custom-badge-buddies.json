@@ -1,0 +1,238 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "custom_availability_mQycK4": {
+          "type": "custom_availability",
+          "settings": {
+            "custom_product_availability": false,
+            "product_part_num": false
+          }
+        },
+        "product_review_dEQU4X": {
+          "type": "product_review",
+          "settings": {}
+        },
+        "stock_availability_label_V8xxVd": {
+          "type": "stock_availability_label",
+          "settings": {}
+        },
+        "clear_block_4MQFRp": {
+          "type": "clear_block",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "just_price_zpYWQi": {
+          "type": "just_price",
+          "settings": {}
+        },
+        "volume_pricing_info_label_p6ebk7": {
+          "type": "volume_pricing_info_label",
+          "settings": {
+            "volume_pricing_available_text": "Volume Pricing Available"
+          }
+        },
+        "discount_progress_bar_qEUjei": {
+          "type": "discount_progress_bar",
+          "settings": {}
+        },
+        "volume_pricing_available_PDNPnr": {
+          "type": "volume_pricing_available",
+          "settings": {
+            "show_volume_pricing_available": true,
+            "volume_pricing_available_text": "Volume Pricing Available",
+            "volume_pricing_available_link_text": "See Volume Pricing"
+          }
+        },
+        "regios_discounts_product_page_discount_BHiKmA": {
+          "type": "shopify://apps/regios-discounts/blocks/product_page_discount/dc1514bb-4830-4102-bffa-e8b300bac5bd",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "regios_discounts_volume_pricing_table_L36WtN": {
+          "type": "shopify://apps/regios-discounts/blocks/volume_pricing_table/dc1514bb-4830-4102-bffa-e8b300bac5bd",
+          "settings": {
+            "table_bg": "",
+            "cell_title_quantity": "Quantity",
+            "cell_title_discount": "Discount",
+            "header_bg": "#000000",
+            "header_fg": "#ffffff",
+            "cell_bg": "",
+            "cell_fg": "#000000",
+            "discount_cell_template": "[discount_percentage] off",
+            "custom_table_css": "",
+            "custom_thead_css": "",
+            "custom_td_css": "",
+            "key": "",
+            "movable": true
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "clear_block_GWGb7E": {
+          "type": "clear_block",
+          "settings": {}
+        },
+        "total_price_nW98cY": {
+          "type": "total_price",
+          "settings": {}
+        },
+        "lead_time_KgVKHP": {
+          "type": "lead_time",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "customize_quote_buttons_KQYLh3": {
+          "type": "customize_quote_buttons",
+          "settings": {
+            "customize_quote_button_link": "https://www.specialistid.com/pages/request-a-quote"
+          }
+        },
+        "collapsible_tab_aiETtU": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Features",
+            "icon": "none",
+            "content": "{{ block.settings.page.content }}",
+            "page": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "custom_availability_mQycK4",
+        "product_review_dEQU4X",
+        "stock_availability_label_V8xxVd",
+        "clear_block_4MQFRp",
+        "price",
+        "just_price_zpYWQi",
+        "volume_pricing_info_label_p6ebk7",
+        "discount_progress_bar_qEUjei",
+        "volume_pricing_available_PDNPnr",
+        "regios_discounts_product_page_discount_BHiKmA",
+        "regios_discounts_volume_pricing_table_L36WtN",
+        "quantity_selector",
+        "variant_picker",
+        "clear_block_GWGb7E",
+        "total_price_nW98cY",
+        "lead_time_KgVKHP",
+        "buy_buttons",
+        "customize_quote_buttons_KQYLh3",
+        "collapsible_tab_aiETtU",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "product_custom_info_gcmaXt": {
+      "type": "product-custom-info",
+      "blocks": {
+        "custom_info_AimhCD": {
+          "type": "custom_info",
+          "settings": {
+            "heading": "",
+            "content": "{{ product.description }}"
+          }
+        }
+      },
+      "block_order": [
+        "custom_info_AimhCD"
+      ],
+      "name": "Product Custom Info",
+      "settings": {}
+    },
+    "custom_liquid_pBgjQg": {
+      "type": "custom-liquid",
+      "name": "Product Reviews",
+      "settings": {
+        "custom_liquid": "<!-- Shopper Approved - sections/product-template -->\n    <div class=\"page-width\" style=\"margin-top: 2em;\">\n      <h2 style=\"text-align:left;\"><b>Reviews</b></h2>\n      <script type=\"text/javascript\"> var sa_products_count = 3; var sa_date_format = 'F j, Y'; var sa_product = '{{product.id}}'; (function(w,d,t,f,o,s,a){ o = 'shopperapproved'; if (!w[o]) { w[o] = function() { (w[o].arg = w[o].arg || []).push(arguments) }; s=d.createElement(t), a=d.getElementsByTagName(t)[0];s.async=1;s.src=f;a.parentNode.insertBefore(s,a)} })(window,document,'script',\"//www.shopperapproved.com/product/7801/\"+sa_product+\".js\"); </script> <div id=\"shopper_review_page\"><div id=\"review_header\"></div><div id=\"product_page\"></div><div id=\"review_image\"><a href=\"https://www.shopperapproved.com/reviews/SpecialistID.com/\" onclick=\"var nonwin=navigator.appName!='Microsoft Internet Explorer'?'yes':'no'; var certheight=screen.availHeight-90; window.open(this.href,'shopperapproved','location='+nonwin+',scrollbars=yes,width=620,height='+certheight+',menubar=no,toolbar=no'); return false;\" target=\"_blank\" rel=\"nofollow\"></a></div></div>\n    </div>\n    <div class=\"clear\"></div>\n    <!-- END Shopper Approved - sections/product-template -->",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_custom_info_gcmaXt",
+    "custom_liquid_pBgjQg",
+    "related-products"
+  ]
+}
