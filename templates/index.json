@@ -460,6 +460,72 @@
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
+    },
+    "custom_testimonials_UcABLr": {
+      "type": "custom-testimonials",
+      "blocks": {
+        "testimonial_pEqxx4": {
+          "type": "testimonial",
+          "settings": {
+            "star_limit": 5,
+            "title": "Lorem ipsum dolor sit amet consectetur.",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Varius semper etiam morbi sed nisl nisi. Non urna hendrerit nisl vulputate vitae. </p>",
+            "author": "John Doe",
+            "show_tag": true,
+            "date": "11-25-24 - Indiana , united states"
+          }
+        },
+        "testimonial_HM8VKr": {
+          "type": "testimonial",
+          "settings": {
+            "star_limit": 5,
+            "title": "Lorem ipsum dolor sit amet consectetur.",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Varius semper etiam morbi sed nisl nisi. Non urna hendrerit nisl vulputate vitae. </p>",
+            "author": "John Doe",
+            "show_tag": true,
+            "date": "11-25-24 - Indiana , united states"
+          }
+        },
+        "testimonial_bA4rXP": {
+          "type": "testimonial",
+          "settings": {
+            "star_limit": 5,
+            "title": "Lorem ipsum dolor sit amet consectetur.",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Varius semper etiam morbi sed nisl nisi. Non urna hendrerit nisl vulputate vitae. </p>",
+            "author": "John Doe",
+            "show_tag": true,
+            "date": "11-25-24 - Indiana , united states"
+          }
+        },
+        "testimonial_LCAfKU": {
+          "type": "testimonial",
+          "settings": {
+            "star_limit": 5,
+            "title": "Lorem ipsum dolor sit amet consectetur.",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Varius semper etiam morbi sed nisl nisi. Non urna hendrerit nisl vulputate vitae. </p>",
+            "author": "John Doe",
+            "show_tag": true,
+            "date": "11-25-24 - Indiana , united states"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_pEqxx4",
+        "testimonial_HM8VKr",
+        "testimonial_bA4rXP",
+        "testimonial_LCAfKU"
+      ],
+      "name": "Custom testimonials",
+      "settings": {
+        "bg": "#f9fafb",
+        "head": "Heading",
+        "button_label": "",
+        "button_link": "",
+        "top_spacing": 40,
+        "bottom_spacing": 40,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     }
   },
   "order": [
@@ -472,6 +538,7 @@
     "image_with_text_MNXeia",
     "image_with_text_NTqqDX",
     "custom_image_banner_MAmEfK",
-    "custom_deal_products_dmEwPA"
+    "custom_deal_products_dmEwPA",
+    "custom_testimonials_UcABLr"
   ]
 }
