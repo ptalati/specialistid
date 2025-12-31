@@ -57,8 +57,7 @@
     {%- endunless -%}
     <div class="multiple-items">
       {%- for block in section.blocks -%}
-       <img data-src="{{ block.settings.icon_image | image_url: width: 400 }}" class="lazyload">
-
+       <img src="{{ block.settings.icon_image | image_url: width: 400 }}" class="lazyload">
       {%- endfor -%}
     </div>
   </div>
