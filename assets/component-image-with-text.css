@@ -480,7 +480,7 @@ p.image-with-text__text.image-with-text__text--caption {
     .image-with-text__text p {    font-size: 18px;    line-height: 30px;}
     .image-first .image-with-text__text-item .image-with-text__content {    padding: 3rem 0rem 3rem 4rem;}
      p.image-with-text__text.image-with-text__text--caption {    margin-bottom: 30px;}
-   .image-with-text__grid--reverse .image-with-text__text-item .image-with-text__content {    padding: 3rem 4rem 3rem 0rem;}
+    .image-with-text__grid--reverse .image-with-text__text-item .image-with-text__content {    padding: 3rem 4rem 3rem 0rem;}
     .caption-hasting {    margin: 25px 0px 0 !important;}
     .about-page h2.image-with-text__heading {    line-height: 40px;}
     .speak-to-live-specialist .image-with-text__grid--reverse .image-with-text__text-item .image-with-text__content {    padding: 3rem 3rem 3rem 0rem;   max-width: 100%;    margin: 0;}
