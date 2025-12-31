@@ -11,13 +11,142 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_xW8ftU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_hGLbJL": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Specialist ID Frequently Asked Questions (FAQ)</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_EWxBFq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to Specialist ID! We’re proud to provide secure ID solutions for businesses, schools, government agencies, healthcare providers, and event organizers nationwide. Below, you’ll find answers to common and critical questions.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hGLbJL",
+        "text_EWxBFq"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_tabs_controller_CDj33V": {
+      "type": "custom-tabs-controller",
+      "blocks": {
+        "tab_aUDjHa": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "General Information",
+            "tab_id": "general"
+          }
+        },
+        "tab_dBp7y4": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Schools/Universities",
+            "tab_id": "school"
+          }
+        },
+        "tab_jPWGDP": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Healthcare",
+            "tab_id": "health"
+          }
+        },
+        "tab_7UYjNE": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Government",
+            "tab_id": "government"
+          }
+        },
+        "tab_zjXzMX": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Retail/Business",
+            "tab_id": "business"
+          }
+        }
+      },
+      "block_order": [
+        "tab_aUDjHa",
+        "tab_dBp7y4",
+        "tab_jPWGDP",
+        "tab_7UYjNE",
+        "tab_zjXzMX"
+      ],
+      "name": "Tabs Controller",
+      "settings": {
+        "section_title": "FAQ Tabs",
+        "tabs_group_id": "main-tabs",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_horizontal": 0
+      }
+    },
+    "custom_faq_section_76cmfb": {
+      "type": "custom-faq-section",
+      "blocks": {
+        "category_3DHW6N": {
+          "type": "category",
+          "settings": {
+            "category_title": "General Questions",
+            "category_description": ""
+          }
+        },
+        "accordion_wCeXAd": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "What is this product?",
+            "accordion_content": "<p>This is a sample accordion content.</p>"
+          }
+        },
+        "accordion_EUfNqa": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "How do I use it?",
+            "accordion_content": "<p>Here are the usage instructions.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "category_3DHW6N",
+        "accordion_wCeXAd",
+        "accordion_EUfNqa"
+      ],
+      "name": "FAQ Section",
+      "settings": {
+        "tabs_group_id": "main-tabs",
+        "tab_id": "general",
+        "section_description": "",
+        "padding_bottom": 40,
+        "padding_horizontal": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_xW8ftU",
+    "custom_tabs_controller_CDj33V",
+    "custom_faq_section_76cmfb"
   ]
 }
