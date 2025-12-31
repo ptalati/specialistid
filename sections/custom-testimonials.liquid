@@ -1,10 +1,9 @@
 {% style %}
-    .testimonials_wrapper-{{ section.id }} {
-      background: {{ section.settings.bg }};
-      padding-top: {{ section.settings.top_spacing }}px;
-      padding-bottom: {{ section.settings.bottom_spacing }}px;
-      position: relative;
-  }
+.testimonials_wrapper-{{ section.id }} {
+    padding-top: {{ section.settings.top_spacing }}px;
+    padding-bottom: {{ section.settings.bottom_spacing }}px;
+    position: relative;
+}
  .trstiheading-main {
     display: flex;
     align-items: center;
@@ -195,7 +194,7 @@
   }
 {% endstyle %}
 
-<div class="testimonials_wrapper-{{ section.id }}">
+<div class="testimonials_wrapper-{{ section.id }} color-{{ section.settings.section_color_scheme }}">
   <div class="page-width">
     {% if section.settings.head != blank %}
       <div class="testimonials_head">
@@ -347,11 +346,11 @@ document.addEventListener("DOMContentLoaded", function () {
   "name": "Custom testimonials",
   "class": "testimonials-section",
   "settings": [
-    {
-      "type": "color",
-      "id": "bg",
-      "label": "Section background color",
-      "default": "#fff"
+     {
+      "type": "color_scheme",
+      "id": "section_color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
     },
     {
       "type": "text",
