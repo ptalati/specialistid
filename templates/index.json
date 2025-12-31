@@ -507,22 +507,35 @@
             "show_tag": true,
             "date": "11-25-24 - Indiana , united states"
           }
+        },
+        "testimonial_ktcVAY": {
+          "type": "testimonial",
+          "settings": {
+            "star_limit": 5,
+            "title": "Lorem ipsum dolor sit amet consectetur.",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Varius semper etiam morbi sed nisl nisi. Non urna hendrerit nisl vulputate vitae. </p>",
+            "author": "John Doe",
+            "show_tag": true,
+            "date": "11-25-24 - Indiana , united states"
+          }
         }
       },
       "block_order": [
         "testimonial_pEqxx4",
         "testimonial_HM8VKr",
         "testimonial_bA4rXP",
-        "testimonial_LCAfKU"
+        "testimonial_LCAfKU",
+        "testimonial_ktcVAY"
       ],
       "name": "Custom testimonials",
       "settings": {
         "bg": "#f9fafb",
         "head": "Heading",
-        "button_label": "",
-        "button_link": "",
-        "top_spacing": 40,
-        "bottom_spacing": 40,
+        "logo_img": "shopify://shop_images/7801-large_2.png",
+        "button_label": "See our 40,000+ Reviews",
+        "button_link": "shopify://pages/reviews",
+        "top_spacing": 60,
+        "bottom_spacing": 60,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
