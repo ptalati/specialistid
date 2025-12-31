@@ -1,0 +1,470 @@
+{% style %}
+    .testimonials_wrapper-{{ section.id }} {
+      background: {{ section.settings.bg }};
+      padding-top: {{ section.settings.top_spacing }}px;
+      padding-bottom: {{ section.settings.bottom_spacing }}px;
+      position: relative;
+  }
+ .trstiheading-main {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: start;
+  }
+  .testi-heading-block h2 {
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    color: #181614;
+    margin: 0;
+}
+ .testi-heading-block span {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    border-radius: 4px;
+    background: #F5911F;
+    color: #ffffff;
+    padding: 6px 12px;
+    width: fit-content;
+  }
+  .testi-heading-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .trstiheading-main img {
+    width: 100%;
+    max-width: 150px;
+    object-fit: contain;
+}
+  .testimonials_head {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+  .testi-inner {
+    background: #FFFFFF;
+    padding: 50px 30px;
+    border-radius: 10px;
+  }
+  .testimonials_inner {
+    position: relative;
+    margin: 5rem 0px 0;
+  }
+  .testimonial_block {
+    margin: 0 15px;
+    position: relative;
+  }
+  .testimonials_inner .slick-list.draggable {
+    margin: 0 -15px;
+  }
+  
+  /*  arrow */
+   .testimonials_inner .slick-prev:before , .testimonials_inner .slick-next:before {
+      font-size: 0px;
+  }
+  .testimonials_inner button.slick-arrow {
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-60%);
+  }
+  .testimonials_inner button.slick-arrow svg {
+      width: 30px;
+      height: 30px;
+ }
+  .testimonials_inner button.slick-arrow:hover svg path {   fill: #F5911F;}
+  .testimonials_inner button.slick-arrow:hover svg {    color: #F5911F;}
+  .testimonials_inner .slick-prev {   left: -60px;}
+  .testimonials_inner .slick-next {    right: -60px;}
+  .slider-progress-{{ section.id }} {
+      max-width: 50rem;
+      height: 0.6rem;
+      background: #D9D9D9;
+      border-radius: 0;
+      cursor: pointer;
+      margin: 48px auto 0;
+ }
+  .slider-progress-bar-{{ section.id }} {
+      height: 100%;
+      width: 0%;
+      transition: width 0.5s ease;
+      border-radius: 2px;
+      border-radius: 2px;
+      display: block !important;
+      background: #6FB43F;
+ }
+  .t_author {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+ }
+  .t_author p {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 100%;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: #181614;
+ }
+  .t_author span {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #696969;
+}
+.testimonial_block h3 {
+    margin: 2.6rem 0 0rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0;
+}
+.tb_content p {
+    margin: 2.5rem 0 2.5rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0;
+    color: #696969;
+    font-family: Rubik;
+}
+.stars_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+}
+  .stars_wrapper svg {
+    width: 20px;
+    height: 20px;
+}
+  .review-date {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #181614;
+}
+  .mobile-button{
+    display:none;
+  }
+  
+  @media(max-width:1750px){
+    .testimonials_inner .slick-prev {   left: -30px;}
+    .testimonials_inner .slick-next {    right: -30px;}
+  }
+  
+   @media(max-width:1500px){
+    .testimonial_block {    margin: 0 10px;    position: relative;}
+    .testimonials_inner .slick-list.draggable {    margin: 0 -10px;} 
+    .testi-inner {  padding: 40px 22px;}
+  }
+  
+   @media(max-width:1150px){
+      .testi-heading-block h2 {    font-size: 35px;}
+     .testimonials_head {  justify-content: start;    align-items: start;flex-direction: column;    gap: 20px;}
+     .t_author {   gap: 10px;}
+     .testi-inner {    padding: 25px 18px;}
+     .testimonials_inner button.slick-arrow svg {    width: 25px;    height: 25px;}
+     .testi-heading-block {    gap: 14px;}
+  }
+
+  
+  @media(max-width:749px){
+    .testimonials_wrapper-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+   }
+    .mobile-button {    display: flex;    justify-content: center;    align-items: center;    margin: 30px auto 0;}
+    .testimonials_inner button.slick-arrow {    display: none !important;}
+    .testimonials_button.hide-on-desktop {    display: none !important;}
+    .slider-progress-{{ section.id }}{      display: none !important;    }
+    .trstiheading-main {align-items: center;   gap: 25px;   flex-direction: column;   justify-content: center;   text-align: center;    width: 100%;}
+    .testi-heading-block h2 {    font-size: 30px;   line-height: normal;}
+    .testi-heading-block span {    margin: 0 auto;}
+    .testimonials_inner {    margin: 2rem 0px 0;}
+    .testi-inner {    padding: 40px 30px;}
+    .trstiheading-main img {    max-width: 200px;}
+      
+  }
+{% endstyle %}
+
+<div class="testimonials_wrapper-{{ section.id }}">
+  <div class="page-width">
+    {% if section.settings.head != blank %}
+      <div class="testimonials_head">
+        <div class="trstiheading-main">
+          <img src="{{ section.settings.logo_img | image_url: width: 150, height:80 }}">
+          <div class="testi-heading-block">
+            <span>Testimonials</span>
+            <h2>{{ section.settings.head }}</h2>
+          </div>
+        </div>
+        {% if section.settings.button_label != blank %}
+          <div class="testimonials_button hide-on-desktop">
+            <a
+              {% if section.settings.button_link == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ section.settings.button_link }}"
+              {% endif %}
+              class="button{% if section.settings.button_style_secondary %} button--secondary{% else %} button--primary {% endif %}"
+              {{ section.shopify_attributes }}
+            >
+              {{ section.settings.button_label | escape }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <div class="testimonials_inner ti-{{ section.id }}">
+        <div class="slick-slider-wrapper">
+          {% for block in section.blocks %}
+            {% assign star_limit = block.settings.star_limit %}
+            <div class="testimonial_block ">
+              <div class="testi-inner">
+                {% if block.settings.author != blank %}
+                  <div class="t_author">
+                    <p>{{ block.settings.author }}</p>
+                    {% if block.settings.show_tag %}
+                      <span>{{ 'Verified Customer' }}</span>
+                    {% endif %}
+                  </div>
+                {% endif %}
+                <div class="stars_wrapper">
+                  {% for i in (1..5) limit: star_limit %}
+                    {% render 'star' %}
+                  {% endfor %}
+                </div>
+                {% if block.settings.title != blank %}
+                  <h3>{{ block.settings.title }}</h3>
+                {% endif %}
+
+                {% if block.settings.content != blank %}
+                  <div class="tb_content">{{ block.settings.content }}</div>
+                {% endif %}
+                
+                {% if block.settings.content != blank %}
+                  <div class="review-date">{{ block.settings.date }}</div>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="slider-progress-{{ section.id }}">
+          <div class="slider-progress-bar-{{ section.id }}"></div>
+        </div>
+      </div>
+    {% endif %}
+    {% if section.settings.button_label != blank %}
+      <div class="testimonials_button mobile-button">
+        <a
+          {% if section.settings.button_link == blank %}
+            role="link" aria-disabled="true"
+          {% else %}
+            href="{{ section.settings.button_link }}"
+          {% endif %}
+          class="button{% if section.settings.button_style_secondary %} button--secondary{% else %} button--primary {% endif %}"
+          {{ section.shopify_attributes }}
+        >
+          {{ section.settings.button_label | escape }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<script
+  type="text/javascript"
+>
+
+  
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = $('.ti-{{ section.id }} .slick-slider-wrapper');
+  const progressBar = document.querySelector('.slider-progress-bar-{{ section.id }}');
+
+  slider.on('init reInit afterChange', function (event, slick, currentSlide) {
+    let current = currentSlide ? currentSlide : 0;
+    let totalSlides = slick.slideCount;
+    let visibleSlides = slick.options.slidesToShow;
+
+    let progressPercent = Math.min(100, ((current + visibleSlides) / totalSlides) * 100);
+    if (progressBar) {
+      progressBar.style.width = progressPercent + '%';
+    }
+  });
+
+  slider.slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: false,
+    prevArrow: `<button type="button" class="slick-prev" aria-label="Previous">{% render 'chev-left' %}</button>`,
+    nextArrow: `<button type="button" class="slick-next" aria-label="Next">{% render 'chev-right' %}</button>`,
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 989,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 750,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        }
+      }
+    ]
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "Custom testimonials",
+  "class": "testimonials-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Section background color",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "head",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type":"image_picker",
+      "id":"logo_img",
+      "label":"Logo Image"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    },
+     {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Testimonial",
+      "type": "testimonial",
+      "settings": [
+        {
+          "type": "range",
+          "id": "star_limit",
+          "label": "Number of stars",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Lorem ipsum dolor sit amet consectetur."
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Lorem ipsum dolor sit amet consectetur. Varius semper etiam morbi sed nisl nisi. Non urna hendrerit nisl vulputate vitae. </p>"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author",
+          "default": "John Doe"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_tag",
+          "label": "Show verified buyer tag",
+          "default": true
+        },
+        {
+          "type":"text",
+          "id":"date",
+          "label":"Review Date",
+          "default":"11-25-24 - Indiana , united states"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom testimonials",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
