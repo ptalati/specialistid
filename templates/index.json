@@ -529,8 +529,8 @@
       ],
       "name": "Custom testimonials",
       "settings": {
-        "bg": "#f9fafb",
-        "head": "Heading",
+        "section_color_scheme": "",
+        "head": "See What all the Buzz is About",
         "logo_img": "shopify://shop_images/7801-large_2.png",
         "button_label": "See our 40,000+ Reviews",
         "button_link": "shopify://pages/reviews",
