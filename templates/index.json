@@ -9,6 +9,13 @@
  */
 {
   "sections": {
+     "eab9b35612db452696c45d02867db1be_builder_io_3pQyTX": {
+      "type": "eab9b35612db452696c45d02867db1be-builder-io",
+      "name": "Shop best sellers home se",
+      "settings": {
+        "builder_content_entry_preview": "2260b9b2f9c44628b6152ea29a4edd58"
+      }
+    },
     "slideshow_PkyqJL": {
       "type": "slideshow",
       "blocks": {
@@ -337,6 +344,7 @@
     }
   },
   "order": [
+    "eab9b35612db452696c45d02867db1be_builder_io_3pQyTX",
     "slideshow_PkyqJL",
     "multicolumn",
     "collection_page_section_B43ELG",
