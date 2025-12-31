@@ -165,6 +165,7 @@
         "slide_PBKPN4",
         "slide_F87b6B"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.name",
       "settings": {
         "layout": "full_bleed",
@@ -238,6 +239,7 @@
         "page_card_VhFFTQ",
         "page_card_xcqUKJ"
       ],
+      "disabled": true,
       "name": "Custom Page",
       "settings": {
         "heading": "Shop by Product Categories",
