@@ -302,21 +302,14 @@
       font-size: {{ section.settings.icon_label_font_size }}px;
     }
   {%- endif -%}
-  .menu-opening svg.hamburger-icon {
-    display: none;
-}
-.menu-opening svg.icon.icon-close {
-    margin-left: 20px;
-}
-.menu-opening svg.icon.icon-close path {
-    fill: #f5911f;
-}
+  .menu-opening svg.hamburger-icon {    display: none; }
+  .menu-opening svg.icon.icon-close {     margin-left: 20px; }
+  .menu-opening svg.icon.icon-close path {     fill: #f5911f; }
 
   @media (max-width: 1700px) {
-    #meteor-desktop-nav {
-        gap: 10px !important;
-    }
-}
+    #meteor-desktop-nav {    gap: 10px !important;}
+  }
+
  @media (max-width: 1120px) {
     .header__menu-below {  display: none !important;}
     header-drawer {   display: flex !important;}
@@ -327,11 +320,9 @@
 }
 
 @media (max-width:749px){
-  .header.page-width {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .header.page-width {   padding-left: 1rem;  padding-right: 1rem;}
 }
-}
+
 {%- endstyle -%}
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
