@@ -608,3 +608,55 @@ fieldset.product-form__input--pill input[value*="Lavender" i]:checked+label::aft
 tr.current {
     font-weight: bold;
 }
+
+
+/* --- popup for out of stock --- */
+.popup2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    max-width: 300px;
+    text-align: center;
+}
+
+.popup2.hidden {
+    display: none;
+}
+
+.popup-content2 button {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 13px !important;
+}
+
+#overlay,
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    visibility: visible;
+    opacity: 1;
+}
+
+#overlay-support.overlay .popup2 {
+    max-width: 70%;
+}
+
+#overlay.hidden {
+    display: none;
+}
+
+/* --- end popup for out of stock --- */
