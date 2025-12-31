@@ -1,0 +1,274 @@
+<!-- sections/tabs-controller.liquid -->
+<div
+  class="tabs-controller"
+  id="tabs-controller-{{ section.id }}"
+  style="padding: {{ section.settings.padding_top }}px {{ section.settings.padding_horizontal }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_horizontal }}px;"
+>
+  <div class="container">
+    {% if section.settings.section_title != blank %}
+      <h2 class="section-title">{{ section.settings.section_title }}</h2>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <!-- Tab Navigation -->
+      <div class="tabs-nav" data-tabs-group="{{ section.settings.tabs_group_id }}">
+        {% for block in section.blocks %}
+          <button
+            class="tab-button {% if forloop.first %}active{% endif %}"
+            data-tab="{{ block.settings.tab_id }}"
+            {{ block.shopify_attributes }}
+          >
+            {{ block.settings.tab_title }}
+          </button>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .tabs-controller {
+    /* Padding is controlled by section settings */
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  /* Tab Navigation */
+  .tabs-nav {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 30px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 8px;
+    width: 100%;
+  }
+
+  .tab-button {
+    background: #e8e8e8;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    border-radius: 6px;
+    position: relative;
+    flex: 1;
+    text-align: center;
+  }
+
+  .tab-button:hover {
+    background: #d8d8d8;
+    color: #333;
+  }
+
+  .tab-button.active {
+    background: #6fb33f;
+    color: #333;
+    font-weight: 600;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .tabs-nav {
+      gap: 6px;
+      padding: 6px;
+    }
+
+    .tab-button {
+      padding: 10px 16px;
+      font-size: 13px;
+    }
+
+    .container {
+      padding: 0 15px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabsController = document.getElementById('tabs-controller-{{ section.id }}');
+    if (!tabsController) return;
+
+    const tabsNav = tabsController.querySelector('.tabs-nav');
+    const tabsGroupId = tabsNav.getAttribute('data-tabs-group');
+    const tabButtons = tabsController.querySelectorAll('.tab-button');
+
+    function initializeTabs() {
+      // Find all FAQ sections that belong to this tabs group (excluding the tabs controller itself)
+      const faqSections = document.querySelectorAll(`.faq-section[data-tabs-group="${tabsGroupId}"]`);
+
+      function showTab(targetTabId) {
+        // Update button states
+        tabButtons.forEach((btn) => btn.classList.remove('active'));
+        const activeButton = tabsController.querySelector(`[data-tab="${targetTabId}"]`);
+        if (activeButton) {
+          activeButton.classList.add('active');
+        }
+
+        // Show/hide FAQ sections only
+        faqSections.forEach((section) => {
+          const sectionTabId = section.getAttribute('data-tab-id');
+          if (sectionTabId === targetTabId) {
+            section.style.display = 'block';
+            section.style.animation = 'fadeIn 0.3s ease';
+          } else {
+            section.style.display = 'none';
+          }
+        });
+      }
+
+      // Tab click handlers
+      tabButtons.forEach((button) => {
+        button.addEventListener('click', function () {
+          const targetTab = this.getAttribute('data-tab');
+          showTab(targetTab);
+        });
+      });
+
+      // Initialize - show first tab and hide others
+      if (tabButtons.length > 0) {
+        const firstTabId = tabButtons[0].getAttribute('data-tab');
+        showTab(firstTabId);
+      }
+    }
+
+    // Initialize immediately
+    initializeTabs();
+
+    // Also initialize after a short delay to catch any late-loading sections
+    setTimeout(initializeTabs, 100);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Tabs Controller",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "FAQ Tabs"
+    },
+    {
+      "type": "text",
+      "id": "tabs_group_id",
+      "label": "Tabs Group ID",
+      "default": "main-tabs",
+      "info": "Use the same ID in FAQ sections to connect them to these tabs"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Left/Right padding",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab Title",
+          "default": "Tab Title"
+        },
+        {
+          "type": "text",
+          "id": "tab_id",
+          "label": "Tab ID",
+          "default": "tab-1",
+          "info": "Use this ID in FAQ sections to assign them to this tab"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tabs Controller",
+      "blocks": [
+        {
+          "type": "tab",
+          "settings": {
+            "tab_title": "General Information",
+            "tab_id": "general"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Shipping & Returns",
+            "tab_id": "shipping"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Technical Support",
+            "tab_id": "support"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

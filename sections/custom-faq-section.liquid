@@ -1,0 +1,201 @@
+{% style %}
+  .faq_wrapper-{{ section.id }} {
+    background: {{ section.settings.bg }};
+    padding-top: {{ section.settings.top_spacing }}px;
+    padding-bottom: {{ section.settings.bottom_spacing }}px;
+  }
+
+  .faq_head {
+    text-align: center;
+  }
+
+  .faq_head h2 {
+    max-width: 60rem;
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin: 0 auto;
+    letter-spacing: 0;
+  }
+
+  .faq_inner {
+    margin: 6rem auto 0;
+    max-width: 100rem;
+  }
+
+  .faq_block {
+    padding: 2rem 0;
+    border-top: 1px solid #6FB43F;
+  }
+
+  .faq_block:last-child {
+    border-bottom: 1px solid #6FB43F;
+  }
+
+  .faq_question {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    cursor: pointer;
+  }
+
+  .faq_question h3 {
+    font-family: var(--font-body-family);
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin: 0;
+    color: rgba(18,18,18,0.75);
+  }
+
+  .faq_question span {
+    position: relative;
+    top: 0.4rem;
+    transition: transform 0.3s;
+  }
+
+  .faq_question span.rot {
+    transform: rotate(180deg);
+  }
+
+  .faq_answer {
+    display: none;
+  }
+
+  .faq_answer p {
+    margin: 1.7rem 0 0;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: rgba(18, 18, 18, 0.5);
+  }
+
+  @media screen and (max-width: 640px) {
+    .faq_wrapper-{{ section.id }} {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    .faq_question h3 {
+      font-size: 1.6rem;
+    }
+
+    .faq_answer p {
+      font-size: 1.5rem;
+    }
+  }
+{% endstyle %}
+
+<div class="faq_wrapper-{{ section.id }}">
+  <div class="page-width">
+    {% if section.settings.head != blank %}
+      <div class="faq_head">
+        <h2>{{ section.settings.head }}</h2>
+      </div>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <div class="faq_inner">
+        {% for block in section.blocks %}
+          <div class="faq_block">
+            {% if block.settings.question != blank %}
+              <div class="faq_question">
+                <h3>{{ block.settings.question }}</h3>
+                <span>{% render 'arrow-down' %}</span>
+              </div>
+            {% endif %}
+
+            {% if block.settings.answer != blank %}
+              <div class="faq_answer">{{ block.settings.answer }}</div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  $('.faq_block').each(function () {
+    $(this)
+      .find('.faq_question')
+      .click(function () {
+        $(this).siblings('.faq_answer').slideToggle().closest('.faq_block').siblings().find('.faq_answer').slideUp();
+        $(this)
+          .find('span')
+          .toggleClass('rot')
+          .closest('.faq_block')
+          .siblings()
+          .find('.faq_question')
+          .find('span')
+          .removeClass('rot');
+      });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "FAQs",
+  "class": "faq-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Section background color",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "head",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "name": "FAQ",
+      "type": "faq",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "question",
+          "label": "Question",
+          "default": "Lorem ipsum dolor sit amet consectetur. Varius semper etiam morbi sed nisl nisi. Non urna hendrerit nisl vulputate vitae. "
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Lorem ipsum dolor sit amet consectetur. Varius semper etiam morbi sed nisl nisi. Non urna hendrerit nisl vulputate vitae.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQs"
+    }
+  ]
+}
+{% endschema %}
