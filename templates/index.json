@@ -400,7 +400,7 @@
         "color_scheme": "",
         "section_css_class": "speak-to-live-specialist",
         "padding_top": 0,
-        "padding_bottom": 36,
+        "padding_bottom": 60,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 36
       }
@@ -418,6 +418,16 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_image_banner_HhyCAD": {
+      "type": "custom-image-banner",
+      "name": "Custom banner",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "button_label": "",
+        "button_link": ""
+      }
     }
   },
   "order": [
@@ -429,6 +439,7 @@
     "custom_product_slider_eLEfjE",
     "image_with_text_MNXeia",
     "image_with_text_NTqqDX",
-    "video"
+    "video",
+    "custom_image_banner_HhyCAD"
   ]
 }
