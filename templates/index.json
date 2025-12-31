@@ -647,15 +647,15 @@
       ],
       "name": "t:sections.newsletter.presets.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-5",
         "background_image": "shopify://shop_images/HQ_Lanyard.png",
         "mobile_imge": "shopify://shop_images/Background_1.png",
         "full_width": true,
         "section_css_class": "newsletter-section",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_top_mobile": 152,
+        "padding_bottom_mobile": 52
       }
     }
   },
