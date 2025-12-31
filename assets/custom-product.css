@@ -560,7 +560,7 @@ fieldset.product-form__input--pill input[value*="Lavender" i]:checked+label::aft
         display: inline-block !important;
         vertical-align: top;
         width: auto;
-        max-width: calc(100% - 220px);
+        max-width: calc(100% - 240px);
     }
 
     /* If variant-selects is not directly after quantity, target it anyway */
@@ -569,7 +569,7 @@ fieldset.product-form__input--pill input[value*="Lavender" i]:checked+label::aft
         display: inline-block !important;
         vertical-align: top;
         width: auto;
-        max-width: calc(100% - 220px);
+        max-width: calc(100% - 240px);
     }
 
     /* Fieldset inside variant selector should not be full width */
