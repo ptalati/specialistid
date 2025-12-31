@@ -8,7 +8,7 @@
   }
    @media(min-width:750px){
     .newsletter-section {
-        background: var(--gradient-base-accent-1) url("https://cdn.shopify.com/s/files/1/1260/4809/files/HQ_Lanyard.png?v=1682696163") no-repeat right top;
+        background: var(--gradient-base-accent-1)  url("{{ section.settings.background_image | image_url: width: 1920, height:800  }}") no-repeat right top;
         background-size: contain;
       }
   }
