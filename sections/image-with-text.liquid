@@ -82,7 +82,7 @@
                   </p>
                 {%- when 'code' -%}
                   {%- if block.settings.code_html != blank -%}
-                    {{ block.settings.code_html | escape }}
+                    {{ block.settings.code_html  }}
                 {%- endif -%}
                 {% when 'contact' %}
                 <div class="conatct-button">
