@@ -16,6 +16,13 @@
         "builder_content_entry_preview": "2260b9b2f9c44628b6152ea29a4edd58"
       }
     },
+     "1154d9de2bca4383b7cb98fa9fda29c1_builder_io_BnmW6N": {
+      "type": "1154d9de2bca4383b7cb98fa9fda29c1-builder-io",
+      "name": "Product categories sectio",
+      "settings": {
+        "builder_content_entry_preview": "e0adef50393346de99ac582c9e531533"
+      }
+    },
     "slideshow_PkyqJL": {
       "type": "slideshow",
       "blocks": {
@@ -345,6 +352,7 @@
   },
   "order": [
     "eab9b35612db452696c45d02867db1be_builder_io_3pQyTX",
+    "1154d9de2bca4383b7cb98fa9fda29c1_builder_io_BnmW6N",
     "slideshow_PkyqJL",
     "multicolumn",
     "collection_page_section_B43ELG",
