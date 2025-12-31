@@ -465,3 +465,10 @@ p.image-with-text__text.image-with-text__text--caption {
     justify-content: center;
     gap: 30px;
 }
+.conatct-button h4 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.6px;
+    text-align: center;
+}
