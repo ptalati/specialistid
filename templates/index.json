@@ -357,16 +357,17 @@
         "text_EiKcNH": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
+            "text": "<p>We are committed to providing the best customer service for you and your business. Don’t hesitate to call our live specialists with any inquiries or questions about our products.</p>",
+            "text_style": "subtitle"
           }
         },
-        "button_qQrxpg": {
-          "type": "button",
+        "contact_PiDJfE": {
+          "type": "contact",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
+            "service": "1-800-380-6726",
+            "service_link": "tel:+18003806726",
+            "sale": "1-888-559-1940",
+            "sale_link": "tel:+18885591940"
           }
         }
       },
@@ -374,7 +375,7 @@
         "heading_GcCUCd",
         "code_9wqUBy",
         "text_EiKcNH",
-        "button_qQrxpg"
+        "contact_PiDJfE"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
