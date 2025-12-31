@@ -512,11 +512,33 @@
           "type": "testimonial",
           "settings": {
             "star_limit": 5,
-            "title": "Lorem ipsum dolor sit amet consectetur.",
-            "content": "<p>Lorem ipsum dolor sit amet consectetur. Varius semper etiam morbi sed nisl nisi. Non urna hendrerit nisl vulputate vitae. </p>",
-            "author": "John Doe",
+            "title": "",
+            "content": "<p>My shopping experience was great. I was able to find what I wanted without and hassle. I was very pleased with how Customer Service handled my returned order. The new order was received within a matter of days not weeks.</p>",
+            "author": "Mary C.",
             "show_tag": true,
-            "date": "11-25-24 - Indiana , united states"
+            "date": "2025-05-14"
+          }
+        },
+        "testimonial_qM9M6c": {
+          "type": "testimonial",
+          "settings": {
+            "star_limit": 5,
+            "title": "",
+            "content": "<p>Very user-friendly and intuitive website. Nice variety of products- some not seen anywhere else.</p>",
+            "author": "David K.",
+            "show_tag": true,
+            "date": "2025-04-29"
+          }
+        },
+        "testimonial_gGFEBx": {
+          "type": "testimonial",
+          "settings": {
+            "star_limit": 5,
+            "title": "",
+            "content": "<p>Awesome staff very fast and professional email process and reach out after every order I place. Thank you to the entire staff at Specialist Id.</p>",
+            "author": "Terrence M.",
+            "show_tag": true,
+            "date": "2025-04-22"
           }
         }
       },
@@ -525,7 +547,9 @@
         "testimonial_HM8VKr",
         "testimonial_bA4rXP",
         "testimonial_LCAfKU",
-        "testimonial_ktcVAY"
+        "testimonial_ktcVAY",
+        "testimonial_qM9M6c",
+        "testimonial_gGFEBx"
       ],
       "name": "Custom testimonials",
       "settings": {
