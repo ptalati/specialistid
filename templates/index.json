@@ -652,8 +652,8 @@
         "mobile_imge": "shopify://shop_images/Background_1.png",
         "full_width": true,
         "section_css_class": "newsletter-section",
-        "padding_top": 100,
-        "padding_bottom": 100,
+        "padding_top": 140,
+        "padding_bottom": 140,
         "padding_top_mobile": 152,
         "padding_bottom_mobile": 52
       }
