@@ -84,12 +84,9 @@
                       {% elsif form.posted_successfully? %}
                         aria-describedby="Newsletter-success--{{ section.id }}"
                       {% endif %}
-                      placeholder="{{ 'newsletter.label' | t }}"
+                      placeholder="{{ 'Enter Your Email Address' }}"
                       required
                     >
-                    <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                      {{ 'newsletter.label' | t }}
-                    </label>
                     <button
                       type="submit"
                       class="newsletter-form__button field__button"
@@ -97,9 +94,7 @@
                       id="Subscribe"
                       aria-label="{{ 'newsletter.button_label' | t }}"
                     >
-                      <span class="svg-wrapper">
-                        {{- 'icon-arrow.svg' | inline_asset_content -}}
-                      </span>
+                       Stay Informed
                     </button>
                   </div>
                   {%- if form.errors -%}
