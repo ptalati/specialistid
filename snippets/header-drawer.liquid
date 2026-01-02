@@ -155,12 +155,12 @@
                   </account-icon>
                 {%- else -%}
                    <span class="svg-wrapper">
-              {%- if section.settings.account_icon != blank -%}
-                {{ section.settings.account_icon }}
-              {%- else -%}
-                {{ 'icon-account.svg' | inline_asset_content }}
-              {%- endif -%}
-            </span>
+                    {%- if section.settings.account_icon != blank -%}
+                      {{ section.settings.account_icon }}
+                    {%- else -%}
+                      {{ 'icon-account.svg' | inline_asset_content }}
+                    {%- endif -%}
+                  </span>
                 {%- endif -%}
                 {%- liquid
                   if customer
