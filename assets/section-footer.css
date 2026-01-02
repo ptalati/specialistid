@@ -512,7 +512,7 @@
 /*footer  */
 .footer__blocks-wrapper > *:last-child {
     margin-right: auto;
-    width: 00%;
+    width: 100%;
 }
 .footer-flex-content {
   display: flex;
@@ -578,7 +578,7 @@ small.copyright__content {
   .footer-flex-content .footer-block--newsletter .grid ul.footer__list-icon {   gap: 8px;}
   .footer-flex-content .footer-block--newsletter .footer-content {   margin-bottom: 20px;}
   .footer-flex-content .footer-block--newsletter .footer__list-social {    margin-bottom: 20px;}
-  .footer__blocks-wrapper > *:last-child {    margin-right: auto;    width: 10%;}
+  .footer__blocks-wrapper > *:last-child {    margin-right: auto;    width: 100%;}
 }
 
 @media(max-width:989px){
