@@ -88,11 +88,11 @@
           "type": "testimonial",
           "settings": {
             "star_limit": 5,
-            "title": "Lorem ipsum dolor sit amet consectetur.",
-            "content": "<p>Lorem ipsum dolor sit amet consectetur. Varius semper etiam morbi sed nisl nisi. Non urna hendrerit nisl vulputate vitae. </p>",
-            "author": "John Doe",
+            "title": "",
+            "content": "<p>Very user-friendly and intuitive website. Nice variety of products- some not seen anywhere else.</p>",
+            "author": "David K.",
             "show_tag": true,
-            "date": "11-25-24 - Indiana , united states"
+            "date": "2025-04-29"
           }
         }
       },
