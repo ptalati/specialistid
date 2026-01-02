@@ -22,3 +22,9 @@ a.button, .button, .button.button, customer .button {
     letter-spacing: 0;
     transition: all .3s;
 }
+
+@media(max-width:749px){
+    a.button, .button, .button.button, customer .button {
+    font-size: 15px;
+}
+}
