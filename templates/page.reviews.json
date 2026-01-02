@@ -1,0 +1,39 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1 {text-align: center;}"
+      ],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_w8h7mn": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".builder-custom-code img {width: 80%;}"
+      ],
+      "settings": {
+        "custom_liquid": "<style type=\"text/css\" class=\"builder-styles builder-api-styles\">  .builder-block.builder-378d3cc,.builder-block.builder-85bde01{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;margin-top:0;min-height:100px;padding:20px}.builder-block.builder-e74c9ae,.builder-block.builder-f722810,.builder-block.builder-f8a0184{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;margin-top:20px}.builder-columns{display:flex}.builder-blocks{display:flex;flex-direction:column;align-items:stretch}.builder-column>.builder-blocks{flex-grow:1}.builder-f722810>.builder-columns>.builder-column:nth-child(1){width:calc(50% - 10px);margin-left:0}.builder-f722810>.builder-columns>.builder-column:nth-child(2){width:calc(50% - 10px);margin-left:20px}.builder-block.builder-499f8c6{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;margin-top:20px;line-height:normal;height:auto}@media only screen and (max-width:991px){.builder-block.builder-499f8c6{display:flex}}@media only screen and (max-width:640px){.builder-block.builder-499f8c6{display:flex}}.builder-paragraph:first-of-type,.builder-text p:first-of-type{margin:0}.builder-paragraph,.builder-text>p{color:inherit;line-height:inherit;letter-spacing:inherit;font-weight:inherit;font-size:inherit;text-align:inherit;font-family:inherit}@media (max-width:999px){.builder-f722810>.builder-columns{flex-direction:column;align-items:stretch}.builder-f722810>.builder-columns>.builder-column:nth-child(n){width:100%;margin-left:0}}\n</style>\n<div class=\"builder-component\" data-name=\"page\">\n<div class=\"builder-content\" data-builder-content-id=\"02d08d03b5654e4998cef3e212bf008f\" data-builder-component=\"page\" data-builder-variation-id=\"02d08d03b5654e4998cef3e212bf008f\">\n<div>\n<div class=\"builder-block builder-85bde01\">\n<div style=\"height: 100%; width: 100%; align-self: stretch; flex-grow: 1; box-sizing: border-box; max-width: 1200px; display: flex; flex-direction: column; align-items: stretch; margin-left: auto; margin-right: auto;\">\n<div class=\"builder-block builder-f722810\">\n<div class=\"builder-columns\">\n<div class=\"builder-column\" style=\"line-height: normal; display: flex; flex-direction: column; align-items: stretch;\">\n<div class=\"builder-blocks\">\n<div class=\"builder-block builder-f8a0184\">\n<div class=\"builder-custom-code\">\n<a href=\"https://www.shopperapproved.com/reviews/SpecialistID.com\" class=\"shopperlink\"><img src=\"https://www.shopperapproved.com/award/images/7801-large.png\" style=\"border: 0;\" alt=\"5 Star Excellence award from Shopper Approved for collecting at least 100 5 star reviews\"></a> <script type=\"text/javascript\"> (function() { var js = window.document.createElement(\"script\"); js.src = '//www.shopperapproved.com/seals/certificate.js'; js.type = \"text/javascript\"; document.getElementsByTagName(\"head\")[0].appendChild(js); })(); </script>\n</div>\n</div>\n</div>\n</div>\n<div class=\"builder-column\" style=\"line-height: normal; display: flex; flex-direction: column; align-items: stretch;\">\n<div class=\"builder-blocks\">\n<div class=\"builder-block builder-499f8c6\"><span class=\"builder-text\"> \n<h2>We're proud to be America's go-to company for badge accessories.</h2>\n<span style=\"color: rgb(55, 65, 81); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 20px; letter-spacing: normal; white-space-collapse: preserve;\">\nSince 2001, we've earned the trust of Fortune 500 companies, prestigious schools and universities, the federal government, individuals &amp; Etsy creators alike. With over two decades of exceptional service, our diverse client base reflects our commitment to great customer service and making things easy.</span><br>\n<span style=\"color: rgb(55, 65, 81); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 20px; letter-spacing: normal; white-space-collapse: preserve;\"> </span><span style=\"color: rgb(55, 65, 81); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 20px; letter-spacing: normal; white-space-collapse: preserve;\"> </span><span style=\"color: rgb(55, 65, 81); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 20px; letter-spacing: normal; white-space-collapse: preserve;\">\nDon't just take our word for it – With over 34k+ 5-star reviews, see why our long-standing customers choose us. We look forward to serving you.</span> </span>\n<br><a href=\"/pages/contact-us-1\" class=\"button\">\nContact Us</a>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"builder-block builder-378d3cc\">\n<div style=\"height: 100%; width: 100%; align-self: stretch; flex-grow: 1; box-sizing: border-box; max-width: 1200px; display: flex; flex-direction: column; align-items: stretch; margin-left: auto; margin-right: auto;\">\n<div class=\"builder-block builder-e74c9ae\">\n<div class=\"builder-custom-code\">\n<div id=\"SA_review_wrapper\"></div>\n<script type=\"text/javascript\">var sa_interval = 5000;function saLoadScript(src) { var js = window.document.createElement('script'); js.src = src; js.type = 'text/javascript'; document.getElementsByTagName(\"head\")[0].appendChild(js); } if (typeof(shopper_first) == 'undefined') saLoadScript('https://www.shopperapproved.com/widgets/7801/merchant/review-page/38ddvWV87GyT.js'); shopper_first = true; </script>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_w8h7mn"
+  ]
+}
