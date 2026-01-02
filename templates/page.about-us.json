@@ -11,13 +11,314 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_with_text_T3pczY": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_D6iGfL": {
+          "type": "heading",
+          "settings": {
+            "heading": "We're proud to be America's go-to company for badge accessories.",
+            "heading_size": "h1"
+          }
+        },
+        "text_k4qinb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Specialist ID - a 7x Inc. 5000 winner we've been in business for more than 20 years and have over 140,000 positive reviews (and counting). Our mission? To be the EASIEST company to work with for all your badge-related needs.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_GdeFkY": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact-us-1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_D6iGfL",
+        "text_k4qinb",
+        "button_GdeFkY"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Mask_group_7.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "color_scheme": "background-1",
+        "section_css_class": "about-page",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile": 52,
+        "padding_bottom_mobile": 52
+      }
+    },
+    "image_with_text_ggKypH": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_qBMDPy": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>AN OPEN LETTER FROM OUR CEO:</strong></h3>",
+            "text_style": "body"
+          }
+        },
+        "heading_QhqkBK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hey Friend, ",
+            "heading_size": "h1"
+          }
+        },
+        "text_JeTPGt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>It’s hard to believe that my brother Mike and I started this company over 20 years ago. At that time, no one was catering to the individual needs of a customer.</p><p></p><p></p><p>You couldn’t buy a single lanyard or badge holder.</p><p></p><p></p><p>You could only purchase in bulk. We were the first company to allow customers to buy a single piece if that’s what they wanted.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_qBMDPy",
+        "heading_QhqkBK",
+        "text_JeTPGt"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Mask_group_8.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "color_scheme": "background-1",
+        "section_css_class": "about-page",
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 52
+      }
+    },
+    "multicolumn_9YFP9E": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_dfBQYp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_efe537e5166b44e19ba2baa80d090297.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_NErrYL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_202141d56d1b4565b47e26fbec0a2387.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EdBNhr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_4dd687bd78db4007a58db51e996ef047.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_dfBQYp",
+        "column_NErrYL",
+        "column_EdBNhr"
+      ],
+      "settings": {
+        "title": "Here’s a look at some of our super early days.",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 52,
+        "section_css_class": "about-page-multi"
+      }
+    },
+    "c6b0a8af-2abb-4aef-8b11-717b872038d1": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_hWJDzk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>And, while we’ve grown since those days, that ethos has always been a part of what makes SpecialistID such a special place. It doesn’t matter if you are a Fortune 500 or an individual buyer. We treat all our customers with the same respect and regard. Every order matters. And, that’s what has allowed us to grow as one of America’s most successful small businesses. </p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_hWJDzk"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Mask_group_9.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "color_scheme": "background-1",
+        "section_css_class": "about-page",
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 52
+      }
+    },
+    "image_with_text_LXJiz8": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_cgVx9q": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our real-life American dream story was even featured on HGTV.",
+            "heading_size": "h1"
+          }
+        },
+        "text_DmJf34": {
+          "type": "text",
+          "settings": {
+            "text": "<p>On a special episode of HGTV with Clinton Kelly and Patrick Barnhill, CEO of SpecialistID.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cgVx9q",
+        "text_DmJf34"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Mask_group_1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "color_scheme": "background-1",
+        "section_css_class": "about-page",
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 52
+      }
+    },
+    "dfd695b0-972e-4bc4-99b9-01def9a06eb3": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_AKQBBG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>What I am most proud of, though, is our incredible team and the customers around the world who trust us to deliver when it counts. There is no greater gift. Giving back to the community is also very important to us. We support a multitude of charities, from education to animal rescue. Today, we are one of South Florida’s fastest-growing companies.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_AKQBBG"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Mask_group_2.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "color_scheme": "background-1",
+        "section_css_class": "about-page",
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 52
+      }
+    },
+    "image_with_text_XKcDdn": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_bRFg6G": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you are a customer or thinking about becoming a customer, thank you. None of this would be possible without you.</p><h3><strong>Patrick Barnhill,</strong></h3><p>Co-Founder & CEO of SpecialistID</p>",
+            "text_style": "body"
+          }
+        },
+        "button_pdr8tk": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact",
+            "button_link": "shopify://pages/contact-us-1"
+          }
+        }
+      },
+      "block_order": [
+        "text_bRFg6G",
+        "button_pdr8tk"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Mask_group_6.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "color_scheme": "background-1",
+        "section_css_class": "about-page",
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_with_text_T3pczY",
+    "image_with_text_ggKypH",
+    "multicolumn_9YFP9E",
+    "c6b0a8af-2abb-4aef-8b11-717b872038d1",
+    "image_with_text_LXJiz8",
+    "dfd695b0-972e-4bc4-99b9-01def9a06eb3",
+    "image_with_text_XKcDdn"
   ]
 }
