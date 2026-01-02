@@ -472,6 +472,9 @@ p.image-with-text__text.image-with-text__text--caption {
     letter-spacing: 0.6px;
     text-align: center;
 }
+.image-first .image-with-text__text-item .image-with-text__content {
+    padding: 6rem 0rem 7rem 7rem;
+}
 
 
 
