@@ -1,25 +1,57 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "form": {
-      "type": "contact-form",
+    "contact_page_new_CQRMtq": {
+      "type": "contact-page-new",
+      "settings": {
+        "page_heading": "We make it easy.",
+        "page_desc": "Our customer service is here to make things as easy as possible. Please let us know how we can help.",
+        "caption": "SpecialistID",
+        "heading": "Customer Service Hours",
+        "subheading": "",
+        "content": "<p><strong>Time</strong>: M-F 9am - 5pm EST</p><p><strong>Phone No</strong>: Toll Free: <a href=\"tel:8003806726\" title=\"tel:8003806726\">1-800-380-6726</a></p><p><strong>Email</strong>: <a href=\"mailto:sales@specialistid.com\" title=\"mailto:sales@specialistid.com\">sales@specialistid.com</a></p><p><strong>Local</strong>: <a href=\"tel:3052205500\" title=\"tel:3052205500\">305-220-5500</a></p><p><strong>Fax</strong>: 305-263-6808</p><p><strong>Address</strong>: 7760 NW 56th St. Doral, FL 33166</p><p><strong>UEI</strong>: FHHSLAAFPUD2</p><p></p>",
+        "content1": "<h2>Enterprise Sales</h2><p><strong>Time</strong>: M-F 9am - 5pm EST</p><p><strong>Phone No</strong>: Toll Free: <a href=\"tel:8885591940\" title=\"tel:8885591940\">1-888-559-1940</a></p><p><strong>Email</strong>: <a href=\"mailto:sales@specialistid.com\" title=\"mailto:sales@specialistid.com\">sales@specialistid.com</a></p><p>We understand the complexities and unique demands of enterprise-scale operations. Our Enterprise Solutions are designed to cater specifically to large-scale businesses. From large quantities, complex onboarding/bidding to fully custom design & development of custom products.</p>",
+        "content2": "",
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mob_top_spacing": 52,
+        "mob_bottom_spacing": 52
+      }
+    },
+    "contact_image_text_9apgbW": {
+      "type": "contact-image-text",
       "settings": {
         "heading": "",
-        "heading_size": "h1",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "map": "<div class=\"masp-section\"              >                       <iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14365.517410385643!2d-80.3229972!3d25.8240422!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b87b764a5c75%3A0xac160a25d443fa90!2sSpecialist%20ID!5e0!3m2!1sen!2sus!4v1702245519543!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border: 0\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" data-lf-form-tracking-inspected-lynor8xrdbo4wqjz=\"true\" data-lf-yt-playback-inspected-lynor8xrdbo4wqjz=\"true\" data-lf-vimeo-playback-inspected-lynor8xrdbo4wqjz=\"true\"></iframe>\n</div>",
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "mob_top_spacing": 0,
+        "mob_bottom_spacing": 20
       }
     }
   },
   "order": [
     "main",
-    "form"
+    "contact_page_new_CQRMtq",
+    "contact_image_text_9apgbW"
   ]
 }
