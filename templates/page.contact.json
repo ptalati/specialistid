@@ -94,13 +94,25 @@
             "show_tag": true,
             "date": "2025-04-29"
           }
+        },
+        "testimonial_cbw8iL": {
+          "type": "testimonial",
+          "settings": {
+            "star_limit": 5,
+            "title": "",
+            "content": "<p>Awesome staff very fast and professional email process and reach out after every order I place. Thank you to the entire staff at Specialist Id.</p>",
+            "author": "Terrence M.",
+            "show_tag": true,
+            "date": "2025-04-22"
+          }
         }
       },
       "block_order": [
         "testimonial_YTrd7J",
         "testimonial_wtbNcz",
         "testimonial_AUcmY8",
-        "testimonial_3bNrAR"
+        "testimonial_3bNrAR",
+        "testimonial_cbw8iL"
       ],
       "name": "Custom testimonials",
       "settings": {
