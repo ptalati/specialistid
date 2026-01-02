@@ -1,0 +1,301 @@
+<style>
+  .shipping-faq-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+  .section-heading-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ .shipping-faq-head {
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    color: #3A3A3C;
+    margin: 0;
+}
+  p.shipping-description-top {
+    font-family: Rubik;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0;
+    color: #696969;
+}
+  p.shipping-description-bottom {
+    font-family: Rubik;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0;
+    color: #696969;
+}
+.shipping-faq-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 50px;
+}
+  .shipping-image {
+    display: flex;
+    height: 100%;
+}
+.shipping-faq-section h3 {
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    margin: 0;
+    margin-bottom: 35px;
+}
+.shipping-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: top;
+    display: flex;
+}
+ .faqq_block {
+    padding: 20px 20px;
+    margin: 0px 0 22px;
+    background: #F5F5F5;
+    border: 1px solid #DFDFDF;
+    border-radius: 5px;
+}
+  .faqq_question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+  .faqq_question h4 {
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #3A3A3C;
+    margin: 0;
+}
+  .faqq_plus {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    position: relative;
+    background: #6FB43F;
+}
+  .faqq_plus .hori {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 2px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background: #F5F5F5;
+}
+  .faqq_plus .vert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    transition: all .3s;
+    background: #F5F5F5;
+}
+  .faqq_answer {
+    border-top: 1px solid #DFDFDF;
+    padding: 1rem 0 0;
+    display: none;
+    margin-top: 15px;
+}
+  .faqq_answer p {
+    font-family: Rubik;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0;
+    color: #696969;
+    margin: 1rem 0 0;
+}
+  .faqq_answer p:first-child {
+    margin: 0;
+}
+  .faqq_plus .vert.rot {
+    transform: translate(-50%,-50%) rotate(90deg);
+}
+  @media(max-width:1200px){
+    .shipping-faq-head {    font-size: 35px;   line-height: 40px;}
+    .shipping-faq-inner {   gap: 30px;      margin-top: 40px;  }
+     p.shipping-description-top {    font-size: 18px;}
+    .faqq_block {    padding: 13px 15px;    margin: 0px 0 10px;}
+    .faqq_question h4 {    font-size: 18px;}
+    .shipping-faq-section h3 {   font-size: 30px;    margin-bottom: 25px;}
+    .faqq_answer p {    font-size: 16px;    line-height: 30px;}
+}
+  @media(max-width:900px){
+    .shipping-faq-inner {    grid-template-columns: 1fr;}
+    .shipping-faq-inner {    gap: 40px;         margin-top: 20px;}
+  }
+
+  @media screen and (max-width: 767px) {
+   .shipping-faq-{{ section.id }} {
+      padding-top: {{ section.settings.mob_top_spacing | append: 'px' }};
+      padding-bottom: {{ section.settings.mob_bottom_spacing | append: 'px' }};
+    }
+    .shipping-faq-head {    font-size: 30px;    line-height: 37px;}
+    p.shipping-description-top {    font-size: 16px;}
+    p.shipping-description-bottom {    font-size: 14px;}
+    .faqq_block {   padding: 12px 10px;}
+    .faqq_question h4 {    font-size: 16px;}
+    .faqq_answer p {   font-size: 14px;    line-height: 23px;}
+  }
+  
+</style>
+
+<div class="shipping-faq-{{ section.id }}">
+  <div class="page-width">
+   <div class="section-heading-wrapper" style="text-align:{{ section.settings.alignment }};">
+      <h2 class="shipping-faq-head">{{ section.settings.heading }}</h2>
+      <p class="shipping-description-top">{{ section.settings.description }}</p>
+      <p class="shipping-description-bottom">{{ section.settings.description_1 }}</p>
+    </div>
+    <div class="shipping-faq-inner">
+     <div class="shipping-image">
+       {{ section.settings.image | image_url: width: 700 | image_tag:  loading: 'lazy'}}
+      </div>
+      <div class="shipping-faq-section">
+       <h3>FAQ's</h3>
+       <div class="faqq_inner">
+      {% for block in section.blocks %}
+        <div class="faqq_block">
+          {% if block.settings.question != blank %}
+            <div class="faqq_question">
+              <h4 class="h4">{{ block.settings.question }}</h4>
+              <div class="faqq_plus">
+                <span class="hori"></span>
+                <span class="vert"></span>
+              </div>
+            </div>
+          {% endif %}
+          {% if block.settings.answer != blank %}
+            <div class="faqq_answer">
+              {{ block.settings.answer }}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('.faqq_block').each(function(){
+    $(this).find('.faqq_question').click(function(){
+      $(this).siblings('.faqq_answer').slideToggle().closest('.faqq_block').siblings().find('.faqq_answer').slideUp();
+      $(this).find('.vert').toggleClass('rot').closest('.faqq_block').siblings().find('.faqq_question').find('.vert').removeClass('rot');
+    })
+  })
+</script>
+
+{% schema %}
+{
+  "name": "Shipping Faq",
+  "settings": [
+    {
+      "type":"inline_richtext",
+      "id":"heading",
+      "label":"heading"
+    },
+    {
+      "type":"textarea",
+      "id":"description",
+      "label":"Content 1"
+    },
+    {
+      "type":"textarea",
+      "id":"description_1",
+      "label":"Content 2"
+    },
+    {
+      "type":"text_alignment",
+      "id":"alignment",
+      "label":"Text Alignment"
+    },
+    {
+      "type":"image_picker",
+      "id":"image",
+      "label":"Image"
+    },
+    {
+      "type": "header",
+      "content": "Padding section"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Desktop padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Desktop padding bottom",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "mob_top_spacing",
+      "label": "Mobile paddding top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mob_bottom_spacing",
+      "label": "Mobile paddding bottom" ,
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    }
+   ],
+    "blocks": [
+    {
+      "name": "FAQ Block",
+      "type": "faq",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "question",
+          "label": "Question",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"
+        }
+      ]
+    }
+    ],
+   "presets": [
+      {
+        "name": "Shipping Faq"
+      }
+    ]
+}
+{% endschema %}
