@@ -301,6 +301,6 @@
 }
 
 @media(max-width:550px){
-  .multicolumn-list__item {     width: 70% !important;     max-width: 70% !important; }
+   .multicolumn-list__item {     width: 70% !important;     max-width: 70% !important; }
 }
 
