@@ -121,8 +121,8 @@
         "logo_img": "shopify://shop_images/7801-large_2.png",
         "button_label": "See our 40,000+ Reviews",
         "button_link": "shopify://pages/reviews",
-        "top_spacing": 40,
-        "bottom_spacing": 80,
+        "top_spacing": 60,
+        "bottom_spacing": 60,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 52
       }
