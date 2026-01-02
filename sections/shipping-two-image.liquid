@@ -1,0 +1,174 @@
+<style>
+  .shipping-two-image-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+     max-width: 1250px;
+    margin: 0 auto;
+}
+.shipping-image-heading {
+    font-size: 30px;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    color: #3A3A3C;
+    margin: 0;
+    line-height: 100%;
+}
+  p.shipping-image-description {
+    font-family: Rubik;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0;
+    color: #696969;
+}
+.shipping-inner-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 50px;
+}
+  .shipping-inner-two img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+ .shipping-image-1,
+  .shipping-image-2 {
+    display: inline-block;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+  }
+  @media(max-width:989px){
+    .shipping-inner-two {   gap: 30px;    margin-top: 30px;}
+    .shipping-image-1,
+    .shipping-image-2 {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+}
+  @media screen and (max-width: 767px) {
+   .shipping-two-image-{{ section.id }} {
+      padding-top: {{ section.settings.mob_top_spacing | append: 'px' }};
+      padding-bottom: {{ section.settings.mob_bottom_spacing | append: 'px' }};
+    }
+    .shipping-image-heading {    font-size: 25px;    line-height: 37px;}
+    .shipping-inner-two {   gap: 10px;    margin-top: 20px;}
+    .shipping-inner-two .shipping-image-1,
+    .shipping-inner-two .shipping-image-2 {
+    display: inline-block;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+}
+  }
+</style>
+
+<div class="shipping-two-image-{{ section.id }}">
+  <div class="page-width">
+    <div class="section-heading-wrapper" style="text-align:{{ section.settings.alignment }};">
+      <h2 class="shipping-image-heading">{{ section.settings.heading }}</h2>
+      <p class="shipping-image-description">{{ section.settings.description }}</p>
+    </div>
+    <div class="shipping-inner-two">
+     <div class="shipping-image-1">
+       <a href="{{ section.settings.image1_url }}">{{ section.settings.image | image_url: width: 700 | image_tag:  loading: 'lazy'}}</a>
+      </div>
+      <div class="shipping-image-2">
+        <a href="{{ section.settings.image2_url }}">{{ section.settings.image1 | image_url: width: 700 | image_tag:  loading: 'lazy'}}</a>
+       </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Shipping two image",
+  "settings": [
+    {
+      "type":"inline_richtext",
+      "id":"heading",
+      "label":"heading"
+    },
+    {
+      "type":"textarea",
+      "id":"description",
+      "label":"Content"
+    },
+    {
+      "type":"text_alignment",
+      "id":"alignment",
+      "label":"Text Alignment"
+    },
+    {
+      "type":"image_picker",
+      "id":"image",
+      "label":"Image"
+    },
+    {
+      "type":"url",
+      "id":"image1_url",
+      "label":"Image Url"
+    },
+    {
+      "type":"image_picker",
+      "id":"image1",
+      "label":"Image"
+    },
+     {
+      "type":"url",
+      "id":"image2_url",
+      "label":"Image Url"
+    },
+    {
+      "type": "header",
+      "content": "Padding section"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Desktop padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Desktop padding bottom",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "mob_top_spacing",
+      "label": "Mobile paddding top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mob_bottom_spacing",
+      "label": "Mobile paddding bottom" ,
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    }
+   ],
+   "presets": [
+      {
+        "name": "Shipping two image"
+      }
+    ]
+}
+{% endschema %}

@@ -11,13 +11,91 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "shipping_faq_rXTyCC": {
+      "type": "shipping-faq",
+      "blocks": {
+        "faq_yMG6f8": {
+          "type": "faq",
+          "settings": {
+            "question": "How do you ship?",
+            "answer": "<p>At checkout, we offer many options and carriers.  If a specific shipping type is selected and paid for we will ship with the chosen carrier. <br/><br/>If one of our standard or free shipping options is chosen, we will use a variety of carriers.  For smaller orders, USPS ground advantage (First Class Mail) or DHL eCommerce will most likely be used.  Larger packages will be shipped with USPS Ground Advantage, UPS or FedEx, depending on the area.</p>"
+          }
+        },
+        "faq_qpqpzr": {
+          "type": "faq",
+          "settings": {
+            "question": "Where do you ship from?",
+            "answer": "<p>Most of our shipments originate from our main location in Miami, Florida, however, we have alternate shipping sites throughout the West and East Coast that we frequently use for many items.  We try to ship in a way that will be quickest and most efficient to provide the best customer experience.   </p>"
+          }
+        },
+        "faq_T6VJFJ": {
+          "type": "faq",
+          "settings": {
+            "question": "I need my order rushed, can you do that?",
+            "answer": "<p>Due to our large inventory and strong support from our vendors throughout the country, we are able to rush most orders when needed. If you have an urgent deadline please contact us online or call us at 1-800-380-6726 so we can confirm that the items you need will be able to arrive before your deadline.  </p>"
+          }
+        },
+        "faq_GDPrpK": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you ship internationally to my country?",
+            "answer": "<p>We ship internationally to many countries across the globe and the duties and taxes are collected at checkout for seamless delivery.  However, if you do not see your country in our ship to options in the cart page, feel free to contact us for special shipping arrangements. </p>"
+          }
+        },
+        "faq_fj8qDp": {
+          "type": "faq",
+          "settings": {
+            "question": "How Do I Track My Order?",
+            "answer": "<p>Specialist ID only ships using methods that offer tracking.  You will receive an email when your order ships showing tracking.  The tracking number will also appear online in your order history.  If you are unable to find your tracking number feel free to reach us online or phone at 305-220-5500 or 1-800-380-6726. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_yMG6f8",
+        "faq_qpqpzr",
+        "faq_T6VJFJ",
+        "faq_GDPrpK",
+        "faq_fj8qDp"
+      ],
+      "settings": {
+        "heading": "Shipping",
+        "description": "Specialist ID is known for having some of the lowest shipping rates in the industry. We have a broad range of experience having shipped out hundreds of thousands of packages all around the world. We use our expertise to save you money, while providing fast, reliable shipping to almost anywhere in the world. (We usually ship your order within 24 hours of receiving it, not including weekends and holidays)",
+        "description_1": "Urgent shipping request? Please call us at <a href=\"tel:3052205500\">305-220-5500</a>\n or <a href=\"tel:18003806726\">1-800-380-6726</a>\n M-F 9am to 5pm EST.",
+        "alignment": "center",
+        "image": "shopify://shop_images/IMG_0583_235dcd2d-32b3-4b85-b603-8762af5d864a.jpg",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mob_top_spacing": 52,
+        "mob_bottom_spacing": 52
+      }
+    },
+    "shipping_two_image_deBTyf": {
+      "type": "shipping-two-image",
+      "custom_css": [],
+      "settings": {
+        "heading": "A look inside our 17,000sq ft office/warehouse in Miami, FL. ",
+        "description": "",
+        "alignment": "center",
+        "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_de8c3e07cf2045fdab321253f18e6a75.png",
+        "image1_url": "",
+        "image1": "shopify://shop_images/DSC1147_11db11c0-c254-46eb-8c0d-68e0d2508f84.jpg",
+        "image2_url": "",
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "mob_top_spacing": 0,
+        "mob_bottom_spacing": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "shipping_faq_rXTyCC",
+    "shipping_two_image_deBTyf"
   ]
 }
