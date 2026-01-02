@@ -294,6 +294,9 @@
 @media(max-width:989px){
   .multicolumn-list__item {    width: 49% !important;    max-width: 49% !important;}
   .multicolumn-list {    gap: 12px;}
+  .multicolumn h2.title {
+    text-align: center;
+}
 }
 
 @media (max-width: 749px) {
@@ -301,6 +304,6 @@
 }
 
 @media(max-width:550px){
-   .multicolumn-list__item {     width: 70% !important;     max-width: 70% !important; }
+  .multicolumn-list__item {     width: 70% !important;     max-width: 70% !important; }
 }
 
