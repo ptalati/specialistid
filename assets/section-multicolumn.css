@@ -286,7 +286,7 @@
     margin-top: 0rem !important;
 }
 .about-page-multi .multicolumn-card__image-wrapper.multicolumn-card__image-wrapper--full-width.multicolumn-card-spacing {
-    width: fit-content;
+    width: 100%;
     margin: 0 auto;
 }
 
