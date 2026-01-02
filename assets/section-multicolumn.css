@@ -285,6 +285,10 @@
 .multicolumn-card__info>:nth-child(2) {
     margin-top: 0rem !important;
 }
+.about-page-multi .multicolumn-card__image-wrapper.multicolumn-card__image-wrapper--full-width.multicolumn-card-spacing {
+    width: fit-content;
+    margin: 0 auto;
+}
 
 @media(max-width:989px){
   .multicolumn-list__item {    width: 49% !important;    max-width: 49% !important;}
