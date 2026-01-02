@@ -166,6 +166,26 @@
                 -%}
               </a>
             {%- endif -%}
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when '@app' -%}
+                  {% render block %}
+                {%- when 'custom_icon' -%}
+                  <a
+                    href="{{ block.settings.link }}"
+                    class="header__icon header__icon--custom link {{ block.settings.label }} focus-inset small-hide"
+                    {% if block.settings.open_new_tab %}
+                      target="_blank" rel="noopener noreferrer"
+                    {% endif %}
+                  >
+                    <span class="svg-wrapper">{{ block.settings.icon }}</span>
+                    {%- if section.settings.show_icon_labels -%}
+                      <span class="icon-label">{{ block.settings.label }}</span>
+                    {%- endif -%}
+                    <span class="visually-hidden">{{ block.settings.label }}</span>
+                  </a>
+              {%- endcase -%}
+            {%- endfor -%}
             {%- if localization.available_countries or localization.available_languages -%}
               <div class="menu-drawer__localization header-localization">
                 {%- if localization.available_countries and localization.available_countries.size > 1 -%}
