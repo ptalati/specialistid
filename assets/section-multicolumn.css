@@ -289,13 +289,18 @@
     width: 100%;
     margin: 0 auto;
 }
+.multicolumn .slider-buttons.no-js-hidden.medium-hide {   display: none;}
 
 @media(max-width:989px){
   .multicolumn-list__item {    width: 49% !important;    max-width: 49% !important;}
   .multicolumn-list {    gap: 12px;}
 }
-.multicolumn .slider-buttons.no-js-hidden.medium-hide {   display: none;}
+
+@media (max-width: 749px) {
+  .multicolumn h2.title {     font-size: 28px;     line-height: 38px;}
+}
 
 @media(max-width:550px){
   .multicolumn-list__item {     width: 70% !important;     max-width: 70% !important; }
 }
+
