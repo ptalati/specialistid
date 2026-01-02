@@ -4,11 +4,11 @@
   justify-content: flex-start;
 }
 
-@media only screen and (max-width: 749px) {
+/* @media only screen and (max-width: 749px) {
   .list-social {
     justify-content: center;
   }
-}
+} */
 
 .list-social__item .icon {
   height: 2.2rem;
