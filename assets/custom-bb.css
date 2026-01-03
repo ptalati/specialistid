@@ -15,6 +15,15 @@ div#tab2.vertical-badge-buddies-1xl {
     width: 401px;
 }
 
+.product.product--thumbnail_slider .selectedColor {
+    position: relative;
+    color: #ffffff;
+    background-color: #000000;
+    display: block;
+    margin: 0;
+    border-radius: 5px;
+}
+
 .product.product--thumbnail_slider .badge-preview-text-tab1,
 .product.product--thumbnail_slider .badge-preview-text-tab1w {
     display: block;
