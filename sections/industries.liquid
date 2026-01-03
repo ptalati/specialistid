@@ -1,12 +1,131 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+
+@media screen and (max-width: 767px) {
+.section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.mob_top_spacing }}px;
+    padding-bottom: {{ section.settings.mob_bottom_spacing }}px;
+  }
+}
+h2.industries-heading {
+    font-size: 4rem;
+    color: rgb(111, 180, 63);
+    margin-bottom: 60px;
+    font-weight: 700;
+    text-align: center;
+}
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.industry-card {
+    background: #fff;
+    padding: 45px 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px #0000000d;
+    transition: transform .3s ease;
+    text-align: center;
+}
+.industry-icon {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.industry-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px; 
+}
+.industry-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+{% endstyle %}
+
+
+
+<section class="industries-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <h2 class="industries-heading">{{ section.settings.heading }}</h2>
+    <div class="industries-grid">
+      {% for block in section.blocks %}
+        <div class="industry-card">
+          {% if block.settings.icon %}
+            <img src="{{ block.settings.icon | img_url: '200x200' }}" alt="{{ block.settings.title }}" class="industry-icon" />
+          {% endif %}
+          <h3 class="industry-title">{{ block.settings.title }}</h3>
+          <p class="industry-description">{{ block.settings.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 {% schema %}
 {
   "name": "Industries We Serve",
   "settings": [
     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
       "type": "text",
       "id": "heading",
       "label": "Section Heading",
       "default": "Industries We Serve"
+    },
+    {
+      "type": "header",
+      "content": "Padding section"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Desktop padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Desktop padding bottom",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "mob_top_spacing",
+      "label": "Mobile paddding top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mob_bottom_spacing",
+      "label": "Mobile paddding bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
     }
   ],
   "blocks": [
@@ -43,20 +162,3 @@
   ]
 }
 {% endschema %}
-
-<section class="industries-section">
-  <div class="container">
-    <h2 class="industries-heading">{{ section.settings.heading }}</h2>
-    <div class="industries-grid">
-      {% for block in section.blocks %}
-        <div class="industry-card">
-          {% if block.settings.icon %}
-            <img src="{{ block.settings.icon | img_url: '200x200' }}" alt="{{ block.settings.title }}" class="industry-icon" />
-          {% endif %}
-          <h3 class="industry-title">{{ block.settings.title }}</h3>
-          <p class="industry-description">{{ block.settings.description }}</p>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
