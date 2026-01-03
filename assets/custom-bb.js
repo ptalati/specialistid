@@ -504,7 +504,10 @@ $(document).ready(function() {
         var inputName = $(this).attr('name');
         var inputValue = $(this).val();
         console.log('Radio changed:', inputName, '=', inputValue);
-        if (inputName === 'Color') {
+
+        // Check if input name contains "Color" (handles Color, Color-1, Color-2, etc.)
+        if (inputName && inputName.toLowerCase().indexOf('color') !== -1) {
+            console.log('>>> Detected color change!');
             changeColor(inputValue);
         }
     });
