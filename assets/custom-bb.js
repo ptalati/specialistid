@@ -460,16 +460,40 @@ $(document).ready(function() {
     console.log('All radio inputs:', $("input[type='radio']").length);
 
     // Check all color inputs and their values
-    $("input[name='Color']").each(function(index) {
-        console.log('Color input', index, ':', $(this).val(), 'checked:', $(this).is(':checked'));
+    $("input[type='radio']").each(function(index) {
+        var inputName = $(this).attr('name');
+        if (inputName && inputName.toLowerCase().indexOf('color') !== -1) {
+            console.log('Color input', index, ':', inputName, '=', $(this).val(), 'checked:', $(this).is(':checked'));
+        }
     });
 
-    // Check for initial color selection (multiple possible selectors)
-    var startColor = $("fieldset.product-form__input input[name='Color']:checked").val() ||
-                     $(".color-swatch-wrapper input[name='Color']:checked").val() ||
-                     $("input[name='Color']:checked").val();
+    // Check for initial color selection - look for any checked radio with "Color" in name
+    var startColor = null;
+    $("input[type='radio']:checked").each(function() {
+        var inputName = $(this).attr('name');
+        if (inputName && inputName.toLowerCase().indexOf('color') !== -1) {
+            startColor = $(this).val();
+            console.log('Found initial color from', inputName, ':', startColor);
+            return false; // break the loop
+        }
+    });
+
     console.log('Initial color:', startColor);
-    if (startColor) changeColor(startColor);
+    if (startColor) {
+        changeColor(startColor);
+    } else {
+        console.log('No initial color found, looking for first color option...');
+        // If no color is selected, try to find the first color input
+        $("input[type='radio']").each(function() {
+            var inputName = $(this).attr('name');
+            if (inputName && inputName.toLowerCase().indexOf('color') !== -1) {
+                startColor = $(this).val();
+                console.log('Using first available color:', startColor);
+                changeColor(startColor);
+                return false; // break the loop
+            }
+        });
+    }
 
     $('#infiniteoptions-container').on('input', '.custom-line-1 input[type=text]', function() {
         console.log($(this).val());
