@@ -430,16 +430,23 @@ function changeColor(color) {
 
     console.log('Changing color to:', color);
 
+    // Find the product container - try multiple selectors
+    var $productContainer = $(".product").first();
+    if ($productContainer.length === 0) {
+        $productContainer = $("body");
+        console.log('Using body as fallback container');
+    }
+
     // Remove all existing color variant classes
-    $(".product.product--thumbnail_slider").removeClass (function (index, className) {
+    $productContainer.removeClass(function (index, className) {
         return (className.match (/(^|\s)product-variant-color-\S+/g) || []).join(' ');
     });
 
     // Convert color name to CSS class format (replace all spaces with dashes, lowercase)
     var colorClass = 'product-variant-color-' + color.replace(/\s+/g, '-').toLowerCase();
-    console.log('Adding class:', colorClass);
+    console.log('Adding class:', colorClass, 'to', $productContainer.attr('class'));
 
-    $(".product.product--thumbnail_slider").addClass(colorClass);
+    $productContainer.addClass(colorClass);
 }
 
 $(document).ready(function() {
