@@ -24,6 +24,231 @@ div#tab2.vertical-badge-buddies-1xl {
     border-radius: 5px;
 }
 
+/* Variant Color Backgrounds - Centralized Color Management */
+/* Matches color definitions from custom-product.css */
+
+/* Black & variations */
+.product.product--thumbnail_slider.product-variant-color-black .selectedColor {
+    background-color: #000000;
+}
+
+.product.product--thumbnail_slider.product-variant-color-translucent-black .selectedColor {
+    background-color: #000000;
+}
+
+/* White & variations */
+.product.product--thumbnail_slider.product-variant-color-white .selectedColor,
+.product.product--thumbnail_slider.product-variant-color-clear .selectedColor {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Blues */
+.product.product--thumbnail_slider.product-variant-color-navy .selectedColor {
+    background-color: #000080;
+}
+
+.product.product--thumbnail_slider.product-variant-color-royal-blue .selectedColor,
+.product.product--thumbnail_slider.product-variant-color-metallic-blue .selectedColor,
+.product.product--thumbnail_slider.product-variant-color-translucent-blue .selectedColor {
+    background-color: #0000ff;
+}
+
+.product.product--thumbnail_slider.product-variant-color-light-blue .selectedColor {
+    background-color: #b9e0f7;
+    color: #000000;
+}
+
+.product.product--thumbnail_slider.product-variant-color-process-blue .selectedColor {
+    background-color: #0193d0;
+}
+
+.product.product--thumbnail_slider.product-variant-color-neon-blue .selectedColor {
+    background-color: #0167b1;
+}
+
+.product.product--thumbnail_slider.product-variant-color-blue .selectedColor {
+    background-color: #0167b1;
+}
+
+/* Reds */
+.product.product--thumbnail_slider.product-variant-color-fire-red .selectedColor {
+    background-color: #F73718;
+}
+
+.product.product--thumbnail_slider.product-variant-color-translucent-red .selectedColor {
+    background-color: #ff0000;
+}
+
+.product.product--thumbnail_slider.product-variant-color-red .selectedColor {
+    background-color: #ef3e42;
+}
+
+/* Greens */
+.product.product--thumbnail_slider.product-variant-color-military-green .selectedColor {
+    background-color: #008000;
+}
+
+.product.product--thumbnail_slider.product-variant-color-dark-green .selectedColor {
+    background-color: #016325;
+}
+
+.product.product--thumbnail_slider.product-variant-color-forest-green .selectedColor {
+    background-color: #37544f;
+}
+
+.product.product--thumbnail_slider.product-variant-color-neon-green .selectedColor,
+.product.product--thumbnail_slider.product-variant-color-translucent-green .selectedColor {
+    background-color: #01a94f;
+}
+
+.product.product--thumbnail_slider.product-variant-color-green .selectedColor {
+    background-color: #01a94f;
+}
+
+/* Yellows */
+.product.product--thumbnail_slider.product-variant-color-neon-yellow .selectedColor {
+    background-color: #DCE281;
+    color: #000000;
+}
+
+.product.product--thumbnail_slider.product-variant-color-translucent-yellow .selectedColor {
+    background-color: #ffff00;
+    color: #000000;
+}
+
+.product.product--thumbnail_slider.product-variant-color-yellow .selectedColor {
+    background-color: #FFD457;
+    color: #000000;
+}
+
+/* Oranges */
+.product.product--thumbnail_slider.product-variant-color-neon-orange-antimicrobial .selectedColor {
+    background-color: #e14e2f;
+}
+
+.product.product--thumbnail_slider.product-variant-color-neon-orange .selectedColor {
+    background-color: #EF9A77;
+}
+
+.product.product--thumbnail_slider.product-variant-color-translucent-orange .selectedColor {
+    background-color: #f47b20;
+}
+
+.product.product--thumbnail_slider.product-variant-color-orange .selectedColor {
+    background-color: #f47b20;
+}
+
+/* Pinks */
+.product.product--thumbnail_slider.product-variant-color-hot-pink .selectedColor {
+    background-color: #DA1984;
+}
+
+.product.product--thumbnail_slider.product-variant-color-translucent-pink .selectedColor {
+    background-color: #ffc0cb;
+    color: #000000;
+}
+
+.product.product--thumbnail_slider.product-variant-color-neon-pink .selectedColor {
+    background-color: #f16d9a;
+}
+
+.product.product--thumbnail_slider.product-variant-color-watermelon .selectedColor {
+    background-color: #D23B68;
+}
+
+.product.product--thumbnail_slider.product-variant-color-pink .selectedColor {
+    background-color: #f16d9a;
+}
+
+/* Purples */
+.product.product--thumbnail_slider.product-variant-color-neon-purple .selectedColor,
+.product.product--thumbnail_slider.product-variant-color-translucent-purple .selectedColor {
+    background-color: #800080;
+}
+
+.product.product--thumbnail_slider.product-variant-color-lavender .selectedColor {
+    background-color: #b4b2d9;
+    color: #000000;
+}
+
+.product.product--thumbnail_slider.product-variant-color-purple .selectedColor {
+    background-color: #9d3393;
+}
+
+/* Browns & Tans */
+.product.product--thumbnail_slider.product-variant-color-tan .selectedColor {
+    background-color: #d2b48c;
+    color: #000000;
+}
+
+.product.product--thumbnail_slider.product-variant-color-brown .selectedColor {
+    background-color: #82591f;
+}
+
+/* Grays */
+.product.product--thumbnail_slider.product-variant-color-light-gray .selectedColor {
+    background-color: #dcddde;
+    color: #000000;
+}
+
+.product.product--thumbnail_slider.product-variant-color-metallic-gray .selectedColor {
+    background-color: #808080;
+}
+
+.product.product--thumbnail_slider.product-variant-color-grey-brown .selectedColor {
+    background-color: #7e8083;
+}
+
+.product.product--thumbnail_slider.product-variant-color-gray .selectedColor,
+.product.product--thumbnail_slider.product-variant-color-grey .selectedColor {
+    background-color: #7e8083;
+}
+
+/* Maroon */
+.product.product--thumbnail_slider.product-variant-color-maroon .selectedColor {
+    background-color: #820124;
+}
+
+/* Teal */
+.product.product--thumbnail_slider.product-variant-color-teal .selectedColor {
+    background-color: #018c99;
+}
+
+/* Metallics */
+.product.product--thumbnail_slider.product-variant-color-chrome .selectedColor {
+    background-color: #C7C4B9;
+    color: #000000;
+}
+
+.product.product--thumbnail_slider.product-variant-color-gold .selectedColor {
+    background-color: #FFCE44;
+    color: #000000;
+}
+
+.product.product--thumbnail_slider.product-variant-color-silver .selectedColor {
+    background-color: #C0C0C0;
+    color: #000000;
+}
+
+/* Special patterns - Rainbow */
+.product.product--thumbnail_slider.product-variant-color-rainbow .selectedColor {
+    background-image: linear-gradient(rgb(255, 0, 0), rgb(255, 0, 0) 16.6%, rgb(255, 165, 0) 16.6%, rgb(255, 165, 0) 33.2%, rgb(255, 255, 0) 33.2%, rgb(255, 255, 0) 49.8%, rgb(0, 128, 0) 49.8%, rgb(0, 128, 0) 65.4%, rgb(0, 0, 255) 65.4%, rgb(0, 0, 255) 83%, rgb(128, 0, 128) 83%, rgb(128, 0, 128) 100%);
+    background-color: transparent;
+}
+
+/* Special patterns - Assorted */
+.product.product--thumbnail_slider.product-variant-color-assorted .selectedColor {
+    background-color: #ddd;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, .5) 10px, rgba(255, 255, 255, .5) 20px);
+}
+
+/* Special patterns - Red White Blue / RWB */
+.product.product--thumbnail_slider.product-variant-color-red-white .selectedColor,
+.product.product--thumbnail_slider.product-variant-color-rwb .selectedColor {
+    background: linear-gradient(to bottom, #ef3e42 0%, #ef3e42 33.33%, #ffffff 33.33%, #ffffff 66.66%, #0167b1 66.66%, #0167b1 100%);
+}
+
 .product.product--thumbnail_slider .badge-preview-text-tab1,
 .product.product--thumbnail_slider .badge-preview-text-tab1w {
     display: block;
