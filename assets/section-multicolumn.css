@@ -312,6 +312,9 @@
 .standard-sized .multicolumn-card.content-container {
     flex-direction: column;
 }
+.standard-sized .multicolumn-card__image-wrapper--half-width {
+    width: 70%;
+}
 
 @media(max-width:989px){
   .multicolumn-list__item {    width: 49% !important;    max-width: 49% !important;}
