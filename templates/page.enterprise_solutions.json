@@ -113,7 +113,7 @@
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "color_scheme": "background-1",
+        "color_scheme": "scheme-2",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 60,
@@ -175,7 +175,8 @@
       ],
       "name": "Real Solutions Section",
       "settings": {
-        "heading": "Real Solutions for Real Companies"
+        "heading": "Real Solutions for Real Companies",
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c"
       }
     },
     "concept_7BaJYn": {
