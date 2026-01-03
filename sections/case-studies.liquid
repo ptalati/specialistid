@@ -27,7 +27,7 @@
 
 
 
-<section class="section real-solution-section section-{{ section.id }}-padding">
+<section class="section real-solution-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width">
     <h2 class="section-heading">{{ section.settings.heading }}</h2>
 
@@ -74,6 +74,12 @@
       "id": "heading",
       "label": "Section Heading",
       "default": "Real Solutions for Real Companies"
+    },
+     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
     }
   ],
   "blocks": [
