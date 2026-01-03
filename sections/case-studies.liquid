@@ -11,17 +11,61 @@
     }
 }
 
-  /* === Real Solutions Section === */
-.real-solution-section {
-  background-color: #eeeeee;
-  padding: 40px 10px;
+ .real-solution-section .page-width {
+    --page-width: 1200px;
 }
 
 .real-solution-section .section-heading {
   text-align: center;
   font-size: 4rem;
-  margin-bottom: 60px;
-  color: #6FB43F;
+  margin-bottom: 30px;
+}
+.case {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px #0000001a;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.case-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: #ecf0f1;
+}
+.case-content {
+    padding: 30px;
+    flex: 1;
+}
+.case-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.case h3 {
+    color: #6fb43f;
+    margin-bottom: 15px;
+    font-size: 1.75rem;
+}
+.case-challenge, .case-solution, .case-result {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+.case-challenge strong, .case-solution strong, .case-result strong {
+    color: #f5911f;
+}
+.case-challenge, .case-solution, .case-result {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+.real-solution-section .swiper-pagination {
+    bottom: -8px!important;
+}
+.swiper.real-solution-carousel {
+    padding-bottom: 40px;
 }
 {% endstyle %}
 
@@ -63,6 +107,58 @@
   </div>
 </section>
 
+<script>
+    
+document.addEventListener('DOMContentLoaded', function () {
+  const swiperContainer = document.querySelector('.real-solution-carousel');
+  const totalSlides = swiperContainer.querySelectorAll('.swiper-slide').length;
+
+  const swiper = new Swiper('.real-solution-carousel', {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 20,
+    loop: false,
+    watchOverflow: true,
+    autoHeight: false,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      }
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        const slidesPerGroup = window.innerWidth < 768 ? 1 : 2;
+        const maxVisibleBullets = window.innerWidth < 768 ? totalSlides : 2;
+        if (index >= maxVisibleBullets) return '';
+        return `<span class="${className}"></span>`;
+      }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      slideChange: function () {
+        const slidesPerGroup = window.innerWidth < 768 ? 1 : 2;
+        const bulletCount = Math.ceil(totalSlides / slidesPerGroup);
+        const maxIndex = (bulletCount - 1) * slidesPerGroup;
+
+        if (window.innerWidth >= 768) {
+          swiper.allowSlideNext = swiper.activeIndex < maxIndex;
+          swiper.allowSlidePrev = swiper.activeIndex > 0;
+        } else {
+          swiper.allowSlideNext = true;
+          swiper.allowSlidePrev = true;
+        }
+      }
+    }
+  });
+});
+</script>
+
 
 {% schema %}
 {
@@ -79,6 +175,48 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
+    },
+      {
+      "type": "header",
+      "content": "Padding section"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Desktop padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Desktop padding bottom",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "mob_top_spacing",
+      "label": "Mobile paddding top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mob_bottom_spacing",
+      "label": "Mobile paddding bottom" ,
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "default": 40
     }
   ],
   "blocks": [
