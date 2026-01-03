@@ -309,6 +309,12 @@
     color: #ffffff;
     transition: all .3s;
 }
+.standard-sized .multicolumn-card.content-container {
+    flex-direction: column;
+}
+.standard-sized .multicolumn-card__image-wrapper--half-width {
+    width: 70%;
+}
 
 @media(max-width:989px){
   .multicolumn-list__item {    width: 49% !important;    max-width: 49% !important;}
@@ -324,5 +330,9 @@
 
 @media(max-width:550px){
   .multicolumn-list__item {     width: 70% !important;     max-width: 70% !important; }
+  .standard-sized .multicolumn-list__item {
+    width: 100%!important;
+    max-width: 100%!important;
+}
 }
 
