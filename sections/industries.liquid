@@ -1,3 +1,36 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+
+@media screen and (max-width: 767px) {
+.section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.mob_top_spacing | append: 'px' }};
+    padding-bottom: {{ section.settings.mob_bottom_spacing | append: 'px' }};
+    }
+}
+{% endstyle %}
+
+
+
+<section class="industries-section">
+  <div class="container">
+    <h2 class="industries-heading">{{ section.settings.heading }}</h2>
+    <div class="industries-grid">
+      {% for block in section.blocks %}
+        <div class="industry-card">
+          {% if block.settings.icon %}
+            <img src="{{ block.settings.icon | img_url: '200x200' }}" alt="{{ block.settings.title }}" class="industry-icon" />
+          {% endif %}
+          <h3 class="industry-title">{{ block.settings.title }}</h3>
+          <p class="industry-description">{{ block.settings.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 {% schema %}
 {
   "name": "Industries We Serve",
@@ -43,20 +76,3 @@
   ]
 }
 {% endschema %}
-
-<section class="industries-section">
-  <div class="container">
-    <h2 class="industries-heading">{{ section.settings.heading }}</h2>
-    <div class="industries-grid">
-      {% for block in section.blocks %}
-        <div class="industry-card">
-          {% if block.settings.icon %}
-            <img src="{{ block.settings.icon | img_url: '200x200' }}" alt="{{ block.settings.title }}" class="industry-icon" />
-          {% endif %}
-          <h3 class="industry-title">{{ block.settings.title }}</h3>
-          <p class="industry-description">{{ block.settings.description }}</p>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
