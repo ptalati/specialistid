@@ -35,3 +35,7 @@ div#tab2.vertical-badge-buddies-1xl {
     position: absolute;
     bottom: 0;
 }
+
+.product.product--thumbnail_slider .myUnderscore {
+    color: transparent;
+}
