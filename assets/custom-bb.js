@@ -407,6 +407,8 @@ function cleanStyleValue(value){
 }
 
 function replaceKey(value){
+    if (!value) return value;
+
     var val = value;
 
     if (value.match(/\s/g)) {
@@ -468,14 +470,14 @@ $(document).ready(function() {
         var line1 = getParameterByName('line1');
         var line2 = getParameterByName('line2');
 
-        if (line1 !== undefined || (line1 !== undefined && line2 !== undefined)) {
-          if (line1 !== "") {
+        if (line1 || line2) {
+          if (line1) {
             $('input[name="properties[Custom Line 1]"]').val(line1);
             setBadgeText(replaceKey(line1));
             $("#bb_option_custom_line_1").val(line1);
           }
-          
-          if (line2 !== "") {
+
+          if (line2) {
             $('input[name="properties[Custom Line 2]"]').val(line2);
             setBadgeText(replaceKey(line2), true);
             $("#bb_option_custom_line_2").val(line2);
