@@ -187,6 +187,7 @@
       "type": "concept",
       "name": "Concept to Deployment",
       "settings": {
+        "color_scheme": "",
         "title": "From Concept to Deployment",
         "subtitle": "Our proven 5-step process takes you from idea to implementation",
         "step1_title": "Requirements Discussion",
@@ -199,7 +200,11 @@
         "step4_desc": "Perfect the design based on testing results",
         "step5_title": "Production & Delivery",
         "step5_desc": "Scale to full production and coordinate delivery",
-        "timeline_note": "Each project varies depending on complexity, with a range of 4-8 weeks -> 9-12 months."
+        "timeline_note": "Each project varies depending on complexity, with a range of 4-8 weeks -> 9-12 months.",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "mob_top_spacing": 40,
+        "mob_bottom_spacing": 40
       }
     },
     "industries_KAUiCf": {
