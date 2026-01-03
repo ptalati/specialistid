@@ -1,35 +1,37 @@
 {% style %}
-    .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top }}px;
-    padding-bottom: {{ section.settings.padding_bottom }}px;
-  }
-
-   @media screen and (max-width: 767px) {
-  .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.mob_top_spacing | append: 'px' }};
-      padding-bottom: {{ section.settings.mob_bottom_spacing | append: 'px' }};
+      .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
     }
-}
+
+     @media screen and (max-width: 767px) {
+    .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.mob_top_spacing | append: 'px' }};
+        padding-bottom: {{ section.settings.mob_bottom_spacing | append: 'px' }};
+      }
+  }
 {% endstyle %}
 
 <div class="process-container section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
-  <h2 class="process-title">{{ section.settings.title }}</h2>
-  <p class="process-subtitle">{{ section.settings.subtitle }}</p>
+  <div class="page-width">
+    <h2 class="process-title">{{ section.settings.title }}</h2>
+    <p class="process-subtitle">{{ section.settings.subtitle }}</p>
 
-  <div class="process-steps">
-    {% for i in (1..5) %}
-      {% assign step_title_key = 'step' | append: i | append: '_title' %}
-      {% assign step_desc_key = 'step' | append: i | append: '_desc' %}
+    <div class="process-steps">
+      {% for i in (1..5) %}
+        {% assign step_title_key = 'step' | append: i | append: '_title' %}
+        {% assign step_desc_key = 'step' | append: i | append: '_desc' %}
 
-      <div class="process-step">
-        <div class="step-circle">{{ i }}</div>
-        <h3 class="step-title">{{ section.settings[step_title_key] }}</h3>
-        <p class="step-desc">{{ section.settings[step_desc_key] }}</p>
-      </div>
-    {% endfor %}
+        <div class="process-step">
+          <div class="step-circle">{{ i }}</div>
+          <h3 class="step-title">{{ section.settings[step_title_key] }}</h3>
+          <p class="step-desc">{{ section.settings[step_desc_key] }}</p>
+        </div>
+      {% endfor %}
 
-    <!-- Move this inside .process-steps -->
-    <p class="timeline-note">{{ section.settings.timeline_note }}</p>
+      <!-- Move this inside .process-steps -->
+      <p class="timeline-note">{{ section.settings.timeline_note }}</p>
+    </div>
   </div>
 </div>
 
@@ -37,7 +39,7 @@
 {
   "name": "Concept to Deployment",
   "settings": [
-     {
+    {
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
@@ -121,7 +123,7 @@
       "label": "Timeline Note",
       "default": "Timeline typically 4–8 weeks from concept to first production run"
     },
-      {
+    {
       "type": "header",
       "content": "Padding section"
     },
@@ -157,7 +159,7 @@
     {
       "type": "range",
       "id": "mob_bottom_spacing",
-      "label": "Mobile paddding bottom" ,
+      "label": "Mobile paddding bottom",
       "min": 0,
       "max": 200,
       "step": 4,
