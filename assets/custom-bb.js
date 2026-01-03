@@ -299,21 +299,24 @@ function setBadgeText(txt, secondLine) {
     }
 
     $("#badge-preview-text").html(html);
-    
-    $("#txtSpan1").textfill({
-    	widthOnly: true,
-    	maxFontPixels:30
-    });
 
-    $("#txtSpan2").textfill({
-    	widthOnly: true,
-    	maxFontPixels:30
-    });
+    // Check if textfill is available before using it
+    if ($.fn.textfill) {
+        $("#txtSpan1").textfill({
+            widthOnly: true,
+            maxFontPixels:30
+        });
 
-    $("#txtSingle").textfill({
-    	widthOnly: true,
-    	maxFontPixels:60
-    });
+        $("#txtSpan2").textfill({
+            widthOnly: true,
+            maxFontPixels:30
+        });
+
+        $("#txtSingle").textfill({
+            widthOnly: true,
+            maxFontPixels:60
+        });
+    }
 
     //Changes undescroe color
     // $('.myUnderscore').css("color",$(".selectedColor").css("background-color") );
