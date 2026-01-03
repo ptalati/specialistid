@@ -80,6 +80,12 @@
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
                 {% endif %}
+                  <a
+                    class="link animate-arrow"
+                     {%- if block.settings.link_label != blank -%}
+                      href="{{ block.settings.link }}"
+                    {% endif %}
+                  >
                 <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
                   <div
                     class="media media--transparent media--{{ section.settings.image_ratio }}"
@@ -117,6 +123,7 @@
                     }}
                   </div>
                 </div>
+              </a>
               {%- endif -%}
               <div class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
