@@ -270,7 +270,11 @@
       "name": "Industries Grid",
       "settings": {
         "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
-        "heading": "Industries We Serve"
+        "heading": "Industries We Serve",
+        "padding_top": 60,
+        "padding_bottom": 52,
+        "mob_top_spacing": 40,
+        "mob_bottom_spacing": 40
       }
     },
     "enterprise_solutions_contact_HEtWXr": {
