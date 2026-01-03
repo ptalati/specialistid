@@ -59,8 +59,9 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "accent-1",
+        "color_scheme": "scheme-5",
         "full_width": true,
+        "section_css_class": "Type your own CSS class",
         "padding_top": 40,
         "padding_bottom": 52
       }
