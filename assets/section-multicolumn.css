@@ -295,7 +295,7 @@
     --page-width: 1000px;
     margin: 0 auto;
 }
-.standard-sized .link.animate-arrow.button-section {
+.standard-sized .link {
     display: flex;
     padding: 15px;
     background-color: rgb(111, 180, 63);
