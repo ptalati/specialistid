@@ -69,7 +69,7 @@ function selectHorizontalBadgeBottom() {
 function selectHorizontalBadgeBuddiesXL() {
   $(".selectedColor").css({width: "183px", "margin-left": "53px", "margin-top": "-83px", height: "61px"});
   $("#tab1").css({"margin-bottom": "-100px"});
-  $(".selectedBadge").attr('src', '{{ "BB-1XL-CUSTOM-BLUE-H.png" | asset_img_url : '800x800' }}');
+  $(".selectedBadge").attr('src', '{{ "BB-1XL-CUSTOM-BLUE-H.png" | asset_img_url: "800x800" }}');
 
   $(".verimg").css("display", "none");
   $("#imgHorizontal").css("border", "3px solid #F5911F");
@@ -85,7 +85,7 @@ function selectHorizontalBadgeBuddiesXL() {
 function selectVerticalBadgeBuddiesXL() {
   $(".selectedColor").css({width: "122px", "margin-left": "143px", "margin-top": "-116px", height: "84px"});
   $("#tab1").css({"margin-bottom": "-100px"});
-  $(".selectedBadge").attr('src', '{{ "BB-1XL-CUSTOM-RED-V.png" | asset_img_url : '800x800' }}');
+  $(".selectedBadge").attr('src', '{{ "BB-1XL-CUSTOM-RED-V.png" | asset_img_url: "800x800" }}');
 
   $(".verimg").css("display", "none");
   $("#imgVertical").css("border", "3px solid #F5911F");
