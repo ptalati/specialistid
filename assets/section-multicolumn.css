@@ -309,6 +309,9 @@
     color: #ffffff;
     transition: all .3s;
 }
+.standard-sized .multicolumn-card.content-container {
+    flex-direction: column;
+}
 
 @media(max-width:989px){
   .multicolumn-list__item {    width: 49% !important;    max-width: 49% !important;}
