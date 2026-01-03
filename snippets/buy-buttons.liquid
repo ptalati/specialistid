@@ -6,11 +6,12 @@
   - product_form_id: {String} product form id.
   - section_id: {String} id of section to which this snippet belongs.
   - show_pickup_availability: {Boolean} for the pickup availability. If true the pickup availability is rendered, false - not rendered (optional).
+  - button_color_scheme: {String} color scheme for the buttons (optional).
 
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
-<div {{ block.shopify_attributes }}>
+<div {{ block.shopify_attributes }} class="color-{{ button_color_scheme | default: block.settings.button_color_scheme | default: 'scheme-1' }}">
   {%- if product != blank -%}
     {%- liquid
       assign gift_card_recipient_feature_active = false
