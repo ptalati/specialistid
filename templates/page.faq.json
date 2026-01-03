@@ -44,6 +44,7 @@
         "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
+        "section_css_class": "Type your own CSS class",
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -116,22 +117,198 @@
         "accordion_wCeXAd": {
           "type": "accordion",
           "settings": {
-            "accordion_title": "What is this product?",
-            "accordion_content": "<p>This is a sample accordion content.</p>"
+            "accordion_title": "What does Specialist ID do?",
+            "accordion_content": "<p>We provide high-quality badge holders, lanyards, badge reels, RFID accessories, custom credentials, and security solutions for businesses, schools, healthcare, government, and live events</p>"
           }
         },
         "accordion_EUfNqa": {
           "type": "accordion",
           "settings": {
-            "accordion_title": "How do I use it?",
-            "accordion_content": "<p>Here are the usage instructions.</p>"
+            "accordion_title": "Where are your products manufactured?",
+            "accordion_content": "<p>Our products are manufactured in a range of countries, including the USA, Taiwan, China, the UK, and others. We offer options that support specific compliance needs, such as Buy American and Berry Amendment requirements.</p>"
+          }
+        },
+        "accordion_3CRN97": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Are your products child-safe, latex-free, and antimicrobial?",
+            "accordion_content": "<ul><li>Our student-facing lanyards feature breakaway safety clasps and meet CPSIA standards.</li><li>Many of our products are latex-free and/or BPA-free — ask us for guidance if this is a concern.</li><li>We offer antimicrobial badge holders and lanyards to support infection control needs.</li></ul>"
+          }
+        },
+        "accordion_8QYEWh": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Do you offer eco-friendly or recycled lanyard materials?",
+            "accordion_content": "<p>Yes, we have sustainable options. <a>Contact us</a> for details.</p>"
+          }
+        },
+        "category_3UB3yp": {
+          "type": "category",
+          "settings": {
+            "category_title": "Ordering & Customization",
+            "category_description": ""
+          }
+        },
+        "accordion_EwUMHg": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Do you offer custom products?",
+            "accordion_content": "<p>Yes! If you don’t see what you need on our site, we can create a custom solution. Visit our <a href=\"https://www.specialistid.com/collections/custom-printed-products\" title=\"https://www.specialistid.com/collections/custom-printed-products\">Custom Product Collection</a> page to learn more.</p>"
+          }
+        },
+        "accordion_8NyELA": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "What is the minimum order and lead time for custom lanyards or badges?",
+            "accordion_content": "<p>Lead times depend on the specific product and are listed on each product page. Small custom orders produced in-house usually ship within <strong>1–2 days</strong>. Larger quantities or items made at our overseas facility require more time; for example, an order of <strong>500 custom lanyards typically takes about 3–4 weeks</strong>.</p><p>To ensure timely delivery—especially during busy periods like back-to-school—placing your order early is the best approach.</p>"
+          }
+        },
+        "accordion_PEEAXG": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Can I get a proof before placing my custom order?",
+            "accordion_content": "<p>We provide proofs <em>after</em> an order is placed due to the production time required.</p>"
+          }
+        },
+        "accordion_xReq94": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Can I get a sample kit?",
+            "accordion_content": "<p>Yes — we offer sample kits for qualified businesses and large orders. Request yours <a href=\"https://www.specialistid.com/pages/sample-request\" title=\"https://www.specialistid.com/pages/sample-request\">here</a>.</p>"
+          }
+        },
+        "accordion_xDY6wT": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Can you match the color of my logo?",
+            "accordion_content": "<p>Yes, we can get very close—often close enough that the difference is barely noticeable. If you provide your logo in a high-quality format and include the PMS/Pantone reference of your color, we’ll use this information to match it as accurately as possible. Need extra confidence? You can request a digital proof or printed sample—just let us know in the order notes.</p>"
+          }
+        },
+        "accordion_pffAyC": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Can you print badges with sequential or other variable data?",
+            "accordion_content": "<p>Absolutely. We specialize in printing badges with variable data—including sequential numbers, names, job titles, barcodes, QR codes, and more. Whether you're managing a small event or a large-scale operation, we can personalize each badge based on your data. Just send us a spreadsheet (Excel or CSV format works best) with the information you'd like on each badge, and we’ll take care of the rest. Each badge will be individually customized to match your layout and data. If you require assistance setting up your file, or want to preview a few samples before we print the full batch, we’re happy to assist. Just let us know.</p>"
+          }
+        },
+        "category_y6gXGV": {
+          "type": "category",
+          "settings": {
+            "category_title": "Shipping & Delivery",
+            "category_description": ""
+          }
+        },
+        "accordion_FRLhaa": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Where do you ship from?",
+            "accordion_content": "<p>Most orders ship from our Miami main warehouse, but depending on availability, they may ship from another one of our partner locations in the US.</p>"
+          }
+        },
+        "accordion_aejbMj": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "How fast do you ship?",
+            "accordion_content": "<p>Stock items usually ship the same business day or within 1 business day. Custom orders vary, see individual product pages or contact us for an estimate.</p>"
+          }
+        },
+        "accordion_nMYY8p": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Can you ship to multiple locations or drop-ship kits?",
+            "accordion_content": "<p>Yes, we can ship to multiple addresses and drop-ship directly to stores, campuses, or distribution centers.</p>"
+          }
+        },
+        "accordion_hC7kdC": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "What if I need a rush or emergency order?",
+            "accordion_content": "<p>We offer expedited shipping and rush processing where possible. <a href=\"https://www.specialistid.com/pages/contact-us\" title=\"https://www.specialistid.com/pages/contact-us\">Contact us</a> for urgent requests.</p>"
+          }
+        },
+        "category_dTP3Kx": {
+          "type": "category",
+          "settings": {
+            "category_title": "Returns, Refunds & Issues",
+            "category_description": ""
+          }
+        },
+        "accordion_qVzwRz": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "What is your return policy?",
+            "accordion_content": "<p>We accept returns of unused items within 30 days of delivery. See our <a href=\"https://www.specialistid.com/pages/returns\" title=\"https://www.specialistid.com/pages/returns\">Returns & Exchanges</a> page for details.</p>"
+          }
+        },
+        "accordion_Xyprfk": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "What if my item is broken or defective?",
+            "accordion_content": "<p>If you receive a damaged or defective item, <a href=\"/pages/contact-us\" title=\"Contact Us\">contact us</a> right away so we can make it right.</p>"
+          }
+        },
+        "accordion_4Vt8cp": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "What happens if an item is out of stock?",
+            "accordion_content": "<p>We’ll notify you immediately with alternatives or expected restock dates.</p>"
+          }
+        },
+        "category_7GTADT": {
+          "type": "category",
+          "settings": {
+            "category_title": "Payments & Billing",
+            "category_description": ""
+          }
+        },
+        "accordion_7P9d8W": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "What payment methods do you accept?",
+            "accordion_content": "<p>We accept major credit cards, PayPal, and ACH payments through approved channels.</p>"
+          }
+        },
+        "accordion_ab3kP3": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Do you accept purchase orders?",
+            "accordion_content": "<p>Yes, we accept purchase orders. Our UEI (Unique Entity Identification) number is <strong>FHHSLAAFPUD2</strong></p>"
+          }
+        },
+        "accordion_ddCaac": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Can you provide consolidated invoices for multi-location accounts?",
+            "accordion_content": "<p>Yes, we can coordinate billing for enterprise clients.</p>"
           }
         }
       },
       "block_order": [
         "category_3DHW6N",
         "accordion_wCeXAd",
-        "accordion_EUfNqa"
+        "accordion_EUfNqa",
+        "accordion_3CRN97",
+        "accordion_8QYEWh",
+        "category_3UB3yp",
+        "accordion_EwUMHg",
+        "accordion_8NyELA",
+        "accordion_PEEAXG",
+        "accordion_xReq94",
+        "accordion_xDY6wT",
+        "accordion_pffAyC",
+        "category_y6gXGV",
+        "accordion_FRLhaa",
+        "accordion_aejbMj",
+        "accordion_nMYY8p",
+        "accordion_hC7kdC",
+        "category_dTP3Kx",
+        "accordion_qVzwRz",
+        "accordion_Xyprfk",
+        "accordion_4Vt8cp",
+        "category_7GTADT",
+        "accordion_7P9d8W",
+        "accordion_ab3kP3",
+        "accordion_ddCaac"
       ],
       "name": "FAQ Section",
       "settings": {
