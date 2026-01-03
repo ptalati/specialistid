@@ -76,12 +76,6 @@
             {% endif %}
           >
             <div class="multicolumn-card content-container">
-              <a
-                class="link animate-arrow"
-                {%- if block.settings.link_label != blank -%}
-                  href="{{ block.settings.link }}"
-                {% endif %}
-              >
                 {%- if block.settings.image != blank -%}
                   {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                     {% assign spaced_image = true %}
@@ -144,7 +138,6 @@
                     </a>
                   {%- endif -%}
                 </div>
-              </a>
             </div>
           </li>
         {%- endfor -%}
