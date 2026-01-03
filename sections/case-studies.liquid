@@ -1,0 +1,92 @@
+<section class="section real-solution-section">
+  <div class="page-width">
+    <h2 class="section-heading">{{ section.settings.heading }}</h2>
+
+    <div class="swiper real-solution-carousel">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <div class="case">
+            <div class="case-image">
+              {% if block.settings.image %}
+                <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.title }}">
+              {% else %}
+                <div class="case-image-placeholder">No image set</div>
+              {% endif %}
+            </div>
+            <div class="case-content">
+              <h3>{{ block.settings.title }}</h3>
+              <p class="case-challenge"><strong>Challenge:</strong> {{ block.settings.challenge }}</p>
+              <p class="case-solution"><strong>Solution:</strong> {{ block.settings.solution }}</p>
+              <p class="case-result"><strong>Result:</strong> {{ block.settings.result }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- Pagination dots (optional) -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Real Solutions Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Real Solutions for Real Companies"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "case_study",
+      "name": "Case Study",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Case Study Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Company Name",
+          "default": "Example Company"
+        },
+        {
+          "type": "textarea",
+          "id": "challenge",
+          "label": "Challenge"
+        },
+        {
+          "type": "textarea",
+          "id": "solution",
+          "label": "Solution"
+        },
+        {
+          "type": "textarea",
+          "id": "result",
+          "label": "Result"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Real Solutions Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
