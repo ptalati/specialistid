@@ -426,19 +426,31 @@ function replaceKey(value){
 }
 
 function changeColor(color) {
-    // console.log($(this).val());
+    if (!color) return;
+
+    console.log('Changing color to:', color);
+
+    // Remove all existing color variant classes
     $(".product.product--thumbnail_slider").removeClass (function (index, className) {
         return (className.match (/(^|\s)product-variant-color-\S+/g) || []).join(' ');
     });
-    $(".product.product--thumbnail_slider").addClass('product-variant-color-' + color.replace(' ', '-').toLowerCase());
+
+    // Convert color name to CSS class format (replace all spaces with dashes, lowercase)
+    var colorClass = 'product-variant-color-' + color.replace(/\s+/g, '-').toLowerCase();
+    console.log('Adding class:', colorClass);
+
+    $(".product.product--thumbnail_slider").addClass(colorClass);
 }
 
 $(document).ready(function() {
     //reset app
     resetApp();
 
-    var startColor = $(".color-swatch-wrapper input[name='Color']:checked").val();
-    console.log(startColor);
+    // Check for initial color selection (multiple possible selectors)
+    var startColor = $("fieldset.product-form__input input[name='Color']:checked").val() ||
+                     $(".color-swatch-wrapper input[name='Color']:checked").val() ||
+                     $("input[name='Color']:checked").val();
+    console.log('Initial color:', startColor);
     if (startColor) changeColor(startColor);
 
     $('#infiniteoptions-container').on('input', '.custom-line-1 input[type=text]', function() {
@@ -453,8 +465,18 @@ $(document).ready(function() {
         $("#bb_option_custom_line_2").val($(this).val());
     });
 
-    $(".color-swatch-wrapper .color-swatch-item").click(function() {
-        changeColor($(this).val());
+    // Listen for color changes - multiple possible selectors
+    $(document).on('change', 'fieldset.product-form__input input[name="Color"]', function() {
+        var selectedColor = $(this).val();
+        console.log('Color changed to:', selectedColor);
+        changeColor(selectedColor);
+    });
+
+    // Fallback for other color swatch implementations
+    $(".color-swatch-wrapper .color-swatch-item, fieldset input[type='radio'][name='Color']").on('change click', function() {
+        var selectedColor = $(this).val();
+        console.log('Color selected:', selectedColor);
+        changeColor(selectedColor);
     });
 });
 
