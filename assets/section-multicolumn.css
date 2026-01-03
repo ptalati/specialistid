@@ -291,6 +291,25 @@
 }
 .multicolumn .slider-buttons.no-js-hidden.medium-hide {   display: none;}
 
+.standard-sized .page-width {
+    --page-width: 1000px;
+    margin: 0 auto;
+}
+.standard-sized .link.animate-arrow.button-section {
+    display: flex;
+    padding: 15px;
+    background-color: rgb(111, 180, 63);
+    border-radius: 4px;
+    text-decoration: none;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #ffffff;
+    transition: all .3s;
+}
+
 @media(max-width:989px){
   .multicolumn-list__item {    width: 49% !important;    max-width: 49% !important;}
   .multicolumn-list {    gap: 12px;}
