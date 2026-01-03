@@ -20,6 +20,18 @@ h2.process-title {
     font-size: 16px;
     margin-bottom: 40px;
 }
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.process-step {
+    flex: 1 1 18%;
+    min-width: 180px;
+    max-width: 220px;
+    margin: 0 auto;
+}
 {% endstyle %}
 
 <div class="process-container section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
