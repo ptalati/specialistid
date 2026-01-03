@@ -1,0 +1,292 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_CdY4CW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_pwCpTB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Custom Solutions when Standard Products Don't Work",
+            "heading_size": "h1"
+          }
+        },
+        "text_3bmxtq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You have a unique issue, we have the manufacturing to build<br/>the solution.</p>"
+          }
+        },
+        "button_4ng8bN": {
+          "type": "button",
+          "settings": {
+            "button_label": "Discuss your project",
+            "button_link": "#enterprise-contact",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_pwCpTB",
+        "text_3bmxtq",
+        "button_4ng8bN"
+      ],
+      "custom_css": [
+        ".rich-text.content-container.color-accent-1.gradient.rich-text--full-width.content-container--full-width {box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;}",
+        "a.button,a.button::before {background-color: #6fb43f !important; color: #ffffff;}",
+        "a.button::after {box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 var(--buttons-border-width) rgba(111, 180, 63, var(--alpha-button-background));}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_HbDCyk": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_nLCrDt": {
+          "type": "column",
+          "settings": {
+            "title": "Department & Division Leaders:",
+            "text": "<p>Want to test a solution before a<br/>company-wide rollout? Let's build a pilot program</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_XQW9Py": {
+          "type": "column",
+          "settings": {
+            "title": "Procurement & Agencies/Intermediaries:",
+            "text": "<p>Sourcing standard or custom<br/>solutions for your clients? We'll partner with you to provide a<br/>seamless product flow.<br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_y4Pwdb": {
+          "type": "column",
+          "settings": {
+            "title": "Enterprise Decision Makers",
+            "text": "<p>Want to make sure product shows up at<br/>every location, without fail? Let us handle the logistics</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_nLCrDt",
+        "column_XQW9Py",
+        "column_y4Pwdb"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Who we specialize working with",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36,
+        "section_css_class": "Type your own CSS class"
+      }
+    },
+    "case_studies_3ph7FW": {
+      "type": "case-studies",
+      "blocks": {
+        "case_study_qWCXtT": {
+          "type": "case_study",
+          "settings": {
+            "image": "shopify://shop_images/Cracker_Barrel_-_Custom.png",
+            "title": "National Restaurant Chain",
+            "challenge": "Needed unique coil ID holders meeting specific uniform and brand requirements",
+            "solution": "Custom retractable holders matching exact brand standards and functionality needs",
+            "result": "Consistent employee presentation across all company locations"
+          }
+        },
+        "case_study_8QjCqT": {
+          "type": "case_study",
+          "settings": {
+            "image": "shopify://shop_images/Zipcar-1-FINAL.jpg",
+            "title": "Leading Car Sharing Company",
+            "challenge": "Required sun visor-mounted fuel card holders for entire vehicle fleet",
+            "solution": "Custom visor clip design with secure card retention and easy access",
+            "result": "Fuel and Insurance cards\nstay in the cars instead of getting lost."
+          }
+        },
+        "case_study_jQ4qzb": {
+          "type": "case_study",
+          "settings": {
+            "image": "shopify://shop_images/Gallery-CS.png",
+            "title": "Major Home Improvement Retailer",
+            "challenge": "Needed weatherproof information displays for outdoor furniture across 1,700+ locations",
+            "solution": "Custom retractable card holders with weather-resistant materials and secure mounting",
+            "result": "Information Cards stay attached to displays after thousands of customers interactions"
+          }
+        },
+        "case_study_JFAUya": {
+          "type": "case_study",
+          "settings": {
+            "image": "shopify://shop_images/Gallery-CS.png",
+            "title": "Global Manufacturing Company",
+            "challenge": "Frustrated with unresponsive supplier, surprise price increases, poor communication",
+            "solution": "Reliable partnership with transparent pricing, consistent communication, custom solutions",
+            "result": "Ongoing relationship with predictable service and custom badge solutions"
+          }
+        }
+      },
+      "block_order": [
+        "case_study_qWCXtT",
+        "case_study_8QjCqT",
+        "case_study_jQ4qzb",
+        "case_study_JFAUya"
+      ],
+      "name": "Real Solutions Section",
+      "settings": {
+        "heading": "Real Solutions for Real Companies"
+      }
+    },
+    "concept_7BaJYn": {
+      "type": "concept",
+      "name": "Concept to Deployment",
+      "settings": {
+        "title": "From Concept to Deployment",
+        "subtitle": "Our proven 5-step process takes you from idea to implementation",
+        "step1_title": "Requirements Discussion",
+        "step1_desc": "Understand your specific needs and challenges",
+        "step2_title": "Design & Prototype",
+        "step2_desc": "Create custom solution and initial samples",
+        "step3_title": "Sample Testing",
+        "step3_desc": "Test in real environment and gather feedback",
+        "step4_title": "Approval & Refinement",
+        "step4_desc": "Perfect the design based on testing results",
+        "step5_title": "Production & Delivery",
+        "step5_desc": "Scale to full production and coordinate delivery",
+        "timeline_note": "Each project varies depending on complexity, with a range of 4-8 weeks -> 9-12 months."
+      }
+    },
+    "industries_KAUiCf": {
+      "type": "industries",
+      "blocks": {
+        "industry_6DHHfC": {
+          "type": "industry",
+          "settings": {
+            "icon": "shopify://shop_images/Retail_Restaurant.png",
+            "title": "Retail & Restaurant",
+            "description": "Multi-location consistency and brand standards"
+          }
+        },
+        "industry_EWW9mB": {
+          "type": "industry",
+          "settings": {
+            "icon": "shopify://shop_images/Manufacturing.png",
+            "title": "Manufacturing",
+            "description": "Durable solutions for industrial environments"
+          }
+        },
+        "industry_QjNzXD": {
+          "type": "industry",
+          "settings": {
+            "icon": "shopify://shop_images/Healthcare.png",
+            "title": "Healthcare",
+            "description": "Compliance-focused ID and safety systems"
+          }
+        },
+        "industry_bawKGz": {
+          "type": "industry",
+          "settings": {
+            "icon": "shopify://shop_images/Education.png",
+            "title": "Education",
+            "description": "Large-scale campus implementations"
+          }
+        },
+        "industry_Y8La4n": {
+          "type": "industry",
+          "settings": {
+            "icon": "shopify://shop_images/Government.png",
+            "title": "Government",
+            "description": "Security and standardization requirements"
+          }
+        },
+        "industry_VXAazE": {
+          "type": "industry",
+          "settings": {
+            "icon": "shopify://shop_images/Corporate.png",
+            "title": "Corporate",
+            "description": "Professional appearance and brand consistency"
+          }
+        }
+      },
+      "block_order": [
+        "industry_6DHHfC",
+        "industry_EWW9mB",
+        "industry_QjNzXD",
+        "industry_bawKGz",
+        "industry_Y8La4n",
+        "industry_VXAazE"
+      ],
+      "name": "Industries Grid",
+      "settings": {
+        "heading": "Industries We Serve"
+      }
+    },
+    "enterprise_solutions_contact_HEtWXr": {
+      "type": "enterprise-solutions-contact",
+      "settings": {
+        "caption": "SpecialistID",
+        "heading": "Enterprise Solutions",
+        "subheading": "",
+        "content": "<ul><li>Large Quantities<br/></li><li>Custom Solutions<br/></li><li>Dedicated Support Team<br/></li><li>Experts in Creating New Products</li></ul>",
+        "content1": "<h2>Specialist ID, Inc.</h2><p><strong>Address</strong> : 7760 NW 56th St. Doral FL, 33166 </p><p><strong>Cage Code</strong> : 12-538 4441</p><p><strong>UEI:</strong> FHHSLAAFPUD2</p><p>889 Certification</p><p>Registered Small Business</p><p></p>",
+        "content2": "<h2>Specialist ID, Inc.</h2><p><strong>Speak with our enterprise specialist:</strong> M-F 9am - 5pm EST</p><p><strong>Toll Free :</strong> <a href=\"tel:1-888-559-1940\" title=\"tel:1-888-559-1940\">1-888-559-1940</a></p>",
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "mob_top_spacing": 40,
+        "mob_bottom_spacing": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_CdY4CW",
+    "multicolumn_HbDCyk",
+    "case_studies_3ph7FW",
+    "concept_7BaJYn",
+    "industries_KAUiCf",
+    "enterprise_solutions_contact_HEtWXr"
+  ]
+}
