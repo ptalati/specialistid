@@ -1,15 +1,21 @@
 {% style %}
-      .section-{{ section.id }}-padding {
+   .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
 
-     @media screen and (max-width: 767px) {
+   @media screen and (max-width: 767px) {
     .section-{{ section.id }}-padding {
         padding-top: {{ section.settings.mob_top_spacing | append: 'px' }};
         padding-bottom: {{ section.settings.mob_bottom_spacing | append: 'px' }};
       }
   }
+  h2.process-title {
+    font-size: 28px;
+    color: rgb(111, 180, 63);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
 {% endstyle %}
 
 <div class="process-container section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
