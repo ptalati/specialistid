@@ -187,7 +187,7 @@
       "type": "concept",
       "name": "Concept to Deployment",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "title": "From Concept to Deployment",
         "subtitle": "Our proven 5-step process takes you from idea to implementation",
         "step1_title": "Requirements Discussion",
