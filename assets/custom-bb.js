@@ -453,6 +453,17 @@ $(document).ready(function() {
     //reset app
     resetApp();
 
+    // Debug: Log all possible color inputs
+    console.log('=== COLOR INPUT DEBUG ===');
+    console.log('Color inputs found:', $("input[name='Color']").length);
+    console.log('Fieldset color inputs:', $("fieldset.product-form__input input[name='Color']").length);
+    console.log('All radio inputs:', $("input[type='radio']").length);
+
+    // Check all color inputs and their values
+    $("input[name='Color']").each(function(index) {
+        console.log('Color input', index, ':', $(this).val(), 'checked:', $(this).is(':checked'));
+    });
+
     // Check for initial color selection (multiple possible selectors)
     var startColor = $("fieldset.product-form__input input[name='Color']:checked").val() ||
                      $(".color-swatch-wrapper input[name='Color']:checked").val() ||
@@ -472,18 +483,30 @@ $(document).ready(function() {
         $("#bb_option_custom_line_2").val($(this).val());
     });
 
-    // Listen for color changes - multiple possible selectors
-    $(document).on('change', 'fieldset.product-form__input input[name="Color"]', function() {
+    // Listen for color changes - use delegation for all color-related inputs
+    $(document).on('change click', 'input[name="Color"]', function() {
         var selectedColor = $(this).val();
-        console.log('Color changed to:', selectedColor);
+        console.log('>>> Color changed via input[name="Color"]:', selectedColor);
         changeColor(selectedColor);
     });
 
-    // Fallback for other color swatch implementations
-    $(".color-swatch-wrapper .color-swatch-item, fieldset input[type='radio'][name='Color']").on('change click', function() {
-        var selectedColor = $(this).val();
-        console.log('Color selected:', selectedColor);
-        changeColor(selectedColor);
+    // Additional listener for fieldset inputs
+    $(document).on('change click', 'fieldset.product-form__input input', function() {
+        if ($(this).attr('name') === 'Color') {
+            var selectedColor = $(this).val();
+            console.log('>>> Color changed via fieldset:', selectedColor);
+            changeColor(selectedColor);
+        }
+    });
+
+    // Catch-all listener for any radio button changes
+    $(document).on('change', 'input[type="radio"]', function() {
+        var inputName = $(this).attr('name');
+        var inputValue = $(this).val();
+        console.log('Radio changed:', inputName, '=', inputValue);
+        if (inputName === 'Color') {
+            changeColor(inputValue);
+        }
     });
 });
 
