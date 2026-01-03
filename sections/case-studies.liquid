@@ -62,6 +62,58 @@
   </div>
 </section>
 
+<script>
+    
+document.addEventListener('DOMContentLoaded', function () {
+  const swiperContainer = document.querySelector('.real-solution-carousel');
+  const totalSlides = swiperContainer.querySelectorAll('.swiper-slide').length;
+
+  const swiper = new Swiper('.real-solution-carousel', {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 20,
+    loop: false,
+    watchOverflow: true,
+    autoHeight: false,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      }
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        const slidesPerGroup = window.innerWidth < 768 ? 1 : 2;
+        const maxVisibleBullets = window.innerWidth < 768 ? totalSlides : 2;
+        if (index >= maxVisibleBullets) return '';
+        return `<span class="${className}"></span>`;
+      }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      slideChange: function () {
+        const slidesPerGroup = window.innerWidth < 768 ? 1 : 2;
+        const bulletCount = Math.ceil(totalSlides / slidesPerGroup);
+        const maxIndex = (bulletCount - 1) * slidesPerGroup;
+
+        if (window.innerWidth >= 768) {
+          swiper.allowSlideNext = swiper.activeIndex < maxIndex;
+          swiper.allowSlidePrev = swiper.activeIndex > 0;
+        } else {
+          swiper.allowSlideNext = true;
+          swiper.allowSlidePrev = true;
+        }
+      }
+    }
+  });
+});
+</script>
+
 
 {% schema %}
 {
