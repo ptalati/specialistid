@@ -14,7 +14,7 @@
 
 
 
-<section class="industries-section">
+<section class="industries-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
   <div class="container">
     <h2 class="industries-heading">{{ section.settings.heading }}</h2>
     <div class="industries-grid">
@@ -35,6 +35,12 @@
 {
   "name": "Industries We Serve",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
     {
       "type": "text",
       "id": "heading",
