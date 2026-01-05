@@ -11,13 +11,64 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_bKEdNq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jBEDwP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Specialist ID's Buying Guides",
+            "heading_size": "h1"
+          }
+        },
+        "text_QCWBFC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you’re a first-time buyer or a seasoned pro, let’s be honest—ID badge accessories probably aren’t the highlight of your day. We get it. That’s why we wrote this guide to make your life slightly less annoying when it comes to working with Specialist ID.</p><p>Our goal? Be the easiest, most drama-free part of your to-do list. And if something here doesn’t answer your burning questions (or mildly nagging curiosities), just shoot us a message. We’re here to help.</p>"
+          }
+        },
+        "button_NcrRt7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_jBEDwP",
+        "text_QCWBFC",
+        "button_NcrRt7"
+      ],
+      "custom_css": [
+        ".rich-text.content-container.color-accent-1.gradient.rich-text--full-width.content-container--full-width {box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;}",
+        "a.button,a.button::before {background-color: #6fb43f !important; color: #ffffff;}",
+        "a.button::after {box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 var(--buttons-border-width) rgba(111, 180, 63, var(--alpha-button-background));}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_bKEdNq"
   ]
 }
