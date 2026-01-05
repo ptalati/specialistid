@@ -11,6 +11,9 @@
   "sections": {
     "custom_liquid_3MVfVk": {
       "type": "custom-liquid",
+      "custom_css": [
+        ".parallax.parallax-window img {width: 100%; height: auto;}"
+      ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div class=\"page-width\">\n{% for image in collection.metafields.landing_page.landing_page_banner_image_desk %}\n<div class=\"parallax parallax-window\">\n  <img src=\"{{ image.src }}\" alt=\"{{ image.alt }}\" class=\"lazyload\" />\n</div>\n{% endfor %}\n</div>",
