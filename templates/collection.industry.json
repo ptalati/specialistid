@@ -1,0 +1,112 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_3MVfVk": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".parallax.parallax-window img {width: 100%; height: auto;}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\">\n{% for image in collection.metafields.landing_page.landing_page_banner_image_desk %}\n<div class=\"parallax parallax-window\">\n  <img src=\"{{ image.src }}\" alt=\"{{ image.alt }}\" class=\"lazyload\" />\n</div>\n{% endfor %}\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "custom_css": [
+        ".collection-hero__description {max-width: 100%;}"
+      ],
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "custom_liquid_QrhedD": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"read-more-wrapper page-width\"><button class=\"read-more button\">Read more</button></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_wkhG7A": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".sub-banner-image-card {display: flex; flex-wrap: nowrap;}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\">\n{% if collection.metafields.landing_page.landing_page_sub_html != blank %}\n        {{ collection.metafields.landing_page.landing_page_sub_html }}\n      {% endif %}\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 12,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_wp3JFA": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\">\n{{ collection.metafields.seo.description_below_products | metafield_tag }}\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_NaFwpC": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".embedded-video iframe {height: 660px; width: 100%;}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% if collection.metafields.landing_page.landing_page_youtube_embed_cod != blank %}\n    <div class=\"embedded-video page-width\">\n      {{ collection.metafields.landing_page.landing_page_youtube_embed_cod }}\n    </div>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_3MVfVk",
+    "banner",
+    "custom_liquid_QrhedD",
+    "custom_liquid_wkhG7A",
+    "product-grid",
+    "custom_liquid_wp3JFA",
+    "custom_liquid_NaFwpC"
+  ]
+}

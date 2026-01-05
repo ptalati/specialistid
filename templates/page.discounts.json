@@ -1,0 +1,397 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_Wqenkg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_93cAay": {
+          "type": "heading",
+          "settings": {
+            "heading": "Save more with Specialist ID!",
+            "heading_size": "h1"
+          }
+        },
+        "text_FqNRr3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unlock exclusive discounts and rewards from volume to seasonal discounts and earn rewards from our loyalty program.</p>"
+          }
+        },
+        "button_kKaTbg": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start Saving Now",
+            "button_link": "shopify://collections/deals",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_93cAay",
+        "text_FqNRr3",
+        "button_kKaTbg"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_PNJPyw": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_D7Qzk9": {
+          "type": "column",
+          "settings": {
+            "title": "Welcome10",
+            "text": "<p>$1 off $10 orders and up (one time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_VDzB8f": {
+          "type": "column",
+          "settings": {
+            "title": "Welcome50",
+            "text": "<p>$5 off $50 orders and up (One time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_RgytyA": {
+          "type": "column",
+          "settings": {
+            "title": "Welcome100",
+            "text": "<p>$10 off $100 orders and up (One time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_D7Qzk9",
+        "column_VDzB8f",
+        "column_RgytyA"
+      ],
+      "settings": {
+        "title": "Current Discounts",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "All Discount Codes",
+        "button_link": "shopify://pages/coupons",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 64,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36,
+        "section_css_class": "Type your own CSS class"
+      }
+    },
+    "featured_collection_7qAhqQ": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "our-best-sellers",
+        "products_to_show": 4,
+        "title": "Volume Discounts",
+        "heading_size": "h1",
+        "description": "<p>Buy more, save more!</p>",
+        "show_description": true,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_AYQHgR": {
+      "type": "rich-text",
+      "blocks": {
+        "text_BnEN7R": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Orders over 2500 units are eligible for additional volume discounts, get in contact with us to learn more.</p>"
+          }
+        },
+        "button_T6Lpww": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn more",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_BnEN7R",
+        "button_T6Lpww"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_BM3nWW": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_7GerLP": {
+          "type": "heading",
+          "settings": {
+            "heading": "ID Rewards - Our loyalty program",
+            "heading_size": "h1"
+          }
+        },
+        "text_gn7TpY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>By creating a SpecialistID account, you can start earning 1 Badge Buck for every $ spent on the store. You can also gain more ID$ by performing multiple additional actions.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_cdyyAJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join the club!",
+            "button_link": "/",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7GerLP",
+        "text_gn7TpY",
+        "button_cdyyAJ"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/IMG_0564.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "collapsible_content_Wq4tqr": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_CBEUad": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I combine discounts?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes you can combine your discounts without limits! Note that some discounts can only be used once per customers.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Pw3Wb4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do Badge Bucks work?",
+            "icon": "question_mark",
+            "row_content": "<p>You will earn 1 Badge Buck for every dollar spent. You can then redeem $1 off for each 50 Badge Bucks with no limit on how many Bucks you can use! (Example: Redeeming 500 Badge Bucks will give you a $10 discount)</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Qfmr9d": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How are bulk discounts applied?",
+            "icon": "question_mark",
+            "row_content": "<p>Bulk discounts vary by product, starting from as few as 5 units and scaling up to 1000+. The more you buy, the more you save—automatically applied in your cart for a seamless shopping experience.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_CBEUad",
+        "collapsible_row_Pw3Wb4",
+        "collapsible_row_Qfmr9d"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "FAQ - Discounts & Savings",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_DKfkzB": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_AzzGT9": {
+          "type": "caption",
+          "settings": {
+            "caption": "#MAKEITEASY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_q3yYtT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_hd66Ve": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_gUNTUy": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_AzzGT9",
+        "heading_q3yYtT",
+        "text_hd66Ve",
+        "button_gUNTUy"
+      ],
+      "custom_css": [],
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "speak-to-live-specialist",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "newsletter_FEEnQN": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_cDdMUL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Attached, Stay Connected",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_DEUzB3": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up and stay connected to receive news offers and exclusive discount codes.</p>"
+          }
+        },
+        "email_form_dzRCMp": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_cDdMUL",
+        "paragraph_DEUzB3",
+        "email_form_dzRCMp"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "newsletter-section",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_Wqenkg",
+    "multicolumn_PNJPyw",
+    "featured_collection_7qAhqQ",
+    "rich_text_AYQHgR",
+    "image_with_text_BM3nWW",
+    "collapsible_content_Wq4tqr",
+    "image_with_text_DKfkzB",
+    "newsletter_FEEnQN"
+  ]
+}

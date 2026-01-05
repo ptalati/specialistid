@@ -1,0 +1,242 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_bKEdNq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jBEDwP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Specialist ID's Buying Guides",
+            "heading_size": "h1"
+          }
+        },
+        "text_QCWBFC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you’re a first-time buyer or a seasoned pro, let’s be honest—ID badge accessories probably aren’t the highlight of your day. We get it. That’s why we wrote this guide to make your life slightly less annoying when it comes to working with Specialist ID.</p><p>Our goal? Be the easiest, most drama-free part of your to-do list. And if something here doesn’t answer your burning questions (or mildly nagging curiosities), just shoot us a message. We’re here to help.</p>"
+          }
+        },
+        "button_NcrRt7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_jBEDwP",
+        "text_QCWBFC",
+        "button_NcrRt7"
+      ],
+      "custom_css": [
+        ".rich-text.content-container.color-accent-1.gradient.rich-text--full-width.content-container--full-width {box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;}",
+        "a.button,a.button::before {background-color: #6fb43f !important; color: #ffffff;}",
+        "a.button::after {box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 var(--buttons-border-width) rgba(111, 180, 63, var(--alpha-button-background));}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_AcfDTD": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_LhQqTP": {
+          "type": "column",
+          "settings": {
+            "title": "Business / Corporate",
+            "text": "",
+            "link_label": "Consult the guide",
+            "link": "shopify://pages/corporate-id-badge-accessories-guide-for-buyers"
+          }
+        },
+        "column_EG6z73": {
+          "type": "column",
+          "settings": {
+            "title": "Government",
+            "text": "",
+            "link_label": "Consult the guide",
+            "link": "shopify://pages/government-id-badge-accessories-buying-guide"
+          }
+        },
+        "column_6rN9W6": {
+          "type": "column",
+          "settings": {
+            "title": "Healthcare / Hospitals",
+            "text": "",
+            "link_label": "Consult the guide",
+            "link": "shopify://pages/hospital-id-badge-accessories-procurement-guide"
+          }
+        },
+        "column_TENEq3": {
+          "type": "column",
+          "settings": {
+            "title": "Schools",
+            "text": "",
+            "link_label": "Consult the guide",
+            "link": "shopify://pages/the-ultimate-school-id-purchasing-guide-simple-steps-to-get-started"
+          }
+        },
+        "column_ceHx9r": {
+          "type": "column",
+          "settings": {
+            "title": "Universities / Colleges / ICUFs",
+            "text": "",
+            "link_label": "Consult the guide",
+            "link": "shopify://pages/university-id-badge-accessories-buying-guide"
+          }
+        }
+      },
+      "block_order": [
+        "column_LhQqTP",
+        "column_EG6z73",
+        "column_6rN9W6",
+        "column_TENEq3",
+        "column_ceHx9r"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36,
+        "section_css_class": "Type your own CSS class"
+      }
+    },
+    "image_with_text_nwHjPz": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_fyTfwC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_Dm4NTP": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_zK8BjK": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fyTfwC",
+        "text_Dm4NTP",
+        "button_zK8BjK"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "newsletter_CGG9hN": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_CYa7mg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Attached, Stay Connected",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_fmn8kg": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+          }
+        },
+        "email_form_iQpQgD": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_CYa7mg",
+        "paragraph_fmn8kg",
+        "email_form_iQpQgD"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "section_css_class": "newsletter-section",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_bKEdNq",
+    "multicolumn_AcfDTD",
+    "image_with_text_nwHjPz",
+    "newsletter_CGG9hN"
+  ]
+}

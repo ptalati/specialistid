@@ -737,21 +737,21 @@
         "heading_cXPEKT": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "<strong>Didn’t find your answer?</strong>",
             "heading_size": "h1"
           }
         },
         "text_qKA87C": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<p>Contact us — we’re here to help you find the perfect solution.</p>"
           }
         },
         "button_MzEJe8": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "Contact Us",
+            "button_link": "https://www.specialistid.com/pages/contact-us",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
