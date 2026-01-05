@@ -319,6 +319,418 @@
         "padding_horizontal": 0
       }
     },
+    "custom_faq_section_Y8ARnj": {
+      "type": "custom-faq-section",
+      "blocks": {
+        "category_QP4hM9": {
+          "type": "category",
+          "settings": {
+            "category_title": "K-12 School ",
+            "category_description": ""
+          }
+        },
+        "accordion_DzxCzj": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "How long does shipping take?",
+            "accordion_content": "<h6>For schools, <strong>standard shipping typically takes 3–5 business days</strong> within the continental U.S. Expedited options like <strong>2-day or overnight shipping</strong> are also available at checkout. Custom or bulk orders may require extra processing time before shipment. Our team will provide tracking and estimated delivery dates once your order ships.</h6>"
+          }
+        },
+        "accordion_9qaQVD": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "What’s the minimum order and typical lead-time for 500 custom school-color lanyards delivered before August orientation?",
+            "accordion_content": "<p>The minimum order for custom school-color lanyards is typically <strong>100 units</strong>, with <strong>bulk discounts</strong> starting at 500. For a quantity of 500, standard lead time is around <strong>10–15 business days</strong> after artwork approval. We recommend placing your order by <strong>early to mid-July</strong>. Rush production and expedited shipping options are also available if you're on a tighter timeline.</p>"
+          }
+        },
+        "accordion_ebJYwD": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Do you offer pre-bundled “starter kits” (printer, ribbon, cards, holders) so we don’t have to spec the pieces ourselves?",
+            "accordion_content": "<p>Yes, we offer <strong>pre-bundled ID starter kits</strong> that include everything you need: <strong>printer, ribbon, blank cards, and badge holders</strong>. These kits are ideal for schools looking for a <strong>plug-and-play solution</strong> without having to source individual components. We’ll match the right supplies to your needs, whether for staff, students, or visitors. Our team can also help you <strong>customize a kit</strong> based on your school’s size and badge usage.</p>"
+          }
+        },
+        "accordion_CCXy46": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Can we get samples in multiple colors before committing?",
+            "accordion_content": "<p>Yes, we’re happy to provide <strong>lanyard or badge holder samples in multiple colors</strong> so you can evaluate before committing. This helps schools match exact <strong>school branding or uniform requirements</strong>. Just let us know your preferred colors and product types. We’ll ship out a <strong>sample pack quickly and at no cost</strong>.</p>"
+          }
+        },
+        "accordion_pn3yj7": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Do you have template art files sized for our graphic-arts teacher to modify?",
+            "accordion_content": "<p>Yes, we provide print-ready template files for custom lanyards, ID cards, and badge reels that your graphic-arts teacher can easily modify. These files are available in common formats like AI, PSD, and PDF, with correct sizing and bleed settings. </p>"
+          }
+        },
+        "category_hmkXLB": {
+          "type": "category",
+          "settings": {
+            "category_title": "K-12 District / Multi-school procurement",
+            "category_description": ""
+          }
+        },
+        "accordion_iAQn48": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Can we create a parent account with sub-accounts for each campus and one consolidated invoice?",
+            "accordion_content": "<p>Yes, we can set up a <strong>parent account with sub-accounts</strong> for each school or campus under your district. This allows each location to order independently while you receive a <strong>single, consolidated invoice</strong> for easier procurement tracking. We’ll work with your finance team to align with your <strong>billing and PO requirements</strong>. Just let us know how you'd like the structure set up, and we’ll take care of the rest.</p>"
+          }
+        },
+        "accordion_YxKyz7": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Do you honor state purchasing-co-op or Source well contracts?",
+            "accordion_content": "<p>Yes, we honor <strong>state purchasing cooperatives</strong> and can work with districts using <strong>Sourcewell or similar contracts</strong>. If your district is part of a co-op, we’ll ensure pricing and terms align with your agreement. Just provide your <strong>contract or membership details</strong>, and our team will handle the rest. We’re experienced in supporting public sector purchasing requirements.</p>"
+          }
+        },
+        "accordion_x7VmeR": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Will you lock price for 12 months to match our budget cycle?",
+            "accordion_content": "<p>Yes, we can <strong>lock in pricing for up to 12 months</strong> to align with your district’s budget cycle. This helps you plan purchases across campuses without price fluctuations. Just let us know your projected quantities and items. We’ll provide a formal quote with <strong>guaranteed pricing</strong> for the full term.</p>"
+          }
+        },
+        "accordion_gLqf6C": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Can you kit lanyard + holder sets by school in labeled cartons?",
+            "accordion_content": "<p>Yes, we can <strong>pre-kit lanyard and holder sets</strong> by school and pack them in <strong>clearly labeled cartons</strong> for easy distribution. This saves time at the district level and ensures each campus gets exactly what they need. Just provide your breakdown by school and quantity. We’ll handle the sorting, labeling, and shipping for a <strong>ready-to-distribute solution</strong>.</p>"
+          }
+        },
+        "accordion_FaVBEH": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "What logistics support do you provide for shipping to 30 different addresses on the same PO?",
+            "accordion_content": "<p>We offer full logistics support for <strong>multi-location shipments</strong>, including packing and shipping to all <strong>30 addresses</strong> under a single PO. You can provide a simple spreadsheet with campus names, addresses, and quantities. Our team will manage the fulfillment and provide <strong>tracking for each delivery</strong>. We ensure a smooth, coordinated rollout across all your schools.</p>"
+          }
+        },
+        "category_4DW7x4": {
+          "type": "category",
+          "settings": {
+            "category_title": "College",
+            "category_description": ""
+          }
+        },
+        "accordion_BVWGHi": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Are your PVC, magnetic-stripe and smart cards compatible with our HID iCLASS SE readers?",
+            "accordion_content": "<p>Yes, we offer <strong>PVC, magnetic-stripe, and smart cards</strong> that are fully compatible with <strong>HID iCLASS SE readers</strong>. Our cards support technologies like <strong>iCLASS SE, Prox, and MIFARE</strong>, depending on your system. Just let us know your reader model or facility code, and we’ll match the correct card type. We also offer <strong>custom pre-printing and encoding</strong> services to streamline deployment.</p>"
+          }
+        },
+        "accordion_dagmt4": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Which card printers do you stock, and do you service them or sell just consumables?",
+            "accordion_content": "<p>We stock top brands like <strong>Fargo, Evolis, and Magicard</strong>—trusted options for college ID card programs. In addition to selling <strong>printers and consumables</strong> (ribbons, cleaning kits, cards), we also offer <strong>technical support and service guidance</strong>. While we don’t perform on-site repairs, our team can assist with <strong>troubleshooting, warranty coordination, and part replacement</strong>. We’re here to ensure your printer stays running smoothly year-round.</p>"
+          }
+        },
+        "accordion_XpqNAg": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "What warranty and on-site support options exist for printers purchased through you?",
+            "accordion_content": "<p>Printers purchased through us come with the <strong>manufacturer’s full warranty</strong>, typically ranging from <strong>1 to 3 years</strong> depending on the model. We can also help you add <strong>extended warranties or hot-swap service plans</strong> for faster replacements. While we don’t offer on-site repairs, our support team will coordinate directly with the manufacturer for <strong>warranty service or loaner units</strong>. We’re your point of contact for any issues post-purchase.</p>"
+          }
+        },
+        "accordion_nGqQYq": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Can you preload sequential student numbers or encode mag-stripes for us?",
+            "accordion_content": "<p>Yes, we can <strong>preload sequential student ID numbers</strong> and <strong>encode magnetic stripes</strong> to match your system requirements. Just provide a data file or encoding format, and we’ll handle the rest. This saves your staff time and ensures consistency across all cards. We also offer <strong>barcoding and smart card encoding</strong> upon request.</p>"
+          }
+        },
+        "accordion_WdKgaR": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Do you offer eco-friendly or recycled lanyard materials?",
+            "accordion_content": "<p>Yes, we offer <strong>eco-friendly lanyards</strong> made from <strong>recycled PET, bamboo fiber, and other sustainable materials</strong>. These options are perfect for colleges looking to reduce their environmental impact. They’re available with <strong>custom printing</strong> and the same safety and comfort features as standard lanyards. Just ask for our <strong>eco-conscious product line</strong> when requesting a quote or sample</p>"
+          }
+        },
+        "category_FhBAPT": {
+          "type": "category",
+          "settings": {
+            "category_title": "Universities",
+            "category_description": ""
+          }
+        },
+        "accordion_nBxrYP": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Do you have an Enterprise or “punch-out” e-procurement integration (Jaggaer, Coupa, etc.)?",
+            "accordion_content": "<p>Yes, we offer <strong>punch-out integration</strong> with platforms like <strong>Jaggaer, Coupa, and Ariba</strong>. Our system supports <strong>real-time ordering and budget controls</strong>. We’ll work with your procurement team to ensure a smooth setup. Integration aligns with most <strong>university e-procurement standards</strong>.</p>"
+          }
+        },
+        "accordion_cpyxxP": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Do you offer volume pricing tiers for 25k+ badges?",
+            "accordion_content": "<p>Yes, we offer <strong>custom volume pricing</strong> for orders of <strong>25,000+ badges</strong>. Discounts are based on quantity, material, and print complexity. Send us your specs, and we’ll provide a <strong>tiered quote</strong> with bulk savings. Contract pricing can also be locked for future reorders.</p>"
+          }
+        },
+        "accordion_y9Yx7g": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Can you warehouse inventory and release on a JIT schedule?",
+            "accordion_content": "<p>Yes, we can <strong>warehouse your inventory</strong> and release it on a <strong>Just-In-Time (JIT) schedule</strong> to support multiple campuses. This helps reduce on-site storage needs and ensures timely delivery. We’ll work with your team to set up a release calendar or on-demand system. Tracking and inventory updates are provided regularly.</p>"
+          }
+        },
+        "accordion_6zdmWK": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "What data-security measures protect student photo files we send for pre-printing?",
+            "accordion_content": "<p>We use <strong>secure, encrypted file transfer protocols</strong> to protect student photo and data files during upload and storage. Access is limited to authorized staff involved in pre-printing. Files are deleted after order completion unless otherwise requested. We follow <strong>FERPA-compliant handling practices</strong> to ensure student privacy.</p>"
+          }
+        },
+        "accordion_9JkCwt": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "What are the service-level agreements for replacement cards during peak semester rush?",
+            "accordion_content": "<p>During peak semester periods, we offer <strong>priority service-level agreements (SLAs)</strong> for replacement cards, typically shipping within <strong>24–48 hours</strong>. Expedited production and delivery options are available for urgent needs. We recommend forecasting volume in advance to reserve capacity. Our team ensures fast turnaround without sacrificing print quality.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "category_QP4hM9",
+        "accordion_DzxCzj",
+        "accordion_9qaQVD",
+        "accordion_ebJYwD",
+        "accordion_CCXy46",
+        "accordion_pn3yj7",
+        "category_hmkXLB",
+        "accordion_iAQn48",
+        "accordion_YxKyz7",
+        "accordion_x7VmeR",
+        "accordion_gLqf6C",
+        "accordion_FaVBEH",
+        "category_4DW7x4",
+        "accordion_BVWGHi",
+        "accordion_dagmt4",
+        "accordion_XpqNAg",
+        "accordion_nGqQYq",
+        "accordion_WdKgaR",
+        "category_FhBAPT",
+        "accordion_nBxrYP",
+        "accordion_cpyxxP",
+        "accordion_y9Yx7g",
+        "accordion_6zdmWK",
+        "accordion_9JkCwt"
+      ],
+      "name": "FAQ Section",
+      "settings": {
+        "tabs_group_id": "main-tabs",
+        "tab_id": "school",
+        "section_description": "",
+        "padding_bottom": 40,
+        "padding_horizontal": 0
+      }
+    },
+    "custom_faq_section_MpLgdT": {
+      "type": "custom-faq-section",
+      "blocks": {
+        "category_aWB3xF": {
+          "type": "category",
+          "settings": {
+            "category_title": "Hospital (single facility)",
+            "category_description": ""
+          }
+        },
+        "accordion_LqVCAk": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Which badge reels, holders and lanyards are explicitly antimicrobial and meet Joint Commission infection-control standards?",
+            "accordion_content": "<p>We offer a selection of <strong>antimicrobial badge reels, holders, and lanyards</strong> specifically designed for healthcare settings. These products are treated to inhibit microbial growth and support <strong>Joint Commission infection-control standards</strong>. Look for items labeled “<strong>antimicrobial</strong>” in our product listings. Our team can provide a curated list tailored to your facility’s compliance needs.</p>"
+          }
+        },
+        "accordion_6KcgeM": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Are your “badge buddies” color codes aligned with common clinical role standards (RN = blue, MD = black, etc.)?",
+            "accordion_content": "<p>Yes, our <strong>Badge Buddies</strong> follow common hospital color standards like <strong>RN = blue</strong>, <strong>MD = black</strong>, <strong>LPN = green</strong>, and more. We offer both <strong>standard role colors</strong> and custom printing if your facility uses a unique scheme. All are designed for <strong>quick role recognition</strong> in clinical settings. Let us know your role list, and we’ll match or customize as needed.</p>"
+          }
+        },
+        "accordion_e47xiR": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Do you guarantee break-away lanyards for patient-safety compliance?",
+            "accordion_content": "<p>Yes, all of our healthcare lanyards come with <strong>breakaway safety clasps</strong> to meet <strong>patient-safety and compliance requirements</strong>. This feature helps prevent choking or entanglement risks in clinical environments. We recommend these for all <strong>patient-facing staff</strong> and areas with safety protocols. Compliance documentation is available upon request.</p>"
+          }
+        },
+        "accordion_BgrL4b": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Are products latex-free and BPA-free?",
+            "accordion_content": "<h6>ChatGPT said:</h6><p>Yes, the majority of our healthcare products are <strong>latex-free and BPA-free</strong>, making them safe for sensitive environments. This includes badge holders, lanyards, and reels commonly used in hospitals. Product specs clearly indicate if they're <strong>hypoallergenic and toxin-free</strong>. Let us know if you need documentation for compliance or patient safety review.</p>"
+          }
+        },
+        "accordion_hhGxiw": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "What is turnaround for emergency overnight orders if an audit identifies non-compliant accessories?",
+            "accordion_content": "<p>For emergency situations, we offer <strong>same-day processing and overnight shipping</strong> on in-stock, compliant accessories. Orders placed by <strong>2 PM ET</strong> can typically ship the same day. We prioritize healthcare compliance needs, especially during audits. Contact our team directly for <strong>immediate support and inventory confirmation</strong>.</p>"
+          }
+        },
+        "category_dAkG9P": {
+          "type": "category",
+          "settings": {
+            "category_title": "Health-care System Admin (multi-hospital)",
+            "category_description": ""
+          }
+        },
+        "accordion_RK4fyQ": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Can we standardize SKUs across 15 hospitals and load them into our ERP?",
+            "accordion_content": "<p>Yes, we can help you <strong>standardize SKUs across all 15 hospitals</strong> for consistency and simplified ordering. We’ll provide a <strong>custom catalog</strong> with assigned SKUs tailored to your ERP system. Our team will assist with <strong>data formatting and upload support</strong>. This ensures accurate, system-wide tracking and procurement control.</p>"
+          }
+        },
+        "accordion_AYkUKR": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Do you participate in group-purchasing-organization (GPO) contracts such as Vizient or Premier?",
+            "accordion_content": "<p>Yes, we participate in <strong>GPO contracts</strong>, including <strong>Vizient, Premier</strong>, and others. If your hospital is a member, we can align pricing and terms accordingly. Just provide your <strong>GPO details</strong>, and we’ll handle the rest. We're experienced in supporting healthcare procurement compliance.</p>"
+          }
+        },
+        "accordion_ECfpWW": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Can you issue consolidated monthly invoices across locations (vs. credit card per order)?",
+            "accordion_content": "<p>Yes, we offer <strong>consolidated monthly invoicing</strong> across multiple locations to streamline your billing process. This eliminates the need for <strong>individual credit card transactions</strong> per order. We’ll group purchases by department or facility as needed. Our billing team can customize the format to match your internal requirements.</p>"
+          }
+        },
+        "accordion_MzQnMU": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Do you support auto-replenishment or vendor-managed inventory?",
+            "accordion_content": "<p>Yes, we support both <strong>auto-replenishment schedules</strong> and <strong>vendor-managed inventory (VMI)</strong> programs for hospitals. This ensures you never run low on critical ID supplies. We monitor usage and restock based on agreed thresholds. Custom reporting and inventory visibility are included.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "category_aWB3xF",
+        "accordion_LqVCAk",
+        "accordion_6KcgeM",
+        "accordion_e47xiR",
+        "accordion_BgrL4b",
+        "accordion_hhGxiw",
+        "category_dAkG9P",
+        "accordion_RK4fyQ",
+        "accordion_AYkUKR",
+        "accordion_ECfpWW",
+        "accordion_MzQnMU"
+      ],
+      "name": "FAQ Section",
+      "settings": {
+        "tabs_group_id": "main-tabs",
+        "tab_id": "health",
+        "section_description": "",
+        "padding_bottom": 40,
+        "padding_horizontal": 0
+      }
+    },
+    "custom_faq_section_iTQCQ7": {
+      "type": "custom-faq-section",
+      "blocks": {
+        "accordion_VLPFJw": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Are lanyards/holders TAA-compliant and/or Berry-Amendment compliant?",
+            "accordion_content": "<p>Yes, we offer <strong>TAA-compliant</strong> lanyards and badge holders suitable for federal procurement. We also have select products that are <strong>Berry Amendment-compliant</strong>, made in the USA with domestic materials. Let us know your compliance requirements, and we’ll match the right products. Documentation is available upon request.</p>"
+          }
+        },
+        "accordion_8CgNED": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Do you hold a GSA Schedule or can you sell via 4PL platforms(Ability One, DOD eMall)?",
+            "accordion_content": "<h6>While we don’t currently hold a <strong>GSA Schedule</strong>, we can sell through <strong>authorized 4PL platforms</strong> like <strong>AbilityOne and DOD EMALL</strong> via our distribution partners. We’ll coordinate to meet your agency’s procurement guidelines. Let us know your preferred channel, and we’ll route the order accordingly. Compliance and documentation support is included.</h6>"
+          }
+        },
+        "accordion_gEwNxn": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Are your RFID-blocking holders certified to FIPS 201?",
+            "accordion_content": "<p>Yes, our <strong>RFID-blocking badge holders</strong> include models that are <strong>FIPS 201-certified</strong> for federal identity protection. These holders meet government standards for shielding <strong>PIV, CAC, and other smart cards</strong> from unauthorized scanning. Look for FIPS 201 certification in the product specs. We can provide documentation upon request.</p>"
+          }
+        },
+        "accordion_kTaRtr": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Made-in-USA options for “Buy American” requirements?",
+            "accordion_content": "<p>Yes, we offer a range of <strong>Made-in-USA products</strong> that meet <strong>Buy American Act requirements</strong>, including <strong>badge holders, lanyards, reels</strong>, and accessories. These items are manufactured domestically with qualifying materials. Just ask for our <strong>Buy American-compliant catalog</strong>, and we’ll match your needs. Certification and origin details are available for procurement files.</p>"
+          }
+        },
+        "accordion_kCDMDd": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Can you accept ACH / net-terms payments through IPP?",
+            "accordion_content": "<p>Yes, we accept <strong>ACH and net-terms payments</strong> through the <strong>Invoice Processing Platform (IPP)</strong>. We’re fully set up to support federal agency billing workflows. Just provide your agency's IPP details, and we’ll ensure smooth onboarding. Payment confirmations and invoice tracking are included.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_VLPFJw",
+        "accordion_8CgNED",
+        "accordion_gEwNxn",
+        "accordion_kTaRtr",
+        "accordion_kCDMDd"
+      ],
+      "name": "FAQ Section",
+      "settings": {
+        "tabs_group_id": "main-tabs",
+        "tab_id": "government",
+        "section_description": "",
+        "padding_bottom": 40,
+        "padding_horizontal": 0
+      }
+    },
+    "custom_faq_section_BDJmBn": {
+      "type": "custom-faq-section",
+      "blocks": {
+        "accordion_VefmRe": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Can you color-match lanyards to exact brand PMS values and print sequential employee IDs?",
+            "accordion_content": "<p>Yes, we can <strong>color-match lanyards to your exact PMS brand colors</strong> for consistent retail branding. We also offer <strong>custom printing with sequential employee ID numbers</strong>. Just send your PMS values and ID list, and we’ll handle the rest. Proofs are provided for approval before production.</p>"
+          }
+        },
+        "accordion_JYyhU6": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "What is the lead-time vs. rush fee for 5,000 new-hire kits every month?",
+            "accordion_content": "<p>Standard lead time for 5,000 new-hire kits is typically <strong>10–15 business days</strong>. For faster turnaround, we offer <strong>rush production</strong> with fees based on timing and customization needs. Rush orders can ship in as little as <strong>3–5 days</strong>. We recommend forecasting monthly to <strong>lock in production slots</strong>.</p>"
+          }
+        },
+        "accordion_UrRXVj": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Can you drop-ship kits directly to stores or distribution centers?",
+            "accordion_content": "<p>Yes, we can <strong>drop-ship new-hire kits</strong> directly to your <strong>stores or distribution centers</strong> nationwide. Each shipment can be <strong>labeled and packed per location</strong> for easy handling. Just provide your shipping list, and we’ll manage the logistics. Tracking and delivery confirmation are included.</p>"
+          }
+        },
+        "accordion_x93kwB": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "Is there a self-service reorder portal with saved artwork and SKUs?",
+            "accordion_content": "<p>Yes, we offer a self-service reorder portal where you can access saved artwork, SKUs, and past orders. It simplifies repeat ordering for branded items like lanyards, badges, and kits. Multiple users can log in with role-based access. Custom catalogs and pricing can be preloaded for your team.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_VefmRe",
+        "accordion_JYyhU6",
+        "accordion_UrRXVj",
+        "accordion_x93kwB"
+      ],
+      "name": "FAQ Section",
+      "settings": {
+        "tabs_group_id": "main-tabs",
+        "tab_id": "business",
+        "section_description": "",
+        "padding_bottom": 40,
+        "padding_horizontal": 0
+      }
+    },
     "rich_text_rTCAR8": {
       "type": "rich-text",
       "blocks": {
@@ -369,6 +781,10 @@
     "rich_text_xW8ftU",
     "custom_tabs_controller_CDj33V",
     "custom_faq_section_76cmfb",
+    "custom_faq_section_Y8ARnj",
+    "custom_faq_section_MpLgdT",
+    "custom_faq_section_iTQCQ7",
+    "custom_faq_section_BDJmBn",
     "rich_text_rTCAR8"
   ]
 }
