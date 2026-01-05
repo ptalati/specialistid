@@ -392,7 +392,7 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
@@ -404,7 +404,7 @@
         "padding_bottom": 36,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36,
-        "section_css_class": "Type your own CSS class"
+        "section_css_class": "why-choose"
       }
     }
   },
