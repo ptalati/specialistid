@@ -406,6 +406,63 @@
         "padding_bottom_mobile": 36,
         "section_css_class": "why-choose"
       }
+    },
+    "image_with_text_eReAd7": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_Yxqnjf": {
+          "type": "caption",
+          "settings": {
+            "caption": "#MAKEITEASY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_9pkEQw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_rLA4Un": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_L37Ybg": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "shopify://pages/contact-us"
+          }
+        }
+      },
+      "block_order": [
+        "caption_Yxqnjf",
+        "heading_9pkEQw",
+        "text_rLA4Un",
+        "button_L37Ybg"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "color_scheme": "background-1",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     }
   },
   "order": [
@@ -418,6 +475,7 @@
     "image_with_text_pycdzE",
     "concept_cYiFbp",
     "featured_collection_YhcYd9",
-    "multicolumn_wfgygB"
+    "multicolumn_wfgygB",
+    "image_with_text_eReAd7"
   ]
 }
