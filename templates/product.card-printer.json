@@ -340,6 +340,18 @@
         "padding_bottom_mobile": 36
       }
     },
+    "product_technical_specification_cDLQCy": {
+      "type": "product-technical-specification",
+      "name": "Product technical/specif",
+      "settings": {
+        "heading": "Technical Specifications",
+        "text": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "custom_content_feedback_JCqCDQ": {
       "type": "custom-content-feedback",
       "name": "Content Feedback",
@@ -373,18 +385,6 @@
         "show_rating": false,
         "padding_top": 36,
         "padding_bottom": 28
-      }
-    },
-    "product_technical_specification_cDLQCy": {
-      "type": "product-technical-specification",
-      "name": "Product technical/specif",
-      "settings": {
-        "heading": "Technical Specifications",
-        "text": "",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
       }
     }
   },
