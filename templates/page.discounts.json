@@ -145,12 +145,49 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_AYQHgR": {
+      "type": "rich-text",
+      "blocks": {
+        "text_BnEN7R": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Orders over 2500 units are eligible for additional volume discounts, get in contact with us to learn more.</p>"
+          }
+        },
+        "button_T6Lpww": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn more",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_BnEN7R",
+        "button_T6Lpww"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
     "rich_text_Wqenkg",
     "multicolumn_PNJPyw",
-    "featured_collection_7qAhqQ"
+    "featured_collection_7qAhqQ",
+    "rich_text_AYQHgR"
   ]
 }
