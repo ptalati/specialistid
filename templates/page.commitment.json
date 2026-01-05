@@ -16,9 +16,75 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_RxYBYw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JHcmcK": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Last Family-Owned ID Company That Truly Cares",
+            "heading_size": "h1"
+          }
+        },
+        "text_F83LXt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In an industry where every other ID company has been swallowed by corporate giants, we're proudly standing our ground as America's last independent, family-owned ID specialist. </p><p>We don't answer to shareholders - we answer to you</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JHcmcK",
+        "text_F83LXt"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_PJmrjj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_3fQMLc": {
+          "type": "heading",
+          "settings": {
+            "heading": "We Answer to You, Not Investors",
+            "heading_size": "h1"
+          }
+        },
+        "text_y3Umee": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When you work with a family-owned business, accountability changes everything. </p><p>Here's what that means for you:</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3fQMLc",
+        "text_y3Umee"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_RxYBYw",
+    "rich_text_PJmrjj"
   ]
 }
