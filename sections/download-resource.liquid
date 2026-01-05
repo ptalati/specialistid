@@ -1,0 +1,171 @@
+<style>
+    .product-expert-support-{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+   }
+
+  @media (max-width: 749px) {
+      .product-expert-support-{{ section.id }} {
+          padding-top: {{ section.settings.padding_top_mobile }}px;
+          padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+      }
+  }
+  {% comment %} top banner {% endcomment %}
+  .top-heading h2 {
+      color: #333;
+      font-size: 28px;
+      font-weight: 600;
+      margin: 0 0 20px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #7ac043;
+      text-align: left;
+  }
+  .top-heading p {
+      margin-bottom: 32px;
+      font-size: 16px;
+      color: #666;
+  }
+  {% comment %} download {% endcomment %}
+  .download-banner {
+      background: #ffffff;
+      padding: 24px;
+      border: 1px solid #333;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      position: relative;
+      cursor: grab;
+      text-align: center;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  .download-banner h3 {
+      color: #333;
+      font-size: 24px;
+      margin: 0 0 8px 0;
+  }
+  .download-banner p {
+      color: #666;
+      font-size: 16px;
+      margin: 10px 0 15px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      text-align: center;
+      justify-content: center;
+  }
+  .download-banner p a {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #fff;
+      color: #7ac043;
+      text-decoration: none;
+      border: 2px solid #7ac043;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .download-banner .metafield-rich_text_field p:last-child {
+      margin-bottom: 0;
+  }
+  .download-banner p a:hover {
+      background: #6FB43F;
+      color: #ffffff;
+  }
+
+    @media (max-width: 600px) {
+    .top-heading h2 {   font-size: 24px;}
+    .top-heading p {    margin-bottom: 25px;    font-size: 15px;    line-height: 1.5;}
+    .download-banner {   padding: 20px;}
+    .download-banner h3 {   font-size: 20px;}
+    .download-banner p {   font-size: 15px;   margin: 0 0 20px 0;   line-height: 1.5;}
+    .download-banner p a {   padding: 11px 20px;}
+
+  }
+</style>
+
+<div class="product-expert-support-{{ section.id }} tab-content-new">
+  <div class="page-width">
+    <h2 class="expert-support-header">{{ section.settings.heading }}</h2>
+
+    <div class="expert-support-inner">
+      {% if product.metafields.custom.expert_support_downloads != blank %}
+        <div class="download-banner">
+          {{ product.metafields.custom.expert_support_downloads | metafield_tag }}
+        </div>
+      {% else %}
+        <div class="download-banner">
+          <div class="metafield-rich_text_field">
+            <h3>Downloads &amp; Resources</h3>
+            <p>Official Magicard documentation, latest drivers, and professional software tools for your Pronto100.</p>
+            <p>
+              <a href="https://support.magicard.com/drivers-and-downloads/" target="_blank"
+                >Latest Drivers &amp; Firmware</a
+              >
+              <a href="https://magicard.com/id-software" target="_blank">Professional Software Suite</a>
+            </p>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Downloads",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding mobile",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding mobile",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Downloads",
+      "category": "product"
+    }
+  ]
+}
+{% endschema %}
