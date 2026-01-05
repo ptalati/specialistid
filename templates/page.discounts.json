@@ -181,6 +181,109 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "image_with_text_BM3nWW": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_7GerLP": {
+          "type": "heading",
+          "settings": {
+            "heading": "ID Rewards - Our loyalty program",
+            "heading_size": "h1"
+          }
+        },
+        "text_gn7TpY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>By creating a SpecialistID account, you can start earning 1 Badge Buck for every $ spent on the store. You can also gain more ID$ by performing multiple additional actions.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_cdyyAJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join the club!",
+            "button_link": "/",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7GerLP",
+        "text_gn7TpY",
+        "button_cdyyAJ"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/IMG_0564.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "collapsible_content_Wq4tqr": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_CBEUad": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I combine discounts?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes you can combine your discounts without limits! Note that some discounts can only be used once per customers.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Pw3Wb4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do Badge Bucks work?",
+            "icon": "question_mark",
+            "row_content": "<p>You will earn 1 Badge Buck for every dollar spent. You can then redeem $1 off for each 50 Badge Bucks with no limit on how many Bucks you can use! (Example: Redeeming 500 Badge Bucks will give you a $10 discount)</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Qfmr9d": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How are bulk discounts applied?",
+            "icon": "question_mark",
+            "row_content": "<p>Bulk discounts vary by product, starting from as few as 5 units and scaling up to 1000+. The more you buy, the more you save—automatically applied in your cart for a seamless shopping experience.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_CBEUad",
+        "collapsible_row_Pw3Wb4",
+        "collapsible_row_Qfmr9d"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "FAQ - Discounts & Savings",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -188,6 +291,8 @@
     "rich_text_Wqenkg",
     "multicolumn_PNJPyw",
     "featured_collection_7qAhqQ",
-    "rich_text_AYQHgR"
+    "rich_text_AYQHgR",
+    "image_with_text_BM3nWW",
+    "collapsible_content_Wq4tqr"
   ]
 }
