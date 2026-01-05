@@ -215,24 +215,83 @@
       "type": "custom-printer-showcase",
       "name": "Card Printing Section",
       "settings": {
-        "title": "Professional Card Printing Services",
-        "description": "Our state-of-the-art printing technology ensures your school ID cards meet the highest standards of quality and durability. From design to delivery, we handle every aspect of your card printing needs.",
+        "title": "Professional ID Card Printing for Businesses",
+        "description": "Our business-focused ID card printing services combine speed, security, and brand consistency. Whether you need corporate ID cards for employees, contractors, or visitors, our full-service solutions help your company present a unified and secure image—across all locations.",
         "feature1_symbol": "",
-        "feature1_title": "Custom Design",
-        "feature1_text": "Full design services available",
+        "feature1_title": "Custom Business Designs",
+        "feature1_text": "Expert business ID card design services featuring your logo, employee name, title, and department.",
         "feature2_symbol": "",
         "feature2_title": "Fast Turnaround",
-        "feature2_text": "5-7 business days delivery",
+        "feature2_text": "Reliable employee ID printing with 5–7 business day delivery—ideal for onboarding and renewals.",
         "feature3_symbol": "",
-        "feature3_title": "Security Features",
-        "feature3_text": "Holograms, UV printing, more",
+        "feature3_title": "Enhanced Security Options",
+        "feature3_text": "Smart cards, RFID encoding, and badge security for advanced access control for business environments.",
         "feature4_symbol": "",
-        "feature4_title": "Premium Quality",
-        "feature4_text": "Fade-resistant, waterproof",
+        "feature4_title": "Enterprise-Grade Quality",
+        "feature4_text": "Durable, waterproof cards designed to last—perfect for high-use teams and compliant with company ID standards.",
         "visual_title": "Advanced Printing Technology",
-        "visual_text": "High-resolution digital printing with color matching and quality control processes ensure every card meets professional standards.",
-        "visual_cta_label": "Learn More",
-        "visual_cta_link": ""
+        "visual_text": "Our high-resolution printing delivers sharp, professional-grade corporate ID cards with vibrant colors and crisp details. As a trusted badge making company, we support businesses of all sizes with fast, reliable ID card printing for companies—from single-office teams to multi-site operations.",
+        "visual_cta_label": "Print Employee Badges Today",
+        "visual_cta_link": "shopify://collections/id-card-printers"
+      }
+    },
+    "image_with_text_pycdzE": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_AVPaaJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Secure Access Starts with Smart Identification",
+            "heading_size": "h1"
+          }
+        },
+        "text_Vhyg8C": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Empower your business with secure, scalable, and smart ID badge systems.</h5>",
+            "text_style": "body"
+          }
+        },
+        "text_atmFbk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>✅ <strong>Smart Cards & RFID Integrations</strong></p><ul><li>Boost security and compliance with RFID and proximity card solutions.<br/></li><li>Perfect for touchless entry, time tracking, and internal zone access.<br/></li><li>Our smart ID card printing services deliver ready-to-use badges encoded to match your system.<br/></li></ul><p>✅ <strong>Access Control Badge Compatibility</strong></p><ul><li>Seamlessly integrate with HID, NFC, and other smart reader systems.<br/></li><li>Great for secure departments, visitor logs, and compliance-based industries.<br/></li><li>Simplifies ID verification at doors, turnstiles, and workstations.<br/></li></ul><p>✅ <strong>Badge Reels, Holders & Display Accessories</strong></p><ul><li>Pair your cards with access badge holders, retractable reels, and lanyards.<br/></li><li>Designed for daily scanning in busy corporate environments.<br/></li><li>Prevent wear and loss while maintaining a professional, uniform appearance.</li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_JRecKz": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop ID Card Supplies",
+            "button_link": "shopify://collections/proximity-smart-cards",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_AVPaaJ",
+        "text_Vhyg8C",
+        "text_atmFbk",
+        "button_JRecKz"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/SPID-PROX-H-3_e43d3b8b-a816-4b00-b1b6-80a87823a61c.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
       }
     }
   },
@@ -242,6 +301,7 @@
     "custom_icon_slider_UmnG4w",
     "industries_paYqfh",
     "custom_product_showcase_8yMDEP",
-    "custom_printer_showcase_whHgPw"
+    "custom_printer_showcase_whHgPw",
+    "image_with_text_pycdzE"
   ]
 }
