@@ -80,11 +80,34 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "custom_simple_faq_section_mghMVF": {
+      "type": "custom-simple-faq-section",
+      "blocks": {
+        "faq_f78MmB": {
+          "type": "faq",
+          "settings": {
+            "question": "Real-Time Inventory You Can Trust",
+            "answer": "<p>Because we answer to customers, not quarterly reports:<br/></p><ul><li>Every item shown is physically in our warehouse<br/></li><li>No \"sorry, our system was wrong\" after you order<br/></li><li>Same-day shipping when ordered before 3PM EST<br/></li><li>Immediate notification if anything affects your order</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_f78MmB"
+      ],
+      "name": "FAQs",
+      "settings": {
+        "bg": "#fff",
+        "head": "The Specialist ID Guarantee",
+        "top_spacing": 40,
+        "bottom_spacing": 40
+      }
     }
   },
   "order": [
     "main",
     "rich_text_RxYBYw",
-    "rich_text_PJmrjj"
+    "rich_text_PJmrjj",
+    "custom_simple_faq_section_mghMVF"
   ]
 }
