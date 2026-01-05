@@ -155,12 +155,68 @@
         "mob_top_spacing": 40,
         "mob_bottom_spacing": 40
       }
+    },
+    "custom_product_showcase_8yMDEP": {
+      "type": "custom-product-showcase",
+      "blocks": {
+        "product_U9YEaP": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Custom-Printed-Lanyards-SpecialistID.jpg",
+            "title": "Custom Lanyards with Logos",
+            "text": "<ul><li>Add your company logo, tagline, or department name.<br/></li><li>Choose from woven, dye-sublimated, or eco-friendly options.<br/></li><li>Ideal for events, offices, and visitor access programs.</li></ul>",
+            "link": "shopify://collections/custom-printed-lanyards",
+            "link_label": "Customize your lanyard"
+          }
+        },
+        "product_TgEbWG": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/1840-3080-Custom-Clear-Rigid-Badge-Holder-Your-Logo-Here-Example_6ce93d3e-2e3c-4e7e-b3fa-eda3350da559.png",
+            "title": "Branded Badge Holders",
+            "text": "<ul><li>Protect and showcase your ID cards with custom holders in your brand colors.<br/></li><li>Options include rigid, flexible, or heavy-duty styles with custom printing.</li></ul>",
+            "link": "shopify://collections/custom-printed-badge-holders",
+            "link_label": "Customize your holder"
+          }
+        },
+        "product_Caf8QL": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/2124-3028-Custom-your-logo-here.png",
+            "title": "Fully Customizable Badge Reels",
+            "text": "<ul><li>Add your logo to retractable reels for both function and brand visibility.<br/></li><li>Multiple clip styles, shapes, and colors available.<br/></li><li>Great for high-security zones and frequent access point users.</li></ul>",
+            "link": "shopify://collections/custom-printed-badge-reels",
+            "link_label": "Customize your badge reel"
+          }
+        },
+        "product_D87QrB": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Custom_ID-Badge.webp",
+            "title": "Custom Employee ID Badges",
+            "text": "<ul><li>Professionally designed employee ID cards custom printed to match your brand.<br/></li><li>Add staff photos, job titles, and department-specific layouts.<br/></li><li>Ideal for onboarding, internal security, and daily use across your business.</li></ul>",
+            "link": "shopify://collections/custom-event-badges-and-id-badges",
+            "link_label": "Customize your ID Card"
+          }
+        }
+      },
+      "block_order": [
+        "product_U9YEaP",
+        "product_TgEbWG",
+        "product_Caf8QL",
+        "product_D87QrB"
+      ],
+      "name": "Product Showcase Section",
+      "settings": {
+        "title": "Custom Branded ID Solutions That Match Your Company’s Identity"
+      }
     }
   },
   "order": [
     "main",
     "rich_text_UXfEyf",
     "custom_icon_slider_UmnG4w",
-    "industries_paYqfh"
+    "industries_paYqfh",
+    "custom_product_showcase_8yMDEP"
   ]
 }
