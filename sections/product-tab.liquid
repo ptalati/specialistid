@@ -1,0 +1,146 @@
+<style>
+.product-tab-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+.product-tab-{{ section.id }} h2 {   margin: 0;   font-size: 23px;   color: #3A3A3C;  font-weight: 500;   margin-bottom: 15px;}
+
+.tab-nav-new {   display: flex;    flex-wrap: wrap;   gap: 4px;   background: #f1f3f4;   padding: 8px;  border-radius: 8px;}
+
+button.tab-btn-new {
+    flex: 1;   min-width: 140px;   padding: 16px 20px;    border: none;
+    background: #e5e5e5;  color: #333;  font-weight: 500;  cursor: pointer;  font-size: 15px;  border-radius: 6px;  transition: all 0.2s ease;
+}
+
+ button.tab-btn-new:hover {   background: #d1d1d1;}
+{% comment %} .tab-content-new { display: none; }
+.tab-content-new.active { display: block; } {% endcomment %}
+
+.tab-btn-new.active {  background: #7ac043;   color: #000;   font-weight: 600;}
+
+@media (max-width:989px){
+  button.tab-btn-new {  padding: 8px 10px;}
+}
+
+@media (max-width: 749px) {
+  .product-tab-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-question-banner-inner h2 {   font-size: 18px;}
+  .product-question-banner-inner p {   font-size: 15px;}
+  .product-question-banner-inner {     padding: 25px 20px;    }
+   button.tab-btn-new {    min-width: 100%;   padding: 11px 10px;}
+}
+</style>
+
+<div class="product-tab-{{ section.id }}">
+  <div class="page-width">
+    <h2>{{ section.settings.section_heaidng }}</h2>
+    {% comment %} <div class="tab-nav-new">
+        <button class="tab-btn-new"  data-tab="solution-overview">Solution Overview</button>
+        <button class="tab-btn-new" data-tab="specifications">Technical Specifications</button>
+        <button class="tab-btn-new" data-tab="complete-ecosystem">Choose Your Model</button>
+        <button class="tab-btn-new" data-tab="growth-upgrades">Upgrade Options</button>
+        <button class="tab-btn-new" data-tab="supply-chain">What You'll Need</button>
+        <button class="tab-btn-new" data-tab="expert-support">Expert Support</button>
+    </div> {% endcomment %}
+  </div>
+</div>
+
+
+{% comment %} <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const tabBtns = document.querySelectorAll(".tab-btn-new");
+  const tabContents = document.querySelectorAll(".tab-content-new");
+
+  function openTab(tabName, clickedBtn) {
+    tabContents.forEach(tc => tc.classList.remove("active"));
+    tabBtns.forEach(btn => btn.classList.remove("active"));
+
+    const tabElement = document.getElementById(tabName);
+    if(tabElement) tabElement.classList.add("active");
+
+    clickedBtn.classList.add("active");
+  }
+
+  // Set default active tab
+  if(tabBtns.length > 0 && tabContents.length > 0){
+    openTab(tabBtns[0].dataset.tab, tabBtns[0]);
+  }
+
+  // Add click events
+  tabBtns.forEach(btn => {
+    btn.addEventListener("click", function() {
+      openTab(this.dataset.tab, this);
+    });
+  });
+});
+</script> {% endcomment %}
+
+{% schema %}
+{
+  "name": "Product tab heading",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "section_heaidng",
+      "label": "Section heading",
+      "default":"Questions about thermal printing visitor badges?"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding mobile",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding mobile",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product tab heading",
+      "category": "product"
+    }
+  ]
+}
+{% endschema %}
