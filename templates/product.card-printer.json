@@ -208,29 +208,40 @@
         "padding_bottom": 12
       }
     },
-    "custom_spacer_4aMNQm": {
-      "type": "custom-spacer",
-      "name": "Custom Spacer",
+    "product_tab_ar9q4W": {
+      "type": "product-tab",
+      "name": "Product tab heading",
       "settings": {
-        "spacer_height": 80
+        "section_heaidng": "Description",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
       }
     },
-    "product_custom_info_gcmaXt": {
-      "type": "product-custom-info",
-      "blocks": {
-        "custom_info_AimhCD": {
-          "type": "custom_info",
-          "settings": {
-            "heading": "",
-            "content": "{{ product.description }}"
-          }
-        }
-      },
-      "block_order": [
-        "custom_info_AimhCD"
-      ],
-      "name": "Product Custom Info",
-      "settings": {}
+    "print_only_UFRkhd": {
+      "type": "print-only",
+      "name": "Printer only banner",
+      "settings": {
+        "heading": "",
+        "text": "<h3>⚠️Printer Only</h3><p>This item includes the printer unit only. Ribbons and blank cards sold separately. See \"What You'll Need\" for details.</p>",
+        "text1": "<h3>🎯 Our Recommendation</h3><p>The Pronto100 is ideal for professional results with simple operation. Speed, quality, and security in one package.</p>",
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "small_volume_solution_wGkAGm": {
+      "type": "small-volume-solution",
+      "name": "Small Volume Solutions",
+      "settings": {
+        "heading": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     },
     "custom_content_feedback_JCqCDQ": {
       "type": "custom-content-feedback",
@@ -271,8 +282,9 @@
   "order": [
     "custom_discontinued_product_aKcVxE",
     "main",
-    "custom_spacer_4aMNQm",
-    "product_custom_info_gcmaXt",
+    "product_tab_ar9q4W",
+    "print_only_UFRkhd",
+    "small_volume_solution_wGkAGm",
     "custom_content_feedback_JCqCDQ",
     "custom_liquid_pBgjQg",
     "related-products"
