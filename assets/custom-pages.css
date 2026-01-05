@@ -15,7 +15,10 @@
 
 
 /* buttons */
-a.button, .button, .button.button, customer .button {
+a.button,
+.button,
+.button.button,
+customer .button {
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
@@ -23,9 +26,25 @@ a.button, .button, .button.button, customer .button {
     transition: all .3s;
 }
 
-@media(max-width:749px){
-    a.button, .button, .button.button, customer .button {
-    font-size: 15px;
-}
+@media(max-width:749px) {
+
+    a.button,
+    .button,
+    .button.button,
+    customer .button {
+        font-size: 15px;
+    }
 }
 
+
+.collection-hero .collection-hero__description>*:not(:first-child) {
+    display: none;
+}
+
+.collection-hero .collection-hero__description.show-all>p {
+    display: inherit;
+}
+
+.collection-hero .collection-hero__description.show-all>table {
+    display: table;
+}
