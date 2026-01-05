@@ -188,12 +188,23 @@
             "link": "shopify://collections/custom-printed-badge-reels",
             "link_label": "Customize your badge reel"
           }
+        },
+        "product_D87QrB": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Custom_ID-Badge.webp",
+            "title": "Custom Employee ID Badges",
+            "text": "<ul><li>Professionally designed employee ID cards custom printed to match your brand.<br/></li><li>Add staff photos, job titles, and department-specific layouts.<br/></li><li>Ideal for onboarding, internal security, and daily use across your business.</li></ul>",
+            "link": "shopify://collections/custom-event-badges-and-id-badges",
+            "link_label": "Customize your ID Card"
+          }
         }
       },
       "block_order": [
         "product_U9YEaP",
         "product_TgEbWG",
-        "product_Caf8QL"
+        "product_Caf8QL",
+        "product_D87QrB"
       ],
       "name": "Product Showcase Section",
       "settings": {
