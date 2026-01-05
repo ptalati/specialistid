@@ -1,0 +1,241 @@
+<style>
+.product-choose-model-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+ h3.section-block-head {
+    color: rgb(var(--color-foreground));
+    font-size: 24px;
+    margin: 0 0 24px;
+}
+.choose-inner span {
+    margin-bottom: 32px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+.choose-inner {
+    margin-bottom: 32px;
+}
+h4.pathway-title-new {
+    color: #333;
+    font-size: 24px;
+    margin: 0 0 50px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+h4.pathway-title-new span {
+    background: #7ac043;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+.inner-choose-model {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.inner-choose-model-inner {
+    background: #f8f9fa;
+    padding: 24px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: grab;
+}
+.inner-block-choose .choose-block-tag {
+    position: absolute;
+    top: -28px;
+    right: 16px;
+    background: #7ac043;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 5px 5px 0px 0px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.inner-choose-model-inner h5 {
+    margin: 0 0 8px 0;
+    color: #333;
+    font-size: 20px;
+}
+.inner-choose-model-inner p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.use-case-block {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: rgba(122, 192, 67, 0.1);
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #5a8f32;
+}
+.inner-choose-model-inner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.authority-tip-new h3 {
+    margin: 0 0 10px 0;
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: start;
+    border-bottom: 0;
+}
+.authority-tip-new p {
+    margin: 0;
+    line-height: 1.6;
+    color: #000;
+}
+.inner-choose-model-inner.background-chnage-inner {
+    background: #f0f8f0;
+    border: 2px solid #7ac043;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+@media (max-width: 749px) {
+  .product-choose-model-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+}
+
+  @media (max-width: 600px) {
+    h3.section-block-head {      font-size: 20px;      margin: 0px 0 16px;  }
+    .choose-inner span {      margin-bottom: 18px;      font-size: 15px;  }
+    h4.pathway-title-new {  font-size: 18px;}
+    h4.pathway-title-new span {   font-size: 15px;}
+    .inner-choose-model-inner {   padding: 18px;}
+   .inner-block-choose .choose-block-tag {   top: -15px;    right: 10px;}
+   .inner-choose-model {  grid-template-columns: 1fr;}
+}
+
+
+</style>
+
+<div class="product-choose-model-{{ section.id }} tab-content-new" id="complete-ecosystem">
+  <div class="page-width">
+    <h2 class="specs-header-new">{{ section.settings.heading }}</h2>
+    <div class="product-choose-model-inner">
+     {% if product.metafields.custom.small_volume_solutions.value != blank %} 
+      {% for metablock in product.metafields.custom.small_volume_solutions.value %}
+          <div class="inner-block-choose">
+            <h4 class="pathway-title-new">{{ metablock.section_title }}</h4>
+            <div class="inner-choose-model">
+              <div class="inner-choose-model-inner {% if forloop.first %}background-chnage-inner{% endif %} ">
+                <div class="choose-block-tag">{{ metablock.corner_badge_1 }}</div>
+                <h5>{{ metablock. product_title_1 }}</h5>
+                <div>{{ metablock.product_description_1 | metafield_tag }}</div>
+                <div class="use-case-block">{{ metablock.use_case_tag_1 | metafield_tag }}</div>
+              </div>
+              <div class="inner-choose-model-inner">
+                <div class="choose-block-tag">{{ metablock.corner_badge_2 }}</div>
+                <h5>{{ metablock.product_title_2 }}</h5>
+                <div>{{ metablock.product_description_2 | metafield_tag }}</div>
+                <div class="use-case-block">{{ metablock.use_case_tag_2 | metafield_tag }}</div>
+              </div>
+            </div>
+          </div>
+          <div class="authority-tip-new">{{ metablock.bottom_banner | metafield_tag }}</div>
+      {% endfor %}
+      {% else %}
+         <div class="inner-block-choose">
+            <h4 class="pathway-title-new"><span>1</span> Small Volume Solutions — Up to 1,000 Cards/Year</h4>
+            <div class="inner-choose-model">
+              <div class="inner-choose-model-inner {% if forloop.first %}background-chnage-inner{% endif %} ">
+                <div class="choose-block-tag">Current Model</div>
+                <h5>Pronto100 — Professional Quality</h5>
+                <div>HD photo quality, advanced security features, and professional edge-to-edge printing.</div>
+                <div class="use-case-block">👥Small businesses, clubs, schools, professional offices.</div>
+              </div>
+              <div class="inner-choose-model-inner">
+                <div class="choose-block-tag"></div>
+                <h5>Pronto — Discontinued Model</h5>
+                <div>Original entry-level printer superseded by the Pronto100. No longer available in most channels.</div>
+                <div class="use-case-block">👥Small businesses, clubs, schools, professional offices.</div>
+              </div>
+            </div>
+          </div>
+          <div class="authority-tip-new">{{ metablock.bottom_banner | metafield_tag }}</div>
+
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Small Volume Solutions",
+  "settings": [
+      {
+      "type":"text",
+      "id":"heading",
+      "label":"Hection heading"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding mobile",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding mobile",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Small Volume Solutions",
+      "category": "product"
+    }
+  ]
+}
+{% endschema %}
