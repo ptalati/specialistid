@@ -90,17 +90,37 @@
         "column_6rN9W6": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "title": "Healthcare / Hospitals",
+            "text": "",
+            "link_label": "Consult the guide",
+            "link": "shopify://pages/hospital-id-badge-accessories-procurement-guide"
+          }
+        },
+        "column_TENEq3": {
+          "type": "column",
+          "settings": {
+            "title": "Schools",
+            "text": "",
+            "link_label": "Consult the guide",
+            "link": "shopify://pages/the-ultimate-school-id-purchasing-guide-simple-steps-to-get-started"
+          }
+        },
+        "column_ceHx9r": {
+          "type": "column",
+          "settings": {
+            "title": "Universities / Colleges / ICUFs",
+            "text": "",
+            "link_label": "Consult the guide",
+            "link": "shopify://pages/university-id-badge-accessories-buying-guide"
           }
         }
       },
       "block_order": [
         "column_LhQqTP",
         "column_EG6z73",
-        "column_6rN9W6"
+        "column_6rN9W6",
+        "column_TENEq3",
+        "column_ceHx9r"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
