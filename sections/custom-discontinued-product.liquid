@@ -1,0 +1,45 @@
+{% if product.metafields.c_f.discontinued != blank %}
+    {% if section.settings.discontinued_text != blank or section.settings.discontinued_img != blank %}
+      <div class="discontinued-product page-width">
+        {% if section.settings.discontinued_img != blank %}
+          <img src="{{ section.settings.discontinued_img | img_url: 'medium' }}" alt="Discontinued Product Image" />
+        {% endif %}
+        
+        {% if section.settings.discontinued_text != blank %}
+          <div class="discontinued-content">
+            <p class="discontinued-text">{{ section.settings.discontinued_text }}</p>
+
+            {% assign discontinued_value = product.metafields.c_f.discontinued | string | downcase %}
+            {% if discontinued_value != "true" %}
+              <a href="{{ product.metafields.c_f.discontinued }}">Replacement Product</a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endif %}
+  
+  {% schema %}
+  {
+    "name": "Discontinued Product",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "discontinued_text",
+        "label": "Discontinued Text",
+        "default": "This product has been discontinued."
+      },
+      {
+        "type": "image_picker",
+        "id": "discontinued_img",
+        "label": "Discontinued Image"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Custom",
+        "name": "Discontinued Product"
+      }
+    ]
+  }
+  {% endschema %}
