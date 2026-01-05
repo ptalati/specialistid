@@ -60,10 +60,78 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "multicolumn_BbWQmD": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_N7QpmL": {
+          "type": "column",
+          "settings": {
+            "title": "Welcome10",
+            "text": "<p>$1 off $10 orders and up (one time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cDUdrK": {
+          "type": "column",
+          "settings": {
+            "title": "Welcome50",
+            "text": "<p>$5 off $50 orders and up (One time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_iMPAVR": {
+          "type": "column",
+          "settings": {
+            "title": "Welcome100",
+            "text": "<p>$10 off $100 orders and up (One time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FqE7HY": {
+          "type": "column",
+          "settings": {
+            "title": "Q2SPID10",
+            "text": "<p>Get 10% off any order below 1000$ or a 100$ off orders over 1000$. (One time use)</p><p><span style=\"text-decoration:underline\"><strong>Expired</strong></span></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_N7QpmL",
+        "column_cDUdrK",
+        "column_iMPAVR",
+        "column_FqE7HY"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36,
+        "section_css_class": "Type your own CSS class"
+      }
     }
   },
   "order": [
     "main",
-    "rich_text_JFFtMz"
+    "rich_text_JFFtMz",
+    "multicolumn_BbWQmD"
   ]
 }
