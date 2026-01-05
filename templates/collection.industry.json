@@ -85,6 +85,9 @@
     },
     "custom_liquid_NaFwpC": {
       "type": "custom-liquid",
+      "custom_css": [
+        ".embedded-video iframe {height: 660px; width: 100%;}"
+      ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "{% if collection.metafields.landing_page.landing_page_youtube_embed_cod != blank %}\n    <div class=\"embedded-video page-width\">\n      {{ collection.metafields.landing_page.landing_page_youtube_embed_cod }}\n    </div>\n{% endif %}",
