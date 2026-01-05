@@ -1,0 +1,182 @@
+{% schema %}
+{
+  "name": "Card Printing Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Professional Card Printing Services"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Intro Description",
+      "default": "Our state-of-the-art printing technology ensures your school ID cards meet the highest standards of quality and durability. From design to delivery, we handle every aspect of your card printing needs."
+    },
+
+    {
+      "type": "text",
+      "id": "feature1_symbol",
+      "label": "Feature 1 Symbol"
+    },
+    {
+      "type": "text",
+      "id": "feature1_title",
+      "label": "Feature 1 Title",
+      "default": "Custom Design"
+    },
+    {
+      "type": "text",
+      "id": "feature1_text",
+      "label": "Feature 1 Text",
+      "default": "Full design services available"
+    },
+
+    {
+      "type": "text",
+      "id": "feature2_symbol",
+      "label": "Feature 2 Symbol"
+    },
+    {
+      "type": "text",
+      "id": "feature2_title",
+      "label": "Feature 2 Title",
+      "default": "Fast Turnaround"
+    },
+    {
+      "type": "text",
+      "id": "feature2_text",
+      "label": "Feature 2 Text",
+      "default": "5-7 business days delivery"
+    },
+
+    {
+      "type": "text",
+      "id": "feature3_symbol",
+      "label": "Feature 3 Symbol"
+    },
+    {
+      "type": "text",
+      "id": "feature3_title",
+      "label": "Feature 3 Title",
+      "default": "Security Features"
+    },
+    {
+      "type": "text",
+      "id": "feature3_text",
+      "label": "Feature 3 Text",
+      "default": "Holograms, UV printing, more"
+    },
+
+    {
+      "type": "text",
+      "id": "feature4_symbol",
+      "label": "Feature 4 Symbol"
+    },
+    {
+      "type": "text",
+      "id": "feature4_title",
+      "label": "Feature 4 Title",
+      "default": "Premium Quality"
+    },
+    {
+      "type": "text",
+      "id": "feature4_text",
+      "label": "Feature 4 Text",
+      "default": "Fade-resistant, waterproof"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "visual_image",
+      "label": "Visual Box Image"
+    },
+    {
+      "type": "text",
+      "id": "visual_title",
+      "label": "Visual Box Title",
+      "default": "Advanced Printing Technology"
+    },
+    {
+      "type": "textarea",
+      "id": "visual_text",
+      "label": "Visual Box Description",
+      "default": "High-resolution digital printing with color matching and quality control processes ensure every card meets professional standards."
+    },
+    {
+      "type": "text",
+      "id": "visual_cta_label",
+      "label": "Visual CTA Label",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "visual_cta_link",
+      "label": "Visual CTA Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Card Printing Section"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="printx-section">
+  <div class="printx-container">
+    <h2 class="printx-title">{{ section.settings.title }}</h2>
+    <div
+      class="printx-bar"
+      style="background: #F5911F; height: 4px; width: 100px; margin: 10px auto 40px; border-radius: 2px;"
+    ></div>
+    <div class="printx-grid">
+      <div class="printx-info">
+        <p class="printx-description">{{ section.settings.description }}</p>
+        <div class="printx-features">
+          <div class="printx-feature">
+            {% if section.settings.feature1_symbol %}
+              <div class="printx-symbol">{{ section.settings.feature1_symbol }}</div>
+            {% endif %}
+            <h4>{{ section.settings.feature1_title }}</h4>
+            <p>{{ section.settings.feature1_text }}</p>
+          </div>
+          <div class="printx-feature">
+            {% if section.settings.feature2_symbol %}
+              <div class="printx-symbol">{{ section.settings.feature2_symbol }}</div>
+            {% endif %}
+            <h4>{{ section.settings.feature2_title }}</h4>
+            <p>{{ section.settings.feature2_text }}</p>
+          </div>
+          <div class="printx-feature">
+            {% if section.settings.feature3_symbol %}
+              <div class="printx-symbol">{{ section.settings.feature3_symbol }}</div>
+            {% endif %}
+            <h4>{{ section.settings.feature3_title }}</h4>
+            <p>{{ section.settings.feature3_text }}</p>
+          </div>
+          <div class="printx-feature">
+            {% if section.settings.feature4_symbol %}
+              <div class="printx-symbol">{{ section.settings.feature4_symbol }}</div>
+            {% endif %}
+            <h4>{{ section.settings.feature4_title }}</h4>
+            <p>{{ section.settings.feature4_text }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="printx-visual">
+        {% if section.settings.visual_image != blank %}
+          <img src="{{ section.settings.visual_image | img_url: '150x150' }}" alt="Technology Icon" class="printx-icon">
+        {% endif %}
+        <h3 class="printx-visual-heading">{{ section.settings.visual_title }}</h3>
+        <p class="printx-visual-text">{{ section.settings.visual_text }}</p>
+        {% if section.settings.visual_cta_label and section.settings.visual_cta_link %}
+          <a href="{{ section.settings.visual_cta_link }}" class="printx-cta">
+            {{- section.settings.visual_cta_label -}}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
