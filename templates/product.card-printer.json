@@ -243,6 +243,72 @@
         "padding_bottom_mobile": 36
       }
     },
+    "ennential_supply_bRgTk7": {
+      "type": "ennential-supply",
+      "name": "Essential Supplies",
+      "settings": {
+        "heading": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "product_faq_WJDq3b": {
+      "type": "product-faq",
+      "blocks": {
+        "faq_jUUTd9": {
+          "type": "faq",
+          "settings": {
+            "head": "What is Lorem Ipsum?",
+            "para": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          }
+        },
+        "faq_BM7fqU": {
+          "type": "faq",
+          "settings": {
+            "head": "What is Lorem Ipsum?",
+            "para": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          }
+        },
+        "faq_CKgWGh": {
+          "type": "faq",
+          "settings": {
+            "head": "What is Lorem Ipsum?",
+            "para": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          }
+        },
+        "faq_y7YH7P": {
+          "type": "faq",
+          "settings": {
+            "head": "What is Lorem Ipsum?",
+            "para": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          }
+        },
+        "faq_BeDjVR": {
+          "type": "faq",
+          "settings": {
+            "head": "What is Lorem Ipsum?",
+            "para": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          }
+        }
+      },
+      "block_order": [
+        "faq_jUUTd9",
+        "faq_BM7fqU",
+        "faq_CKgWGh",
+        "faq_y7YH7P",
+        "faq_BeDjVR"
+      ],
+      "name": "Product faq",
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "custom_content_feedback_JCqCDQ": {
       "type": "custom-content-feedback",
       "name": "Content Feedback",
@@ -277,6 +343,16 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "download_resource_qjeVWP": {
+      "type": "download-resource",
+      "name": "Product Downloads",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     }
   },
   "order": [
@@ -285,6 +361,9 @@
     "product_tab_ar9q4W",
     "print_only_UFRkhd",
     "small_volume_solution_wGkAGm",
+    "ennential_supply_bRgTk7",
+    "product_faq_WJDq3b",
+    "download_resource_qjeVWP",
     "custom_content_feedback_JCqCDQ",
     "custom_liquid_pBgjQg",
     "related-products"
