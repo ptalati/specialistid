@@ -127,11 +127,68 @@
         "padding_bottom_mobile": 36,
         "section_css_class": "Type your own CSS class"
       }
+    },
+    "image_with_text_kQYqQL": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_CiFNHe": {
+          "type": "caption",
+          "settings": {
+            "caption": "#MAKEITEASY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_mqG9m9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_k6NMxd": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_UtimCK": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact-us"
+          }
+        }
+      },
+      "block_order": [
+        "caption_CiFNHe",
+        "heading_mqG9m9",
+        "text_k6NMxd",
+        "button_UtimCK"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "color_scheme": "background-1",
+        "section_css_class": "speak-to-live-specialist",
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     }
   },
   "order": [
     "main",
     "rich_text_JFFtMz",
-    "multicolumn_BbWQmD"
+    "multicolumn_BbWQmD",
+    "image_with_text_kQYqQL"
   ]
 }
