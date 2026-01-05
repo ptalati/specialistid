@@ -1,3 +1,143 @@
+{% style %}
+  /* Printer Showcase Section */
+  .printx-section {
+    background: #ffffff;
+    padding: 40px 0;
+  }
+
+  .printx-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .printx-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #5a9633;
+    padding-bottom: 0.5rem;
+    position: relative;
+  }
+
+  .printx-bar {
+    display: inline-block;
+    width: 100px;
+    height: 4px;
+    background-color: orange; /* solid color for clarity */
+    margin: 20px auto 40px;
+    border-radius: 2px;
+  }
+
+  .printx-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .printx-info {
+    text-align: left;
+  }
+
+  .printx-description {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .printx-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .printx-feature {
+    background: #f0f7ec;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .printx-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .printx-symbol {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .printx-feature h4 {
+    color: #5a9633;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .printx-feature p {
+    font-size: 1.75rem;
+    color: #333;
+  }
+
+  .printx-visual {
+    background: linear-gradient(135deg, #5a9633, #6fb43f);
+    border-radius: 20px;
+    padding: 3rem;
+    color: white;
+    text-align: center;
+  }
+
+  .printx-icon {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+
+  .printx-visual-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .printx-visual-text {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .printx-cta {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #f5911f, #ff9b2b);
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .printx-cta:hover {
+    background: linear-gradient(45deg, #ff9b2b, #f5911f);
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .printx-grid {
+      grid-template-columns: 1fr;
+    }
+    .printx-info {
+      text-align: center;
+    }
+    .printx-features {
+      grid-template-columns: 1fr;
+    }
+  }
+{% endstyle %}
+
 {% schema %}
 {
   "name": "Card Printing Section",
