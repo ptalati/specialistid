@@ -204,32 +204,39 @@
         "heading_fFcWVd": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "How to redeem your Badge Bucks:",
             "heading_size": "h1"
           }
         },
         "text_R6TBjC": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<p>You can redeem $1 off of any order for 50 Badge Bucks. The more bucks you have, the bigger discount you can redeem!</p>"
           }
         },
         "button_zmnbtU": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "Redeem your Badge Bucks!",
+            "button_link": "#smile-home",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
+          }
+        },
+        "text_JxdYXq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Additionally, you can get 10$ coupons whenever you refer a friend or a new customer!</p>"
           }
         }
       },
       "block_order": [
         "heading_fFcWVd",
         "text_R6TBjC",
-        "button_zmnbtU"
+        "button_zmnbtU",
+        "text_JxdYXq"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
