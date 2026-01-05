@@ -16,9 +16,54 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_JFFtMz": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_aebKV7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Specialist ID Coupons",
+            "heading_size": "h1"
+          }
+        },
+        "text_pePU6F": {
+          "type": "text",
+          "settings": {
+            "text": "<p> Find the latest Specialist ID coupon discounts to save on ID badge holders, accessories, and more. Apply available coupon codes at checkout for instant savings!</p>"
+          }
+        },
+        "button_RkCUrV": {
+          "type": "button",
+          "settings": {
+            "button_label": "Use Specialist ID coupons",
+            "button_link": "shopify://collections/our-best-sellers",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_aebKV7",
+        "text_pePU6F",
+        "button_RkCUrV"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_JFFtMz"
   ]
 }
