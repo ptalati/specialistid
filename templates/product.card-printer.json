@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "custom_discontinued_product_aKcVxE": {
+      "type": "custom-discontinued-product",
+      "name": "Discontinued Product",
+      "settings": {
+        "discontinued_text": "This product has been discontinued.",
+        "discontinued_img": "shopify://shop_images/Discontinued.png"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -126,7 +134,8 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
-            "show_gift_card_recipient": true
+            "show_gift_card_recipient": true,
+            "button_color_scheme": ""
           }
         },
         "customize_quote_buttons_KQYLh3": {
@@ -260,6 +269,7 @@
     }
   },
   "order": [
+    "custom_discontinued_product_aKcVxE",
     "main",
     "custom_spacer_4aMNQm",
     "product_custom_info_gcmaXt",
