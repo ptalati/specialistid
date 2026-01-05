@@ -90,10 +90,42 @@
             "question": "Real-Time Inventory You Can Trust",
             "answer": "<p>Because we answer to customers, not quarterly reports:<br/></p><ul><li>Every item shown is physically in our warehouse<br/></li><li>No \"sorry, our system was wrong\" after you order<br/></li><li>Same-day shipping when ordered before 3PM EST<br/></li><li>Immediate notification if anything affects your order</li></ul>"
           }
+        },
+        "faq_c7cLL3": {
+          "type": "faq",
+          "settings": {
+            "question": "Direct Access to Decision Makers",
+            "answer": "<p>Because we answer to you, not a board of directors:<br/></p><ul><li>Need answers? Talk to people who can say \"yes\"<br/></li><li>Every team member has authority to solve problems<br/></li><li>No permission needed to make things right<br/></li><li>Your urgency is our urgency</li></ul>"
+          }
+        },
+        "faq_TABQrD": {
+          "type": "faq",
+          "settings": {
+            "question": "Issues get fixed, not \"escalated\"",
+            "answer": "<p>Because we answer to satisfaction scores, not stock prices:<br/></p><ul><li>Solutions come from common sense, not policy manuals<br/></li><li>Your definition of \"resolved\" is the only one that matters<br/></li><li>We own the problem until you're satisfied</li><li>Ready to answer any of your questions</li></ul>"
+          }
+        },
+        "faq_jqzr84": {
+          "type": "faq",
+          "settings": {
+            "question": "Expert Support When You Need It",
+            "answer": "<p>Because we answer to your needs, not shareholder demands:<br/></p><ul><li>Real ID experts who actually work here<br/></li><li>Direct phone lines to product specialists<br/></li><li>No scripts, no transfers, no runaround<br/></li><li>Support until your question is fully answered</li></ul>"
+          }
+        },
+        "faq_zERtUp": {
+          "type": "faq",
+          "settings": {
+            "question": "Long-Term Partnership Focus",
+            "answer": "<p>Because we answer to lifetime relationships, not quarterly earnings:<br/></p><ul><li>Your data stays private and secure with us<br/></li><li>Consistent pricing without sudden \"corporate\" changes<br/></li><li>Same family ownership today and tomorrow<br/></li><li>Building trust, not maximizing transactions</li></ul>"
+          }
         }
       },
       "block_order": [
-        "faq_f78MmB"
+        "faq_f78MmB",
+        "faq_c7cLL3",
+        "faq_TABQrD",
+        "faq_jqzr84",
+        "faq_zERtUp"
       ],
       "name": "FAQs",
       "settings": {
@@ -102,12 +134,47 @@
         "top_spacing": 40,
         "bottom_spacing": 40
       }
+    },
+    "image_with_text_KVntqn": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_tVezM4": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>Other companies may answer to investors, but at Specialist ID, we only answer to you. That's our family's promise.</em></p><p><em><strong>- </strong></em><strong>Patrick Barnhill, Owner & Founder </strong></p><p><em>Our mantra is Care the Most! It helps us strive to be the easiest company to work with, in any industry.</em></p><p><em><strong>-</strong></em><strong> Mike Barnhill, Co-Founder </strong></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_tVezM4"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Race_Day.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     }
   },
   "order": [
     "main",
     "rich_text_RxYBYw",
     "rich_text_PJmrjj",
-    "custom_simple_faq_section_mghMVF"
+    "custom_simple_faq_section_mghMVF",
+    "image_with_text_KVntqn"
   ]
 }
