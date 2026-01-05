@@ -115,11 +115,52 @@
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
+    },
+    "industries_paYqfh": {
+      "type": "industries",
+      "blocks": {
+        "industry_awRjM9": {
+          "type": "industry",
+          "settings": {
+            "title": "ID Card Printers",
+            "description": "<ul>\n<li>Discover the best ID card printer for small business or enterprise-level needs.</li>\n<li>Designed for fast, high-quality employee ID printing.</li>\n<li>Compatible with both Mac and PC.</li>\n</ul>"
+          }
+        },
+        "industry_xExWtx": {
+          "type": "industry",
+          "settings": {
+            "title": "Laminating and Badge Accessories",
+            "description": "<ul>\n<li>Durable laminate pouches for long-lasting ID protection.</li>\n<li>Magnetic strips, overlays, and security features.</li>\n<li>Badge clips, pins, and slotted pouches available.</li>\n</ul>"
+          }
+        },
+        "industry_RcfQFR": {
+          "type": "industry",
+          "settings": {
+            "title": "Reels, Holders, and Lanyards",
+            "description": "<ul>\n<li>Custom badge reels and heavy-duty ID holders.</li>\n<li>Branded lanyards for a professional corporate look.</li>\n<li>Ideal for badge printing for companies of all sizes.</li>\n</ul>"
+          }
+        }
+      },
+      "block_order": [
+        "industry_awRjM9",
+        "industry_xExWtx",
+        "industry_RcfQFR"
+      ],
+      "name": "Industries Grid",
+      "settings": {
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "heading": "Everything you need to launch or upgrade your employee ID program",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "mob_top_spacing": 40,
+        "mob_bottom_spacing": 40
+      }
     }
   },
   "order": [
     "main",
     "rich_text_UXfEyf",
-    "custom_icon_slider_UmnG4w"
+    "custom_icon_slider_UmnG4w",
+    "industries_paYqfh"
   ]
 }
