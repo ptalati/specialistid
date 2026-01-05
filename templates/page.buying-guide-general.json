@@ -59,16 +59,74 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-5",
         "full_width": true,
         "section_css_class": "Type your own CSS class",
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "multicolumn_AcfDTD": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_LhQqTP": {
+          "type": "column",
+          "settings": {
+            "title": "Business / Corporate",
+            "text": "",
+            "link_label": "Consult the guide",
+            "link": "shopify://pages/corporate-id-badge-accessories-guide-for-buyers"
+          }
+        },
+        "column_EG6z73": {
+          "type": "column",
+          "settings": {
+            "title": "Government",
+            "text": "",
+            "link_label": "Consult the guide",
+            "link": "shopify://pages/government-id-badge-accessories-buying-guide"
+          }
+        },
+        "column_6rN9W6": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_LhQqTP",
+        "column_EG6z73",
+        "column_6rN9W6"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36,
+        "section_css_class": "Type your own CSS class"
+      }
     }
   },
   "order": [
     "main",
-    "rich_text_bKEdNq"
+    "rich_text_bKEdNq",
+    "multicolumn_AcfDTD"
   ]
 }
