@@ -248,6 +248,57 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "image_with_text_zUafxk": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LYPMrW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Any Questions?",
+            "heading_size": "h1"
+          }
+        },
+        "text_AGdTTy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Don't hesitate to reach out for any inquiries regarding our new rewards program!</p>",
+            "text_style": "body"
+          }
+        },
+        "button_ctXxVX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us!",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LYPMrW",
+        "text_AGdTTy",
+        "button_ctXxVX"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/SPID_Specialist_Image_1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     }
   },
   "order": [
@@ -255,6 +306,7 @@
     "rich_text_wDRUFV",
     "image_with_text_URbDCV",
     "multicolumn_RXLbrP",
-    "rich_text_7J6hnh"
+    "rich_text_7J6hnh",
+    "image_with_text_zUafxk"
   ]
 }
