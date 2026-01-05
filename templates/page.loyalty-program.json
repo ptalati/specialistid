@@ -11,13 +11,59 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_wDRUFV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_X8n6Ke": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome to ID Rewards!",
+            "heading_size": "h1"
+          }
+        },
+        "text_XmYkTp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are very excited to present our new rewards program. Earn Badge Bucks on all your purchases and redeem them for exclusive rewards!</p>"
+          }
+        },
+        "button_Nw6PAg": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join the Program for free!",
+            "button_link": "/account",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_X8n6Ke",
+        "text_XmYkTp",
+        "button_Nw6PAg"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_wDRUFV"
   ]
 }
