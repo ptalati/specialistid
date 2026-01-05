@@ -1,0 +1,263 @@
+<style>
+  .product-expert-support-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+ }
+
+@media (max-width: 749px) {
+    .product-expert-support-{{ section.id }} {
+        padding-top: {{ section.settings.padding_top_mobile }}px;
+        padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+    }
+}
+h2.expert-support-header {
+    color: #333;
+    font-size: 30px;
+    margin: 0px 0 40px 0;
+}
+
+{% comment %} faq {% endcomment %}
+  .faq_block_sec {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid #6FB43F;
+    border-radius: 10px;
+}
+ .faq_block {
+    border-bottom: 1px solid #6FB43F;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.faq_h_sec {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 25px;
+    background: #fff;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    line-height: 1.6;
+    color: #3A3A3C;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+.faq_svg {
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    color: #6FB43F;
+    font-size: 14px;
+    font-weight: bold;
+}
+.faq_para_sec {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease;
+    padding: 0 25px;
+    color: #3A3A3C;
+    line-height: 1.6;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.togglecls {
+    transform: rotate(180deg);
+    color: #F5911F;
+}
+
+.faq_block.active .faq_para_sec {
+    margin: 20px 0px 25px;
+}
+.faq_block.active .faq_h_sec span {
+    color: #6FB43F;
+}   
+.faq_block.active .faq_h_sec {
+    background: #f0f8f0;
+    color: #3A3A3C;
+}
+.faq_para_sec p {
+   margin: 0;
+}
+
+.faq_block:first-child {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  overflow: hidden; 
+}
+
+.faq_block:last-child {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    overflow: hidden;
+    border-bottom: none;
+}
+
+
+
+  @media (max-width: 600px) {
+  .faq_h_sec {   padding: 12px 14px;}
+  .faq_block.active .faq_para_sec {   margin: 8px 0px 10px;   padding: 0 15px;}
+  h2.expert-support-header {
+    color: #333;
+    font-size: 22px;
+    margin: 0px 0 20px 0;
+}
+}
+
+
+</style>
+
+<div class="product-expert-support-{{ section.id }} tab-content-new">
+  <div class="page-width">
+     <h2 class="expert-support-header">{{ section.settings.heading }}</h2>
+    <div class="expert-support-inner">
+       <div class="faq_block_sec">
+        {% if product.metafields.custom.product_common_question != blank %}
+          {% for faq in product.metafields.custom.product_common_question.value %}
+            <div class="faq_block">
+              <div class="faq_h_sec ">
+                <span>{{ faq.question }}</span>
+                <div class="faq_svg">▼</div>
+              </div>
+              <div class="faq_para_sec">{{ faq.answer | metafield_tag }}</div>
+            </div>
+          {% endfor %}
+        {% else %}
+          {% for block in section.blocks %}
+            <div class="faq_block">
+              <div class="faq_h_sec ">
+                <span>{{ block.settings.head }}</span>
+                <div class="faq_svg">▼</div>
+              </div>
+              <div class="faq_para_sec">{{ block.settings.para }}</div>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const faqHeaders = document.querySelectorAll('.faq_h_sec');
+
+    faqHeaders.forEach((header) => {
+      header.addEventListener('click', function () {
+        const currentBlock = this.closest('.faq_block');
+        const para = currentBlock.querySelector('.faq_para_sec');
+        const icon = currentBlock.querySelector('.faq_svg');
+
+        // close all others
+        document.querySelectorAll('.faq_block').forEach((block) => {
+          if (block !== currentBlock) {
+            block.querySelector('.faq_para_sec').style.maxHeight = null;
+            block.querySelector('.faq_svg').classList.remove('togglecls');
+            block.classList.remove('active');
+          }
+        });
+
+        // toggle current
+        if (para.style.maxHeight) {
+          para.style.maxHeight = null; // collapse
+          icon.classList.remove('togglecls');
+          currentBlock.classList.remove('active');
+        } else {
+          para.style.maxHeight = para.scrollHeight + 'px'; // expand
+          icon.classList.add('togglecls');
+          currentBlock.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Product faq",
+  "settings": [
+    {
+     "type": "text",
+     "id":"heading",
+     "label":"Heading"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding mobile",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding mobile",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "head",
+          "label": "Accordion Head",
+          "default": "What is Lorem Ipsum?"
+        },
+        {
+          "type": "textarea",
+          "id": "para",
+          "label": "Accordion Content",
+          "default": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product faq",
+      "category": "product"
+    }
+  ]
+}
+{% endschema %}
