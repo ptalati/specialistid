@@ -9,6 +9,16 @@
  */
 {
   "sections": {
+    "custom_liquid_3MVfVk": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\">\n{% for image in collection.metafields.landing_page.landing_page_banner_image_desk %}\n<div class=\"parallax parallax-window\">\n  <img src=\"{{ image.src }}\" alt=\"{{ image.alt }}\" class=\"lazyload\" />\n</div>\n{% endfor %}\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -65,6 +75,7 @@
     }
   },
   "order": [
+    "custom_liquid_3MVfVk",
     "banner",
     "product-grid",
     "176648532367c6d47d",
