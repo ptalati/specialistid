@@ -60,10 +60,67 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "multicolumn_PNJPyw": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_D7Qzk9": {
+          "type": "column",
+          "settings": {
+            "title": "Welcome10",
+            "text": "<p>$1 off $10 orders and up (one time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_VDzB8f": {
+          "type": "column",
+          "settings": {
+            "title": "Welcome50",
+            "text": "<p>$5 off $50 orders and up (One time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_RgytyA": {
+          "type": "column",
+          "settings": {
+            "title": "Welcome100",
+            "text": "<p>$10 off $100 orders and up (One time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_D7Qzk9",
+        "column_VDzB8f",
+        "column_RgytyA"
+      ],
+      "settings": {
+        "title": "Current Discounts",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "All Discount Codes",
+        "button_link": "shopify://pages/coupons",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 64,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36,
+        "section_css_class": "Type your own CSS class"
+      }
     }
   },
   "order": [
     "main",
-    "rich_text_Wqenkg"
+    "rich_text_Wqenkg",
+    "multicolumn_PNJPyw"
   ]
 }
