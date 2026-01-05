@@ -1,0 +1,191 @@
+<style>
+    .product-technical-specif-{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+   }
+  h2.specs-header-new {
+      color: #333;
+      font-size: 30px;
+      margin: 0px 0 40px 0;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #7ac043;
+  }
+
+  {% comment %} .technical-new {
+      background: linear-gradient(to right, #7ac043, #a8d470);
+      border-left: 4px solid #5a8f32;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 6px;
+  }
+  .technical-new h3 {
+      margin: 0 0 10px 0;
+      color: #000;
+      font-weight: 600;
+  }
+  .technical-new p {
+      margin: 0;
+      line-height: 1.6;
+      color: #000;
+      font-size: 16px;
+  } {% endcomment %}
+  .product-technical-specif-inner table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin: 20px 0 0;
+      border: 1px solid;
+  }
+  .product-technical-specif-inner table th {
+      background: rgb(122 192 67 / 35%);
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: start;
+      color: #333333;
+  }
+  .product-technical-specif-inner table  td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      vertical-align: top;
+      font-size: 15px;
+  }
+  .product-technical-specif-inner table td:first-child {
+      font-weight: 600;
+      width: 25%;
+  }
+
+  @media (max-width: 749px) {
+      .product-technical-specif-{{ section.id }} {
+          padding-top: {{ section.settings.padding_top_mobile }}px;
+          padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+      }
+  }
+
+  @media (max-weight:600px){
+    h2.specs-header-new {
+        font-size: 22px;
+        margin: 0px 0 20px 0;
+    }
+  }
+</style>
+
+<div class="product-technical-specif-{{ section.id }} tab-content-new" id="specifications">
+  <div class="page-width">
+    <h2 class="specs-header-new">{{ section.settings.heading }}</h2>
+
+    {% if product.metafields.custom.technical_specifications != blank %}
+      <div class="product-technical-specif-inner">
+        {{ product.metafields.custom.technical_specifications }}
+        {% comment %}
+          <div class="technical-new">
+              {{ section.settings.text }}
+          </div>
+        {% endcomment %}
+      </div>
+    {% else %}
+      <div class="product-technical-specif-inner">
+        <table>
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>What You Get</th>
+              <th>What It Does</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Magicard Pronto100 Printer</strong></td>
+              <td>Single-sided ID card printer with HD print mode</td>
+              <td>Produces professional edge-to-edge cards with 300 dpi resolution</td>
+            </tr>
+            <tr>
+              <td><strong>Print Speeds</strong></td>
+              <td>200 cards/hour color, 766 cards/hour monochrome, HD color: 23s</td>
+              <td>Fast enough for batch printing while maintaining quality</td>
+            </tr>
+            <tr>
+              <td><strong>Physical Dimensions</strong></td>
+              <td>Height: 208mm (8.2"), Width: 179mm (7"), Depth: 309mm (10")</td>
+              <td>Compact desktop footprint that fits easily in any workspace</td>
+            </tr>
+            <tr>
+              <td><strong>Card Handling</strong></td>
+              <td>Input hopper: 50 cards, Output hopper: 50 cards, Hand-feed capable</td>
+              <td>Flexible feeding options for different batch sizes and card types</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product technical/specif",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Hection heading",
+      "default": "Technical Specifications"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Technical Implementation"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding mobile",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding mobile",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product technical/specif",
+      "category": "product"
+    }
+  ]
+}
+{% endschema %}
