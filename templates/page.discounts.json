@@ -284,6 +284,63 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_DKfkzB": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_AzzGT9": {
+          "type": "caption",
+          "settings": {
+            "caption": "#MAKEITEASY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_q3yYtT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_hd66Ve": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_gUNTUy": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact-us"
+          }
+        }
+      },
+      "block_order": [
+        "caption_AzzGT9",
+        "heading_q3yYtT",
+        "text_hd66Ve",
+        "button_gUNTUy"
+      ],
+      "custom_css": [],
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "color_scheme": "background-1",
+        "section_css_class": "speak-to-live-specialist",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     }
   },
   "order": [
@@ -293,6 +350,7 @@
     "featured_collection_7qAhqQ",
     "rich_text_AYQHgR",
     "image_with_text_BM3nWW",
-    "collapsible_content_Wq4tqr"
+    "collapsible_content_Wq4tqr",
+    "image_with_text_DKfkzB"
   ]
 }
