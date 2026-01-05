@@ -111,11 +111,98 @@
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
+    },
+    "multicolumn_RXLbrP": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_TbKktU": {
+          "type": "column",
+          "settings": {
+            "title": "Place an order",
+            "text": "<p>For every $1 spent on our store, earn 1 Badge Buck</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_dk44tp": {
+          "type": "column",
+          "settings": {
+            "title": "Share our Store on Facebook or X",
+            "text": "<p>Get 25 Badge Bucks if you share our store on Facebook and 50 if it is on X (75 Badge Bucks if you share our store on both platforms!)</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_raJzhU": {
+          "type": "column",
+          "settings": {
+            "title": "Follow us on X or Instagram",
+            "text": "<p>Gain 50 Badge Bucks if you follow us on one of those platforms. You get 100 Badge Bucks if you follow us on both!</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fyHm7g": {
+          "type": "column",
+          "settings": {
+            "title": "Place your second order (Min. $50)",
+            "text": "<p>Get 250 Badge Bucks on your second order if it is above $50</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zmcbfy": {
+          "type": "column",
+          "settings": {
+            "title": "Place your fifth order (Min. $50)",
+            "text": "<p>Get 500 Badge Bucks on your fifth order if it is above $50</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_kLMV9m": {
+          "type": "column",
+          "settings": {
+            "title": "Order ID Printer Ribbons (Min. $50)",
+            "text": "<p>Get 200 Badge Bucks for each of your Printer Ribbons orders above $50</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_TbKktU",
+        "column_dk44tp",
+        "column_raJzhU",
+        "column_fyHm7g",
+        "column_zmcbfy",
+        "column_kLMV9m"
+      ],
+      "settings": {
+        "title": "How to earn Badge Bucks:",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36,
+        "section_css_class": "Type your own CSS class"
+      }
     }
   },
   "order": [
     "main",
     "rich_text_wDRUFV",
-    "image_with_text_URbDCV"
+    "image_with_text_URbDCV",
+    "multicolumn_RXLbrP"
   ]
 }
