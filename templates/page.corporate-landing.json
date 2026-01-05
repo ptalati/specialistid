@@ -210,6 +210,30 @@
       "settings": {
         "title": "Custom Branded ID Solutions That Match Your Company’s Identity"
       }
+    },
+    "custom_printer_showcase_whHgPw": {
+      "type": "custom-printer-showcase",
+      "name": "Card Printing Section",
+      "settings": {
+        "title": "Professional Card Printing Services",
+        "description": "Our state-of-the-art printing technology ensures your school ID cards meet the highest standards of quality and durability. From design to delivery, we handle every aspect of your card printing needs.",
+        "feature1_symbol": "",
+        "feature1_title": "Custom Design",
+        "feature1_text": "Full design services available",
+        "feature2_symbol": "",
+        "feature2_title": "Fast Turnaround",
+        "feature2_text": "5-7 business days delivery",
+        "feature3_symbol": "",
+        "feature3_title": "Security Features",
+        "feature3_text": "Holograms, UV printing, more",
+        "feature4_symbol": "",
+        "feature4_title": "Premium Quality",
+        "feature4_text": "Fade-resistant, waterproof",
+        "visual_title": "Advanced Printing Technology",
+        "visual_text": "High-resolution digital printing with color matching and quality control processes ensure every card meets professional standards.",
+        "visual_cta_label": "Learn More",
+        "visual_cta_link": ""
+      }
     }
   },
   "order": [
@@ -217,6 +241,7 @@
     "rich_text_UXfEyf",
     "custom_icon_slider_UmnG4w",
     "industries_paYqfh",
-    "custom_product_showcase_8yMDEP"
+    "custom_product_showcase_8yMDEP",
+    "custom_printer_showcase_whHgPw"
   ]
 }
