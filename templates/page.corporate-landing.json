@@ -466,6 +466,43 @@
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
+    },
+    "newsletter_Btrq3x": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_E8WCkV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Attached, Stay Connected with Specialist ID",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_fd4eee": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up and stay connected to receive news offers and exclusive discount codes.</p>"
+          }
+        },
+        "email_form_tzxnAT": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_E8WCkV",
+        "paragraph_fd4eee",
+        "email_form_tzxnAT"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "newsletter-section",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     }
   },
   "order": [
@@ -479,6 +516,7 @@
     "concept_cYiFbp",
     "featured_collection_YhcYd9",
     "multicolumn_wfgygB",
-    "image_with_text_eReAd7"
+    "image_with_text_eReAd7",
+    "newsletter_Btrq3x"
   ]
 }
