@@ -121,7 +121,8 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false,
-            "show_gift_card_recipient": true
+            "show_gift_card_recipient": true,
+            "button_color_scheme": "scheme-2"
           }
         },
         "customize_quote_buttons_KQYLh3": {
