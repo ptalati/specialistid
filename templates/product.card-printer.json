@@ -309,6 +309,37 @@
         "padding_bottom_mobile": 36
       }
     },
+    "download_resource_qjeVWP": {
+      "type": "download-resource",
+      "name": "Product Downloads",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "talk_specialists_JKRjq3": {
+      "type": "talk-specialists",
+      "name": "Product Specialists",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "why_this_work_t8Xnm9": {
+      "type": "why-this-work",
+      "name": "Why This Works",
+      "settings": {
+        "heading": "Why This Works So Well",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "custom_content_feedback_JCqCDQ": {
       "type": "custom-content-feedback",
       "name": "Content Feedback",
@@ -344,10 +375,12 @@
         "padding_bottom": 28
       }
     },
-    "download_resource_qjeVWP": {
-      "type": "download-resource",
-      "name": "Product Downloads",
+    "product_technical_specification_cDLQCy": {
+      "type": "product-technical-specification",
+      "name": "Product technical/specif",
       "settings": {
+        "heading": "Technical Specifications",
+        "text": "",
         "padding_top": 36,
         "padding_bottom": 36,
         "padding_top_mobile": 36,
@@ -364,6 +397,9 @@
     "ennential_supply_bRgTk7",
     "product_faq_WJDq3b",
     "download_resource_qjeVWP",
+    "talk_specialists_JKRjq3",
+    "why_this_work_t8Xnm9",
+    "product_technical_specification_cDLQCy",
     "custom_content_feedback_JCqCDQ",
     "custom_liquid_pBgjQg",
     "related-products"
