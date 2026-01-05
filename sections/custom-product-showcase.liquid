@@ -1,3 +1,173 @@
+{% style %}
+  /* Product Showcase Section */
+  .sbp-products-section {
+    padding: 40px 0 80px;
+    background: linear-gradient(135deg, #f8fffe 0%, #f0f7ec 100%);
+  }
+
+  .sbp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .sbp-section-title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 3.5rem;
+    color: #5a9633;
+    position: relative;
+  }
+
+  .sbp-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(45deg, #f5911f, #ff9b2b);
+    border-radius: 2px;
+  }
+
+  /* ✅ Limit to max 3 columns, responsive down to 2 and 1 */
+  .sbp-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 33.33%), 1fr));
+    gap: 2rem;
+    padding-top: 25px;
+  }
+
+  @media (max-width: 1024px) {
+    .sbp-product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .sbp-product-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ✅ Make sure cards stretch and wrap correctly */
+  .sbp-product-card {
+    position: relative;
+    overflow: hidden;
+    background: white;
+    border-radius: 20px;
+    padding: 3rem 2rem 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    min-width: 0;
+  }
+
+  .sbp-product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #f5911f, #ff9b2b);
+    border-radius: 4px 4px 0 0;
+    z-index: 2;
+  }
+
+  .sbp-product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  }
+
+  .sbp-top-line {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #f5911f, #ff9b2b);
+    border-radius: 4px 4px 0 0;
+    z-index: 1;
+  }
+
+  /* ✅ Responsive image wrapper */
+  .sbp-product-image {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sbp-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .sbp-product-title {
+    color: #5a9633;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  .sbp-product-description {
+    color: #555;
+    margin: 1rem 0;
+  }
+
+  .sbp-left-align {
+    text-align: left;
+  }
+
+  .sbp-product-description ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .sbp-product-description ul li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.5em;
+    color: #444;
+  }
+
+  .sbp-product-description ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #6fb43f;
+    font-weight: bold;
+  }
+
+  .sbp-product-cta {
+    display: inline-block;
+    background: linear-gradient(45deg, #5a9633, #6fb43f);
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .sbp-product-cta:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(45deg, #6fb43f, #7ac44a);
+  }
+{% endstyle %}
+
 <section class="sbp-products-section">
   <div class="sbp-container">
     <h2 class="sbp-section-title">{{ section.settings.title }}</h2>
