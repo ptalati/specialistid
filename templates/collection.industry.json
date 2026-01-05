@@ -45,6 +45,9 @@
     },
     "custom_liquid_wkhG7A": {
       "type": "custom-liquid",
+      "custom_css": [
+        ".sub-banner-image-card {display: flex; flex-wrap: nowrap;}"
+      ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div class=\"page-width\">\n{% if collection.metafields.landing_page.landing_page_sub_html != blank %}\n        {{ collection.metafields.landing_page.landing_page_sub_html }}\n      {% endif %}\n</div>",
