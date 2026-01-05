@@ -11,13 +11,115 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_UXfEyf": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7nAnWR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Custom ID Badge Solutions for Businesses of All Sizes",
+            "heading_size": "h1"
+          }
+        },
+        "text_dagpKe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From employee access control to visitor management, we provide everything you need to secure and streamline your workplace.</p>"
+          }
+        },
+        "button_aNt6Gq": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Business Solutions",
+            "button_link": "shopify://collections/corporate-enterprise",
+            "button_style_secondary": false,
+            "button_label_2": "Get a Custom Quote",
+            "button_link_2": "shopify://pages/request-a-quote",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7nAnWR",
+        "text_dagpKe",
+        "button_aNt6Gq"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_icon_slider_UmnG4w": {
+      "type": "custom-icon-slider",
+      "blocks": {
+        "icon_list_U7WHHk": {
+          "type": "icon_list",
+          "settings": {
+            "icon_image": "shopify://shop_images/nasa_logo-min_1.png"
+          }
+        },
+        "icon_list_yqjCft": {
+          "type": "icon_list",
+          "settings": {
+            "icon_image": "shopify://shop_images/walt.svg"
+          }
+        },
+        "icon_list_WWQhY7": {
+          "type": "icon_list",
+          "settings": {
+            "icon_image": "shopify://shop_images/Tabpanel_Heading_3_samsung_logo_large-1_png_43b130e5-8ef4-4dc2-a2d8-7c2e08dc1196.png"
+          }
+        },
+        "icon_list_pAKPQ6": {
+          "type": "icon_list",
+          "settings": {
+            "icon_image": "shopify://shop_images/coca.svg"
+          }
+        },
+        "icon_list_bxMUwB": {
+          "type": "icon_list",
+          "settings": {
+            "icon_image": "shopify://shop_images/nike_logo-min-1.png"
+          }
+        }
+      },
+      "block_order": [
+        "icon_list_U7WHHk",
+        "icon_list_yqjCft",
+        "icon_list_WWQhY7",
+        "icon_list_pAKPQ6",
+        "icon_list_bxMUwB"
+      ],
+      "name": "Custom icon slider",
+      "settings": {
+        "section_color_scheme": "",
+        "title": "Trusted by Businesses Nationwide",
+        "icons_autoplay": true,
+        "icons_per_page": 4,
+        "icons_per_page_mobile": 2,
+        "icons_to_scroll": 4,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_UXfEyf",
+    "custom_icon_slider_UmnG4w"
   ]
 }
