@@ -1,0 +1,279 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_RxYBYw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JHcmcK": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Last Family-Owned ID Company That Truly Cares",
+            "heading_size": "h1"
+          }
+        },
+        "text_F83LXt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In an industry where every other ID company has been swallowed by corporate giants, we're proudly standing our ground as America's last independent, family-owned ID specialist. </p><p>We don't answer to shareholders - we answer to you</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JHcmcK",
+        "text_F83LXt"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_PJmrjj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_3fQMLc": {
+          "type": "heading",
+          "settings": {
+            "heading": "We Answer to You, Not Investors",
+            "heading_size": "h1"
+          }
+        },
+        "text_y3Umee": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When you work with a family-owned business, accountability changes everything. </p><p>Here's what that means for you:</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3fQMLc",
+        "text_y3Umee"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_simple_faq_section_mghMVF": {
+      "type": "custom-simple-faq-section",
+      "blocks": {
+        "faq_f78MmB": {
+          "type": "faq",
+          "settings": {
+            "question": "Real-Time Inventory You Can Trust",
+            "answer": "<p>Because we answer to customers, not quarterly reports:<br/></p><ul><li>Every item shown is physically in our warehouse<br/></li><li>No \"sorry, our system was wrong\" after you order<br/></li><li>Same-day shipping when ordered before 3PM EST<br/></li><li>Immediate notification if anything affects your order</li></ul>"
+          }
+        },
+        "faq_c7cLL3": {
+          "type": "faq",
+          "settings": {
+            "question": "Direct Access to Decision Makers",
+            "answer": "<p>Because we answer to you, not a board of directors:<br/></p><ul><li>Need answers? Talk to people who can say \"yes\"<br/></li><li>Every team member has authority to solve problems<br/></li><li>No permission needed to make things right<br/></li><li>Your urgency is our urgency</li></ul>"
+          }
+        },
+        "faq_TABQrD": {
+          "type": "faq",
+          "settings": {
+            "question": "Issues get fixed, not \"escalated\"",
+            "answer": "<p>Because we answer to satisfaction scores, not stock prices:<br/></p><ul><li>Solutions come from common sense, not policy manuals<br/></li><li>Your definition of \"resolved\" is the only one that matters<br/></li><li>We own the problem until you're satisfied</li><li>Ready to answer any of your questions</li></ul>"
+          }
+        },
+        "faq_jqzr84": {
+          "type": "faq",
+          "settings": {
+            "question": "Expert Support When You Need It",
+            "answer": "<p>Because we answer to your needs, not shareholder demands:<br/></p><ul><li>Real ID experts who actually work here<br/></li><li>Direct phone lines to product specialists<br/></li><li>No scripts, no transfers, no runaround<br/></li><li>Support until your question is fully answered</li></ul>"
+          }
+        },
+        "faq_zERtUp": {
+          "type": "faq",
+          "settings": {
+            "question": "Long-Term Partnership Focus",
+            "answer": "<p>Because we answer to lifetime relationships, not quarterly earnings:<br/></p><ul><li>Your data stays private and secure with us<br/></li><li>Consistent pricing without sudden \"corporate\" changes<br/></li><li>Same family ownership today and tomorrow<br/></li><li>Building trust, not maximizing transactions</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_f78MmB",
+        "faq_c7cLL3",
+        "faq_TABQrD",
+        "faq_jqzr84",
+        "faq_zERtUp"
+      ],
+      "name": "FAQs",
+      "settings": {
+        "bg": "#ffffff",
+        "head": "The Specialist ID Guarantee",
+        "top_spacing": 40,
+        "bottom_spacing": 40
+      }
+    },
+    "image_with_text_KVntqn": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_tVezM4": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>Other companies may answer to investors, but at Specialist ID, we only answer to you. That's our family's promise.</em></p><p><em><strong>- </strong></em><strong>Patrick Barnhill, Owner & Founder </strong></p><p><em>Our mantra is Care the Most! It helps us strive to be the easiest company to work with, in any industry.</em></p><p><em><strong>-</strong></em><strong> Mike Barnhill, Co-Founder </strong></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_tVezM4"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Race_Day.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "image_with_text_Gha34j": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_hQpjc6": {
+          "type": "caption",
+          "settings": {
+            "caption": "#MAKEITEASY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_G3WyMn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_EwTgN9": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_YX8fpe": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_hQpjc6",
+        "heading_G3WyMn",
+        "text_EwTgN9",
+        "button_YX8fpe"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "speak-to-live-specialist",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "newsletter_yrckgw": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_YMytjT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Attached, Stay Connected",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_emcBHR": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up and stay connected to receive news offers and exclusive discount codes.</p>"
+          }
+        },
+        "email_form_a3KC9n": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_YMytjT",
+        "paragraph_emcBHR",
+        "email_form_a3KC9n"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "newsletter-section",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_RxYBYw",
+    "rich_text_PJmrjj",
+    "custom_simple_faq_section_mghMVF",
+    "image_with_text_KVntqn",
+    "image_with_text_Gha34j",
+    "newsletter_yrckgw"
+  ]
+}

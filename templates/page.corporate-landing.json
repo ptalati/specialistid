@@ -293,6 +293,216 @@
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
+    },
+    "concept_cYiFbp": {
+      "type": "concept",
+      "name": "Concept to Deployment",
+      "settings": {
+        "color_scheme": "",
+        "title": "Fast Setup for Your Team",
+        "subtitle": "Whether you're a growing startup or a large corporation, Specialist ID makes it easy to get professional employee badges ready—quickly and reliably.",
+        "step1_title": "Requirements Discussion",
+        "step1_desc": "Review your badge needs for security, branding, and usage.",
+        "step2_title": "Design & Prototype",
+        "step2_desc": "Create your business ID card design and choose accessories.",
+        "step3_title": "Data Upload & Setup",
+        "step3_desc": "Submit employee info via secure upload — our badge making company handles setup.",
+        "step4_title": "Printing & Production",
+        "step4_desc": "We provide high-quality employee badge printing with precise personalization.",
+        "step5_title": "Packaging & Delivery",
+        "step5_desc": "Receive ready-to-use badge sets with fast, trackable delivery.",
+        "timeline_note": "Timeline typically 4–8 business days from approval to first shipment.",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "mob_top_spacing": 40,
+        "mob_bottom_spacing": 40
+      }
+    },
+    "featured_collection_YhcYd9": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "corporate-enterprise",
+        "products_to_show": 4,
+        "title": "Shop Popular Products for Businesses",
+        "heading_size": "h1",
+        "description": "<p>Explore top-rated employee ID accessories—from badge holders for business to ID printers and visitor badges—perfect for efficient badge printing for companies.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_wfgygB": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_LYQEbY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Free_shipping.svg",
+            "title": "Exceptionally Easy Ordering",
+            "text": "<p>Making things easy, intuitive, and fast since 2001.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yKUPPd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Icon_2.svg",
+            "title": "Fast & Reliable",
+            "text": "<p>Quick, dependable order delivery and free shipping over $99.00</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_a7EdiR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Icon_3.svg",
+            "title": "Trusted by Customers",
+            "text": "<p>Highly rated for quality, satisfaction, and trust.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_LYQEbY",
+        "column_yKUPPd",
+        "column_a7EdiR"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Why Choose SpecialistID?",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36,
+        "section_css_class": "why-choose"
+      }
+    },
+    "image_with_text_eReAd7": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_Yxqnjf": {
+          "type": "caption",
+          "settings": {
+            "caption": "#MAKEITEASY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_9pkEQw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_rLA4Un": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_L37Ybg": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_Yxqnjf",
+        "heading_9pkEQw",
+        "text_rLA4Un",
+        "button_L37Ybg"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "newsletter_Btrq3x": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_E8WCkV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Attached, Stay Connected with Specialist ID",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_fd4eee": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up and stay connected to receive news offers and exclusive discount codes.</p>"
+          }
+        },
+        "email_form_tzxnAT": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_E8WCkV",
+        "paragraph_fd4eee",
+        "email_form_tzxnAT"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "newsletter-section",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     }
   },
   "order": [
@@ -302,6 +512,11 @@
     "industries_paYqfh",
     "custom_product_showcase_8yMDEP",
     "custom_printer_showcase_whHgPw",
-    "image_with_text_pycdzE"
+    "image_with_text_pycdzE",
+    "concept_cYiFbp",
+    "featured_collection_YhcYd9",
+    "multicolumn_wfgygB",
+    "image_with_text_eReAd7",
+    "newsletter_Btrq3x"
   ]
 }

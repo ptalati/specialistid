@@ -1,0 +1,235 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_JFFtMz": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_aebKV7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Specialist ID Coupons",
+            "heading_size": "h1"
+          }
+        },
+        "text_pePU6F": {
+          "type": "text",
+          "settings": {
+            "text": "<p> Find the latest Specialist ID coupon discounts to save on ID badge holders, accessories, and more. Apply available coupon codes at checkout for instant savings!</p>"
+          }
+        },
+        "button_RkCUrV": {
+          "type": "button",
+          "settings": {
+            "button_label": "Use Specialist ID coupons",
+            "button_link": "shopify://collections/our-best-sellers",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_aebKV7",
+        "text_pePU6F",
+        "button_RkCUrV"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_BbWQmD": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_N7QpmL": {
+          "type": "column",
+          "settings": {
+            "title": "Welcome10",
+            "text": "<p>$1 off $10 orders and up (one time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cDUdrK": {
+          "type": "column",
+          "settings": {
+            "title": "Welcome50",
+            "text": "<p>$5 off $50 orders and up (One time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_iMPAVR": {
+          "type": "column",
+          "settings": {
+            "title": "Welcome100",
+            "text": "<p>$10 off $100 orders and up (One time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FqE7HY": {
+          "type": "column",
+          "settings": {
+            "title": "Q2SPID10",
+            "text": "<p>Get 10% off any order below 1000$ or a 100$ off orders over 1000$. (One time use)</p><p><span style=\"text-decoration:underline\"><strong>Expired</strong></span></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_N7QpmL",
+        "column_cDUdrK",
+        "column_iMPAVR",
+        "column_FqE7HY"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36,
+        "section_css_class": "Type your own CSS class"
+      }
+    },
+    "image_with_text_kQYqQL": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_CiFNHe": {
+          "type": "caption",
+          "settings": {
+            "caption": "#MAKEITEASY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_mqG9m9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_k6NMxd": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_UtimCK": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_CiFNHe",
+        "heading_mqG9m9",
+        "text_k6NMxd",
+        "button_UtimCK"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "speak-to-live-specialist",
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "newsletter_q6fzha": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_GbGhyU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Attached, Stay Connected",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_9YFUJc": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up and stay connected to receive news offers and exclusive discount codes.</p>"
+          }
+        },
+        "email_form_fLcqeL": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_GbGhyU",
+        "paragraph_9YFUJc",
+        "email_form_fLcqeL"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "newsletter-section",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_JFFtMz",
+    "multicolumn_BbWQmD",
+    "image_with_text_kQYqQL",
+    "newsletter_q6fzha"
+  ]
+}
