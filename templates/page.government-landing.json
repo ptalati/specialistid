@@ -235,6 +235,7 @@
     },
     "featured_collection_8EC68i": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "events",
@@ -260,6 +261,50 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "rich_text_BPznLq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UaP7XP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Procurement Made Simple",
+            "heading_size": "h1"
+          }
+        },
+        "text_9nTUEN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We understand the complexities of government procurement — that’s why we’ve built our process to be fast, compliant, and easy to navigate.</p><ul><li>Streamlined bulk order processing for high-volume government ID supplies<br/></li><li>We accept P-Cards, Purchase Orders, and are registered under GSA Schedule contracts<br/></li><li>Dedicated account representatives experienced in agency procurement workflows<br/></li><li>Ideal for outfitting departments with federal ID badges or upgrading site-wide government access badge systems<br/><br/>Whether you're outfitting 50 or 5,000 staff members, our team ensures smooth fulfillment with the compliance documentation and support your agency needs.</li></ul>"
+          }
+        },
+        "button_QHRFQj": {
+          "type": "button",
+          "settings": {
+            "button_label": "Request Government Pricing",
+            "button_link": "shopify://pages/request-a-quote",
+            "button_style_secondary": false,
+            "button_label_2": "Talk to a Procurement Expert",
+            "button_link_2": "shopify://pages/contact-us",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_UaP7XP",
+        "text_9nTUEN",
+        "button_QHRFQj"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "image_with_text_7iNgVj": {
@@ -368,6 +413,7 @@
     "custom_printer_showcase_eiAzRb",
     "custom_guidebook_showcase_BhWw6y",
     "featured_collection_8EC68i",
+    "rich_text_BPznLq",
     "image_with_text_7iNgVj",
     "newsletter_YihLyf"
   ]
