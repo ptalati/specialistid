@@ -118,6 +118,61 @@
         "section_css_class": "Type your own CSS class"
       }
     },
+    "custom_product_showcase_ewxxaH": {
+      "type": "custom-product-showcase",
+      "blocks": {
+        "product_FgkQfd": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/magicard-300-id-card-printer-left.webp",
+            "title": "Government ID Cards & Printers",
+            "text": "<p>Produce official credentials with reliable in-house printing solutions tailored for government use:</p><ul><li>Create secure government ID cards on demand<br/></li><li>FIPS and HSPD-12 compliant hardware<br/></li><li>Dual-sided printers with smart card encoding<br/></li><li>Supports high-volume agency requirements</li></ul>",
+            "link": "shopify://collections/id-card-printers",
+            "link_label": "Shop our Printers"
+          }
+        },
+        "product_AqKDKi": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/2120-762X_2.jpg",
+            "title": "Badge Holders & ID Reels",
+            "text": "<p>Keep IDs secure, accessible, and visible with rugged accessories:</p><ul><li>Durable government <a href=\"/collections/id-badge-holders\" title=\"ID Badge Holders\">badge holders</a> for daily use<br/></li><li>Gov badge reels with retractable cords and clip options<br/></li><li>Designed for scanners and controlled entry points<br/></li><li>Reduces card damage and increases display efficiency</li></ul>",
+            "link": "shopify://collections/badge-reels",
+            "link_label": "Shop our badge reels"
+          }
+        },
+        "product_bKNKBV": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Custom-Printed-Lanyards-SpecialistID.jpg",
+            "title": "Lanyards & Custom Branding",
+            "text": "<p>Display your government identification with professional, branded lanyards:</p><ul><li>Breakaway lanyards for added safety<br/></li><li>Custom printing for logos or departments</li><li>Woven or antimicrobial material options<br/></li><li>Perfect for conferences, staff, or daily ID wear</li></ul>",
+            "link": "shopify://collections/custom-printed-products",
+            "link_label": "Customize everything"
+          }
+        },
+        "product_GDa4R9": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/AC-916-CLEAR-1.jpg",
+            "title": "RFID & Smart Card Accessories",
+            "text": "<p>Enhance digital security and protect sensitive credentials:</p><ul><li>RFID-blocking sleeves and shielded badge holders</li><li>Anti-skimming tech for rfid badge government use</li><li>Smart card encoders and tamper-proof seals</li><li>Trusted by agencies handling secure smart ID cards</li></ul>",
+            "link": "shopify://collections/rfid-blocking-badge-holders",
+            "link_label": "Shop RFID and Smart Cards"
+          }
+        }
+      },
+      "block_order": [
+        "product_FgkQfd",
+        "product_AqKDKi",
+        "product_bKNKBV",
+        "product_GDa4R9"
+      ],
+      "name": "Product Showcase Section",
+      "settings": {
+        "title": "Explore Our ID Solutions for Government Use"
+      }
+    },
     "custom_guidebook_showcase_BhWw6y": {
       "type": "custom-guidebook-showcase",
       "blocks": {
@@ -166,39 +221,6 @@
         "description": "",
         "cta_label": "Download the Guidebook",
         "cta_link": ""
-      }
-    },
-    "custom_product_showcase_ewxxaH": {
-      "type": "custom-product-showcase",
-      "blocks": {
-        "product_FgkQfd": {
-          "type": "product",
-          "settings": {
-            "image": "shopify://shop_images/Custom-Printed-Lanyards-SpecialistID.jpg",
-            "title": "Branded Lanyards for Professional Event Access",
-            "text": "<p>Make your event staff, attendees, and VIPs stand out with high-quality custom printed lanyards that enhance your branding and streamline check-ins:</p><ul><li>Custom printed with logos, sponsors, or event names</li><li>Available with breakaway safety clips and badge attachments</li><li>Ideal for all access event credentials and media passes</li><li>Color-match to event themes for visual consistency</li><li>Boost event security with identifiable access levels</li></ul>",
-            "link": "shopify://products/custom-printed-lanyards-online",
-            "link_label": "Shop Custom Lanyards"
-          }
-        },
-        "product_AqKDKi": {
-          "type": "product",
-          "settings": {
-            "image": "shopify://shop_images/CustomEventBadge.png",
-            "title": "Custom Event Credentials for Access Control",
-            "text": "<p>Design professional event badges tailored to your branding and access needs. Perfect for concerts, conferences, media productions, and more:</p><ul><li>Full-color custom event badges printed with attendee info</li><li>Options for QR codes, barcodes, RFID compatibility</li><li>Durable material designed for multi-day use</li><li>Works seamlessly with our badge </li><li>Supports access control for events and role-based entryholders and reels</li></ul>",
-            "link": "shopify://products/custom-printed-event-badges-3x5",
-            "link_label": "Shop Custom Badges"
-          }
-        }
-      },
-      "block_order": [
-        "product_FgkQfd",
-        "product_AqKDKi"
-      ],
-      "name": "Product Showcase Section",
-      "settings": {
-        "title": "Your Event. Your Branding."
       }
     },
     "featured_collection_8EC68i": {
@@ -332,8 +354,8 @@
     "main",
     "rich_text_bpwrwG",
     "multicolumn_n4GQ6E",
-    "custom_guidebook_showcase_BhWw6y",
     "custom_product_showcase_ewxxaH",
+    "custom_guidebook_showcase_BhWw6y",
     "featured_collection_8EC68i",
     "image_with_text_7iNgVj",
     "newsletter_YihLyf"
