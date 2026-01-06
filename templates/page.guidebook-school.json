@@ -23,14 +23,14 @@
         "heading_UaP7XP": {
           "type": "heading",
           "settings": {
-            "heading": "Hospital Badge Accessories Procurement Guide",
+            "heading": "<strong>ID Badge Accessories Buying Guide for Schools</strong>",
             "heading_size": "h1"
           }
         },
         "caption_j8ndmz": {
           "type": "caption",
           "settings": {
-            "caption": "Built for Big Systems. Backed by Real Support.",
+            "caption": "Welcome!",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium"
           }
@@ -38,7 +38,7 @@
         "text_9nTUEN": {
           "type": "text",
           "settings": {
-            "text": "<p>Whether you're managing procurement for a flagship university hospital, a sprawling multi-facility system, or a single high-traffic ER, sourcing badge accessories probably isn’t what you imagined doing today. But here you are—tasked with making sure every ID meets compliance, infection control, and branding standards.</p><p>You’ve got infection protocols, multiple departments to coordinate, and somehow track  inventory.That’s why this guide exists: to make this one task easy, repeatable, and stress-free—no matter how big your hospital system is.</p><p>Our mission? Be the vendor that simplifies your supply chain.</p>"
+            "text": "<p>Whether you're handling this for the first time or you've inherited this delightful task from someone who escaped to a different job, ordering ID badge accessories probably ranks pretty low on your daily excitement scale.</p><p>We get it. You're trying to get a bunch of students through the school year with their IDs intact, and frankly, that's already asking a lot.</p><p>That's why we wrote this guide - to make the whole process less painful and help you make a decision that won't come back to haunt you in the middle of the school year when someone asks, \"Who ordered these?\"</p><p><strong>Our goal?</strong> Be the easiest part of your procurement process.</p>"
           }
         }
       },
@@ -64,78 +64,71 @@
         "section_RXkTeG": {
           "type": "section",
           "settings": {
-            "title": "1. Getting Started: Vendor Setup & Credentials",
-            "content": "<h3><strong>Hospital Procurement? We’re Already Onboard</strong></h3><p>We work with major health systems, teaching hospitals, and clinics across the U.S. We’re ready for credentialing, documentation, and compliance reviews.</p><p>To onboard us as a vendor, we’ll provide:</p><ul><li>W-9, address verification, and COIs as needed</li><li>ACH/Wire info for your ERP</li><li>Quick turnarounds via portals like Ariba, Coupa, SAP</li></ul><p>What we need from you:</p><ul><li>Company name and billing contact</li><li>Shipping address(es)</li><li>Tax-exemption certificate (if applicable)</li><li>Any internal compliance forms</li><li>Vendor onboarding paperwork (if applicable)</li></ul><p>Email forms to <strong>sales@specialistid.com</strong> with subject line: “Vendor Application – [Your Hospital Name]”</p><h3><strong>Setup Requirements:</strong></h3><ul><li>Facility/System Name</li><li>Point of Contact</li><li>Accounts Payable Info</li><li>Shipping & Billing Addresses</li><li>Tax-Exempt Certificate</li><li>Any compliance or vendor portal access needed</li></ul><p><strong>Accepted Payment Methods:</strong></p><ul><li>Credit Card (secure emailed link)</li><li>ACH or Check (cleared before shipping)</li><li>Purchase Orders via email or procurement portal</li><li>Extended terms on approval </li></ul>"
+            "title": "1. Getting Started: Account & Vendor Setup",
+            "content": "<h3><strong>Preferred Vendor Lists</strong></h3><p>Most schools maintain preferred vendor lists. We're happy to complete any vendor application process your school or district requires. Just email the forms to <strong>sales@specialistid.com</strong> with the subject line: <strong>\"Vendor Application – [Your School/District].\"</strong> We'll get everything back to you quickly.</p><h3><strong>What We Need From You</strong></h3><p>To set you up in our system:</p><ul><li>School/District Name</li><li>Point of Contact (Name, Phone, Email)</li><li>Accounts Payable Contact</li><li>Shipping & Billing Addresses</li><li>Tax-Exempt Certificate</li><li>Any required vendor documentation</li></ul><h3><strong>W-9 & Address Info</strong></h3><p>Our W-9 is always ready. Our address for all documentation: <strong>Specialist ID<br/></strong> <strong>7760 NW 56th St, Doral, FL 33166</strong></p><h3><strong>Payment Options</strong></h3><ul><li><strong>Net 30:</strong> Standard terms (30 days to pay after delivery)</li><li><strong>Credit Card:</strong> Secure payment link sent to your email</li><li><strong>ACH/Check:</strong> Payment must clear before shipping</li><li><strong>Purchase Orders:</strong> We accept official POs (see Section 4)</li></ul>"
           }
         },
         "section_yaacPi": {
           "type": "section",
           "settings": {
-            "title": "2. Samples & Custom Mock-ups",
-            "content": "<h3><strong>Try Before You Commit</strong></h3><p>We offer free samples on most products—including custom badge reels, badge bottoms/buddies, and every type of badge holder imaginable. </p><p>Custom Mock-ups: We’ll generate visual proofs of your logo, badge format, or department color system before production. Custom samples can ship within 2–3 business days.</p>"
+            "title": "2. Samples/Mock-ups",
+            "content": "<h3><strong>Free Samples</strong></h3><p>Want to see the quality before you order?  <a href=\"/pages/sample-request\" title=\"Sample Request\">Click here</a> for direct sample requests. Most products are available for sampling.</p><p><strong>Why sample?</strong> Because you want to know the quality will hold up to student use before you place your order.</p><h3><strong>Custom Logo Mock-ups</strong></h3><p>Considering adding your school logo? We'll create a digital mock-up showing exactly how your logo will look on your chosen item. Physical custom samples typically take 2-3 days for production.</p><h3><strong>Custom Lanyards</strong></h3><p>These follow a slightly different process due to complexity. We have a separate guide specifically for custom lanyards if needed.</p>"
           }
         },
         "section_rfNrQq": {
           "type": "section",
           "settings": {
-            "title": "3. Quotes & Customization",
-            "content": "<h3><strong>Clear, Fast, Accurate</strong></h3><p>Send us SKUs or a general need (e.g., retractable reels for emergency staff), and we’ll turn around a detailed quote with:</p><ul><li>Unit cost</li><li>Volume pricing tiers</li><li>Customization charges (if any)</li><li>Realistic delivery timelines</li></ul><p><strong>Standard quotes</strong>: Approximately 1 hour</p><p><strong>Custom orders</strong>: Within 24 hours</p>"
+            "title": "3. Quotes & Comparison",
+            "content": "<h3><strong>How Our Quotes Work</strong></h3><ul><li><strong>You send us:</strong> SKU, quantity, and custom details if applicable</li><li><strong>Standard quotes:</strong> ~30 minutes (maybe an hour if our sales team is swamped)</li><li><strong>Custom quotes:</strong> Usually within 24 hours</li><li><strong>Delivery:</strong> Via email + PDF backup</li></ul><h3><strong>What Makes Our Quotes Different</strong></h3><ol><li><strong>Transparent pricing</strong> - no hidden fees or surprise charges</li><li><strong>Accurate delivery timelines</strong> - we tell you exactly when you'll have your products</li><li><strong>Clear product descriptions</strong> - no confusion about what you're getting</li></ol><p><strong>Responsive follow-up</strong> - questions get answered quickly<br/></p><p><a href=\"/pages/request-a-quote\" title=\"Request a Quote\">Request your quote here</a><br/></p>"
           }
         },
         "section_jTQDq3": {
           "type": "section",
           "settings": {
-            "title": "4. Placing Orders",
-            "content": "<h3><strong>Submit POs or Order Online</strong></h3><p>We support all channels:</p><ul><li>Email Orders: sales@specialistid.com</li><li>Phone: 888-559-1940 (Sales) or 800-360-6720 (Customer Service)</li><li>Website:<a href=\"http://www.specialistid.com\"> <span style=\"text-decoration:underline\">www.specialistid.com</span></a></li><li>Purchase Orders: Just attach and email</li></ul><h3><strong>Shipping & Timelines</strong></h3><ul><li>In-stock items: Ship same day if ordered by 12 PM EST</li><li>Custom badge reels: 3–5 business days</li><li>Custom Badge Buddies: 4-7 business days</li><li>New product development: 4–12 weeks depending on specs</li></ul><p>We ship via FedEx, UPS, USPS, and DHL. We track everything and keep you updated—because delays are not just inconvenient in hospitals, they’re unacceptable.<br/></p>"
+            "title": "4. Ordering",
+            "content": "<h3><strong>How to Place Your Order</strong></h3><ul><li><strong>Phone:</strong> 888-559-1940 (Sales) or 800-360-6720 (Customer Service)</li><li><strong>Email:</strong> sales@specialistid.com or your assigned rep</li><li><strong>Website:</strong> Order online anytime</li><li><strong>Purchase Order:</strong> Email official PO to sales@specialistid.com</li></ul><h3><strong>Timeline Expectations</strong></h3><p><strong>In-Stock Items:</strong></p><ul><li>Orders before 12 PM EST: Usually same-day shipping</li><li>All other orders: Within 24 hours (barring any acts of God, weather, or shipping gremlins)</li></ul><p><strong>Custom Items:</strong></p><ul><li>Custom Lanyards: 10–14 business days (because custom takes time, and rushing rarely ends well)</li><li>Badge Reels & Buddies: 3–5 business days</li><li>New product development: Up to 90 days (basically, if it doesn't exist yet, patience is required)</li></ul><h3><strong>Shipping Reality Check</strong></h3><p>We ship via FedEx, UPS, USPS, and DHL. We'll do our best to hit your deadlines, but we can't control traffic, weather, or the occasional shipping company having \"one of those days.\" What we CAN do is be honest about timelines and keep you updated if anything goes sideways.</p>"
           }
         },
         "section_t797Kn": {
           "type": "section",
           "settings": {
-            "title": "5. Pricing & Large-Scale Inventory",
-            "content": "<h3><strong>Built for Bulk and Scale</strong></h3><ul><li>Transparent pricing for up to 1,000 units online</li><li>Custom pricing for system-wide needs</li><li>No setup fee surprises—everything is detailed upfront</li></ul><p>We stock over 60 million units, updated daily. Let us know if you're planning a rollout—we can reserve inventory or schedule staged delivery by department or location.</p>"
+            "title": "5. Pricing & Inventory",
+            "content": "<h3><strong>Transparent Pricing</strong></h3><ul><li>Clear pricing up to 1,000 units per item</li><li>Volume discounts available for larger orders</li><li>No surprise fees or hidden charges</li></ul><h3><strong>Inventory</strong></h3><ul><li><strong>60+ million units</strong> in stock</li><li>Daily inventory updates</li><li><strong>For larger orders (2,500+ units):</strong> Give us advance notice for better pricing and logistics planning</li></ul><h3><strong>Budget-Friendly Reality</strong></h3><p>We're often the most economical choice for standard items like badge holders, and competitively priced on most everything else. Sometimes we're cheaper, sometimes we're not - it depends on what you're ordering. But you'll typically find our total cost (including shipping and not playing hide-and-seek with fees) is pretty reasonable.</p><p>We're not trying to be the cheapest at everything because that's how you end up with products that break when a student looks at them funny. We're trying to be the smart choice that doesn't give you headaches later.</p>"
           }
         },
         "section_KeRMiV": {
           "type": "section",
           "settings": {
-            "title": "6. Tax-Exempt & Compliance Purchasing",
-            "content": "<p>Submit your exemption certificate during checkout or email it to your rep. We ensure:</p><ul><li>Zero tax reflected on invoice</li><li>Audit-friendly documentation</li><li>Quick turnaround for exemption setup</li></ul>"
+            "title": "6. Tax-Exempt Purchasing",
+            "content": "<h3><strong>Submit Your Certificate</strong></h3><ul><li>Upload during online checkout</li><li>Email to your rep or sales@specialistid.com</li><li>Usually processed within a few hours</li></ul><h3><strong>What You'll See</strong></h3><p>Your invoice will show <strong>$0.00 tax</strong> - clean and audit-friendly.</p>"
           }
         },
         "section_CJ3zGz": {
           "type": "section",
           "settings": {
-            "title": "7. Reordering Made Easy",
-            "content": "<h3><strong>Because Staff Roles Change (Constantly)</strong></h3><ul><li>Reorder by SKU, past PO, item name, or even a photo</li><li>Didn’t place the last order? We’ll look it up for you</li><li>Want to standardize across departments? We’ll lock SKUs and color codes for easy consistency</li></ul><p>Future-proof reordering even if you switch departments or systems.</p>"
+            "title": "7. Reordering & Future Planning",
+            "content": "<h3><strong>Making Next Year Easier (Because Future You Will Thank You)</strong></h3><p>Since roles change faster than cafeteria menus, we make reordering simple:</p><ul><li><strong>If you ordered online:</strong> Log in and reorder with one click</li><li><strong>If you ordered directly:</strong> Email your rep or sales@specialistid.com with \"please send me what we got last time\"</li><li><strong>New to this?</strong> Send us your school name or a photo of what you need - we'll track down your previous orders like digital bloodhounds</li></ul><h3><strong>Planning Ahead</strong></h3><p><strong>Summer Budget Timing:</strong> Most schools plan from April-June and order from July-September. We're here for quotes and planning conversations whenever you need them.</p><h3><strong>Customer Support</strong></h3><ul><li><strong>Returns/Issues/Tracking:</strong> Our customer service team by phone at 800-380-6726 or by email sales@specialistid.com</li><li><strong>Reorders:</strong> Your rep or sales team </li><li><strong>Urgent Issues:</strong> Call during business hours for immediate help</li></ul>"
           }
         },
         "section_apjXRd": {
           "type": "section",
           "settings": {
-            "title": "8. Evaluating Vendors in Healthcare",
-            "content": "<h3><strong>Focus on These 4 Key Metrics:</strong></h3><p><strong>1. Infection Control Compliance</strong></p><ul><li>Compatible with hospital disinfectants</li><li>Non-porous badge holders available for sterile zones</li></ul><p><strong>2. Total Cost</strong></p><ul><li>Consider shipping, setup, and replacement costs—not just sticker price</li></ul><p><strong>3. Delivery Integrity</strong></p><ul><li>Can they ship 5,000+ pieces on time without missing specs?</li><li>Are products backed by replacement guarantees?</li></ul><p><strong>4. Service & Reorder Readiness</strong></p><ul><li>Are reps responsive to clinical timelines and real-world constraints?</li><li>Can they manage annual orders without missing a beat?</li></ul>"
+            "title": "8. How to Evaluate Your Options (And Justify Your Choice)",
+            "content": "<p>Let's be honest - you probably need to collect multiple quotes and then explain to someone why you picked what you picked. Here's how to evaluate your options without losing your sanity:</p><h3><strong>The Three Things That Actually Matter (Everything Else is Noise)</strong></h3><p><strong>1. Total Cost (Not Just the Sticker Price)</strong></p><ul><li>What's the shipping cost? (Some vendors play games here)</li><li>Are there setup fees hiding in the fine print?</li><li>What's the warranty/replacement cost?</li></ul><p><strong>2. Reliability When the Pressure's On</strong></p><ul><li>Will they actually deliver when they say they will?</li><li>Can you reach a human when something goes wrong?</li><li>Do they answer emails or do you get crickets?</li></ul><p><strong>3. Future You Protection</strong></p><ul><li>How easy will reordering be next year?</li><li>What if someone else inherits this responsibility?</li><li>Will you be able to figure out what you ordered 12 months from now?</li></ul><h3><strong>Questions to Ask All Vendors (Copy and Paste These)</strong></h3><ol><li><strong>\"What's your total delivered cost?\"</strong> (because surprises are for birthdays, not invoices)</li><li><strong>\"What's your realistic delivery timeline?\"</strong> (and actually listen to their answer)</li><li><strong>\"Who do I contact when something goes wrong?\"</strong> (test this - if they don't respond to this question quickly, that's your answer)</li><li><strong>\"How easy is reordering next year?\"</strong> (because future you is counting on present you)</li></ol>"
           }
         },
         "section_M4nGHQ": {
           "type": "section",
           "settings": {
-            "title": "9. Vendor Comparison Checklist",
-            "content": "<p><strong>Green Flags:</strong></p><ul><li>Transparent, tiered pricing</li><li>Healthcare-focused compliance (infection control)</li><li>Familiarity with vendor portals and large-scale procurement</li><li>Responsive account reps</li><li>Proofs and samples before commitment</li></ul><p><strong>Red Flags:</strong></p><ul><li>Hidden charges or vague quote language</li><li>Unclear or shifting fulfillment timelines</li><li>No W-9, or required documentation</li><li>Lack of direct contact or support escalation path</li></ul>"
+            "title": "9. What to Look for in Vendor Comparisons",
+            "content": "<h3><strong>Red Flags to Watch For</strong></h3><ul><li>Quotes that seem too good to be true (often have hidden costs)</li><li>Vendors who are slow to respond to questions</li><li>Unclear process after you place your order</li><li>No clear contact person for follow-up</li></ul><h3><strong>Green Flags (Good Signs)</strong></h3><ul><li>Transparent pricing with no surprise fees</li><li>Quick response to questions and quotes</li><li>Clear order/production process you can count on</li><li>Easy reorder process for next year</li><li>Actual humans who answer the phone</li></ul><h3><strong>Making Your Recommendation (AKA: Covering Your Bases)</strong></h3><p>When you present your options, focus on <strong>not getting blamed later</strong>:</p><p><em>\"I collected three quotes. Option A is cheapest upfront but has unclear delivery timing and potential extra fees. Option B (Specialist ID) is competitive on total cost, has realistic delivery expectations, and actually answers their phone when you call. Option C costs more overall when you factor in shipping and fees.\"</em></p><h3><strong>Sample Justification Language (Feel Free to Steal This)</strong></h3><p><em>\"After comparing total costs and reliability factors, Specialist ID offers the best combination of competitive pricing and dependable service. They were responsive during the quote process, gave realistic timelines, and make reordering simple for next year. Plus, they seem like actual humans instead of order-taking robots.\"</em></p>"
           }
         },
         "section_YepAxa": {
           "type": "section",
           "settings": {
             "title": "10. Glossary",
-            "content": "<p><strong>SKU</strong> – Product code used for tracking</p><p><strong>PO</strong> – Purchase Order</p><p><strong>Net 30</strong> – 30 days to pay after invoicing</p><p><strong>Custom Mock-up</strong> – A digital rendering of your hospital logo/product combo</p>"
-          }
-        },
-        "section_gL4r6e": {
-          "type": "section",
-          "settings": {
-            "title": "11. Contact Information",
-            "content": "<p><strong>Sales & Vendor Setup</strong><br/> Email: <a href=\"mailto:sales@specialistid.com\" title=\"mailto:sales@specialistid.com\">sales@specialistid.com</a><br/> Phone: <a href=\"tel:888-559-1940\" title=\"tel:888-559-1940\">888-559-1940</a><br/><strong>Customer Support & Reorders</strong><br/> Email: <a href=\"mailto:support@specialistid.com\" title=\"mailto:support@specialistid.com\">support@specialistid.com</a><br/> Phone: <a href=\"tel:800-380-6726\" title=\"tel:800-380-6726\">800-380-6726</a><br/><br/></p>"
+            "content": "<p><strong>SKU:</strong> Stock Keeping Unit - the product number that ensures you get exactly what you ordered</p><p><strong>PO:</strong> Purchase Order - the official document your school uses to authorize purchases</p><p><strong>Net 30:</strong> You have 30 days to pay after receiving your invoice</p><p><strong>Tax-Exempt Certificate:</strong> Documentation that your school doesn't pay sales tax</p><p><strong>Quote:</strong> Price estimate that's accurate and holds for a reasonable time</p><p><strong>Setup Fee:</strong> One-time charge some vendors add for custom work (we'll tell you upfront if there is one)<br/><br/></p>"
           }
         }
       },
@@ -149,43 +142,10 @@
         "section_CJ3zGz",
         "section_apjXRd",
         "section_M4nGHQ",
-        "section_YepAxa",
-        "section_gL4r6e"
+        "section_YepAxa"
       ],
       "name": "Guidebook Glossary Section",
       "settings": {}
-    },
-    "rich_text_CDPUt9": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_WGtrrJ": {
-          "type": "heading",
-          "settings": {
-            "heading": "Final Word",
-            "heading_size": "h1"
-          }
-        },
-        "text_xLdDRG": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We’re not just a vendor—we’re a partner that understands what’s at stake when a resident can’t swipe into Radiology or a nurse loses her ID mid-shift.</p><p>You have enough complexity in your day. Let this be the easy part.</p><p>Contact us:<br/><a href=\"mailto:sales@specialistid.com\" title=\"mailto:sales@specialistid.com\">sales@specialistid.com</a><br/><a href=\"tel:888-559-1940\" title=\"tel:888-559-1940\">888-559-1940</a></p><p>Fast. Responsive. Reliable. Let’s get your order moving.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_WGtrrJ",
-        "text_xLdDRG"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "section_css_class": "Type your own CSS class",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     },
     "image_with_text_7iNgVj": {
       "type": "image-with-text",
@@ -289,7 +249,6 @@
     "main",
     "rich_text_BPznLq",
     "custom_guidebook_glossary_gxALpH",
-    "rich_text_CDPUt9",
     "image_with_text_7iNgVj",
     "newsletter_YihLyf"
   ]
