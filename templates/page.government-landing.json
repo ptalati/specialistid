@@ -203,45 +203,31 @@
         "feature_DQQ3xi": {
           "type": "feature",
           "settings": {
-            "feature": "Full Access Event Credentials"
+            "feature": "Fully aligned with FIPS 201 and HSPD-12 standards for government ID compliance"
           }
         },
         "feature_WMFBQp": {
           "type": "feature",
           "settings": {
-            "feature": "Durable Badge Reels for Fast Scanning"
+            "feature": "Tamper-resistant, rugged materials built to protect your secure government ID credentials"
           }
         },
         "feature_h3igjj": {
           "type": "feature",
           "settings": {
-            "feature": "Custom Branded Event Badges"
-          }
-        },
-        "feature_PPDDK4": {
-          "type": "feature",
-          "settings": {
-            "feature": "Streamlined Access Event Solutions"
-          }
-        },
-        "feature_DrV649": {
-          "type": "feature",
-          "settings": {
-            "feature": "RFID-Compatible Supplies for Smart Entry"
+            "feature": "Personalized solutions including barcodes, smart chips, and visual identifiers for any government issued ID example"
           }
         }
       },
       "block_order": [
         "feature_DQQ3xi",
         "feature_WMFBQp",
-        "feature_h3igjj",
-        "feature_PPDDK4",
-        "feature_DrV649"
+        "feature_h3igjj"
       ],
       "name": "Guidebook Showcase Section",
       "settings": {
-        "title": "Avoid Entry Chaos & Badge Mix-Ups",
-        "heading": "Whether you're managing thousands of attendees or hosting a VIP experience, our event badge solutions reduce bottlenecks and prevent unauthorized access.",
+        "title": "Fully Compliant with Government ID Standards",
+        "heading": "To help agencies meet strict credentialing protocols, our products are designed for top-tier security and long-term compliance.",
         "description": "",
         "cta_label": "Download the Guidebook",
         "cta_link": ""
