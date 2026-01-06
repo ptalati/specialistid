@@ -110,11 +110,45 @@
         "cta_label": "Download the Guidebook",
         "cta_link": ""
       }
+    },
+    "custom_product_showcase_ewxxaH": {
+      "type": "custom-product-showcase",
+      "blocks": {
+        "product_FgkQfd": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Custom-Printed-Lanyards-SpecialistID.jpg",
+            "title": "Branded Lanyards for Professional Event Access",
+            "text": "<p>Make your event staff, attendees, and VIPs stand out with high-quality custom printed lanyards that enhance your branding and streamline check-ins:</p><ul><li>Custom printed with logos, sponsors, or event names</li><li>Available with breakaway safety clips and badge attachments</li><li>Ideal for all access event credentials and media passes</li><li>Color-match to event themes for visual consistency</li><li>Boost event security with identifiable access levels</li></ul>",
+            "link": "shopify://products/custom-printed-lanyards-online",
+            "link_label": "Shop Custom Lanyards"
+          }
+        },
+        "product_AqKDKi": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/CustomEventBadge.png",
+            "title": "Custom Event Credentials for Access Control",
+            "text": "<p>Design professional event badges tailored to your branding and access needs. Perfect for concerts, conferences, media productions, and more:</p><ul><li>Full-color custom event badges printed with attendee info</li><li>Options for QR codes, barcodes, RFID compatibility</li><li>Durable material designed for multi-day use</li><li>Works seamlessly with our badge </li><li>Supports access control for events and role-based entryholders and reels</li></ul>",
+            "link": "shopify://products/custom-printed-event-badges-3x5",
+            "link_label": "Shop Custom Badges"
+          }
+        }
+      },
+      "block_order": [
+        "product_FgkQfd",
+        "product_AqKDKi"
+      ],
+      "name": "Product Showcase Section",
+      "settings": {
+        "title": "Your Event. Your Branding."
+      }
     }
   },
   "order": [
     "main",
     "rich_text_bpwrwG",
-    "custom_guidebook_showcase_BhWw6y"
+    "custom_guidebook_showcase_BhWw6y",
+    "custom_product_showcase_ewxxaH"
   ]
 }
