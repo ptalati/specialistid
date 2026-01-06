@@ -23,24 +23,24 @@
         "heading_7cYrkF": {
           "type": "heading",
           "settings": {
-            "heading": "Professional ID Solutions for Conferences, Festivals & Private Events",
+            "heading": "Trusted Government ID Solutions — Secure, Compliant & Reliable",
             "heading_size": "h1"
           }
         },
         "text_7ATYnA": {
           "type": "text",
           "settings": {
-            "text": "<p>From VIP badges to adhesive wristbands for events — ensure fast, secure entry with customizable ID gear.</p>"
+            "text": "<p>Equip your agency with government-issued ID card solutions, badge holders, ID reels, lanyards, and visitor management systems.</p>"
           }
         },
         "button_CNVVKj": {
           "type": "button",
           "settings": {
-            "button_label": "Browse Event Essentials",
-            "button_link": "shopify://collections/events",
+            "button_label": "Get a Quote for Your Agency",
+            "button_link": "shopify://pages/request-a-quote",
             "button_style_secondary": false,
-            "button_label_2": "Get a Free Quote",
-            "button_link_2": "shopify://pages/request-a-quote",
+            "button_label_2": "Browse Government-Ready ID Supplies",
+            "button_link_2": "shopify://collections/government",
             "button_style_secondary_2": false
           }
         }
