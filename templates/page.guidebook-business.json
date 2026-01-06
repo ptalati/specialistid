@@ -1,0 +1,420 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_bpwrwG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7cYrkF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Trusted Government ID Solutions — Secure, Compliant & Reliable",
+            "heading_size": "h1"
+          }
+        },
+        "text_7ATYnA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Equip your agency with government-issued ID card solutions, badge holders, ID reels, lanyards, and visitor management systems.</p>"
+          }
+        },
+        "button_CNVVKj": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get a Quote for Your Agency",
+            "button_link": "shopify://pages/request-a-quote",
+            "button_style_secondary": false,
+            "button_label_2": "Browse Government-Ready ID Supplies",
+            "button_link_2": "shopify://collections/government",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7cYrkF",
+        "text_7ATYnA",
+        "button_CNVVKj"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_n4GQ6E": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_iPmCMc": {
+          "type": "column",
+          "settings": {
+            "title": "GSA-approved and compliant solutions",
+            "text": "<p>Our government security badge<strong> </strong>products meet the strictest federal compliance standards, including FIPS 201 and HSPD-12, ensuring you're covered for any credentialing need.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FkcnyQ": {
+          "type": "column",
+          "settings": {
+            "title": "Experience serving federal, state, and municipal agencies",
+            "text": "<p>With decades of experience, we’ve delivered government credentials<strong> </strong>to agencies at every level — from city offices to large federal departments.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_G3cdgb": {
+          "type": "column",
+          "settings": {
+            "title": "Fast & Scalable Fulfillment",
+            "text": "<p>Specialist ID offers bulk order support, quick turnaround, and tailored logistics — ideal for urgent requests or nationwide badge distribution.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_iPmCMc",
+        "column_FkcnyQ",
+        "column_G3cdgb"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Why Government Agencies Trust Specialist ID",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36,
+        "section_css_class": "Type your own CSS class"
+      }
+    },
+    "custom_product_showcase_ewxxaH": {
+      "type": "custom-product-showcase",
+      "blocks": {
+        "product_FgkQfd": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/magicard-300-id-card-printer-left.webp",
+            "title": "Government ID Cards & Printers",
+            "text": "<p>Produce official credentials with reliable in-house printing solutions tailored for government use:</p><ul><li>Create secure government ID cards on demand<br/></li><li>FIPS and HSPD-12 compliant hardware<br/></li><li>Dual-sided printers with smart card encoding<br/></li><li>Supports high-volume agency requirements</li></ul>",
+            "link": "shopify://collections/id-card-printers",
+            "link_label": "Shop our Printers"
+          }
+        },
+        "product_AqKDKi": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/2120-762X_2.jpg",
+            "title": "Badge Holders & ID Reels",
+            "text": "<p>Keep IDs secure, accessible, and visible with rugged accessories:</p><ul><li>Durable government <a href=\"/collections/id-badge-holders\" title=\"ID Badge Holders\">badge holders</a> for daily use<br/></li><li>Gov badge reels with retractable cords and clip options<br/></li><li>Designed for scanners and controlled entry points<br/></li><li>Reduces card damage and increases display efficiency</li></ul>",
+            "link": "shopify://collections/badge-reels",
+            "link_label": "Shop our badge reels"
+          }
+        },
+        "product_bKNKBV": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Custom-Printed-Lanyards-SpecialistID.jpg",
+            "title": "Lanyards & Custom Branding",
+            "text": "<p>Display your government identification with professional, branded lanyards:</p><ul><li>Breakaway lanyards for added safety<br/></li><li>Custom printing for logos or departments</li><li>Woven or antimicrobial material options<br/></li><li>Perfect for conferences, staff, or daily ID wear</li></ul>",
+            "link": "shopify://collections/custom-printed-products",
+            "link_label": "Customize everything"
+          }
+        },
+        "product_GDa4R9": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/AC-916-CLEAR-1.jpg",
+            "title": "RFID & Smart Card Accessories",
+            "text": "<p>Enhance digital security and protect sensitive credentials:</p><ul><li>RFID-blocking sleeves and shielded badge holders</li><li>Anti-skimming tech for rfid badge government use</li><li>Smart card encoders and tamper-proof seals</li><li>Trusted by agencies handling secure smart ID cards</li></ul>",
+            "link": "shopify://collections/rfid-blocking-badge-holders",
+            "link_label": "Shop RFID and Smart Cards"
+          }
+        }
+      },
+      "block_order": [
+        "product_FgkQfd",
+        "product_AqKDKi",
+        "product_bKNKBV",
+        "product_GDa4R9"
+      ],
+      "name": "Product Showcase Section",
+      "settings": {
+        "title": "Explore Our ID Solutions for Government Use"
+      }
+    },
+    "custom_printer_showcase_eiAzRb": {
+      "type": "custom-printer-showcase",
+      "name": "Card Printing Section",
+      "settings": {
+        "title": "Professional Government ID Printing Solutions",
+        "description": "Our government-grade ID printers deliver secure, compliant, and professional badges for federal, state, and local agencies.",
+        "feature1_symbol": "",
+        "feature1_title": "Secure Encoding",
+        "feature1_text": "Protect sensitive data with smart card and RFID options for a secure government ID.",
+        "feature2_symbol": "",
+        "feature2_title": "Fast Turnaround",
+        "feature2_text": "5–7 business day delivery to meet urgent government ID compliance needs.",
+        "feature3_symbol": "",
+        "feature3_title": "Durable Materials",
+        "feature3_text": "Tamper-proof, waterproof cards built to withstand daily use.",
+        "feature4_symbol": "",
+        "feature4_title": "Custom Design",
+        "feature4_text": "Easily design and print any government issued ID example with agency branding.",
+        "visual_title": "Advanced Printing Technology",
+        "visual_text": "High-resolution, encrypted printing ensures every secure government ID meets federal and agency standards for quality and compliance.",
+        "visual_cta_label": "Discover top-rated government ID printers",
+        "visual_cta_link": "shopify://collections/id-card-printers"
+      }
+    },
+    "custom_guidebook_showcase_BhWw6y": {
+      "type": "custom-guidebook-showcase",
+      "blocks": {
+        "feature_DQQ3xi": {
+          "type": "feature",
+          "settings": {
+            "feature": "Fully aligned with FIPS 201 and HSPD-12 standards for government ID compliance"
+          }
+        },
+        "feature_WMFBQp": {
+          "type": "feature",
+          "settings": {
+            "feature": "Tamper-resistant, rugged materials built to protect your secure government ID credentials"
+          }
+        },
+        "feature_h3igjj": {
+          "type": "feature",
+          "settings": {
+            "feature": "Personalized solutions including barcodes, smart chips, and visual identifiers for any government issued ID example"
+          }
+        }
+      },
+      "block_order": [
+        "feature_DQQ3xi",
+        "feature_WMFBQp",
+        "feature_h3igjj"
+      ],
+      "name": "Guidebook Showcase Section",
+      "settings": {
+        "title": "Fully Compliant with Government ID Standards",
+        "heading": "To help agencies meet strict credentialing protocols, our products are designed for top-tier security and long-term compliance.",
+        "description": "",
+        "cta_label": "Download the Guidebook",
+        "cta_link": ""
+      }
+    },
+    "featured_collection_8EC68i": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "events",
+        "products_to_show": 4,
+        "title": "Top Event Management ID Gear",
+        "heading_size": "h1",
+        "description": "<p>Streamline access control for events with professional-grade ID gear. From all access event credentials and custom printed badges to RFID-compatible badge reels and branded lanyards, our solutions are trusted by top event managers for secure, organized, and professional check-ins.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_BPznLq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UaP7XP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Procurement Made Simple",
+            "heading_size": "h1"
+          }
+        },
+        "text_9nTUEN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We understand the complexities of government procurement — that’s why we’ve built our process to be fast, compliant, and easy to navigate.</p><ul><li>Streamlined bulk order processing for high-volume government ID supplies<br/></li><li>We accept P-Cards, Purchase Orders, and are registered under GSA Schedule contracts<br/></li><li>Dedicated account representatives experienced in agency procurement workflows<br/></li><li>Ideal for outfitting departments with federal ID badges or upgrading site-wide government access badge systems<br/><br/>Whether you're outfitting 50 or 5,000 staff members, our team ensures smooth fulfillment with the compliance documentation and support your agency needs.</li></ul>"
+          }
+        },
+        "button_QHRFQj": {
+          "type": "button",
+          "settings": {
+            "button_label": "Request Government Pricing",
+            "button_link": "shopify://pages/request-a-quote",
+            "button_style_secondary": false,
+            "button_label_2": "Talk to a Procurement Expert",
+            "button_link_2": "shopify://pages/contact-us",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_UaP7XP",
+        "text_9nTUEN",
+        "button_QHRFQj"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_7iNgVj": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_6CCXhX": {
+          "type": "caption",
+          "settings": {
+            "caption": "#MAKEITEASY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_aTrDTW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_FANpQJ": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_dRjnVh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_6CCXhX",
+        "heading_aTrDTW",
+        "text_FANpQJ",
+        "button_dRjnVh"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "newsletter_YihLyf": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_qf9GmN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Attached, Stay Connected with Specialist ID",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_8djeGE": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up and stay connected to receive news offers and exclusive discount codes.</p>"
+          }
+        },
+        "email_form_rzzYxz": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_qf9GmN",
+        "paragraph_8djeGE",
+        "email_form_rzzYxz"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "newsletter-section",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_bpwrwG",
+    "multicolumn_n4GQ6E",
+    "custom_product_showcase_ewxxaH",
+    "custom_printer_showcase_eiAzRb",
+    "custom_guidebook_showcase_BhWw6y",
+    "featured_collection_8EC68i",
+    "rich_text_BPznLq",
+    "image_with_text_7iNgVj",
+    "newsletter_YihLyf"
+  ]
+}
