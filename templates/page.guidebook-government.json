@@ -23,14 +23,14 @@
         "heading_UaP7XP": {
           "type": "heading",
           "settings": {
-            "heading": "Corporate ID Badge Accessories Buying Guide",
+            "heading": "ID Badge Accessories Buying Guide for Government Agencies",
             "heading_size": "h1"
           }
         },
         "caption_j8ndmz": {
           "type": "caption",
           "settings": {
-            "caption": "For Office Managers, Procurement Teams & HR Professionals",
+            "caption": "Welcome!",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium"
           }
@@ -38,7 +38,7 @@
         "text_9nTUEN": {
           "type": "text",
           "settings": {
-            "text": "<p>Whether you're in Operations, Procurement, HR, or just the person who got “voluntold” to handle ID badge sourcing — you're in the right place.</p><p>ID badge accessories aren’t glamorous, but when they fail (clip breaks, badge won’t scan, lanyards snap), everyone notices. Done right, they quietly support onboarding, security, compliance, and daily operations across your entire company.</p><p>This guide is built to make your badge accessory procurement smooth, fast, and frustration-free — whether you're ordering for a single office, a distributed workforce, or a multi-location brand.<br/></p>"
+            "text": "<p>If you’ve been assigned the task of sourcing ID badge accessories, it likely falls somewhere below “urgent security needs” and “federal procurement regulations” on your priority list. That’s where we come in — to help make this process painless, compliant, and low-maintenance.</p><p>Whether you’re sourcing for a city office, federal agency, emergency response team, or a correctional facility, this guide is designed to support your procurement workflow from start to finish.</p><p>We aim to be the easiest vendor you deal with all year.</p>"
           }
         }
       },
@@ -64,71 +64,78 @@
         "section_RXkTeG": {
           "type": "section",
           "settings": {
-            "title": "1. Vendor Setup & Corporate Compliance",
-            "content": "<p>We’ve worked with everyone from Fortune 100s to 10-person startups.</p><p>To onboard us as a vendor, we’ll provide:</p><ul><li>W-9, address verification, and COIs as needed</li><li>ACH/Wire info for your ERP</li><li>Quick turnarounds via portals like Ariba, Coupa, SAP</li></ul><p>What we need from you:</p><ul><li>Company name and billing contact</li><li>Shipping address(es)</li><li>Tax-exemption certificate (if applicable)</li><li>Any internal compliance forms</li><li>Vendor onboarding paperwork (if applicable)</li></ul>"
+            "title": "1. Getting Started: Vendor Setup & Compliance",
+            "content": "<p>Most government entities require formal vendor registration and documentation. We're ready for that.</p><p><strong>We’re Gov-Ready</strong></p><ul><li>W-9 on file</li><li>SAM Registered (System for Award Management)</li><li>DUNS & CAGE codes available</li><li>Accepts Government P-Cards</li><li>NAICS: 339999 / 561499 (common for badge supplies)</li><li>Form 889 (Either on file or happy to sign a new copy)</li><li>TAA-compliant products available</li><li>US-based company (Florida HQ)<br/></li></ul><p><strong>What We Need From You</strong></p><ul><li>Agency/Department Name</li><li>Point of Contact (Name, Email, Phone)</li><li>Billing & Shipping Info</li><li>Tax-Exempt [not necessary for military bases] or Procurement ID</li><li>Required government documentation<br/><br/></li></ul><p>Email forms to: sales@specialistid.com<br/> Subject: Vendor Application – [Your Agency Name]</p>"
           }
         },
         "section_yaacPi": {
           "type": "section",
           "settings": {
-            "title": "2. Samples, Mock-ups & Branding Support",
-            "content": "<p>Want to test the gear before ordering? Smart move.</p><ul><li>Free Samples: Most in-stock items available for trial ~ No need to return these are yours to keep</li><li>Custom Mock-ups: We'll create digital previews of your logo and colors on badge reels, holders, and lanyards</li><li>Physical Branded Samples: Available upon request for decision-makers</li><li>PMS Color Matching: Ensures brand consistency across all items</li></ul>"
+            "title": "2. Samples & Customization Options",
+            "content": "<p><strong>Free Samples</strong></p><p>Evaluate the durability, feel, and functionality of our badge holders, lanyards, reels, or card sleeves before you commit.</p><p><strong>Custom Branding Options</strong></p><p>Need your department’s seal or a clearance-coded badge reel? We provide:</p><ul><li>Digital mock-ups within 24–48 hours</li><li>Physical samples in 2–4 days if requested</li><li>Custom production timelines:</li><li>Lanyards: 10–14 business days</li><li>Badge reels: 3–5 business days</li></ul>"
           }
         },
         "section_rfNrQq": {
           "type": "section",
           "settings": {
-            "title": "3. Fast, Transparent Quotes",
-            "content": "<p>Need multiple quotes for Procurement or Compliance? We’ve got you.</p><p><strong>Send us:</strong></p><ul><li>Product SKUs or a brief description</li><li>Quantity</li><li>Any custom branding requirements</li></ul><p><strong>You’ll receive:</strong></p><ul><li>PDF quote with total delivered cost</li><li>Estimated lead times</li><li>Breakdown of customizations (if any)</li><li>Valid pricing for budget planning</li></ul><p><strong>Turnaround Time:</strong></p><ul><li>Standard items: approximately 30 minutes</li><li>Custom or high-volume: within 1 business day</li></ul>"
+            "title": "3. Fast, Clear Quotes",
+            "content": "<p><strong>What You Get</strong></p><ul><li>Transparent pricing (no hidden fees)</li><li>All-in delivery cost included</li><li>Accurate delivery estimates</li><li>PDF quotes for documentation</li><li>Responses within hours — not days<br/></li></ul><p><strong>What to Send Us</strong></p><ul><li>SKUs or item names</li><li>Quantity</li><li>Any custom details or artwork</li></ul>"
           }
         },
         "section_jTQDq3": {
           "type": "section",
           "settings": {
-            "title": "4. Ordering Process & Fulfillment Timelines",
-            "content": "<p>Order however your workflow prefers:</p><ul><li>Website:<a href=\"http://www.specialistid.com\"> <span style=\"text-decoration:underline\">www.specialistid.com</span></a></li><li>Email: sales@specialistid.com</li><li>Phone: 888-559-1940</li><li>Submit PO through your platform (Ariba, Coupa, etc.)</li></ul><p><strong>Timelines:</strong></p><ul><li>In-stock items: Ship same or next business day</li><li>Custom reels/lanyards: 3 to 14 business days</li><li>Bulk orders: Let us know your timeline — we’ll match where possible<br/><br/></li><li>Event-ready or remote-ready fulfillment: Drop shipping, kit assembly, and multi-location delivery available</li></ul>"
+            "title": "4. Placing Your Order",
+            "content": "<p><strong>Order Methods</strong></p><ul><li>Email: sales@specialistid.com</li><li>Phone: 888-559-1940 (Sales)</li><li>Online:<a href=\"http://www.specialistid.com\"> <span style=\"text-decoration:underline\">www.specialistid.com</span></a></li><li>Purchase Orders: Send by email<br/></li></ul><p><strong>Shipping Expectations</strong></p><ul><li>In-stock items: Usually ship same day if ordered before 12 PM EST</li><li>Custom orders: Confirmed with production timelines</li></ul><p>Carriers: FedEx, UPS, USPS, DHL</p>"
           }
         },
         "section_t797Kn": {
           "type": "section",
           "settings": {
-            "title": "5. Pricing, Volume Discounts & Inventory",
-            "content": "<ul><li>Transparent pricing up to 100,000 units</li><li>Tiered volume discounts available</li><li>No surprise setup, tooling, or branding fees</li><li>60+ million units in stock</li><li>Live inventory access available for ongoing partners</li></ul><p>Need recurring shipments or budget approval planning? We’ll structure quotes accordingly.</p>"
+            "title": "5. Payment, Invoicing & Tax-Free Purchasing",
+            "content": "<p><strong>Accepted Payment Methods</strong></p><ul><li>Net 30 Terms</li><li>ACH / EFT Transfers</li><li>Government P-Cards (Federal & State accepted)</li><li>Credit Cards via secure link<br/></li></ul><p><strong>Tax-Exempt Orders</strong></p><ul><li>Upload exemption certificate during checkout</li><li>Or email to your rep</li><li>Invoice will reflect $0.00 tax</li></ul>"
           }
         },
         "section_KeRMiV": {
           "type": "section",
           "settings": {
-            "title": "6. Tax-Exemption, Invoicing & Payment Options",
-            "content": "<p>Tax Exempt? Upload your certificate at checkout or email it to your rep.</p><p><strong>Accepted Payment Methods:</strong></p><ul><li>Credit Card (secure emailed link)</li><li>ACH or Check (cleared before shipping)</li><li>Purchase Orders via email or procurement portal</li><li>Extended terms on approval </li></ul><p>Invoices are clean, itemized, and finance/audit-friendly.</p>"
+            "title": "6. Reorders & Long-Term Planning",
+            "content": "<p><strong>Easy Reordering</strong></p><ul><li>Reorder from your online account</li><li>Contact us with your agency name — we’ll look up past orders</li><li>If you're new or taking over, send us a photo or invoice — we’ll handle the rest<br/></li></ul><p><strong>Planning Ahead</strong></p><ul><li>We support fiscal year budgeting</li><li>Can hold pricing or stock based on forecasted need</li><li>Multi-agency or multi-location coordination available</li></ul>"
           }
         },
         "section_M4nGHQ": {
           "type": "section",
           "settings": {
-            "title": "7. Reordering, Scaling & Remote Support",
-            "content": "<p>Reordering is painless:</p><ul><li>Log in online for instant reorder</li><li>Email us and we’ll duplicate your last order</li><li>Can’t remember what you ordered? We’ll track it for you</li></ul><p>Scaling? We can coordinate parallel shipments across multiple locations or departments.</p>"
+            "title": "7. Vendor Evaluation & Justification Tips",
+            "content": "<p><strong>What Really Matters</strong></p><ol><li>Total Cost — Watch for setup or shipping fees</li><li>Delivery Reliability — Get real timeline estimates</li><li>Support Access — Can you reach a human fast?</li><li>Future-Proofing — Can someone else reorder next year?<br/></li></ol><p><strong>Questions to Ask All Vendors</strong></p><ul><li>What’s the total delivered cost (including shipping)?</li><li>What’s your realistic delivery timeline?</li><li>Who do I contact if something goes wrong?</li><li>How simple is the reorder process?</li></ul>"
           }
         },
         "section_idTQbP": {
           "type": "section",
           "settings": {
-            "title": "8. Evaluating Vendors (and Justifying Your Pick)",
-            "content": "<p>Here’s how to vet options (and justify your selection internally):</p><p><strong>The 3 Things That Matter Most:</strong></p><ol><li>Total Delivered Cost – shipping, setup, and custom fees</li><li>Responsiveness – real people, fast answers</li><li>Solutions oriented - Anything related to an ID is our headache, not yours.</li></ol><p><strong>Sample Justification:</strong></p><p>\"Specialist ID offered transparent pricing, fast turnaround, and supported our branding requirements. They also provided samples, handled compliance quickly, and coordinate parallel shipments across multiple locations or departments — making them the most complete and cost-effective vendor.\"</p>"
+            "title": "8. Compliance Flags: What to Watch For",
+            "content": "<p><strong>Red Flags</strong></p><ul><li>Unclear contact methods</li><li>Vague shipping timelines</li><li>No experience with government processes</li><li>Fine print fees added at checkout<br/></li></ul><p><strong>Green Flags</strong></p><ul><li>Experience with government clients</li><li>Clear quotes and fast response times</li><li>Documented return/warranty process</li></ul><p>Secure shipment options</p>"
           }
         },
         "section_fxV7Tp": {
           "type": "section",
           "settings": {
-            "title": "9. What to Expect From a Great Corporate Vendor",
-            "content": "<p><strong>Green Flags:</strong></p><ul><li>No surprise fees</li><li>Realistic delivery timelines</li><li>Fast responses from real people</li><li>Digital mock-ups and sample support</li><li>Ability to scale with your team and systems</li></ul><p><strong>Red Flags:</strong></p><ul><li>Quotes missing shipping/setup fees</li><li>No clear escalation contact</li><li>Delays on samples or mock-ups</li><li>No plan for future reordering</li></ul><p>Issues happen — but we’ll fix them fast, with real people. No phone maze. No blame game.</p>"
+            "title": "9. Quick Procurement Checklist",
+            "content": "<ul><li>Received samples (if applicable)</li><li>Vendor W-9 on file</li><li>P-Card or PO ready</li><li>Quote received and documented</li><li>Tax-exempt certificate submitted</li><li>Custom mock-up approved (if needed)</li><li>Timeline confirmed</li><li>Order placed</li></ul>"
           }
         },
         "section_YepAxa": {
           "type": "section",
           "settings": {
             "title": "10. Glossary",
-            "content": "<p><strong>SKU</strong> – Stock Keeping Unit, your product ID<strong> </strong></p><p><strong>PO</strong> – Purchase Order, your internal buying document<strong> </strong></p><p><strong>Net 30</strong> – 30 days to pay post-invoice<strong> </strong></p><p><strong>RFID/Prox</strong> – Security-enabled badges<strong> </strong></p><p><strong>Mock-up</strong> – Preview image showing your custom branding<br/></p>"
+            "content": "<p><strong>SKU</strong> – Product code used to ensure accurate ordering</p><p><strong>PO</strong> – Purchase Order, official document for purchases</p><p><strong>Net 30</strong> – Payment due 30 days after invoice</p><p><strong>W-9</strong> – IRS tax form for vendor compliance</p><p><strong>SAM</strong> – Federal vendor registration system</p><p><strong>TAA Compliant</strong> – Meets Trade Agreements Act standards</p><p><strong>NAICS Code</strong> – Classification code for government procurement</p><p><strong>CAGE Code</strong> – Vendor ID for federal procurement systems<br/><br/><br/><br/></p>"
+          }
+        },
+        "section_gL4r6e": {
+          "type": "section",
+          "settings": {
+            "title": "11. Contact Information",
+            "content": "<p><strong>Sales & Vendor Setup</strong><br/> Email: <a href=\"mailto:sales@specialistid.com\" title=\"mailto:sales@specialistid.com\">sales@specialistid.com</a><br/> Phone: <a href=\"tel:888-559-1940\" title=\"tel:888-559-1940\">888-559-1940</a><br/><strong>Customer Support & Reorders</strong><br/> Email: <a href=\"mailto:support@specialistid.com\" title=\"mailto:support@specialistid.com\">support@specialistid.com</a><br/> Phone: <a href=\"tel:800-380-6726\" title=\"tel:800-380-6726\">800-380-6726</a><br/><br/></p>"
           }
         }
       },
@@ -142,7 +149,8 @@
         "section_M4nGHQ",
         "section_idTQbP",
         "section_fxV7Tp",
-        "section_YepAxa"
+        "section_YepAxa",
+        "section_gL4r6e"
       ],
       "name": "Guidebook Glossary Section",
       "settings": {}
@@ -153,14 +161,14 @@
         "heading_WGtrrJ": {
           "type": "heading",
           "settings": {
-            "heading": "Let’s Keep This Simple",
+            "heading": "Our Commitment to Government Buyers",
             "heading_size": "h1"
           }
         },
         "text_xLdDRG": {
           "type": "text",
           "settings": {
-            "text": "<p>Our mission is to make this one small part of your workflow refreshingly easy.</p><p>Need a quote, sample, or just a human to help?<br/> Call <a href=\"tel:888-559-1940\" title=\"tel:888-559-1940\">888-559-1940</a> or email <a href=\"mailto:sales@specialistid.com\" title=\"mailto:sales@specialistid.com\">sales@specialistid.com</a></p><p>No bots. No friction. Just fast, competent help. Let’s get your team badged and back to work.</p>"
+            "text": "<p>We understand your purchasing process isn’t just about getting products — it’s about accountability, clarity, and compliance. We provide the documentation you need, the transparency you expect, and the service you deserve.</p><p>Let us take badge accessories off your worry list.</p>"
           }
         }
       },
