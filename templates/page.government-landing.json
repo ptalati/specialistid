@@ -173,6 +173,30 @@
         "title": "Explore Our ID Solutions for Government Use"
       }
     },
+    "custom_printer_showcase_eiAzRb": {
+      "type": "custom-printer-showcase",
+      "name": "Card Printing Section",
+      "settings": {
+        "title": "Professional Government ID Printing Solutions",
+        "description": "Our government-grade ID printers deliver secure, compliant, and professional badges for federal, state, and local agencies.",
+        "feature1_symbol": "",
+        "feature1_title": "Secure Encoding",
+        "feature1_text": "Protect sensitive data with smart card and RFID options for a secure government ID.",
+        "feature2_symbol": "",
+        "feature2_title": "Fast Turnaround",
+        "feature2_text": "5–7 business day delivery to meet urgent government ID compliance needs.",
+        "feature3_symbol": "",
+        "feature3_title": "Durable Materials",
+        "feature3_text": "Tamper-proof, waterproof cards built to withstand daily use.",
+        "feature4_symbol": "",
+        "feature4_title": "Custom Design",
+        "feature4_text": "Easily design and print any government issued ID example with agency branding.",
+        "visual_title": "Advanced Printing Technology",
+        "visual_text": "High-resolution, encrypted printing ensures every secure government ID meets federal and agency standards for quality and compliance.",
+        "visual_cta_label": "Discover top-rated government ID printers",
+        "visual_cta_link": "shopify://collections/id-card-printers"
+      }
+    },
     "custom_guidebook_showcase_BhWw6y": {
       "type": "custom-guidebook-showcase",
       "blocks": {
@@ -355,6 +379,7 @@
     "rich_text_bpwrwG",
     "multicolumn_n4GQ6E",
     "custom_product_showcase_ewxxaH",
+    "custom_printer_showcase_eiAzRb",
     "custom_guidebook_showcase_BhWw6y",
     "featured_collection_8EC68i",
     "image_with_text_7iNgVj",
