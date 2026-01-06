@@ -64,71 +64,78 @@
         "section_RXkTeG": {
           "type": "section",
           "settings": {
-            "title": "1. Getting Started: Account & Vendor Setup",
-            "content": "<h3><strong>Preferred Vendor Lists</strong></h3><p>Most schools maintain preferred vendor lists. We're happy to complete any vendor application process your school or district requires. Just email the forms to <strong>sales@specialistid.com</strong> with the subject line: <strong>\"Vendor Application – [Your School/District].\"</strong> We'll get everything back to you quickly.</p><h3><strong>What We Need From You</strong></h3><p>To set you up in our system:</p><ul><li>School/District Name</li><li>Point of Contact (Name, Phone, Email)</li><li>Accounts Payable Contact</li><li>Shipping & Billing Addresses</li><li>Tax-Exempt Certificate</li><li>Any required vendor documentation</li></ul><h3><strong>W-9 & Address Info</strong></h3><p>Our W-9 is always ready. Our address for all documentation: <strong>Specialist ID<br/></strong> <strong>7760 NW 56th St, Doral, FL 33166</strong></p><h3><strong>Payment Options</strong></h3><ul><li><strong>Net 30:</strong> Standard terms (30 days to pay after delivery)</li><li><strong>Credit Card:</strong> Secure payment link sent to your email</li><li><strong>ACH/Check:</strong> Payment must clear before shipping</li><li><strong>Purchase Orders:</strong> We accept official POs (see Section 4)</li></ul>"
+            "title": "1. Getting Started: Vendor Setup & University Procurement",
+            "content": "<p><strong>Need vendor approval? We’re ready.<br/></strong> We work with procurement offices at universities nationwide. We’re familiar with systems like Jaggaer, Coupa, Unimarket, Transcepta and more.</p><p><strong>We’ll gladly complete:</strong></p><ul><li>Vendor applications</li><li>ACH/W-9 documentation</li><li>Internal vendor portal registrations<br/></li></ul><p><strong>What we need from you:</strong></p><ul><li>University/Department Name</li><li>Contact Person (Email + Phone)</li><li>Shipping & Billing Addresses (multi-campus is fine!)</li><li>Tax-Exempt Certificate</li><li>Procurement codes (FOAPAL, Chart of Accounts, etc.)<br/></li></ul><p><strong>Accepted Payment Methods:</strong></p><ul><li>Credit Card (secure emailed link)</li><li>ACH or Check (cleared before shipping)</li><li>Purchase Orders via email or procurement portal</li><li>Extended terms on approval </li></ul>"
           }
         },
         "section_yaacPi": {
           "type": "section",
           "settings": {
-            "title": "2. Samples/Mock-ups",
-            "content": "<h3><strong>Free Samples</strong></h3><p>Want to see the quality before you order?  <a href=\"/pages/sample-request\" title=\"Sample Request\">Click here</a> for direct sample requests. Most products are available for sampling.</p><p><strong>Why sample?</strong> Because you want to know the quality will hold up to student use before you place your order.</p><h3><strong>Custom Logo Mock-ups</strong></h3><p>Considering adding your school logo? We'll create a digital mock-up showing exactly how your logo will look on your chosen item. Physical custom samples typically take 2-3 days for production.</p><h3><strong>Custom Lanyards</strong></h3><p>These follow a slightly different process due to complexity. We have a separate guide specifically for custom lanyards if needed.</p>"
+            "title": "2. Samples, Mock-ups & Customization",
+            "content": "<p><strong>Try before you commit.<br/></strong> Want to see a lanyard or badge reel before buying for the incoming class or faculty onboarding? No problem.</p><ul><li><strong>Free Samples:</strong> Available for most items—request online</li><li><strong>Mock-Ups:</strong> Add your school crest, department name, or event branding</li><li><strong>Pantone Matching:</strong> We’ll follow your university brand guidelines precisely</li></ul><p><strong>Eco Options Available:</strong> Ask us about biodegradable or recycled-material lanyards if sustainability is part of your campus mandate.<br/><br/></p>"
           }
         },
         "section_rfNrQq": {
           "type": "section",
           "settings": {
-            "title": "3. Quotes & Comparison",
-            "content": "<h3><strong>How Our Quotes Work</strong></h3><ul><li><strong>You send us:</strong> SKU, quantity, and custom details if applicable</li><li><strong>Standard quotes:</strong> ~30 minutes (maybe an hour if our sales team is swamped)</li><li><strong>Custom quotes:</strong> Usually within 24 hours</li><li><strong>Delivery:</strong> Via email + PDF backup</li></ul><h3><strong>What Makes Our Quotes Different</strong></h3><ol><li><strong>Transparent pricing</strong> - no hidden fees or surprise charges</li><li><strong>Accurate delivery timelines</strong> - we tell you exactly when you'll have your products</li><li><strong>Clear product descriptions</strong> - no confusion about what you're getting</li></ol><p><strong>Responsive follow-up</strong> - questions get answered quickly<br/></p><p><a href=\"/pages/request-a-quote\" title=\"Request a Quote\">Request your quote here</a><br/></p>"
+            "title": "3. Quotes: Fast, Clear, Transparent",
+            "content": "<p>We know your time is tight. Our quotes include:</p><ul><li>Clear product descriptions</li><li>Total delivered cost (including shipping)</li><li>Itemized pricing for transparency</li><li>Estimated delivery timelines (not wishful thinking)</li></ul><p><strong>Turnaround Time:</strong></p><ul><li>Standard items: ~60 minutes</li><li>Custom items: ~24 hours</li></ul>"
           }
         },
         "section_jTQDq3": {
           "type": "section",
           "settings": {
-            "title": "4. Ordering",
-            "content": "<h3><strong>How to Place Your Order</strong></h3><ul><li><strong>Phone:</strong> 888-559-1940 (Sales) or 800-360-6720 (Customer Service)</li><li><strong>Email:</strong> sales@specialistid.com or your assigned rep</li><li><strong>Website:</strong> Order online anytime</li><li><strong>Purchase Order:</strong> Email official PO to sales@specialistid.com</li></ul><h3><strong>Timeline Expectations</strong></h3><p><strong>In-Stock Items:</strong></p><ul><li>Orders before 12 PM EST: Usually same-day shipping</li><li>All other orders: Within 24 hours (barring any acts of God, weather, or shipping gremlins)</li></ul><p><strong>Custom Items:</strong></p><ul><li>Custom Lanyards: 10–14 business days (because custom takes time, and rushing rarely ends well)</li><li>Badge Reels & Buddies: 3–5 business days</li><li>New product development: Up to 90 days (basically, if it doesn't exist yet, patience is required)</li></ul><h3><strong>Shipping Reality Check</strong></h3><p>We ship via FedEx, UPS, USPS, and DHL. We'll do our best to hit your deadlines, but we can't control traffic, weather, or the occasional shipping company having \"one of those days.\" What we CAN do is be honest about timelines and keep you updated if anything goes sideways.</p>"
+            "title": "4. Ordering: How & When",
+            "content": "<p>Order the way that works for you:</p><ul><li>Phone: 888-559-1940</li><li>Email: sales@specialistid.com</li><li>Website:<a href=\"http://www.specialistid.com\"> <span style=\"text-decoration:underline\">www.specialistid.com</span></a></li><li>Upload your PO through your university portal or email</li></ul><p><strong>Timeline Expectations:</strong></p><ul><li><strong>In-Stock:</strong> Ships same day if ordered by 12 PM EST</li><li><strong>Custom Lanyards:</strong> 10–14 business days</li><li><strong>Custom Badge Reels/Holders:</strong> 3–5 business days</li></ul><p><strong>Multiple Departments? Multiple Campuses?</strong> We can split shipments across departments, dorms, or regional campuses—just let us know.</p>"
           }
         },
         "section_t797Kn": {
           "type": "section",
           "settings": {
-            "title": "5. Pricing & Inventory",
-            "content": "<h3><strong>Transparent Pricing</strong></h3><ul><li>Clear pricing up to 1,000 units per item</li><li>Volume discounts available for larger orders</li><li>No surprise fees or hidden charges</li></ul><h3><strong>Inventory</strong></h3><ul><li><strong>60+ million units</strong> in stock</li><li>Daily inventory updates</li><li><strong>For larger orders (2,500+ units):</strong> Give us advance notice for better pricing and logistics planning</li></ul><h3><strong>Budget-Friendly Reality</strong></h3><p>We're often the most economical choice for standard items like badge holders, and competitively priced on most everything else. Sometimes we're cheaper, sometimes we're not - it depends on what you're ordering. But you'll typically find our total cost (including shipping and not playing hide-and-seek with fees) is pretty reasonable.</p><p>We're not trying to be the cheapest at everything because that's how you end up with products that break when a student looks at them funny. We're trying to be the smart choice that doesn't give you headaches later.</p>"
+            "title": "5. Budgeting, Inventory & Discounts",
+            "content": "<p><strong>Transparent Pricing:</strong></p><ul><li>Clear unit pricing up to 1,000+ units</li><li>Volume discounts on almost every item</li><li>60+ million units in stock = supply reliability</li></ul><p><strong>Coordinating Across Departments?</strong> Let us know—we can consolidate shipments and align timelines to help reduce overhead and shipping costs.</p>"
           }
         },
         "section_KeRMiV": {
           "type": "section",
           "settings": {
             "title": "6. Tax-Exempt Purchasing",
-            "content": "<h3><strong>Submit Your Certificate</strong></h3><ul><li>Upload during online checkout</li><li>Email to your rep or sales@specialistid.com</li><li>Usually processed within a few hours</li></ul><h3><strong>What You'll See</strong></h3><p>Your invoice will show <strong>$0.00 tax</strong> - clean and audit-friendly.</p>"
+            "content": "<p>Most universities are tax-exempt, and we support fast, clean processing.</p><ul><li>Upload your certificate during checkout</li><li>Or email it to your rep or sales@specialistid.com</li></ul><p>We’ll store it on file to prevent tax charges on future orders</p>"
           }
         },
         "section_CJ3zGz": {
           "type": "section",
           "settings": {
-            "title": "7. Reordering & Future Planning",
-            "content": "<h3><strong>Making Next Year Easier (Because Future You Will Thank You)</strong></h3><p>Since roles change faster than cafeteria menus, we make reordering simple:</p><ul><li><strong>If you ordered online:</strong> Log in and reorder with one click</li><li><strong>If you ordered directly:</strong> Email your rep or sales@specialistid.com with \"please send me what we got last time\"</li><li><strong>New to this?</strong> Send us your school name or a photo of what you need - we'll track down your previous orders like digital bloodhounds</li></ul><h3><strong>Planning Ahead</strong></h3><p><strong>Summer Budget Timing:</strong> Most schools plan from April-June and order from July-September. We're here for quotes and planning conversations whenever you need them.</p><h3><strong>Customer Support</strong></h3><ul><li><strong>Returns/Issues/Tracking:</strong> Our customer service team by phone at 800-380-6726 or by email sales@specialistid.com</li><li><strong>Reorders:</strong> Your rep or sales team </li><li><strong>Urgent Issues:</strong> Call during business hours for immediate help</li></ul>"
+            "title": "7. Reordering for Next Semester or Department",
+            "content": "<p>Staff turnover? Someone moved to a different role? No worries.</p><ul><li>If you ordered online: log in and reorder with one click</li><li>If you emailed: just say “same as last semester”</li><li>If you only have a photo: send it—we’ll ID the product</li></ul><p><strong>We maintain order history, product specs, and quotes</strong> to make transitions seamless.<br/><br/></p>"
           }
         },
         "section_apjXRd": {
           "type": "section",
           "settings": {
-            "title": "8. How to Evaluate Your Options (And Justify Your Choice)",
-            "content": "<p>Let's be honest - you probably need to collect multiple quotes and then explain to someone why you picked what you picked. Here's how to evaluate your options without losing your sanity:</p><h3><strong>The Three Things That Actually Matter (Everything Else is Noise)</strong></h3><p><strong>1. Total Cost (Not Just the Sticker Price)</strong></p><ul><li>What's the shipping cost? (Some vendors play games here)</li><li>Are there setup fees hiding in the fine print?</li><li>What's the warranty/replacement cost?</li></ul><p><strong>2. Reliability When the Pressure's On</strong></p><ul><li>Will they actually deliver when they say they will?</li><li>Can you reach a human when something goes wrong?</li><li>Do they answer emails or do you get crickets?</li></ul><p><strong>3. Future You Protection</strong></p><ul><li>How easy will reordering be next year?</li><li>What if someone else inherits this responsibility?</li><li>Will you be able to figure out what you ordered 12 months from now?</li></ul><h3><strong>Questions to Ask All Vendors (Copy and Paste These)</strong></h3><ol><li><strong>\"What's your total delivered cost?\"</strong> (because surprises are for birthdays, not invoices)</li><li><strong>\"What's your realistic delivery timeline?\"</strong> (and actually listen to their answer)</li><li><strong>\"Who do I contact when something goes wrong?\"</strong> (test this - if they don't respond to this question quickly, that's your answer)</li><li><strong>\"How easy is reordering next year?\"</strong> (because future you is counting on present you)</li></ol>"
+            "title": "8. Making the Case: Justify Your Choice",
+            "content": "<p>You probably need multiple quotes—and justification for the one you choose.</p><p><strong>Here’s what matters:</strong></p><ul><li><strong>Total Cost</strong>: Include shipping, setup, and replacement policies</li><li><strong>Reliability</strong>: Do they respond quickly and deliver on time?</li><li><strong>Reordering Ease</strong>: Can someone else figure this out next semester?</li></ul><p><strong>Steal This Justification:</strong></p><p>“After comparing total costs, production timelines, and reorder support, Specialist ID offered the best blend of pricing and reliability. They were responsive during quoting, aligned with our branding needs, and make reordering next year simple—even if someone else takes over.”</p>"
           }
         },
         "section_M4nGHQ": {
           "type": "section",
           "settings": {
-            "title": "9. What to Look for in Vendor Comparisons",
-            "content": "<h3><strong>Red Flags to Watch For</strong></h3><ul><li>Quotes that seem too good to be true (often have hidden costs)</li><li>Vendors who are slow to respond to questions</li><li>Unclear process after you place your order</li><li>No clear contact person for follow-up</li></ul><h3><strong>Green Flags (Good Signs)</strong></h3><ul><li>Transparent pricing with no surprise fees</li><li>Quick response to questions and quotes</li><li>Clear order/production process you can count on</li><li>Easy reorder process for next year</li><li>Actual humans who answer the phone</li></ul><h3><strong>Making Your Recommendation (AKA: Covering Your Bases)</strong></h3><p>When you present your options, focus on <strong>not getting blamed later</strong>:</p><p><em>\"I collected three quotes. Option A is cheapest upfront but has unclear delivery timing and potential extra fees. Option B (Specialist ID) is competitive on total cost, has realistic delivery expectations, and actually answers their phone when you call. Option C costs more overall when you factor in shipping and fees.\"</em></p><h3><strong>Sample Justification Language (Feel Free to Steal This)</strong></h3><p><em>\"After comparing total costs and reliability factors, Specialist ID offers the best combination of competitive pricing and dependable service. They were responsive during the quote process, gave realistic timelines, and make reordering simple for next year. Plus, they seem like actual humans instead of order-taking robots.\"</em></p>"
+            "title": "9. Vendor Comparison Checklist",
+            "content": "<p><strong>Red Flags:</strong></p><ul><li>“Too good to be true” pricing</li><li>No contact person or delayed communication</li><li>Vague delivery expectations</li></ul><p><strong>Green Flags:</strong></p><ul><li>Transparent, itemized pricing</li><li>Customization mock-ups that match brand standards</li><li>Clear contact and fast response</li><li>Reordering system that doesn’t require spreadsheet archaeology</li></ul>"
           }
         },
         "section_YepAxa": {
           "type": "section",
           "settings": {
             "title": "10. Glossary",
-            "content": "<p><strong>SKU:</strong> Stock Keeping Unit - the product number that ensures you get exactly what you ordered</p><p><strong>PO:</strong> Purchase Order - the official document your school uses to authorize purchases</p><p><strong>Net 30:</strong> You have 30 days to pay after receiving your invoice</p><p><strong>Tax-Exempt Certificate:</strong> Documentation that your school doesn't pay sales tax</p><p><strong>Quote:</strong> Price estimate that's accurate and holds for a reasonable time</p><p><strong>Setup Fee:</strong> One-time charge some vendors add for custom work (we'll tell you upfront if there is one)<br/><br/></p>"
+            "content": "<h3><strong>10. Glossary (University Edition)</strong></h3><p><strong>SKU</strong> – Product ID that ensures you get the exact item again</p><p><strong>PO</strong> – Purchase Order for official authorization</p><p><strong>Net 30</strong> – Pay within 30 days of invoice</p><p><strong>Mock-up</strong> – Digital preview of your custom lanyard or badge</p><p><strong>FOAPAL</strong> – Fund-Org-Account-Program-Activity-Location code for internal accounting</p><p><strong>Chart of Accounts</strong> – Your budget reference or department ID</p><p><strong>Vendor Record</strong> – Our profile in your procurement system</p><p><strong>Tax-Exempt Certificate</strong> – Document exempting your university from sales tax<br/><br/><br/><br/><br/><br/></p>"
+          }
+        },
+        "section_X9QTTM": {
+          "type": "section",
+          "settings": {
+            "title": "11. Contact Information",
+            "content": "<p><strong>Still Have Questions?<br/></strong> We work with universities nationwide—Admissions, Security, Student Services, Housing, IT, Athletics—you name it.</p><p><a href=\"tel:888-559-1940\" title=\"tel:888-559-1940\">888-559-1940</a><br/>sales@specialistid.com</p><p>Let’s make your ID program the <em>easiest</em> part of your semester.<br/><br/><br/></p>"
           }
         }
       },
@@ -142,7 +149,8 @@
         "section_CJ3zGz",
         "section_apjXRd",
         "section_M4nGHQ",
-        "section_YepAxa"
+        "section_YepAxa",
+        "section_X9QTTM"
       ],
       "name": "Guidebook Glossary Section",
       "settings": {}
