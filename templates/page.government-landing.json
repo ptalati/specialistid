@@ -61,6 +61,63 @@
         "padding_bottom": 52
       }
     },
+    "multicolumn_n4GQ6E": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_iPmCMc": {
+          "type": "column",
+          "settings": {
+            "title": "GSA-approved and compliant solutions",
+            "text": "<p>Our government security badge<strong> </strong>products meet the strictest federal compliance standards, including FIPS 201 and HSPD-12, ensuring you're covered for any credentialing need.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FkcnyQ": {
+          "type": "column",
+          "settings": {
+            "title": "Experience serving federal, state, and municipal agencies",
+            "text": "<p>With decades of experience, we’ve delivered government credentials<strong> </strong>to agencies at every level — from city offices to large federal departments.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_G3cdgb": {
+          "type": "column",
+          "settings": {
+            "title": "Fast & Scalable Fulfillment",
+            "text": "<p>Specialist ID offers bulk order support, quick turnaround, and tailored logistics — ideal for urgent requests or nationwide badge distribution.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_iPmCMc",
+        "column_FkcnyQ",
+        "column_G3cdgb"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Why Government Agencies Trust Specialist ID",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36,
+        "section_css_class": "Type your own CSS class"
+      }
+    },
     "custom_guidebook_showcase_BhWw6y": {
       "type": "custom-guidebook-showcase",
       "blocks": {
@@ -173,73 +230,6 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_n4GQ6E": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_iPmCMc": {
-          "type": "column",
-          "settings": {
-            "title": "Music Festivals",
-            "text": "<p>Equip stage crew, staff, and VIP guests with all access event credentials that are clearly marked and easy to manage. Combine custom printed badges with branded lanyards and color-coded badge holders to control backstage and stage access zones.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_FkcnyQ": {
-          "type": "column",
-          "settings": {
-            "title": "Conferences",
-            "text": "<p>Simplify check-in and attendee identification with pre-printed name badges and clear badge holders. Add custom lanyards for brand visibility and pair with retractable reels for scanning access points and meeting sessions.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_G3cdgb": {
-          "type": "column",
-          "settings": {
-            "title": "Media & Film Productions",
-            "text": "<p>Control set access with VIP passes and production crew badges using secure retractable badge reels. Easily integrate with RFID access control for restricted areas and assign unique roles with printed designations on each badge.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_ajDGTk": {
-          "type": "column",
-          "settings": {
-            "title": "Corporate & Private Events",
-            "text": "<p>Add a polished, professional touch to your private event or business function with branded lanyards, sleek badge holders, and custom access badges that reflect your company’s identity while improving security and visibility.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_iPmCMc",
-        "column_FkcnyQ",
-        "column_G3cdgb",
-        "column_ajDGTk"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Trusted Across Every Kind of Event",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36,
-        "section_css_class": "Type your own CSS class"
-      }
-    },
     "image_with_text_7iNgVj": {
       "type": "image-with-text",
       "blocks": {
@@ -341,10 +331,10 @@
   "order": [
     "main",
     "rich_text_bpwrwG",
+    "multicolumn_n4GQ6E",
     "custom_guidebook_showcase_BhWw6y",
     "custom_product_showcase_ewxxaH",
     "featured_collection_8EC68i",
-    "multicolumn_n4GQ6E",
     "image_with_text_7iNgVj",
     "newsletter_YihLyf"
   ]
