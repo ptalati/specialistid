@@ -15,9 +15,20 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "custom_liquid_gVcpP8": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\">\n<p>&nbsp;</p>\n<div id=\"wufoo-z7x1s7\">Fill out my <a href=\"http://specialistid.wufoo.com/forms/z7x1s7\">online form</a>.</div>\n<script type=\"text/javascript\">var z7x1s7;(function(d, t) {var s = d.createElement(t), options = {'userName':'specialistid', 'formHash':'z7x1s7', 'autoResize':true,'height':'1324','async':true,'header':'show', 'ssl':true};s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';s.onload = s.onreadystatechange = function() {var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;try { z7x1s7 = new WufooForm();z7x1s7.initialize(options);z7x1s7.display(); } catch (e) {}};var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);})(document, 'script');</script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_liquid_gVcpP8"
   ]
 }
