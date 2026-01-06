@@ -17,44 +17,41 @@
         "padding_bottom": 28
       }
     },
-    "rich_text_bpwrwG": {
+    "rich_text_BPznLq": {
       "type": "rich-text",
       "blocks": {
-        "heading_7cYrkF": {
+        "heading_UaP7XP": {
           "type": "heading",
           "settings": {
-            "heading": "Trusted Government ID Solutions — Secure, Compliant & Reliable",
+            "heading": "Corporate ID Badge Accessories Buying Guide",
             "heading_size": "h1"
           }
         },
-        "text_7ATYnA": {
-          "type": "text",
+        "caption_j8ndmz": {
+          "type": "caption",
           "settings": {
-            "text": "<p>Equip your agency with government-issued ID card solutions, badge holders, ID reels, lanyards, and visitor management systems.</p>"
+            "caption": "For Office Managers, Procurement Teams & HR Professionals",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
           }
         },
-        "button_CNVVKj": {
-          "type": "button",
+        "text_9nTUEN": {
+          "type": "text",
           "settings": {
-            "button_label": "Get a Quote for Your Agency",
-            "button_link": "shopify://pages/request-a-quote",
-            "button_style_secondary": false,
-            "button_label_2": "Browse Government-Ready ID Supplies",
-            "button_link_2": "shopify://collections/government",
-            "button_style_secondary_2": false
+            "text": "<p>Whether you're in Operations, Procurement, HR, or just the person who got “voluntold” to handle ID badge sourcing — you're in the right place.</p><p>ID badge accessories aren’t glamorous, but when they fail (clip breaks, badge won’t scan, lanyards snap), everyone notices. Done right, they quietly support onboarding, security, compliance, and daily operations across your entire company.</p><p>This guide is built to make your badge accessory procurement smooth, fast, and frustration-free — whether you're ordering for a single office, a distributed workforce, or a multi-location brand.<br/></p>"
           }
         }
       },
       "block_order": [
-        "heading_7cYrkF",
-        "text_7ATYnA",
-        "button_CNVVKj"
+        "heading_UaP7XP",
+        "caption_j8ndmz",
+        "text_9nTUEN"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-2",
         "full_width": true,
         "section_css_class": "Type your own CSS class",
         "padding_top": 40,
@@ -263,50 +260,6 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_BPznLq": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_UaP7XP": {
-          "type": "heading",
-          "settings": {
-            "heading": "Procurement Made Simple",
-            "heading_size": "h1"
-          }
-        },
-        "text_9nTUEN": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We understand the complexities of government procurement — that’s why we’ve built our process to be fast, compliant, and easy to navigate.</p><ul><li>Streamlined bulk order processing for high-volume government ID supplies<br/></li><li>We accept P-Cards, Purchase Orders, and are registered under GSA Schedule contracts<br/></li><li>Dedicated account representatives experienced in agency procurement workflows<br/></li><li>Ideal for outfitting departments with federal ID badges or upgrading site-wide government access badge systems<br/><br/>Whether you're outfitting 50 or 5,000 staff members, our team ensures smooth fulfillment with the compliance documentation and support your agency needs.</li></ul>"
-          }
-        },
-        "button_QHRFQj": {
-          "type": "button",
-          "settings": {
-            "button_label": "Request Government Pricing",
-            "button_link": "shopify://pages/request-a-quote",
-            "button_style_secondary": false,
-            "button_label_2": "Talk to a Procurement Expert",
-            "button_link_2": "shopify://pages/contact-us",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_UaP7XP",
-        "text_9nTUEN",
-        "button_QHRFQj"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "section_css_class": "Type your own CSS class",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "image_with_text_7iNgVj": {
       "type": "image-with-text",
       "blocks": {
@@ -407,13 +360,12 @@
   },
   "order": [
     "main",
-    "rich_text_bpwrwG",
+    "rich_text_BPznLq",
     "multicolumn_n4GQ6E",
     "custom_product_showcase_ewxxaH",
     "custom_printer_showcase_eiAzRb",
     "custom_guidebook_showcase_BhWw6y",
     "featured_collection_8EC68i",
-    "rich_text_BPznLq",
     "image_with_text_7iNgVj",
     "newsletter_YihLyf"
   ]
