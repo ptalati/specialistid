@@ -147,6 +147,38 @@
       "name": "Guidebook Glossary Section",
       "settings": {}
     },
+    "rich_text_CDPUt9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WGtrrJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Let’s Keep This Simple",
+            "heading_size": "h1"
+          }
+        },
+        "text_xLdDRG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our mission is to make this one small part of your workflow refreshingly easy.</p><p>Need a quote, sample, or just a human to help?<br/> Call <a href=\"tel:888-559-1940\" title=\"tel:888-559-1940\">888-559-1940</a> or email <a href=\"mailto:sales@specialistid.com\" title=\"mailto:sales@specialistid.com\">sales@specialistid.com</a></p><p>No bots. No friction. Just fast, competent help. Let’s get your team badged and back to work.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WGtrrJ",
+        "text_xLdDRG"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "image_with_text_7iNgVj": {
       "type": "image-with-text",
       "blocks": {
@@ -249,6 +281,7 @@
     "main",
     "rich_text_BPznLq",
     "custom_guidebook_glossary_gxALpH",
+    "rich_text_CDPUt9",
     "image_with_text_7iNgVj",
     "newsletter_YihLyf"
   ]
