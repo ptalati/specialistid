@@ -239,6 +239,66 @@
         "padding_bottom_mobile": 36,
         "section_css_class": "Type your own CSS class"
       }
+    },
+    "image_with_text_7iNgVj": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_6CCXhX": {
+          "type": "caption",
+          "settings": {
+            "caption": "#MAKEITEASY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_aTrDTW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_FANpQJ": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_dRjnVh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_6CCXhX",
+        "heading_aTrDTW",
+        "text_FANpQJ",
+        "button_dRjnVh"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     }
   },
   "order": [
@@ -247,6 +307,7 @@
     "custom_guidebook_showcase_BhWw6y",
     "custom_product_showcase_ewxxaH",
     "featured_collection_8EC68i",
-    "multicolumn_n4GQ6E"
+    "multicolumn_n4GQ6E",
+    "image_with_text_7iNgVj"
   ]
 }
