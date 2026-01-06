@@ -58,207 +58,94 @@
         "padding_bottom": 52
       }
     },
-    "multicolumn_n4GQ6E": {
-      "type": "multicolumn",
+    "custom_guidebook_glossary_gxALpH": {
+      "type": "custom-guidebook-glossary",
       "blocks": {
-        "column_iPmCMc": {
-          "type": "column",
+        "section_RXkTeG": {
+          "type": "section",
           "settings": {
-            "title": "GSA-approved and compliant solutions",
-            "text": "<p>Our government security badge<strong> </strong>products meet the strictest federal compliance standards, including FIPS 201 and HSPD-12, ensuring you're covered for any credentialing need.</p>",
-            "link_label": "",
-            "link": ""
+            "title": "1. Vendor Setup & Corporate Compliance",
+            "content": "<p>We’ve worked with everyone from Fortune 100s to 10-person startups.</p><p>To onboard us as a vendor, we’ll provide:</p><ul><li>W-9, address verification, and COIs as needed</li><li>ACH/Wire info for your ERP</li><li>Quick turnarounds via portals like Ariba, Coupa, SAP</li></ul><p>What we need from you:</p><ul><li>Company name and billing contact</li><li>Shipping address(es)</li><li>Tax-exemption certificate (if applicable)</li><li>Any internal compliance forms</li><li>Vendor onboarding paperwork (if applicable)</li></ul>"
           }
         },
-        "column_FkcnyQ": {
-          "type": "column",
+        "section_yaacPi": {
+          "type": "section",
           "settings": {
-            "title": "Experience serving federal, state, and municipal agencies",
-            "text": "<p>With decades of experience, we’ve delivered government credentials<strong> </strong>to agencies at every level — from city offices to large federal departments.</p>",
-            "link_label": "",
-            "link": ""
+            "title": "2. Samples, Mock-ups & Branding Support",
+            "content": "<p>Want to test the gear before ordering? Smart move.</p><ul><li>Free Samples: Most in-stock items available for trial ~ No need to return these are yours to keep</li><li>Custom Mock-ups: We'll create digital previews of your logo and colors on badge reels, holders, and lanyards</li><li>Physical Branded Samples: Available upon request for decision-makers</li><li>PMS Color Matching: Ensures brand consistency across all items</li></ul>"
           }
         },
-        "column_G3cdgb": {
-          "type": "column",
+        "section_rfNrQq": {
+          "type": "section",
           "settings": {
-            "title": "Fast & Scalable Fulfillment",
-            "text": "<p>Specialist ID offers bulk order support, quick turnaround, and tailored logistics — ideal for urgent requests or nationwide badge distribution.</p>",
-            "link_label": "",
-            "link": ""
+            "title": "3. Fast, Transparent Quotes",
+            "content": "<p>Need multiple quotes for Procurement or Compliance? We’ve got you.</p><p><strong>Send us:</strong></p><ul><li>Product SKUs or a brief description</li><li>Quantity</li><li>Any custom branding requirements</li></ul><p><strong>You’ll receive:</strong></p><ul><li>PDF quote with total delivered cost</li><li>Estimated lead times</li><li>Breakdown of customizations (if any)</li><li>Valid pricing for budget planning</li></ul><p><strong>Turnaround Time:</strong></p><ul><li>Standard items: approximately 30 minutes</li><li>Custom or high-volume: within 1 business day</li></ul>"
+          }
+        },
+        "section_jTQDq3": {
+          "type": "section",
+          "settings": {
+            "title": "4. Ordering Process & Fulfillment Timelines",
+            "content": "<p>Order however your workflow prefers:</p><ul><li>Website:<a href=\"http://www.specialistid.com\"> <span style=\"text-decoration:underline\">www.specialistid.com</span></a></li><li>Email: sales@specialistid.com</li><li>Phone: 888-559-1940</li><li>Submit PO through your platform (Ariba, Coupa, etc.)</li></ul><p><strong>Timelines:</strong></p><ul><li>In-stock items: Ship same or next business day</li><li>Custom reels/lanyards: 3 to 14 business days</li><li>Bulk orders: Let us know your timeline — we’ll match where possible<br/><br/></li><li>Event-ready or remote-ready fulfillment: Drop shipping, kit assembly, and multi-location delivery available</li></ul>"
+          }
+        },
+        "section_t797Kn": {
+          "type": "section",
+          "settings": {
+            "title": "5. Pricing, Volume Discounts & Inventory",
+            "content": "<ul><li>Transparent pricing up to 100,000 units</li><li>Tiered volume discounts available</li><li>No surprise setup, tooling, or branding fees</li><li>60+ million units in stock</li><li>Live inventory access available for ongoing partners</li></ul><p>Need recurring shipments or budget approval planning? We’ll structure quotes accordingly.</p>"
+          }
+        },
+        "section_KeRMiV": {
+          "type": "section",
+          "settings": {
+            "title": "6. Tax-Exemption, Invoicing & Payment Options",
+            "content": "<p>Tax Exempt? Upload your certificate at checkout or email it to your rep.</p><p><strong>Accepted Payment Methods:</strong></p><ul><li>Credit Card (secure emailed link)</li><li>ACH or Check (cleared before shipping)</li><li>Purchase Orders via email or procurement portal</li><li>Extended terms on approval </li></ul><p>Invoices are clean, itemized, and finance/audit-friendly.</p>"
+          }
+        },
+        "section_M4nGHQ": {
+          "type": "section",
+          "settings": {
+            "title": "7. Reordering, Scaling & Remote Support",
+            "content": "<p>Reordering is painless:</p><ul><li>Log in online for instant reorder</li><li>Email us and we’ll duplicate your last order</li><li>Can’t remember what you ordered? We’ll track it for you</li></ul><p>Scaling? We can coordinate parallel shipments across multiple locations or departments.</p>"
+          }
+        },
+        "section_idTQbP": {
+          "type": "section",
+          "settings": {
+            "title": "8. Evaluating Vendors (and Justifying Your Pick)",
+            "content": "<p>Here’s how to vet options (and justify your selection internally):</p><p><strong>The 3 Things That Matter Most:</strong></p><ol><li>Total Delivered Cost – shipping, setup, and custom fees</li><li>Responsiveness – real people, fast answers</li><li>Solutions oriented - Anything related to an ID is our headache, not yours.</li></ol><p><strong>Sample Justification:</strong></p><p>\"Specialist ID offered transparent pricing, fast turnaround, and supported our branding requirements. They also provided samples, handled compliance quickly, and coordinate parallel shipments across multiple locations or departments — making them the most complete and cost-effective vendor.\"</p>"
+          }
+        },
+        "section_fxV7Tp": {
+          "type": "section",
+          "settings": {
+            "title": "9. What to Expect From a Great Corporate Vendor",
+            "content": "<p><strong>Green Flags:</strong></p><ul><li>No surprise fees</li><li>Realistic delivery timelines</li><li>Fast responses from real people</li><li>Digital mock-ups and sample support</li><li>Ability to scale with your team and systems</li></ul><p><strong>Red Flags:</strong></p><ul><li>Quotes missing shipping/setup fees</li><li>No clear escalation contact</li><li>Delays on samples or mock-ups</li><li>No plan for future reordering</li></ul><p>Issues happen — but we’ll fix them fast, with real people. No phone maze. No blame game.</p>"
+          }
+        },
+        "section_YepAxa": {
+          "type": "section",
+          "settings": {
+            "title": "10. Glossary",
+            "content": "<p><strong>SKU</strong> – Stock Keeping Unit, your product ID<strong> </strong></p><p><strong>PO</strong> – Purchase Order, your internal buying document<strong> </strong></p><p><strong>Net 30</strong> – 30 days to pay post-invoice<strong> </strong></p><p><strong>RFID/Prox</strong> – Security-enabled badges<strong> </strong></p><p><strong>Mock-up</strong> – Preview image showing your custom branding<br/></p>"
           }
         }
       },
       "block_order": [
-        "column_iPmCMc",
-        "column_FkcnyQ",
-        "column_G3cdgb"
+        "section_RXkTeG",
+        "section_yaacPi",
+        "section_rfNrQq",
+        "section_jTQDq3",
+        "section_t797Kn",
+        "section_KeRMiV",
+        "section_M4nGHQ",
+        "section_idTQbP",
+        "section_fxV7Tp",
+        "section_YepAxa"
       ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Why Government Agencies Trust Specialist ID",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36,
-        "section_css_class": "Type your own CSS class"
-      }
-    },
-    "custom_product_showcase_ewxxaH": {
-      "type": "custom-product-showcase",
-      "blocks": {
-        "product_FgkQfd": {
-          "type": "product",
-          "settings": {
-            "image": "shopify://shop_images/magicard-300-id-card-printer-left.webp",
-            "title": "Government ID Cards & Printers",
-            "text": "<p>Produce official credentials with reliable in-house printing solutions tailored for government use:</p><ul><li>Create secure government ID cards on demand<br/></li><li>FIPS and HSPD-12 compliant hardware<br/></li><li>Dual-sided printers with smart card encoding<br/></li><li>Supports high-volume agency requirements</li></ul>",
-            "link": "shopify://collections/id-card-printers",
-            "link_label": "Shop our Printers"
-          }
-        },
-        "product_AqKDKi": {
-          "type": "product",
-          "settings": {
-            "image": "shopify://shop_images/2120-762X_2.jpg",
-            "title": "Badge Holders & ID Reels",
-            "text": "<p>Keep IDs secure, accessible, and visible with rugged accessories:</p><ul><li>Durable government <a href=\"/collections/id-badge-holders\" title=\"ID Badge Holders\">badge holders</a> for daily use<br/></li><li>Gov badge reels with retractable cords and clip options<br/></li><li>Designed for scanners and controlled entry points<br/></li><li>Reduces card damage and increases display efficiency</li></ul>",
-            "link": "shopify://collections/badge-reels",
-            "link_label": "Shop our badge reels"
-          }
-        },
-        "product_bKNKBV": {
-          "type": "product",
-          "settings": {
-            "image": "shopify://shop_images/Custom-Printed-Lanyards-SpecialistID.jpg",
-            "title": "Lanyards & Custom Branding",
-            "text": "<p>Display your government identification with professional, branded lanyards:</p><ul><li>Breakaway lanyards for added safety<br/></li><li>Custom printing for logos or departments</li><li>Woven or antimicrobial material options<br/></li><li>Perfect for conferences, staff, or daily ID wear</li></ul>",
-            "link": "shopify://collections/custom-printed-products",
-            "link_label": "Customize everything"
-          }
-        },
-        "product_GDa4R9": {
-          "type": "product",
-          "settings": {
-            "image": "shopify://shop_images/AC-916-CLEAR-1.jpg",
-            "title": "RFID & Smart Card Accessories",
-            "text": "<p>Enhance digital security and protect sensitive credentials:</p><ul><li>RFID-blocking sleeves and shielded badge holders</li><li>Anti-skimming tech for rfid badge government use</li><li>Smart card encoders and tamper-proof seals</li><li>Trusted by agencies handling secure smart ID cards</li></ul>",
-            "link": "shopify://collections/rfid-blocking-badge-holders",
-            "link_label": "Shop RFID and Smart Cards"
-          }
-        }
-      },
-      "block_order": [
-        "product_FgkQfd",
-        "product_AqKDKi",
-        "product_bKNKBV",
-        "product_GDa4R9"
-      ],
-      "name": "Product Showcase Section",
-      "settings": {
-        "title": "Explore Our ID Solutions for Government Use"
-      }
-    },
-    "custom_printer_showcase_eiAzRb": {
-      "type": "custom-printer-showcase",
-      "name": "Card Printing Section",
-      "settings": {
-        "title": "Professional Government ID Printing Solutions",
-        "description": "Our government-grade ID printers deliver secure, compliant, and professional badges for federal, state, and local agencies.",
-        "feature1_symbol": "",
-        "feature1_title": "Secure Encoding",
-        "feature1_text": "Protect sensitive data with smart card and RFID options for a secure government ID.",
-        "feature2_symbol": "",
-        "feature2_title": "Fast Turnaround",
-        "feature2_text": "5–7 business day delivery to meet urgent government ID compliance needs.",
-        "feature3_symbol": "",
-        "feature3_title": "Durable Materials",
-        "feature3_text": "Tamper-proof, waterproof cards built to withstand daily use.",
-        "feature4_symbol": "",
-        "feature4_title": "Custom Design",
-        "feature4_text": "Easily design and print any government issued ID example with agency branding.",
-        "visual_title": "Advanced Printing Technology",
-        "visual_text": "High-resolution, encrypted printing ensures every secure government ID meets federal and agency standards for quality and compliance.",
-        "visual_cta_label": "Discover top-rated government ID printers",
-        "visual_cta_link": "shopify://collections/id-card-printers"
-      }
-    },
-    "custom_guidebook_showcase_BhWw6y": {
-      "type": "custom-guidebook-showcase",
-      "blocks": {
-        "feature_DQQ3xi": {
-          "type": "feature",
-          "settings": {
-            "feature": "Fully aligned with FIPS 201 and HSPD-12 standards for government ID compliance"
-          }
-        },
-        "feature_WMFBQp": {
-          "type": "feature",
-          "settings": {
-            "feature": "Tamper-resistant, rugged materials built to protect your secure government ID credentials"
-          }
-        },
-        "feature_h3igjj": {
-          "type": "feature",
-          "settings": {
-            "feature": "Personalized solutions including barcodes, smart chips, and visual identifiers for any government issued ID example"
-          }
-        }
-      },
-      "block_order": [
-        "feature_DQQ3xi",
-        "feature_WMFBQp",
-        "feature_h3igjj"
-      ],
-      "name": "Guidebook Showcase Section",
-      "settings": {
-        "title": "Fully Compliant with Government ID Standards",
-        "heading": "To help agencies meet strict credentialing protocols, our products are designed for top-tier security and long-term compliance.",
-        "description": "",
-        "cta_label": "Download the Guidebook",
-        "cta_link": ""
-      }
-    },
-    "featured_collection_8EC68i": {
-      "type": "featured-collection",
-      "disabled": true,
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "collection": "events",
-        "products_to_show": 4,
-        "title": "Top Event Management ID Gear",
-        "heading_size": "h1",
-        "description": "<p>Streamline access control for events with professional-grade ID gear. From all access event credentials and custom printed badges to RFID-compatible badge reels and branded lanyards, our solutions are trusted by top event managers for secure, organized, and professional check-ins.</p>",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
+      "name": "Guidebook Glossary Section",
+      "settings": {}
     },
     "image_with_text_7iNgVj": {
       "type": "image-with-text",
@@ -361,11 +248,7 @@
   "order": [
     "main",
     "rich_text_BPznLq",
-    "multicolumn_n4GQ6E",
-    "custom_product_showcase_ewxxaH",
-    "custom_printer_showcase_eiAzRb",
-    "custom_guidebook_showcase_BhWw6y",
-    "featured_collection_8EC68i",
+    "custom_guidebook_glossary_gxALpH",
     "image_with_text_7iNgVj",
     "newsletter_YihLyf"
   ]
