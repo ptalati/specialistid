@@ -60,10 +60,61 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "custom_guidebook_showcase_BhWw6y": {
+      "type": "custom-guidebook-showcase",
+      "blocks": {
+        "feature_DQQ3xi": {
+          "type": "feature",
+          "settings": {
+            "feature": "Full Access Event Credentials"
+          }
+        },
+        "feature_WMFBQp": {
+          "type": "feature",
+          "settings": {
+            "feature": "Durable Badge Reels for Fast Scanning"
+          }
+        },
+        "feature_h3igjj": {
+          "type": "feature",
+          "settings": {
+            "feature": "Custom Branded Event Badges"
+          }
+        },
+        "feature_PPDDK4": {
+          "type": "feature",
+          "settings": {
+            "feature": "Streamlined Access Event Solutions"
+          }
+        },
+        "feature_DrV649": {
+          "type": "feature",
+          "settings": {
+            "feature": "RFID-Compatible Supplies for Smart Entry"
+          }
+        }
+      },
+      "block_order": [
+        "feature_DQQ3xi",
+        "feature_WMFBQp",
+        "feature_h3igjj",
+        "feature_PPDDK4",
+        "feature_DrV649"
+      ],
+      "name": "Guidebook Showcase Section",
+      "settings": {
+        "title": "Avoid Entry Chaos & Badge Mix-Ups",
+        "heading": "Whether you're managing thousands of attendees or hosting a VIP experience, our event badge solutions reduce bottlenecks and prevent unauthorized access.",
+        "description": "",
+        "cta_label": "Download the Guidebook",
+        "cta_link": ""
+      }
     }
   },
   "order": [
     "main",
-    "rich_text_bpwrwG"
+    "rich_text_bpwrwG",
+    "custom_guidebook_showcase_BhWw6y"
   ]
 }
