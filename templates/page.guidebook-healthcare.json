@@ -64,71 +64,71 @@
         "section_RXkTeG": {
           "type": "section",
           "settings": {
-            "title": "1. Getting Started: Vendor Setup & Compliance",
-            "content": "<p>Most government entities require formal vendor registration and documentation. We're ready for that.</p><p><strong>We’re Gov-Ready</strong></p><ul><li>W-9 on file</li><li>SAM Registered (System for Award Management)</li><li>DUNS & CAGE codes available</li><li>Accepts Government P-Cards</li><li>NAICS: 339999 / 561499 (common for badge supplies)</li><li>Form 889 (Either on file or happy to sign a new copy)</li><li>TAA-compliant products available</li><li>US-based company (Florida HQ)<br/></li></ul><p><strong>What We Need From You</strong></p><ul><li>Agency/Department Name</li><li>Point of Contact (Name, Email, Phone)</li><li>Billing & Shipping Info</li><li>Tax-Exempt [not necessary for military bases] or Procurement ID</li><li>Required government documentation<br/><br/></li></ul><p>Email forms to: sales@specialistid.com<br/> Subject: Vendor Application – [Your Agency Name]</p>"
+            "title": "1. Getting Started: Vendor Setup & Credentials",
+            "content": "<h3><strong>Hospital Procurement? We’re Already Onboard</strong></h3><p>We work with major health systems, teaching hospitals, and clinics across the U.S. We’re ready for credentialing, documentation, and compliance reviews.</p><p>To onboard us as a vendor, we’ll provide:</p><ul><li>W-9, address verification, and COIs as needed</li><li>ACH/Wire info for your ERP</li><li>Quick turnarounds via portals like Ariba, Coupa, SAP</li></ul><p>What we need from you:</p><ul><li>Company name and billing contact</li><li>Shipping address(es)</li><li>Tax-exemption certificate (if applicable)</li><li>Any internal compliance forms</li><li>Vendor onboarding paperwork (if applicable)</li></ul><p>Email forms to <strong>sales@specialistid.com</strong> with subject line: “Vendor Application – [Your Hospital Name]”</p><h3><strong>Setup Requirements:</strong></h3><ul><li>Facility/System Name</li><li>Point of Contact</li><li>Accounts Payable Info</li><li>Shipping & Billing Addresses</li><li>Tax-Exempt Certificate</li><li>Any compliance or vendor portal access needed</li></ul><p><strong>Accepted Payment Methods:</strong></p><ul><li>Credit Card (secure emailed link)</li><li>ACH or Check (cleared before shipping)</li><li>Purchase Orders via email or procurement portal</li><li>Extended terms on approval </li></ul>"
           }
         },
         "section_yaacPi": {
           "type": "section",
           "settings": {
-            "title": "2. Samples & Customization Options",
-            "content": "<p><strong>Free Samples</strong></p><p>Evaluate the durability, feel, and functionality of our badge holders, lanyards, reels, or card sleeves before you commit.</p><p><strong>Custom Branding Options</strong></p><p>Need your department’s seal or a clearance-coded badge reel? We provide:</p><ul><li>Digital mock-ups within 24–48 hours</li><li>Physical samples in 2–4 days if requested</li><li>Custom production timelines:</li><li>Lanyards: 10–14 business days</li><li>Badge reels: 3–5 business days</li></ul>"
+            "title": "2. Samples & Custom Mock-ups",
+            "content": "<h3><strong>Try Before You Commit</strong></h3><p>We offer free samples on most products—including custom badge reels, badge bottoms/buddies, and every type of badge holder imaginable. </p><p>Custom Mock-ups: We’ll generate visual proofs of your logo, badge format, or department color system before production. Custom samples can ship within 2–3 business days.</p>"
           }
         },
         "section_rfNrQq": {
           "type": "section",
           "settings": {
-            "title": "3. Fast, Clear Quotes",
-            "content": "<p><strong>What You Get</strong></p><ul><li>Transparent pricing (no hidden fees)</li><li>All-in delivery cost included</li><li>Accurate delivery estimates</li><li>PDF quotes for documentation</li><li>Responses within hours — not days<br/></li></ul><p><strong>What to Send Us</strong></p><ul><li>SKUs or item names</li><li>Quantity</li><li>Any custom details or artwork</li></ul>"
+            "title": "3. Quotes & Customization",
+            "content": "<h3><strong>Clear, Fast, Accurate</strong></h3><p>Send us SKUs or a general need (e.g., retractable reels for emergency staff), and we’ll turn around a detailed quote with:</p><ul><li>Unit cost</li><li>Volume pricing tiers</li><li>Customization charges (if any)</li><li>Realistic delivery timelines</li></ul><p><strong>Standard quotes</strong>: Approximately 1 hour</p><p><strong>Custom orders</strong>: Within 24 hours</p>"
           }
         },
         "section_jTQDq3": {
           "type": "section",
           "settings": {
-            "title": "4. Placing Your Order",
-            "content": "<p><strong>Order Methods</strong></p><ul><li>Email: sales@specialistid.com</li><li>Phone: 888-559-1940 (Sales)</li><li>Online:<a href=\"http://www.specialistid.com\"> <span style=\"text-decoration:underline\">www.specialistid.com</span></a></li><li>Purchase Orders: Send by email<br/></li></ul><p><strong>Shipping Expectations</strong></p><ul><li>In-stock items: Usually ship same day if ordered before 12 PM EST</li><li>Custom orders: Confirmed with production timelines</li></ul><p>Carriers: FedEx, UPS, USPS, DHL</p>"
+            "title": "4. Placing Orders",
+            "content": "<h3><strong>Submit POs or Order Online</strong></h3><p>We support all channels:</p><ul><li>Email Orders: sales@specialistid.com</li><li>Phone: 888-559-1940 (Sales) or 800-360-6720 (Customer Service)</li><li>Website:<a href=\"http://www.specialistid.com\"> <span style=\"text-decoration:underline\">www.specialistid.com</span></a></li><li>Purchase Orders: Just attach and email</li></ul><h3><strong>Shipping & Timelines</strong></h3><ul><li>In-stock items: Ship same day if ordered by 12 PM EST</li><li>Custom badge reels: 3–5 business days</li><li>Custom Badge Buddies: 4-7 business days</li><li>New product development: 4–12 weeks depending on specs</li></ul><p>We ship via FedEx, UPS, USPS, and DHL. We track everything and keep you updated—because delays are not just inconvenient in hospitals, they’re unacceptable.<br/></p>"
           }
         },
         "section_t797Kn": {
           "type": "section",
           "settings": {
-            "title": "5. Payment, Invoicing & Tax-Free Purchasing",
-            "content": "<p><strong>Accepted Payment Methods</strong></p><ul><li>Net 30 Terms</li><li>ACH / EFT Transfers</li><li>Government P-Cards (Federal & State accepted)</li><li>Credit Cards via secure link<br/></li></ul><p><strong>Tax-Exempt Orders</strong></p><ul><li>Upload exemption certificate during checkout</li><li>Or email to your rep</li><li>Invoice will reflect $0.00 tax</li></ul>"
+            "title": "5. Pricing & Large-Scale Inventory",
+            "content": "<h3><strong>Built for Bulk and Scale</strong></h3><ul><li>Transparent pricing for up to 1,000 units online</li><li>Custom pricing for system-wide needs</li><li>No setup fee surprises—everything is detailed upfront</li></ul><p>We stock over 60 million units, updated daily. Let us know if you're planning a rollout—we can reserve inventory or schedule staged delivery by department or location.</p>"
           }
         },
         "section_KeRMiV": {
           "type": "section",
           "settings": {
-            "title": "6. Reorders & Long-Term Planning",
-            "content": "<p><strong>Easy Reordering</strong></p><ul><li>Reorder from your online account</li><li>Contact us with your agency name — we’ll look up past orders</li><li>If you're new or taking over, send us a photo or invoice — we’ll handle the rest<br/></li></ul><p><strong>Planning Ahead</strong></p><ul><li>We support fiscal year budgeting</li><li>Can hold pricing or stock based on forecasted need</li><li>Multi-agency or multi-location coordination available</li></ul>"
+            "title": "6. Tax-Exempt & Compliance Purchasing",
+            "content": "<p>Submit your exemption certificate during checkout or email it to your rep. We ensure:</p><ul><li>Zero tax reflected on invoice</li><li>Audit-friendly documentation</li><li>Quick turnaround for exemption setup</li></ul>"
+          }
+        },
+        "section_CJ3zGz": {
+          "type": "section",
+          "settings": {
+            "title": "7. Reordering Made Easy",
+            "content": "<h3><strong>Because Staff Roles Change (Constantly)</strong></h3><ul><li>Reorder by SKU, past PO, item name, or even a photo</li><li>Didn’t place the last order? We’ll look it up for you</li><li>Want to standardize across departments? We’ll lock SKUs and color codes for easy consistency</li></ul><p>Future-proof reordering even if you switch departments or systems.</p>"
+          }
+        },
+        "section_apjXRd": {
+          "type": "section",
+          "settings": {
+            "title": "8. Evaluating Vendors in Healthcare",
+            "content": "<h3><strong>Focus on These 4 Key Metrics:</strong></h3><p><strong>1. Infection Control Compliance</strong></p><ul><li>Compatible with hospital disinfectants</li><li>Non-porous badge holders available for sterile zones</li></ul><p><strong>2. Total Cost</strong></p><ul><li>Consider shipping, setup, and replacement costs—not just sticker price</li></ul><p><strong>3. Delivery Integrity</strong></p><ul><li>Can they ship 5,000+ pieces on time without missing specs?</li><li>Are products backed by replacement guarantees?</li></ul><p><strong>4. Service & Reorder Readiness</strong></p><ul><li>Are reps responsive to clinical timelines and real-world constraints?</li><li>Can they manage annual orders without missing a beat?</li></ul>"
           }
         },
         "section_M4nGHQ": {
           "type": "section",
           "settings": {
-            "title": "7. Vendor Evaluation & Justification Tips",
-            "content": "<p><strong>What Really Matters</strong></p><ol><li>Total Cost — Watch for setup or shipping fees</li><li>Delivery Reliability — Get real timeline estimates</li><li>Support Access — Can you reach a human fast?</li><li>Future-Proofing — Can someone else reorder next year?<br/></li></ol><p><strong>Questions to Ask All Vendors</strong></p><ul><li>What’s the total delivered cost (including shipping)?</li><li>What’s your realistic delivery timeline?</li><li>Who do I contact if something goes wrong?</li><li>How simple is the reorder process?</li></ul>"
-          }
-        },
-        "section_idTQbP": {
-          "type": "section",
-          "settings": {
-            "title": "8. Compliance Flags: What to Watch For",
-            "content": "<p><strong>Red Flags</strong></p><ul><li>Unclear contact methods</li><li>Vague shipping timelines</li><li>No experience with government processes</li><li>Fine print fees added at checkout<br/></li></ul><p><strong>Green Flags</strong></p><ul><li>Experience with government clients</li><li>Clear quotes and fast response times</li><li>Documented return/warranty process</li></ul><p>Secure shipment options</p>"
-          }
-        },
-        "section_fxV7Tp": {
-          "type": "section",
-          "settings": {
-            "title": "9. Quick Procurement Checklist",
-            "content": "<ul><li>Received samples (if applicable)</li><li>Vendor W-9 on file</li><li>P-Card or PO ready</li><li>Quote received and documented</li><li>Tax-exempt certificate submitted</li><li>Custom mock-up approved (if needed)</li><li>Timeline confirmed</li><li>Order placed</li></ul>"
+            "title": "9. Vendor Comparison Checklist",
+            "content": "<p><strong>Green Flags:</strong></p><ul><li>Transparent, tiered pricing</li><li>Healthcare-focused compliance (infection control)</li><li>Familiarity with vendor portals and large-scale procurement</li><li>Responsive account reps</li><li>Proofs and samples before commitment</li></ul><p><strong>Red Flags:</strong></p><ul><li>Hidden charges or vague quote language</li><li>Unclear or shifting fulfillment timelines</li><li>No W-9, or required documentation</li><li>Lack of direct contact or support escalation path</li></ul>"
           }
         },
         "section_YepAxa": {
           "type": "section",
           "settings": {
             "title": "10. Glossary",
-            "content": "<p><strong>SKU</strong> – Product code used to ensure accurate ordering</p><p><strong>PO</strong> – Purchase Order, official document for purchases</p><p><strong>Net 30</strong> – Payment due 30 days after invoice</p><p><strong>W-9</strong> – IRS tax form for vendor compliance</p><p><strong>SAM</strong> – Federal vendor registration system</p><p><strong>TAA Compliant</strong> – Meets Trade Agreements Act standards</p><p><strong>NAICS Code</strong> – Classification code for government procurement</p><p><strong>CAGE Code</strong> – Vendor ID for federal procurement systems<br/><br/><br/><br/></p>"
+            "content": "<p><strong>SKU</strong> – Product code used for tracking</p><p><strong>PO</strong> – Purchase Order</p><p><strong>Net 30</strong> – 30 days to pay after invoicing</p><p><strong>Custom Mock-up</strong> – A digital rendering of your hospital logo/product combo</p>"
           }
         },
         "section_gL4r6e": {
@@ -146,9 +146,9 @@
         "section_jTQDq3",
         "section_t797Kn",
         "section_KeRMiV",
+        "section_CJ3zGz",
+        "section_apjXRd",
         "section_M4nGHQ",
-        "section_idTQbP",
-        "section_fxV7Tp",
         "section_YepAxa",
         "section_gL4r6e"
       ],
