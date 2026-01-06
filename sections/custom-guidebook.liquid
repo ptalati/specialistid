@@ -1,0 +1,199 @@
+{% style %}
+  /* GuideBook Section */
+  .glossary-guidebook {
+    padding: 60px 20px;
+    background: #f9fafb;
+  }
+  .glossary-title,
+  .glossary-details-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #6fb43f;
+  }
+
+  .glossary-details-heading {
+    padding-top: 40px;
+  }
+  .glossary-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .glossary-item {
+    background: white;
+    padding: 20px;
+    border-left: 4px solid #6fb43f;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .glossary-item:hover {
+    transform: translateY(-5px);
+  }
+  .glossary-card {
+    background: #fff;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  .glossary-header {
+    background: linear-gradient(135deg, #6fb43f, #5a9235);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  .glossary-number {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  .glossary-content {
+    display: none;
+    padding: 25px;
+    background: white;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  .glossary-content.active {
+    display: block;
+  }
+  .glossary-next-button {
+    margin-top: 20px;
+    background-color: #6fb43f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  .glossary-next-button:hover {
+    background-color: #5a9235;
+  }
+  .glossary-back-button {
+    margin-top: 20px;
+    background-color: #f5911f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  .glossary-back-button:hover {
+    background-color: #e07e00;
+  }
+  .glossary-button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media (max-width: 768px) {
+    .glossary-title,
+    .glossary-details-heading {
+      font-size: 1.5rem;
+    }
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Guidebook Section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "section",
+      "name": "Guide Section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Section Title",
+          "default": "Market Research & Analysis"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Section Content",
+          "default": "<p>Understanding your audience</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Guidebook Glossary Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="glossary-guidebook">
+  <div class="glossary-section" id="glossary-top">
+    <div class="glossary-container">
+      <h2 class="glossary-title">Table of Contents</h2>
+      <div class="glossary-grid">
+        {% for block in section.blocks %}
+          <div class="glossary-item" onclick="scrollToSection('{{ forloop.index }}')">
+            <h3>{{ block.settings.title }}</h3>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="glossary-details">
+    <div class="glossary-container">
+      <h2 class="glossary-details-heading">Step by step Guide</h2>
+      {% for block in section.blocks %}
+        <div class="glossary-card" id="section-{{ forloop.index }}">
+          <div class="glossary-header" onclick="toggleSection('{{ forloop.index }}')">
+            <h3>{{ block.settings.title }}</h3>
+            <div class="glossary-number">{{ forloop.index }}</div>
+          </div>
+          <div class="glossary-content">
+            <div>{{ block.settings.content }}</div>
+            <div class="glossary-button-group">
+              {% unless forloop.last %}
+                <button
+                  class="glossary-next-button"
+                  onclick="event.stopPropagation(); goToNextSection({{ forloop.index }});"
+                >
+                  Next Step
+                </button>
+              {% endunless %}
+              <button class="glossary-back-button" onclick="event.stopPropagation(); goToTop();">Back to Top</button>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
