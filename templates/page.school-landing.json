@@ -23,23 +23,23 @@
         "heading_7cYrkF": {
           "type": "heading",
           "settings": {
-            "heading": "Secure, Stylish & Functional ID Solutions for Healthcare Professionals",
+            "heading": "Professional ID Solutions for Schools",
             "heading_size": "h1"
           }
         },
         "text_7ATYnA": {
           "type": "text",
           "settings": {
-            "text": "<p>Explore our trusted collection of medical badges, nurse ID holders, and hospital ID accessories—designed with care for the people who care.</p>"
+            "text": "<p>Custom ID badges and card holders designed specifically for educational institutions. Enhance security, streamline identification, and create a professional appearance with our premium products.</p>"
           }
         },
         "button_CNVVKj": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Healthcare ID Supplies",
-            "button_link": "shopify://collections/healthcare",
+            "button_label": "Shop School Collection",
+            "button_link": "shopify://collections/school",
             "button_style_secondary": false,
-            "button_label_2": "Request Bulk Quote",
+            "button_label_2": "Get a Quote for your Institution",
             "button_link_2": "shopify://pages/request-a-quote",
             "button_style_secondary_2": false
           }
@@ -61,174 +61,77 @@
         "padding_bottom": 52
       }
     },
-    "multicolumn_n4GQ6E": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_iPmCMc": {
-          "type": "column",
-          "settings": {
-            "title": "Badge Buddies for Nurses",
-            "text": "<p>Discover top-quality badges for nurses and medical badge solutions designed for long shifts, quick access, and all-day wear. Trusted by frontline heroes in hospitals and clinics nationwide</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_FkcnyQ": {
-          "type": "column",
-          "settings": {
-            "title": "Doctor Badge Holders",
-            "text": "<p>Sleek, professional, and built for daily rounds, our doctor badge holders combine function with form—perfect for physicians, surgeons, and specialists who need secure and easy-to-display credentials.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_G3cdgb": {
-          "type": "column",
-          "settings": {
-            "title": "Veterinarian ID Reels",
-            "text": "<p>Keep your ID visible and your hands free with rugged veterinarian badge reels, ideal for busy animal care environments. Durable construction for vets, techs, and support staff in fast-paced clinics.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_ULM69W": {
-          "type": "column",
-          "settings": {
-            "title": "Registered Nurse Badge Clips",
-            "text": "<p>From ER to ICU, our registered nurse badge clips are designed to stay put and stay clean. Lightweight and dependable options tailored for nursing teams on the move.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_iPmCMc",
-        "column_FkcnyQ",
-        "column_G3cdgb",
-        "column_ULM69W"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Most Popular Healthcare ID Supplies",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36,
-        "section_css_class": "Type your own CSS class"
-      }
-    },
     "custom_product_showcase_ewxxaH": {
       "type": "custom-product-showcase",
       "blocks": {
         "product_FgkQfd": {
           "type": "product",
           "settings": {
-            "image": "shopify://shop_images/BB-1XL-DOCTOR-BLUE-V-FRONT_ea9a3583-acde-4373-bb9a-3d3569949237.png",
-            "title": "Extra Large Doctor Badge Buddy – Vertical",
-            "text": "<ul><li>This doctor badge is oversized to provide instant role visibility in high-traffic healthcare settings.<br/></li><li>It fits behind any standard vertical ID, eliminating the need for slot punching.<br/></li><li>Printed on both sides, this badge buddy ensures your credentials are always visible—no matter how it flips.<br/></li><li>Built with durable materials to last through long hospital shifts and rounds.</li></ul>",
-            "link": "shopify://products/extra-large-doctor-badge-buddy-vertical-oversized-doctor-badge-buddies",
-            "link_label": "Shop now"
+            "image": "shopify://shop_images/726-CSN-Custom-1yourlogohere.webp",
+            "title": "Custom Clear Vertical Teacher Badge Holder",
+            "text": "<p>Professional, customizable teacher badge holder built for daily use in classrooms, offices or events</p><ul><li>Durable crystal-clear plastic construction</li><li>Easy side-loading with thumb notch</li><li>Slot and chain holes for lanyards or clips</li><li>Full-color custom printing available</li><li>Perfect for educators, staff and school events</li></ul>",
+            "link": "shopify://products/custom-clear-vertical-id-card-holder",
+            "link_label": "View Product"
           }
         },
         "product_AqKDKi": {
           "type": "product",
           "settings": {
-            "image": "shopify://shop_images/SPID-3380-RN-BLUE-badge-buddy-reel-hero.png",
-            "title": "RN Badge Buddy Reel with Swivel Spring Clip",
-            "text": "<ul><li>Our badges for nurses combine a retractable reel with a printed badge buddy for all-in-one convenience.<br/></li><li>The swivel spring clip makes it easy to attach the badge to scrubs, collars, or belts.<br/></li><li>Tested for thousands of pulls, this nurse badge accessory is built to perform under pressure.<br/></li><li>Ideal for nurses needing rapid ID access without sacrificing durability or style.</li></ul>",
-            "link": "shopify://products/rn-badge-buddy-reel-with-swivel-spring-clip-badge-buddy-and-retractable-reel-in-one",
-            "link_label": "Shop now"
-          }
-        },
-        "product_bKNKBV": {
-          "type": "product",
-          "settings": {
-            "image": "shopify://shop_images/2120-762X_2.jpg",
-            "title": "Translucent Badge Reel with Swivel Clip",
-            "text": "<ul><li>This veterinarian badge reel is a go-to for busy vet clinics thanks to its smooth retractable mechanism.<br/></li><li>The 360-degree swivel clip allows for flexible attachment to a lab coat or scrub pocket.<br/></li><li>Its translucent finish adds a professional yet modern look to any veterinary uniform.<br/></li><li>With strong internal construction, it’s reliable for constant use during animal care routines.</li></ul>",
-            "link": "shopify://products/translucent-badge-reel-with-swivel-clip",
-            "link_label": "Shop now"
-          }
-        },
-        "product_GDa4R9": {
-          "type": "product",
-          "settings": {
-            "image": "shopify://shop_images/BB-1XL-LABORATORY-HOTPINK-V-FRONT.png",
-            "title": "Extra Large Laboratory Badge Buddy – Vertical",
-            "text": "<ul><li>Unlike generic holders, this option doubles as a badge for nurses working in lab environments or as admin staff.<br/></li><li>The “LABORATORY” print clearly communicates role-specific access across hospital zones.<br/></li><li>It’s visible from any angle thanks to dual-sided printing, improving facility workflow.<br/></li><li>Engineered with durable, easy-to-clean materials ideal for labs or administrative offices.</li></ul>",
-            "link": "shopify://products/extra-large-laboratory-badge-buddy-vertical-oversized-laboratories-badge-buddies",
-            "link_label": "Shop now"
+            "image": "shopify://shop_images/Custom-Printed-Lanyards-SpecialistID.jpg",
+            "title": "Custom Printed Lanyards for Teachers and Coaches",
+            "text": "<p>Design high-quality lanyards perfect for any teacher or coach use, ideal for holding teacher badge holders, whistles or ID cards with comfort and durability</p><ul><li>Full-color custom printing with your badge custom printing with your logo or school name</li><li>Soft, durable for all day wear</li><li>Multiple clip options (swivel hook, bulldog clip, etc.)</li><li>Optional safety breakaway for added protection</li></ul>",
+            "link": "shopify://products/custom-printed-lanyards-online",
+            "link_label": "View Product"
           }
         }
       },
       "block_order": [
         "product_FgkQfd",
-        "product_AqKDKi",
-        "product_bKNKBV",
-        "product_GDa4R9"
+        "product_AqKDKi"
       ],
       "name": "Product Showcase Section",
       "settings": {
-        "title": "Tailored ID Supplies for Every Medical Role"
+        "title": "Featured Products"
       }
     },
-    "industries_EWbVWW": {
-      "type": "industries",
-      "blocks": {
-        "industry_RErGzy": {
-          "type": "industry",
-          "settings": {
-            "title": "Sanitizable Badge Holders",
-            "description": "Designed for infection control, our hospital ID badge holders are easy to disinfect and built to withstand repeated cleanings."
-          }
-        },
-        "industry_kCfnnT": {
-          "type": "industry",
-          "settings": {
-            "title": "Durable & Retractable Badge Reels",
-            "description": "Ideal for fast-paced settings like ERs and ORs, our badge reels ensure your ID is always within reach without compromising durability."
-          }
-        },
-        "industry_gGTmcP": {
-          "type": "industry",
-          "settings": {
-            "title": "HIPAA-Compliant Visitor ID Products",
-            "description": "Help maintain patient privacy and compliance with customizable, secure visitor management solutions tailored for healthcare."
-          }
-        },
-        "industry_L74wzc": {
-          "type": "industry",
-          "settings": {
-            "title": "Uniformed Services ID Cards Made Simple",
-            "description": "Quick and efficient ordering of uniformed services ID cards for military medical staff and federal healthcare institutions."
-          }
-        }
-      },
-      "block_order": [
-        "industry_RErGzy",
-        "industry_kCfnnT",
-        "industry_gGTmcP",
-        "industry_L74wzc"
-      ],
-      "name": "Industries Grid",
+    "custom_tax_exempt_BWdF8K": {
+      "type": "custom-tax-exempt",
+      "name": "Tax Exempt Section",
       "settings": {
-        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
-        "heading": "Why Healthcare Professionals Rely on Us:",
-        "padding_top": 40,
-        "padding_bottom": 52,
-        "mob_top_spacing": 40,
-        "mob_bottom_spacing": 40
+        "title": "Tax-Exempt Ordering Made Simple",
+        "description": "<p>We understand that educational institutions, such as K-12 schools, school districts, and universities, qualify for tax-exempt purchases. Our streamlined process makes it easy to place orders for <strong>school ID badge holders</strong>, <strong>student ID card printers</strong>, and <strong>lanyards for teachers</strong> without tax complications.</p>",
+        "step1": "Submit your tax-exempt certificate during checkout",
+        "step2": "Our team verifies your institution's status",
+        "step3": "Receive confirmation and proceed with tax-free pricing on items like lanyards for students, ID accessories for faculty, and more",
+        "step4": "All future orders automatically apply tax exemption",
+        "visual_heading": "Quick Verification Process",
+        "visual_text": "<p>Most tax-exempt certifications are processed within 24 hours. Keep your documents ready for faster approval and start ordering your <strong>school visitor badges</strong>, <strong>retractable badge reels</strong>, or <strong>teacher ID badge accessories</strong> with ease.</p>",
+        "visual_link": ""
+      }
+    },
+    "custom_printer_showcase_eiAzRb": {
+      "type": "custom-printer-showcase",
+      "name": "Card Printing Section",
+      "settings": {
+        "title": "Professional Card Printing Services",
+        "description": "Our state-of-the-art printing technology ensures your school ID cards, teacher badges, and student identification cards meet the highest standards of quality and durability. From design to delivery, we handle every aspect of your school badge printing needs.",
+        "feature1_symbol": "",
+        "feature1_title": "Custom Design",
+        "feature1_text": "Full design services available for student ID badges, staff ID cards, and school visitor passes",
+        "feature2_symbol": "",
+        "feature2_title": "Fast Turnaround",
+        "feature2_text": "5–7 business days delivery on custom school ID printing",
+        "feature3_symbol": "",
+        "feature3_title": "Security Features",
+        "feature3_text": "Holograms, UV printing, and anti-counterfeit options to protect your student and teacher ID cards",
+        "feature4_symbol": "",
+        "feature4_title": "Premium Quality",
+        "feature4_text": "Fade-resistant, waterproof school badge cards built to last all year",
+        "visual_image": "shopify://shop_images/magicard-300-id-card-printer-left.webp",
+        "visual_title": "Advanced Printing Technology",
+        "visual_text": "High-resolution digital printing with color matching and quality control ensures every school ID badge and student access card meets professional standards.",
+        "visual_cta_label": "Discover top-rated ID card printers for schools",
+        "visual_cta_link": "shopify://collections/id-card-printers"
       }
     },
     "custom_guidebook_showcase_BhWw6y": {
@@ -237,109 +140,34 @@
         "feature_DQQ3xi": {
           "type": "feature",
           "settings": {
-            "feature": "Print durable, hospital-grade ID cards on demand"
+            "feature": "Evaluating your options"
           }
         },
         "feature_MiaPBy": {
           "type": "feature",
           "settings": {
-            "feature": "Ideal for staff onboarding, temporary access, and patient-facing roles"
+            "feature": "Reordering made easy"
           }
         },
         "feature_WMFBQp": {
           "type": "feature",
           "settings": {
-            "feature": "Compatible with badge holders, clips, and visitor management systems"
-          }
-        },
-        "feature_h3igjj": {
-          "type": "feature",
-          "settings": {
-            "feature": "Supports healthcare ID badge printing with optional encoding and security features"
+            "feature": "Vendor comparision"
           }
         }
       },
       "block_order": [
         "feature_DQQ3xi",
         "feature_MiaPBy",
-        "feature_WMFBQp",
-        "feature_h3igjj"
+        "feature_WMFBQp"
       ],
       "name": "Guidebook Showcase Section",
       "settings": {
-        "title": "ID Printers for Healthcare Facilities",
-        "heading": "Streamline your identification process with professional-grade ID card printers built for hospitals, clinics, and medical offices. Whether you’re issuing custom nurse ID badges, doctor credentials, or visitor passes, our printers offer fast, high-resolution printing that keeps up with your workflow.",
-        "description": "",
-        "cta_label": "Explore Healthcare ID Printers",
-        "cta_link": "shopify://collections/id-card-printers"
-      }
-    },
-    "custom_printer_showcase_eiAzRb": {
-      "type": "custom-printer-showcase",
-      "name": "Card Printing Section",
-      "settings": {
-        "title": "Need Custom Badges or Branded Lanyards?",
-        "description": "Elevate your brand with fast, professional hospital badge printing and custom nurse ID badges. From lanyards to ID cards, we make it easy to represent your healthcare team with confidence and clarity.",
-        "feature1_symbol": "🎨",
-        "feature1_title": "Hospital Badge Printing",
-        "feature1_text": "Sharp, high-resolution hospital badge printing for staff, doctors, and visitors.",
-        "feature2_symbol": "🧵",
-        "feature2_title": "Medical Lanyards with Custom Logo",
-        "feature2_text": "Branded medical lanyards with your custom logo for clear department visibility.",
-        "feature3_symbol": "🆔",
-        "feature3_title": "Custom Nurse ID Badges",
-        "feature3_text": "Durable, easy-to-clean custom nurse ID badges designed for daily clinical use.",
-        "feature4_symbol": "⚡",
-        "feature4_title": "Fast Turnaround",
-        "feature4_text": "Quick delivery for onboarding, vendor access, or hospital events.",
-        "visual_title": "Built for Healthcare Use",
-        "visual_text": "All our custom products are made for hospitals and clinics, combining durability, infection control, and professional design. From nurse badges to branded medical lanyards, we deliver reliable, compliant, and stylish healthcare ID solutions—fast.",
-        "visual_cta_label": "Customize everything",
-        "visual_cta_link": "shopify://collections/custom-printed-products"
-      }
-    },
-    "rich_text_BPznLq": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_UaP7XP": {
-          "type": "heading",
-          "settings": {
-            "heading": "Procurement-Friendly. Volume Discounts Available.",
-            "heading_size": "h1"
-          }
-        },
-        "text_9nTUEN": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Whether you manage sourcing for a multi-facility hospital system or a single private clinic, we simplify your buying process. Our team specializes in healthcare ID supplies bulk orders—with contract-friendly pricing, responsive support, and fast delivery nationwide.</p><ul><li>Access wholesale pricing on hospital ID accessories, badge reels, holders, and more.<br/></li><li>Work with dedicated account reps who understand healthcare procurement workflows.<br/></li><li>Expedite large-volume shipments for onboarding, compliance upgrades, or facility-wide rollouts.<br/></li><li>Choose from pre-approved items or request a custom bulk quote tailored to your organization.</li></ul>"
-          }
-        },
-        "button_QHRFQj": {
-          "type": "button",
-          "settings": {
-            "button_label": "Get a sample",
-            "button_link": "shopify://pages/sample-request",
-            "button_style_secondary": false,
-            "button_label_2": "Request a quote",
-            "button_link_2": "shopify://pages/request-a-quote",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_UaP7XP",
-        "text_9nTUEN",
-        "button_QHRFQj"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "section_css_class": "Type your own CSS class",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "title": "Free Guidebook: Master School ID Solutions",
+        "heading": "Everything You Need to Know About School ID Implementation",
+        "description": "This comprehensive guidebook walks you through the best practices for implementing ID badge programs in educational institutions. Learn about material selection, security features, student/staff onboarding, and cost-saving tips.",
+        "cta_label": "Consult the guide",
+        "cta_link": "shopify://pages/the-ultimate-school-id-purchasing-guide-simple-steps-to-get-started"
       }
     },
     "image_with_text_7iNgVj": {
@@ -443,12 +271,10 @@
   "order": [
     "main",
     "rich_text_bpwrwG",
-    "multicolumn_n4GQ6E",
     "custom_product_showcase_ewxxaH",
-    "industries_EWbVWW",
-    "custom_guidebook_showcase_BhWw6y",
+    "custom_tax_exempt_BWdF8K",
     "custom_printer_showcase_eiAzRb",
-    "rich_text_BPznLq",
+    "custom_guidebook_showcase_BhWw6y",
     "image_with_text_7iNgVj",
     "newsletter_YihLyf"
   ]

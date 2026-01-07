@@ -1,0 +1,376 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_bpwrwG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7cYrkF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Specialist ID Sports Credentials, Custom Lanyards & Access Solutions",
+            "heading_size": "h1"
+          }
+        },
+        "text_iBEx6P": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Manage game-day access, staff credentials, and fan engagement with Specialist ID’s sports credentialing solutions. From high school fields to professional stadiums, Specialist ID provides custom lanyards, RFID wristbands, badge holders, and all-access passes tailored for sports teams, events, and live venues.</p>"
+          }
+        },
+        "button_eP7E8P": {
+          "type": "button",
+          "settings": {
+            "button_label": "Check out our items!",
+            "button_link": "shopify://collections/events",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7cYrkF",
+        "text_iBEx6P",
+        "button_eP7E8P"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_7iNgVj": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_aTrDTW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Breakaway Lanyard ID Holder Badge Reel Combo",
+            "heading_size": "h1"
+          }
+        },
+        "text_FANpQJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Perfect for sports venues and athletic events, this all-in-one Specialist ID lanyard + badge reel combo provides secure credential display with a breakaway safety feature for staff and media. Ideal for coaches, sideline personnel, and game-day operations.</p><ul><li>Displays and swipes credentials with Specialist ID’s all-in-one badge reel + lanyard combo</li><li>Comfortable 5/8” tubular design with soft, spongy feel and 36” total circumference for ideal badge visibility</li><li>Breakaway safety feature snaps apart under pressure, then easily reconnects</li><li>Built-in badge reel extends up to 34” for smooth, retractable card swiping</li><li> Secure vinyl strap fits any Specialist ID badge holder or photo ID</li></ul><p></p>",
+            "text_style": "body"
+          }
+        },
+        "button_dRjnVh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "shopify://products/breakaway-lanyard-id-holder-badge-reel-combo-2138-700x",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_aTrDTW",
+        "text_FANpQJ",
+        "button_dRjnVh"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/2138-7004-Extended.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "image_with_text_wAkeBq": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_k86p3W": {
+          "type": "heading",
+          "settings": {
+            "heading": "Custom-Printed Event Badges",
+            "heading_size": "h1"
+          }
+        },
+        "text_P3Q73L": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Design full-color credentials with Specialist ID's custom event badges, ideal for tournaments, VIP access, and official team operations. These laminated passes work with vertical badge holders and clip securely to lanyards or badge reels.</p><ul><li>Custom 3\" x 5\" laminated Specialist ID event badges</li><li>Printed on both sides with your custom design—no setup fees required</li><li>Made from a durable 30mil synthetic substrate, laminated on both sides for lasting strength</li><li>Dual slot punches for double-ended lanyard attachment and secure wear</li><li>Precision flush die-cut edges for a sleek, professional look</li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_nChJ4p": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "#",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_k86p3W",
+        "text_P3Q73L",
+        "button_nChJ4p"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/CustomEventBadge.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "image_with_text_wxhCA9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nnBJ8z": {
+          "type": "heading",
+          "settings": {
+            "heading": "SPID UBand Proximity Silicone Wristband",
+            "heading_size": "h1"
+          }
+        },
+        "text_gdYngp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This RFID wristband from Specialist ID offers fast, waterproof, and contactless access for players, staff, and VIPs. Replace proximity cards with SPID UBand for secure entry at high-traffic sports venues.</p><ul><li>Wearable access control wristband with built-in 125 kHz proximity chip</li><li>Seamlessly replaces standard proximity cards for secure, hands-free entry</li><li>Comfortable, durable silicone material: available in 6”, 7”, and 8” sizes</li><li>Fast programming and fulfillment with Specialist ID’s UBand solution</li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_H6tjpx": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "shopify://products/spid-uband-proximity-silicone-wristband",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_nnBJ8z",
+        "text_gdYngp",
+        "button_H6tjpx"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/UBAND-BLACK-1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "image_with_text_3tkdN4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_VcwELh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Custom Printed Lanyards",
+            "heading_size": "h1"
+          }
+        },
+        "text_yL9jA6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Highlight your team branding while managing credentials with Specialist ID’s custom-printed sports lanyards, the go-to solution for stadium access, staff ID, and fan-facing activations. These high-quality lanyards are fully customizable with logos, team names, or sponsor messaging, making them ideal for staff, players, media, and fan-facing activations.</p><ul><li>Durable polyester material designed for all-day wear</li><li>Custom printing available in full color with multiple clip options</li><li>Great for sports teams, school athletics, esports, and race events</li><li>Bulk pricing available for large-scale games and tournaments<br/><br/></li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_dGGfgJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "https://www.specialistid.com/products/custom-printed-lanyards-online",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_VcwELh",
+        "text_yL9jA6",
+        "button_dGGfgJ"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Custom-Printed-Lanyards-SpecialistID.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "image_with_text_qpjgd4": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_GaHF3T": {
+          "type": "caption",
+          "settings": {
+            "caption": "#MAKEITEASY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_pUUNUz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_jU8YM4": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_cffDEW": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_GaHF3T",
+        "heading_pUUNUz",
+        "text_jU8YM4",
+        "button_cffDEW"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "newsletter_YihLyf": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_qf9GmN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Attached, Stay Connected with Specialist ID",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_8djeGE": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up and stay connected to receive news offers and exclusive discount codes.</p>"
+          }
+        },
+        "email_form_rzzYxz": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_qf9GmN",
+        "paragraph_8djeGE",
+        "email_form_rzzYxz"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "newsletter-section",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_bpwrwG",
+    "image_with_text_7iNgVj",
+    "image_with_text_wAkeBq",
+    "image_with_text_wxhCA9",
+    "image_with_text_3tkdN4",
+    "image_with_text_qpjgd4",
+    "newsletter_YihLyf"
+  ]
+}

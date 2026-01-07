@@ -1,0 +1,342 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_bpwrwG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7cYrkF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Secure Access Starts with the Right ID Solution",
+            "heading_size": "h1"
+          }
+        },
+        "text_7ATYnA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Shop high-security badge holders, ID card printers, and visitor management tools tailored for security professionals.</p>"
+          }
+        },
+        "button_CNVVKj": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Security Products",
+            "button_link": "/",
+            "button_style_secondary": false,
+            "button_label_2": "Get a Custom Quote",
+            "button_link_2": "shopify://pages/request-a-quote",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7cYrkF",
+        "text_7ATYnA",
+        "button_CNVVKj"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_product_showcase_ewxxaH": {
+      "type": "custom-product-showcase",
+      "blocks": {
+        "product_FgkQfd": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/2120-3325-1_7e8bed66-4743-41a3-a0db-0bbd3b7c43ea.jpg",
+            "title": "Heavy-duty badge reels",
+            "text": "<ul><li>Designed for durability in active duty environments: law enforcement, stadiums, event security, and military bases.<br/></li><li>Featuring reinforced vinyl straps, steel cables, and locking mechanisms.<br/></li><li>Ideal for securing security id cards, proximity badges, and HID access cards on the go.</li></ul>",
+            "link": "shopify://products/heavy-duty-badge-reel-with-chain-2120-3325",
+            "link_label": "Shop Heavy Duty"
+          }
+        },
+        "product_AqKDKi": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/AC-916-CLEAR-1.jpg",
+            "title": "RFID-blocking badge holders",
+            "text": "<ul><li>Prevents unauthorized scanning and protects sensitive data on HID security cards and smart IDs.<br/></li><li>Compliant with federal security standards for government and military applications.<br/></li><li>Lightweight yet resilient – perfect for both mobile and stationary personnel.</li></ul>",
+            "link": "shopify://collections/rfid-blocking-badge-holders",
+            "link_label": "Shop RFID Blocking"
+          }
+        },
+        "product_KeDLBn": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/SPIDPROX26H.png",
+            "title": "HID-compatible ID cards",
+            "text": "<ul><li>Fully compatible with HID access control systems and available in blank or custom-encoded formats.<br/></li><li>Excellent for use in door entry systems, secure workstations, and employee ID programs.<br/></li><li>Combine with RFID badge holders and tamper-proof holders for layered protection.</li></ul>",
+            "link": "shopify://products/spidprox26hc-hid-compatible-composite-iso-prox-cards-with-hico-magnetic-strip",
+            "link_label": "View Product"
+          }
+        },
+        "product_x9qQtB": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Custom_ID-Badge.webp",
+            "title": "Custom-printed access badges",
+            "text": "<ul><li>Full-color printed ID badges for staff, visitors, and contractors.<br/></li><li>Options include barcodes, QR codes, and magnetic stripe encoding.<br/></li><li>Supports high-security formats including smart cards and multi-factor credentials.</li></ul>",
+            "link": "shopify://products/custom-printed-photo-id-badge",
+            "link_label": "Customize it"
+          }
+        }
+      },
+      "block_order": [
+        "product_FgkQfd",
+        "product_AqKDKi",
+        "product_KeDLBn",
+        "product_x9qQtB"
+      ],
+      "name": "Product Showcase Section",
+      "settings": {
+        "title": "Top Picks for Your Security Needs"
+      }
+    },
+    "custom_printer_showcase_eiAzRb": {
+      "type": "custom-printer-showcase",
+      "name": "Card Printing Section",
+      "settings": {
+        "title": "Professional ID Card Printing for Security Teams",
+        "description": "Our high-performance ID printers are built for critical environments—ideal for producing HID security cards, RFID-enabled badges, and tamper-proof credentials. Trusted by security professionals, they deliver speed, reliability, and advanced protection.",
+        "feature1_symbol": "",
+        "feature1_title": "Custom Badge Printing",
+        "feature1_text": "Print staff IDs, contractor badges, and secure visitor passes with barcode, photo...",
+        "feature2_symbol": "",
+        "feature2_title": "High-Resolution Printing",
+        "feature2_text": "Sharp, professional-quality output with support for HID cards, barcodes, and photo ID—perfect for secure access control.",
+        "feature3_symbol": "",
+        "feature3_title": "Built-In Security Features",
+        "feature3_text": "Supports RFID, UV, and holographic elements to prevent duplication and enhance ID security.",
+        "feature4_symbol": "",
+        "feature4_title": "Rugged Card Durability",
+        "feature4_text": "Waterproof, fade-resistant cards designed for tough conditions and daily use.",
+        "visual_title": "Advanced Printing Technology",
+        "visual_text": "High-resolution printing with smart card encoding and badge authentication support ensures every security ID badge meets agency-level quality and compliance.",
+        "visual_cta_label": "Browse High-Security ID Printers",
+        "visual_cta_link": "shopify://collections/id-card-printers"
+      }
+    },
+    "custom_guidebook_showcase_BhWw6y": {
+      "type": "custom-guidebook-showcase",
+      "blocks": {
+        "feature_DQQ3xi": {
+          "type": "feature",
+          "settings": {
+            "feature": "Tamper-resistant ID solutions to help prevent counterfeiting, duplication, or misuse of security credentials."
+          }
+        },
+        "feature_MiaPBy": {
+          "type": "feature",
+          "settings": {
+            "feature": "Fast turnaround for bulk orders—perfect for deploying new security teams or expanding existing infrastructure quickly."
+          }
+        },
+        "feature_WMFBQp": {
+          "type": "feature",
+          "settings": {
+            "feature": "Custom printing and encoding available, including HID-compatible cards, proximity access badges, and magnetic stripe encoding."
+          }
+        },
+        "feature_QGmJkp": {
+          "type": "feature",
+          "settings": {
+            "feature": "Built with premium-grade materials to deliver superior durability and performance in mission-critical environments."
+          }
+        }
+      },
+      "block_order": [
+        "feature_DQQ3xi",
+        "feature_MiaPBy",
+        "feature_WMFBQp",
+        "feature_QGmJkp"
+      ],
+      "name": "Guidebook Showcase Section",
+      "settings": {
+        "title": "Why Security Professionals Choose Specialist ID",
+        "heading": "Engineered for Security, Designed for Durability",
+        "description": "From the front desk to high-security zones, Specialist ID delivers reliable ID security solutions built for law enforcement, federal agencies, healthcare, and private security teams. Our security badge holders, HID security cards, and RFID-blocking products meet the demands of professionals who need trusted ID security—online and on-site.",
+        "cta_label": "Download the Guidebook",
+        "cta_link": ""
+      }
+    },
+    "industries_8cJNff": {
+      "type": "industries",
+      "blocks": {
+        "industry_N4Dwbp": {
+          "type": "industry",
+          "settings": {
+            "title": "Access Control for Government & Military Sites",
+            "description": "<ul>\n<li>Ideal for use with HID security cards, blank security badges, and RFID badge holders.</li>\n<li>Supports high-security ID cards, tamper-proof ID badge holders, and multi-factor authentication.</li>\n<li>Trusted by federal agencies and military contractors.</li>\n</ul>"
+          }
+        },
+        "industry_4YczBh": {
+          "type": "industry",
+          "settings": {
+            "title": "Corporate Security Teams",
+            "description": "<ul>\n<li>Manage entry points with custom-printed ID badges and proximity access cards.</li>\n<li>Use retractable badge reels and ID security lanyards for efficient everyday use.</li>\n<li>Integrate with smart card systems and secure login protocols.</li>\n</ul>"
+          }
+        },
+        "industry_G8qDzY": {
+          "type": "industry",
+          "settings": {
+            "title": "Healthcare & Critical Infrastructure Security",
+            "description": "<ul>\n<li>Protect patient data and access zones using RFID-enabled ID cards and secure badge holders.</li>\n<li>Supports HIPAA-compliant badge solutions and role-based ID segmentation.</li>\n<li>Used in hospitals, labs, utilities, and data centers.</li>\n</ul>"
+          }
+        },
+        "industry_LVdkBx": {
+          "type": "industry",
+          "settings": {
+            "title": "Event Security Staff",
+            "description": "<ul>\n<li>Equip security teams with color-coded visitor badges and clip-on security passes.</li>\n<li>Enhance visual identification with custom event security lanyards and printed security IDs.</li>\n<li>Prevent unauthorized access using tamper-evident holders and event-specific badge designs.</li>\n</ul>"
+          }
+        }
+      },
+      "block_order": [
+        "industry_N4Dwbp",
+        "industry_4YczBh",
+        "industry_G8qDzY",
+        "industry_LVdkBx"
+      ],
+      "name": "Industries Grid",
+      "settings": {
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "heading": "Trusted by Security Teams Across Industries",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "mob_top_spacing": 40,
+        "mob_bottom_spacing": 40
+      }
+    },
+    "image_with_text_7iNgVj": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_6CCXhX": {
+          "type": "caption",
+          "settings": {
+            "caption": "#MAKEITEASY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_aTrDTW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_FANpQJ": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_dRjnVh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_6CCXhX",
+        "heading_aTrDTW",
+        "text_FANpQJ",
+        "button_dRjnVh"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "newsletter_YihLyf": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_qf9GmN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Attached, Stay Connected with Specialist ID",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_8djeGE": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up and stay connected to receive news offers and exclusive discount codes.</p>"
+          }
+        },
+        "email_form_rzzYxz": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_qf9GmN",
+        "paragraph_8djeGE",
+        "email_form_rzzYxz"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "newsletter-section",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_bpwrwG",
+    "custom_product_showcase_ewxxaH",
+    "custom_printer_showcase_eiAzRb",
+    "custom_guidebook_showcase_BhWw6y",
+    "industries_8cJNff",
+    "image_with_text_7iNgVj",
+    "newsletter_YihLyf"
+  ]
+}
