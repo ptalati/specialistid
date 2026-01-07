@@ -112,6 +112,158 @@
         "padding_bottom_mobile": 36
       }
     },
+    "image_with_text_RE7fhw": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_DB84qt": {
+          "type": "heading",
+          "settings": {
+            "heading": "Evolis Primacy 2",
+            "heading_size": "h1"
+          }
+        },
+        "text_aFE6RE": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Single-sided ID card printer for high-volume, detailed printing</li><li>Ideal for employee badges, student IDs, and access cards</li><li>Delivers fast, precise, and secure output</li><li>Compact and efficient design for professional environments</li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_m9Lwph": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "shopify://products/magicard-600-single-sided-id-card-printer-3652-5001",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_DB84qt",
+        "text_aFE6RE",
+        "button_m9Lwph"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "image_with_text_wPEnja": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_7nt9Xn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Magicard 300",
+            "heading_size": "h1"
+          }
+        },
+        "text_hRtx7G": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Prints secure, high-quality employee badges, student IDs, and access cards</li><li>Supports full-color and black & white printing with edge-to-edge dye sublimation</li><li>Sharp text and graphics with high-definition output</li><li>Fast printing: 160 color cards/hr, 720 monochrome cards/hr</li><li>Optional magnetic stripe, smart card, and contactless encoding (MIFARE, DESFire)</li><li>Digital shredding for secure data protection<br/><br/></li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_QPteFw": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "shopify://products/magicard-300-id-card-printer",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7nt9Xn",
+        "text_hRtx7G",
+        "button_QPteFw"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/magicard-300-id-card-printer-left.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "image_with_text_p9MFff": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_BDtUD4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Magicard 300",
+            "heading_size": "h1"
+          }
+        },
+        "text_4Y6m8V": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Prints secure, high-quality employee badges, student IDs, and access cards</li><li>Supports full-color and black & white printing with edge-to-edge dye sublimation</li><li>Sharp text and graphics with high-definition output</li><li>Fast printing: 160 color cards/hr, 720 monochrome cards/hr</li><li>Optional magnetic stripe, smart card, and contactless encoding (MIFARE, DESFire)</li><li>Digital shredding for secure data protection<br/><br/></li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_tJnRq6": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "shopify://products/magicard-300-id-card-printer",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_BDtUD4",
+        "text_4Y6m8V",
+        "button_tJnRq6"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/magicard-300-id-card-printer-left.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "rich_text_BPznLq": {
       "type": "rich-text",
       "blocks": {
@@ -258,6 +410,9 @@
     "main",
     "rich_text_bpwrwG",
     "image_with_text_qV4JeH",
+    "image_with_text_RE7fhw",
+    "image_with_text_wPEnja",
+    "image_with_text_p9MFff",
     "rich_text_BPznLq",
     "image_with_text_7iNgVj",
     "newsletter_YihLyf"
