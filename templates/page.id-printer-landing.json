@@ -168,14 +168,14 @@
         "heading_7nt9Xn": {
           "type": "heading",
           "settings": {
-            "heading": "Magicard 300",
+            "heading": "HID® FARGO® HDP5000e",
             "heading_size": "h1"
           }
         },
         "text_hRtx7G": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Prints secure, high-quality employee badges, student IDs, and access cards</li><li>Supports full-color and black & white printing with edge-to-edge dye sublimation</li><li>Sharp text and graphics with high-definition output</li><li>Fast printing: 160 color cards/hr, 720 monochrome cards/hr</li><li>Optional magnetic stripe, smart card, and contactless encoding (MIFARE, DESFire)</li><li>Digital shredding for secure data protection<br/><br/></li></ul>",
+            "text": "<ul><li>High-definition single-sided ID card printer for professional use</li><li>Uses 7th-gen retransfer technology for vibrant, edge-to-edge printing</li><li>Produces sharp text and images with premium quality</li><li>SmartScreen™ interface for easy setup, use, and maintenance</li></ul>",
             "text_style": "body"
           }
         },
@@ -183,7 +183,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop now",
-            "button_link": "shopify://products/magicard-300-id-card-printer",
+            "button_link": "shopify://products/magicard-pronto-100-id-card-printer",
             "button_style_secondary": false
           }
         }
@@ -195,7 +195,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/magicard-300-id-card-printer-left.webp",
+        "image": "shopify://shop_images/fargo-hdp5000e-dual-sided-printer-left.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
