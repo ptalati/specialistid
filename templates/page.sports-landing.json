@@ -112,6 +112,57 @@
         "padding_bottom_mobile": 36
       }
     },
+    "image_with_text_wAkeBq": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_k86p3W": {
+          "type": "heading",
+          "settings": {
+            "heading": "Custom-Printed Event Badges",
+            "heading_size": "h1"
+          }
+        },
+        "text_P3Q73L": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Design full-color credentials with Specialist ID's custom event badges, ideal for tournaments, VIP access, and official team operations. These laminated passes work with vertical badge holders and clip securely to lanyards or badge reels.</p><ul><li>Custom 3\" x 5\" laminated Specialist ID event badges</li><li>Printed on both sides with your custom design—no setup fees required</li><li>Made from a durable 30mil synthetic substrate, laminated on both sides for lasting strength</li><li>Dual slot punches for double-ended lanyard attachment and secure wear</li><li>Precision flush die-cut edges for a sleek, professional look</li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_nChJ4p": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "#",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_k86p3W",
+        "text_P3Q73L",
+        "button_nChJ4p"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/CustomEventBadge.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "image_with_text_qpjgd4": {
       "type": "image-with-text",
       "blocks": {
@@ -214,6 +265,7 @@
     "main",
     "rich_text_bpwrwG",
     "image_with_text_7iNgVj",
+    "image_with_text_wAkeBq",
     "image_with_text_qpjgd4",
     "newsletter_YihLyf"
   ]
