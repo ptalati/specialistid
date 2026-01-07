@@ -163,6 +163,57 @@
         "padding_bottom_mobile": 36
       }
     },
+    "image_with_text_wxhCA9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nnBJ8z": {
+          "type": "heading",
+          "settings": {
+            "heading": "SPID UBand Proximity Silicone Wristband",
+            "heading_size": "h1"
+          }
+        },
+        "text_gdYngp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This RFID wristband from Specialist ID offers fast, waterproof, and contactless access for players, staff, and VIPs. Replace proximity cards with SPID UBand for secure entry at high-traffic sports venues.</p><ul><li>Wearable access control wristband with built-in 125 kHz proximity chip</li><li>Seamlessly replaces standard proximity cards for secure, hands-free entry</li><li>Comfortable, durable silicone material: available in 6”, 7”, and 8” sizes</li><li>Fast programming and fulfillment with Specialist ID’s UBand solution</li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_H6tjpx": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "shopify://products/spid-uband-proximity-silicone-wristband",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_nnBJ8z",
+        "text_gdYngp",
+        "button_H6tjpx"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/UBAND-BLACK-1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "image_with_text_qpjgd4": {
       "type": "image-with-text",
       "blocks": {
@@ -266,6 +317,7 @@
     "rich_text_bpwrwG",
     "image_with_text_7iNgVj",
     "image_with_text_wAkeBq",
+    "image_with_text_wxhCA9",
     "image_with_text_qpjgd4",
     "newsletter_YihLyf"
   ]
