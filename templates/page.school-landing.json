@@ -140,41 +140,34 @@
         "feature_DQQ3xi": {
           "type": "feature",
           "settings": {
-            "feature": "Print durable, hospital-grade ID cards on demand"
+            "feature": "Evaluating your options"
           }
         },
         "feature_MiaPBy": {
           "type": "feature",
           "settings": {
-            "feature": "Ideal for staff onboarding, temporary access, and patient-facing roles"
+            "feature": "Reordering made easy"
           }
         },
         "feature_WMFBQp": {
           "type": "feature",
           "settings": {
-            "feature": "Compatible with badge holders, clips, and visitor management systems"
-          }
-        },
-        "feature_h3igjj": {
-          "type": "feature",
-          "settings": {
-            "feature": "Supports healthcare ID badge printing with optional encoding and security features"
+            "feature": "Vendor comparision"
           }
         }
       },
       "block_order": [
         "feature_DQQ3xi",
         "feature_MiaPBy",
-        "feature_WMFBQp",
-        "feature_h3igjj"
+        "feature_WMFBQp"
       ],
       "name": "Guidebook Showcase Section",
       "settings": {
-        "title": "ID Printers for Healthcare Facilities",
-        "heading": "Streamline your identification process with professional-grade ID card printers built for hospitals, clinics, and medical offices. Whether you’re issuing custom nurse ID badges, doctor credentials, or visitor passes, our printers offer fast, high-resolution printing that keeps up with your workflow.",
-        "description": "",
-        "cta_label": "Explore Healthcare ID Printers",
-        "cta_link": "shopify://collections/id-card-printers"
+        "title": "Free Guidebook: Master School ID Solutions",
+        "heading": "Everything You Need to Know About School ID Implementation",
+        "description": "This comprehensive guidebook walks you through the best practices for implementing ID badge programs in educational institutions. Learn about material selection, security features, student/staff onboarding, and cost-saving tips.",
+        "cta_label": "Consult the guide",
+        "cta_link": "shopify://pages/the-ultimate-school-id-purchasing-guide-simple-steps-to-get-started"
       }
     },
     "rich_text_BPznLq": {
