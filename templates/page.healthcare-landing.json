@@ -23,24 +23,24 @@
         "heading_7cYrkF": {
           "type": "heading",
           "settings": {
-            "heading": "Trusted Government ID Solutions — Secure, Compliant & Reliable",
+            "heading": "Secure, Stylish & Functional ID Solutions for Healthcare Professionals",
             "heading_size": "h1"
           }
         },
         "text_7ATYnA": {
           "type": "text",
           "settings": {
-            "text": "<p>Equip your agency with government-issued ID card solutions, badge holders, ID reels, lanyards, and visitor management systems.</p>"
+            "text": "<p>Explore our trusted collection of medical badges, nurse ID holders, and hospital ID accessories—designed with care for the people who care.</p>"
           }
         },
         "button_CNVVKj": {
           "type": "button",
           "settings": {
-            "button_label": "Get a Quote for Your Agency",
-            "button_link": "shopify://pages/request-a-quote",
+            "button_label": "Shop Healthcare ID Supplies",
+            "button_link": "shopify://collections/healthcare",
             "button_style_secondary": false,
-            "button_label_2": "Browse Government-Ready ID Supplies",
-            "button_link_2": "shopify://collections/government",
+            "button_label_2": "Request Bulk Quote",
+            "button_link_2": "shopify://pages/request-a-quote",
             "button_style_secondary_2": false
           }
         }
@@ -67,8 +67,8 @@
         "column_iPmCMc": {
           "type": "column",
           "settings": {
-            "title": "GSA-approved and compliant solutions",
-            "text": "<p>Our government security badge<strong> </strong>products meet the strictest federal compliance standards, including FIPS 201 and HSPD-12, ensuring you're covered for any credentialing need.</p>",
+            "title": "Badge Buddies for Nurses",
+            "text": "<p>Discover top-quality badges for nurses and medical badge solutions designed for long shifts, quick access, and all-day wear. Trusted by frontline heroes in hospitals and clinics nationwide</p>",
             "link_label": "",
             "link": ""
           }
@@ -76,8 +76,8 @@
         "column_FkcnyQ": {
           "type": "column",
           "settings": {
-            "title": "Experience serving federal, state, and municipal agencies",
-            "text": "<p>With decades of experience, we’ve delivered government credentials<strong> </strong>to agencies at every level — from city offices to large federal departments.</p>",
+            "title": "Doctor Badge Holders",
+            "text": "<p>Sleek, professional, and built for daily rounds, our doctor badge holders combine function with form—perfect for physicians, surgeons, and specialists who need secure and easy-to-display credentials.</p>",
             "link_label": "",
             "link": ""
           }
@@ -85,8 +85,17 @@
         "column_G3cdgb": {
           "type": "column",
           "settings": {
-            "title": "Fast & Scalable Fulfillment",
-            "text": "<p>Specialist ID offers bulk order support, quick turnaround, and tailored logistics — ideal for urgent requests or nationwide badge distribution.</p>",
+            "title": "Veterinarian ID Reels",
+            "text": "<p>Keep your ID visible and your hands free with rugged veterinarian badge reels, ideal for busy animal care environments. Durable construction for vets, techs, and support staff in fast-paced clinics.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ULM69W": {
+          "type": "column",
+          "settings": {
+            "title": "Registered Nurse Badge Clips",
+            "text": "<p>From ER to ICU, our registered nurse badge clips are designed to stay put and stay clean. Lightweight and dependable options tailored for nursing teams on the move.</p>",
             "link_label": "",
             "link": ""
           }
@@ -95,17 +104,18 @@
       "block_order": [
         "column_iPmCMc",
         "column_FkcnyQ",
-        "column_G3cdgb"
+        "column_G3cdgb",
+        "column_ULM69W"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Why Government Agencies Trust Specialist ID",
+        "title": "Most Popular Healthcare ID Supplies",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_alignment": "left",
         "background_style": "primary",
         "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
@@ -124,21 +134,21 @@
         "product_FgkQfd": {
           "type": "product",
           "settings": {
-            "image": "shopify://shop_images/magicard-300-id-card-printer-left.webp",
-            "title": "Government ID Cards & Printers",
-            "text": "<p>Produce official credentials with reliable in-house printing solutions tailored for government use:</p><ul><li>Create secure government ID cards on demand<br/></li><li>FIPS and HSPD-12 compliant hardware<br/></li><li>Dual-sided printers with smart card encoding<br/></li><li>Supports high-volume agency requirements</li></ul>",
-            "link": "shopify://collections/id-card-printers",
-            "link_label": "Shop our Printers"
+            "image": "shopify://shop_images/BB-1XL-DOCTOR-BLUE-V-FRONT_ea9a3583-acde-4373-bb9a-3d3569949237.png",
+            "title": "Extra Large Doctor Badge Buddy – Vertical",
+            "text": "<ul><li>This doctor badge is oversized to provide instant role visibility in high-traffic healthcare settings.<br/></li><li>It fits behind any standard vertical ID, eliminating the need for slot punching.<br/></li><li>Printed on both sides, this badge buddy ensures your credentials are always visible—no matter how it flips.<br/></li><li>Built with durable materials to last through long hospital shifts and rounds.</li></ul>",
+            "link": "shopify://products/extra-large-doctor-badge-buddy-vertical-oversized-doctor-badge-buddies",
+            "link_label": "Shop now"
           }
         },
         "product_AqKDKi": {
           "type": "product",
           "settings": {
-            "image": "shopify://shop_images/2120-762X_2.jpg",
-            "title": "Badge Holders & ID Reels",
-            "text": "<p>Keep IDs secure, accessible, and visible with rugged accessories:</p><ul><li>Durable government <a href=\"/collections/id-badge-holders\" title=\"ID Badge Holders\">badge holders</a> for daily use<br/></li><li>Gov badge reels with retractable cords and clip options<br/></li><li>Designed for scanners and controlled entry points<br/></li><li>Reduces card damage and increases display efficiency</li></ul>",
-            "link": "shopify://collections/badge-reels",
-            "link_label": "Shop our badge reels"
+            "image": "shopify://shop_images/SPID-3380-RN-BLUE-badge-buddy-reel-hero.png",
+            "title": "RN Badge Buddy Reel with Swivel Spring Clip",
+            "text": "<ul><li>Our badges for nurses combine a retractable reel with a printed badge buddy for all-in-one convenience.<br/></li><li>The swivel spring clip makes it easy to attach the badge to scrubs, collars, or belts.<br/></li><li>Tested for thousands of pulls, this nurse badge accessory is built to perform under pressure.<br/></li><li>Ideal for nurses needing rapid ID access without sacrificing durability or style.</li></ul>",
+            "link": "shopify://products/rn-badge-buddy-reel-with-swivel-spring-clip-badge-buddy-and-retractable-reel-in-one",
+            "link_label": "Shop now"
           }
         },
         "product_bKNKBV": {
@@ -170,7 +180,7 @@
       ],
       "name": "Product Showcase Section",
       "settings": {
-        "title": "Explore Our ID Solutions for Government Use"
+        "title": "Tailored ID Supplies for Every Medical Role"
       }
     },
     "custom_printer_showcase_eiAzRb": {
