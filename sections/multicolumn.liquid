@@ -22,23 +22,26 @@
   }
 
   .copy-button {
-    background: #18181b;
-    color: white;
-    border: none;
+    background-color: rgb(var(--color-button));
+    color: rgb(var(--color-button-text));
+    border: 0.1rem solid rgba(var(--color-button), var(--alpha-button-border));
     padding: 0.25rem 0.75rem;
-    border-radius: 4px;
+    border-radius: var(--buttons-radius);
     cursor: pointer;
     font-size: 0.875rem;
     font-weight: 500;
-    transition: background 0.2s;
+    transition: box-shadow var(--duration-short) ease;
+    box-shadow: rgba(var(--color-button), var(--alpha-button-border)) 0 0 0 0.1rem, rgba(var(--color-shadow), 0.05) 0 0.1rem 0 0.1rem;
   }
 
   .copy-button:hover {
-    background: #27272a;
+    box-shadow: rgba(var(--color-button), var(--alpha-button-border)) 0 0 0 0.2rem, rgba(var(--color-shadow), 0.15) 0 0.2rem 0 0.2rem;
   }
 
   .copy-button.copied {
-    background: #16a34a;
+    background-color: #16a34a;
+    color: white;
+    border-color: #16a34a;
   }
 {%- endstyle -%}
 
