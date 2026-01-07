@@ -298,60 +298,30 @@
         "visual_cta_link": "shopify://collections/custom-printed-products"
       }
     },
-    "featured_collection_8EC68i": {
-      "type": "featured-collection",
-      "disabled": true,
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "collection": "events",
-        "products_to_show": 4,
-        "title": "Top Event Management ID Gear",
-        "heading_size": "h1",
-        "description": "<p>Streamline access control for events with professional-grade ID gear. From all access event credentials and custom printed badges to RFID-compatible badge reels and branded lanyards, our solutions are trusted by top event managers for secure, organized, and professional check-ins.</p>",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "rich_text_BPznLq": {
       "type": "rich-text",
       "blocks": {
         "heading_UaP7XP": {
           "type": "heading",
           "settings": {
-            "heading": "Procurement Made Simple",
+            "heading": "Procurement-Friendly. Volume Discounts Available.",
             "heading_size": "h1"
           }
         },
         "text_9nTUEN": {
           "type": "text",
           "settings": {
-            "text": "<p>We understand the complexities of government procurement — that’s why we’ve built our process to be fast, compliant, and easy to navigate.</p><ul><li>Streamlined bulk order processing for high-volume government ID supplies<br/></li><li>We accept P-Cards, Purchase Orders, and are registered under GSA Schedule contracts<br/></li><li>Dedicated account representatives experienced in agency procurement workflows<br/></li><li>Ideal for outfitting departments with federal ID badges or upgrading site-wide government access badge systems<br/><br/>Whether you're outfitting 50 or 5,000 staff members, our team ensures smooth fulfillment with the compliance documentation and support your agency needs.</li></ul>"
+            "text": "<p>Whether you manage sourcing for a multi-facility hospital system or a single private clinic, we simplify your buying process. Our team specializes in healthcare ID supplies bulk orders—with contract-friendly pricing, responsive support, and fast delivery nationwide.</p><ul><li>Access wholesale pricing on hospital ID accessories, badge reels, holders, and more.<br/></li><li>Work with dedicated account reps who understand healthcare procurement workflows.<br/></li><li>Expedite large-volume shipments for onboarding, compliance upgrades, or facility-wide rollouts.<br/></li><li>Choose from pre-approved items or request a custom bulk quote tailored to your organization.</li></ul>"
           }
         },
         "button_QHRFQj": {
           "type": "button",
           "settings": {
-            "button_label": "Request Government Pricing",
-            "button_link": "shopify://pages/request-a-quote",
+            "button_label": "Get a sample",
+            "button_link": "shopify://pages/sample-request",
             "button_style_secondary": false,
-            "button_label_2": "Talk to a Procurement Expert",
-            "button_link_2": "shopify://pages/contact-us",
+            "button_label_2": "Request a quote",
+            "button_link_2": "shopify://pages/request-a-quote",
             "button_style_secondary_2": false
           }
         }
@@ -478,7 +448,6 @@
     "industries_EWbVWW",
     "custom_guidebook_showcase_BhWw6y",
     "custom_printer_showcase_eiAzRb",
-    "featured_collection_8EC68i",
     "rich_text_BPznLq",
     "image_with_text_7iNgVj",
     "newsletter_YihLyf"
