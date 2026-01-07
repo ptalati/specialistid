@@ -113,10 +113,76 @@
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
-        "color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
         "section_css_class": "Type your own CSS class",
         "padding_top": 36,
         "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "featured_collection_grrU9p": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "our-best-sellers",
+        "products_to_show": 4,
+        "title": "Best sellers",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "newsletter_MzUPpd": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_yBEene": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Attached, Stay Connected",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_DdUCn9": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up and stay connected to receive news offers and exclusive discount codes.</p>"
+          }
+        },
+        "email_form_xjMAyj": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_yBEene",
+        "paragraph_DdUCn9",
+        "email_form_xjMAyj"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "newsletter-section",
+        "padding_top": 80,
+        "padding_bottom": 80,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36
       }
@@ -125,6 +191,8 @@
   "order": [
     "main",
     "rich_text_YgLRLd",
-    "image_with_text_4cXtDN"
+    "image_with_text_4cXtDN",
+    "featured_collection_grrU9p",
+    "newsletter_MzUPpd"
   ]
 }
