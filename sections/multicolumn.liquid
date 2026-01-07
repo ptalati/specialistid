@@ -13,6 +13,33 @@
       padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
     }
   }
+
+  /* Copy to clipboard button styles */
+  .copy-to-clipboard-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .copy-button {
+    background: #18181b;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+
+  .copy-button:hover {
+    background: #27272a;
+  }
+
+  .copy-button.copied {
+    background: #16a34a;
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -76,6 +103,9 @@
             {% endif %}
           >
             
+            {%- if block.settings.wrapper_class != blank -%}
+              <div class="{{ block.settings.wrapper_class }}">
+            {%- endif -%}
             <div class="multicolumn-card content-container">
                 {%- if block.settings.image != blank -%}
                   {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
@@ -121,7 +151,14 @@
                 {%- endif -%}
                 <div class="multicolumn-card__info">
                   {%- if block.settings.title != blank -%}
-                    <h3 class="inline-richtext">{{ block.settings.title }}</h3>
+                    {%- if block.settings.enable_copy_button -%}
+                      <div class="copy-to-clipboard-wrapper">
+                        <h3 class="inline-richtext" id="copy-text-{{ section.id }}-{{ forloop.index }}">{{ block.settings.title }}</h3>
+                        <button class="copy-button" onclick="copyToClipboard('copy-text-{{ section.id }}-{{ forloop.index }}', this)">Copy</button>
+                      </div>
+                    {%- else -%}
+                      <h3 class="inline-richtext">{{ block.settings.title }}</h3>
+                    {%- endif -%}
                   {%- endif -%}
                   {%- if block.settings.text != blank -%}
                     <div class="rte">{{ block.settings.text }}</div>
@@ -140,6 +177,9 @@
                   {%- endif -%}
                 </div>
             </div>
+            {%- if block.settings.wrapper_class != blank -%}
+              </div>
+            {%- endif -%}
           </li>
         {%- endfor -%}
       </ul>
@@ -187,6 +227,26 @@
     </div>
   </div>
 </div>
+
+<script>
+function copyToClipboard(elementId, button) {
+  const element = document.getElementById(elementId);
+  const text = element.innerText || element.textContent;
+
+  navigator.clipboard.writeText(text).then(function() {
+    const originalText = button.textContent;
+    button.textContent = 'Copied!';
+    button.classList.add('copied');
+
+    setTimeout(function() {
+      button.textContent = originalText;
+      button.classList.remove('copied');
+    }, 2000);
+  }).catch(function(err) {
+    console.error('Failed to copy text: ', err);
+  });
+}
+</script>
 
 {% schema %}
 {
@@ -429,6 +489,12 @@
       "name": "t:sections.multicolumn.blocks.column.name",
       "settings": [
         {
+          "type": "text",
+          "id": "wrapper_class",
+          "label": "Wrapper CSS Class",
+          "info": "Add a custom CSS class to wrap the column content"
+        },
+        {
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.multicolumn.blocks.column.settings.image.label"
@@ -438,6 +504,13 @@
           "id": "title",
           "default": "t:sections.multicolumn.blocks.column.settings.title.default",
           "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_copy_button",
+          "label": "Enable Copy Button",
+          "info": "Show a copy button next to the heading",
+          "default": false
         },
         {
           "type": "richtext",
