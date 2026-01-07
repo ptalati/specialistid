@@ -1,0 +1,296 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_BPznLq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UaP7XP": {
+          "type": "heading",
+          "settings": {
+            "heading": "ID Badge Accessories Buying Guide for Government Agencies",
+            "heading_size": "h1"
+          }
+        },
+        "caption_j8ndmz": {
+          "type": "caption",
+          "settings": {
+            "caption": "Welcome!",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "text_9nTUEN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you’ve been assigned the task of sourcing ID badge accessories, it likely falls somewhere below “urgent security needs” and “federal procurement regulations” on your priority list. That’s where we come in — to help make this process painless, compliant, and low-maintenance.</p><p>Whether you’re sourcing for a city office, federal agency, emergency response team, or a correctional facility, this guide is designed to support your procurement workflow from start to finish.</p><p>We aim to be the easiest vendor you deal with all year.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UaP7XP",
+        "caption_j8ndmz",
+        "text_9nTUEN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_guidebook_glossary_gxALpH": {
+      "type": "custom-guidebook-glossary",
+      "blocks": {
+        "section_RXkTeG": {
+          "type": "section",
+          "settings": {
+            "title": "1. Getting Started: Vendor Setup & Compliance",
+            "content": "<p>Most government entities require formal vendor registration and documentation. We're ready for that.</p><p><strong>We’re Gov-Ready</strong></p><ul><li>W-9 on file</li><li>SAM Registered (System for Award Management)</li><li>DUNS & CAGE codes available</li><li>Accepts Government P-Cards</li><li>NAICS: 339999 / 561499 (common for badge supplies)</li><li>Form 889 (Either on file or happy to sign a new copy)</li><li>TAA-compliant products available</li><li>US-based company (Florida HQ)<br/></li></ul><p><strong>What We Need From You</strong></p><ul><li>Agency/Department Name</li><li>Point of Contact (Name, Email, Phone)</li><li>Billing & Shipping Info</li><li>Tax-Exempt [not necessary for military bases] or Procurement ID</li><li>Required government documentation<br/><br/></li></ul><p>Email forms to: sales@specialistid.com<br/> Subject: Vendor Application – [Your Agency Name]</p>"
+          }
+        },
+        "section_yaacPi": {
+          "type": "section",
+          "settings": {
+            "title": "2. Samples & Customization Options",
+            "content": "<p><strong>Free Samples</strong></p><p>Evaluate the durability, feel, and functionality of our badge holders, lanyards, reels, or card sleeves before you commit.</p><p><strong>Custom Branding Options</strong></p><p>Need your department’s seal or a clearance-coded badge reel? We provide:</p><ul><li>Digital mock-ups within 24–48 hours</li><li>Physical samples in 2–4 days if requested</li><li>Custom production timelines:</li><li>Lanyards: 10–14 business days</li><li>Badge reels: 3–5 business days</li></ul>"
+          }
+        },
+        "section_rfNrQq": {
+          "type": "section",
+          "settings": {
+            "title": "3. Fast, Clear Quotes",
+            "content": "<p><strong>What You Get</strong></p><ul><li>Transparent pricing (no hidden fees)</li><li>All-in delivery cost included</li><li>Accurate delivery estimates</li><li>PDF quotes for documentation</li><li>Responses within hours — not days<br/></li></ul><p><strong>What to Send Us</strong></p><ul><li>SKUs or item names</li><li>Quantity</li><li>Any custom details or artwork</li></ul>"
+          }
+        },
+        "section_jTQDq3": {
+          "type": "section",
+          "settings": {
+            "title": "4. Placing Your Order",
+            "content": "<p><strong>Order Methods</strong></p><ul><li>Email: sales@specialistid.com</li><li>Phone: 888-559-1940 (Sales)</li><li>Online:<a href=\"http://www.specialistid.com\"> <span style=\"text-decoration:underline\">www.specialistid.com</span></a></li><li>Purchase Orders: Send by email<br/></li></ul><p><strong>Shipping Expectations</strong></p><ul><li>In-stock items: Usually ship same day if ordered before 12 PM EST</li><li>Custom orders: Confirmed with production timelines</li></ul><p>Carriers: FedEx, UPS, USPS, DHL</p>"
+          }
+        },
+        "section_t797Kn": {
+          "type": "section",
+          "settings": {
+            "title": "5. Payment, Invoicing & Tax-Free Purchasing",
+            "content": "<p><strong>Accepted Payment Methods</strong></p><ul><li>Net 30 Terms</li><li>ACH / EFT Transfers</li><li>Government P-Cards (Federal & State accepted)</li><li>Credit Cards via secure link<br/></li></ul><p><strong>Tax-Exempt Orders</strong></p><ul><li>Upload exemption certificate during checkout</li><li>Or email to your rep</li><li>Invoice will reflect $0.00 tax</li></ul>"
+          }
+        },
+        "section_KeRMiV": {
+          "type": "section",
+          "settings": {
+            "title": "6. Reorders & Long-Term Planning",
+            "content": "<p><strong>Easy Reordering</strong></p><ul><li>Reorder from your online account</li><li>Contact us with your agency name — we’ll look up past orders</li><li>If you're new or taking over, send us a photo or invoice — we’ll handle the rest<br/></li></ul><p><strong>Planning Ahead</strong></p><ul><li>We support fiscal year budgeting</li><li>Can hold pricing or stock based on forecasted need</li><li>Multi-agency or multi-location coordination available</li></ul>"
+          }
+        },
+        "section_M4nGHQ": {
+          "type": "section",
+          "settings": {
+            "title": "7. Vendor Evaluation & Justification Tips",
+            "content": "<p><strong>What Really Matters</strong></p><ol><li>Total Cost — Watch for setup or shipping fees</li><li>Delivery Reliability — Get real timeline estimates</li><li>Support Access — Can you reach a human fast?</li><li>Future-Proofing — Can someone else reorder next year?<br/></li></ol><p><strong>Questions to Ask All Vendors</strong></p><ul><li>What’s the total delivered cost (including shipping)?</li><li>What’s your realistic delivery timeline?</li><li>Who do I contact if something goes wrong?</li><li>How simple is the reorder process?</li></ul>"
+          }
+        },
+        "section_idTQbP": {
+          "type": "section",
+          "settings": {
+            "title": "8. Compliance Flags: What to Watch For",
+            "content": "<p><strong>Red Flags</strong></p><ul><li>Unclear contact methods</li><li>Vague shipping timelines</li><li>No experience with government processes</li><li>Fine print fees added at checkout<br/></li></ul><p><strong>Green Flags</strong></p><ul><li>Experience with government clients</li><li>Clear quotes and fast response times</li><li>Documented return/warranty process</li></ul><p>Secure shipment options</p>"
+          }
+        },
+        "section_fxV7Tp": {
+          "type": "section",
+          "settings": {
+            "title": "9. Quick Procurement Checklist",
+            "content": "<ul><li>Received samples (if applicable)</li><li>Vendor W-9 on file</li><li>P-Card or PO ready</li><li>Quote received and documented</li><li>Tax-exempt certificate submitted</li><li>Custom mock-up approved (if needed)</li><li>Timeline confirmed</li><li>Order placed</li></ul>"
+          }
+        },
+        "section_YepAxa": {
+          "type": "section",
+          "settings": {
+            "title": "10. Glossary",
+            "content": "<p><strong>SKU</strong> – Product code used to ensure accurate ordering</p><p><strong>PO</strong> – Purchase Order, official document for purchases</p><p><strong>Net 30</strong> – Payment due 30 days after invoice</p><p><strong>W-9</strong> – IRS tax form for vendor compliance</p><p><strong>SAM</strong> – Federal vendor registration system</p><p><strong>TAA Compliant</strong> – Meets Trade Agreements Act standards</p><p><strong>NAICS Code</strong> – Classification code for government procurement</p><p><strong>CAGE Code</strong> – Vendor ID for federal procurement systems<br/><br/><br/><br/></p>"
+          }
+        },
+        "section_gL4r6e": {
+          "type": "section",
+          "settings": {
+            "title": "11. Contact Information",
+            "content": "<p><strong>Sales & Vendor Setup</strong><br/> Email: <a href=\"mailto:sales@specialistid.com\" title=\"mailto:sales@specialistid.com\">sales@specialistid.com</a><br/> Phone: <a href=\"tel:888-559-1940\" title=\"tel:888-559-1940\">888-559-1940</a><br/><strong>Customer Support & Reorders</strong><br/> Email: <a href=\"mailto:support@specialistid.com\" title=\"mailto:support@specialistid.com\">support@specialistid.com</a><br/> Phone: <a href=\"tel:800-380-6726\" title=\"tel:800-380-6726\">800-380-6726</a><br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "section_RXkTeG",
+        "section_yaacPi",
+        "section_rfNrQq",
+        "section_jTQDq3",
+        "section_t797Kn",
+        "section_KeRMiV",
+        "section_M4nGHQ",
+        "section_idTQbP",
+        "section_fxV7Tp",
+        "section_YepAxa",
+        "section_gL4r6e"
+      ],
+      "name": "Guidebook Glossary Section",
+      "settings": {}
+    },
+    "rich_text_CDPUt9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WGtrrJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Commitment to Government Buyers",
+            "heading_size": "h1"
+          }
+        },
+        "text_xLdDRG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We understand your purchasing process isn’t just about getting products — it’s about accountability, clarity, and compliance. We provide the documentation you need, the transparency you expect, and the service you deserve.</p><p>Let us take badge accessories off your worry list.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WGtrrJ",
+        "text_xLdDRG"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_7iNgVj": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_6CCXhX": {
+          "type": "caption",
+          "settings": {
+            "caption": "#MAKEITEASY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_aTrDTW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_FANpQJ": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_dRjnVh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_6CCXhX",
+        "heading_aTrDTW",
+        "text_FANpQJ",
+        "button_dRjnVh"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "newsletter_YihLyf": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_qf9GmN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Attached, Stay Connected with Specialist ID",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_8djeGE": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up and stay connected to receive news offers and exclusive discount codes.</p>"
+          }
+        },
+        "email_form_rzzYxz": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_qf9GmN",
+        "paragraph_8djeGE",
+        "email_form_rzzYxz"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "newsletter-section",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_BPznLq",
+    "custom_guidebook_glossary_gxALpH",
+    "rich_text_CDPUt9",
+    "image_with_text_7iNgVj",
+    "newsletter_YihLyf"
+  ]
+}

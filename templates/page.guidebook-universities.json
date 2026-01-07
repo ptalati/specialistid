@@ -1,0 +1,263 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_BPznLq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UaP7XP": {
+          "type": "heading",
+          "settings": {
+            "heading": "ID Badge Accessories Buying Guide for Universities",
+            "heading_size": "h1"
+          }
+        },
+        "caption_j8ndmz": {
+          "type": "caption",
+          "settings": {
+            "caption": "Welcome, Higher Ed Heroes!",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "text_9nTUEN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you’re in operations, procurement, housing, IT, admissions, marketing, sports or just got “voluntold” to manage ID accessories for campus events—this guide is for you.</p><p>We know ordering badge reels, holders, and lanyards isn't glamorous. But when thousands of students, faculty, and staff need visible, durable IDs, getting this right matters. That’s why we created this guide—to make your job easier, your process smoother, and your choice defensible (without needing a committee).</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UaP7XP",
+        "caption_j8ndmz",
+        "text_9nTUEN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_guidebook_glossary_gxALpH": {
+      "type": "custom-guidebook-glossary",
+      "blocks": {
+        "section_RXkTeG": {
+          "type": "section",
+          "settings": {
+            "title": "1. Getting Started: Vendor Setup & University Procurement",
+            "content": "<p><strong>Need vendor approval? We’re ready.<br/></strong> We work with procurement offices at universities nationwide. We’re familiar with systems like Jaggaer, Coupa, Unimarket, Transcepta and more.</p><p><strong>We’ll gladly complete:</strong></p><ul><li>Vendor applications</li><li>ACH/W-9 documentation</li><li>Internal vendor portal registrations<br/></li></ul><p><strong>What we need from you:</strong></p><ul><li>University/Department Name</li><li>Contact Person (Email + Phone)</li><li>Shipping & Billing Addresses (multi-campus is fine!)</li><li>Tax-Exempt Certificate</li><li>Procurement codes (FOAPAL, Chart of Accounts, etc.)<br/></li></ul><p><strong>Accepted Payment Methods:</strong></p><ul><li>Credit Card (secure emailed link)</li><li>ACH or Check (cleared before shipping)</li><li>Purchase Orders via email or procurement portal</li><li>Extended terms on approval </li></ul>"
+          }
+        },
+        "section_yaacPi": {
+          "type": "section",
+          "settings": {
+            "title": "2. Samples, Mock-ups & Customization",
+            "content": "<p><strong>Try before you commit.<br/></strong> Want to see a lanyard or badge reel before buying for the incoming class or faculty onboarding? No problem.</p><ul><li><strong>Free Samples:</strong> Available for most items—request online</li><li><strong>Mock-Ups:</strong> Add your school crest, department name, or event branding</li><li><strong>Pantone Matching:</strong> We’ll follow your university brand guidelines precisely</li></ul><p><strong>Eco Options Available:</strong> Ask us about biodegradable or recycled-material lanyards if sustainability is part of your campus mandate.<br/><br/></p>"
+          }
+        },
+        "section_rfNrQq": {
+          "type": "section",
+          "settings": {
+            "title": "3. Quotes: Fast, Clear, Transparent",
+            "content": "<p>We know your time is tight. Our quotes include:</p><ul><li>Clear product descriptions</li><li>Total delivered cost (including shipping)</li><li>Itemized pricing for transparency</li><li>Estimated delivery timelines (not wishful thinking)</li></ul><p><strong>Turnaround Time:</strong></p><ul><li>Standard items: ~60 minutes</li><li>Custom items: ~24 hours</li></ul>"
+          }
+        },
+        "section_jTQDq3": {
+          "type": "section",
+          "settings": {
+            "title": "4. Ordering: How & When",
+            "content": "<p>Order the way that works for you:</p><ul><li>Phone: 888-559-1940</li><li>Email: sales@specialistid.com</li><li>Website:<a href=\"http://www.specialistid.com\"> <span style=\"text-decoration:underline\">www.specialistid.com</span></a></li><li>Upload your PO through your university portal or email</li></ul><p><strong>Timeline Expectations:</strong></p><ul><li><strong>In-Stock:</strong> Ships same day if ordered by 12 PM EST</li><li><strong>Custom Lanyards:</strong> 10–14 business days</li><li><strong>Custom Badge Reels/Holders:</strong> 3–5 business days</li></ul><p><strong>Multiple Departments? Multiple Campuses?</strong> We can split shipments across departments, dorms, or regional campuses—just let us know.</p>"
+          }
+        },
+        "section_t797Kn": {
+          "type": "section",
+          "settings": {
+            "title": "5. Budgeting, Inventory & Discounts",
+            "content": "<p><strong>Transparent Pricing:</strong></p><ul><li>Clear unit pricing up to 1,000+ units</li><li>Volume discounts on almost every item</li><li>60+ million units in stock = supply reliability</li></ul><p><strong>Coordinating Across Departments?</strong> Let us know—we can consolidate shipments and align timelines to help reduce overhead and shipping costs.</p>"
+          }
+        },
+        "section_KeRMiV": {
+          "type": "section",
+          "settings": {
+            "title": "6. Tax-Exempt Purchasing",
+            "content": "<p>Most universities are tax-exempt, and we support fast, clean processing.</p><ul><li>Upload your certificate during checkout</li><li>Or email it to your rep or sales@specialistid.com</li></ul><p>We’ll store it on file to prevent tax charges on future orders</p>"
+          }
+        },
+        "section_CJ3zGz": {
+          "type": "section",
+          "settings": {
+            "title": "7. Reordering for Next Semester or Department",
+            "content": "<p>Staff turnover? Someone moved to a different role? No worries.</p><ul><li>If you ordered online: log in and reorder with one click</li><li>If you emailed: just say “same as last semester”</li><li>If you only have a photo: send it—we’ll ID the product</li></ul><p><strong>We maintain order history, product specs, and quotes</strong> to make transitions seamless.<br/><br/></p>"
+          }
+        },
+        "section_apjXRd": {
+          "type": "section",
+          "settings": {
+            "title": "8. Making the Case: Justify Your Choice",
+            "content": "<p>You probably need multiple quotes—and justification for the one you choose.</p><p><strong>Here’s what matters:</strong></p><ul><li><strong>Total Cost</strong>: Include shipping, setup, and replacement policies</li><li><strong>Reliability</strong>: Do they respond quickly and deliver on time?</li><li><strong>Reordering Ease</strong>: Can someone else figure this out next semester?</li></ul><p><strong>Steal This Justification:</strong></p><p>“After comparing total costs, production timelines, and reorder support, Specialist ID offered the best blend of pricing and reliability. They were responsive during quoting, aligned with our branding needs, and make reordering next year simple—even if someone else takes over.”</p>"
+          }
+        },
+        "section_M4nGHQ": {
+          "type": "section",
+          "settings": {
+            "title": "9. Vendor Comparison Checklist",
+            "content": "<p><strong>Red Flags:</strong></p><ul><li>“Too good to be true” pricing</li><li>No contact person or delayed communication</li><li>Vague delivery expectations</li></ul><p><strong>Green Flags:</strong></p><ul><li>Transparent, itemized pricing</li><li>Customization mock-ups that match brand standards</li><li>Clear contact and fast response</li><li>Reordering system that doesn’t require spreadsheet archaeology</li></ul>"
+          }
+        },
+        "section_YepAxa": {
+          "type": "section",
+          "settings": {
+            "title": "10. Glossary",
+            "content": "<h3><strong>10. Glossary (University Edition)</strong></h3><p><strong>SKU</strong> – Product ID that ensures you get the exact item again</p><p><strong>PO</strong> – Purchase Order for official authorization</p><p><strong>Net 30</strong> – Pay within 30 days of invoice</p><p><strong>Mock-up</strong> – Digital preview of your custom lanyard or badge</p><p><strong>FOAPAL</strong> – Fund-Org-Account-Program-Activity-Location code for internal accounting</p><p><strong>Chart of Accounts</strong> – Your budget reference or department ID</p><p><strong>Vendor Record</strong> – Our profile in your procurement system</p><p><strong>Tax-Exempt Certificate</strong> – Document exempting your university from sales tax<br/><br/><br/><br/><br/><br/></p>"
+          }
+        },
+        "section_X9QTTM": {
+          "type": "section",
+          "settings": {
+            "title": "11. Contact Information",
+            "content": "<p><strong>Still Have Questions?<br/></strong> We work with universities nationwide—Admissions, Security, Student Services, Housing, IT, Athletics—you name it.</p><p><a href=\"tel:888-559-1940\" title=\"tel:888-559-1940\">888-559-1940</a><br/>sales@specialistid.com</p><p>Let’s make your ID program the <em>easiest</em> part of your semester.<br/><br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "section_RXkTeG",
+        "section_yaacPi",
+        "section_rfNrQq",
+        "section_jTQDq3",
+        "section_t797Kn",
+        "section_KeRMiV",
+        "section_CJ3zGz",
+        "section_apjXRd",
+        "section_M4nGHQ",
+        "section_YepAxa",
+        "section_X9QTTM"
+      ],
+      "name": "Guidebook Glossary Section",
+      "settings": {}
+    },
+    "image_with_text_7iNgVj": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_6CCXhX": {
+          "type": "caption",
+          "settings": {
+            "caption": "#MAKEITEASY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_aTrDTW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_FANpQJ": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_dRjnVh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_6CCXhX",
+        "heading_aTrDTW",
+        "text_FANpQJ",
+        "button_dRjnVh"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "newsletter_YihLyf": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_qf9GmN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Attached, Stay Connected with Specialist ID",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_8djeGE": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up and stay connected to receive news offers and exclusive discount codes.</p>"
+          }
+        },
+        "email_form_rzzYxz": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_qf9GmN",
+        "paragraph_8djeGE",
+        "email_form_rzzYxz"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "newsletter-section",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_BPznLq",
+    "custom_guidebook_glossary_gxALpH",
+    "image_with_text_7iNgVj",
+    "newsletter_YihLyf"
+  ]
+}

@@ -1,0 +1,311 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_bpwrwG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7cYrkF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Everything you need for ID Printing",
+            "heading_size": "h1"
+          }
+        },
+        "button_eP7E8P": {
+          "type": "button",
+          "settings": {
+            "button_label": "Check out our printers!",
+            "button_link": "shopify://collections/id-card-printers",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7cYrkF",
+        "button_eP7E8P"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_ncgp83": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "printer-ribbons",
+        "products_to_show": 4,
+        "title": "Printer ribbons",
+        "heading_size": "h1",
+        "description": "<p>The different types of ribbons will also impact your color choices when printing, especially if you want to switch between grey, pure black, and full color. Monochrome ribbons, as the name details, only allow for one type of color when printing; the benefit of them lies in the cost being relatively inexpensive, and they work well on preprinted cards.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_xGqyfe": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "blank-id-cards",
+        "products_to_show": 4,
+        "title": "Blank Card Stock",
+        "heading_size": "h1",
+        "description": "<p>Specialist ID carries a large selection of blank card stock for your ID card printer. We are able to source many colors and styles with our US-based manufacturer. Specialty colored PVC, glitter and even sparkles enhance your loyalty program or standard ID badge.<br/></p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_wTC6ie": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "proximity-smart-cards",
+        "products_to_show": 4,
+        "title": "Proximity & Smart Cards",
+        "heading_size": "h1",
+        "description": "<p>A collection of RFID-enabled access cards and wristbands, including 125 kHz proximity cards and smart cards for secure identification and entry control.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_atcQcy": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "printer-cleaning-kits",
+        "products_to_show": 4,
+        "title": "Printer Cleaning Kits",
+        "heading_size": "h1",
+        "description": "<p>Modern printers have features that implement automatic print head cleaning. Still, you want to know how to perform the process manually in the case that the automatic features fail. Sometimes the nozzles will get clogged, or dust particles can interfere. Still, other parts will require maintenance.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_BM7QAt": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "id-card-software",
+        "products_to_show": 4,
+        "title": "ID Card Software",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_7iNgVj": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_6CCXhX": {
+          "type": "caption",
+          "settings": {
+            "caption": "#MAKEITEASY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_aTrDTW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_FANpQJ": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_dRjnVh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_6CCXhX",
+        "heading_aTrDTW",
+        "text_FANpQJ",
+        "button_dRjnVh"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "newsletter_YihLyf": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_qf9GmN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Attached, Stay Connected with Specialist ID",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_8djeGE": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up and stay connected to receive news offers and exclusive discount codes.</p>"
+          }
+        },
+        "email_form_rzzYxz": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_qf9GmN",
+        "paragraph_8djeGE",
+        "email_form_rzzYxz"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "newsletter-section",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_bpwrwG",
+    "featured_collection_ncgp83",
+    "featured_collection_xGqyfe",
+    "featured_collection_wTC6ie",
+    "featured_collection_atcQcy",
+    "featured_collection_BM7QAt",
+    "image_with_text_7iNgVj",
+    "newsletter_YihLyf"
+  ]
+}

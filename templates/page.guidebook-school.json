@@ -1,0 +1,255 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_BPznLq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UaP7XP": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>ID Badge Accessories Buying Guide for Schools</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "caption_j8ndmz": {
+          "type": "caption",
+          "settings": {
+            "caption": "Welcome!",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "text_9nTUEN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you're handling this for the first time or you've inherited this delightful task from someone who escaped to a different job, ordering ID badge accessories probably ranks pretty low on your daily excitement scale.</p><p>We get it. You're trying to get a bunch of students through the school year with their IDs intact, and frankly, that's already asking a lot.</p><p>That's why we wrote this guide - to make the whole process less painful and help you make a decision that won't come back to haunt you in the middle of the school year when someone asks, \"Who ordered these?\"</p><p><strong>Our goal?</strong> Be the easiest part of your procurement process.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UaP7XP",
+        "caption_j8ndmz",
+        "text_9nTUEN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_guidebook_glossary_gxALpH": {
+      "type": "custom-guidebook-glossary",
+      "blocks": {
+        "section_RXkTeG": {
+          "type": "section",
+          "settings": {
+            "title": "1. Getting Started: Account & Vendor Setup",
+            "content": "<h3><strong>Preferred Vendor Lists</strong></h3><p>Most schools maintain preferred vendor lists. We're happy to complete any vendor application process your school or district requires. Just email the forms to <strong>sales@specialistid.com</strong> with the subject line: <strong>\"Vendor Application – [Your School/District].\"</strong> We'll get everything back to you quickly.</p><h3><strong>What We Need From You</strong></h3><p>To set you up in our system:</p><ul><li>School/District Name</li><li>Point of Contact (Name, Phone, Email)</li><li>Accounts Payable Contact</li><li>Shipping & Billing Addresses</li><li>Tax-Exempt Certificate</li><li>Any required vendor documentation</li></ul><h3><strong>W-9 & Address Info</strong></h3><p>Our W-9 is always ready. Our address for all documentation: <strong>Specialist ID<br/></strong> <strong>7760 NW 56th St, Doral, FL 33166</strong></p><h3><strong>Payment Options</strong></h3><ul><li><strong>Net 30:</strong> Standard terms (30 days to pay after delivery)</li><li><strong>Credit Card:</strong> Secure payment link sent to your email</li><li><strong>ACH/Check:</strong> Payment must clear before shipping</li><li><strong>Purchase Orders:</strong> We accept official POs (see Section 4)</li></ul>"
+          }
+        },
+        "section_yaacPi": {
+          "type": "section",
+          "settings": {
+            "title": "2. Samples/Mock-ups",
+            "content": "<h3><strong>Free Samples</strong></h3><p>Want to see the quality before you order?  <a href=\"/pages/sample-request\" title=\"Sample Request\">Click here</a> for direct sample requests. Most products are available for sampling.</p><p><strong>Why sample?</strong> Because you want to know the quality will hold up to student use before you place your order.</p><h3><strong>Custom Logo Mock-ups</strong></h3><p>Considering adding your school logo? We'll create a digital mock-up showing exactly how your logo will look on your chosen item. Physical custom samples typically take 2-3 days for production.</p><h3><strong>Custom Lanyards</strong></h3><p>These follow a slightly different process due to complexity. We have a separate guide specifically for custom lanyards if needed.</p>"
+          }
+        },
+        "section_rfNrQq": {
+          "type": "section",
+          "settings": {
+            "title": "3. Quotes & Comparison",
+            "content": "<h3><strong>How Our Quotes Work</strong></h3><ul><li><strong>You send us:</strong> SKU, quantity, and custom details if applicable</li><li><strong>Standard quotes:</strong> ~30 minutes (maybe an hour if our sales team is swamped)</li><li><strong>Custom quotes:</strong> Usually within 24 hours</li><li><strong>Delivery:</strong> Via email + PDF backup</li></ul><h3><strong>What Makes Our Quotes Different</strong></h3><ol><li><strong>Transparent pricing</strong> - no hidden fees or surprise charges</li><li><strong>Accurate delivery timelines</strong> - we tell you exactly when you'll have your products</li><li><strong>Clear product descriptions</strong> - no confusion about what you're getting</li></ol><p><strong>Responsive follow-up</strong> - questions get answered quickly<br/></p><p><a href=\"/pages/request-a-quote\" title=\"Request a Quote\">Request your quote here</a><br/></p>"
+          }
+        },
+        "section_jTQDq3": {
+          "type": "section",
+          "settings": {
+            "title": "4. Ordering",
+            "content": "<h3><strong>How to Place Your Order</strong></h3><ul><li><strong>Phone:</strong> 888-559-1940 (Sales) or 800-360-6720 (Customer Service)</li><li><strong>Email:</strong> sales@specialistid.com or your assigned rep</li><li><strong>Website:</strong> Order online anytime</li><li><strong>Purchase Order:</strong> Email official PO to sales@specialistid.com</li></ul><h3><strong>Timeline Expectations</strong></h3><p><strong>In-Stock Items:</strong></p><ul><li>Orders before 12 PM EST: Usually same-day shipping</li><li>All other orders: Within 24 hours (barring any acts of God, weather, or shipping gremlins)</li></ul><p><strong>Custom Items:</strong></p><ul><li>Custom Lanyards: 10–14 business days (because custom takes time, and rushing rarely ends well)</li><li>Badge Reels & Buddies: 3–5 business days</li><li>New product development: Up to 90 days (basically, if it doesn't exist yet, patience is required)</li></ul><h3><strong>Shipping Reality Check</strong></h3><p>We ship via FedEx, UPS, USPS, and DHL. We'll do our best to hit your deadlines, but we can't control traffic, weather, or the occasional shipping company having \"one of those days.\" What we CAN do is be honest about timelines and keep you updated if anything goes sideways.</p>"
+          }
+        },
+        "section_t797Kn": {
+          "type": "section",
+          "settings": {
+            "title": "5. Pricing & Inventory",
+            "content": "<h3><strong>Transparent Pricing</strong></h3><ul><li>Clear pricing up to 1,000 units per item</li><li>Volume discounts available for larger orders</li><li>No surprise fees or hidden charges</li></ul><h3><strong>Inventory</strong></h3><ul><li><strong>60+ million units</strong> in stock</li><li>Daily inventory updates</li><li><strong>For larger orders (2,500+ units):</strong> Give us advance notice for better pricing and logistics planning</li></ul><h3><strong>Budget-Friendly Reality</strong></h3><p>We're often the most economical choice for standard items like badge holders, and competitively priced on most everything else. Sometimes we're cheaper, sometimes we're not - it depends on what you're ordering. But you'll typically find our total cost (including shipping and not playing hide-and-seek with fees) is pretty reasonable.</p><p>We're not trying to be the cheapest at everything because that's how you end up with products that break when a student looks at them funny. We're trying to be the smart choice that doesn't give you headaches later.</p>"
+          }
+        },
+        "section_KeRMiV": {
+          "type": "section",
+          "settings": {
+            "title": "6. Tax-Exempt Purchasing",
+            "content": "<h3><strong>Submit Your Certificate</strong></h3><ul><li>Upload during online checkout</li><li>Email to your rep or sales@specialistid.com</li><li>Usually processed within a few hours</li></ul><h3><strong>What You'll See</strong></h3><p>Your invoice will show <strong>$0.00 tax</strong> - clean and audit-friendly.</p>"
+          }
+        },
+        "section_CJ3zGz": {
+          "type": "section",
+          "settings": {
+            "title": "7. Reordering & Future Planning",
+            "content": "<h3><strong>Making Next Year Easier (Because Future You Will Thank You)</strong></h3><p>Since roles change faster than cafeteria menus, we make reordering simple:</p><ul><li><strong>If you ordered online:</strong> Log in and reorder with one click</li><li><strong>If you ordered directly:</strong> Email your rep or sales@specialistid.com with \"please send me what we got last time\"</li><li><strong>New to this?</strong> Send us your school name or a photo of what you need - we'll track down your previous orders like digital bloodhounds</li></ul><h3><strong>Planning Ahead</strong></h3><p><strong>Summer Budget Timing:</strong> Most schools plan from April-June and order from July-September. We're here for quotes and planning conversations whenever you need them.</p><h3><strong>Customer Support</strong></h3><ul><li><strong>Returns/Issues/Tracking:</strong> Our customer service team by phone at 800-380-6726 or by email sales@specialistid.com</li><li><strong>Reorders:</strong> Your rep or sales team </li><li><strong>Urgent Issues:</strong> Call during business hours for immediate help</li></ul>"
+          }
+        },
+        "section_apjXRd": {
+          "type": "section",
+          "settings": {
+            "title": "8. How to Evaluate Your Options (And Justify Your Choice)",
+            "content": "<p>Let's be honest - you probably need to collect multiple quotes and then explain to someone why you picked what you picked. Here's how to evaluate your options without losing your sanity:</p><h3><strong>The Three Things That Actually Matter (Everything Else is Noise)</strong></h3><p><strong>1. Total Cost (Not Just the Sticker Price)</strong></p><ul><li>What's the shipping cost? (Some vendors play games here)</li><li>Are there setup fees hiding in the fine print?</li><li>What's the warranty/replacement cost?</li></ul><p><strong>2. Reliability When the Pressure's On</strong></p><ul><li>Will they actually deliver when they say they will?</li><li>Can you reach a human when something goes wrong?</li><li>Do they answer emails or do you get crickets?</li></ul><p><strong>3. Future You Protection</strong></p><ul><li>How easy will reordering be next year?</li><li>What if someone else inherits this responsibility?</li><li>Will you be able to figure out what you ordered 12 months from now?</li></ul><h3><strong>Questions to Ask All Vendors (Copy and Paste These)</strong></h3><ol><li><strong>\"What's your total delivered cost?\"</strong> (because surprises are for birthdays, not invoices)</li><li><strong>\"What's your realistic delivery timeline?\"</strong> (and actually listen to their answer)</li><li><strong>\"Who do I contact when something goes wrong?\"</strong> (test this - if they don't respond to this question quickly, that's your answer)</li><li><strong>\"How easy is reordering next year?\"</strong> (because future you is counting on present you)</li></ol>"
+          }
+        },
+        "section_M4nGHQ": {
+          "type": "section",
+          "settings": {
+            "title": "9. What to Look for in Vendor Comparisons",
+            "content": "<h3><strong>Red Flags to Watch For</strong></h3><ul><li>Quotes that seem too good to be true (often have hidden costs)</li><li>Vendors who are slow to respond to questions</li><li>Unclear process after you place your order</li><li>No clear contact person for follow-up</li></ul><h3><strong>Green Flags (Good Signs)</strong></h3><ul><li>Transparent pricing with no surprise fees</li><li>Quick response to questions and quotes</li><li>Clear order/production process you can count on</li><li>Easy reorder process for next year</li><li>Actual humans who answer the phone</li></ul><h3><strong>Making Your Recommendation (AKA: Covering Your Bases)</strong></h3><p>When you present your options, focus on <strong>not getting blamed later</strong>:</p><p><em>\"I collected three quotes. Option A is cheapest upfront but has unclear delivery timing and potential extra fees. Option B (Specialist ID) is competitive on total cost, has realistic delivery expectations, and actually answers their phone when you call. Option C costs more overall when you factor in shipping and fees.\"</em></p><h3><strong>Sample Justification Language (Feel Free to Steal This)</strong></h3><p><em>\"After comparing total costs and reliability factors, Specialist ID offers the best combination of competitive pricing and dependable service. They were responsive during the quote process, gave realistic timelines, and make reordering simple for next year. Plus, they seem like actual humans instead of order-taking robots.\"</em></p>"
+          }
+        },
+        "section_YepAxa": {
+          "type": "section",
+          "settings": {
+            "title": "10. Glossary",
+            "content": "<p><strong>SKU:</strong> Stock Keeping Unit - the product number that ensures you get exactly what you ordered</p><p><strong>PO:</strong> Purchase Order - the official document your school uses to authorize purchases</p><p><strong>Net 30:</strong> You have 30 days to pay after receiving your invoice</p><p><strong>Tax-Exempt Certificate:</strong> Documentation that your school doesn't pay sales tax</p><p><strong>Quote:</strong> Price estimate that's accurate and holds for a reasonable time</p><p><strong>Setup Fee:</strong> One-time charge some vendors add for custom work (we'll tell you upfront if there is one)<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "section_RXkTeG",
+        "section_yaacPi",
+        "section_rfNrQq",
+        "section_jTQDq3",
+        "section_t797Kn",
+        "section_KeRMiV",
+        "section_CJ3zGz",
+        "section_apjXRd",
+        "section_M4nGHQ",
+        "section_YepAxa"
+      ],
+      "name": "Guidebook Glossary Section",
+      "settings": {}
+    },
+    "image_with_text_7iNgVj": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_6CCXhX": {
+          "type": "caption",
+          "settings": {
+            "caption": "#MAKEITEASY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_aTrDTW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_FANpQJ": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_dRjnVh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_6CCXhX",
+        "heading_aTrDTW",
+        "text_FANpQJ",
+        "button_dRjnVh"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "newsletter_YihLyf": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_qf9GmN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Attached, Stay Connected with Specialist ID",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_8djeGE": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up and stay connected to receive news offers and exclusive discount codes.</p>"
+          }
+        },
+        "email_form_rzzYxz": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_qf9GmN",
+        "paragraph_8djeGE",
+        "email_form_rzzYxz"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "newsletter-section",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_BPznLq",
+    "custom_guidebook_glossary_gxALpH",
+    "image_with_text_7iNgVj",
+    "newsletter_YihLyf"
+  ]
+}
