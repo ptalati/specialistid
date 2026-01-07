@@ -23,32 +23,20 @@
         "heading_7cYrkF": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>ID Printing with Specialist ID</strong>",
+            "heading": "<strong>Magicard: Card Printing Solutions for Everyone</strong>",
             "heading_size": "h1"
           }
         },
         "text_7ATYnA": {
           "type": "text",
           "settings": {
-            "text": "<p>An ID Card Printer is how an organization takes charge of its identification and security needs. There are devices tailored to the specific needs and desires of your organization. Direct to card printers are typically used for organizations with moderate needs, as they are quick and affordable with high image quality. Heat retransfer printers are used in tandem with laminators for ID badges that are more durable and will last for years. Devices are customizable with security encoders for specific requirements. Magnetic stripe encoding can easily be used for loyalty cards and guest passes. For more advanced options, consider smart contact encoding for reliable access control in corporate or governmental organizations. Check out some of our best sellers below.<br/><br/></p>"
-          }
-        },
-        "button_CNVVKj": {
-          "type": "button",
-          "settings": {
-            "button_label": "Check out our printers!",
-            "button_link": "shopify://collections/id-card-printers",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<p>Magicard printers are famed across the globe for their ease of use, intuitive design, and reliability. Designed for small and large organizations alike, Magicard sports a large line of products that are tailored for specific needs. Widely utilized in education, healthcare, hospitality, retail, transportation, financial services, and governmental organizations. See for yourself why many consider Magicard the gold standard for ID Card Printers. Check out some of their best sellers below!</p>"
           }
         }
       },
       "block_order": [
         "heading_7cYrkF",
-        "text_7ATYnA",
-        "button_CNVVKj"
+        "text_7ATYnA"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -118,14 +106,14 @@
         "heading_DB84qt": {
           "type": "heading",
           "settings": {
-            "heading": "Evolis Primacy 2",
+            "heading": "Magicard 600",
             "heading_size": "h1"
           }
         },
         "text_aFE6RE": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Single-sided ID card printer for high-volume, detailed printing</li><li>Ideal for employee badges, student IDs, and access cards</li><li>Delivers fast, precise, and secure output</li><li>Compact and efficient design for professional environments</li></ul>",
+            "text": "<ul><li>Premium single-sided ID card printer for secure, high-quality cards</li><li>600 x 300 dpi resolution for sharp images and detailed text</li><li>Ideal for corporate and educational use</li><li>Features Holokote® watermark technology for added fraud protection</li></ul><ol><li>Includes 10 standard designs</li><li>Custom watermarks available (optional upgrade)</li></ol><ul><li>Digital shredding securely erases data after each print job</li><li>Supports GDPR and other data protection compliance</li></ul>",
             "text_style": "body"
           }
         },
