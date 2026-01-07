@@ -154,21 +154,21 @@
         "product_bKNKBV": {
           "type": "product",
           "settings": {
-            "image": "shopify://shop_images/Custom-Printed-Lanyards-SpecialistID.jpg",
-            "title": "Lanyards & Custom Branding",
-            "text": "<p>Display your government identification with professional, branded lanyards:</p><ul><li>Breakaway lanyards for added safety<br/></li><li>Custom printing for logos or departments</li><li>Woven or antimicrobial material options<br/></li><li>Perfect for conferences, staff, or daily ID wear</li></ul>",
-            "link": "shopify://collections/custom-printed-products",
-            "link_label": "Customize everything"
+            "image": "shopify://shop_images/2120-762X_2.jpg",
+            "title": "Translucent Badge Reel with Swivel Clip",
+            "text": "<ul><li>This veterinarian badge reel is a go-to for busy vet clinics thanks to its smooth retractable mechanism.<br/></li><li>The 360-degree swivel clip allows for flexible attachment to a lab coat or scrub pocket.<br/></li><li>Its translucent finish adds a professional yet modern look to any veterinary uniform.<br/></li><li>With strong internal construction, it’s reliable for constant use during animal care routines.</li></ul>",
+            "link": "shopify://products/translucent-badge-reel-with-swivel-clip",
+            "link_label": "Shop now"
           }
         },
         "product_GDa4R9": {
           "type": "product",
           "settings": {
-            "image": "shopify://shop_images/AC-916-CLEAR-1.jpg",
-            "title": "RFID & Smart Card Accessories",
-            "text": "<p>Enhance digital security and protect sensitive credentials:</p><ul><li>RFID-blocking sleeves and shielded badge holders</li><li>Anti-skimming tech for rfid badge government use</li><li>Smart card encoders and tamper-proof seals</li><li>Trusted by agencies handling secure smart ID cards</li></ul>",
-            "link": "shopify://collections/rfid-blocking-badge-holders",
-            "link_label": "Shop RFID and Smart Cards"
+            "image": "shopify://shop_images/BB-1XL-LABORATORY-HOTPINK-V-FRONT.png",
+            "title": "Extra Large Laboratory Badge Buddy – Vertical",
+            "text": "<ul><li>Unlike generic holders, this option doubles as a badge for nurses working in lab environments or as admin staff.<br/></li><li>The “LABORATORY” print clearly communicates role-specific access across hospital zones.<br/></li><li>It’s visible from any angle thanks to dual-sided printing, improving facility workflow.<br/></li><li>Engineered with durable, easy-to-clean materials ideal for labs or administrative offices.</li></ul>",
+            "link": "shopify://products/extra-large-laboratory-badge-buddy-vertical-oversized-laboratories-badge-buddies",
+            "link_label": "Shop now"
           }
         }
       },
