@@ -61,155 +61,61 @@
         "padding_bottom": 52
       }
     },
-    "featured_collection_ncgp83": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "collection": "printer-ribbons",
-        "products_to_show": 4,
-        "title": "Printer ribbons",
-        "heading_size": "h1",
-        "description": "<p>The different types of ribbons will also impact your color choices when printing, especially if you want to switch between grey, pure black, and full color. Monochrome ribbons, as the name details, only allow for one type of color when printing; the benefit of them lies in the cost being relatively inexpensive, and they work well on preprinted cards.</p>",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_collection_xGqyfe": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "collection": "blank-id-cards",
-        "products_to_show": 4,
-        "title": "Blank Card Stock",
-        "heading_size": "h1",
-        "description": "<p>Specialist ID carries a large selection of blank card stock for your ID card printer. We are able to source many colors and styles with our US-based manufacturer. Specialty colored PVC, glitter and even sparkles enhance your loyalty program or standard ID badge.<br/></p>",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_collection_wTC6ie": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "collection": "proximity-smart-cards",
-        "products_to_show": 4,
-        "title": "Proximity & Smart Cards",
-        "heading_size": "h1",
-        "description": "<p>A collection of RFID-enabled access cards and wristbands, including 125 kHz proximity cards and smart cards for secure identification and entry control.</p>",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_collection_atcQcy": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "collection": "printer-cleaning-kits",
-        "products_to_show": 4,
-        "title": "Printer Cleaning Kits",
-        "heading_size": "h1",
-        "description": "<p>Modern printers have features that implement automatic print head cleaning. Still, you want to know how to perform the process manually in the case that the automatic features fail. Sometimes the nozzles will get clogged, or dust particles can interfere. Still, other parts will require maintenance.</p>",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_collection_BM7QAt": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "collection": "id-card-software",
-        "products_to_show": 4,
-        "title": "ID Card Software",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "image_with_text_7iNgVj": {
       "type": "image-with-text",
       "blocks": {
-        "caption_6CCXhX": {
+        "heading_aTrDTW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Breakaway Lanyard ID Holder Badge Reel Combo",
+            "heading_size": "h1"
+          }
+        },
+        "text_FANpQJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Perfect for sports venues and athletic events, this all-in-one Specialist ID lanyard + badge reel combo provides secure credential display with a breakaway safety feature for staff and media. Ideal for coaches, sideline personnel, and game-day operations.</p><ul><li>Displays and swipes credentials with Specialist ID’s all-in-one badge reel + lanyard combo</li><li>Comfortable 5/8” tubular design with soft, spongy feel and 36” total circumference for ideal badge visibility</li><li>Breakaway safety feature snaps apart under pressure, then easily reconnects</li><li>Built-in badge reel extends up to 34” for smooth, retractable card swiping</li><li> Secure vinyl strap fits any Specialist ID badge holder or photo ID</li></ul><p></p>",
+            "text_style": "body"
+          }
+        },
+        "button_dRjnVh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "shopify://products/breakaway-lanyard-id-holder-badge-reel-combo-2138-700x",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_aTrDTW",
+        "text_FANpQJ",
+        "button_dRjnVh"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/2138-7004-Extended.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "image_with_text_qpjgd4": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_GaHF3T": {
           "type": "caption",
           "settings": {
             "caption": "#MAKEITEASY",
@@ -217,21 +123,21 @@
             "text_size": "medium"
           }
         },
-        "heading_aTrDTW": {
+        "heading_pUUNUz": {
           "type": "heading",
           "settings": {
             "heading": "Speak to a live specialist",
             "heading_size": "h1"
           }
         },
-        "text_FANpQJ": {
+        "text_jU8YM4": {
           "type": "text",
           "settings": {
             "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
             "text_style": "body"
           }
         },
-        "button_dRjnVh": {
+        "button_cffDEW": {
           "type": "button",
           "settings": {
             "button_label": "Contact us",
@@ -241,10 +147,10 @@
         }
       },
       "block_order": [
-        "caption_6CCXhX",
-        "heading_aTrDTW",
-        "text_FANpQJ",
-        "button_dRjnVh"
+        "caption_GaHF3T",
+        "heading_pUUNUz",
+        "text_jU8YM4",
+        "button_cffDEW"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
@@ -307,12 +213,8 @@
   "order": [
     "main",
     "rich_text_bpwrwG",
-    "featured_collection_ncgp83",
-    "featured_collection_xGqyfe",
-    "featured_collection_wTC6ie",
-    "featured_collection_atcQcy",
-    "featured_collection_BM7QAt",
     "image_with_text_7iNgVj",
+    "image_with_text_qpjgd4",
     "newsletter_YihLyf"
   ]
 }
