@@ -23,20 +23,25 @@
         "heading_7cYrkF": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Magicard: Card Printing Solutions for Everyone</strong>",
+            "heading": "Everything you need for ID Printing",
             "heading_size": "h1"
           }
         },
-        "text_7ATYnA": {
-          "type": "text",
+        "button_eP7E8P": {
+          "type": "button",
           "settings": {
-            "text": "<p>Magicard printers are famed across the globe for their ease of use, intuitive design, and reliability. Designed for small and large organizations alike, Magicard sports a large line of products that are tailored for specific needs. Widely utilized in education, healthcare, hospitality, retail, transportation, financial services, and governmental organizations. See for yourself why many consider Magicard the gold standard for ID Card Printers. Check out some of their best sellers below!</p>"
+            "button_label": "Check out our printers!",
+            "button_link": "shopify://collections/id-card-printers",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
         "heading_7cYrkF",
-        "text_7ATYnA"
+        "button_eP7E8P"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -49,207 +54,149 @@
         "padding_bottom": 52
       }
     },
-    "image_with_text_qV4JeH": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_GHrTi3": {
-          "type": "heading",
-          "settings": {
-            "heading": "Magicard 300",
-            "heading_size": "h1"
-          }
-        },
-        "text_E48TAL": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Prints secure, high-quality employee badges, student IDs, and access cards</li><li>Supports full-color and black & white printing with edge-to-edge dye sublimation</li><li>Sharp text and graphics with high-definition output</li><li>Fast printing: 160 color cards/hr, 720 monochrome cards/hr</li><li>Optional magnetic stripe, smart card, and contactless encoding (MIFARE, DESFire)</li><li>Digital shredding for secure data protection<br/><br/></li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_EacWFk": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop now",
-            "button_link": "shopify://products/magicard-300-id-card-printer",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_GHrTi3",
-        "text_E48TAL",
-        "button_EacWFk"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
+    "featured_collection_ncgp83": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "image": "shopify://shop_images/magicard-300-id-card-printer-left.webp",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
-        "section_css_class": "Type your own CSS class",
+        "collection": "printer-ribbons",
+        "products_to_show": 4,
+        "title": "Printer ribbons",
+        "heading_size": "h1",
+        "description": "<p>The different types of ribbons will also impact your color choices when printing, especially if you want to switch between grey, pure black, and full color. Monochrome ribbons, as the name details, only allow for one type of color when printing; the benefit of them lies in the cost being relatively inexpensive, and they work well on preprinted cards.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
+        "padding_bottom": 36
       }
     },
-    "image_with_text_RE7fhw": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_DB84qt": {
-          "type": "heading",
-          "settings": {
-            "heading": "Magicard 600",
-            "heading_size": "h1"
-          }
-        },
-        "text_aFE6RE": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Premium single-sided ID card printer for secure, high-quality cards</li><li>600 x 300 dpi resolution for sharp images and detailed text</li><li>Ideal for corporate and educational use</li><li>Features Holokote® watermark technology for added fraud protection</li></ul><ol><li>Includes 10 standard designs</li><li>Custom watermarks available (optional upgrade)</li></ol><ul><li>Digital shredding securely erases data after each print job</li><li>Supports GDPR and other data protection compliance</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_m9Lwph": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop now",
-            "button_link": "shopify://products/magicard-600-single-sided-id-card-printer-3652-5001",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_DB84qt",
-        "text_aFE6RE",
-        "button_m9Lwph"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
+    "featured_collection_xGqyfe": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
-        "section_css_class": "Type your own CSS class",
+        "collection": "blank-id-cards",
+        "products_to_show": 4,
+        "title": "Blank Card Stock",
+        "heading_size": "h1",
+        "description": "<p>Specialist ID carries a large selection of blank card stock for your ID card printer. We are able to source many colors and styles with our US-based manufacturer. Specialty colored PVC, glitter and even sparkles enhance your loyalty program or standard ID badge.<br/></p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
+        "padding_bottom": 36
       }
     },
-    "image_with_text_wPEnja": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_7nt9Xn": {
-          "type": "heading",
-          "settings": {
-            "heading": "Magicard Pronto 100",
-            "heading_size": "h1"
-          }
-        },
-        "text_hRtx7G": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>Fast, efficient single-sided ID card printer</li><li>Simple, user-friendly design with compact size for easy setup</li><li>Prints:</li></ul><ol><li>HD color photo IDs in 23 seconds</li><li>Standard color in 18 seconds</li><li>Monochrome in 4.7 seconds</li></ol><ul><li>Features Holokote® watermark for added security</li><li>Optional digital shredding for data protection</li><li>Includes Nessus Pro security tech with regular updates</li><li>Ideal for office environments needing quick, secure ID printing</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_QPteFw": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop now",
-            "button_link": "shopify://products/magicard-pronto-100-id-card-printer",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_7nt9Xn",
-        "text_hRtx7G",
-        "button_QPteFw"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
+    "featured_collection_wTC6ie": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Pronto100ClosedHoppersLeft1_1.webp",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
-        "section_css_class": "Type your own CSS class",
+        "collection": "proximity-smart-cards",
+        "products_to_show": 4,
+        "title": "Proximity & Smart Cards",
+        "heading_size": "h1",
+        "description": "<p>A collection of RFID-enabled access cards and wristbands, including 125 kHz proximity cards and smart cards for secure identification and entry control.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
+        "padding_bottom": 36
       }
     },
-    "image_with_text_p9MFff": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_BDtUD4": {
-          "type": "heading",
-          "settings": {
-            "heading": "Magicard Prima 8",
-            "heading_size": "h1"
-          }
-        },
-        "text_4Y6m8V": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>High-performance single-sided ID printer for large organizations</li><li>Uses retransfer printing — ideal for smart cards or uneven surfaces</li><li>Supports UV dye ribbons for tamper-proof, invisible watermarks</li><li>Optional magnetic stripe and smart card encoding for added security</li><li>FIPS 201 certified — meets U.S. federal government ID standards</li><li>Built for secure, high-quality badge printing in demanding environments</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_tJnRq6": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop now",
-            "button_link": "shopify://products/the-magicard-prima-8-double-sided-id-card-printer",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_BDtUD4",
-        "text_4Y6m8V",
-        "button_tJnRq6"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
+    "featured_collection_atcQcy": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Prima8HighFront.webp",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
-        "section_css_class": "Type your own CSS class",
+        "collection": "printer-cleaning-kits",
+        "products_to_show": 4,
+        "title": "Printer Cleaning Kits",
+        "heading_size": "h1",
+        "description": "<p>Modern printers have features that implement automatic print head cleaning. Still, you want to know how to perform the process manually in the case that the automatic features fail. Sometimes the nozzles will get clogged, or dust particles can interfere. Still, other parts will require maintenance.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_BM7QAt": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "id-card-software",
+        "products_to_show": 4,
+        "title": "ID Card Software",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image_with_text_7iNgVj": {
@@ -353,10 +300,11 @@
   "order": [
     "main",
     "rich_text_bpwrwG",
-    "image_with_text_qV4JeH",
-    "image_with_text_RE7fhw",
-    "image_with_text_wPEnja",
-    "image_with_text_p9MFff",
+    "featured_collection_ncgp83",
+    "featured_collection_xGqyfe",
+    "featured_collection_wTC6ie",
+    "featured_collection_atcQcy",
+    "featured_collection_BM7QAt",
     "image_with_text_7iNgVj",
     "newsletter_YihLyf"
   ]
