@@ -1,8 +1,18 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "cart-items": {
       "type": "main-cart-items",
       "settings": {
+        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -12,36 +22,76 @@
       "blocks": {
         "subtotal": {
           "type": "subtotal",
-          "settings": {
-          }
+          "settings": {}
         },
         "buttons": {
           "type": "buttons",
+          "settings": {}
+        },
+        "diy_tax_exempt_checkout_app_block_kBdmFg": {
+          "type": "shopify://apps/diy-tax-exempt-checkout/blocks/app-block/82644d0b-45f4-4a69-b630-f5ee55674d62",
           "settings": {
+            "en_tx_title": "Tax Exempt Status",
+            "en_tx_sale_tax_option_label": "My organization is not tax exempt",
+            "en_tx_exempt_option_label": "My organization is tax exempt",
+            "en_tx_make_tax_exempt_default_option": false,
+            "en_tx_email_label": "<p>Enter the email address to use for this order.</p>",
+            "en_tx_email_field_placeholder": "Enter email...",
+            "en_tx_email_required": "yes",
+            "en_tx_certificate_label": "<p>Enter the tax-exempt certificate number.</p>",
+            "en_tx_certificate_number_field_placeholder": "Enter certificate num...",
+            "en_tx_optional_instructions_label": "",
+            "en_tx_show_tax_upload_form": "yes",
+            "en_tx_alert_msg_tax_validation": "Upload tax-exempt supporting documents",
+            "en_tx_show_tax_certificate_number": "yes",
+            "en_tx_alert_msg_certificate_number": "Enter your tax-exempt certificate number",
+            "en_tx_margin_top": 0,
+            "en_tx_margin_bottom": 0,
+            "en_tx_bg_color": "#FFFFFF",
+            "en_tx_border": 1.5,
+            "en_tx_border_radius": 3,
+            "en_tx_border_color": "#ffffff",
+            "en_tx_email_border": 1,
+            "en_tx_email_border_radius": 4,
+            "en_tx_email_border_color": "#95a7b7"
           }
         }
       },
       "block_order": [
         "subtotal",
-        "buttons"
-      ]
+        "buttons",
+        "diy_tax_exempt_checkout_app_block_kBdmFg"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
-        "heading_size": "h2",
         "collection": "all",
         "products_to_show": 4,
+        "title": "Featured collection",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
+        "full_width": false,
         "show_view_all": true,
-        "swipe_on_mobile": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
         "image_ratio": "square",
+        "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
+        "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
