@@ -207,14 +207,14 @@
         "heading_BDtUD4": {
           "type": "heading",
           "settings": {
-            "heading": "IDP SMART-31S",
+            "heading": "Magicard Prima 8",
             "heading_size": "h1"
           }
         },
         "text_4Y6m8V": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Entry-level ID card printer for small organizations</li><li>Fast, reliable printing with high-quality image reproduction</li><li>Low cost per print</li><li>Compact, lightweight design fits easily into any workspace</li></ul>",
+            "text": "<ul><li>High-performance single-sided ID printer for large organizations</li><li>Uses retransfer printing — ideal for smart cards or uneven surfaces</li><li>Supports UV dye ribbons for tamper-proof, invisible watermarks</li><li>Optional magnetic stripe and smart card encoding for added security</li><li>FIPS 201 certified — meets U.S. federal government ID standards</li><li>Built for secure, high-quality badge printing in demanding environments</li></ul>",
             "text_style": "body"
           }
         },
@@ -234,7 +234,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/IDP-651527-Single-Sided-ID-Card-Printer-1.webp",
+        "image": "shopify://shop_images/Prima8HighFront.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
