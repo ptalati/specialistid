@@ -116,6 +116,30 @@
         "title": "Top Picks for Your Security Needs"
       }
     },
+    "custom_printer_showcase_eiAzRb": {
+      "type": "custom-printer-showcase",
+      "name": "Card Printing Section",
+      "settings": {
+        "title": "Professional ID Card Printing for Security Teams",
+        "description": "Our high-performance ID printers are built for critical environments—ideal for producing HID security cards, RFID-enabled badges, and tamper-proof credentials. Trusted by security professionals, they deliver speed, reliability, and advanced protection.",
+        "feature1_symbol": "",
+        "feature1_title": "Custom Badge Printing",
+        "feature1_text": "Print staff IDs, contractor badges, and secure visitor passes with barcode, photo...",
+        "feature2_symbol": "",
+        "feature2_title": "High-Resolution Printing",
+        "feature2_text": "Sharp, professional-quality output with support for HID cards, barcodes, and photo ID—perfect for secure access control.",
+        "feature3_symbol": "",
+        "feature3_title": "Built-In Security Features",
+        "feature3_text": "Supports RFID, UV, and holographic elements to prevent duplication and enhance ID security.",
+        "feature4_symbol": "",
+        "feature4_title": "Rugged Card Durability",
+        "feature4_text": "Waterproof, fade-resistant cards designed for tough conditions and daily use.",
+        "visual_title": "Advanced Printing Technology",
+        "visual_text": "High-resolution printing with smart card encoding and badge authentication support ensures every security ID badge meets agency-level quality and compliance.",
+        "visual_cta_label": "Browse High-Security ID Printers",
+        "visual_cta_link": "shopify://collections/id-card-printers"
+      }
+    },
     "custom_tax_exempt_BWdF8K": {
       "type": "custom-tax-exempt",
       "name": "Tax Exempt Section",
@@ -129,31 +153,6 @@
         "visual_heading": "Quick Verification Process",
         "visual_text": "<p>Most tax-exempt certifications are processed within 24 hours. Keep your documents ready for faster approval and start ordering your <strong>school visitor badges</strong>, <strong>retractable badge reels</strong>, or <strong>teacher ID badge accessories</strong> with ease.</p>",
         "visual_link": ""
-      }
-    },
-    "custom_printer_showcase_eiAzRb": {
-      "type": "custom-printer-showcase",
-      "name": "Card Printing Section",
-      "settings": {
-        "title": "Professional Card Printing Services",
-        "description": "Our state-of-the-art printing technology ensures your school ID cards, teacher badges, and student identification cards meet the highest standards of quality and durability. From design to delivery, we handle every aspect of your school badge printing needs.",
-        "feature1_symbol": "",
-        "feature1_title": "Custom Design",
-        "feature1_text": "Full design services available for student ID badges, staff ID cards, and school visitor passes",
-        "feature2_symbol": "",
-        "feature2_title": "Fast Turnaround",
-        "feature2_text": "5–7 business days delivery on custom school ID printing",
-        "feature3_symbol": "",
-        "feature3_title": "Security Features",
-        "feature3_text": "Holograms, UV printing, and anti-counterfeit options to protect your student and teacher ID cards",
-        "feature4_symbol": "",
-        "feature4_title": "Premium Quality",
-        "feature4_text": "Fade-resistant, waterproof school badge cards built to last all year",
-        "visual_image": "shopify://shop_images/magicard-300-id-card-printer-left.webp",
-        "visual_title": "Advanced Printing Technology",
-        "visual_text": "High-resolution digital printing with color matching and quality control ensures every school ID badge and student access card meets professional standards.",
-        "visual_cta_label": "Discover top-rated ID card printers for schools",
-        "visual_cta_link": "shopify://collections/id-card-printers"
       }
     },
     "custom_guidebook_showcase_BhWw6y": {
@@ -294,8 +293,8 @@
     "main",
     "rich_text_bpwrwG",
     "custom_product_showcase_ewxxaH",
-    "custom_tax_exempt_BWdF8K",
     "custom_printer_showcase_eiAzRb",
+    "custom_tax_exempt_BWdF8K",
     "custom_guidebook_showcase_BhWw6y",
     "image_with_text_7iNgVj",
     "newsletter_YihLyf"
