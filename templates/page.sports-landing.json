@@ -23,15 +23,21 @@
         "heading_7cYrkF": {
           "type": "heading",
           "settings": {
-            "heading": "Everything you need for ID Printing",
+            "heading": "Specialist ID Sports Credentials, Custom Lanyards & Access Solutions",
             "heading_size": "h1"
+          }
+        },
+        "text_iBEx6P": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Manage game-day access, staff credentials, and fan engagement with Specialist ID’s sports credentialing solutions. From high school fields to professional stadiums, Specialist ID provides custom lanyards, RFID wristbands, badge holders, and all-access passes tailored for sports teams, events, and live venues.</p>"
           }
         },
         "button_eP7E8P": {
           "type": "button",
           "settings": {
-            "button_label": "Check out our printers!",
-            "button_link": "shopify://collections/id-card-printers",
+            "button_label": "Check out our items!",
+            "button_link": "shopify://collections/events",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -41,6 +47,7 @@
       },
       "block_order": [
         "heading_7cYrkF",
+        "text_iBEx6P",
         "button_eP7E8P"
       ],
       "name": "t:sections.rich-text.presets.name",
