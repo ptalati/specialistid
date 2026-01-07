@@ -264,50 +264,6 @@
         "padding_bottom_mobile": 36
       }
     },
-    "rich_text_BPznLq": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_UaP7XP": {
-          "type": "heading",
-          "settings": {
-            "heading": "Procurement-Friendly. Volume Discounts Available.",
-            "heading_size": "h1"
-          }
-        },
-        "text_9nTUEN": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Whether you manage sourcing for a multi-facility hospital system or a single private clinic, we simplify your buying process. Our team specializes in healthcare ID supplies bulk orders—with contract-friendly pricing, responsive support, and fast delivery nationwide.</p><ul><li>Access wholesale pricing on hospital ID accessories, badge reels, holders, and more.<br/></li><li>Work with dedicated account reps who understand healthcare procurement workflows.<br/></li><li>Expedite large-volume shipments for onboarding, compliance upgrades, or facility-wide rollouts.<br/></li><li>Choose from pre-approved items or request a custom bulk quote tailored to your organization.</li></ul>"
-          }
-        },
-        "button_QHRFQj": {
-          "type": "button",
-          "settings": {
-            "button_label": "Get a sample",
-            "button_link": "shopify://pages/sample-request",
-            "button_style_secondary": false,
-            "button_label_2": "Request a quote",
-            "button_link_2": "shopify://pages/request-a-quote",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_UaP7XP",
-        "text_9nTUEN",
-        "button_QHRFQj"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "section_css_class": "Type your own CSS class",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "image_with_text_7iNgVj": {
       "type": "image-with-text",
       "blocks": {
@@ -413,7 +369,6 @@
     "image_with_text_RE7fhw",
     "image_with_text_wPEnja",
     "image_with_text_p9MFff",
-    "rich_text_BPznLq",
     "image_with_text_7iNgVj",
     "newsletter_YihLyf"
   ]
