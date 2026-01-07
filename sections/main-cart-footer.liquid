@@ -16,35 +16,35 @@
     }
   }
 
-  /* Custom content and subtotal row layout */
+  /* Two-column layout for custom content and cart blocks */
+  .cart__footer-wrapper-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .cart__custom-left-content {
+    width: 100%;
+  }
+
+  .custom-left-content-wrapper {
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+  }
+
   .cart__blocks {
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
 
-  .cart__custom-content {
-    width: 100%;
-  }
-
-  .custom-content-wrapper {
-    padding: 1rem;
-  }
-
   @media screen and (min-width: 750px) {
-    .cart__blocks-row {
+    .cart__footer-wrapper-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2rem;
+      gap: 3rem;
       align-items: start;
-    }
-
-    .cart__custom-content {
-      width: 100%;
-    }
-
-    .cart__blocks-row .js-contents {
-      width: 100%;
     }
   }
 {%- endstyle -%}
@@ -69,32 +69,29 @@
         </cart-note>
       {%- endif -%}
 
-      <div class="cart__blocks">
-        {%- assign has_custom_content = false -%}
-        {%- assign has_subtotal = false -%}
-        {%- for block in section.blocks -%}
-          {%- if block.type == 'custom_content' -%}
-            {%- assign has_custom_content = true -%}
-          {%- elsif block.type == 'subtotal' -%}
-            {%- assign has_subtotal = true -%}
-          {%- endif -%}
-        {%- endfor -%}
-
-        {%- if has_custom_content and has_subtotal -%}
-          <div class="cart__blocks-row">
-        {%- endif -%}
-
-        {% for block in section.blocks %}
-          {%- case block.type -%}
-            {%- when '@app' -%}
-              {% render block %}
-            {%- when 'custom_content' -%}
-              <div class="cart__custom-content" {{ block.shopify_attributes }}>
-                <div class="custom-content-wrapper">
+      <div class="cart__footer-wrapper-grid">
+        {%- comment -%} Left Column: Custom Content {%- endcomment -%}
+        <div class="cart__custom-left-content">
+          {% for block in section.blocks %}
+            {%- if block.type == 'custom_left_content' -%}
+              <div {{ block.shopify_attributes }}>
+                <div class="custom-left-content-wrapper">
                   {{ block.settings.custom_liquid }}
                 </div>
               </div>
-            {%- when 'subtotal' -%}
+            {%- endif -%}
+          {% endfor %}
+        </div>
+
+        {%- comment -%} Right Column: Subtotal, Buttons, Apps {%- endcomment -%}
+        <div class="cart__blocks">
+          {% for block in section.blocks %}
+            {%- case block.type -%}
+              {%- when 'custom_left_content' -%}
+                {%- comment -%} Skip - rendered in left column {%- endcomment -%}
+              {%- when '@app' -%}
+                {% render block %}
+              {%- when 'subtotal' -%}
               <div class="js-contents" {{ block.shopify_attributes }}>
                 <div>
                   {%- if cart.cart_level_discount_applications.size > 0 -%}
@@ -176,14 +173,11 @@
                   {{ content_for_additional_checkout_buttons }}
                 </div>
               {%- endif -%}
-          {%- endcase -%}
-        {% endfor %}
+            {%- endcase -%}
+          {% endfor %}
 
-        {%- if has_custom_content and has_subtotal -%}
-          </div>
-        {%- endif -%}
-
-        <div id="cart-errors"></div>
+          <div id="cart-errors"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -227,14 +221,14 @@
   ],
   "blocks": [
     {
-      "type": "custom_content",
-      "name": "Custom Content",
+      "type": "custom_left_content",
+      "name": "Custom Left Content",
       "settings": [
         {
           "type": "liquid",
           "id": "custom_liquid",
           "label": "Custom Liquid Code",
-          "info": "Add custom Liquid code to display on the left of the subtotal section"
+          "info": "Add custom Liquid code to display on the left side of the cart footer"
         }
       ]
     },
