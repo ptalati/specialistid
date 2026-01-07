@@ -140,55 +140,47 @@
         "visual_cta_link": "shopify://collections/id-card-printers"
       }
     },
-    "custom_tax_exempt_BWdF8K": {
-      "type": "custom-tax-exempt",
-      "name": "Tax Exempt Section",
-      "settings": {
-        "title": "Tax-Exempt Ordering Made Simple",
-        "description": "<p>We understand that educational institutions, such as K-12 schools, school districts, and universities, qualify for tax-exempt purchases. Our streamlined process makes it easy to place orders for <strong>school ID badge holders</strong>, <strong>student ID card printers</strong>, and <strong>lanyards for teachers</strong> without tax complications.</p>",
-        "step1": "Submit your tax-exempt certificate during checkout",
-        "step2": "Our team verifies your institution's status",
-        "step3": "Receive confirmation and proceed with tax-free pricing on items like lanyards for students, ID accessories for faculty, and more",
-        "step4": "All future orders automatically apply tax exemption",
-        "visual_heading": "Quick Verification Process",
-        "visual_text": "<p>Most tax-exempt certifications are processed within 24 hours. Keep your documents ready for faster approval and start ordering your <strong>school visitor badges</strong>, <strong>retractable badge reels</strong>, or <strong>teacher ID badge accessories</strong> with ease.</p>",
-        "visual_link": ""
-      }
-    },
     "custom_guidebook_showcase_BhWw6y": {
       "type": "custom-guidebook-showcase",
       "blocks": {
         "feature_DQQ3xi": {
           "type": "feature",
           "settings": {
-            "feature": "Evaluating your options"
+            "feature": "Tamper-resistant ID solutions to help prevent counterfeiting, duplication, or misuse of security credentials."
           }
         },
         "feature_MiaPBy": {
           "type": "feature",
           "settings": {
-            "feature": "Reordering made easy"
+            "feature": "Fast turnaround for bulk orders—perfect for deploying new security teams or expanding existing infrastructure quickly."
           }
         },
         "feature_WMFBQp": {
           "type": "feature",
           "settings": {
-            "feature": "Vendor comparision"
+            "feature": "Custom printing and encoding available, including HID-compatible cards, proximity access badges, and magnetic stripe encoding."
+          }
+        },
+        "feature_QGmJkp": {
+          "type": "feature",
+          "settings": {
+            "feature": "Built with premium-grade materials to deliver superior durability and performance in mission-critical environments."
           }
         }
       },
       "block_order": [
         "feature_DQQ3xi",
         "feature_MiaPBy",
-        "feature_WMFBQp"
+        "feature_WMFBQp",
+        "feature_QGmJkp"
       ],
       "name": "Guidebook Showcase Section",
       "settings": {
-        "title": "Free Guidebook: Master School ID Solutions",
-        "heading": "Everything You Need to Know About School ID Implementation",
-        "description": "This comprehensive guidebook walks you through the best practices for implementing ID badge programs in educational institutions. Learn about material selection, security features, student/staff onboarding, and cost-saving tips.",
-        "cta_label": "Consult the guide",
-        "cta_link": "shopify://pages/the-ultimate-school-id-purchasing-guide-simple-steps-to-get-started"
+        "title": "Why Security Professionals Choose Specialist ID",
+        "heading": "Engineered for Security, Designed for Durability",
+        "description": "From the front desk to high-security zones, Specialist ID delivers reliable ID security solutions built for law enforcement, federal agencies, healthcare, and private security teams. Our security badge holders, HID security cards, and RFID-blocking products meet the demands of professionals who need trusted ID security—online and on-site.",
+        "cta_label": "Download the Guidebook",
+        "cta_link": ""
       }
     },
     "image_with_text_7iNgVj": {
@@ -294,7 +286,6 @@
     "rich_text_bpwrwG",
     "custom_product_showcase_ewxxaH",
     "custom_printer_showcase_eiAzRb",
-    "custom_tax_exempt_BWdF8K",
     "custom_guidebook_showcase_BhWw6y",
     "image_with_text_7iNgVj",
     "newsletter_YihLyf"
