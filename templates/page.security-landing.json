@@ -183,6 +183,54 @@
         "cta_link": ""
       }
     },
+    "industries_8cJNff": {
+      "type": "industries",
+      "blocks": {
+        "industry_N4Dwbp": {
+          "type": "industry",
+          "settings": {
+            "title": "Access Control for Government & Military Sites",
+            "description": "<ul>\n<li>Ideal for use with HID security cards, blank security badges, and RFID badge holders.</li>\n<li>Supports high-security ID cards, tamper-proof ID badge holders, and multi-factor authentication.</li>\n<li>Trusted by federal agencies and military contractors.</li>\n</ul>"
+          }
+        },
+        "industry_4YczBh": {
+          "type": "industry",
+          "settings": {
+            "title": "Corporate Security Teams",
+            "description": "<ul>\n<li>Manage entry points with custom-printed ID badges and proximity access cards.</li>\n<li>Use retractable badge reels and ID security lanyards for efficient everyday use.</li>\n<li>Integrate with smart card systems and secure login protocols.</li>\n</ul>"
+          }
+        },
+        "industry_G8qDzY": {
+          "type": "industry",
+          "settings": {
+            "title": "Healthcare & Critical Infrastructure Security",
+            "description": "<ul>\n<li>Protect patient data and access zones using RFID-enabled ID cards and secure badge holders.</li>\n<li>Supports HIPAA-compliant badge solutions and role-based ID segmentation.</li>\n<li>Used in hospitals, labs, utilities, and data centers.</li>\n</ul>"
+          }
+        },
+        "industry_LVdkBx": {
+          "type": "industry",
+          "settings": {
+            "title": "Event Security Staff",
+            "description": "<ul>\n<li>Equip security teams with color-coded visitor badges and clip-on security passes.</li>\n<li>Enhance visual identification with custom event security lanyards and printed security IDs.</li>\n<li>Prevent unauthorized access using tamper-evident holders and event-specific badge designs.</li>\n</ul>"
+          }
+        }
+      },
+      "block_order": [
+        "industry_N4Dwbp",
+        "industry_4YczBh",
+        "industry_G8qDzY",
+        "industry_LVdkBx"
+      ],
+      "name": "Industries Grid",
+      "settings": {
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "heading": "Trusted by Security Teams Across Industries",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "mob_top_spacing": 40,
+        "mob_bottom_spacing": 40
+      }
+    },
     "image_with_text_7iNgVj": {
       "type": "image-with-text",
       "blocks": {
@@ -287,6 +335,7 @@
     "custom_product_showcase_ewxxaH",
     "custom_printer_showcase_eiAzRb",
     "custom_guidebook_showcase_BhWw6y",
+    "industries_8cJNff",
     "image_with_text_7iNgVj",
     "newsletter_YihLyf"
   ]
