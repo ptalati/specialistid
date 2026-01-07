@@ -61,73 +61,6 @@
         "padding_bottom": 52
       }
     },
-    "multicolumn_n4GQ6E": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_iPmCMc": {
-          "type": "column",
-          "settings": {
-            "title": "Badge Buddies for Nurses",
-            "text": "<p>Discover top-quality badges for nurses and medical badge solutions designed for long shifts, quick access, and all-day wear. Trusted by frontline heroes in hospitals and clinics nationwide</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_FkcnyQ": {
-          "type": "column",
-          "settings": {
-            "title": "Doctor Badge Holders",
-            "text": "<p>Sleek, professional, and built for daily rounds, our doctor badge holders combine function with form—perfect for physicians, surgeons, and specialists who need secure and easy-to-display credentials.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_G3cdgb": {
-          "type": "column",
-          "settings": {
-            "title": "Veterinarian ID Reels",
-            "text": "<p>Keep your ID visible and your hands free with rugged veterinarian badge reels, ideal for busy animal care environments. Durable construction for vets, techs, and support staff in fast-paced clinics.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_ULM69W": {
-          "type": "column",
-          "settings": {
-            "title": "Registered Nurse Badge Clips",
-            "text": "<p>From ER to ICU, our registered nurse badge clips are designed to stay put and stay clean. Lightweight and dependable options tailored for nursing teams on the move.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_iPmCMc",
-        "column_FkcnyQ",
-        "column_G3cdgb",
-        "column_ULM69W"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Most Popular Healthcare ID Supplies",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36,
-        "section_css_class": "Type your own CSS class"
-      }
-    },
     "custom_product_showcase_ewxxaH": {
       "type": "custom-product-showcase",
       "blocks": {
@@ -150,37 +83,15 @@
             "link": "shopify://products/rn-badge-buddy-reel-with-swivel-spring-clip-badge-buddy-and-retractable-reel-in-one",
             "link_label": "Shop now"
           }
-        },
-        "product_bKNKBV": {
-          "type": "product",
-          "settings": {
-            "image": "shopify://shop_images/2120-762X_2.jpg",
-            "title": "Translucent Badge Reel with Swivel Clip",
-            "text": "<ul><li>This veterinarian badge reel is a go-to for busy vet clinics thanks to its smooth retractable mechanism.<br/></li><li>The 360-degree swivel clip allows for flexible attachment to a lab coat or scrub pocket.<br/></li><li>Its translucent finish adds a professional yet modern look to any veterinary uniform.<br/></li><li>With strong internal construction, it’s reliable for constant use during animal care routines.</li></ul>",
-            "link": "shopify://products/translucent-badge-reel-with-swivel-clip",
-            "link_label": "Shop now"
-          }
-        },
-        "product_GDa4R9": {
-          "type": "product",
-          "settings": {
-            "image": "shopify://shop_images/BB-1XL-LABORATORY-HOTPINK-V-FRONT.png",
-            "title": "Extra Large Laboratory Badge Buddy – Vertical",
-            "text": "<ul><li>Unlike generic holders, this option doubles as a badge for nurses working in lab environments or as admin staff.<br/></li><li>The “LABORATORY” print clearly communicates role-specific access across hospital zones.<br/></li><li>It’s visible from any angle thanks to dual-sided printing, improving facility workflow.<br/></li><li>Engineered with durable, easy-to-clean materials ideal for labs or administrative offices.</li></ul>",
-            "link": "shopify://products/extra-large-laboratory-badge-buddy-vertical-oversized-laboratories-badge-buddies",
-            "link_label": "Shop now"
-          }
         }
       },
       "block_order": [
         "product_FgkQfd",
-        "product_AqKDKi",
-        "product_bKNKBV",
-        "product_GDa4R9"
+        "product_AqKDKi"
       ],
       "name": "Product Showcase Section",
       "settings": {
-        "title": "Tailored ID Supplies for Every Medical Role"
+        "title": "Featured Products"
       }
     },
     "industries_EWbVWW": {
@@ -443,7 +354,6 @@
   "order": [
     "main",
     "rich_text_bpwrwG",
-    "multicolumn_n4GQ6E",
     "custom_product_showcase_ewxxaH",
     "industries_EWbVWW",
     "custom_guidebook_showcase_BhWw6y",
