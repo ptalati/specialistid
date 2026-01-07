@@ -23,23 +23,23 @@
         "heading_7cYrkF": {
           "type": "heading",
           "settings": {
-            "heading": "Professional ID Solutions for Schools",
+            "heading": "Secure Access Starts with the Right ID Solution",
             "heading_size": "h1"
           }
         },
         "text_7ATYnA": {
           "type": "text",
           "settings": {
-            "text": "<p>Custom ID badges and card holders designed specifically for educational institutions. Enhance security, streamline identification, and create a professional appearance with our premium products.</p>"
+            "text": "<p>Shop high-security badge holders, ID card printers, and visitor management tools tailored for security professionals.</p>"
           }
         },
         "button_CNVVKj": {
           "type": "button",
           "settings": {
-            "button_label": "Shop School Collection",
-            "button_link": "shopify://collections/school",
+            "button_label": "Shop Security Products",
+            "button_link": "/",
             "button_style_secondary": false,
-            "button_label_2": "Get a Quote for your Institution",
+            "button_label_2": "Get a Custom Quote",
             "button_link_2": "shopify://pages/request-a-quote",
             "button_style_secondary_2": false
           }
