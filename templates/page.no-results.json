@@ -11,13 +11,120 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_YgLRLd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4eAC9k": {
+          "type": "heading",
+          "settings": {
+            "heading": "Oops! We Couldn't Find What You're Looking For",
+            "heading_size": "h1"
+          }
+        },
+        "text_xtTM6j": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We couldn't find any matches for your search, however, it doesn't mean we don't have it. Contact us directly and we'll make it work!</p>"
+          }
+        },
+        "button_hU8AAm": {
+          "type": "button",
+          "settings": {
+            "button_label": "Check our deals",
+            "button_link": "shopify://collections/deals",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_4eAC9k",
+        "text_xtTM6j",
+        "button_hU8AAm"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_4cXtDN": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_iDmf8g": {
+          "type": "caption",
+          "settings": {
+            "caption": "Contact us",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_pJEATd": {
+          "type": "heading",
+          "settings": {
+            "heading": "Need help finding the right product?",
+            "heading_size": "h1"
+          }
+        },
+        "text_Ur4XjY": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_XNdkeH": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_iDmf8g",
+        "heading_pJEATd",
+        "text_Ur4XjY",
+        "button_XNdkeH"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_YgLRLd",
+    "image_with_text_4cXtDN"
   ]
 }
