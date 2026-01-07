@@ -67,7 +67,9 @@
         "column_D7Qzk9": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Welcome10",
+            "enable_copy_button": true,
             "text": "<p>$1 off $10 orders and up (one time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
             "link_label": "",
             "link": ""
@@ -76,7 +78,9 @@
         "column_VDzB8f": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Welcome50",
+            "enable_copy_button": true,
             "text": "<p>$5 off $50 orders and up (One time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
             "link_label": "",
             "link": ""
@@ -85,7 +89,9 @@
         "column_RgytyA": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Welcome100",
+            "enable_copy_button": true,
             "text": "<p>$10 off $100 orders and up (One time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
             "link_label": "",
             "link": ""
