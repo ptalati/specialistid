@@ -67,31 +67,42 @@
         "product_FgkQfd": {
           "type": "product",
           "settings": {
-            "image": "shopify://shop_images/726-CSN-Custom-1yourlogohere.webp",
-            "title": "Custom Clear Vertical Teacher Badge Holder",
-            "text": "<p>Professional, customizable teacher badge holder built for daily use in classrooms, offices or events</p><ul><li>Durable crystal-clear plastic construction</li><li>Easy side-loading with thumb notch</li><li>Slot and chain holes for lanyards or clips</li><li>Full-color custom printing available</li><li>Perfect for educators, staff and school events</li></ul>",
-            "link": "shopify://products/custom-clear-vertical-id-card-holder",
-            "link_label": "View Product"
+            "image": "shopify://shop_images/2120-3325-1_7e8bed66-4743-41a3-a0db-0bbd3b7c43ea.jpg",
+            "title": "Heavy-duty badge reels",
+            "text": "<ul><li>Designed for durability in active duty environments: law enforcement, stadiums, event security, and military bases.<br/></li><li>Featuring reinforced vinyl straps, steel cables, and locking mechanisms.<br/></li><li>Ideal for securing security id cards, proximity badges, and HID access cards on the go.</li></ul>",
+            "link": "shopify://products/heavy-duty-badge-reel-with-chain-2120-3325",
+            "link_label": "Shop Heavy Duty"
           }
         },
         "product_AqKDKi": {
           "type": "product",
           "settings": {
-            "image": "shopify://shop_images/Custom-Printed-Lanyards-SpecialistID.jpg",
-            "title": "Custom Printed Lanyards for Teachers and Coaches",
-            "text": "<p>Design high-quality lanyards perfect for any teacher or coach use, ideal for holding teacher badge holders, whistles or ID cards with comfort and durability</p><ul><li>Full-color custom printing with your badge custom printing with your logo or school name</li><li>Soft, durable for all day wear</li><li>Multiple clip options (swivel hook, bulldog clip, etc.)</li><li>Optional safety breakaway for added protection</li></ul>",
-            "link": "shopify://products/custom-printed-lanyards-online",
+            "image": "shopify://shop_images/AC-916-CLEAR-1.jpg",
+            "title": "RFID-blocking badge holders",
+            "text": "<ul><li>Prevents unauthorized scanning and protects sensitive data on HID security cards and smart IDs.<br/></li><li>Compliant with federal security standards for government and military applications.<br/></li><li>Lightweight yet resilient – perfect for both mobile and stationary personnel.</li></ul>",
+            "link": "shopify://collections/rfid-blocking-badge-holders",
+            "link_label": "Shop RFID Blocking"
+          }
+        },
+        "product_KeDLBn": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/SPIDPROX26H.png",
+            "title": "HID-compatible ID cards",
+            "text": "<ul><li>Fully compatible with HID access control systems and available in blank or custom-encoded formats.<br/></li><li>Excellent for use in door entry systems, secure workstations, and employee ID programs.<br/></li><li>Combine with RFID badge holders and tamper-proof holders for layered protection.</li></ul>",
+            "link": "shopify://products/spidprox26hc-hid-compatible-composite-iso-prox-cards-with-hico-magnetic-strip",
             "link_label": "View Product"
           }
         }
       },
       "block_order": [
         "product_FgkQfd",
-        "product_AqKDKi"
+        "product_AqKDKi",
+        "product_KeDLBn"
       ],
       "name": "Product Showcase Section",
       "settings": {
-        "title": "Featured Products"
+        "title": "Top Picks for Your Security Needs"
       }
     },
     "custom_tax_exempt_BWdF8K": {
