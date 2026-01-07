@@ -23,24 +23,24 @@
         "heading_7cYrkF": {
           "type": "heading",
           "settings": {
-            "heading": "Secure, Stylish & Functional ID Solutions for Healthcare Professionals",
+            "heading": "<strong>ID Printing with Specialist ID</strong>",
             "heading_size": "h1"
           }
         },
         "text_7ATYnA": {
           "type": "text",
           "settings": {
-            "text": "<p>Explore our trusted collection of medical badges, nurse ID holders, and hospital ID accessories—designed with care for the people who care.</p>"
+            "text": "<p>An ID Card Printer is how an organization takes charge of its identification and security needs. There are devices tailored to the specific needs and desires of your organization. Direct to card printers are typically used for organizations with moderate needs, as they are quick and affordable with high image quality. Heat retransfer printers are used in tandem with laminators for ID badges that are more durable and will last for years. Devices are customizable with security encoders for specific requirements. Magnetic stripe encoding can easily be used for loyalty cards and guest passes. For more advanced options, consider smart contact encoding for reliable access control in corporate or governmental organizations. Check out some of our best sellers below.<br/><br/></p>"
           }
         },
         "button_CNVVKj": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Healthcare ID Supplies",
-            "button_link": "shopify://collections/healthcare",
+            "button_label": "Check out our printers!",
+            "button_link": "shopify://collections/id-card-printers",
             "button_style_secondary": false,
-            "button_label_2": "Request Bulk Quote",
-            "button_link_2": "shopify://pages/request-a-quote",
+            "button_label_2": "",
+            "button_link_2": "",
             "button_style_secondary_2": false
           }
         }
