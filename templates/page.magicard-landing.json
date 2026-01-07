@@ -156,14 +156,14 @@
         "heading_7nt9Xn": {
           "type": "heading",
           "settings": {
-            "heading": "HID® FARGO® HDP5000e",
+            "heading": "Magicard Pronto 100",
             "heading_size": "h1"
           }
         },
         "text_hRtx7G": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>High-definition single-sided ID card printer for professional use</li><li>Uses 7th-gen retransfer technology for vibrant, edge-to-edge printing</li><li>Produces sharp text and images with premium quality</li><li>SmartScreen™ interface for easy setup, use, and maintenance</li></ul>",
+            "text": "<ul><li>Fast, efficient single-sided ID card printer</li><li>Simple, user-friendly design with compact size for easy setup</li><li>Prints:</li></ul><ol><li>HD color photo IDs in 23 seconds</li><li>Standard color in 18 seconds</li><li>Monochrome in 4.7 seconds</li></ol><ul><li>Features Holokote® watermark for added security</li><li>Optional digital shredding for data protection</li><li>Includes Nessus Pro security tech with regular updates</li><li>Ideal for office environments needing quick, secure ID printing</li></ul>",
             "text_style": "body"
           }
         },
@@ -183,7 +183,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/fargo-hdp5000e-dual-sided-printer-left.webp",
+        "image": "shopify://shop_images/Pronto100ClosedHoppersLeft1_1.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
