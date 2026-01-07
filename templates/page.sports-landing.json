@@ -214,6 +214,57 @@
         "padding_bottom_mobile": 36
       }
     },
+    "image_with_text_3tkdN4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_VcwELh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Custom Printed Lanyards",
+            "heading_size": "h1"
+          }
+        },
+        "text_yL9jA6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Highlight your team branding while managing credentials with Specialist ID’s custom-printed sports lanyards, the go-to solution for stadium access, staff ID, and fan-facing activations. These high-quality lanyards are fully customizable with logos, team names, or sponsor messaging, making them ideal for staff, players, media, and fan-facing activations.</p><ul><li>Durable polyester material designed for all-day wear</li><li>Custom printing available in full color with multiple clip options</li><li>Great for sports teams, school athletics, esports, and race events</li><li>Bulk pricing available for large-scale games and tournaments<br/><br/></li></ul>",
+            "text_style": "body"
+          }
+        },
+        "button_dGGfgJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop now",
+            "button_link": "https://www.specialistid.com/products/custom-printed-lanyards-online",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_VcwELh",
+        "text_yL9jA6",
+        "button_dGGfgJ"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Custom-Printed-Lanyards-SpecialistID.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "image_with_text_qpjgd4": {
       "type": "image-with-text",
       "blocks": {
@@ -318,6 +369,7 @@
     "image_with_text_7iNgVj",
     "image_with_text_wAkeBq",
     "image_with_text_wxhCA9",
+    "image_with_text_3tkdN4",
     "image_with_text_qpjgd4",
     "newsletter_YihLyf"
   ]
