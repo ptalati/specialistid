@@ -183,6 +183,97 @@
         "title": "Tailored ID Supplies for Every Medical Role"
       }
     },
+    "industries_EWbVWW": {
+      "type": "industries",
+      "blocks": {
+        "industry_RErGzy": {
+          "type": "industry",
+          "settings": {
+            "title": "Sanitizable Badge Holders",
+            "description": "Designed for infection control, our hospital ID badge holders are easy to disinfect and built to withstand repeated cleanings."
+          }
+        },
+        "industry_kCfnnT": {
+          "type": "industry",
+          "settings": {
+            "title": "Durable & Retractable Badge Reels",
+            "description": "Ideal for fast-paced settings like ERs and ORs, our badge reels ensure your ID is always within reach without compromising durability."
+          }
+        },
+        "industry_gGTmcP": {
+          "type": "industry",
+          "settings": {
+            "title": "HIPAA-Compliant Visitor ID Products",
+            "description": "Help maintain patient privacy and compliance with customizable, secure visitor management solutions tailored for healthcare."
+          }
+        },
+        "industry_L74wzc": {
+          "type": "industry",
+          "settings": {
+            "title": "Uniformed Services ID Cards Made Simple",
+            "description": "Quick and efficient ordering of uniformed services ID cards for military medical staff and federal healthcare institutions."
+          }
+        }
+      },
+      "block_order": [
+        "industry_RErGzy",
+        "industry_kCfnnT",
+        "industry_gGTmcP",
+        "industry_L74wzc"
+      ],
+      "name": "Industries Grid",
+      "settings": {
+        "color_scheme": "scheme-489c7eeb-9ff9-469d-932f-38039ebc0e9c",
+        "heading": "Why Healthcare Professionals Rely on Us:",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "mob_top_spacing": 40,
+        "mob_bottom_spacing": 40
+      }
+    },
+    "custom_guidebook_showcase_BhWw6y": {
+      "type": "custom-guidebook-showcase",
+      "blocks": {
+        "feature_DQQ3xi": {
+          "type": "feature",
+          "settings": {
+            "feature": "Print durable, hospital-grade ID cards on demand"
+          }
+        },
+        "feature_MiaPBy": {
+          "type": "feature",
+          "settings": {
+            "feature": "Ideal for staff onboarding, temporary access, and patient-facing roles"
+          }
+        },
+        "feature_WMFBQp": {
+          "type": "feature",
+          "settings": {
+            "feature": "Compatible with badge holders, clips, and visitor management systems"
+          }
+        },
+        "feature_h3igjj": {
+          "type": "feature",
+          "settings": {
+            "feature": "Supports healthcare ID badge printing with optional encoding and security features"
+          }
+        }
+      },
+      "block_order": [
+        "feature_DQQ3xi",
+        "feature_MiaPBy",
+        "feature_WMFBQp",
+        "feature_h3igjj"
+      ],
+      "name": "Guidebook Showcase Section",
+      "settings": {
+        "title": "ID Printers for Healthcare Facilities",
+        "heading": "Streamline your identification process with professional-grade ID card printers built for hospitals, clinics, and medical offices. Whether you’re issuing custom nurse ID badges, doctor credentials, or visitor passes, our printers offer fast, high-resolution printing that keeps up with your workflow.",
+        "description": "",
+        "cta_label": "Explore Healthcare ID Printers",
+        "cta_link": "shopify://collections/id-card-printers"
+      }
+    },
     "custom_printer_showcase_eiAzRb": {
       "type": "custom-printer-showcase",
       "name": "Card Printing Section",
@@ -205,42 +296,6 @@
         "visual_text": "High-resolution, encrypted printing ensures every secure government ID meets federal and agency standards for quality and compliance.",
         "visual_cta_label": "Discover top-rated government ID printers",
         "visual_cta_link": "shopify://collections/id-card-printers"
-      }
-    },
-    "custom_guidebook_showcase_BhWw6y": {
-      "type": "custom-guidebook-showcase",
-      "blocks": {
-        "feature_DQQ3xi": {
-          "type": "feature",
-          "settings": {
-            "feature": "Fully aligned with FIPS 201 and HSPD-12 standards for government ID compliance"
-          }
-        },
-        "feature_WMFBQp": {
-          "type": "feature",
-          "settings": {
-            "feature": "Tamper-resistant, rugged materials built to protect your secure government ID credentials"
-          }
-        },
-        "feature_h3igjj": {
-          "type": "feature",
-          "settings": {
-            "feature": "Personalized solutions including barcodes, smart chips, and visual identifiers for any government issued ID example"
-          }
-        }
-      },
-      "block_order": [
-        "feature_DQQ3xi",
-        "feature_WMFBQp",
-        "feature_h3igjj"
-      ],
-      "name": "Guidebook Showcase Section",
-      "settings": {
-        "title": "Fully Compliant with Government ID Standards",
-        "heading": "To help agencies meet strict credentialing protocols, our products are designed for top-tier security and long-term compliance.",
-        "description": "",
-        "cta_label": "Download the Guidebook",
-        "cta_link": ""
       }
     },
     "featured_collection_8EC68i": {
@@ -420,8 +475,9 @@
     "rich_text_bpwrwG",
     "multicolumn_n4GQ6E",
     "custom_product_showcase_ewxxaH",
-    "custom_printer_showcase_eiAzRb",
+    "industries_EWbVWW",
     "custom_guidebook_showcase_BhWw6y",
+    "custom_printer_showcase_eiAzRb",
     "featured_collection_8EC68i",
     "rich_text_BPznLq",
     "image_with_text_7iNgVj",
