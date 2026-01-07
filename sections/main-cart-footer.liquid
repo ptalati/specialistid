@@ -15,6 +15,38 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  /* Custom content and subtotal row layout */
+  .cart__blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .cart__custom-content {
+    width: 100%;
+  }
+
+  .custom-content-wrapper {
+    padding: 1rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .cart__blocks-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .cart__custom-content {
+      width: 100%;
+    }
+
+    .cart__blocks-row .js-contents {
+      width: 100%;
+    }
+  }
 {%- endstyle -%}
 
 <div
@@ -38,10 +70,30 @@
       {%- endif -%}
 
       <div class="cart__blocks">
+        {%- assign has_custom_content = false -%}
+        {%- assign has_subtotal = false -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'custom_content' -%}
+            {%- assign has_custom_content = true -%}
+          {%- elsif block.type == 'subtotal' -%}
+            {%- assign has_subtotal = true -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- if has_custom_content and has_subtotal -%}
+          <div class="cart__blocks-row">
+        {%- endif -%}
+
         {% for block in section.blocks %}
           {%- case block.type -%}
             {%- when '@app' -%}
               {% render block %}
+            {%- when 'custom_content' -%}
+              <div class="cart__custom-content" {{ block.shopify_attributes }}>
+                <div class="custom-content-wrapper">
+                  {{ block.settings.custom_liquid }}
+                </div>
+              </div>
             {%- when 'subtotal' -%}
               <div class="js-contents" {{ block.shopify_attributes }}>
                 <div>
@@ -127,6 +179,10 @@
           {%- endcase -%}
         {% endfor %}
 
+        {%- if has_custom_content and has_subtotal -%}
+          </div>
+        {%- endif -%}
+
         <div id="cart-errors"></div>
       </div>
     </div>
@@ -170,6 +226,18 @@
     }
   ],
   "blocks": [
+    {
+      "type": "custom_content",
+      "name": "Custom Content",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Custom Liquid Code",
+          "info": "Add custom Liquid code to display on the left of the subtotal section"
+        }
+      ]
+    },
     {
       "type": "subtotal",
       "name": "t:sections.main-cart-footer.blocks.subtotal.name",
