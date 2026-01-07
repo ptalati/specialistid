@@ -93,12 +93,23 @@
             "link": "shopify://products/spidprox26hc-hid-compatible-composite-iso-prox-cards-with-hico-magnetic-strip",
             "link_label": "View Product"
           }
+        },
+        "product_x9qQtB": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Custom_ID-Badge.webp",
+            "title": "Custom-printed access badges",
+            "text": "<ul><li>Full-color printed ID badges for staff, visitors, and contractors.<br/></li><li>Options include barcodes, QR codes, and magnetic stripe encoding.<br/></li><li>Supports high-security formats including smart cards and multi-factor credentials.</li></ul>",
+            "link": "shopify://products/custom-printed-photo-id-badge",
+            "link_label": "Customize it"
+          }
         }
       },
       "block_order": [
         "product_FgkQfd",
         "product_AqKDKi",
-        "product_KeDLBn"
+        "product_KeDLBn",
+        "product_x9qQtB"
       ],
       "name": "Product Showcase Section",
       "settings": {
