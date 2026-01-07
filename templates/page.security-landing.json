@@ -1,0 +1,281 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_bpwrwG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7cYrkF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Professional ID Solutions for Schools",
+            "heading_size": "h1"
+          }
+        },
+        "text_7ATYnA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Custom ID badges and card holders designed specifically for educational institutions. Enhance security, streamline identification, and create a professional appearance with our premium products.</p>"
+          }
+        },
+        "button_CNVVKj": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop School Collection",
+            "button_link": "shopify://collections/school",
+            "button_style_secondary": false,
+            "button_label_2": "Get a Quote for your Institution",
+            "button_link_2": "shopify://pages/request-a-quote",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7cYrkF",
+        "text_7ATYnA",
+        "button_CNVVKj"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_product_showcase_ewxxaH": {
+      "type": "custom-product-showcase",
+      "blocks": {
+        "product_FgkQfd": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/726-CSN-Custom-1yourlogohere.webp",
+            "title": "Custom Clear Vertical Teacher Badge Holder",
+            "text": "<p>Professional, customizable teacher badge holder built for daily use in classrooms, offices or events</p><ul><li>Durable crystal-clear plastic construction</li><li>Easy side-loading with thumb notch</li><li>Slot and chain holes for lanyards or clips</li><li>Full-color custom printing available</li><li>Perfect for educators, staff and school events</li></ul>",
+            "link": "shopify://products/custom-clear-vertical-id-card-holder",
+            "link_label": "View Product"
+          }
+        },
+        "product_AqKDKi": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/Custom-Printed-Lanyards-SpecialistID.jpg",
+            "title": "Custom Printed Lanyards for Teachers and Coaches",
+            "text": "<p>Design high-quality lanyards perfect for any teacher or coach use, ideal for holding teacher badge holders, whistles or ID cards with comfort and durability</p><ul><li>Full-color custom printing with your badge custom printing with your logo or school name</li><li>Soft, durable for all day wear</li><li>Multiple clip options (swivel hook, bulldog clip, etc.)</li><li>Optional safety breakaway for added protection</li></ul>",
+            "link": "shopify://products/custom-printed-lanyards-online",
+            "link_label": "View Product"
+          }
+        }
+      },
+      "block_order": [
+        "product_FgkQfd",
+        "product_AqKDKi"
+      ],
+      "name": "Product Showcase Section",
+      "settings": {
+        "title": "Featured Products"
+      }
+    },
+    "custom_tax_exempt_BWdF8K": {
+      "type": "custom-tax-exempt",
+      "name": "Tax Exempt Section",
+      "settings": {
+        "title": "Tax-Exempt Ordering Made Simple",
+        "description": "<p>We understand that educational institutions, such as K-12 schools, school districts, and universities, qualify for tax-exempt purchases. Our streamlined process makes it easy to place orders for <strong>school ID badge holders</strong>, <strong>student ID card printers</strong>, and <strong>lanyards for teachers</strong> without tax complications.</p>",
+        "step1": "Submit your tax-exempt certificate during checkout",
+        "step2": "Our team verifies your institution's status",
+        "step3": "Receive confirmation and proceed with tax-free pricing on items like lanyards for students, ID accessories for faculty, and more",
+        "step4": "All future orders automatically apply tax exemption",
+        "visual_heading": "Quick Verification Process",
+        "visual_text": "<p>Most tax-exempt certifications are processed within 24 hours. Keep your documents ready for faster approval and start ordering your <strong>school visitor badges</strong>, <strong>retractable badge reels</strong>, or <strong>teacher ID badge accessories</strong> with ease.</p>",
+        "visual_link": ""
+      }
+    },
+    "custom_printer_showcase_eiAzRb": {
+      "type": "custom-printer-showcase",
+      "name": "Card Printing Section",
+      "settings": {
+        "title": "Professional Card Printing Services",
+        "description": "Our state-of-the-art printing technology ensures your school ID cards, teacher badges, and student identification cards meet the highest standards of quality and durability. From design to delivery, we handle every aspect of your school badge printing needs.",
+        "feature1_symbol": "",
+        "feature1_title": "Custom Design",
+        "feature1_text": "Full design services available for student ID badges, staff ID cards, and school visitor passes",
+        "feature2_symbol": "",
+        "feature2_title": "Fast Turnaround",
+        "feature2_text": "5–7 business days delivery on custom school ID printing",
+        "feature3_symbol": "",
+        "feature3_title": "Security Features",
+        "feature3_text": "Holograms, UV printing, and anti-counterfeit options to protect your student and teacher ID cards",
+        "feature4_symbol": "",
+        "feature4_title": "Premium Quality",
+        "feature4_text": "Fade-resistant, waterproof school badge cards built to last all year",
+        "visual_image": "shopify://shop_images/magicard-300-id-card-printer-left.webp",
+        "visual_title": "Advanced Printing Technology",
+        "visual_text": "High-resolution digital printing with color matching and quality control ensures every school ID badge and student access card meets professional standards.",
+        "visual_cta_label": "Discover top-rated ID card printers for schools",
+        "visual_cta_link": "shopify://collections/id-card-printers"
+      }
+    },
+    "custom_guidebook_showcase_BhWw6y": {
+      "type": "custom-guidebook-showcase",
+      "blocks": {
+        "feature_DQQ3xi": {
+          "type": "feature",
+          "settings": {
+            "feature": "Evaluating your options"
+          }
+        },
+        "feature_MiaPBy": {
+          "type": "feature",
+          "settings": {
+            "feature": "Reordering made easy"
+          }
+        },
+        "feature_WMFBQp": {
+          "type": "feature",
+          "settings": {
+            "feature": "Vendor comparision"
+          }
+        }
+      },
+      "block_order": [
+        "feature_DQQ3xi",
+        "feature_MiaPBy",
+        "feature_WMFBQp"
+      ],
+      "name": "Guidebook Showcase Section",
+      "settings": {
+        "title": "Free Guidebook: Master School ID Solutions",
+        "heading": "Everything You Need to Know About School ID Implementation",
+        "description": "This comprehensive guidebook walks you through the best practices for implementing ID badge programs in educational institutions. Learn about material selection, security features, student/staff onboarding, and cost-saving tips.",
+        "cta_label": "Consult the guide",
+        "cta_link": "shopify://pages/the-ultimate-school-id-purchasing-guide-simple-steps-to-get-started"
+      }
+    },
+    "image_with_text_7iNgVj": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_6CCXhX": {
+          "type": "caption",
+          "settings": {
+            "caption": "#MAKEITEASY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_aTrDTW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Speak to a live specialist",
+            "heading_size": "h1"
+          }
+        },
+        "text_FANpQJ": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Customer Service<br/><a href=\"tel:+18003806726\" title=\"tel:+18003806726\">1-800-380-6726</a></h2><h2>Enterprise Sales<br/><a href=\"tel:+18885591940\" title=\"tel:+18885591940\">1-888-559-1940</a></h2><h6>M-F 9am to 5pm EST</h6>",
+            "text_style": "body"
+          }
+        },
+        "button_dRjnVh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_6CCXhX",
+        "heading_aTrDTW",
+        "text_FANpQJ",
+        "button_dRjnVh"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Alex_Loki.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-e30cbd81-1610-4753-adaa-4c1d23099e47",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "newsletter_YihLyf": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_qf9GmN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Attached, Stay Connected with Specialist ID",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_8djeGE": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up and stay connected to receive news offers and exclusive discount codes.</p>"
+          }
+        },
+        "email_form_rzzYxz": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_qf9GmN",
+        "paragraph_8djeGE",
+        "email_form_rzzYxz"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "section_css_class": "newsletter-section",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_bpwrwG",
+    "custom_product_showcase_ewxxaH",
+    "custom_tax_exempt_BWdF8K",
+    "custom_printer_showcase_eiAzRb",
+    "custom_guidebook_showcase_BhWw6y",
+    "image_with_text_7iNgVj",
+    "newsletter_YihLyf"
+  ]
+}
