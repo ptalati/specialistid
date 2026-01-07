@@ -17,6 +17,26 @@
         "padding_bottom": 36
       }
     },
+    "cart_footer_wrapper_hbfw7D": {
+      "type": "cart-footer-wrapper",
+      "blocks": {
+        "custom_liquid_mLFdtV": {
+          "type": "custom_liquid",
+          "settings": {
+            "liquid_code": "123"
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_mLFdtV"
+      ],
+      "name": "Cart Footer Left+Right",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "cart-footer": {
       "type": "main-cart-footer",
       "blocks": {
@@ -47,7 +67,7 @@
             "en_tx_alert_msg_certificate_number": "Enter your tax-exempt certificate number",
             "en_tx_margin_top": 0,
             "en_tx_margin_bottom": 0,
-            "en_tx_bg_color": "#FFFFFF",
+            "en_tx_bg_color": "#ffffff",
             "en_tx_border": 1.5,
             "en_tx_border_radius": 3,
             "en_tx_border_color": "#ffffff",
@@ -99,6 +119,7 @@
   },
   "order": [
     "cart-items",
+    "cart_footer_wrapper_hbfw7D",
     "cart-footer",
     "featured-collection"
   ]
