@@ -219,14 +219,14 @@
         "heading_BDtUD4": {
           "type": "heading",
           "settings": {
-            "heading": "Magicard 300",
+            "heading": "IDP SMART-31S",
             "heading_size": "h1"
           }
         },
         "text_4Y6m8V": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Prints secure, high-quality employee badges, student IDs, and access cards</li><li>Supports full-color and black & white printing with edge-to-edge dye sublimation</li><li>Sharp text and graphics with high-definition output</li><li>Fast printing: 160 color cards/hr, 720 monochrome cards/hr</li><li>Optional magnetic stripe, smart card, and contactless encoding (MIFARE, DESFire)</li><li>Digital shredding for secure data protection<br/><br/></li></ul>",
+            "text": "<ul><li>Entry-level ID card printer for small organizations</li><li>Fast, reliable printing with high-quality image reproduction</li><li>Low cost per print</li><li>Compact, lightweight design fits easily into any workspace</li></ul>",
             "text_style": "body"
           }
         },
@@ -234,7 +234,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop now",
-            "button_link": "shopify://products/magicard-300-id-card-printer",
+            "button_link": "shopify://products/the-magicard-prima-8-double-sided-id-card-printer",
             "button_style_secondary": false
           }
         }
@@ -246,10 +246,10 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/magicard-300-id-card-printer-left.webp",
+        "image": "shopify://shop_images/IDP-651527-Single-Sided-ID-Card-Printer-1.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
         "desktop_content_position": "middle",
