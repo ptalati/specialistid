@@ -777,13 +777,9 @@
     // Priority: variant metafield -> product metafield -> default (1)
     // Try both 'c_f' (custom fields) and 'inventory' namespaces for backwards compatibility
     var min = parseInt(getVariantMetafield(variant_id, 'c_f', 'minimum')) ||
-              parseInt(getVariantMetafield(variant_id, 'inventory', 'minimum')) ||
-              parseInt(getProductMetafield('c_f', 'minimum')) ||
-              parseInt(getProductMetafield('inventory', 'minimum')) || 1;
+              parseInt(getProductMetafield('c_f', 'minimum')) || 1;
     var increment = parseInt(getVariantMetafield(variant_id, 'c_f', 'increment')) ||
-                    parseInt(getVariantMetafield(variant_id, 'inventory', 'increment')) ||
-                    parseInt(getProductMetafield('c_f', 'increment')) ||
-                    parseInt(getProductMetafield('inventory', 'increment')) || 1;
+                    parseInt(getProductMetafield('c_f', 'increment')) || 1;
 
     debugLog(`optionLogic for variant ${variant_id}: min=${min}, increment=${increment}, qty=${qty}, customPriceText=${customPriceText}`);
 
