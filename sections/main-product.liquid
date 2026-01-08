@@ -418,38 +418,38 @@
                   </label>
                   {%- liquid
                     # Calculate minimum quantity with priority: variant metafield -> product metafield -> quantity_rule.min -> 1
-                    assign minimum_qty = product.selected_or_first_available_variant.metafields.c_f.minimum
-                    if minimum_qty == blank
-                      assign minimum_qty = product.selected_or_first_available_variant.metafields.inventory.minimum
+                    assign minimum_qty = product.selected_or_first_available_variant.metafields.c_f.minimum.value
+                    if minimum_qty == blank or minimum_qty == nil or minimum_qty == 0
+                      assign minimum_qty = product.selected_or_first_available_variant.metafields.inventory.minimum.value
                     endif
-                    if minimum_qty == blank
-                      assign minimum_qty = product.metafields.c_f.minimum
+                    if minimum_qty == blank or minimum_qty == nil or minimum_qty == 0
+                      assign minimum_qty = product.metafields.c_f.minimum.value
                     endif
-                    if minimum_qty == blank
-                      assign minimum_qty = product.metafields.inventory.minimum
+                    if minimum_qty == blank or minimum_qty == nil or minimum_qty == 0
+                      assign minimum_qty = product.metafields.inventory.minimum.value
                     endif
-                    if minimum_qty == blank
+                    if minimum_qty == blank or minimum_qty == nil or minimum_qty == 0
                       assign minimum_qty = product.selected_or_first_available_variant.quantity_rule.min
                     endif
-                    if minimum_qty == blank
+                    if minimum_qty == blank or minimum_qty == nil or minimum_qty == 0
                       assign minimum_qty = 1
                     endif
 
                     # Calculate increment with same priority logic
-                    assign increment_qty = product.selected_or_first_available_variant.metafields.c_f.increment
-                    if increment_qty == blank
-                      assign increment_qty = product.selected_or_first_available_variant.metafields.inventory.increment
+                    assign increment_qty = product.selected_or_first_available_variant.metafields.c_f.increment.value
+                    if increment_qty == blank or increment_qty == nil or increment_qty == 0
+                      assign increment_qty = product.selected_or_first_available_variant.metafields.inventory.increment.value
                     endif
-                    if increment_qty == blank
-                      assign increment_qty = product.metafields.c_f.increment
+                    if increment_qty == blank or increment_qty == nil or increment_qty == 0
+                      assign increment_qty = product.metafields.c_f.increment.value
                     endif
-                    if increment_qty == blank
-                      assign increment_qty = product.metafields.inventory.increment
+                    if increment_qty == blank or increment_qty == nil or increment_qty == 0
+                      assign increment_qty = product.metafields.inventory.increment.value
                     endif
-                    if increment_qty == blank
+                    if increment_qty == blank or increment_qty == nil or increment_qty == 0
                       assign increment_qty = product.selected_or_first_available_variant.quantity_rule.increment
                     endif
-                    if increment_qty == blank
+                    if increment_qty == blank or increment_qty == nil or increment_qty == 0
                       assign increment_qty = 1
                     endif
                   -%}
