@@ -1694,25 +1694,26 @@
       if (!isNaN(discountPercent)) {
         const discountedAmount = originalPrice * discountPercent;
         const discountedPrice = bodyHasPrice ? discountPrice : originalPrice - discountedAmount;
+        const discountedPriceRounded = Math.floor((discountedPrice) * 100) / 100;
           // Math.floor((  ) * 100) / 100
 
         if (!bodyHasPrice && !priceColumnExists) {
           const priceCell = document.createElement("td");
-          priceCell.innerText = formatCurrencyLocal(discountedPrice) + " each";
+          priceCell.innerText = formatCurrencyLocal(discountedPriceRounded) + " each";
           row.appendChild(priceCell);
         } else {
           const cellsList = row.querySelectorAll('td');
           if (priceColumnIndex > -1 && cellsList[priceColumnIndex]) {
-            cellsList[priceColumnIndex].innerText = formatCurrencyLocal(Math.floor((discountedPrice * 100) / 100)) + " each";
+            cellsList[priceColumnIndex].innerText = formatCurrencyLocal(discountedPriceRounded) + " each";
           }
         }
 
         if (currentRange && quantity === currentRange.start) {
-          originalPriceElement.innerText = formatCurrencyLocal(Math.floor((discountedPrice * 100) / 100)) + " each";
+          originalPriceElement.innerText = formatCurrencyLocal(discountedPriceRounded) + " each";
           
           const discountedEstimatedTotal = discountedPrice * currentQuantity;
           const totalPriceEl = document.querySelector(".total-price-wrapper .total-price");
-          if (totalPriceEl) totalPriceEl.innerHTML = formatCurrencyLocal(Math.floor((iscountedEstimatedTotal * 100) / 100));
+          if (totalPriceEl) totalPriceEl.innerHTML = formatCurrencyLocal(discountedEstimatedTotal);
           if (rewardPointsEl) rewardPointsEl.innerHTML = discountedEstimatedTotal.toFixed(2);
         }
       }
