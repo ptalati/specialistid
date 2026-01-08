@@ -768,8 +768,16 @@
     var qty = variant.inventory_quantity || 0;
 
     // Get min and increment from metafields with defaults
-    var min = parseInt(getVariantMetafield(variant_id, 'inventory', 'minimum')) || 1;
-    var increment = parseInt(getVariantMetafield(variant_id, 'inventory', 'increment')) || 1;
+    // Priority: variant metafield -> product metafield -> default (1)
+    // Try both 'c_f' (custom fields) and 'inventory' namespaces for backwards compatibility
+    var min = parseInt(getVariantMetafield(variant_id, 'c_f', 'minimum')) ||
+              parseInt(getVariantMetafield(variant_id, 'inventory', 'minimum')) ||
+              parseInt(getProductMetafield('c_f', 'minimum')) ||
+              parseInt(getProductMetafield('inventory', 'minimum')) || 1;
+    var increment = parseInt(getVariantMetafield(variant_id, 'c_f', 'increment')) ||
+                    parseInt(getVariantMetafield(variant_id, 'inventory', 'increment')) ||
+                    parseInt(getProductMetafield('c_f', 'increment')) ||
+                    parseInt(getProductMetafield('inventory', 'increment')) || 1;
 
     debugLog(`optionLogic for variant ${variant_id}: min=${min}, increment=${increment}, qty=${qty}, customPriceText=${customPriceText}`);
 
@@ -820,6 +828,22 @@
       input.setAttribute('step', increment);
       input.setAttribute('value', min);
       input.value = min;
+
+      // Add input validation to prevent values less than minimum
+      input.addEventListener('input', function() {
+        const currentValue = parseInt(this.value);
+        if (currentValue < min && currentValue !== 0 && !isNaN(currentValue)) {
+          this.value = min;
+        }
+      });
+
+      // Add blur validation as well
+      input.addEventListener('blur', function() {
+        const currentValue = parseInt(this.value);
+        if (isNaN(currentValue) || currentValue < min) {
+          this.value = min;
+        }
+      });
     });
 
     const priceMinEl = document.querySelector('span.price-min');
@@ -1240,14 +1264,21 @@
   function doneTyping() {
     const qtyInput = document.querySelector('.quantity__input');
     const min = parseInt(qtyInput?.getAttribute('min')) || 1;
-    const qty = parseInt((qtyInput?.value || '').replace(/\D/g, '')) || min;
+    let qty = parseInt((qtyInput?.value || '').replace(/\D/g, ''));
     const increment = parseInt(qtyInput?.getAttribute('step')) || 1;
-    
+
+    // If quantity is empty or invalid, set to minimum
+    if (isNaN(qty) || qty < min) {
+      qty = min;
+      if (qtyInput) qtyInput.value = min;
+    }
+
     const stock = parseInt(qtyInput?.getAttribute('max'));
 
     if (!isNaN(stock)) {
       if (stock > 0 && qty > stock) {
         if (qtyInput) qtyInput.value = stock;
+        qty = stock;
       }
     }
 
@@ -1255,10 +1286,13 @@
     mapMsrpLogic();
     updateTablePrice();
 
+    // Final validation: ensure quantity is not less than minimum
     if (qty < min) {
       if (qtyInput) qtyInput.value = min;
     } else if (increment && !Number.isInteger(qty/increment)) {
-      if (qtyInput) qtyInput.value = min * Math.round(qty/increment);
+      // Round to nearest valid increment, but not less than min
+      const roundedQty = Math.max(min, increment * Math.round(qty/increment));
+      if (qtyInput) qtyInput.value = roundedQty;
     }
   }
 
@@ -1601,7 +1635,11 @@
     
     // Don't exit if price is 0 - it might be a valid price or just not loaded yet
     const currentQuantity = parseFloat(document.querySelector(".quantity__input")?.value) || 1;
-    const minQuantity = parseInt(getVariantMetafield(variant_id, 'inventory', 'minimum')) || 1;
+    // Get minimum quantity with same priority logic as optionLogic
+    const minQuantity = parseInt(getVariantMetafield(variant_id, 'c_f', 'minimum')) ||
+                        parseInt(getVariantMetafield(variant_id, 'inventory', 'minimum')) ||
+                        parseInt(getProductMetafield('c_f', 'minimum')) ||
+                        parseInt(getProductMetafield('inventory', 'minimum')) || 1;
     const ranges = extractRanges(table);
     const currentRange = findRangeForQuantity(currentQuantity, ranges);
 
