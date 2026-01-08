@@ -431,6 +431,12 @@
       loadProductData().then(() => {
         mapMsrpLogic();
         manageStockDisplay();
+
+        // Initialize minimum quantity from metafields
+        const initialVariantId = getVariantId();
+        if (initialVariantId) {
+          optionLogic(initialVariantId);
+        }
       });
     }, 100);
 
