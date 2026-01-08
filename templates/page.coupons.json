@@ -67,7 +67,9 @@
         "column_N7QpmL": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Welcome10",
+            "enable_copy_button": true,
             "text": "<p>$1 off $10 orders and up (one time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
             "link_label": "",
             "link": ""
@@ -76,7 +78,9 @@
         "column_cDUdrK": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Welcome50",
+            "enable_copy_button": true,
             "text": "<p>$5 off $50 orders and up (One time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
             "link_label": "",
             "link": ""
@@ -85,7 +89,9 @@
         "column_iMPAVR": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Welcome100",
+            "enable_copy_button": true,
             "text": "<p>$10 off $100 orders and up (One time use)</p><p><span style=\"text-decoration:underline\"><strong>No expiry date</strong></span></p>",
             "link_label": "",
             "link": ""
@@ -94,7 +100,9 @@
         "column_FqE7HY": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Q2SPID10",
+            "enable_copy_button": true,
             "text": "<p>Get 10% off any order below 1000$ or a 100$ off orders over 1000$. (One time use)</p><p><span style=\"text-decoration:underline\"><strong>Expired</strong></span></p>",
             "link_label": "",
             "link": ""
