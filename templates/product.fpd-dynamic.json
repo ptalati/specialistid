@@ -131,14 +131,9 @@
             "customize_quote_button_link": "https://www.specialistid.com/pages/request-a-quote"
           }
         },
-        "collapsible_tab_aiETtU": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Features",
-            "icon": "none",
-            "content": "{{ block.settings.page.content }}",
-            "page": ""
-          }
+        "product_specifications_epNwTy": {
+          "type": "product_specifications",
+          "settings": {}
         },
         "description": {
           "type": "description",
@@ -174,7 +169,7 @@
         "lead_time_KgVKHP",
         "buy_buttons",
         "customize_quote_buttons_KQYLh3",
-        "collapsible_tab_aiETtU",
+        "product_specifications_epNwTy",
         "description",
         "share"
       ],

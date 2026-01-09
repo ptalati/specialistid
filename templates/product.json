@@ -138,12 +138,17 @@
         },
         "collapsible_tab_aiETtU": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Features",
             "icon": "none",
             "content": "{{ block.settings.page.content }}",
             "page": ""
           }
+        },
+        "product_specifications_NAE6hJ": {
+          "type": "product_specifications",
+          "settings": {}
         },
         "description": {
           "type": "description",
@@ -181,6 +186,7 @@
         "buy_buttons",
         "customize_quote_buttons_KQYLh3",
         "collapsible_tab_aiETtU",
+        "product_specifications_NAE6hJ",
         "description",
         "share"
       ],
