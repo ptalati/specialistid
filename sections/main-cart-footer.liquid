@@ -40,6 +40,21 @@
       <div class="cart__blocks">
         {% for block in section.blocks %}
           {%- case block.type -%}
+            {%- when 'custom_liquid' -%}
+              <div class="js-contents" {{ block.shopify_attributes }}>
+                {{ block.settings.custom_liquid }}
+              </div>
+            {%- when 'text' -%}
+              <div class="cart__text-block rte" {{ block.shopify_attributes }}>
+                {{ block.settings.text_content }}
+              </div>
+          {%- endcase -%}
+        {% endfor %}
+      </div>
+
+      <div class="cart__blocks">
+        {% for block in section.blocks %}
+          {%- case block.type -%}
             {%- when '@app' -%}
               {% render block %}
             {%- when 'subtotal' -%}
@@ -147,7 +162,7 @@
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
-    },    
+    },
     {
       "type": "range",
       "id": "padding_top",
