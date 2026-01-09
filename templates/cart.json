@@ -17,29 +17,15 @@
         "padding_bottom": 36
       }
     },
-    "cart_footer_wrapper_hbfw7D": {
-      "type": "cart-footer-wrapper",
-      "blocks": {
-        "custom_liquid_mLFdtV": {
-          "type": "custom_liquid",
-          "settings": {
-            "liquid_code": "123"
-          }
-        }
-      },
-      "block_order": [
-        "custom_liquid_mLFdtV"
-      ],
-      "name": "Cart Footer Left+Right",
-      "settings": {
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "cart-footer": {
       "type": "main-cart-footer",
       "blocks": {
+        "text_eBDmfi": {
+          "type": "text",
+          "settings": {
+            "text_content": "<p>&lt;div class=\"docapp-single-shipping-calculator\"&gt;&lt;/div&gt;</p>"
+          }
+        },
         "subtotal": {
           "type": "subtotal",
           "settings": {}
@@ -78,6 +64,7 @@
         }
       },
       "block_order": [
+        "text_eBDmfi",
         "subtotal",
         "buttons",
         "diy_tax_exempt_checkout_app_block_kBdmFg"
@@ -119,7 +106,6 @@
   },
   "order": [
     "cart-items",
-    "cart_footer_wrapper_hbfw7D",
     "cart-footer",
     "featured-collection"
   ]
