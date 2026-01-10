@@ -88,8 +88,10 @@
 
               traverseNodes(document.body);
 
-              // Add viewport boundary detection for tooltips
-              adjustTooltipPositions();
+              // Add viewport boundary detection for tooltips after DOM updates
+              setTimeout(function() {
+                adjustTooltipPositions();
+              }, 100);
             },
             error: function(error) {
               console.error("Parsing error:", error);
@@ -105,6 +107,13 @@
     const tooltips = document.querySelectorAll('a.tooltip');
 
     tooltips.forEach(function(tooltip) {
+      // Skip if already has event listener
+      if (tooltip.hasAttribute('data-tooltip-initialized')) {
+        return;
+      }
+
+      tooltip.setAttribute('data-tooltip-initialized', 'true');
+
       tooltip.addEventListener('mouseenter', function() {
         // Reset classes
         this.classList.remove('tooltip-adjust-left', 'tooltip-adjust-right');
