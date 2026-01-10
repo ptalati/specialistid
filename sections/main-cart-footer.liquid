@@ -37,7 +37,7 @@
         </cart-note>
       {%- endif -%}
 
-      <div class="cart__blocks left-block-column">
+      <div class="cart__blocks cart-block-wrapper left-block-column">
         {% for block in section.blocks %}
           {%- case block.type -%}
             {%- when 'custom_liquid' -%}
@@ -52,7 +52,7 @@
         {% endfor %}
       </div>
 
-      <div class="cart__blocks right-block-column">
+      <div class="cart__blocks cart-block-wrapper right-block-column">
         {% for block in section.blocks %}
           {%- case block.type -%}
             {%- when '@app' -%}
