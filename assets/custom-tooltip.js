@@ -87,6 +87,9 @@
               }
 
               traverseNodes(document.body);
+
+              // Add viewport boundary detection for tooltips
+              adjustTooltipPositions();
             },
             error: function(error) {
               console.error("Parsing error:", error);
@@ -97,11 +100,44 @@
       .catch(err => console.error('Error fetching tooltip data:', err));
   }
 
+  // Adjust tooltip positions to stay within viewport
+  function adjustTooltipPositions() {
+    const tooltips = document.querySelectorAll('a.tooltip');
+
+    tooltips.forEach(function(tooltip) {
+      tooltip.addEventListener('mouseenter', function() {
+        // Reset classes
+        this.classList.remove('tooltip-adjust-left', 'tooltip-adjust-right');
+
+        // Get element position
+        const rect = this.getBoundingClientRect();
+        const tooltipWidth = 300; // max-width of tooltip
+        const tooltipLeft = rect.left + (rect.width / 2) - (tooltipWidth / 2);
+        const tooltipRight = rect.left + (rect.width / 2) + (tooltipWidth / 2);
+        const viewportWidth = window.innerWidth;
+
+        // Check if tooltip would overflow on the left
+        if (tooltipLeft < 10) {
+          this.classList.add('tooltip-adjust-left');
+        }
+        // Check if tooltip would overflow on the right
+        else if (tooltipRight > viewportWidth - 10) {
+          this.classList.add('tooltip-adjust-right');
+        }
+      });
+    });
+  }
+
   // Initialize when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initTooltips);
   } else {
     initTooltips();
   }
+
+  // Re-adjust on window resize
+  window.addEventListener('resize', function() {
+    adjustTooltipPositions();
+  });
 
 })();

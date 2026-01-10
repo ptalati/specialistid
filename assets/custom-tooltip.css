@@ -42,10 +42,52 @@ a.tooltip::before {
   pointer-events: none;
 
   /* Smooth transition */
-  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, left 0.2s ease;
 
   /* Ensure it appears above other content */
-  z-index: 1000;
+  z-index: 10000;
+}
+
+/* Adjust tooltip when it would overflow on the left */
+a.tooltip.tooltip-adjust-left::before {
+  left: 0;
+  transform: translateX(0) translateY(-8px);
+}
+
+a.tooltip.tooltip-adjust-left:hover::before {
+  transform: translateX(0) translateY(-4px);
+}
+
+/* Adjust tooltip when it would overflow on the right */
+a.tooltip.tooltip-adjust-right::before {
+  left: auto;
+  right: 0;
+  transform: translateX(0) translateY(-8px);
+}
+
+a.tooltip.tooltip-adjust-right:hover::before {
+  transform: translateX(0) translateY(-4px);
+}
+
+/* Adjust arrow for left-aligned tooltips */
+a.tooltip.tooltip-adjust-left::after {
+  left: 20px;
+  transform: translateX(0) translateY(-2px);
+}
+
+a.tooltip.tooltip-adjust-left:hover::after {
+  transform: translateX(0) translateY(-4px);
+}
+
+/* Adjust arrow for right-aligned tooltips */
+a.tooltip.tooltip-adjust-right::after {
+  left: auto;
+  right: 20px;
+  transform: translateX(0) translateY(-2px);
+}
+
+a.tooltip.tooltip-adjust-right:hover::after {
+  transform: translateX(0) translateY(-4px);
 }
 
 /* Tooltip arrow pointing down */
