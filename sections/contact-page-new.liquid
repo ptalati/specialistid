@@ -3,257 +3,257 @@
 {{ 'wufoo-modifier.css' | asset_url | stylesheet_tag }}
 
 <style>
-  .samplte-request-contact-{{ section.id }} {
-    padding-top: {{ section.settings.padding_top }}px;
-    padding-bottom: {{ section.settings.padding_bottom }}px;
-  }
-  .sample-requrest-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
-}
-  h1.contact-heading {
-    font-size: 40px;
-    line-height: 50px;
-    letter-spacing: 0;
-    text-align: center;
-    text-transform: capitalize;
-    color: #3A3A3C;
-    margin: 0;
-}
- p.contact-des {
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 0;
-    text-align: center;
-    color: #696969;
-    margin: 10px 0 50px;
-}
-  .sample-text span {
-    font-size: 14px;
-    letter-spacing: 0;
-    padding: 7px 18px;
-    background: #F5911F;
-    color: #ffffff;
-    border-radius: 4px;
-    font-weight: 500;
-    text-transform: uppercase;
-    line-height: 0px;
-}
- .sample-text h2 {
-    font-size: 40px;
-    line-height: 50px;
-    letter-spacing: 0;
-    text-transform: capitalize;
-    color: #3A3A3C;
-    margin-bottom: 10px;
-}
-  .sample-text h3 {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0;
-    text-transform: capitalize;
-}
-.sample-contact-inner p {
-    font-family: Rubik;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 100%;
-    letter-spacing: 0;
-    text-align: center;
-    color: #696969;
-    margin-bottom: 50px;
-}
- .sample-text .list-content ul li {
-    font-weight: 400;
-    font-size: 20px;
-    letter-spacing: 0;
-    line-height: 30px;
-    color: #696969;
-    margin-bottom: 19px;
-}
-  .list-content p {
-    letter-spacing: 0;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: normal;
-}
-.list-content p strong {
-    color: #3A3A3C;
-    font-weight: 600;
-}
-  .sample-text .list-content ul li strong {
-    color: #3A3A3C;
-}
-  .list-content {
-    margin-bottom: 60px;
-}
-  .sample-contact-inner {
-    background: #F1F1F1;
-    padding: 50px 60px;
-}
-  .sample-contact {
-    display: flex;
-    height: 100%;
-}
-  .sample-contact-inner h3 {
-    font-size: 28px;
-    margin-top: 0;
-    line-height: 100%;
-    letter-spacing: 0;
-    text-align: center;
-    color: #3A3A3C;
-    text-transform: capitalize;
-}
-  .sample-contact-inner  input.field__input::placeholder {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0;
-    color: #3A3A3C;
-    opacity: 1;
-}
- .sample-contact-inner  input.field__input {
-   border-radius: 5px;
-}
-textarea.field__input.text-area::placeholder {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0;
-    color: #3A3A3C;
-    opacity: 1;
-}
-  .sample-contact-inner .field:before {
-    border-radius: 5px;
-    box-shadow: none;
-}
-  .sample-contact-inner .field:after {
-    border-radius: 5px;
-    box-shadow: none;
-}
-  .sample-contact-inner .field:hover.field:after {
-    box-shadow: none;
-    outline: 0;
-    border-radius: 5px;
-}
-  .phone-number-class {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-  .phone-number-class span.field {
-    width: 100%;
-}
-  .sample-contact-inner {
-    background: #F1F1F1;
-    padding: 50px 60px;
-    width: 100%;
-}
-  textarea.field__input.text-area {
-    border: 1px solid #DFDFDF;
-    border-radius: 5px;
-}
-  .sample-contact-inner .contact__fields {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-  .name-class {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-  .sample-contact-inner .field {
-    margin-bottom: 20px;
-}
-  h3.font-semibold {
-    margin-top: 50px;
-}
-  .sample-contact-inner .contact__button.mt-4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-  p.font-semibold-text {
-    color: #3A3A3C;
-    font-family: Poppins;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0;
-    text-transform: capitalize;
-    margin: 30px 0px 20px;
-    text-align: start;
-}
-
-.bottom-policy {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 23px;
-    letter-spacing: 0;
-    margin-top: 30px;
-    color: #696969;
-    text-align: center;
-}
-  .bottom-policy a {
-    color: #696969;
-}
-  .text-area {
-    min-height: 15rem;
-}
-.list-content p a {
-    color: #F5911F;
-}
-  @media(max-width:1200px){
-    .sample-text h2 {    font-size: 35px;   line-height: 40px;}
-    .sample-text .list-content ul li { font-size: 18px;    margin-bottom: 14px;}
-    .sample-requrest-inner {    gap: 45px;}
-    .sample-contact-inner {    padding: 38px 35px;}
-    .sample-contact-inner h3 {    font-size: 25px;}
-    .sample-contact-inner p {    margin-bottom: 30px;}
-    .list-content p {   font-size: 18px;}
-     h1.contact-heading {    font-size: 35px;    line-height: 40px;}
-     p.contact-des {    font-size: 18px;    margin: 4px 0 40px;}
-  }
-    @media(max-width:900px){
-    .sample-requrest-inner {    grid-template-columns: 1fr;}
-    .sample-contact-inner {    padding: 35px 20px;}
-    .name-class {    gap: 10px;}
-    .sample-contact-inner .field {    margin-bottom: 10px;}
-    .sample-contact-inner {    padding: 38px 25px;}
-  }
-  @media screen and (max-width: 767px) {
-  .samplte-request-contact-{{ section.id }} {
-      padding-top: {{ section.settings.mob_top_spacing | append: 'px' }};
-      padding-bottom: {{ section.settings.mob_bottom_spacing | append: 'px' }};
+    .samplte-request-contact-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
     }
-    .sample-text h2 {    font-size: 30px;    line-height: 37px;}
-    .list-content {    margin-bottom: 30px;}
-    .sample-text .list-content ul li {    font-size: 16px;    margin-bottom: 10px;}
-    .list-content ul {    padding-left: 30px;}
-    .sample-contact-inner {    padding: 40px 15px;}
-    .sample-contact-inner h3 {    font-size: 22px;}
-    .sample-contact-inner .contact__fields {   gap: 5px;}
-    .name-class {    gap: 5px;}
-    .country-class{ gap: 5px; }
-    .sample-contact-inner .field {    margin-bottom: 8px;}
-    .sample-contact-inner p {    font-size: 15px; margin-bottom: 20px;}
-    .list-content p {   font-size: 16px;}
-    p.font-semibold-text {    font-size: 14px;}
-    h1.contact-heading {    font-size: 30px;    line-height: 40px;}
-    p.contact-des {    font-size: 16px;    margin: 4px 0 30px;}
-}
-
-  @media(max-width:500px){
-    .name-class {    grid-template-columns: 1fr;         gap: 0;}
-    .phone-number-class {    gap: 5px;}
-    .city-class {  grid-template-columns: 1fr;    gap: 0;}
-    .country-class {    grid-template-columns: 1fr;    gap: 0;}
+    .sample-requrest-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
   }
+    h1.contact-heading {
+      font-size: 40px;
+      line-height: 50px;
+      letter-spacing: 0;
+      text-align: center;
+      text-transform: capitalize;
+      color: #3A3A3C;
+      margin: 0;
+  }
+   p.contact-des {
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0;
+      text-align: center;
+      color: #696969;
+      margin: 10px 0 50px;
+  }
+    .sample-text span {
+      font-size: 14px;
+      letter-spacing: 0;
+      padding: 7px 18px;
+      background: #F5911F;
+      color: #ffffff;
+      border-radius: 4px;
+      font-weight: 500;
+      text-transform: uppercase;
+      line-height: 0px;
+  }
+   .sample-text h2 {
+      font-size: 40px;
+      line-height: 50px;
+      letter-spacing: 0;
+      text-transform: capitalize;
+      color: #3A3A3C;
+      margin-bottom: 10px;
+  }
+    .sample-text h3 {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-transform: capitalize;
+  }
+  .sample-contact-inner p {
+      font-family: Rubik;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: center;
+      color: #696969;
+      margin-bottom: 50px;
+  }
+   .sample-text .list-content ul li {
+      font-weight: 400;
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: 30px;
+      color: #696969;
+      margin-bottom: 19px;
+  }
+    .list-content p {
+      letter-spacing: 0;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: normal;
+  }
+  .list-content p strong {
+      color: #3A3A3C;
+      font-weight: 600;
+  }
+    .sample-text .list-content ul li strong {
+      color: #3A3A3C;
+  }
+    .list-content {
+      margin-bottom: 60px;
+  }
+    .sample-contact-inner {
+      background: #F1F1F1;
+      padding: 50px 60px;
+  }
+    .sample-contact {
+      display: flex;
+      height: 100%;
+  }
+    .sample-contact-inner h3 {
+      font-size: 28px;
+      margin-top: 0;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: center;
+      color: #3A3A3C;
+      text-transform: capitalize;
+  }
+    .sample-contact-inner  input.field__input::placeholder {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 100%;
+      letter-spacing: 0;
+      color: #3A3A3C;
+      opacity: 1;
+  }
+   .sample-contact-inner  input.field__input {
+     border-radius: 5px;
+  }
+  textarea.field__input.text-area::placeholder {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 100%;
+      letter-spacing: 0;
+      color: #3A3A3C;
+      opacity: 1;
+  }
+    .sample-contact-inner .field:before {
+      border-radius: 5px;
+      box-shadow: none;
+  }
+    .sample-contact-inner .field:after {
+      border-radius: 5px;
+      box-shadow: none;
+  }
+    .sample-contact-inner .field:hover.field:after {
+      box-shadow: none;
+      outline: 0;
+      border-radius: 5px;
+  }
+    .phone-number-class {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+  }
+    .phone-number-class span.field {
+      width: 100%;
+  }
+    .sample-contact-inner {
+      background: #F1F1F1;
+      padding: 50px 60px;
+      width: 100%;
+  }
+    textarea.field__input.text-area {
+      border: 1px solid #DFDFDF;
+      border-radius: 5px;
+  }
+    .sample-contact-inner .contact__fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+  }
+    .name-class {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+  }
+    .sample-contact-inner .field {
+      margin-bottom: 20px;
+  }
+    h3.font-semibold {
+      margin-top: 50px;
+  }
+    .sample-contact-inner .contact__button.mt-4 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+    p.font-semibold-text {
+      color: #3A3A3C;
+      font-family: Poppins;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-transform: capitalize;
+      margin: 30px 0px 20px;
+      text-align: start;
+  }
+
+  .bottom-policy {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 23px;
+      letter-spacing: 0;
+      margin-top: 30px;
+      color: #696969;
+      text-align: center;
+  }
+    .bottom-policy a {
+      color: #696969;
+  }
+    .text-area {
+      min-height: 15rem;
+  }
+  .list-content p a {
+      color: #F5911F;
+  }
+    @media(max-width:1200px){
+      .sample-text h2 {    font-size: 35px;   line-height: 40px;}
+      .sample-text .list-content ul li { font-size: 18px;    margin-bottom: 14px;}
+      .sample-requrest-inner {    gap: 45px;}
+      .sample-contact-inner {    padding: 38px 35px;}
+      .sample-contact-inner h3 {    font-size: 25px;}
+      .sample-contact-inner p {    margin-bottom: 30px;}
+      .list-content p {   font-size: 20px;}
+       h1.contact-heading {    font-size: 35px;    line-height: 40px;}
+       p.contact-des {    font-size: 18px;    margin: 4px 0 40px;}
+    }
+      @media(max-width:900px){
+      .sample-requrest-inner {    grid-template-columns: 1fr;}
+      .sample-contact-inner {    padding: 35px 20px;}
+      .name-class {    gap: 10px;}
+      .sample-contact-inner .field {    margin-bottom: 10px;}
+      .sample-contact-inner {    padding: 38px 25px;}
+    }
+    @media screen and (max-width: 767px) {
+    .samplte-request-contact-{{ section.id }} {
+        padding-top: {{ section.settings.mob_top_spacing | append: 'px' }};
+        padding-bottom: {{ section.settings.mob_bottom_spacing | append: 'px' }};
+      }
+      .sample-text h2 {    font-size: 30px;    line-height: 37px;}
+      .list-content {    margin-bottom: 30px;}
+      .sample-text .list-content ul li {    font-size: 16px;    margin-bottom: 10px;}
+      .list-content ul {    padding-left: 30px;}
+      .sample-contact-inner {    padding: 40px 15px;}
+      .sample-contact-inner h3 {    font-size: 22px;}
+      .sample-contact-inner .contact__fields {   gap: 5px;}
+      .name-class {    gap: 5px;}
+      .country-class{ gap: 5px; }
+      .sample-contact-inner .field {    margin-bottom: 8px;}
+      .sample-contact-inner p {    font-size: 15px; margin-bottom: 20px;}
+      .list-content p {   font-size: 16px;}
+      p.font-semibold-text {    font-size: 14px;}
+      h1.contact-heading {    font-size: 30px;    line-height: 40px;}
+      p.contact-des {    font-size: 16px;    margin: 4px 0 30px;}
+  }
+
+    @media(max-width:500px){
+      .name-class {    grid-template-columns: 1fr;         gap: 0;}
+      .phone-number-class {    gap: 5px;}
+      .city-class {  grid-template-columns: 1fr;    gap: 0;}
+      .country-class {    grid-template-columns: 1fr;    gap: 0;}
+    }
 </style>
 
 <div class="samplte-request-contact-{{ section.id }}">
@@ -310,7 +310,7 @@ textarea.field__input.text-area::placeholder {
                     placeholder="Last name"
                   >
                 </span>
-              </div>              
+              </div>
               <div id="fodiv16" data-wufoo-field data-field-type="text" class="notranslate company">
                 <div class="field">
                   <input
@@ -356,8 +356,6 @@ textarea.field__input.text-area::placeholder {
                     placeholder="Phone"
                   >
                 </span>
-
-
               </div>
               <div
                 id="fodiv1"
@@ -396,9 +394,19 @@ textarea.field__input.text-area::placeholder {
 
               <div>
                 <span class="field">
-                  <input id="Field20" name="Field20" type="checkbox" class="field_input checkbox" value=" Yes, sign me up for the Specialist ID newsletter with product updates and exclusive offers." tabindex="0" checked="checked"     />
+                  <input
+                    id="Field20"
+                    name="Field20"
+                    type="checkbox"
+                    class="field_input checkbox"
+                    value=" Yes, sign me up for the Specialist ID newsletter with product updates and exclusive offers."
+                    tabindex="0"
+                    checked="checked"
+                  >
                   <label class="choice" for="Field20">
-                    <span class="choice__text notranslate" > Yes, sign me up for the Specialist ID newsletter with product updates and exclusive offers.</span>
+                    <span class="choice__text notranslate">
+                      Yes, sign me up for the Specialist ID newsletter with product updates and exclusive offers.</span
+                    >
                     <span class="choice__qty"></span>
                   </label>
                 </span>
@@ -416,18 +424,21 @@ textarea.field__input.text-area::placeholder {
                 </div>
               </div>
 
-              {% comment %} <div class="hide">
-                <label for="comment">Do Not Fill This Out</label>
-                <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-                <input type="hidden" id="idstamp" name="idstamp" value="yk8sAkEJdSUkhfHd8vzzF2Vw20UH2mYGmSH4PstwpgQ=">
-                <input type="hidden" id="encryptedPassword" name="encryptedPassword" value="">
-              </div> {% endcomment %}
-              
+              {% comment %}
+                <div class="hide">
+                  <label for="comment">Do Not Fill This Out</label>
+                  <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+                  <input type="hidden" id="idstamp" name="idstamp" value="yk8sAkEJdSUkhfHd8vzzF2Vw20UH2mYGmSH4PstwpgQ=">
+                  <input type="hidden" id="encryptedPassword" name="encryptedPassword" value="">
+                </div>
+              {% endcomment %}
             </div>
           </form>
           <div class="bottom-policy">
-              This site is protected by reCAPTCHA Enterprise and the Google <a href="/pages/privacy-policy">Privacy Policy</a> and <a href="/pages/terms-and-conditions">Terms of Service</a> apply.
-         </div>
+            This site is protected by reCAPTCHA Enterprise and the Google<a href="/pages/privacy-policy"
+              >Privacy Policy</a
+            >and<a href="/pages/terms-and-conditions">Terms of Service</a>apply.
+          </div>
         </div>
 
         {% comment %}
@@ -533,54 +544,54 @@ textarea.field__input.text-area::placeholder {
   "name": "Contact",
   "settings": [
     {
-      "type":"text",
-      "id":"page_heading",
-      "label":"Section heading"
+      "type": "text",
+      "id": "page_heading",
+      "label": "Section heading"
     },
     {
-      "type":"textarea",
-      "id":"page_desc",
-      "label":"Section description"
+      "type": "textarea",
+      "id": "page_desc",
+      "label": "Section description"
     },
     {
-      "type":"text",
-      "id":"caption",
-      "label":"Caption"
+      "type": "text",
+      "id": "caption",
+      "label": "Caption"
     },
     {
-      "type":"inline_richtext",
-      "id":"heading",
-      "label":"heading"
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "heading"
     },
     {
-      "type":"inline_richtext",
-      "id":"subheading",
-      "label":"Subheading"
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "Subheading"
     },
     {
-      "type":"richtext",
-      "id":"content",
-      "label":"Content"
-    },
-     {
-      "type":"richtext",
-      "id":"content1",
-      "label":"Content"
-    },
-     {
-      "type":"richtext",
-      "id":"content2",
-      "label":"Content"
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
     },
     {
-      "type":"text",
-      "id":"button_label",
-      "label":"Button label"
+      "type": "richtext",
+      "id": "content1",
+      "label": "Content"
     },
     {
-      "type":"url",
-      "id":"button_link",
-      "label":"Button link"
+      "type": "richtext",
+      "id": "content2",
+      "label": "Content"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
     },
     {
       "type": "header",
@@ -618,17 +629,17 @@ textarea.field__input.text-area::placeholder {
     {
       "type": "range",
       "id": "mob_bottom_spacing",
-      "label": "Mobile paddding bottom" ,
+      "label": "Mobile paddding bottom",
       "min": 0,
       "max": 200,
       "step": 4,
       "default": 40
     }
   ],
-   "presets": [
-      {
-        "name": "Contact "
-      }
-    ]
+  "presets": [
+    {
+      "name": "Contact "
+    }
+  ]
 }
 {% endschema %}

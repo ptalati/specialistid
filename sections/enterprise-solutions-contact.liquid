@@ -2,267 +2,266 @@
 {{ 'wufoo.css' | asset_url | stylesheet_tag }}
 {{ 'wufoo-modifier.css' | asset_url | stylesheet_tag }}
 
-
 <style>
-   .samplte-request-contact-{{ section.id }} {
-    padding-top: {{ section.settings.padding_top }}px;
-    padding-bottom: {{ section.settings.padding_bottom }}px;
-  }
-  .sample-requrest-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
-}
-  h1.contact-heading {
-    font-size: 40px;
-    line-height: 50px;
-    letter-spacing: 0;
-    text-align: center;
-    text-transform: capitalize;
-    color: #3A3A3C;
-    margin: 0;
-}
- p.contact-des {
-    font-family: Rubik;
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 0;
-    text-align: center;
-    color: #696969;
-    margin: 10px 0 50px;
-}
-  .sample-text span {
-    font-size: 14px;
-    letter-spacing: 0;
-    padding: 7px 18px;
-    background: #F5911F;
-    color: #ffffff;
-    border-radius: 4px;
-    font-weight: 500;
-    text-transform: uppercase;
-    line-height: 0px;
-}
- .sample-text h1 {
-    font-size: 40px;
-    line-height: 50px;
-    letter-spacing: 0;
-    text-transform: capitalize;
-    color: #3A3A3C;
-    margin-bottom: 10px;
-}
-  .sample-text h3 {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 100%;
-    letter-spacing: 0;
-    text-transform: capitalize;
-}
-.sample-contact-inner p {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 100%;
-    letter-spacing: 0;
-    text-align: center;
-    color: #696969;
-    margin-bottom: 50px;
-}
- .sample-text .list-content ul li {
-    font-weight: 400;
-    font-size: 20px;
-    letter-spacing: 0;
-    line-height: 30px;
-    color: #696969;
-    margin-bottom: 19px;
-}
- .list-content p {
-    letter-spacing: 0;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: normal;
-}
- .list-content p strong {
-    color: #3A3A3C;
-    font-weight: 600;
-}
-  .sample-text .list-content ul li strong {
-    color: #3A3A3C;
-}
-  .list-content {
-    margin-bottom: 60px;
-}
-  .sample-contact-inner {
-    background: #F1F1F1;
-    padding: 50px 60px;
-}
-  .sample-contact {
-    display: flex;
-    height: 100%;
-}
-  .sample-contact-inner h3 {
-    font-size: 28px;
-    margin-top: 0;
-    line-height: 100%;
-    letter-spacing: 0;
-    text-align: center;
-    color: #3A3A3C;
-    text-transform: capitalize;
-}
-  .sample-contact-inner  input.field__input::placeholder {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0;
-    color: #3A3A3C;
-    opacity: 1;
-}
- .sample-contact-inner  input.field__input {
-   border-radius: 5px;
-}
-  textarea.field__input.text-area::placeholder {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0;
-    color: #3A3A3C;
-    opacity: 1;
-}
-  .sample-contact-inner .field:before {
-    border-radius: 5px;
-    box-shadow: none;
-}
-  .sample-contact-inner .field:after {
-    border-radius: 5px;
-    box-shadow: none;
-}
-  .sample-contact-inner .field:hover.field:after {
-    box-shadow: none;
-    outline: 0;
-    border-radius: 5px;
-}
-  .phone-number-class {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-  .phone-number-class span.field {
-    width: 100%;
-}
-  .sample-contact-inner {
-    background: #F1F1F1;
-    padding: 50px 60px;
-    width: 100%;
-}
-  textarea.field__input.text-area {
-    border: 1px solid #DFDFDF;
-    border-radius: 5px;
-}
-  .sample-contact-inner .contact__fields {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-  .name-class {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-  .sample-contact-inner .field {
-    margin-bottom: 20px;
-}
-  h3.font-semibold {
-    margin-top: 50px;
-}
-  .sample-contact-inner .contact__button.mt-4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-  p.font-semibold-text {
-    color: #3A3A3C;
-    font-family: Poppins;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0;
-    text-transform: capitalize;
-    margin: 30px 0px 20px;
-    text-align: start;
-}
-.bottom-policy {
-    font-family: Rubik;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 23px;
-    letter-spacing: 0;
-    margin-top: 30px;
-    color: #696969;
-    text-align: center;
-}
-  .bottom-policy a {
-    color: #696969;
-}
-  .text-area {
-    min-height: 15rem;
-}
-  p.samplte-request-cls {
-    margin: 10px 0 20px;
-    font-size: 15px;
-    text-align: start;
-}
-h4.font-semibold-cls {
-    font-size: 20px;
-    margin: 10px 0px;
-}
-  @media(max-width:1200px){
-    .sample-text h1 {    font-size: 35px;   line-height: 40px;}
-    .sample-text .list-content ul li { font-size: 18px;    margin-bottom: 14px;}
-    .sample-requrest-inner {    gap: 45px;}
-    .sample-contact-inner {    padding: 38px 35px;}
-    .sample-contact-inner h3 {    font-size: 25px;}
-    .sample-contact-inner p {    margin-bottom: 25px;}
-    .list-content p {   font-size: 18px;}
-     h1.contact-heading {    font-size: 35px;    line-height: 40px;}
-     p.contact-des {    font-size: 18px;    margin: 4px 0 40px;}
-  }
-  
-  @media(max-width:900px){
-    .sample-requrest-inner {    grid-template-columns: 1fr;}
-    .sample-contact-inner {    padding: 35px 20px;}
-    .name-class {    gap: 10px;}
-    .sample-contact-inner .field {    margin-bottom: 10px;}
-    .country-class {    gap: 10px;}
-    .city-class {   gap: 10px;}
-    .sample-contact-inner {    padding: 38px 25px;}
-  }
-  @media screen and (max-width: 767px) {
-  .samplte-request-contact-{{ section.id }} {
-      padding-top: {{ section.settings.mob_top_spacing | append: 'px' }};
-      padding-bottom: {{ section.settings.mob_bottom_spacing | append: 'px' }};
+     .samplte-request-contact-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
     }
-    .sample-text h1 {    font-size: 30px;    line-height: 37px;}
-    .list-content {    margin-bottom: 30px;}
-    .sample-text .list-content ul li {    font-size: 16px;    margin-bottom: 10px;}
-    .list-content ul {    padding-left: 30px;}
-    .sample-contact-inner {    padding: 40px 15px;}
-    .sample-contact-inner h3 {    font-size: 22px;}
-    .sample-contact-inner .contact__fields {   gap: 5px;}
-    .name-class {    gap: 5px;}
-    .city-class {    gap: 5px;}
-    .sample-contact-inner .field {    margin-bottom: 8px;}
-    .sample-contact-inner p {    font-size: 15px; margin-bottom: 20px;}
-    .list-content p {   font-size: 16px;}
-    p.font-semibold-text {    font-size: 14px;}
-    h1.contact-heading {    font-size: 30px;    line-height: 40px;}
-    p.contact-des {    font-size: 16px;    margin: 4px 0 30px;}
-}
-   @media(max-width:500px){
-    .name-class {    grid-template-columns: 1fr;         gap: 0;}
-    .phone-number-class {    gap: 5px;}
-    .city-class {  grid-template-columns: 1fr;    gap: 0;}
-    .country-class {    grid-template-columns: 1fr;    gap: 0;}
+    .sample-requrest-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
   }
+    h1.contact-heading {
+      font-size: 40px;
+      line-height: 50px;
+      letter-spacing: 0;
+      text-align: center;
+      text-transform: capitalize;
+      color: #3A3A3C;
+      margin: 0;
+  }
+   p.contact-des {
+      font-family: Rubik;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0;
+      text-align: center;
+      color: #696969;
+      margin: 10px 0 50px;
+  }
+    .sample-text span {
+      font-size: 14px;
+      letter-spacing: 0;
+      padding: 7px 18px;
+      background: #F5911F;
+      color: #ffffff;
+      border-radius: 4px;
+      font-weight: 500;
+      text-transform: uppercase;
+      line-height: 0px;
+  }
+   .sample-text h1 {
+      font-size: 40px;
+      line-height: 50px;
+      letter-spacing: 0;
+      text-transform: capitalize;
+      color: #3A3A3C;
+      margin-bottom: 10px;
+  }
+    .sample-text h3 {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-transform: capitalize;
+  }
+  .sample-contact-inner p {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: center;
+      color: #696969;
+      margin-bottom: 50px;
+  }
+   .sample-text .list-content ul li {
+      font-weight: 400;
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: 30px;
+      color: #696969;
+      margin-bottom: 19px;
+  }
+   .list-content p {
+      letter-spacing: 0;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: normal;
+  }
+   .list-content p strong {
+      color: #3A3A3C;
+      font-weight: 600;
+  }
+    .sample-text .list-content ul li strong {
+      color: #3A3A3C;
+  }
+    .list-content {
+      margin-bottom: 60px;
+  }
+    .sample-contact-inner {
+      background: #F1F1F1;
+      padding: 50px 60px;
+  }
+    .sample-contact {
+      display: flex;
+      height: 100%;
+  }
+    .sample-contact-inner h3 {
+      font-size: 28px;
+      margin-top: 0;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: center;
+      color: #3A3A3C;
+      text-transform: capitalize;
+  }
+    .sample-contact-inner  input.field__input::placeholder {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 100%;
+      letter-spacing: 0;
+      color: #3A3A3C;
+      opacity: 1;
+  }
+   .sample-contact-inner  input.field__input {
+     border-radius: 5px;
+  }
+    textarea.field__input.text-area::placeholder {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 100%;
+      letter-spacing: 0;
+      color: #3A3A3C;
+      opacity: 1;
+  }
+    .sample-contact-inner .field:before {
+      border-radius: 5px;
+      box-shadow: none;
+  }
+    .sample-contact-inner .field:after {
+      border-radius: 5px;
+      box-shadow: none;
+  }
+    .sample-contact-inner .field:hover.field:after {
+      box-shadow: none;
+      outline: 0;
+      border-radius: 5px;
+  }
+    .phone-number-class {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+  }
+    .phone-number-class span.field {
+      width: 100%;
+  }
+    .sample-contact-inner {
+      background: #F1F1F1;
+      padding: 50px 60px;
+      width: 100%;
+  }
+    textarea.field__input.text-area {
+      border: 1px solid #DFDFDF;
+      border-radius: 5px;
+  }
+    .sample-contact-inner .contact__fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+  }
+    .name-class {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+  }
+    .sample-contact-inner .field {
+      margin-bottom: 20px;
+  }
+    h3.font-semibold {
+      margin-top: 50px;
+  }
+    .sample-contact-inner .contact__button.mt-4 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+    p.font-semibold-text {
+      color: #3A3A3C;
+      font-family: Poppins;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-transform: capitalize;
+      margin: 30px 0px 20px;
+      text-align: start;
+  }
+  .bottom-policy {
+      font-family: Rubik;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 23px;
+      letter-spacing: 0;
+      margin-top: 30px;
+      color: #696969;
+      text-align: center;
+  }
+    .bottom-policy a {
+      color: #696969;
+  }
+    .text-area {
+      min-height: 15rem;
+  }
+    p.samplte-request-cls {
+      margin: 10px 0 20px;
+      font-size: 15px;
+      text-align: start;
+  }
+  h4.font-semibold-cls {
+      font-size: 20px;
+      margin: 10px 0px;
+  }
+    @media(max-width:1200px){
+      .sample-text h1 {    font-size: 35px;   line-height: 40px;}
+      .sample-text .list-content ul li { font-size: 18px;    margin-bottom: 14px;}
+      .sample-requrest-inner {    gap: 45px;}
+      .sample-contact-inner {    padding: 38px 35px;}
+      .sample-contact-inner h3 {    font-size: 25px;}
+      .sample-contact-inner p {    margin-bottom: 25px;}
+      .list-content p {   font-size: 18px;}
+       h1.contact-heading {    font-size: 35px;    line-height: 40px;}
+       p.contact-des {    font-size: 18px;    margin: 4px 0 40px;}
+    }
+
+    @media(max-width:900px){
+      .sample-requrest-inner {    grid-template-columns: 1fr;}
+      .sample-contact-inner {    padding: 35px 20px;}
+      .name-class {    gap: 10px;}
+      .sample-contact-inner .field {    margin-bottom: 10px;}
+      .country-class {    gap: 10px;}
+      .city-class {   gap: 10px;}
+      .sample-contact-inner {    padding: 38px 25px;}
+    }
+    @media screen and (max-width: 767px) {
+    .samplte-request-contact-{{ section.id }} {
+        padding-top: {{ section.settings.mob_top_spacing | append: 'px' }};
+        padding-bottom: {{ section.settings.mob_bottom_spacing | append: 'px' }};
+      }
+      .sample-text h1 {    font-size: 30px;    line-height: 37px;}
+      .list-content {    margin-bottom: 30px;}
+      .sample-text .list-content ul li {    font-size: 16px;    margin-bottom: 10px;}
+      .list-content ul {    padding-left: 30px;}
+      .sample-contact-inner {    padding: 40px 15px;}
+      .sample-contact-inner h3 {    font-size: 22px;}
+      .sample-contact-inner .contact__fields {   gap: 5px;}
+      .name-class {    gap: 5px;}
+      .city-class {    gap: 5px;}
+      .sample-contact-inner .field {    margin-bottom: 8px;}
+      .sample-contact-inner p {    font-size: 15px; margin-bottom: 20px;}
+      .list-content p {   font-size: 16px;}
+      p.font-semibold-text {    font-size: 14px;}
+      h1.contact-heading {    font-size: 30px;    line-height: 40px;}
+      p.contact-des {    font-size: 16px;    margin: 4px 0 30px;}
+  }
+     @media(max-width:500px){
+      .name-class {    grid-template-columns: 1fr;         gap: 0;}
+      .phone-number-class {    gap: 5px;}
+      .city-class {  grid-template-columns: 1fr;    gap: 0;}
+      .country-class {    grid-template-columns: 1fr;    gap: 0;}
+    }
 </style>
 
 <div id="enterprise-contact" class="samplte-request-contact-{{ section.id }}">
@@ -274,23 +273,23 @@ h4.font-semibold-cls {
         <h3>{{ section.settings.subheading }}</h3>
         <div class="list-content">{{ section.settings.content }}</div>
         <div class="list-content">{{ section.settings.content1 }}</div>
-         <div class="list-content">{{ section.settings.content2 }}</div>
+        <div class="list-content">{{ section.settings.content2 }}</div>
         <a class="button" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
       </div>
-       <div class="sample-contact">
-       <div class="sample-contact-inner">
-         <h3> Contact Our Enterprise Solutions Team</h3>
-         <p>Let's create your ideal enterprise solution—just share your project details to get started</p>
-        <form
-          id="form42"
-          name="form42"
-          class="wufoo topLabel page"
-          accept-charset="UTF-8"
-          autocomplete="off"
-          enctype="multipart/form-data"
-          method="post"
-          novalidate
-              action="https://specialistid.wufoo.com/forms/r1yg0rcs10y2ie9/#public"
+      <div class="sample-contact">
+        <div class="sample-contact-inner">
+          <h3>Contact Our Enterprise Solutions Team</h3>
+          <p>Let's create your ideal enterprise solution—just share your project details to get started</p>
+          <form
+            id="form42"
+            name="form42"
+            class="wufoo topLabel page"
+            accept-charset="UTF-8"
+            autocomplete="off"
+            enctype="multipart/form-data"
+            method="post"
+            novalidate
+            action="https://specialistid.wufoo.com/forms/r1yg0rcs10y2ie9/#public"
           >
             <div>
               <div id="foli1" class="notranslate name-class">
@@ -320,7 +319,7 @@ h4.font-semibold-cls {
                     required
                   >
                 </span>
-              </div>              
+              </div>
               <div id="foli3" class="notranslate">
                 <div class="field">
                   <input
@@ -336,10 +335,20 @@ h4.font-semibold-cls {
                     required
                   >
                 </div>
-              </div>  
+              </div>
               <div id="foli113" class="company-name notranslate company-name-class">
                 <span class="field">
-                  <input id="Field113" name="Field113" type="text" class="text field__input" value="" maxLength="255" tabindex="0" onkeyup="" placeholder="Company name" />
+                  <input
+                    id="Field113"
+                    name="Field113"
+                    type="text"
+                    class="text field__input"
+                    value=""
+                    maxLength="255"
+                    tabindex="0"
+                    onkeyup=""
+                    placeholder="Company name"
+                  >
                 </span>
               </div>
               <div id="foli4" class="phone notranslate phone-number-class">
@@ -351,45 +360,54 @@ h4.font-semibold-cls {
                     class=" text field__input"
                     value=""
                     tabindex="0"
-                    onkeyup="autotab(this, document.getElementById('Field4-1'), this); filterNonnumeric(this);" 
+                    onkeyup="autotab(this, document.getElementById('Field4-1'), this); filterNonnumeric(this);"
                     onfocus="this.selectionStart = this.selectionEnd = this.value.length;"
                     placeholder="Phone Number"
                     required
-                  >                          
+                  >
                 </span>
               </div>
               <div id="foli15" class="notranslate part">
                 <div class="field">
-                  <textarea class="field__input textarea text-area" 
-                    id="Field5" 
+                  <textarea
+                    class="field__input textarea text-area"
+                    id="Field5"
                     name="Field5"
                     spellcheck="true"
-                    rows="10" cols="50"
+                    rows="10"
+                    cols="50"
                     required
                     tabindex="0"
                     onkeyup="validateRange(5, 'character');"
-                    placeholder="The more details you share, the faster we can find the perfect solution."></textarea>
+                    placeholder="The more details you share, the faster we can find the perfect solution."
+                  ></textarea>
                 </div>
               </div>
               <div id="foli112" class="notranslate">
                 <div class="field">
-                  <select id="Field112" name="Field112" class="field__input select" tabindex="0" data-wufoo-field="dropdown" >
+                  <select
+                    id="Field112"
+                    name="Field112"
+                    class="field__input select"
+                    tabindex="0"
+                    data-wufoo-field="dropdown"
+                  >
                     <option selected="selected">
                       <span class="notranslate">How many units do you need?</span>
                     </option>
                     <option value="1 - 1,000">
                       <span class="notranslate">1 - 1,000</span>
                     </option>
-                    <option value="1,000 - 10,000" >
+                    <option value="1,000 - 10,000">
                       <span class="notranslate">1,000 - 10,000</span>
                     </option>
-                    <option value="10,000+" >
+                    <option value="10,000+">
                       <span class="notranslate">10,000+</span>
                     </option>
-                    <option value="50,000+" >
+                    <option value="50,000+">
                       <span class="notranslate">50,000+</span>
                     </option>
-                    <option value="100,000+" >
+                    <option value="100,000+">
                       <span class="notranslate">100,000+</span>
                     </option>
                   </select>
@@ -397,20 +415,26 @@ h4.font-semibold-cls {
               </div>
               <div id="foli109" class="notranslate">
                 <div class="field">
-                  <select id="Field109" name="Field109" class="field__input select" tabindex="0" data-wufoo-field="dropdown" >
+                  <select
+                    id="Field109"
+                    name="Field109"
+                    class="field__input select"
+                    tabindex="0"
+                    data-wufoo-field="dropdown"
+                  >
                     <option selected="selected">
                       <span class="notranslate">What is your timeline?</span>
                     </option>
                     <option value="ASAP / Within two weeks">
                       <span class="notranslate">ASAP / Within two weeks</span>
                     </option>
-                    <option value="Month" >
+                    <option value="Month">
                       <span class="notranslate">Month</span>
                     </option>
-                    <option value="Quarter" >
+                    <option value="Quarter">
                       <span class="notranslate">Quarter</span>
                     </option>
-                    <option value="Planning" >
+                    <option value="Planning">
                       <span class="notranslate">Planning</span>
                     </option>
                   </select>
@@ -447,109 +471,113 @@ h4.font-semibold-cls {
               <div class="hide">
                 <label for="comment">Do Not Fill This Out</label>
                 <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-                <input type="hidden" id="idstamp" name="idstamp" value="p9VQ7HkfrYL2RvUIZS2iksOQnO+axn+LbN/oNjgtOo0=" >
-                <input type="hidden" id="encryptedPassword" name="encryptedPassword" value="" >
-              </div>              
+                <input type="hidden" id="idstamp" name="idstamp" value="p9VQ7HkfrYL2RvUIZS2iksOQnO+axn+LbN/oNjgtOo0=">
+                <input type="hidden" id="encryptedPassword" name="encryptedPassword" value="">
+              </div>
             </div>
           </form>
-         
-       {% comment %}   {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
-          {% if form.posted_successfully? %}
-            <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
-              {% render 'icon-success' %}
-              {{ 'templates.contact.form.post_success' | t }}
-            </h2>
-          {% elsif form.errors %}
-            <div class="form__message">
-              <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
-                {% render 'icon-error' %}
-                {{ 'templates.contact.form.error_heading' | t }}
-              </h2>
-            </div>
-            <ul class="form-status-list caption-large" role="list">
-              <li>
-                <a href="#ContactForm-email" class="link">
-                  {{ form.errors.translated_fields.email | capitalize }}
-                  {{ form.errors.messages.email }}
-                </a>
-              </li>
-            </ul>
-          {% endif %}
 
-          <div class="contact__fields ">
-            <div class="field">
-              <input class="field__input" type="text" name="contact[first_name]" placeholder="First Name" required>
-            </div>
-            <div class="field">
-              <input class="field__input" type="text" name="contact[last_name]" placeholder="Last Name" required>
-            </div>
-          </div>
+          {% comment %}
+            {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
+              {% if form.posted_successfully? %}
+                <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+                  {% render 'icon-success' %}
+                  {{ 'templates.contact.form.post_success' | t }}
+                </h2>
+              {% elsif form.errors %}
+                <div class="form__message">
+                  <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+                    {% render 'icon-error' %}
+                    {{ 'templates.contact.form.error_heading' | t }}
+                  </h2>
+                </div>
+                <ul class="form-status-list caption-large" role="list">
+                  <li>
+                    <a href="#ContactForm-email" class="link">
+                      {{ form.errors.translated_fields.email | capitalize }}
+                      {{ form.errors.messages.email }}
+                    </a>
+                  </li>
+                </ul>
+              {% endif %}
 
-          <div class="field">
-            <input class="field__input" type="text" name="contact[company]" placeholder="Company Name">
-          </div>
+              <div class="contact__fields ">
+                <div class="field">
+                  <input class="field__input" type="text" name="contact[first_name]" placeholder="First Name" required>
+                </div>
+                <div class="field">
+                  <input class="field__input" type="text" name="contact[last_name]" placeholder="Last Name" required>
+                </div>
+              </div>
 
-          <div class="field field--with-error">
-            <input
-              class="field__input"
-              type="email"
-              name="contact[email]"
-              id="ContactForm-email"
-              placeholder="Email address"
-              value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
-              required
-            >
-            {% if form.errors contains 'email' %}
-              <small class="contact__field-error" id="ContactForm-email-error">
-                <span class="form__message">
-                  {% render 'icon-error' %}
-                  {{ form.errors.translated_fields.email | capitalize }}
-                  {{ form.errors.messages.email }}
-                </span>
-              </small>
-            {% endif %}
-          </div>
+              <div class="field">
+                <input class="field__input" type="text" name="contact[company]" placeholder="Company Name">
+              </div>
 
-          <div class="field">
-            <input
-              class="field__input"
-              type="tel"
-              name="contact[phone]"
-              placeholder="Phone Number"
-              value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-            >
-          </div>
-          <div class="field">
-            <input class="field__input" type="text" name="contact[url]" placeholder="URL:">
-          </div>
-          <p class="font-semibold-text" >Tell us about how you want to customize your item. Please attach your high quality logo/elements by using the button below.</p>
-          <div class="field">
-             <textarea
-                 rows="0"
-                class="field__input  text-area"
-                name="contact[comment]"
-                placeholder="Tell us about how you want to customize your item."
-              >
-              </textarea>
-          </div>
-           <div class="field">
-            <input class="field__input" type="file" name="contact[body]" placeholder="Choose a file (File limit 10MB)">
-          </div>
+              <div class="field field--with-error">
+                <input
+                  class="field__input"
+                  type="email"
+                  name="contact[email]"
+                  id="ContactForm-email"
+                  placeholder="Email address"
+                  value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                  required
+                >
+                {% if form.errors contains 'email' %}
+                  <small class="contact__field-error" id="ContactForm-email-error">
+                    <span class="form__message">
+                      {% render 'icon-error' %}
+                      {{ form.errors.translated_fields.email | capitalize }}
+                      {{ form.errors.messages.email }}
+                    </span>
+                  </small>
+                {% endif %}
+              </div>
+
+              <div class="field">
+                <input
+                  class="field__input"
+                  type="tel"
+                  name="contact[phone]"
+                  placeholder="Phone Number"
+                  value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                >
+              </div>
+              <div class="field">
+                <input class="field__input" type="text" name="contact[url]" placeholder="URL:">
+              </div>
+              <p class="font-semibold-text" >Tell us about how you want to customize your item. Please attach your high quality logo/elements by using the button below.</p>
+              <div class="field">
+                 <textarea
+                     rows="0"
+                    class="field__input  text-area"
+                    name="contact[comment]"
+                    placeholder="Tell us about how you want to customize your item."
+                  >
+                  </textarea>
+              </div>
+               <div class="field">
+                <input class="field__input" type="file" name="contact[body]" placeholder="Choose a file (File limit 10MB)">
+              </div>
 
 
-          <div class="contact__button mt-4">
-            <button
-              type="submit"
-              class="button"
-            >
-             Submit
-            </button>
+              <div class="contact__button mt-4">
+                <button
+                  type="submit"
+                  class="button"
+                >
+                 Submit
+                </button>
+              </div>
+            {%- endform -%}
+          {% endcomment %}
+          <div class="bottom-policy">
+            This site is protected by reCAPTCHA Enterprise and the Google<a href="/pages/privacy-policy"
+              >Privacy Policy</a
+            >and<a href="/pages/terms-and-conditions">Terms of Service</a>apply.
           </div>
-        {%- endform -%}  {% endcomment %}
-         <div class="bottom-policy">
-             This site is protected by reCAPTCHA Enterprise and the Google <a href="/pages/privacy-policy">Privacy Policy</a> and <a href="/pages/terms-and-conditions">Terms of Service</a> apply.
-         </div>
-      </div>
+        </div>
       </div>
     </div>
   </div>
@@ -560,44 +588,44 @@ h4.font-semibold-cls {
   "name": "Enterprice contact",
   "settings": [
     {
-      "type":"text",
-      "id":"caption",
-      "label":"Caption"
+      "type": "text",
+      "id": "caption",
+      "label": "Caption"
     },
     {
-      "type":"inline_richtext",
-      "id":"heading",
-      "label":"heading"
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "heading"
     },
     {
-      "type":"inline_richtext",
-      "id":"subheading",
-      "label":"Subheading"
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "Subheading"
     },
     {
-      "type":"richtext",
-      "id":"content",
-      "label":"Content"
-    },
-     {
-      "type":"richtext",
-      "id":"content1",
-      "label":"Content"
-    },
-     {
-      "type":"richtext",
-      "id":"content2",
-      "label":"Content"
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
     },
     {
-      "type":"text",
-      "id":"button_label",
-      "label":"Button label"
+      "type": "richtext",
+      "id": "content1",
+      "label": "Content"
     },
     {
-      "type":"url",
-      "id":"button_link",
-      "label":"Button link"
+      "type": "richtext",
+      "id": "content2",
+      "label": "Content"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
     },
     {
       "type": "header",
@@ -635,17 +663,17 @@ h4.font-semibold-cls {
     {
       "type": "range",
       "id": "mob_bottom_spacing",
-      "label": "Mobile paddding bottom" ,
+      "label": "Mobile paddding bottom",
       "min": 0,
       "max": 200,
       "step": 4,
       "default": 40
     }
   ],
-   "presets": [
-      {
-        "name": "Enterprice contact"
-      }
-    ]
+  "presets": [
+    {
+      "name": "Enterprice contact"
+    }
+  ]
 }
 {% endschema %}
