@@ -80,6 +80,129 @@
     }
   ],
   "blocks": [
+    {
+      "type": "subtotal",
+      "name": "t:sections.main-cart-footer.blocks.subtotal.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "block_location",
+          "label": "Block Location",
+          "default": "right",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left Column"
+            },
+            {
+              "value": "right",
+              "label": "Right Column"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "t:sections.main-cart-footer.blocks.buttons.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "block_location",
+          "label": "Block Location",
+          "default": "right",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left Column"
+            },
+            {
+              "value": "right",
+              "label": "Right Column"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "@app",
+      "settings": [
+        {
+          "type": "select",
+          "id": "block_location",
+          "label": "Block Location",
+          "default": "right",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left Column"
+            },
+            {
+              "value": "right",
+              "label": "Right Column"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "custom_liquid",
+      "name": "Custom Liquid",
+      "settings": [
+        {
+          "type": "select",
+          "id": "block_location",
+          "label": "Block Location",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left Column"
+            },
+            {
+              "value": "right",
+              "label": "Right Column"
+            }
+          ]
+        },
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Liquid Code",
+          "info": "Add custom Liquid code here"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Custom Text",
+      "settings": [
+        {
+          "type": "select",
+          "id": "block_location",
+          "label": "Block Location",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left Column"
+            },
+            {
+              "value": "right",
+              "label": "Right Column"
+            }
+          ]
+        },
+        {
+          "type": "richtext",
+          "id": "text_content",
+          "label": "Text Content",
+          "default": "<p>Your custom text here.</p>"
+        }
+      ]
+    }
   ]
 }
 {% endschema %}
