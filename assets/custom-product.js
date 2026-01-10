@@ -831,16 +831,16 @@
       input.setAttribute('value', min);
       input.value = min;
 
-      // Add input validation to prevent values less than minimum
-      input.addEventListener('input', function() {
+      // Validate only when user finishes typing (blur event)
+      input.addEventListener('blur', function() {
         const currentValue = parseInt(this.value);
-        if (currentValue < min && currentValue !== 0 && !isNaN(currentValue)) {
+        if (isNaN(currentValue) || currentValue < min) {
           this.value = min;
         }
       });
 
-      // Add blur validation as well
-      input.addEventListener('blur', function() {
+      // Also validate on change event (when user confirms the value)
+      input.addEventListener('change', function() {
         const currentValue = parseInt(this.value);
         if (isNaN(currentValue) || currentValue < min) {
           this.value = min;
