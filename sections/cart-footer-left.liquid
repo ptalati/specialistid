@@ -1,0 +1,46 @@
+<div class="cart__blocks left-block-column">
+  {% for block in section.blocks %}
+    {%- case block.type -%}
+      {%- when 'custom_liquid' -%}
+        <div class="cart__custom-liquid" {{ block.shopify_attributes }}>
+          {{ block.settings.custom_liquid }}
+        </div>
+      {%- when 'text' -%}
+        <div class="cart__text-block rte" {{ block.shopify_attributes }}>
+          {{ block.settings.text_content }}
+        </div>
+    {%- endcase -%}
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Cart Footer Left",
+  "blocks": [
+    {
+      "type": "custom_liquid",
+      "name": "Custom Liquid",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Liquid Code",
+          "info": "Add custom Liquid code here"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Custom Text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text_content",
+          "label": "Text Content",
+          "default": "<p>Your custom text here.</p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
