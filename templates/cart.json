@@ -20,6 +20,12 @@
     "cart-footer": {
       "type": "main-cart-footer",
       "blocks": {
+        "custom_liquid_bAnEDk": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"docapp-single-shipping-calculator\"></div>"
+          }
+        },
         "subtotal": {
           "type": "subtotal",
           "settings": {}
@@ -58,6 +64,7 @@
         }
       },
       "block_order": [
+        "custom_liquid_bAnEDk",
         "subtotal",
         "buttons",
         "diy_tax_exempt_checkout_app_block_kBdmFg"
