@@ -14,7 +14,7 @@ a.tooltip:hover {
 
 /* Tooltip box that appears on hover */
 a.tooltip::before {
-  content: attr(title);
+  content: attr(data-tooltip);
   position: absolute;
   bottom: 100%;
   left: 50%;

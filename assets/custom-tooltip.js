@@ -67,8 +67,8 @@
                       if (itemUrl === "#") itemUrl = "javascript:void(0);";
                       link.href = itemUrl;
                       link.className = 'tooltip';
-                      // Safely set tooltip - no HTML injection possible with setAttribute
-                      link.setAttribute('title', item.tooltip);
+                      // Use data-tooltip instead of title to avoid browser default tooltip
+                      link.setAttribute('data-tooltip', item.tooltip);
                       link.textContent = matches[index];
                       fragment.appendChild(link);
                     }
