@@ -13,91 +13,100 @@
 
   // Wait for DOM to be ready
   function initTooltips() {
+    // Check if Papa Parse is loaded
+    if (typeof Papa === 'undefined') {
+      console.warn('PapaParse library not loaded. Tooltips will not work.');
+      return;
+    }
+
     // Load and apply tooltips from Google Sheet
     fetch(CONFIG.GOOGLE_SHEET_URL)
       .then(response => response.text())
       .then(data => {
-        if (typeof Papa !== 'undefined') {
-          Papa.parse(data, {
-            complete: function(results) {
-              var wordsToReplace = results.data.map(function(row) {
-                var word = row[0] && row[0].trim();
-                var url = row[1] && row[1].trim();
-                var tooltip = row[2] && row[2].trim();
-                if (word && url && tooltip) {
-                  return { word, url, tooltip };
-                }
-              }).filter(Boolean);
-
-              function replaceText(node) {
-                wordsToReplace.forEach(function(item) {
-                  var regex = new RegExp(`\\b${item.word}\\b`, "gi");
-                  if (node.nodeType === 3) {
-                    if (node.parentNode && node.parentNode.tagName === 'SCRIPT') {
-                      return;
-                    }
-
-                    // Check if replacement is needed
-                    if (!regex.test(node.nodeValue)) {
-                      return;
-                    }
-
-                    // Create elements safely without innerHTML
-                    const fragment = document.createDocumentFragment();
-                    const parts = node.nodeValue.split(regex);
-                    const matches = node.nodeValue.match(regex) || [];
-
-                    parts.forEach(function(part, index) {
-                      if (part) {
-                        fragment.appendChild(document.createTextNode(part));
-                      }
-
-                      if (index < matches.length) {
-                        const link = document.createElement('a');
-                        let itemUrl = item.url.trim();
-                        if (itemUrl === "#") itemUrl = "javascript:void(0);";
-                        link.href = itemUrl;
-                        link.className = 'tooltip';
-                        // Safely set tooltip - no HTML injection possible with setAttribute
-                        link.setAttribute('title', item.tooltip);
-                        link.textContent = matches[index];
-                        fragment.appendChild(link);
-                      }
-                    });
-
-                    if (fragment.hasChildNodes()) {
-                      node.parentNode.replaceChild(fragment, node);
-                    }
-                  }
-                });
+        console.log('Tooltip data fetched successfully');
+        Papa.parse(data, {
+          complete: function(results) {
+            console.log('Parsed tooltip data:', results.data);
+            var wordsToReplace = results.data.map(function(row) {
+              var word = row[0] && row[0].trim();
+              var url = row[1] && row[1].trim();
+              var tooltip = row[2] && row[2].trim();
+              if (word && url && tooltip) {
+                return { word, url, tooltip };
               }
+            }).filter(Boolean);
 
-              function traverseNodes(node) {
-                if (node.nodeType === 1) {
-                  if (/^(h1|h2|h3|h4|h5|h6|a)$/i.test(node.tagName)) {
+            console.log('Words to replace:', wordsToReplace);
+
+            function replaceText(node) {
+              wordsToReplace.forEach(function(item) {
+                var regex = new RegExp(`\\b${item.word}\\b`, "gi");
+                if (node.nodeType === 3) {
+                  if (node.parentNode && node.parentNode.tagName === 'SCRIPT') {
                     return;
                   }
-                  var children = Array.from(node.childNodes);
-                  for (var i = 0; i < children.length; i++) {
-                    traverseNodes(children[i]);
+
+                  // Check if replacement is needed
+                  if (!regex.test(node.nodeValue)) {
+                    return;
                   }
-                } else {
-                  replaceText(node);
+
+                  // Create elements safely without innerHTML
+                  const fragment = document.createDocumentFragment();
+                  const parts = node.nodeValue.split(regex);
+                  const matches = node.nodeValue.match(regex) || [];
+
+                  parts.forEach(function(part, index) {
+                    if (part) {
+                      fragment.appendChild(document.createTextNode(part));
+                    }
+
+                    if (index < matches.length) {
+                      const link = document.createElement('a');
+                      let itemUrl = item.url.trim();
+                      if (itemUrl === "#") itemUrl = "javascript:void(0);";
+                      link.href = itemUrl;
+                      link.className = 'tooltip';
+                      // Safely set tooltip - no HTML injection possible with setAttribute
+                      link.setAttribute('title', item.tooltip);
+                      link.textContent = matches[index];
+                      fragment.appendChild(link);
+                    }
+                  });
+
+                  if (fragment.hasChildNodes()) {
+                    node.parentNode.replaceChild(fragment, node);
+                  }
                 }
-              }
-
-              traverseNodes(document.body);
-
-              // Add viewport boundary detection for tooltips after DOM updates
-              setTimeout(function() {
-                adjustTooltipPositions();
-              }, 100);
-            },
-            error: function(error) {
-              console.error("Parsing error:", error);
+              });
             }
-          });
-        }
+
+            function traverseNodes(node) {
+              if (node.nodeType === 1) {
+                if (/^(h1|h2|h3|h4|h5|h6|a)$/i.test(node.tagName)) {
+                  return;
+                }
+                var children = Array.from(node.childNodes);
+                for (var i = 0; i < children.length; i++) {
+                  traverseNodes(children[i]);
+                }
+              } else {
+                replaceText(node);
+              }
+            }
+
+            traverseNodes(document.body);
+            console.log('Tooltips created:', document.querySelectorAll('a.tooltip').length);
+
+            // Add viewport boundary detection for tooltips after DOM updates
+            setTimeout(function() {
+              adjustTooltipPositions();
+            }, 100);
+          },
+          error: function(error) {
+            console.error("Parsing error:", error);
+          }
+        });
       })
       .catch(err => console.error('Error fetching tooltip data:', err));
   }
