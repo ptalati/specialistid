@@ -1328,6 +1328,99 @@
   </div>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Field mappings: billing -> shipping
+    const fieldMappings = {
+        'Field154': 'Field160', // Street Address
+        'Field155': 'Field161', // Address Line 2
+        'Field156': 'Field162', // City
+        'Field157': 'Field163', // State/Province/Region
+        'Field158': 'Field164', // Postal/Zip Code
+        'Field159': 'Field165'  // Country (select)
+    };
+
+    // Cache the shipping address container
+    const shippingDiv = document.getElementById('foli160');
+
+    if (!shippingDiv) return; // Exit if shipping div doesn't exist
+
+    // Get radio buttons for "Same as billing address" field
+    const radioButtons = document.querySelectorAll('input[name="Field479"]');
+
+    // Function to copy billing values to shipping
+    function copyBillingToShipping() {
+        Object.keys(fieldMappings).forEach(function(billingId) {
+            const shippingId = fieldMappings[billingId];
+            const billingField = document.getElementById(billingId);
+            const shippingField = document.getElementById(shippingId);
+
+            if (billingField && shippingField) {
+                shippingField.value = billingField.value;
+            }
+        });
+    }
+
+    // Handle radio button change
+    radioButtons.forEach(function(radio) {
+        radio.addEventListener('change', function() {
+            if (this.value === 'Yes') {
+                // Copy billing values to shipping
+                copyBillingToShipping();
+
+                // Hide shipping address div
+                shippingDiv.style.display = 'none';
+
+                // Remove required attribute from shipping fields (so form can submit)
+                const requiredFields = shippingDiv.querySelectorAll('[required]');
+                requiredFields.forEach(function(field) {
+                    field.removeAttribute('required');
+                    field.setAttribute('data-was-required', 'true');
+                });
+
+            } else {
+                // Show shipping address div
+                shippingDiv.style.display = '';
+
+                // Restore required attributes
+                const wasRequiredFields = shippingDiv.querySelectorAll('[data-was-required]');
+                wasRequiredFields.forEach(function(field) {
+                    field.setAttribute('required', '');
+                    field.removeAttribute('data-was-required');
+                });
+            }
+        });
+    });
+
+    // Optional: Also sync when billing fields change while "Yes" is selected
+    Object.keys(fieldMappings).forEach(function(billingId) {
+        const shippingId = fieldMappings[billingId];
+        const billingField = document.getElementById(billingId);
+        const yesRadio = document.getElementById('Field479_1'); // Assuming "Yes" radio has id Field479_1
+
+        if (billingField && yesRadio) {
+            billingField.addEventListener('input', function() {
+                if (yesRadio.checked) {
+                    const shippingField = document.getElementById(shippingId);
+                    if (shippingField) {
+                        shippingField.value = this.value;
+                    }
+                }
+            });
+
+            billingField.addEventListener('change', function() {
+                if (yesRadio.checked) {
+                    const shippingField = document.getElementById(shippingId);
+                    if (shippingField) {
+                        shippingField.value = this.value;
+                    }
+                }
+            });
+        }
+    });
+});
+</script>
+
 {% schema %}
 {
   "name": "Quote request  contact",
