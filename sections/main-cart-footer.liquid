@@ -48,10 +48,6 @@
               <div class="cart__text-block rte" {{ block.shopify_attributes }}>
                 {{ block.settings.text_content }}
               </div>
-            {%- when '@app' -%}
-              {%- if block.settings.block_position == 'left' or block.settings.block_position == 'both' -%}
-                {% render block %}
-              {%- endif -%}
           {% endcase %}
         {% endfor %}
       </div>
@@ -60,9 +56,7 @@
         {% for block in section.blocks %}
           {%- case block.type -%}
             {%- when '@app' -%}
-              {%- if block.settings.block_position == 'right' or block.settings.block_position == 'both' -%}
-                {% render block %}
-              {%- endif -%}
+              {% render block %}
             {%- when 'subtotal' -%}
               <div class="js-contents" {{ block.shopify_attributes }}>
                 <div>
@@ -202,29 +196,7 @@
       "limit": 1
     },
     {
-      "type": "@app",
-      "settings": [
-        {
-          "type": "select",
-          "id": "block_position",
-          "label": "Block Position",
-          "default": "both",
-          "options": [
-            {
-              "value": "left",
-              "label": "Left Column"
-            },
-            {
-              "value": "right",
-              "label": "Right Column"
-            },
-            {
-              "value": "both",
-              "label": "Both Columns"
-            }
-          ]
-        }
-      ]
+      "type": "@app"
     },
     {
       "type": "custom_liquid",
