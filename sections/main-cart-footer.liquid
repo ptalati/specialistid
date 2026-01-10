@@ -139,14 +139,6 @@
                   {{ content_for_additional_checkout_buttons }}
                 </div>
               {%- endif -%}
-            {%- when 'custom_liquid' -%}
-              <div class="cart__custom-liquid" {{ block.shopify_attributes }}>
-                {{ block.settings.custom_liquid }}
-              </div>
-            {%- when 'text' -%}
-              <div class="cart__text-block rte" {{ block.shopify_attributes }}>
-                {{ block.settings.text_content }}
-              </div>
           {%- endcase -%}
         {% endfor %}
 
