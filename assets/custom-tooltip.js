@@ -83,8 +83,17 @@
 
             function traverseNodes(node) {
               if (node.nodeType === 1) {
-                if (/^(h1|h2|h3|h4|h5|h6|a)$/i.test(node.tagName)) {
+                // Skip headers, links, and buttons
+                if (/^(h1|h2|h3|h4|h5|h6|a|button)$/i.test(node.tagName)) {
                   return;
+                }
+                // Skip if parent is a button or link
+                var parent = node.parentNode;
+                while (parent) {
+                  if (/^(a|button)$/i.test(parent.tagName)) {
+                    return;
+                  }
+                  parent = parent.parentNode;
                 }
                 var children = Array.from(node.childNodes);
                 for (var i = 0; i < children.length; i++) {
