@@ -1,67 +1,67 @@
 <style>
-  .contact-banner-{{ section.id }} {
-    padding-top: {{ section.settings.padding_top }}px;
-    padding-bottom: {{ section.settings.padding_bottom }}px;
-   
+    .contact-banner-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+
+    }
+    .contact-banner-inner{
+       background:{{section.settings.color}};
+      padding: 4rem 8rem;
+    }
+    .contact-banner-text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
   }
-  .contact-banner-inner{
-     background:{{section.settings.color}};
-    padding: 4rem 8rem;
-  }
-  .contact-banner-text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-  .contact-banner-text h2 {
-    font-weight: 600;
-    font-size: 52px;
-    line-height: 100%;
-    letter-spacing: 1px;
-    text-transform: capitalize;
-    color: #ffffff;
-}
-  .contact-banner-text h3 {
-    font-family: Rubik;
-    font-weight: 300;
-    font-size: 60px;
-    line-height: 100%;
-    letter-spacing: 0.6px;
-    color: #ffffff;
-}
-  .contact-banner-text a.button {
-    padding: 0 3.5rem;
-}
-  @media(max-width:1500px){
-    .contact-banner-text h2 {    font-size: 40px;}
-    .contact-banner-text h3 {    font-size: 45px;}
-}
-  
-  @media(max-width:1300px){
-    .contact-banner-inner {     padding: 3rem 5rem;}
-}
-  
-  @media(max-width:1100px){
-    .contact-banner-text h2 {    font-size: 35px;}
-    .contact-banner-text h3 {    font-size: 30px;}
-    .contact-banner-inner {   padding: 3rem 3rem;}
-}
-  @media(max-width:989px){
-    .contact-banner-text {    flex-direction: column;    text-align: center;}
-    .contact-banner-text h2 {    margin: 0;}
-}
-  @media screen and (max-width: 767px) {
-     .contact-banner-{{ section.id }}{
-        padding-top: {{ section.settings.mob_top_spacing | append: 'px' }};
-        padding-bottom: {{ section.settings.mob_bottom_spacing | append: 'px' }};
-      }
     .contact-banner-text h2 {
-    font-size: 30px;
-}
-    .contact-banner-text h3 {
-    font-size: 25px;
-}
+      font-weight: 600;
+      font-size: 52px;
+      line-height: 100%;
+      letter-spacing: 1px;
+      text-transform: capitalize;
+      color: #ffffff;
   }
+    .contact-banner-text h3 {
+      font-family: Rubik;
+      font-weight: 300;
+      font-size: 60px;
+      line-height: 100%;
+      letter-spacing: 0.6px;
+      color: #ffffff;
+  }
+    .contact-banner-text a.button {
+      padding: 0 3.5rem;
+  }
+    @media(max-width:1500px){
+      .contact-banner-text h2 {    font-size: 40px;}
+      .contact-banner-text h3 {    font-size: 45px;}
+  }
+
+    @media(max-width:1300px){
+      .contact-banner-inner {     padding: 3rem 5rem;}
+  }
+
+    @media(max-width:1100px){
+      .contact-banner-text h2 {    font-size: 35px;}
+      .contact-banner-text h3 {    font-size: 30px;}
+      .contact-banner-inner {   padding: 3rem 3rem;}
+  }
+    @media(max-width:989px){
+      .contact-banner-text {    flex-direction: column;    text-align: center;}
+      .contact-banner-text h2 {    margin: 0;}
+  }
+    @media screen and (max-width: 767px) {
+       .contact-banner-{{ section.id }}{
+          padding-top: {{ section.settings.mob_top_spacing | append: 'px' }};
+          padding-bottom: {{ section.settings.mob_bottom_spacing | append: 'px' }};
+        }
+      .contact-banner-text h2 {
+      font-size: 30px;
+  }
+      .contact-banner-text h3 {
+      font-size: 25px;
+  }
+    }
 </style>
 
 <div class="contact-banner-{{ section.id }}">
@@ -81,29 +81,29 @@
   "name": "Contact banner",
   "settings": [
     {
-      "type":"color",
-      "id":"color",
-      "label":"Background color"
+      "type": "color",
+      "id": "color",
+      "label": "Background color"
     },
     {
-      "type":"inline_richtext",
-      "id":"heading",
-      "label":"heading"
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "heading"
     },
     {
-      "type":"inline_richtext",
-      "id":"subheading",
-      "label":"Subheading"
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "Subheading"
     },
     {
-      "type":"text",
-      "id":"button_label",
-      "label":"Button label"
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
     },
     {
-      "type":"url",
-      "id":"button_link",
-      "label":"Button link"
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
     },
     {
       "type": "header",
@@ -141,17 +141,17 @@
     {
       "type": "range",
       "id": "mob_bottom_spacing",
-      "label": "Mobile paddding bottom" ,
+      "label": "Mobile paddding bottom",
       "min": 0,
       "max": 200,
       "step": 4,
       "default": 40
     }
   ],
-   "presets": [
-      {
-        "name": "Contact banner"
-      }
-    ]
+  "presets": [
+    {
+      "name": "Contact banner"
+    }
+  ]
 }
 {% endschema %}
