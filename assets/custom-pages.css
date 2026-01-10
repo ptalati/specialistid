@@ -73,3 +73,13 @@ customer .button {
     border-style: solid;
     border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
 }
+
+.shopperapproved-milestone-cert {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.shopperapproved-milestone-cert img {
+    width: 50%;
+    height: auto;
+}
