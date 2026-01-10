@@ -48,3 +48,19 @@ customer .button {
 .collection-hero .collection-hero__description.show-all>table {
     display: table;
 }
+
+.shipping-calculator-wrapper,
+.shipping-calculator-response-wrapper {
+    padding: 20px;
+    box-shadow: #0000003d 0 3px 8px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.cart-block-wrapper {
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    border-radius: 5px;
+    margin-bottom: 4rem;
+    margin-top: 0px !important;
+}
