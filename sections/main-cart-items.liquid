@@ -235,6 +235,43 @@
                                 {{- 'icon-info.svg' | inline_asset_content -}}
                               </button>
                             {%- endif -%}
+                            {%- liquid
+                              # Calculate minimum quantity with priority: variant metafield -> product metafield -> quantity_rule.min -> 0
+                              assign cart_minimum_qty = item.variant.metafields.c_f.minimum.value
+                              if cart_minimum_qty == blank or cart_minimum_qty == nil or cart_minimum_qty == 0
+                                assign cart_minimum_qty = item.variant.metafields.inventory.minimum.value
+                              endif
+                              if cart_minimum_qty == blank or cart_minimum_qty == nil or cart_minimum_qty == 0
+                                assign cart_minimum_qty = item.product.metafields.c_f.minimum.value
+                              endif
+                              if cart_minimum_qty == blank or cart_minimum_qty == nil or cart_minimum_qty == 0
+                                assign cart_minimum_qty = item.product.metafields.inventory.minimum.value
+                              endif
+                              if cart_minimum_qty == blank or cart_minimum_qty == nil or cart_minimum_qty == 0
+                                assign cart_minimum_qty = item.variant.quantity_rule.min
+                              endif
+                              if cart_minimum_qty == blank or cart_minimum_qty == nil or cart_minimum_qty == 0
+                                assign cart_minimum_qty = 0
+                              endif
+
+                              # Calculate increment with same priority logic
+                              assign cart_increment_qty = item.variant.metafields.c_f.increment.value
+                              if cart_increment_qty == blank or cart_increment_qty == nil or cart_increment_qty == 0
+                                assign cart_increment_qty = item.variant.metafields.inventory.increment.value
+                              endif
+                              if cart_increment_qty == blank or cart_increment_qty == nil or cart_increment_qty == 0
+                                assign cart_increment_qty = item.product.metafields.c_f.increment.value
+                              endif
+                              if cart_increment_qty == blank or cart_increment_qty == nil or cart_increment_qty == 0
+                                assign cart_increment_qty = item.product.metafields.inventory.increment.value
+                              endif
+                              if cart_increment_qty == blank or cart_increment_qty == nil or cart_increment_qty == 0
+                                assign cart_increment_qty = item.variant.quantity_rule.increment
+                              endif
+                              if cart_increment_qty == blank or cart_increment_qty == nil or cart_increment_qty == 0
+                                assign cart_increment_qty = 1
+                              endif
+                            -%}
                             <quantity-input class="quantity cart-quantity">
                               {% assign can_update_quantity = item.instructions.can_update_quantity | default: true %}
                               <button
@@ -260,12 +297,12 @@
                                 value="{{ item.quantity }}"
                                 {% # theme-check-disable %}
                                 data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
-                                min="0"
-                                data-min="{{ item.variant.quantity_rule.min }}"
+                                min="{{ cart_minimum_qty }}"
+                                data-min="{{ cart_minimum_qty }}"
                                 {% if item.variant.quantity_rule.max != null %}
                                   max="{{ item.variant.quantity_rule.max }}"
                                 {% endif %}
-                                step="{{ item.variant.quantity_rule.increment }}"
+                                step="{{ cart_increment_qty }}"
                                 {% # theme-check-enable %}
                                 aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
                                 id="Quantity-{{ item.index | plus: 1 }}"
