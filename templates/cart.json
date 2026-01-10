@@ -23,7 +23,7 @@
         "custom_liquid_bAnEDk": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"docapp-single-shipping-calculator\"></div>"
+            "custom_liquid": "<div id=\"shipping-calculator\">\n          <div class=\"shipping-calculator-wrapper\">\n            <div class=\"docapp-single-shipping-calculator\"></div>\n          </div>\n        </div>"
           }
         },
         "subtotal": {
