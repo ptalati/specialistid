@@ -20,12 +20,6 @@
     "cart-footer": {
       "type": "main-cart-footer",
       "blocks": {
-        "text_eBDmfi": {
-          "type": "text",
-          "settings": {
-            "text_content": "<p>&lt;div class=\"docapp-single-shipping-calculator\"&gt;&lt;/div&gt;</p>"
-          }
-        },
         "subtotal": {
           "type": "subtotal",
           "settings": {}
@@ -64,7 +58,6 @@
         }
       },
       "block_order": [
-        "text_eBDmfi",
         "subtotal",
         "buttons",
         "diy_tax_exempt_checkout_app_block_kBdmFg"
