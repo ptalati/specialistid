@@ -20,23 +20,10 @@
     "cart-footer": {
       "type": "main-cart-footer",
       "blocks": {
-        "dr_cart_shipping_rates_single_calculator_iCQaLz": {
-          "type": "shopify://apps/dr-cart-shipping-rates/blocks/single-calculator/6fdcf202-26c0-4288-be36-8b389f5d262c",
+        "custom_liquid_LjBUxB": {
+          "type": "custom_liquid",
           "settings": {
-            "alignment": "right",
-            "cta-alignment": "left",
-            "cta-font-size": 16,
-            "cta-color": "#000",
-            "fields-and-button-font-size": 16,
-            "button-color": "#000",
-            "button-text-color": "#fff",
-            "shipping-rates-background-color": "#f3f3f3",
-            "shipping-rates-title-font-size": 18,
-            "shipping-rates-title-text-color": "#1c1c1c",
-            "shipping-rates-font-size": 14,
-            "shipping-rates-text-color": "#5A5A5A",
-            "include-padding": true,
-            "max-width": 650
+            "custom_liquid": "<div id=\"shipping-calculator\">\n          <div class=\"shipping-calculator-wrapper\">\n            <div class=\"docapp-single-shipping-calculator\"></div>\n          </div>\n        </div>"
           }
         },
         "subtotal": {
@@ -77,7 +64,7 @@
         }
       },
       "block_order": [
-        "dr_cart_shipping_rates_single_calculator_iCQaLz",
+        "custom_liquid_LjBUxB",
         "subtotal",
         "buttons",
         "diy_tax_exempt_checkout_app_block_kBdmFg"
