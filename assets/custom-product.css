@@ -676,3 +676,7 @@ tr.current {
 .part-number {
     display: inline;
 }
+
+#review_header {
+    border-bottom: none !important;
+}
