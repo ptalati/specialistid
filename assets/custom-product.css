@@ -665,3 +665,14 @@ tr.current {
 .hide {
     display: none;
 }
+
+.product--specifications ul {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.part-number {
+    display: inline;
+}
