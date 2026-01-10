@@ -18,6 +18,10 @@
     display: none;
 }
 
+p a {
+    color: #F5911F;
+}
+
 
 /* buttons */
 a.button,
