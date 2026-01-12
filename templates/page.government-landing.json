@@ -67,7 +67,9 @@
         "column_iPmCMc": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "GSA-approved and compliant solutions",
+            "enable_copy_button": false,
             "text": "<p>Our government security badge<strong> </strong>products meet the strictest federal compliance standards, including FIPS 201 and HSPD-12, ensuring you're covered for any credentialing need.</p>",
             "link_label": "",
             "link": ""
@@ -76,7 +78,9 @@
         "column_FkcnyQ": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Experience serving federal, state, and municipal agencies",
+            "enable_copy_button": false,
             "text": "<p>With decades of experience, we’ve delivered government credentials<strong> </strong>to agencies at every level — from city offices to large federal departments.</p>",
             "link_label": "",
             "link": ""
@@ -85,7 +89,9 @@
         "column_G3cdgb": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Fast & Scalable Fulfillment",
+            "enable_copy_button": false,
             "text": "<p>Specialist ID offers bulk order support, quick turnaround, and tailored logistics — ideal for urgent requests or nationwide badge distribution.</p>",
             "link_label": "",
             "link": ""
@@ -396,6 +402,7 @@
       "name": "t:sections.newsletter.presets.name",
       "settings": {
         "color_scheme": "scheme-5",
+        "background_image": "shopify://shop_images/HQ_Lanyard.png",
         "full_width": true,
         "section_css_class": "newsletter-section",
         "padding_top": 80,

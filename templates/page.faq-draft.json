@@ -97,7 +97,7 @@
       ],
       "name": "Tabs Controller",
       "settings": {
-        "section_title": "FAQ Tabs",
+        "section_title": "",
         "tabs_group_id": "main-tabs",
         "padding_top": 40,
         "padding_bottom": 40,

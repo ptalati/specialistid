@@ -67,7 +67,9 @@
         "column_iPmCMc": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Badge Buddies for Nurses",
+            "enable_copy_button": false,
             "text": "<p>Discover top-quality badges for nurses and medical badge solutions designed for long shifts, quick access, and all-day wear. Trusted by frontline heroes in hospitals and clinics nationwide</p>",
             "link_label": "",
             "link": ""
@@ -76,7 +78,9 @@
         "column_FkcnyQ": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Doctor Badge Holders",
+            "enable_copy_button": false,
             "text": "<p>Sleek, professional, and built for daily rounds, our doctor badge holders combine function with form—perfect for physicians, surgeons, and specialists who need secure and easy-to-display credentials.</p>",
             "link_label": "",
             "link": ""
@@ -85,7 +89,9 @@
         "column_G3cdgb": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Veterinarian ID Reels",
+            "enable_copy_button": false,
             "text": "<p>Keep your ID visible and your hands free with rugged veterinarian badge reels, ideal for busy animal care environments. Durable construction for vets, techs, and support staff in fast-paced clinics.</p>",
             "link_label": "",
             "link": ""
@@ -94,7 +100,9 @@
         "column_ULM69W": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Registered Nurse Badge Clips",
+            "enable_copy_button": false,
             "text": "<p>From ER to ICU, our registered nurse badge clips are designed to stay put and stay clean. Lightweight and dependable options tailored for nursing teams on the move.</p>",
             "link_label": "",
             "link": ""
@@ -431,6 +439,7 @@
       "name": "t:sections.newsletter.presets.name",
       "settings": {
         "color_scheme": "scheme-5",
+        "background_image": "shopify://shop_images/HQ_Lanyard.png",
         "full_width": true,
         "section_css_class": "newsletter-section",
         "padding_top": 80,
