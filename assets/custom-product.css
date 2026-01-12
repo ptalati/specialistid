@@ -693,3 +693,9 @@ a.custom_button_image {
 a.custom_button_image img {
     width: 100%;
 }
+
+.youtube-video {
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+}
