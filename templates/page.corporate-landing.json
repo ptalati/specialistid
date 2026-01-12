@@ -353,8 +353,10 @@
         "column_LYQEbY": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "image": "shopify://shop_images/Free_shipping.svg",
             "title": "Exceptionally Easy Ordering",
+            "enable_copy_button": false,
             "text": "<p>Making things easy, intuitive, and fast since 2001.</p>",
             "link_label": "",
             "link": ""
@@ -363,8 +365,10 @@
         "column_yKUPPd": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "image": "shopify://shop_images/Icon_2.svg",
             "title": "Fast & Reliable",
+            "enable_copy_button": false,
             "text": "<p>Quick, dependable order delivery and free shipping over $99.00</p>",
             "link_label": "",
             "link": ""
@@ -373,8 +377,10 @@
         "column_a7EdiR": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "image": "shopify://shop_images/Icon_3.svg",
             "title": "Trusted by Customers",
+            "enable_copy_button": false,
             "text": "<p>Highly rated for quality, satisfaction, and trust.</p>",
             "link_label": "",
             "link": ""
@@ -496,6 +502,7 @@
       "name": "t:sections.newsletter.presets.name",
       "settings": {
         "color_scheme": "scheme-5",
+        "background_image": "shopify://shop_images/HQ_Lanyard.png",
         "full_width": true,
         "section_css_class": "newsletter-section",
         "padding_top": 80,
