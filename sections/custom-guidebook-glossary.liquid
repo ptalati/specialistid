@@ -198,29 +198,31 @@
   </div>
 </section>
 
-{% javascript %}
-  function toggleSection(sectionNumber) {
-    const content = document.querySelector(`#section-${sectionNumber} .glossary-content`);
-    const allContents = document.querySelectorAll('.glossary-content');
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function () {
+    function toggleSection(sectionNumber) {
+      const content = document.querySelector(`#section-${sectionNumber} .glossary-content`);
+      const allContents = document.querySelectorAll('.glossary-content');
 
-    allContents.forEach((section) => {
-      if (section !== content) {
-        section.classList.remove('active');
-      }
-    });
+      allContents.forEach((section) => {
+        if (section !== content) {
+          section.classList.remove('active');
+        }
+      });
 
-    content.classList.toggle('active');
-  }
+      content.classList.toggle('active');
+    }
 
-  function scrollToSection(sectionNumber) {
-    const section = document.getElementById(`section-${sectionNumber}`);
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    function scrollToSection(sectionNumber) {
+      const section = document.getElementById(`section-${sectionNumber}`);
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    setTimeout(() => {
-      const content = section.querySelector('.glossary-content');
-      if (!content.classList.contains('active')) {
-        toggleSection(sectionNumber);
-      }
-    }, 500);
-  }
-{% endjavascript %}
+      setTimeout(() => {
+        const content = section.querySelector('.glossary-content');
+        if (!content.classList.contains('active')) {
+          toggleSection(sectionNumber);
+        }
+      }, 500);
+    }
+  });
+</script>
