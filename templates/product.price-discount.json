@@ -18,7 +18,6 @@
         },
         "product_video_mgQapf": {
           "type": "product_video",
-          "disabled": true,
           "settings": {}
         },
         "title": {
