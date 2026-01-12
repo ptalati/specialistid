@@ -1218,14 +1218,12 @@
                 </div>
               </div>
 
-              {% comment %}
-                <div class="hide">
-                  <label for="comment">Do Not Fill This Out</label>
-                  <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-                  <input type="hidden" id="idstamp" name="idstamp" value="jEFmQ6t01ijLk28bOFz+cOXRL7SZw6huhjqY0IBsqO4=" >
-                  <input type="hidden" id="encryptedPassword" name="encryptedPassword" value="" >
-                </div>
-              {% endcomment %}
+              <div class="hide">
+                <label for="comment">Do Not Fill This Out</label>
+                <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+                <input type="hidden" id="idstamp" name="idstamp" value="jEFmQ6t01ijLk28bOFz+cOXRL7SZw6huhjqY0IBsqO4=">
+                <input type="hidden" id="encryptedPassword" name="encryptedPassword" value="">
+              </div>
             </div>
           </form>
 
@@ -1329,15 +1327,15 @@
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     // Field mappings: billing -> shipping
     const fieldMappings = {
-        'Field154': 'Field160', // Street Address
-        'Field155': 'Field161', // Address Line 2
-        'Field156': 'Field162', // City
-        'Field157': 'Field163', // State/Province/Region
-        'Field158': 'Field164', // Postal/Zip Code
-        'Field159': 'Field165'  // Country (select)
+      Field154: 'Field160', // Street Address
+      Field155: 'Field161', // Address Line 2
+      Field156: 'Field162', // City
+      Field157: 'Field163', // State/Province/Region
+      Field158: 'Field164', // Postal/Zip Code
+      Field159: 'Field165', // Country (select)
     };
 
     // Cache the shipping address container
@@ -1350,75 +1348,74 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to copy billing values to shipping
     function copyBillingToShipping() {
-        Object.keys(fieldMappings).forEach(function(billingId) {
-            const shippingId = fieldMappings[billingId];
-            const billingField = document.getElementById(billingId);
-            const shippingField = document.getElementById(shippingId);
+      Object.keys(fieldMappings).forEach(function (billingId) {
+        const shippingId = fieldMappings[billingId];
+        const billingField = document.getElementById(billingId);
+        const shippingField = document.getElementById(shippingId);
 
-            if (billingField && shippingField) {
-                shippingField.value = billingField.value;
-            }
-        });
+        if (billingField && shippingField) {
+          shippingField.value = billingField.value;
+        }
+      });
     }
 
     // Handle radio button change
-    radioButtons.forEach(function(radio) {
-        radio.addEventListener('change', function() {
-            if (this.value === 'Yes') {
-                // Copy billing values to shipping
-                copyBillingToShipping();
+    radioButtons.forEach(function (radio) {
+      radio.addEventListener('change', function () {
+        if (this.value === 'Yes') {
+          // Copy billing values to shipping
+          copyBillingToShipping();
 
-                // Hide shipping address div
-                shippingDiv.style.display = 'none';
+          // Hide shipping address div
+          shippingDiv.style.display = 'none';
 
-                // Remove required attribute from shipping fields (so form can submit)
-                const requiredFields = shippingDiv.querySelectorAll('[required]');
-                requiredFields.forEach(function(field) {
-                    field.removeAttribute('required');
-                    field.setAttribute('data-was-required', 'true');
-                });
+          // Remove required attribute from shipping fields (so form can submit)
+          const requiredFields = shippingDiv.querySelectorAll('[required]');
+          requiredFields.forEach(function (field) {
+            field.removeAttribute('required');
+            field.setAttribute('data-was-required', 'true');
+          });
+        } else {
+          // Show shipping address div
+          shippingDiv.style.display = '';
 
-            } else {
-                // Show shipping address div
-                shippingDiv.style.display = '';
-
-                // Restore required attributes
-                const wasRequiredFields = shippingDiv.querySelectorAll('[data-was-required]');
-                wasRequiredFields.forEach(function(field) {
-                    field.setAttribute('required', '');
-                    field.removeAttribute('data-was-required');
-                });
-            }
-        });
+          // Restore required attributes
+          const wasRequiredFields = shippingDiv.querySelectorAll('[data-was-required]');
+          wasRequiredFields.forEach(function (field) {
+            field.setAttribute('required', '');
+            field.removeAttribute('data-was-required');
+          });
+        }
+      });
     });
 
     // Optional: Also sync when billing fields change while "Yes" is selected
-    Object.keys(fieldMappings).forEach(function(billingId) {
-        const shippingId = fieldMappings[billingId];
-        const billingField = document.getElementById(billingId);
-        const yesRadio = document.getElementById('Field479_1'); // Assuming "Yes" radio has id Field479_1
+    Object.keys(fieldMappings).forEach(function (billingId) {
+      const shippingId = fieldMappings[billingId];
+      const billingField = document.getElementById(billingId);
+      const yesRadio = document.getElementById('Field479_1'); // Assuming "Yes" radio has id Field479_1
 
-        if (billingField && yesRadio) {
-            billingField.addEventListener('input', function() {
-                if (yesRadio.checked) {
-                    const shippingField = document.getElementById(shippingId);
-                    if (shippingField) {
-                        shippingField.value = this.value;
-                    }
-                }
-            });
+      if (billingField && yesRadio) {
+        billingField.addEventListener('input', function () {
+          if (yesRadio.checked) {
+            const shippingField = document.getElementById(shippingId);
+            if (shippingField) {
+              shippingField.value = this.value;
+            }
+          }
+        });
 
-            billingField.addEventListener('change', function() {
-                if (yesRadio.checked) {
-                    const shippingField = document.getElementById(shippingId);
-                    if (shippingField) {
-                        shippingField.value = this.value;
-                    }
-                }
-            });
-        }
+        billingField.addEventListener('change', function () {
+          if (yesRadio.checked) {
+            const shippingField = document.getElementById(shippingId);
+            if (shippingField) {
+              shippingField.value = this.value;
+            }
+          }
+        });
+      }
     });
-});
+  });
 </script>
 
 {% schema %}
