@@ -175,6 +175,38 @@
             {%- when 'infinite_options_custom' -%}
               <h3>{{ block.settings.infinite_options_heading }}</h3>
               <div id="infiniteoptions-container"></div>
+            {%- when 'custom_button' -%}
+              {% if block.settings.custom_button_show_to_left == true
+                and product.metafields.c_f.custom_product != blank
+              %}
+                {% assign button_text = block.settings.custom_button_title %}
+                {% if product.metafields.c_f.custom_product_button_text != blank %}
+                  {% assign button_text = product.metafields.c_f.custom_product_button_text %}
+                {% endif %}
+                <!--
+                  <div class="product-form__buttons">
+                    <a href="{{ product.metafields.c_f.custom_product }}" class="product-form__submit color-button_background button button--full-width button--primary">{{button_text}}</a>
+                  </div>
+                -->
+                <div class="product-form__buttons">
+                  {% assign collection_custom_image = '' %}
+                  {% for collection in product.collections %}
+                    {% if collection.metafields.custom.custom_banner_image %}
+                      {% assign collection_custom_image = collection.metafields.custom.custom_banner_image %}
+                    {% endif %}
+                  {% endfor %}
+                  <a
+                    href="{{ product.metafields.c_f.custom_product }}"
+                    class="{% if block.settings.custom_button_show_banner_image == false or collection_custom_image == '' %}product-form__submit color-button_background button button--full-width button--primary custom_button{% else %}custom_button_image{% endif %}"
+                  >
+                    {% if block.settings.custom_button_show_banner_image == false or collection_custom_image == '' %}
+                      {{ button_text }}
+                    {% else %}
+                      <img src="{{ collection_custom_image | img_url: 'large' }}" alt="">
+                    {% endif %}
+                  </a>
+                </div>
+              {% endif %}
           {%- endcase -%}
         {%- endfor -%}
       </div>
