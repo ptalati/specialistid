@@ -22,6 +22,14 @@
             "infinite_options_heading": "Enter Custom Text"
           }
         },
+        "custom_button_6gxYmH": {
+          "type": "custom_button",
+          "settings": {
+            "custom_button_title": "Customize Product",
+            "custom_button_show_to_left": true,
+            "custom_button_show_banner_image": true
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -152,6 +160,7 @@
       "block_order": [
         "custom_designer_eBRy7P",
         "infinite_options_custom_qkkcxg",
+        "custom_button_6gxYmH",
         "title",
         "custom_availability_mQycK4",
         "product_review_dEQU4X",
