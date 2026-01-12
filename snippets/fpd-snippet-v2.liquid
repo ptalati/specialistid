@@ -1,0 +1,211 @@
+<script type="text/javascript">
+  if(typeof window.FPD == "undefined") {
+    window.FPD = {};
+  }
+  FPD.money_format = "{{ shop.money_format }}";
+  FPD.lang = {};
+  FPD.shopOptions = {
+    shopify_disable_sort_by_title: true
+  };
+  FPD.shopOptions.fpdOverwrite = {
+    colorSelectionPlacement: "#fpd-color-selection-placement"
+  }
+
+  FPD.callbacks = {};
+  FPD.ta = FPD.ta || {};
+  FPD.ta.product = FPD.ta.product || {}
+  FPD.ta.product.price = '.product-price'
+
+  function defer(method) {
+    if (window.fpdLib && fpdLib.jQuery && FPD.instance && FPD.instance.currentViewInstance) {
+      method();
+    } else {
+      setTimeout(function() { defer(method) }, 50);
+    }
+  }
+
+  function deferJquery(method) {
+    if(window.fpdLib && fpdLib.jQuery) {
+      method();
+    } else {
+      setTimeout(function() { deferJquery(method) }, 50)
+    }
+  }
+
+  defer(function() {
+    const $ = fpdLib.jQuery
+    $("#fpd-reel-color .fpd-item").on('click', function(event) {
+      const $element = $(event.target)
+      const designTitle = $element.parent().data('title')
+
+      const overlayDesigns = FPD.allDesignsJSON.find(designCat => designCat.ID == "XsueK2ahf2xrs4qNa")
+
+      const overlayElement = overlayDesigns.designs.find(design => design.title == designTitle)
+      
+      FPD.instance._addCanvasDesign(overlayElement.source, overlayElement.title, overlayElement.parameters, 0)
+    })
+
+    FPD.callbacks.cartTextPropertiesPost = (properties) => {
+      {% if template == 'product.fpd-custom-lanyard' or template == 'product.fpd-custom-lanyard-v2' or template == 'product.fpd-custom-lanyard-double' %}
+        console.log('cartTextPropertiesPost before', properties)
+        const view = FPD.instance.currentViewInstance
+        const reelElement = view.getElementByReplace('reel')
+        const lanyardElement = view.getElementByReplace('lanyard')
+        const lanyardText = view.getElementByReplace('text_lanyard')
+        const lanyardLogo = view.getElementByReplace('replace')
+        const reelLogo = FPD.instance.getElements().find((e) => e.boundingBox == 'Reel Logo' )
+
+        
+        const lanyardShipping = $('*[name="lanyard_shipping"]:checked').val()
+        const lanyardImprint = $('*[name="lanyard_imprint"]:checked').val()
+
+        const lanyardColorText = $('#lanyard-color select option:selected').text()
+        const lanyardColorVal = $('#lanyard-color select option:selected').val()
+
+        const lanyardWidth = $("#lanyard-width select option:selected").text()
+      
+        const lanyardDoubleEnded = $('*[name="double"]').length > 0 ? $('*[name="double"]')[0].check : null
+        const lanyardTwoSided = $('*[name="two-sided"]').length > 0 ? $('*[name="two-sided"]')[0].check : null
+
+        const lanyardBreakaway = view.getElementByReplace("breakaway")
+        const lanyardEndfitting = view.getElementByReplace("endfittings")
+      
+        const lanyardFinishing = $('#finish-options select option:selected').val()
+
+        const lanyardSymmetrical = $('*[name="symmetrical"]').length > 0 ? $('*[name="symmetrical"]')[0].check : null
+
+        const lanyardSpaceWidth = $('#space-width').val()
+  
+        properties['Lanyard Text'] = lanyardText.text
+        properties['Lanyard Logo'] = lanyardLogo.source
+
+        // v1 only
+        lanyardElement ? properties['Lanyard Color'] = lanyardElement.title : ''  
+        reelElement ? properties['Reel Color'] = reelElement.title : ''
+        reelLogo ? properties['Reel Logo'] = reelLogo.source : ''
+
+        if(lanyardShipping) {
+          properties['Shipping'] = lanyardShipping
+        }
+      if(lanyardImprint)
+          properties['Imprint Style'] = lanyardImprint
+      if(lanyardColorText)
+          properties['Lanyard Color'] = lanyardColorText
+      if(lanyardWidth)
+          properties['Lanyard Width'] = lanyardWidth
+      if(lanyardDoubleEnded)
+          properties['Double Ended'] = lanyardDoubleEnded ? 'yes' : 'no'
+      if(lanyardTwoSided)
+          properties['Two Sided'] = lanyardTwoSided ? 'yes' : 'no'
+      if(lanyardBreakaway)
+          properties['Breakaway'] = lanyardBreakaway?.title
+      if(lanyardEndfitting)
+          properties['Endfitting'] = lanyardEndfitting?.title
+      if(lanyardFinishing)
+          properties['Finishing'] = lanyardFinishing
+        // }
+
+        console.log('cartTextPropertiesPost after', properties)
+      {% endif %}
+      return properties
+    }
+  })
+
+  deferJquery(function() {
+    const $ = fpdLib.jQuery
+    FPD.callbacks.cartImageFallback = function(item, $item, $itemImage, $imageOrg) {
+      if($itemImage.length > 0) {
+        return 'replaced';
+      }
+  
+      var imageUrl = item.properties['_fpd-url']
+      if(!imageUrl) return 'non-fpd'
+  
+      const $mediaItem = $item.find(".cart-item__media")
+      
+      const $fallbackImage = '<a href="#" class="cart-item__link" aria-hidden="true" tabindex="-1"><div class="cart-item__image-container gradient global-media-settings"><img class="cart-item__image" width="150" height="181" src="' + imageUrl +'"></div></a>'
+      
+      $mediaItem.append($fallbackImage)
+
+      return 'fallback'
+    }
+  })
+
+  //AtC Notification
+  function deferNote(method) {
+    if (window.fpdLib && fpdLib.jQuery && FPD.instance) {
+      method();
+    } else {
+      setTimeout(function() { deferNote(method) }, 5);
+    }
+  }
+  
+  deferNote(function() {
+    const $ = fpdLib.jQuery
+
+    FPD.callbacks.beforeAddToCart = ($addToCartForm, fpd) => {
+     // return // don't execute right now.
+      
+      
+      if(FPD.instance.viewInstances[0].isCustomized) {
+        return // all good do nothing
+      } else if($('.product-form__buttons > a.button')[0]) {
+        
+        var $modal = FPD.func.FPDUtil.showModal('<h3>Oops!</h3><p>It looks like you haven`t customized your item. Did you mean to order our standard product?</p><div class="button-wrapper"><button id="backToCustomization">Let`s customize!</button><button id="continueToProduct">Standard product</button></div>')
+        // add click listener
+        $('#continueToProduct').on('click', () => FPD.func.continueToProduct() )
+        $('#backToCustomization').on('click', () => FPD.func.closeModal() )
+        $('.fpd-modal-wrapper .fpd-icon-close').on('click', () => FPD.func.closeModal() )
+        console.log('after modal', $modal)
+      } else {
+        
+        var $modal = FPD.func.FPDUtil.showModal('<h3>Oops!</h3><p>It looks like you haven´t customized your item.</p><div class="button-wrapper"><button id="backToCustomization">Customize it</button><button id="continueAddToCart">Add to Cart</button></div>')
+        // add click listener
+        $('#continueAddToCart').on('click', () => FPD.func.continueWithout() )
+        $('#backToCustomization').on('click', () => FPD.func.closeModal() )
+        $('.fpd-modal-wrapper .fpd-icon-close').on('click', () => FPD.func.closeModal() )
+        console.log('after modal', $modal)
+      }
+      throw new Error('Not all views are customized')
+    }
+
+    FPD.func.continueToProduct = () => {
+      
+      $('.fpd-modal-wrapper .fpd-icon-close')[0].click();
+      $('.product-form__buttons > a.button')[0].click();
+    }
+
+    FPD.func.continueWithout = () => {
+      // allow callback with one view and no modal or error
+      // trigger atc process again
+      
+      FPD.callbacks.beforeAddToCart = () => {}
+      FPD.productPage.getAtcButtons()[0].click();
+    }
+
+    FPD.func.closeModal = () => {
+      $('.fpd-modal-wrapper .fpd-icon-close')[0].click();
+      console.log('test disabled')
+      FPD.productPage.getAtcButtons()[0].removeAttr('disabled');
+    }
+  })
+  
+  
+  // console.log("template", "{{ template }}")
+  // console.log("product", "{{ product.id }}")
+  FPD.onlyDoubleEnded = String({{ product.id }}) == "9603349741888"
+  // Include the following in the theme.liquid
+  //
+  // comment  Fancy Product Designer setup - only remove after uninstall endcomment
+  // render 'fpd-snippet-v2' with product as product, cart as cart
+</script>
+
+{% if template == 'product.fpd-custom-lanyard' %}
+  {{ 'fpd-lanyard-script.js' | asset_url | script_tag }}
+{% endif %}
+{% if template == 'product.fpd-custom-lanyard-v2' %}
+  {{ 'fpd-lanyard-script-v2.js' | asset_url | script_tag }}
+{% endif %}
+{% if template == 'product.fpd-custom-lanyard-double' %}
+  {{ 'fpd-lanyard-script-v3.js' | asset_url | script_tag }}
+{% endif %}
