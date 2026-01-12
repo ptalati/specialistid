@@ -684,3 +684,11 @@ tr.current {
 body h1 {
     font-size: calc(var(--font-heading-scale) * 2.3rem);
 }
+
+a.custom_button_image {
+    margin: 2rem 0;
+}
+
+a.custom_button_image img {
+    width: 100%;
+}
