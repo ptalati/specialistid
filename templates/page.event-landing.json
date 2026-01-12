@@ -179,7 +179,9 @@
         "column_iPmCMc": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Music Festivals",
+            "enable_copy_button": false,
             "text": "<p>Equip stage crew, staff, and VIP guests with all access event credentials that are clearly marked and easy to manage. Combine custom printed badges with branded lanyards and color-coded badge holders to control backstage and stage access zones.</p>",
             "link_label": "",
             "link": ""
@@ -188,7 +190,9 @@
         "column_FkcnyQ": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Conferences",
+            "enable_copy_button": false,
             "text": "<p>Simplify check-in and attendee identification with pre-printed name badges and clear badge holders. Add custom lanyards for brand visibility and pair with retractable reels for scanning access points and meeting sessions.</p>",
             "link_label": "",
             "link": ""
@@ -197,7 +201,9 @@
         "column_G3cdgb": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Media & Film Productions",
+            "enable_copy_button": false,
             "text": "<p>Control set access with VIP passes and production crew badges using secure retractable badge reels. Easily integrate with RFID access control for restricted areas and assign unique roles with printed designations on each badge.</p>",
             "link_label": "",
             "link": ""
@@ -206,7 +212,9 @@
         "column_ajDGTk": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Corporate & Private Events",
+            "enable_copy_button": false,
             "text": "<p>Add a polished, professional touch to your private event or business function with branded lanyards, sleek badge holders, and custom access badges that reflect your company’s identity while improving security and visibility.</p>",
             "link_label": "",
             "link": ""
@@ -329,6 +337,7 @@
       "name": "t:sections.newsletter.presets.name",
       "settings": {
         "color_scheme": "scheme-5",
+        "background_image": "shopify://shop_images/HQ_Lanyard.png",
         "full_width": true,
         "section_css_class": "newsletter-section",
         "padding_top": 80,
