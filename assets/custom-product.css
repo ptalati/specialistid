@@ -686,7 +686,8 @@ body h1 {
 }
 
 a.custom_button_image {
-    margin: 2rem 0;
+    display: block;
+    margin: 3rem 0;
 }
 
 a.custom_button_image img {
