@@ -72,7 +72,9 @@
         "column_LhQqTP": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Business / Corporate",
+            "enable_copy_button": false,
             "text": "",
             "link_label": "Consult the guide",
             "link": "shopify://pages/corporate-id-badge-accessories-guide-for-buyers"
@@ -81,7 +83,9 @@
         "column_EG6z73": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Government",
+            "enable_copy_button": false,
             "text": "",
             "link_label": "Consult the guide",
             "link": "shopify://pages/government-id-badge-accessories-buying-guide"
@@ -90,7 +94,9 @@
         "column_6rN9W6": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Healthcare / Hospitals",
+            "enable_copy_button": false,
             "text": "",
             "link_label": "Consult the guide",
             "link": "shopify://pages/hospital-id-badge-accessories-procurement-guide"
@@ -99,7 +105,9 @@
         "column_TENEq3": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Schools",
+            "enable_copy_button": false,
             "text": "",
             "link_label": "Consult the guide",
             "link": "shopify://pages/the-ultimate-school-id-purchasing-guide-simple-steps-to-get-started"
@@ -108,7 +116,9 @@
         "column_ceHx9r": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Universities / Colleges / ICUFs",
+            "enable_copy_button": false,
             "text": "",
             "link_label": "Consult the guide",
             "link": "shopify://pages/university-id-badge-accessories-buying-guide"
@@ -222,7 +232,8 @@
       ],
       "name": "t:sections.newsletter.presets.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-5",
+        "background_image": "shopify://shop_images/HQ_Lanyard.png",
         "full_width": true,
         "section_css_class": "newsletter-section",
         "padding_top": 80,
