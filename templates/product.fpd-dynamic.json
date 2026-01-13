@@ -16,6 +16,18 @@
           "type": "fpd_designer",
           "settings": {}
         },
+        "spacer_UWAqTY": {
+          "type": "spacer",
+          "settings": {
+            "space_height": 30
+          }
+        },
+        "product_media_gD6MxB": {
+          "type": "product_media",
+          "settings": {
+            "hide_preview_image": true
+          }
+        },
         "product_video_rbDdpR": {
           "type": "product_video",
           "settings": {}
@@ -150,6 +162,8 @@
       },
       "block_order": [
         "fpd_designer_BWFDKw",
+        "spacer_UWAqTY",
+        "product_media_gD6MxB",
         "product_video_rbDdpR",
         "title",
         "custom_availability_mQycK4",
