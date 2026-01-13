@@ -38,6 +38,25 @@
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
     }
+
+    /* Single column FPD layout styles */
+    .product-fpd-single-column {
+      margin-bottom: 3rem;
+    }
+
+    .fpd-full-width {
+      width: 100%;
+    }
+
+    .fpd-full-width #fpd {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .fpd-full-width #fpd img {
+      width: 100%;
+      height: auto;
+    }
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -123,7 +142,29 @@
   {% render 'hidden-metadata' %}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+  {% assign has_fpd_block = false %}
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'fpd_designer' -%}
+      {% assign has_fpd_block = true %}
+    {%- endif -%}
+  {%- endfor -%}
+
   <div class="page-width">
+    {%- if section.settings.single_column_fpd and has_fpd_block -%}
+      {%- comment -%} Single column FPD layout - FPD full width above {%- endcomment -%}
+      <div class="product-fpd-single-column">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'fpd_designer' -%}
+            <div class="fpd-full-width" {{ block.shopify_attributes }}>
+              <div id="fpd">
+                <img src="{{ 'fpd_placeholder.png' | asset_url }}" alt="Placeholder" width="600">
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
         {%- for block in section.blocks -%}
@@ -135,9 +176,11 @@
                 block_id: block.id
               %}
             {%- when 'fpd_designer' -%}
-              <div id="fpd">
-                <img src="{{ 'fpd_placeholder.png' | asset_url }}" alt="Placeholder" width="600">
-              </div>
+              {%- unless section.settings.single_column_fpd -%}
+                <div id="fpd">
+                  <img src="{{ 'fpd_placeholder.png' | asset_url }}" alt="Placeholder" width="600">
+                </div>
+              {%- endunless -%}
             {%- when 'custom_designer' -%}
               {{ 'custom-bb.css' | asset_url | stylesheet_tag }}
 
@@ -2617,6 +2660,13 @@
       "id": "enable_sticky_info",
       "default": true,
       "label": "t:sections.main-product.settings.enable_sticky_info.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "single_column_fpd",
+      "default": false,
+      "label": "Single Column FPD Layout",
+      "info": "When enabled, FPD Designer will be full width and appear above product info"
     },
     {
       "type": "color_scheme",
