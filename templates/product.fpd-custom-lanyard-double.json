@@ -16,6 +16,12 @@
           "type": "fpd_designer",
           "settings": {}
         },
+        "product_media_Hp6iA9": {
+          "type": "product_media",
+          "settings": {
+            "hide_preview_image": true
+          }
+        },
         "product_video_mgQapf": {
           "type": "product_video",
           "settings": {}
@@ -190,6 +196,7 @@
       },
       "block_order": [
         "fpd_designer_EDKJiR",
+        "product_media_Hp6iA9",
         "product_video_mgQapf",
         "title",
         "custom_availability_mQycK4",

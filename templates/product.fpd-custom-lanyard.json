@@ -16,6 +16,12 @@
           "type": "fpd_designer",
           "settings": {}
         },
+        "product_media_c4trtd": {
+          "type": "product_media",
+          "settings": {
+            "hide_preview_image": true
+          }
+        },
         "product_video_mgQapf": {
           "type": "product_video",
           "settings": {}
@@ -156,6 +162,7 @@
       },
       "block_order": [
         "fpd_designer_YMN33M",
+        "product_media_c4trtd",
         "product_video_mgQapf",
         "title",
         "custom_availability_mQycK4",
