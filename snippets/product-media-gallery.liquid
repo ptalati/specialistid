@@ -50,10 +50,15 @@
   {% endif %}
   aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
   data-desktop-layout="{{ section.settings.gallery_layout }}"
-  {% if hide_preview %}data-hide-preview="true"{% endif %}
+  {% if hide_preview %}
+    data-hide-preview="true"
+  {% endif %}
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
-  <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter{% if hide_preview %} visually-hidden{% endif %}">
+  <slider-component
+    id="GalleryViewer-{{ section.id }}"
+    class="slider-mobile-gutter{% if hide_preview %} visually-hidden{% endif %}"
+  >
     <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
       {{ 'accessibility.skip_to_product_info' | t }}
     </a>
@@ -237,7 +242,9 @@
               aria-current="true"
               aria-controls="GalleryViewer-{{ section.id }}"
               aria-describedby="{{ thumbnail_id }}"
-              {% if hide_preview %}data-lightbox-trigger="true" data-media-src="{{ featured_media | image_url: width: 2048 }}"{% endif %}
+              {% if hide_preview %}
+                data-lightbox-trigger="true" data-media-src="{{ featured_media | image_url: width: 2048 }}"
+              {% endif %}
             >
               {{
                 featured_media.preview_image
@@ -300,7 +307,9 @@
                 {% endif %}
                 aria-controls="GalleryViewer-{{ section.id }}"
                 aria-describedby="{{ thumbnail_id }}"
-                {% if hide_preview and media.media_type == 'image' %}data-lightbox-trigger="true" data-media-src="{{ media | image_url: width: 2048 }}"{% endif %}
+                {% if hide_preview and media.media_type == 'image' %}
+                  data-lightbox-trigger="true" data-media-src="{{ media | image_url: width: 2048 }}"
+                {% endif %}
               >
                 {{
                   media.preview_image
@@ -336,7 +345,7 @@
 
 {%- if hide_preview -%}
   <div id="product-lightbox-{{ section.id }}" class="product-lightbox" style="display: none;">
-    <div class="product-lightbox__overlay"></div>
+    <div class="product-lightbox__overlay">&nbsp;</div>
     <div class="product-lightbox__content">
       <button class="product-lightbox__close" aria-label="Close lightbox">&times;</button>
       <img class="product-lightbox__image" src="" alt="">
@@ -402,15 +411,15 @@
   </style>
 
   <script>
-    (function() {
+    (function () {
       const lightbox = document.getElementById('product-lightbox-{{ section.id }}');
       const lightboxImage = lightbox.querySelector('.product-lightbox__image');
       const closeBtn = lightbox.querySelector('.product-lightbox__close');
       const overlay = lightbox.querySelector('.product-lightbox__overlay');
       const triggers = document.querySelectorAll('[data-lightbox-trigger="true"]');
 
-      triggers.forEach(trigger => {
-        trigger.addEventListener('click', function(e) {
+      triggers.forEach((trigger) => {
+        trigger.addEventListener('click', function (e) {
           e.preventDefault();
           const imageSrc = this.getAttribute('data-media-src');
           lightboxImage.src = imageSrc;
@@ -427,7 +436,7 @@
       closeBtn.addEventListener('click', closeLightbox);
       overlay.addEventListener('click', closeLightbox);
 
-      document.addEventListener('keydown', function(e) {
+      document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && lightbox.style.display === 'block') {
           closeLightbox();
         }
