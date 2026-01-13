@@ -16,6 +16,18 @@
           "type": "fpd_designer",
           "settings": {}
         },
+        "spacer_ENH3Ec": {
+          "type": "spacer",
+          "settings": {
+            "space_height": 30
+          }
+        },
+        "product_media_6pUG63": {
+          "type": "product_media",
+          "settings": {
+            "hide_preview_image": true
+          }
+        },
         "product_video_mgQapf": {
           "type": "product_video",
           "settings": {}
@@ -150,6 +162,8 @@
       },
       "block_order": [
         "fpd_designer_LctcHa",
+        "spacer_ENH3Ec",
+        "product_media_6pUG63",
         "product_video_mgQapf",
         "title",
         "custom_availability_mQycK4",
