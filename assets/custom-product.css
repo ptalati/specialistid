@@ -699,3 +699,7 @@ a.custom_button_image img {
     display: flex;
     justify-content: center;
 }
+
+.product__spacer {
+    color: transparent;
+}
