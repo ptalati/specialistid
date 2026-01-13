@@ -16,6 +16,12 @@
           "type": "fpd_designer",
           "settings": {}
         },
+        "spacer_Y8qMDk": {
+          "type": "spacer",
+          "settings": {
+            "space_height": 30
+          }
+        },
         "product_media_Hp6iA9": {
           "type": "product_media",
           "settings": {
@@ -196,6 +202,7 @@
       },
       "block_order": [
         "fpd_designer_EDKJiR",
+        "spacer_Y8qMDk",
         "product_media_Hp6iA9",
         "product_video_mgQapf",
         "title",
