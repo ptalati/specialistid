@@ -129,7 +129,11 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {% when 'product_media' %}
-              {% render 'product-media-gallery', variant_images: variant_images, hide_preview: block.settings.hide_preview_image, block_id: block.id %}
+              {% render 'product-media-gallery',
+                variant_images: variant_images,
+                hide_preview: block.settings.hide_preview_image,
+                block_id: block.id
+              %}
             {%- when 'fpd_designer' -%}
               <div id="fpd">
                 <img src="{{ 'fpd_placeholder.png' | asset_url }}" alt="Placeholder" width="600">
@@ -145,6 +149,14 @@
                 <div class="selectedColor">
                   <div id="badge-preview-text" class="badge-preview-text-tab2"></div>
                 </div>
+              </div>
+            {%- when 'spacer' -%}
+              <div
+                class="product__spacer"
+                {{ block.shopify_attributes }}
+                style="height: {{ block.settings.space_height }}px;"
+              >
+                &nsbp;
               </div>
             {%- when 'product_video' -%}
               <!-- video url : end -->
@@ -221,8 +233,6 @@
             {%- case block.type -%}
               {%- when '@app' -%}
                 {% render block %}
-              {%- when 'spacer' -%}
-                <div class="product__spacer" {{ block.shopify_attributes }} style="height: {{ block.settings.space_height }}px;">&nsbp;</div>
               {%- when 'text' -%}
                 <p
                   class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
