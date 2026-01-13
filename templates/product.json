@@ -129,6 +129,14 @@
             "button_color_scheme": "scheme-2"
           }
         },
+        "custom_button_faTkJ9": {
+          "type": "custom_button",
+          "settings": {
+            "custom_button_title": "Customize Product",
+            "custom_button_show_to_left": false,
+            "custom_button_show_banner_image": false
+          }
+        },
         "customize_quote_buttons_KQYLh3": {
           "type": "customize_quote_buttons",
           "settings": {
@@ -183,6 +191,7 @@
         "total_price_nW98cY",
         "lead_time_KgVKHP",
         "buy_buttons",
+        "custom_button_faTkJ9",
         "customize_quote_buttons_KQYLh3",
         "collapsible_tab_aiETtU",
         "product_specifications_NAE6hJ",
