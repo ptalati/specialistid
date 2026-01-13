@@ -30,6 +30,10 @@
             "custom_button_show_banner_image": true
           }
         },
+        "product_video_VhwqPe": {
+          "type": "product_video",
+          "settings": {}
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -161,6 +165,7 @@
         "custom_designer_eBRy7P",
         "infinite_options_custom_qkkcxg",
         "custom_button_6gxYmH",
+        "product_video_VhwqPe",
         "title",
         "custom_availability_mQycK4",
         "product_review_dEQU4X",

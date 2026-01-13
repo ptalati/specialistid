@@ -396,5 +396,8 @@
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
     <script src="{{ 'custom-tooltip.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'custom-discounts.js' | asset_url }}" defer="defer"></script>
+    {% if template contains 'cart' or template contains 'product' %}
+      {% render 'fpd-snippet-v2' with product as product, cart as cart %}
+    {% endif %}
   </body>
 </html>
