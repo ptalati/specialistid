@@ -221,6 +221,8 @@
             {%- case block.type -%}
               {%- when '@app' -%}
                 {% render block %}
+              {%- when 'spacer' -%}
+                <div class="product__spacer" {{ block.shopify_attributes }} style="height: {{ block.settings.space_height }}px;"></div>
               {%- when 'text' -%}
                 <p
                   class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
@@ -1247,6 +1249,22 @@
           "label": "Hide Preview Image",
           "info": "When enabled, only thumbnails will show and clicking them will open in a lightbox",
           "default": false
+        }
+      ]
+    },
+    {
+      "type": "spacer",
+      "name": "Spacer",
+      "settings": [
+        {
+          "type": "range",
+          "id": "space_height",
+          "min": 10,
+          "max": 200,
+          "step": 5,
+          "unit": "px",
+          "label": "Space Height",
+          "default": 30
         }
       ]
     },
