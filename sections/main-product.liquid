@@ -129,7 +129,7 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {% when 'product_media' %}
-              {% render 'product-media-gallery', variant_images: variant_images %}
+              {% render 'product-media-gallery', variant_images: variant_images, hide_preview: block.settings.hide_preview_image, block_id: block.id %}
             {%- when 'fpd_designer' -%}
               <div id="fpd">
                 <img src="{{ 'fpd_placeholder.png' | asset_url }}" alt="Placeholder" width="600">
@@ -1239,7 +1239,16 @@
     },
     {
       "type": "product_media",
-      "name": "Product Media"
+      "name": "Product Media",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "hide_preview_image",
+          "label": "Hide Preview Image",
+          "info": "When enabled, only thumbnails will show and clicking them will open in a lightbox",
+          "default": false
+        }
+      ]
     },
     {
       "type": "product_video",
