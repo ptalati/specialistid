@@ -327,7 +327,13 @@
               {%- when 'customize_quote_buttons' -%}
                 <div class="customize_quote_buttons_wrapper">
                   {% if product.metafields.c_f.custom_product != blank %}
-                    <a href="{{ product.metafields.c_f.custom_product }}" class="button secondary">Customize It</a>
+                    <a href="{{ product.metafields.c_f.custom_product }}" class="button secondary">
+                      {%- if block.settings.customize_button_text != blank -%}
+                        {{ block.settings.customize_button_text }}
+                      {%- else -%}
+                        Customize It
+                      {%- endif -%}
+                    </a>
                   {% endif %}
                   {% if block.settings.customize_quote_button_link != blank %}
                     <a href="{{ block.settings.customize_quote_button_link }}" class="button button-white"
@@ -1153,6 +1159,12 @@
       "name": "Customize Quote Buttons",
       "limit": 1,
       "settings": [
+        {
+          "type": "text",
+          "id": "customize_button_text",
+          "label": "Customize Button Text",
+          "default": "Customize It"
+        },
         {
           "type": "url",
           "id": "customize_quote_button_link",
