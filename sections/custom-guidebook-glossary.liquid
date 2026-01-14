@@ -223,4 +223,41 @@
       }
     }, 500);
   }
+
+  function goToNextSection(currentIndex) {
+    const nextIndex = currentIndex + 1;
+    const nextSection = document.getElementById(`section-${nextIndex}`);
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => {
+        const content = nextSection.querySelector('.glossary-content');
+        if (!content.classList.contains('active')) {
+          toggleSection(nextIndex);
+        }
+      }, 500);
+    }
+  }
+
+  function goToTop() {
+    const topSection = document.getElementById('glossary-top');
+
+    // Find the closest glossary-card container
+    const currentCard = event.target.closest('.glossary-card');
+    if (currentCard) {
+      const content = currentCard.querySelector('.glossary-content');
+      if (content && content.classList.contains('active')) {
+        content.classList.remove('active'); // Collapse current section
+      }
+    }
+
+    // Scroll higher to top section
+    if (topSection) {
+      const offset = 80;
+      const topPosition = topSection.offsetTop - offset;
+      window.scrollTo({
+        top: topPosition > 0 ? topPosition : 0,
+        behavior: 'smooth',
+      });
+    }
+  }
 </script>
