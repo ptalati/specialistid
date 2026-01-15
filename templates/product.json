@@ -14,7 +14,9 @@
       "blocks": {
         "product_media_ENbA96": {
           "type": "product_media",
-          "settings": {}
+          "settings": {
+            "hide_preview_image": false
+          }
         },
         "product_video_mgQapf": {
           "type": "product_video",
@@ -94,6 +96,12 @@
             "movable": true
           }
         },
+        "custom_liquid_dKMFxn": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p class=\"bulk-ordering-message hidden\">Bulk Ordering? Complex Project? <a href=\"https://www.specialistid.com/pages/enterprise-solutions\">Click Here</a>.</p>"
+          }
+        },
         "infinite_options_app_block_ew88hB": {
           "type": "shopify://apps/infinite-options/blocks/app-block/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
           "settings": {}
@@ -132,6 +140,7 @@
         "customize_quote_buttons_KQYLh3": {
           "type": "customize_quote_buttons",
           "settings": {
+            "customize_button_text": "Customize It",
             "customize_quote_button_link": "https://www.specialistid.com/pages/request-a-quote"
           }
         },
@@ -176,6 +185,7 @@
         "volume_pricing_available_PDNPnr",
         "regios_discounts_product_page_discount_BHiKmA",
         "regios_discounts_volume_pricing_table_L36WtN",
+        "custom_liquid_dKMFxn",
         "infinite_options_app_block_ew88hB",
         "quantity_selector",
         "variant_picker",
@@ -191,6 +201,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "single_column_fpd": false,
         "color_scheme": "",
         "media_size": "small",
         "constrain_to_viewport": true,
