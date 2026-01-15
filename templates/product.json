@@ -119,7 +119,7 @@
           "type": "quantity_selector",
           "settings": {}
         },
-        "variant_picker": {
+        "variant_picker_XFqKCV": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
@@ -197,7 +197,7 @@
         "custom_liquid_dKMFxn",
         "infinite_options_app_block_ew88hB",
         "quantity_selector",
-        "variant_picker",
+        "variant_picker_XFqKCV",
         "clear_block_GWGb7E",
         "total_price_nW98cY",
         "lead_time_KgVKHP",

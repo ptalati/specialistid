@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "custom_discontinued_product_NkPpqj": {
+      "type": "custom-discontinued-product",
+      "name": "Discontinued Product",
+      "settings": {
+        "discontinued_text": "This product has been discontinued.",
+        "discontinued_img": "shopify://shop_images/Discontinued.png"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -107,16 +115,19 @@
           "type": "shopify://apps/infinite-options/blocks/app-block/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
           "settings": {}
         },
+        "variant_picker_dropdown_V8hANM": {
+          "type": "variant_picker_dropdown",
+          "settings": {
+            "swatch_shape": "circle"
+          }
+        },
+        "clear_block_4VgTFD": {
+          "type": "clear_block",
+          "settings": {}
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
         },
         "clear_block_GWGb7E": {
           "type": "clear_block",
@@ -183,8 +194,9 @@
         "regios_discounts_volume_pricing_table_L36WtN",
         "custom_liquid_ALw94c",
         "infinite_options_app_block_eVPFjw",
+        "variant_picker_dropdown_V8hANM",
+        "clear_block_4VgTFD",
         "quantity_selector",
-        "variant_picker",
         "clear_block_GWGb7E",
         "total_price_nW98cY",
         "lead_time_KgVKHP",
@@ -209,14 +221,6 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
-      }
-    },
-    "custom_discontinued_product_NkPpqj": {
-      "type": "custom-discontinued-product",
-      "name": "Discontinued Product",
-      "settings": {
-        "discontinued_text": "This product has been discontinued.",
-        "discontinued_img": "shopify://shop_images/Discontinued.png"
       }
     },
     "related-products": {
