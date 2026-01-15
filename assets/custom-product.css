@@ -5,6 +5,15 @@
 }
 
 /* ====================================
+   DISCONTINUED PRODUCT STYLES
+   ==================================== */
+
+body.discontinued .lead_time_info,
+body.discontinued .stock_availability_label {
+    display: none !important;
+}
+
+/* ====================================
    COLOR SWATCHES - CSS ONLY
    ==================================== */
 
