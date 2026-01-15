@@ -115,19 +115,16 @@
           "type": "shopify://apps/infinite-options/blocks/app-block/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
           "settings": {}
         },
-        "variant_picker_dropdown_aQJrJ4": {
-          "type": "variant_picker_dropdown",
-          "settings": {
-            "swatch_shape": "circle"
-          }
-        },
-        "clear_block_QycLjX": {
-          "type": "clear_block",
-          "settings": {}
-        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
+        },
+        "variant_picker_XFqKCV": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
         },
         "clear_block_GWGb7E": {
           "type": "clear_block",
@@ -199,9 +196,8 @@
         "regios_discounts_volume_pricing_table_L36WtN",
         "custom_liquid_dKMFxn",
         "infinite_options_app_block_ew88hB",
-        "variant_picker_dropdown_aQJrJ4",
-        "clear_block_QycLjX",
         "quantity_selector",
+        "variant_picker_XFqKCV",
         "clear_block_GWGb7E",
         "total_price_nW98cY",
         "lead_time_KgVKHP",
