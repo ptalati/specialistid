@@ -842,11 +842,11 @@
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'variant_picker_dropdown' -%}
-                {% assign dropdown_block = block | merge: "settings" | merge: "picker_type" => "dropdown" %}
                 {% render 'product-variant-picker',
                   product: product,
-                  block: dropdown_block,
-                  product_form_id: product_form_id
+                  block: block,
+                  product_form_id: product_form_id,
+                  force_dropdown: true
                 %}
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',

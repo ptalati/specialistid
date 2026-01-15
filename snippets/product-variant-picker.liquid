@@ -5,6 +5,7 @@
   - product: {Object} product object.
   - block: {Object} passing the block information.
   - product_form_id: {String} Id of the product form to which the variant picker is associated.
+  - force_dropdown: {Boolean} Force all options to display as dropdowns (optional).
   Usage:
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
@@ -20,7 +21,9 @@
         assign picker_type = block.settings.picker_type
         assign option_name_lower = option.name | downcase
 
-        if swatch_count > 0 and block.settings.swatch_shape != 'none' and option_name_lower == 'color'
+        if force_dropdown
+          assign picker_type = 'dropdown'
+        elsif swatch_count > 0 and block.settings.swatch_shape != 'none' and option_name_lower == 'color'
           if block.settings.picker_type == 'dropdown'
             assign picker_type = 'swatch_dropdown'
           else
