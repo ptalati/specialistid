@@ -434,7 +434,6 @@ fieldset.product-form__input--pill input[value*="Lavender" i]:checked+label::aft
 
 .customize_quote_buttons_wrapper .button {
     width: 100%;
-    font-weight: 600 !important;
 }
 
 .button.button-white {
