@@ -108,6 +108,13 @@
             "movable": true
           }
         },
+        "custom_liquid_JPpQY7": {
+          "type": "custom_liquid",
+          "name": "Bulk Ordering Link",
+          "settings": {
+            "custom_liquid": "<p class=\"bulk-ordering-message hidden\">Bulk Ordering? Complex Project? <a href=\"https://www.specialistid.com/pages/enterprise-solutions\">Click Here</a>.</p>"
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -142,6 +149,7 @@
         "customize_quote_buttons_KQYLh3": {
           "type": "customize_quote_buttons",
           "settings": {
+            "customize_button_text": "Customize It",
             "customize_quote_button_link": "https://www.specialistid.com/pages/request-a-quote"
           }
         },
@@ -178,6 +186,7 @@
         "volume_pricing_available_PDNPnr",
         "regios_discounts_product_page_discount_BHiKmA",
         "regios_discounts_volume_pricing_table_L36WtN",
+        "custom_liquid_JPpQY7",
         "quantity_selector",
         "variant_picker",
         "clear_block_GWGb7E",
@@ -191,6 +200,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "single_column_fpd": false,
         "color_scheme": "",
         "media_size": "small",
         "constrain_to_viewport": true,
