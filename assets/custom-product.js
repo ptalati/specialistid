@@ -158,6 +158,13 @@
       observer.observe(errorMsg, { childList: true, characterData: true, subtree: true });
     }
 
+    // Remove h1 elements from .custom-info-block > .rte
+    const rteBlock = document.querySelector(".custom-info-block > .rte");
+    if (rteBlock) {
+      const h1Elements = rteBlock.querySelectorAll("h1");
+      h1Elements.forEach(h1 => h1.remove());
+    }
+
     // Animated background setup
     setTimeout(function() {
       const bg = document.querySelector(".animated-background");
