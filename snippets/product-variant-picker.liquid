@@ -18,8 +18,9 @@
       {%- liquid
         assign swatch_count = option.values | map: 'swatch' | compact | size
         assign picker_type = block.settings.picker_type
+        assign option_name_lower = option.name | downcase
 
-        if swatch_count > 0 and block.settings.swatch_shape != 'none' and option.name == 'Color'
+        if swatch_count > 0 and block.settings.swatch_shape != 'none' and option_name_lower == 'color'
           if block.settings.picker_type == 'dropdown'
             assign picker_type = 'swatch_dropdown'
           else
@@ -28,7 +29,7 @@
         endif
       -%}
       {%- if picker_type == 'swatch' -%}
-        <fieldset class="js product-form__input product-form__input--swatch">
+        <fieldset class="js product-form__input product-form__input--swatch" data-option-name="color">
           <legend class="form__label">
             {{ option.name }}:
             <span data-selected-value>
@@ -43,7 +44,10 @@
           %}
         </fieldset>
       {%- elsif picker_type == 'button' -%}
-        <fieldset class="js product-form__input product-form__input--pill">
+        <fieldset
+          class="js product-form__input product-form__input--pill"
+          data-option-name="{{ option.name | downcase }}"
+        >
           <legend class="form__label">{{ option.name }}</legend>
           {% render 'product-variant-options',
             product: product,
