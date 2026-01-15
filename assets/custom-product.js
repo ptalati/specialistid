@@ -129,6 +129,9 @@
                               productData?.metafields?.c_f?.discontinued ||
                               document.querySelector('[name="isDiscontinued"]')?.value;
         if (isDiscontinued && isDiscontinued !== "false") {
+          // Add discontinued class to body for CSS handling
+          document.body.classList.add('discontinued');
+          
           const outOfStockBtn = document.querySelector("a.product-form__submit-out-of-stock");
           if (outOfStockBtn) outOfStockBtn.classList.add("discontinued");
           
