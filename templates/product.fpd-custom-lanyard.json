@@ -244,7 +244,7 @@
         "custom_info_AimhCD": {
           "type": "custom_info",
           "settings": {
-            "heading": "",
+            "heading": "Description",
             "content": "{{ product.description }}"
           }
         }
