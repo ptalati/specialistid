@@ -1,45 +1,79 @@
-{% if product.metafields.c_f.discontinued != blank %}
-    {% if section.settings.discontinued_text != blank or section.settings.discontinued_img != blank %}
-      <div class="discontinued-product page-width">
-        {% if section.settings.discontinued_img != blank %}
-          <img src="{{ section.settings.discontinued_img | img_url: 'medium' }}" alt="Discontinued Product Image" />
-        {% endif %}
-        
-        {% if section.settings.discontinued_text != blank %}
-          <div class="discontinued-content">
-            <p class="discontinued-text">{{ section.settings.discontinued_text }}</p>
-
-            {% assign discontinued_value = product.metafields.c_f.discontinued | string | downcase %}
-            {% if discontinued_value != "true" %}
-              <a href="{{ product.metafields.c_f.discontinued }}">Replacement Product</a>
-            {% endif %}
-          </div>
-        {% endif %}
-      </div>
-    {% endif %}
-  {% endif %}
-  
-  {% schema %}
-  {
-    "name": "Discontinued Product",
-    "settings": [
-      {
-        "type": "textarea",
-        "id": "discontinued_text",
-        "label": "Discontinued Text",
-        "default": "This product has been discontinued."
-      },
-      {
-        "type": "image_picker",
-        "id": "discontinued_img",
-        "label": "Discontinued Image"
-      }
-    ],
-    "presets": [
-      {
-        "category": "Custom",
-        "name": "Discontinued Product"
-      }
-    ]
+{% style %}
+  .discontinued-product {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
   }
-  {% endschema %}
+
+  .discontinued-text {
+    font-size: 18px;
+    color: #d9534f; /* Red color for discontinued text */
+    margin: 0 0 0 0;
+  }
+
+  .discontinued-product img {
+    max-width: 100%;
+    width: 120px;
+    height: auto;
+    display: block;
+    margin-top: 0px;
+  }
+  a.button--primary.discontinued {
+    background-color: grey !important;
+  }
+  a.button--primary.discontinued:after {
+    box-shadow: none !important;
+  }
+  a.button--primary.discontinued:before {
+    background-color: grey !important;
+  }
+{% endstyle %}
+
+{% if product.metafields.c_f.discontinued != blank %}
+  {% if section.settings.discontinued_text != blank or section.settings.discontinued_img != blank %}
+    <div class="discontinued-product page-width">
+      {% if section.settings.discontinued_img != blank %}
+        <img src="{{ section.settings.discontinued_img | img_url: 'medium' }}" alt="Discontinued Product Image">
+      {% endif %}
+
+      {% if section.settings.discontinued_text != blank %}
+        <div class="discontinued-content">
+          <p class="discontinued-text">{{ section.settings.discontinued_text }}</p>
+
+          {% assign discontinued_value = product.metafields.c_f.discontinued | string | downcase %}
+          {% if discontinued_value != 'true' %}
+            <a href="{{ product.metafields.c_f.discontinued }}">Replacement Product</a>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Discontinued Product",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "discontinued_text",
+      "label": "Discontinued Text",
+      "default": "This product has been discontinued."
+    },
+    {
+      "type": "image_picker",
+      "id": "discontinued_img",
+      "label": "Discontinued Image"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Custom",
+      "name": "Discontinued Product"
+    }
+  ]
+}
+{% endschema %}
