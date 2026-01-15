@@ -106,6 +106,13 @@
             "movable": true
           }
         },
+        "custom_liquid_kB7NwP": {
+          "type": "custom_liquid",
+          "name": "Bulk Ordering Link",
+          "settings": {
+            "custom_liquid": "<p class=\"bulk-ordering-message hidden\">Bulk Ordering? Complex Project? <a href=\"https://www.specialistid.com/pages/enterprise-solutions\">Click Here</a>.</p>"
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -177,6 +184,7 @@
         "volume_pricing_available_PDNPnr",
         "regios_discounts_product_page_discount_BHiKmA",
         "regios_discounts_volume_pricing_table_L36WtN",
+        "custom_liquid_kB7NwP",
         "quantity_selector",
         "variant_picker",
         "clear_block_GWGb7E",
