@@ -963,7 +963,8 @@
           } else {
             if (inventory_policy === 'deny') {
               document.querySelectorAll("button.product-form__submit").forEach(btn => btn.classList.add('out-of-stock'));
-              lead_time_text = 'Out of stock';
+              // lead_time_text = 'Out of stock';
+              lead_time_text = 'No confirmed stock, but usually ships within a few days';
             } else {
               document.querySelectorAll("button.product-form__submit").forEach(btn => btn.classList.remove('out-of-stock'));
 
