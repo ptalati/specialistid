@@ -98,6 +98,7 @@
         },
         "custom_liquid_dKMFxn": {
           "type": "custom_liquid",
+          "name": "Bulk Ordering Link",
           "settings": {
             "custom_liquid": "<p class=\"bulk-ordering-message hidden\">Bulk Ordering? Complex Project? <a href=\"https://www.specialistid.com/pages/enterprise-solutions\">Click Here</a>.</p>"
           }
