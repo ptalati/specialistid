@@ -126,10 +126,18 @@
         updateTablePrice();
 
         const isDiscontinued = productData?.metafields?.status?.discontinued ||
+                              productData?.metafields?.c_f?.discontinued ||
                               document.querySelector('[name="isDiscontinued"]')?.value;
         if (isDiscontinued && isDiscontinued !== "false") {
           const outOfStockBtn = document.querySelector("a.product-form__submit-out-of-stock");
           if (outOfStockBtn) outOfStockBtn.classList.add("discontinued");
+          
+          // Disable add to cart button for discontinued products
+          const addToCartBtn = document.querySelector("button.product-form__submit");
+          if (addToCartBtn) {
+            addToCartBtn.disabled = true;
+            addToCartBtn.setAttribute('aria-disabled', 'true');
+          }
         }
       });
     }, CONFIG.ANIMATION_DELAY);
