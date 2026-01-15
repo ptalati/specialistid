@@ -215,6 +215,14 @@
         "padding_bottom": 12
       }
     },
+    "custom_discontinued_product_NB97mt": {
+      "type": "custom-discontinued-product",
+      "name": "Discontinued Product",
+      "settings": {
+        "discontinued_text": "This product has been discontinued.",
+        "discontinued_img": "shopify://shop_images/Discontinued.png"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -262,6 +270,7 @@
     }
   },
   "order": [
+    "custom_discontinued_product_NB97mt",
     "main",
     "related-products",
     "product_custom_info_gcmaXt",
