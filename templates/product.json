@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "custom_discontinued_product_QeDXgF": {
+      "type": "custom-discontinued-product",
+      "name": "Discontinued Product",
+      "settings": {
+        "discontinued_text": "This product has been discontinued.",
+        "discontinued_img": "shopify://shop_images/Discontinued.png"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -278,6 +286,7 @@
     }
   },
   "order": [
+    "custom_discontinued_product_QeDXgF",
     "main",
     "custom_spacer_4aMNQm",
     "related-products",

@@ -201,6 +201,14 @@
         "padding_bottom": 12
       }
     },
+    "custom_discontinued_product_pC3ei6": {
+      "type": "custom-discontinued-product",
+      "name": "Discontinued Product",
+      "settings": {
+        "discontinued_text": "This product has been discontinued.",
+        "discontinued_img": "shopify://shop_images/Discontinued.png"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -295,6 +303,7 @@
     }
   },
   "order": [
+    "custom_discontinued_product_pC3ei6",
     "main",
     "related-products",
     "custom_key_features_V7WUnb",
