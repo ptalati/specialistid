@@ -408,6 +408,8 @@ fieldset.product-form__input--pill input[value*="Lavender" i]:checked+label::aft
 
 .volume_pricing_info .volume_pricing_label {
     font-weight: 600;
+    color: #6fb43f;
+    text-decoration: underline;
 }
 
 .volume_pricing_info .volume_pricing_blob {
