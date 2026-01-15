@@ -1137,7 +1137,7 @@
     }
     
     if (compare_at_price_num > 0 && compare_at_price_num > price_num) {
-      msrp_txt = '<div class="regios-dopp-generic-price-item--regular">Regular Price: <s id="compare-at-price">' + formatCurrency(compare_at_price_num) + ' ea</s></div>';
+      msrp_txt = '<div class="regios-dopp-generic-price-item--regular">List Price: <s id="compare-at-price">' + formatCurrency(compare_at_price_num) + ' ea</s></div>';
       totalPrice = price_num * qty;
       map_txt = '<div class="product-price regios-dopp-generic-price-item--sale">' + formatCurrency(price_num) + ' each</div>';
       const rewardDiv = document.querySelector("div.reward_points");
