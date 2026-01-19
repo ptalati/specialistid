@@ -382,7 +382,7 @@
               {%- when 'customize_quote_buttons' -%}
                 <div class="customize_quote_buttons_wrapper">
                   {% if product.metafields.c_f.custom_product != blank %}
-                    <a href="{{ product.metafields.c_f.custom_product }}" class="button secondary">
+                    <a href="{{ product.metafields.c_f.custom_product }}" class="button secondary text-center">
                       {%- if block.settings.customize_button_text != blank -%}
                         {{ block.settings.customize_button_text }}
                       {%- else -%}
