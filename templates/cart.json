@@ -43,7 +43,7 @@
             "en_tx_make_tax_exempt_default_option": false,
             "en_tx_email_label": "<p>Enter the email address to use for this order.</p>",
             "en_tx_email_field_placeholder": "Enter email...",
-            "en_tx_email_required": "yes",
+            "en_tx_email_required": "no",
             "en_tx_certificate_label": "<p>Enter the tax-exempt certificate number.</p>",
             "en_tx_certificate_number_field_placeholder": "Enter certificate num...",
             "en_tx_optional_instructions_label": "",
