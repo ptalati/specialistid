@@ -51,13 +51,16 @@ class CartNotification extends HTMLElement {
     return [
       {
         id: 'cart-notification-product',
-        selector: '.shopify-section',
+        selector: `[id="cart-notification-product-${this.cartItemKey}"]`,
       },
       {
         id: 'cart-notification-button',
       },
       {
         id: 'cart-icon-bubble',
+      },
+      {
+        id: 'cart-notification-recommended',
       },
     ];
   }
