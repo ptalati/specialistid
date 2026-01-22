@@ -40,7 +40,7 @@
         "custom_liquid": "<div class=\"read-more-wrapper page-width\"><button class=\"read-more button\">Read more</button></div>",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 20
       }
     },
     "custom_liquid_wkhG7A": {
@@ -53,7 +53,7 @@
         "custom_liquid": "<div class=\"page-width\">\n{% if collection.metafields.landing_page.landing_page_sub_html != blank %}\n        {{ collection.metafields.landing_page.landing_page_sub_html }}\n      {% endif %}\n</div>",
         "color_scheme": "",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 20
       }
     },
     "product-grid": {
@@ -78,8 +78,8 @@
         "enable_filtering": false,
         "filter_type": "horizontal",
         "enable_sorting": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 20
       }
     },
     "custom_liquid_wp3JFA": {
