@@ -98,5 +98,5 @@ ul.grid.product-grid li {
 }
 
 .button.product-form__submit:hover {
-    background: rgb(var(--color-button_background_2));
+    background: rgb(var(--color-button_background_2)) !important;
 }
