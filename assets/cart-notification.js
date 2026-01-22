@@ -43,8 +43,32 @@ class CartNotification extends HTMLElement {
       );
     });
 
+    // Update recommended section separately (fetch from section)
+    this.updateRecommendedSection();
+
     if (this.header) this.header.reveal();
     this.open();
+  }
+
+  updateRecommendedSection() {
+    const recommendedContainer = document.getElementById('cart-notification-recommended');
+    if (!recommendedContainer) return;
+
+    fetch(window.location.pathname + '?sections=cart-notification-recommended')
+      .then(response => response.json())
+      .then(sections => {
+        if (sections['cart-notification-recommended']) {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(sections['cart-notification-recommended'], 'text/html');
+          const newContent = doc.querySelector('.shopify-section');
+          if (newContent) {
+            recommendedContainer.innerHTML = newContent.innerHTML;
+          }
+        }
+      })
+      .catch(error => {
+        console.error('Error updating recommended section:', error);
+      });
   }
 
   getSectionsToRender() {
@@ -58,9 +82,6 @@ class CartNotification extends HTMLElement {
       },
       {
         id: 'cart-icon-bubble',
-      },
-      {
-        id: 'cart-notification-recommended',
       },
     ];
   }
