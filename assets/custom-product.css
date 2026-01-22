@@ -576,7 +576,7 @@ fieldset[data-option-name="color"].product-form__input--pill input[value*="Laven
     /* If variant-selects is not directly after quantity, target it anyway */
     variant-selects,
     variant-radios.no-js-hidden {
-        display: inline-block !important;
+        display: inline-block;
         vertical-align: top;
         width: auto;
         max-width: calc(100% - 240px);
@@ -592,7 +592,7 @@ fieldset[data-option-name="color"].product-form__input--pill input[value*="Laven
 /* Mobile: Stack vertically */
 @media screen and (max-width: 749px) {
     .product-form__input.product-form__quantity {
-        display: block !important;
+        display: block;
         width: 100%;
         margin-right: 0;
         margin-bottom: 1.5rem;
