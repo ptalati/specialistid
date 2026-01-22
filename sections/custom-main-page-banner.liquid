@@ -35,7 +35,7 @@
   }
 
   .badge-content-col p {
-    font-size: 1.4rem; /* Increased size */
+    font-size: 1.4rem; 
     font-weight: 600;
     margin-bottom: 30px;
     max-width: 350px;
@@ -53,20 +53,16 @@
     transition: opacity 0.3s ease;
   }
 
-  .badge-cta:hover {
-    opacity: 0.9;
-  }
-
   /* Right Side Grid */
   .badge-visual-col {
     flex: 2;
     display: grid;
-    grid-template-columns: 1.2fr 2fr;
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
   }
 
   .badge-card {
-    background: #f8f8f8;
+    background: #ffffff; /* Changed to white */
     border: 1px solid #e5e5e5;
     display: flex;
     flex-direction: column;
@@ -76,26 +72,33 @@
     overflow: hidden;
   }
 
+  .badge-card:hover {
+    transform: translateY(-3px);
+  }
+
   .badge-image-container {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1; /* Ensures perfect square for all containers */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 30px;
     flex-grow: 1;
+    background: #ffffff;
   }
 
   .badge-image-container img {
     max-width: 100%;
+    max-height: 100%;
+    width: auto;
     height: auto;
     object-fit: contain;
   }
 
   .badge-title-bar {
     background: #fff;
-    padding: 12px 15px;
+    padding: 15px;
     text-align: left;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     border-top: 1px solid #e5e5e5;
   }
@@ -106,7 +109,7 @@
     gap: 15px;
   }
 
-  /* Mobile Adjustments */
+  /* Responsive Adjustments */
   @media (max-width: 1100px) {
     .badge-visual-col {
       grid-template-columns: 1fr;
@@ -121,8 +124,8 @@
     .badge-content-col p {
       margin: 0 auto 30px;
     }
-    .badge-sub-grid {
-      grid-template-columns: 1fr 1fr;
+    .badge-visual-col {
+      grid-template-columns: 1fr;
     }
   }
 {%- endstyle -%}
@@ -146,13 +149,15 @@
       <a href="{{ main_collection.url | default: '#' }}" class="badge-card">
         <div class="badge-image-container">
           {%- if main_collection.featured_image != blank -%}
-            <img src="{{ main_collection.featured_image | image_url: width: 600 }}" alt="{{ main_collection.title }}" loading="lazy">
+            <img src="{{ main_collection.featured_image | image_url: width: 800 }}" 
+                 alt="{{ main_collection.title }}" 
+                 loading="lazy">
           {%- else -%}
             {{ 'collection-1' | placeholder_svg_tag }}
           {%- endif -%}
         </div>
         <div class="badge-title-bar">
-          {{ main_collection.title | default: "Select Collection" }}
+          {{ main_collection.title | default: "Select Main Collection" }}
         </div>
       </a>
 
@@ -162,7 +167,9 @@
           <a href="{{ block_collection.url | default: '#' }}" class="badge-card" {{ block.shopify_attributes }}>
             <div class="badge-image-container">
               {%- if block_collection.featured_image != blank -%}
-                <img src="{{ block_collection.featured_image | image_url: width: 400 }}" alt="{{ block_collection.title }}" loading="lazy">
+                <img src="{{ block_collection.featured_image | image_url: width: 400 }}" 
+                     alt="{{ block_collection.title }}" 
+                     loading="lazy">
               {%- else -%}
                 {{ 'collection-' | append: forloop.index | placeholder_svg_tag }}
               {%- endif -%}
@@ -217,7 +224,7 @@
     },
     {
       "type": "header",
-      "content": "Layout"
+      "content": "Layout Settings"
     },
     {
       "type": "range",
@@ -226,7 +233,7 @@
       "max": 1600,
       "step": 100,
       "unit": "px",
-      "label": "Page width",
+      "label": "Section max-width",
       "default": 1200
     },
     {
@@ -237,7 +244,7 @@
       "step": 4,
       "unit": "px",
       "label": "Top padding",
-      "default": 36
+      "default": 48
     },
     {
       "type": "range",
@@ -247,7 +254,7 @@
       "step": 4,
       "unit": "px",
       "label": "Bottom padding",
-      "default": 36
+      "default": 48
     }
   ],
   "blocks": [
