@@ -1082,7 +1082,7 @@
     }
     
     // Use helper function to get price
-    if (!price) {
+    if (!price || price === 0) {
       price = getVariantPrice(variant_id);
     }
 
