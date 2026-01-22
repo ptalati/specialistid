@@ -624,9 +624,9 @@
       return 0;
     }
 
-    if (variant.price === undefined || variant.price === null) {
+    if (variant.price === undefined || variant.price === null || variant.price === 0) {
       console.error(`getVariantPrice: Price not available for variant: ${variantId}`);
-      return 0;
+      return productData.price || 0;
     }
 
     debugLog('Raw variant.price from JSON:', variant.price, 'for variant:', variantId);
