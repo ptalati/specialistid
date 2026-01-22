@@ -100,3 +100,82 @@ ul.grid.product-grid li {
 .button.product-form__submit:hover {
     background: rgb(var(--color-button_background_2)) !important;
 }
+
+div#infiniteoptions-container>div {
+    flex: 0 0 100%;
+    padding: 0;
+    margin: 0 0 1.2rem;
+    max-width: 44rem;
+    min-width: fit-content;
+    border: none;
+    --swatch-input--size: 2rem;
+    margin-bottom: 1.6rem;
+}
+
+#infiniteoptions-container div>label {
+    font-size: 1.3rem;
+    line-height: calc(1 + .5 / var(--font-body-scale));
+    letter-spacing: .04rem;
+    margin-bottom: .6rem;
+    color: rgba(var(--color-foreground), 0.75);
+    font-weight: var(--font-body-weight);
+}
+
+#infiniteoptions-container .spb-select {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+#infiniteoptions-container .spb-select:before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: var(--inputs-radius-outset);
+    box-shadow: var(--inputs-shadow-horizontal-offset) var(--inputs-shadow-vertical-offset) var(--inputs-shadow-blur-radius) rgba(var(--color-shadow), var(--inputs-shadow-opacity));
+    z-index: -1;
+}
+
+#infiniteoptions-container .spb-select:after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: var(--inputs-border-width);
+    right: var(--inputs-border-width);
+    bottom: var(--inputs-border-width);
+    left: var(--inputs-border-width);
+    border: .1rem solid transparent;
+    border-radius: var(--inputs-radius);
+    box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
+    transition: box-shadow var(--duration-short) ease;
+    z-index: 1;
+}
+
+#infiniteoptions-container select {
+    cursor: pointer;
+    line-height: calc(1 + .6 / var(--font-body-scale));
+    padding: 0 calc(var(--inputs-border-width) + 3rem) 0 2rem;
+    margin: var(--inputs-border-width);
+    min-height: calc(var(--inputs-border-width) * 2);
+    font-family: var(--font-body-family);
+    font-style: var(--font-body-style);
+    font-weight: var(--font-body-weight);
+    font-size: 1.2rem;
+    color: rgba(var(--color-foreground), .75);
+    /* appearance: none; */
+    background-color: rgb(var(--color-background));
+    width: 100%;
+    box-sizing: border-box;
+    transition: box-shadow var(--duration-short) ease;
+    border-radius: var(--inputs-radius);
+    height: 4.5rem;
+    min-width: calc(7rem + (var(--inputs-border-width) * 2));
+    position: relative;
+    border: 0;
+    letter-spacing: .04rem;
+    max-width: 44rem;
+}
