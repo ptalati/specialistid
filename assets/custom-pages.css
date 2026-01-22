@@ -157,25 +157,24 @@ div#infiniteoptions-container>div {
 
 #infiniteoptions-container select {
     cursor: pointer;
-    line-height: calc(1 + .6 / var(--font-body-scale));
-    padding: 0 calc(var(--inputs-border-width) + 3rem) 0 2rem;
+    line-height: calc(1 + .6 / var(--font-body-scale)) !important;
+    padding: 0 calc(var(--inputs-border-width) + 3rem) 0 2rem !important;
     margin: var(--inputs-border-width);
     min-height: calc(var(--inputs-border-width) * 2);
     font-family: var(--font-body-family);
     font-style: var(--font-body-style);
     font-weight: var(--font-body-weight);
     font-size: 1.2rem;
-    color: rgba(var(--color-foreground), .75);
-    /* appearance: none; */
-    background-color: rgb(var(--color-background));
-    width: 100%;
+    color: rgba(var(--color-foreground), .75) !important;
+    background-color: rgb(var(--color-background)) !important;
+    width: 100% !important;
     box-sizing: border-box;
     transition: box-shadow var(--duration-short) ease;
     border-radius: var(--inputs-radius);
-    height: 4.5rem;
+    height: 4.5rem !important;
     min-width: calc(7rem + (var(--inputs-border-width) * 2));
     position: relative;
-    border: 0;
+    border: 0 !important;
     letter-spacing: .04rem;
-    max-width: 44rem;
+    max-width: 44rem !important;
 }
