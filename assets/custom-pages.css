@@ -116,9 +116,9 @@ div#infiniteoptions-container>div {
     font-size: 1.3rem;
     line-height: calc(1 + .5 / var(--font-body-scale));
     letter-spacing: .04rem;
-    margin-bottom: .6rem;
+    margin-bottom: .6rem !important;
     color: rgba(var(--color-foreground), 0.75);
-    font-weight: var(--font-body-weight);
+    font-weight: var(--font-body-weight) !important;
 }
 
 #infiniteoptions-container .spb-select {
