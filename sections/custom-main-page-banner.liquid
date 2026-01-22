@@ -21,7 +21,6 @@
     padding: 0 20px;
   }
 
-  /* Left Side Content */
   .badge-content-col {
     flex: 1;
     min-width: 320px;
@@ -53,7 +52,6 @@
     transition: opacity 0.3s ease;
   }
 
-  /* Right Side Grid */
   .badge-visual-col {
     flex: 2;
     display: grid;
@@ -62,7 +60,7 @@
   }
 
   .badge-card {
-    background: #ffffff; /* Changed to white */
+    background: #f8f8f8; /* Reverted to Grey */
     border: 1px solid #e5e5e5;
     display: flex;
     flex-direction: column;
@@ -72,18 +70,13 @@
     overflow: hidden;
   }
 
-  .badge-card:hover {
-    transform: translateY(-3px);
-  }
-
   .badge-image-container {
-    aspect-ratio: 1 / 1; /* Ensures perfect square for all containers */
+    aspect-ratio: 1 / 1; 
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 30px;
     flex-grow: 1;
-    background: #ffffff;
   }
 
   .badge-image-container img {
@@ -109,24 +102,14 @@
     gap: 15px;
   }
 
-  /* Responsive Adjustments */
   @media (max-width: 1100px) {
-    .badge-visual-col {
-      grid-template-columns: 1fr;
-    }
+    .badge-visual-col { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 749px) {
-    .badge-content-col {
-      text-align: center;
-      flex: 1 1 100%;
-    }
-    .badge-content-col p {
-      margin: 0 auto 30px;
-    }
-    .badge-visual-col {
-      grid-template-columns: 1fr;
-    }
+    .badge-content-col { text-align: center; flex: 1 1 100%; }
+    .badge-content-col p { margin: 0 auto 30px; }
+    .badge-visual-col { grid-template-columns: 1fr; }
   }
 {%- endstyle -%}
 
@@ -146,12 +129,12 @@
     <div class="badge-visual-col">
       
       {%- assign main_collection = section.settings.main_collection -%}
+      {%- assign main_img = section.settings.main_image_override | default: main_collection.featured_image -%}
+      
       <a href="{{ main_collection.url | default: '#' }}" class="badge-card">
         <div class="badge-image-container">
-          {%- if main_collection.featured_image != blank -%}
-            <img src="{{ main_collection.featured_image | image_url: width: 800 }}" 
-                 alt="{{ main_collection.title }}" 
-                 loading="lazy">
+          {%- if main_img != blank -%}
+            <img src="{{ main_img | image_url: width: 800 }}" alt="{{ main_collection.title }}" loading="lazy">
           {%- else -%}
             {{ 'collection-1' | placeholder_svg_tag }}
           {%- endif -%}
@@ -164,12 +147,12 @@
       <div class="badge-sub-grid">
         {%- for block in section.blocks -%}
           {%- assign block_collection = block.settings.collection -%}
+          {%- assign block_img = block.settings.image_override | default: block_collection.featured_image -%}
+          
           <a href="{{ block_collection.url | default: '#' }}" class="badge-card" {{ block.shopify_attributes }}>
             <div class="badge-image-container">
-              {%- if block_collection.featured_image != blank -%}
-                <img src="{{ block_collection.featured_image | image_url: width: 400 }}" 
-                     alt="{{ block_collection.title }}" 
-                     loading="lazy">
+              {%- if block_img != blank -%}
+                <img src="{{ block_img | image_url: width: 400 }}" alt="{{ block_collection.title }}" loading="lazy">
               {%- else -%}
                 {{ 'collection-' | append: forloop.index | placeholder_svg_tag }}
               {%- endif -%}
@@ -220,7 +203,13 @@
     {
       "type": "collection",
       "id": "main_collection",
-      "label": "Large Collection Card"
+      "label": "Select Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image_override",
+      "label": "Image Override (Optional)",
+      "info": "Leave blank to use Collection's featured image"
     },
     {
       "type": "header",
@@ -266,6 +255,12 @@
           "type": "collection",
           "id": "collection",
           "label": "Select Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_override",
+          "label": "Image Override (Optional)",
+          "info": "Leave blank to use Collection's featured image"
         }
       ]
     }
