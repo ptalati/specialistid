@@ -37,10 +37,15 @@ class CartNotification extends HTMLElement {
   renderContents(parsedState) {
     this.cartItemKey = parsedState.key;
     this.getSectionsToRender().forEach((section) => {
-      document.getElementById(section.id).innerHTML = this.getSectionInnerHTML(
-        parsedState.sections[section.id],
-        section.selector
-      );
+      const element = document.getElementById(section.id);
+      const sectionHtml = parsedState.sections[section.id];
+      if (element && sectionHtml) {
+        try {
+          element.innerHTML = this.getSectionInnerHTML(sectionHtml, section.selector);
+        } catch (e) {
+          console.error('Error rendering section:', section.id, e);
+        }
+      }
     });
 
     // Update recommended section separately (fetch from section)
@@ -87,7 +92,14 @@ class CartNotification extends HTMLElement {
   }
 
   getSectionInnerHTML(html, selector = '.shopify-section') {
-    return new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    const element = doc.querySelector(selector);
+    if (!element) {
+      // Fallback to .shopify-section if specific selector not found
+      const fallback = doc.querySelector('.shopify-section');
+      return fallback ? fallback.innerHTML : '';
+    }
+    return element.innerHTML;
   }
 
   handleBodyClick(evt) {
