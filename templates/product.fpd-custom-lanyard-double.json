@@ -65,11 +65,11 @@
         },
         "price": {
           "type": "price",
-          "disabled": true,
           "settings": {}
         },
         "just_price_zpYWQi": {
           "type": "just_price",
+          "disabled": true,
           "settings": {}
         },
         "custom_liquid_Fcyc4M": {
