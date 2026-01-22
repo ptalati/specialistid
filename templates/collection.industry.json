@@ -88,8 +88,8 @@
       "settings": {
         "custom_liquid": "<div class=\"page-width\">\n{{ collection.metafields.seo.description_below_products | metafield_tag }}\n</div>",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 20
       }
     },
     "custom_liquid_NaFwpC": {
@@ -101,8 +101,8 @@
       "settings": {
         "custom_liquid": "{% if collection.metafields.landing_page.landing_page_youtube_embed_cod != blank %}\n    <div class=\"embedded-video page-width\">\n      {{ collection.metafields.landing_page.landing_page_youtube_embed_cod }}\n    </div>\n{% endif %}",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 0,
+        "padding_bottom": 20
       }
     }
   },
