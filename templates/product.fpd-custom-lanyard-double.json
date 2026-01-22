@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "custom_discontinued_product_AkN9Pp": {
+      "type": "custom-discontinued-product",
+      "name": "Discontinued Product",
+      "settings": {
+        "discontinued_text": "This product has been discontinued.",
+        "discontinued_img": "shopify://shop_images/Discontinued.png"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -174,6 +182,7 @@
         },
         "lead_time_KgVKHP": {
           "type": "lead_time",
+          "disabled": true,
           "settings": {}
         },
         "buy_buttons": {
@@ -257,14 +266,6 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
-      }
-    },
-    "custom_discontinued_product_AkN9Pp": {
-      "type": "custom-discontinued-product",
-      "name": "Discontinued Product",
-      "settings": {
-        "discontinued_text": "This product has been discontinued.",
-        "discontinued_img": "shopify://shop_images/Discontinued.png"
       }
     },
     "related-products": {
