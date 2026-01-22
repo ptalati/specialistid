@@ -51,7 +51,7 @@ class CartNotification extends HTMLElement {
     return [
       {
         id: 'cart-notification-product',
-        selector: `[id="cart-notification-product-${this.cartItemKey}"]`,
+        selector: '.shopify-section',
       },
       {
         id: 'cart-notification-button',
@@ -81,3 +81,76 @@ class CartNotification extends HTMLElement {
 }
 
 customElements.define('cart-notification', CartNotification);
+
+// Function to add recommended product to cart from notification
+function addRecommendedProductToCart(button) {
+  const variantId = button.dataset.variantId;
+  if (!variantId) return;
+
+  button.disabled = true;
+  const originalText = button.textContent;
+  button.textContent = 'Adding...';
+
+  const formData = {
+    items: [{
+      id: parseInt(variantId),
+      quantity: 1
+    }]
+  };
+
+  fetch(window.Shopify.routes.root + 'cart/add.js', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Fetch updated sections
+    const sectionsToFetch = ['cart-notification-product', 'cart-notification-button', 'cart-icon-bubble'];
+    const sectionsUrl = sectionsToFetch.map(s => `sections=${s}`).join('&');
+
+    return fetch(window.Shopify.routes.root + `?${sectionsUrl}`)
+      .then(res => res.json())
+      .then(sections => {
+        // Update cart notification product section
+        const productSection = document.getElementById('cart-notification-product');
+        if (productSection && sections['cart-notification-product']) {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(sections['cart-notification-product'], 'text/html');
+          const newContent = doc.querySelector('.shopify-section');
+          if (newContent) {
+            productSection.innerHTML = newContent.innerHTML;
+          }
+        }
+
+        // Update cart button
+        const buttonSection = document.getElementById('cart-notification-button');
+        if (buttonSection && sections['cart-notification-button']) {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(sections['cart-notification-button'], 'text/html');
+          const newContent = doc.querySelector('.shopify-section');
+          if (newContent) {
+            buttonSection.innerHTML = newContent.innerHTML;
+          }
+        }
+
+        // Update cart icon bubble
+        const iconBubble = document.getElementById('cart-icon-bubble');
+        if (iconBubble && sections['cart-icon-bubble']) {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(sections['cart-icon-bubble'], 'text/html');
+          const newContent = doc.querySelector('.shopify-section');
+          if (newContent) {
+            iconBubble.innerHTML = newContent.innerHTML;
+          }
+        }
+      });
+  })
+  .catch(error => {
+    console.error('Error adding to cart:', error);
+    button.disabled = false;
+    button.textContent = originalText;
+  });
+}
