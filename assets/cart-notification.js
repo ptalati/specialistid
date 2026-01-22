@@ -95,7 +95,11 @@ class CartNotification extends HTMLElement {
     const doc = new DOMParser().parseFromString(html, 'text/html');
     const element = doc.querySelector(selector);
     if (!element) {
-      // Fallback to .shopify-section if specific selector not found
+      // For cart-notification-product, don't fallback to showing all items
+      // Only fallback for sections that don't have specific selectors
+      if (selector.includes('cart-notification-product-')) {
+        return ''; // Return empty if specific product not found
+      }
       const fallback = doc.querySelector('.shopify-section');
       return fallback ? fallback.innerHTML : '';
     }
