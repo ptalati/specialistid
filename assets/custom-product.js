@@ -625,8 +625,17 @@
     }
 
     if (variant.price === undefined || variant.price === null || variant.price === 0) {
-      console.error(`getVariantPrice: Price not available for variant: ${variantId}`);
-      return productData.price || 0;
+      debugLog(`getVariantPrice: Variant price not available, falling back to product price for variant: ${variantId}`);
+      // Fall back to product price (added to ProductJson in main-product.liquid)
+      if (productData && productData.price) {
+        const productPrice = typeof productData.price === 'string' ? parseFloat(productData.price) : productData.price;
+        // Check if price is in dollars or cents (same logic as variant price)
+        if (productPrice < 100 && typeof productData.price === 'string') {
+          return productPrice;
+        }
+        return productPrice / 100;
+      }
+      return 0;
     }
 
     debugLog('Raw variant.price from JSON:', variant.price, 'for variant:', variantId);

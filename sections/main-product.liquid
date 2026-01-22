@@ -69,6 +69,7 @@
       "id": {{ product.id | json }},
       "title": {{ product.title | json }},
       "handle": {{ product.handle | json }},
+      "price": {{ product.price | json }},
       "variants": [
         {%- for variant in product.variants -%}
         {
