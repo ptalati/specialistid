@@ -567,7 +567,7 @@ fieldset[data-option-name="color"].product-form__input--pill input[value*="Laven
     /* Variant section - needs to be on same line */
     .product-form__input.product-form__quantity+variant-selects,
     .product-form__input.product-form__quantity+variant-radios {
-        display: inline-block !important;
+        display: inline-block;
         vertical-align: top;
         width: auto;
         max-width: calc(100% - 240px);
