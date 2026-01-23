@@ -60,6 +60,75 @@
             {%- case block.type -%}
               {%- when '@app' -%}
                 {% render block %}
+              {%- when 'cart_note' -%}
+                <cart-note class="cart__note field">
+                  <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
+                  <textarea
+                    class="text-area field__input"
+                    name="note"
+                    form="cart"
+                    id="Cart-note"
+                    placeholder="{{ 'sections.cart.note' | t }}"
+                  >{{ cart.note }}</textarea>
+                </cart-note>
+              {%- when 'warning-text' -%}
+                {% assign prop65_warning = '' %}
+                {% capture html %}
+                {% for item in cart.items %}
+                  {% if item.variant.metafields.c_f.prop65-warning != blank %}
+                    <div class="item-wrapper">
+                      <div class="media_wrapper"><img class="prop65-hazard" src="//www.specialistid.com/cdn/shop/t/63/assets/Hazard.jpg?v=73146853272072216921670578546" /></div>
+
+                      <div class="content_wrapper">
+                        <p>
+                          <strong>{{ item.title | escape }}</strong>
+                        </p>
+
+                        <p>
+                          <strong>WARNING:</strong>
+                          {{ item.variant.metafields.c_f.prop65-warning }}</p>
+                      </div>
+                    </div>
+                  {% elsif item.product.metafields.c_f.prop65-warning != blank %}
+                    <div class="item-wrapper">
+                      <div class="media_wrapper"><img class="prop65-hazard" src="//www.specialistid.com/cdn/shop/t/63/assets/Hazard.jpg?v=73146853272072216921670578546" /></div>
+
+                      <div class="content_wrapper">
+                        <p>
+                          <strong>{{ item.title | escape }}</strong>
+                        </p>
+
+                        <p>
+                          <strong>WARNING:</strong>
+                          {{ item.product.metafields.c_f.prop65-warning }}</p>
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              {% endcapture %}
+                {% assign prop65_warning = html %}
+
+                {% if prop65_warning != blank %}
+                  <a href="#warning_popup" class="warning-anchor">
+                    <span class="media_wrapper"
+                      ><img
+                        class="prop65-hazard"
+                        src="//www.specialistid.com/cdn/shop/t/63/assets/Hazard.jpg?v=73146853272072216921670578546"
+                    ></span>
+                    <span class="content_wrapper">{{ block.settings['warning-text-title'] }}</span>
+                  </a>
+                  <div id="warning_popup" class="warning-text overlay hidden">
+                    <div class="popup">
+                      <h2>California Proposition65 Warning</h2>
+                      <a class="close" href="#">&times;</a>
+                      <div class="content">
+                        {{ prop65_warning }}
+
+                        <p>{{ block.settings['warning-text-content'] }}</p>
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
               {%- when 'subtotal' -%}
                 <div class="js-contents" {{ block.shopify_attributes }}>
                   <div>
@@ -209,6 +278,27 @@
     }
   ],
   "blocks": [
+    {
+      "type": "warning-text",
+      "name": "Warning Text",
+      "settings": [
+        {
+          "id": "warning-text-title",
+          "type": "text",
+          "label": "Heading"
+        },
+        {
+          "id": "warning-text-content",
+          "type": "richtext",
+          "label": "Description"
+        }
+      ]
+    },
+    {
+      "type": "cart_note",
+      "name": "Cart Note",
+      "limit": 1
+    },
     {
       "type": "subtotal",
       "name": "t:sections.main-cart-footer.blocks.subtotal.name",
