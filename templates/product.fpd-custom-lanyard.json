@@ -144,6 +144,7 @@
         },
         "total_price_nW98cY": {
           "type": "total_price",
+          "disabled": true,
           "settings": {}
         },
         "lead_time_KgVKHP": {
