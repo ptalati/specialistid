@@ -1,0 +1,74 @@
+[data-tax-exempt-form] {
+    display: none;
+}
+
+[data-tax-exempt-form]>.content {
+    display: flex;
+    flex-direction: column;
+    background-color: #efefef;
+    padding: 14px;
+    margin-bottom: 30px;
+}
+
+[data-tax-exempt-form] .opt-tax-exempt-hidden {
+    display: none;
+    width: 100%;
+    max-width: 300px;
+}
+
+[data-tax-exempt-form] .ajax-file-upload-statusbar {
+    width: 100% !important;
+}
+
+[data-tax-exempt-form] .ajax-upload-dragdrop {
+    width: 100% !important;
+}
+
+[data-tax-exempt-form] .ajax-upload-dragdrop span b {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+[data-tax-exempt-form] .ajax-file-upload {
+    color: #fff;
+    font-weight: 600;
+    background-color: #808080;
+    width: 100%;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50px;
+}
+
+[data-tax-exempt-form] h3 {
+    margin-top: 10px;
+}
+
+[data-tax-exempt-form] #opt-tax-exempt-form-avilable a {
+    font-weight: 600;
+    color: #f1870f;
+    font-size: 17px;
+}
+
+[data-tax-exempt-form] #tax-exempt-apply {
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 12px;
+}
+
+.opt-tax-exempt-form-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.opt-tax-exempt-form-group label {
+    width: 100%;
+}
+
+.opt-tax-exempt-form-group input[type=text] {
+    width: 100%;
+    padding: 5px;
+}

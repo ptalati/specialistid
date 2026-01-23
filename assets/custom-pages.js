@@ -30,4 +30,14 @@
         if (popup) popup.classList.toggle("hidden");
       });
     }
+
+    // Tax exempt form
+    document.querySelectorAll('.apply-here-anchor').forEach(el => {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        const formContainer = document.querySelector("#opt-tax-exempt-form-container");
+        if (formContainer) formContainer.style.display = 'block';
+        return false;
+      });
+    });
 })();

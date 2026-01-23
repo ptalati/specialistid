@@ -398,16 +398,6 @@
       });
     });
 
-    // Tax exempt form
-    document.querySelectorAll('.apply-here-anchor').forEach(el => {
-      el.addEventListener('click', function(e) {
-        e.preventDefault();
-        const formContainer = document.querySelector("#opt-tax-exempt-form-container");
-        if (formContainer) formContainer.style.display = 'block';
-        return false;
-      });
-    });
-
     // Feedback functionality
     document.querySelectorAll('.feedback-container > .positive').forEach(el => {
       el.addEventListener('click', function() {
