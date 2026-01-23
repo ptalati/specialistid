@@ -33,7 +33,7 @@
     "request_quote_contact_pdnVNx": {
       "type": "request-quote-contact",
       "settings": {
-        "caption": "SpecialistID",
+        "caption": "Specialist ID",
         "heading": "Our Quoting Process",
         "subheading": "",
         "content": "<ul><li><strong> Step 1: </strong>Fill out the form with your information and items you would like our team to quote.</li><li><strong>Step 2</strong>: Our team will reach out to confirm your details (vendor onboarding, NDA's, tax exemptions, etc.)</li><li><strong>Step 3: </strong>We will send you the quote within 24 hours (M-F)</li></ul>",
