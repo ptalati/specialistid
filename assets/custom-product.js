@@ -1095,6 +1095,11 @@
       price = getVariantPrice(variant_id);
     }
 
+    // Exit if price is still 0 and FPD is enabled (price will be set by FPD)
+    if ((!price || price === 0) && document.body.classList.contains('fpd-enabled')) {
+      return;
+    }
+
     const isDiscontinued = getProductMetafield('status', 'discontinued');
     if (isDiscontinued && isDiscontinued !== 'false' && isDiscontinued !== false) {
       const priceDisplay = document.querySelector(".product-price-display");
