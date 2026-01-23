@@ -23,6 +23,74 @@
   <div>
     <div>
       <h2>{{ 'customer.order.title' | t: name: order.name }}</h2>
+
+      <button id="reorder-btn" class="button btn reorder-button" data-order-id="{{ order.id }}">Reorder</button>
+
+      <script type="text/javascript">
+          document.addEventListener('DOMContentLoaded', function() {
+          const reorderBtn = document.getElementById('reorder-btn');
+
+          if (reorderBtn) {
+            reorderBtn.addEventListener('click', function() {
+              reorderItems();
+            });
+          }
+
+          function reorderItems() {
+            // Show loading state
+            const originalText = reorderBtn.textContent;
+            reorderBtn.textContent = 'Adding to cart...';
+            reorderBtn.disabled = true;
+
+            // Get all order items from the page
+            const orderItems = [];
+
+            // Extract items from the order (adjust selectors based on your theme structure)
+            {% for line_item in order.line_items %}
+              {% if line_item.variant.available %}
+                orderItems.push({
+                  id: {{ line_item.variant.id }},
+                  quantity: {{ line_item.quantity }}
+                });
+              {% endif %}
+            {% endfor %}
+
+            // Add items to cart sequentially
+            addItemsToCart(orderItems)
+              .then(() => {
+                // Success - redirect to cart or show success message
+                window.location.href = '/cart';
+              })
+              .catch((error) => {
+                console.error('Error adding items to cart:', error);
+                alert('Some items could not be added to cart. Please check if they are still available.');
+              })
+              .finally(() => {
+                // Reset button state
+                reorderBtn.textContent = originalText;
+                reorderBtn.disabled = false;
+              });
+          }
+
+          async function addItemsToCart(items) {
+            const promises = items.map(item => {
+              return fetch('/cart/add.js', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  id: item.id,
+                  quantity: item.quantity
+                })
+              });
+            });
+
+            return Promise.allSettled(promises);
+          }
+        });
+      </script>
+
       {%- assign order_date = order.created_at | time_tag: format: 'date_at_time' -%}
       <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>
       {%- if order.cancelled -%}
@@ -166,7 +234,11 @@
                         <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
                       </dt>
                       <dd class="unit-price">
-                        {% render 'unit-price', price: line_item.unit_price, measurement: line_item.unit_price_measurement, hide_accessibility_label: true %}
+                        {% render 'unit-price',
+                          price: line_item.unit_price,
+                          measurement: line_item.unit_price_measurement,
+                          hide_accessibility_label: true
+                        %}
                       </dd>
                     {%- endif -%}
                   </dl>
