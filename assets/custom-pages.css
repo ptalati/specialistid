@@ -179,7 +179,8 @@ div#infiniteoptions-container>div {
     max-width: 44rem !important;
 }
 
-#lanyard-color select {
+#lanyard-color select,
+#lanyard-options select {
     cursor: pointer;
     line-height: calc(1 + .6 / var(--font-body-scale)) !important;
     padding: 0 calc(var(--inputs-border-width) + 3rem) 0 2rem !important;
