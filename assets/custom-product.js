@@ -71,7 +71,7 @@
 
     const volPricingTableTarget = document.querySelector("#regios-dopp-volume-pricing-table-target");
     if (volPricingTableTarget && volPricingTableTarget.parentElement) {
-      volPricingTableTarget.parentElement.classList.add("volume-pricing-table-wrapper");
+      volPricingTableTarget.parentElement.classList.add("volume-pricing-table-wrapper", "open");
     }
 
     // Volume pricing click handlers
