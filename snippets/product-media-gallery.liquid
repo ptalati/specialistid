@@ -341,6 +341,31 @@
       </button>
     </slider-component>
   {%- endif -%}
+
+  {%- comment -%} YouTube Video from product metafield {%- endcomment -%}
+  {%- if product.metafields.c_f.videoUrl != blank -%}
+    {%- if product.metafields.c_f.videoUrl contains 'youtu.be' -%}
+      {%- assign parsed_url = product.metafields.c_f.videoUrl | replace_first: 'http://youtu.be', 'https://www.youtube.com/embed' -%}
+      {%- assign youtubeVideoID = parsed_url | replace_first: 'https://www.youtube.com/embed/', '' -%}
+    {%- else -%}
+      {%- assign parsed_url = product.metafields.c_f.videoUrl -%}
+      {%- assign youtubeVideoID = parsed_url | replace_first: 'https://www.youtube.com/embed/', '' -%}
+    {%- endif -%}
+
+    {%- if youtubeVideoID != blank -%}
+      <div class="youtube-video">
+        <iframe
+          width="500"
+          height="280"
+          src="https://www.youtube-nocookie.com/embed/{{ youtubeVideoID }}"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="max-width: 100%;"
+        ></iframe>
+      </div>
+    {%- endif -%}
+  {%- endif -%}
 </media-gallery>
 
 {%- if hide_preview -%}

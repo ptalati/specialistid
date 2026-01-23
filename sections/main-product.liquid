@@ -203,31 +203,7 @@
                 &nbsp;
               </div>
             {%- when 'product_video' -%}
-              <!-- video url : end -->
-              {%- if product.metafields.c_f.videoUrl and product.metafields.c_f.videoUrl contains 'youtu.be' -%}
-                {% assign parsed_url = product.metafields.c_f.videoUrl
-                  | replace_first: 'http://youtu.be', 'https://www.youtube.com/embed'
-                %}
-                {% assign youtubeVideoID = parsed_url | replace_first: 'https://www.youtube.com/embed/', '' %}
-              {%- else -%}
-                {% assign parsed_url = product.metafields.c_f.videoUrl %}
-                {% assign youtubeVideoID = parsed_url | replace_first: 'https://www.youtube.com/embed/', '' %}
-              {%- endif -%}
-
-              {%- if youtubeVideoID != empty -%}
-                <div class="youtube-video">
-                  <iframe
-                    width="500"
-                    height="280"
-                    src="https://www.youtube-nocookie.com/embed/{{youtubeVideoID}}"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    style="max-width: 100%;"
-                  ></iframe>
-                </div>
-              {%- endif -%}
-              <!-- video url : end -->
+              {%- comment -%} YouTube video is now rendered inside product-media-gallery.liquid {%- endcomment -%}
             {%- when 'infinite_options_custom' -%}
               <h3>{{ block.settings.infinite_options_heading }}</h3>
               <div id="infiniteoptions-container"></div>
