@@ -208,6 +208,7 @@ a.warning-anchor {
     align-items: center;
     border: 1px solid rgba(var(--color-button), var(--alpha-button-background));
     padding: 10px;
+    margin-bottom: 2rem;
 }
 
 a.warning-anchor img {
@@ -311,4 +312,11 @@ a.warning-anchor span.content_wrapper {
 
 .item-wrapper .content_wrapper {
     width: 85%;
+}
+
+.cart__note {
+    height: auto !important;
+    top: auto !important;
+    margin-top: 4rem !important;
+    margin-bottom: 2rem !important;
 }
