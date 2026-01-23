@@ -26,6 +26,10 @@
             "custom_liquid": "<div id=\"shipping-calculator\">\n          <div class=\"shipping-calculator-wrapper\">\n            <div class=\"docapp-single-shipping-calculator\"></div>\n          </div>\n        </div>"
           }
         },
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {}
+        },
         "warning_text_HGmwzp": {
           "type": "warning-text",
           "settings": {
@@ -35,10 +39,6 @@
         },
         "cart_note_dYrcXw": {
           "type": "cart_note",
-          "settings": {}
-        },
-        "subtotal": {
-          "type": "subtotal",
           "settings": {}
         },
         "buttons": {
@@ -76,9 +76,9 @@
       },
       "block_order": [
         "custom_liquid_LjBUxB",
+        "subtotal",
         "warning_text_HGmwzp",
         "cart_note_dYrcXw",
-        "subtotal",
         "buttons",
         "diy_tax_exempt_checkout_app_block_kBdmFg"
       ],
