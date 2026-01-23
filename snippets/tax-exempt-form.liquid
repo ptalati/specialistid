@@ -1,0 +1,63 @@
+{% if shop.customer_accounts_enabled %}
+  {% if customer %}
+    {% if customer.tax_exempt == false %}
+      <div class="opt-tax-exempt-hidden" id="opt-tax-exempt-form-avilable">
+        <a class="apply-here-anchor" href="#">Are you Tax Exempt? <span>Apply here!</span></a>
+      </div>
+      <div class="opt-tax-exempt-hidden" id="opt-tax-exempt-form-container">
+        <h3>Tax Exempt Application</h3>
+        <div class="opt-tax-exempt-form-group">
+          <label for="CertificateNumber">Certificate Number</label>
+          <input
+            type="text"
+            class="opt-tax-exempt-form-control"
+            id="CertificateNumber"
+            placeholder="Certificate Number"
+          >
+        </div>
+        <div class="opt-tax-exempt-form-group">
+          <label for="CompanyName">Company Name</label>
+          <input type="text" class="opt-tax-exempt-form-control" id="CompanyName" placeholder="Company Name">
+        </div>
+        <div class="opt-tax-exempt-form-group">
+          <label for="ExpirationDate">Expiration Date (MM/DD/YYYY)</label>
+          <input
+            type="text"
+            class="opt-tax-exempt-form-control hasDatepicker"
+            id="ExpirationDate"
+            placeholder="MM/DD/YYYY"
+          >
+          <label for="ExpirationNoDate"> <input id="ExpirationNoDate" type="checkbox"> No Expiration </label>
+        </div>
+        <div class="opt-tax-exempt-form-group opt-tax-exempt-img-container">
+          <label for="files">Certificate</label>
+          <input
+            type="hidden"
+            data-customer-id="{{customer.id}}"
+            data-customer-email="{{customer.email}}"
+            data-domain="{{shop.permanent_domain}}"
+            id="CertificateURL"
+          >
+          <div id="fileuploader">Upload</div>
+        </div>
+        <div class="opt-tax-exempt-form-group">
+          <button class="opt-tax-exempt-btn opt-tax-exempt-btn-success button" id="tax-exempt-apply">Apply</button>
+          <p id="opt-tax-exempt-message"></p>
+        </div>
+      </div>
+      <div class="opt-tax-exempt-hidden" id="opt-tax-exempt-form-response"></div>
+
+    {% else %}
+      <p>You are currently tax exempt!</p>
+    {% endif %}
+
+  {% else %}
+    <div class="opt-tax-exempt-notice">
+      Tax Exempt?<br>
+      <a href="/account/login?checkout_url=/cart">Log in</a>
+      {% if shop.customer_accounts_optional %}
+        or <a href="/account/register?checkout_url=/cart">register</a>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endif %}
