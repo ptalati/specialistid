@@ -26,6 +26,17 @@
             "custom_liquid": "<div id=\"shipping-calculator\">\n          <div class=\"shipping-calculator-wrapper\">\n            <div class=\"docapp-single-shipping-calculator\"></div>\n          </div>\n        </div>"
           }
         },
+        "warning_text_HGmwzp": {
+          "type": "warning-text",
+          "settings": {
+            "warning-text-title": "Warning: California Residents Click Here for Prop65 Warning.",
+            "warning-text-content": "<p>For more information visit <a href=\"https://www.p65warnings.ca.gov/\">www.p65warnings.ca.gov</a></p>"
+          }
+        },
+        "cart_note_dYrcXw": {
+          "type": "cart_note",
+          "settings": {}
+        },
         "subtotal": {
           "type": "subtotal",
           "settings": {}
@@ -65,6 +76,8 @@
       },
       "block_order": [
         "custom_liquid_LjBUxB",
+        "warning_text_HGmwzp",
+        "cart_note_dYrcXw",
         "subtotal",
         "buttons",
         "diy_tax_exempt_checkout_app_block_kBdmFg"
