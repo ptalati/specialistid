@@ -268,7 +268,7 @@ fieldset[data-option-name="color"].product-form__input--pill input[value*="Rainb
 /* Special patterns - Assorted (would need image upload) */
 fieldset[data-option-name="color"].product-form__input--pill input[value*="Assorted" i]+label {
     background-color: #ddd !important;
-    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, .5) 10px, rgba(255, 255, 255, .5) 20px) !important;
+    background-image: url("https://www.specialistid.com/cdn/shop/t/68/assets/assorted_small.png?v=170626689884021801431690349930") !important;
 }
 
 /* Special patterns - Red White Blue (would need image upload) */
