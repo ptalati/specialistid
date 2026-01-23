@@ -72,7 +72,9 @@
         "column_nLCrDt": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Department & Division Leaders:",
+            "enable_copy_button": false,
             "text": "<p>Want to test a solution before a<br/>company-wide rollout? Let's build a pilot program</p>",
             "link_label": "",
             "link": ""
@@ -81,7 +83,9 @@
         "column_XQW9Py": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Procurement & Agencies/Intermediaries:",
+            "enable_copy_button": false,
             "text": "<p>Sourcing standard or custom<br/>solutions for your clients? We'll partner with you to provide a<br/>seamless product flow.<br/></p>",
             "link_label": "",
             "link": ""
@@ -90,7 +94,9 @@
         "column_y4Pwdb": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "title": "Enterprise Decision Makers",
+            "enable_copy_button": false,
             "text": "<p>Want to make sure product shows up at<br/>every location, without fail? Let us handle the logistics</p>",
             "link_label": "",
             "link": ""
@@ -280,7 +286,7 @@
     "enterprise_solutions_contact_HEtWXr": {
       "type": "enterprise-solutions-contact",
       "settings": {
-        "caption": "SpecialistID",
+        "caption": "Specialist ID",
         "heading": "Enterprise Solutions",
         "subheading": "",
         "content": "<ul><li>Large Quantities<br/></li><li>Custom Solutions<br/></li><li>Dedicated Support Team<br/></li><li>Experts in Creating New Products</li></ul>",
