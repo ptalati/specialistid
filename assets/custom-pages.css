@@ -290,3 +290,25 @@ a.warning-anchor span.content_wrapper {
     background-color: darkgrey;
     outline: 1px solid slategrey;
 }
+
+.item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #0f0f0f;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.item-wrapper .media_wrapper {
+    width: 10%;
+}
+
+.item-wrapper .media_wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+.item-wrapper .content_wrapper {
+    width: 85%;
+}
