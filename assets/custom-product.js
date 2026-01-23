@@ -548,22 +548,29 @@
     const variant = getVariantData(variantId);
     if (!variant) return null;
 
+    let value = null;
+
     // Method 1: Check nested structure (variant.metafields.namespace.key)
     if (variant.metafields && typeof variant.metafields === 'object') {
       if (variant.metafields[namespace] && variant.metafields[namespace][key] !== undefined) {
-        return variant.metafields[namespace][key];
+        value = variant.metafields[namespace][key];
       }
     }
 
     // Method 2: Check array structure (Shopify API format)
-    if (Array.isArray(variant.metafields)) {
+    if (value === null && Array.isArray(variant.metafields)) {
       const metafield = variant.metafields.find(m =>
         m.namespace === namespace && m.key === key
       );
-      if (metafield) return metafield.value;
+      if (metafield) value = metafield.value;
     }
 
-    return null;
+    // Strip $ sign from value if present (for price fields)
+    if (value !== null && typeof value === 'string') {
+      value = value.replace(/^\$/, '');
+    }
+
+    return value;
   }
 
   // Get collection data from page context (if available)
