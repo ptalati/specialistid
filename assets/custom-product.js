@@ -87,22 +87,6 @@
     if (bulkMessage && wrapper) {
       wrapper.appendChild(bulkMessage);
     }
-
-    // Warning popup handlers
-    document.querySelectorAll(".warning-anchor").forEach(el => {
-      el.addEventListener('click', function() {
-        const popup = document.querySelector("#warning_popup");
-        if (popup) popup.classList.toggle("hidden");
-      });
-    });
-
-    const warningClose = document.querySelector("#warning_popup a.close");
-    if (warningClose) {
-      warningClose.addEventListener('click', function() {
-        const popup = document.querySelector("#warning_popup");
-        if (popup) popup.classList.toggle("hidden");
-      });
-    }
     
     // Primary button click handler
     document.querySelectorAll("button.button--primary").forEach(btn => {
