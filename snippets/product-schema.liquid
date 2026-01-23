@@ -1,0 +1,105 @@
+{% comment %} Get price values - convert cents to dollars {% endcomment %}
+{% assign price_value = product.price | divided_by: 100.0 %}
+
+{% comment %} Get MAP value - check product first, then variant {% endcomment %}
+{% assign map_value = product.selected_or_first_available_variant.metafields.c_f.map
+  | default: product.metafields.c_f.map
+  | plus: 0
+  | round: 2
+%}
+
+{% comment %} Get MSRP value - check product first, then variant {% endcomment %}
+{% assign msrp_value = product.selected_or_first_available_variant.metafields.c_f.msrp
+  | default: product.metafields.c_f.msrp
+  | plus: 0
+  | round: 2
+%}
+
+{% comment %} Get minimum quantity {% endcomment %}
+{% assign min_qty = product.selected_or_first_available_variant.metafields.c_f.minimum
+  | default: product.metafields.c_f.minimum
+  | default: 1
+%}
+
+{% comment %} Get GMC prices - remove commas to fix the >999 bug {% endcomment %}
+{% assign gmc_variant_price = product.selected_or_first_available_variant.metafields.custom.variant_google_unit_price.value
+  | money_without_currency
+  | remove: ','
+%}
+{% assign gmc_product_price = product.metafields.custom.product_google_unit_price.value
+  | money_without_currency
+  | remove: ','
+%}
+
+{% comment %} Determine which price to show in schema {% endcomment %}
+{% assign use_map_price = false %}
+{% if price_value < map_value and price_value < msrp_value %}
+  {% assign use_map_price = true %}
+{% endif %}
+
+{% comment %} Set up variant-specific variables {% endcomment %}
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign has_variant = false %}
+{% if current_variant %}
+  {% assign has_variant = true %}
+  {% assign full_title = product.title | append: ' - ' | append: current_variant.title %}
+  {% assign product_url = current_variant.url %}
+  {% assign product_sku = current_variant.sku %}
+  {% assign product_barcode = current_variant.barcode %}
+  {% assign schema_price = gmc_variant_price %}
+  {% assign item_type = 'variant' %}
+{% else %}
+  {% assign full_title = product.title %}
+  {% assign product_url = product.url %}
+  {% assign product_sku = product.sku %}
+  {% assign product_barcode = product.barcode %}
+  {% assign schema_price = gmc_product_price %}
+  {% assign item_type = 'product' %}
+{% endif %}
+
+{% if use_map_price %}
+  {% assign schema_price = map_value %}
+{% endif %}
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": "Product",
+    "name": {{ full_title | json }},
+    "url": {{ request.origin | append: product_url | json }},
+    {% if seo_media -%}
+    "image": [{{ seo_media | image_url: width: seo_media.preview_image.width | prepend: "https:" | json }}],
+    {%- endif %}
+    "description": {{ page_description | escape | json }},
+    {% if product_sku != blank -%}
+    "sku": {{ product_sku | json }},
+    {%- endif %}
+    "brand": {
+      "@type": "Brand",
+      "name": {{ product.vendor | json }}
+    },
+    "offers": [{
+      "@type": "Offer",
+      {%- if product_sku != blank %}
+      "sku": {{ product_sku | json }},
+      {%- endif %}
+      {%- case product_barcode.size %}
+        {%- when 12 %}
+      "gtin12": {{ product_barcode | json }},
+        {%- when 13 %}
+      "gtin13": {{ product_barcode | json }},
+        {%- when 14 %}
+      "gtin14": {{ product_barcode | json }},
+      {%- endcase %}
+      "availability": "http://schema.org/InStock",
+      "price": {{ schema_price }},
+      "priceCurrency": {{ cart.currency.iso_code | json }},
+      "url": {{ request.origin | append: product_url | json }},
+      "additionalProperty": [{
+        "@type": "PropertyValue",
+        "name": "itemType",
+        "value": "{{ item_type }}"
+      }]
+    }]
+  }
+</script>
