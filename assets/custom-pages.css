@@ -121,13 +121,15 @@ div#infiniteoptions-container>div {
     font-weight: var(--font-body-weight) !important;
 }
 
-#infiniteoptions-container .spb-select {
+#infiniteoptions-container .spb-select,
+#lanyard-color {
     display: flex;
     position: relative;
     width: 100%;
 }
 
-#infiniteoptions-container .spb-select:before {
+#infiniteoptions-container .spb-select:before,
+#lanyard-color:before {
     pointer-events: none;
     content: "";
     position: absolute;
@@ -140,7 +142,8 @@ div#infiniteoptions-container>div {
     z-index: -1;
 }
 
-#infiniteoptions-container .spb-select:after {
+#infiniteoptions-container .spb-select:after,
+#lanyard-color:after {
     pointer-events: none;
     content: "";
     position: absolute;
@@ -155,7 +158,8 @@ div#infiniteoptions-container>div {
     z-index: 1;
 }
 
-#infiniteoptions-container select {
+#infiniteoptions-container select,
+#lanyard-color select {
     cursor: pointer;
     line-height: calc(1 + .6 / var(--font-body-scale)) !important;
     padding: 0 calc(var(--inputs-border-width) + 3rem) 0 2rem !important;
