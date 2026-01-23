@@ -1091,16 +1091,16 @@
     var compare_at_price_num = getVariantCompareAtPrice(variant_id);
     
     // Get MAP and MSRP values from metafields only
-    var map_value_num = parseFloat(getVariantMetafield(variant_id, 'pricing', 'map')) || 0;
-    var msrp_value_num = parseFloat(getVariantMetafield(variant_id, 'pricing', 'msrp')) || 0;
+    var map_value_num = parseFloat(getVariantMetafield(variant_id, 'c_f', 'map')) || 0;
+    var msrp_value_num = parseFloat(getVariantMetafield(variant_id, 'c_f', 'msrp')) || 0;
 
     // Product-level fallback (if variant doesn't have it)
     if (map_value_num === 0) {
-      map_value_num = parseFloat(getProductMetafield('pricing', 'map')) || 0;
+      map_value_num = parseFloat(getProductMetafield('c_f', 'map')) || 0;
     }
 
     if (msrp_value_num === 0) {
-      msrp_value_num = parseFloat(getProductMetafield('pricing', 'msrp')) || 0;
+      msrp_value_num = parseFloat(getProductMetafield('c_f', 'msrp')) || 0;
     }
 
     debugLog(`mapMsrpLogic for variant ${variant_id}: map=${map_value_num}, msrp=${msrp_value_num}`);
