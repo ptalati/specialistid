@@ -192,7 +192,6 @@ div#infiniteoptions-container>div {
     font-size: 1.2rem;
     color: rgba(var(--color-foreground), .75) !important;
     background-color: rgb(var(--color-background)) !important;
-    width: 100% !important;
     box-sizing: border-box;
     transition: box-shadow var(--duration-short) ease;
     border-radius: var(--inputs-radius);
@@ -200,5 +199,4 @@ div#infiniteoptions-container>div {
     min-width: calc(7rem + (var(--inputs-border-width) * 2));
     position: relative;
     letter-spacing: .04rem;
-    max-width: 44rem !important;
 }
