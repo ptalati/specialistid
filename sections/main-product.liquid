@@ -87,7 +87,9 @@
           "metafields": {
             "c_f": {
               "minimum": {{ variant.metafields.c_f.minimum.value | json }},
-              "increment": {{ variant.metafields.c_f.increment.value | json }}
+              "increment": {{ variant.metafields.c_f.increment.value | json }},
+              "map": {{ variant.metafields.c_f.map.value | json }},
+              "msrp": {{ variant.metafields.c_f.msrp.value | json }}
             },
             "inventory": {
               "minimum": {{ variant.metafields.inventory.minimum.value | json }},
@@ -103,7 +105,9 @@
       "metafields": {
         "c_f": {
           "minimum": {{ product.metafields.c_f.minimum.value | json }},
-          "increment": {{ product.metafields.c_f.increment.value | json }}
+          "increment": {{ product.metafields.c_f.increment.value | json }},
+          "map": {{ product.metafields.c_f.map.value | json }},
+          "msrp": {{ product.metafields.c_f.msrp.value | json }}
         }
       }
     }
