@@ -202,6 +202,8 @@
       </div>
     {%- endif -%}
 
+    <input type="hidden" name="properties[Lead Time]" id="lead_time" value="">
+
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
         {%- for block in section.blocks -%}
@@ -229,6 +231,20 @@
                 <div class="selectedColor">
                   <div id="badge-preview-text" class="badge-preview-text-tab2"></div>
                 </div>
+              </div>
+
+              <div class="bb-input hidden">
+                <input
+                  type="text"
+                  name="properties[Custom Line 1]"
+                  id="bb_option_custom_line_1"
+                  value="{{product.metafields.cbb.custom_bb_text_1}}"
+                >
+                <input
+                  type="text"
+                  name="properties[Custom Line 2]"
+                  id="bb_option_custom_line_2"
+                >
               </div>
             {%- when 'spacer' -%}
               <div
