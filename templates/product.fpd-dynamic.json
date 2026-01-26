@@ -268,7 +268,6 @@
     },
     "custom_fpd_sliding_popup_FzPHK8": {
       "type": "custom-fpd-sliding-popup",
-      "disabled": true,
       "name": "Sliding Popup",
       "settings": {
         "popup_content": "Let us handle your artwork for free!\nClick here to submit your request.",
