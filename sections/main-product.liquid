@@ -139,7 +139,7 @@
           "backordered_lead_time": "{{ product.metafields.custom.backordered_lead_time }}"
         },
         "collection": {
-          "lead_times": "{{ collection_lead_times | json }}"
+          "lead_times": {{ collection_lead_times | json }}
         }
       }
     }
