@@ -11,7 +11,10 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
-<div {{ block.shopify_attributes }} class="color-{{ button_color_scheme | default: block.settings.button_color_scheme | default: 'scheme-1' }}">
+<div
+  {{ block.shopify_attributes }}
+  class="color-{{ button_color_scheme | default: block.settings.button_color_scheme | default: 'scheme-1' }}"
+>
   {%- if product != blank -%}
     {%- liquid
       assign gift_card_recipient_feature_active = false
@@ -44,6 +47,30 @@
         novalidate: 'novalidate',
         data-type: 'add-to-cart-form'
       -%}
+        <div class="bb-input">
+          <input
+            type="hidden"
+            name="properties[Custom Line 1]"
+            id="bb_option_custom_line_1"
+            value="{{product.metafields.cbb.custom_bb_text_1}}"
+            form="{{ product_form_id }}"
+          >
+          <input
+            type="hidden"
+            name="properties[Custom Line 2]"
+            id="bb_option_custom_line_2"
+            form="{{ product_form_id }}"
+          >
+
+          <input
+            type="hidden"
+            name="properties[Lead Time]"
+            id="lead_time"
+            value=""
+            form="{{ product_form_id }}"
+          >
+        </div>
+
         <input
           type="hidden"
           name="id"

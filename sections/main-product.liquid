@@ -870,22 +870,6 @@
                   show_pickup_availability: true,
                   button_color_scheme: block.settings.button_color_scheme
                 -%}
-
-                <div class="bb-input hidden">
-                  <input
-                    type="text"
-                    name="properties[Custom Line 1]"
-                    id="bb_option_custom_line_1"
-                    value="{{product.metafields.cbb.custom_bb_text_1}}"
-                  >
-                  <input
-                    type="text"
-                    name="properties[Custom Line 2]"
-                    id="bb_option_custom_line_2"
-                  >
-
-                  <input type="hidden" name="properties[Lead Time]" id="lead_time" value="">
-                </div>
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
