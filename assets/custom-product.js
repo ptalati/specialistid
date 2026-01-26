@@ -1208,19 +1208,9 @@
     const observer = new MutationObserver(function() {
       if (isUpdating) return;
 
-      const hiddenPrice = document.querySelector(".variant_price");
-      if (!hiddenPrice || !hiddenPrice.value) return;
-
-      const expectedPrice = parseFloat(hiddenPrice.value);
-      const displayedText = priceElement.textContent || '';
-      const displayedPrice = parseFloat(displayedText.replace(/[^0-9.]/g, ''));
-
-      if (!isNaN(expectedPrice) && !isNaN(displayedPrice) && Math.abs(expectedPrice - displayedPrice) > 0.01) {
-        debugLog('FPD Price mismatch - Expected: ' + expectedPrice + ', Displayed: ' + displayedPrice);
-        isUpdating = true;
-        mapMsrpLogic();
-        setTimeout(function() { isUpdating = false; }, 100);
-      }
+      isUpdating = true;
+      mapMsrpLogic();
+      setTimeout(function() { isUpdating = false; }, 100);
     });
 
     observer.observe(priceElement, {
