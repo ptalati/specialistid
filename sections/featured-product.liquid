@@ -491,9 +491,11 @@
     endif
   -%}
 
-  <script type="application/ld+json">
-    {{ product | structured_data }}
-  </script>
+  {% comment %}
+    <script type="application/ld+json">
+      {{ product | structured_data }}
+    </script>
+  {% endcomment %}
 
   {% if product.media.size > 0 %}
     <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
