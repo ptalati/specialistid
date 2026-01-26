@@ -1070,10 +1070,20 @@
       variant_id = getVariantId();
       if (!variant_id) return;
     }
-    
+
     // Use helper function to get price
     if (!price || price === 0) {
-      price = getVariantPrice(variant_id);
+      // For FPD products, check the hidden price field first (set by FPD designer)
+      if (document.body.classList.contains('fpd-enabled')) {
+        const fpdPriceEl = document.querySelector(".variant_price");
+        if (fpdPriceEl && fpdPriceEl.value) {
+          price = parseFloat(fpdPriceEl.value);
+        }
+      }
+      // Fall back to variant price if FPD price not available
+      if (!price || price === 0) {
+        price = getVariantPrice(variant_id);
+      }
     }
 
     // Exit if price is still 0 and FPD is enabled (price will be set by FPD)
@@ -1185,6 +1195,9 @@
       if (perItem) perItem.style.display = 'block';
     }
   }
+
+  // Expose mapMsrpLogic globally for FPD integration
+  window.mapMsrpLogic = mapMsrpLogic;
 
   function formatCurrency(amount, locale = 'en-US', currency = 'USD') {
     return new Intl.NumberFormat(locale, {
@@ -1562,9 +1575,19 @@
       return;
     }
 
-    // Get price using helper function
-    const originalPrice = getVariantPrice(variant_id);
-    
+    // Get price - check FPD price first for FPD products
+    let originalPrice = 0;
+    if (document.body.classList.contains('fpd-enabled')) {
+      const fpdPriceEl = document.querySelector(".variant_price");
+      if (fpdPriceEl && fpdPriceEl.value) {
+        originalPrice = parseFloat(fpdPriceEl.value);
+      }
+    }
+    // Fall back to variant price if FPD price not available
+    if (!originalPrice || originalPrice === 0) {
+      originalPrice = getVariantPrice(variant_id);
+    }
+
     // Don't exit if price is 0 - it might be a valid price or just not loaded yet
     const currentQuantity = parseFloat(document.querySelector(".quantity__input")?.value) || 1;
     // Get minimum quantity with same priority logic as optionLogic
