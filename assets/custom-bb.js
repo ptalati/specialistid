@@ -79,7 +79,7 @@ function selectHorizontalBadgeBottom() {
 function selectHorizontalBadgeBuddiesXL() {
   $(".selectedColor").css({width: "183px", "margin-left": "53px", "margin-top": "-83px", height: "61px"});
   $("#tab1").css({"margin-bottom": "-100px"});
-  $(".selectedBadge").attr('src', '{{ "BB-1XL-CUSTOM-BLUE-H.png" | asset_img_url: "800x800" }}');
+  $(".selectedBadge").attr('src', '//cdn.shopify.com/s/files/1/1260/4809/products/BB-1XL-CUSTOM-BLUE-H.png?v=1688152738');
 
   $(".verimg").css("display", "none");
   $("#imgHorizontal").css("border", "3px solid #F5911F");
@@ -95,7 +95,7 @@ function selectHorizontalBadgeBuddiesXL() {
 function selectVerticalBadgeBuddiesXL() {
   $(".selectedColor").css({width: "122px", "margin-left": "143px", "margin-top": "-116px", height: "84px"});
   $("#tab1").css({"margin-bottom": "-100px"});
-  $(".selectedBadge").attr('src', '{{ "BB-1XL-CUSTOM-RED-V.png" | asset_img_url: "800x800" }}');
+  $(".selectedBadge").attr('src', '//www.specialistid.com/cdn/shop/t/68/assets/BB-1XL-CUSTOM-RED-V_800x800.png?v=136908169347785232851690782186');
 
   $(".verimg").css("display", "none");
   $("#imgVertical").css("border", "3px solid #F5911F");
