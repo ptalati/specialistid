@@ -64,6 +64,22 @@
   <script src="{{ 'custom-product.js' | asset_url }}" defer="defer"></script>
 
   {%- comment -%} Product JSON with metafields for JavaScript access {%- endcomment -%}
+  {% assign collection_lead_times = '' %}
+
+  {% for collection in product.collections %}
+    {% if collection.metafields.collections.lead_time %}
+      {% assign collection_lead_times = collection_lead_times
+        | append: collection.metafields.collections.lead_time
+        | append: ', '
+      %}
+    {% endif %}
+  {% endfor %}
+
+  {% if collection_lead_times != '' %}
+    {% assign lead_time_array = collection_lead_times | split: ', ' %}
+    {% assign collection_lead_times = lead_time_array | join: ', ' %}
+  {% endif %}
+
   <script type="application/json" id="ProductJson-{{ product.id }}">
     {
       "id": {{ product.id | json }},
@@ -97,6 +113,11 @@
             },
             "custom": {
               "price_text": {{ variant.metafields.custom.price_text | json }}
+            },
+            "shipping": {
+              "info": {{ variant.metafields.c_f.variant_lead_time }},
+              "oos_lead_time": {{ variant.metafields.custom.oos_lead_time }},
+              "backordered_lead_time": {{ variant.metafields.custom.backordered_lead_time }}
             }
           }
         }{% unless forloop.last %},{% endunless %}
@@ -108,6 +129,17 @@
           "increment": {{ product.metafields.c_f.increment.value | json }},
           "map": {{ product.metafields.c_f.map.value | json }},
           "msrp": {{ product.metafields.c_f.msrp.value | json }}
+        },
+        "custom": {
+          "is_custom": {% if product.tags contains "Custom Logo" %}true{% else %}false{% endif %}
+        },
+        "shipping": {
+          "info": {{ product.metafields.c_f.variant_lead_time }},
+          "oos_lead_time": {{ product.metafields.custom.oos_lead_time }},
+          "backordered_lead_time": {{ product.metafields.custom.backordered_lead_time }}
+        },
+        "collection": {
+          "lead_times": {{ collection_lead_times | json }}
         }
       }
     }

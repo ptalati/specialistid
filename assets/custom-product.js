@@ -913,13 +913,13 @@
           var product_iscustom = getProductMetafield('product', 'is_custom');
           var product_shipping_info = getProductMetafield('shipping', 'info');
           var variant_shipping_info = getVariantMetafield(variant_id, 'shipping', 'info');
-          var product_oos_lead_time = getProductMetafield('inventory', 'oos_lead_time');
-          var variant_oos_lead_time = getVariantMetafield(variant_id, 'inventory', 'oos_lead_time');
-          var collection_shipping_info = getCollectionMetafield('shipping', 'info');
+          var product_oos_lead_time = getProductMetafield('shipping', 'oos_lead_time');
+          var variant_oos_lead_time = getVariantMetafield(variant_id, 'shipping', 'oos_lead_time');
+          var collection_shipping_info = getProductMetafield('collection', 'lead_times');
           var qty = variant?.inventory_quantity || 0;
-          var collection_additional_lead_time = getCollectionMetafield('inventory', 'additional_lead_time');
-          var product_backordered_lead_time = getProductMetafield('inventory', 'backordered_lead_time');
-          var variant_backordered_lead_time = getVariantMetafield(variant_id, 'inventory', 'backordered_lead_time');
+          var collection_additional_lead_time = getProductMetafield('collection', 'additional_lead_times');
+          var product_backordered_lead_time = getProductMetafield('shipping', 'backordered_lead_time');
+          var variant_backordered_lead_time = getVariantMetafield(variant_id, 'shipping', 'backordered_lead_time');
 
           document.querySelectorAll(".stock_label.available-2").forEach(el => el.classList.add("forcehidden"));
           document.querySelectorAll(".stock_label.available-3").forEach(el => el.classList.add("bottom-padding"));
