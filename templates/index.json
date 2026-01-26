@@ -9,6 +9,71 @@
  */
 {
   "sections": {
+    "custom_hero_products_VRXYMH": {
+      "type": "custom-hero-products",
+      "blocks": {
+        "link_card_qVpBBr": {
+          "type": "link_card",
+          "settings": {
+            "image": "shopify://shop_images/retractable-reels.webp",
+            "label": "Retractable Reels",
+            "link": "shopify://collections/badge-reels"
+          }
+        },
+        "link_card_ynQUmb": {
+          "type": "link_card",
+          "settings": {
+            "image": "shopify://shop_images/badge-buddies.webp",
+            "label": "Badge Buddies",
+            "link": "https://www.specialistid.com/pages/standard-sized-badge-buddies"
+          }
+        },
+        "link_card_DAVfDk": {
+          "type": "link_card",
+          "settings": {
+            "image": "shopify://shop_images/badge-holders.webp",
+            "label": "Badge Holders",
+            "link": "shopify://collections/id-badge-holders"
+          }
+        },
+        "link_card_hEnMnP": {
+          "type": "link_card",
+          "settings": {
+            "image": "shopify://shop_images/lanyards.webp",
+            "label": "Lanyards",
+            "link": "shopify://collections/lanyards"
+          }
+        },
+        "link_card_3DpKeW": {
+          "type": "link_card",
+          "settings": {
+            "image": "shopify://shop_images/custom-reels.webp",
+            "label": "Custom Reels",
+            "link": "shopify://collections/custom-printed-badge-reels"
+          }
+        }
+      },
+      "block_order": [
+        "link_card_qVpBBr",
+        "link_card_ynQUmb",
+        "link_card_DAVfDk",
+        "link_card_hEnMnP",
+        "link_card_3DpKeW"
+      ],
+      "name": "Hero Products Grid",
+      "settings": {
+        "heading": "The Badge Company Your Coworkers are Talking About.",
+        "heading_size": "h1",
+        "description": "<p><strong>Family Owned and Operated in the USA since 2001</strong></p>",
+        "button_label": "Shop Best Sellers",
+        "button_link": "",
+        "button_color": "#f5911f",
+        "button_text_color": "#ffffff",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "eab9b35612db452696c45d02867db1be_builder_io_3pQyTX": {
       "type": "eab9b35612db452696c45d02867db1be-builder-io",
       "name": "Shop best sellers home se",
@@ -29,8 +94,10 @@
         "column1": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_e297aa44bb864b79a69f64375ccb7de7.webp",
             "title": "Free Shipping",
+            "enable_copy_button": false,
             "text": "<p>Over $99</p>",
             "link_label": "",
             "link": ""
@@ -39,8 +106,10 @@
         "column2": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_410e57ec5de44e1c8083c1a10f114fec.webp",
             "title": "Easy Ordering",
+            "enable_copy_button": false,
             "text": "<p>Frictionless Buying</p>",
             "link_label": "",
             "link": ""
@@ -49,8 +118,10 @@
         "column3": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_a45a028643b043c290f9f0210524aaeb.webp",
             "title": "Expert Selection",
+            "enable_copy_button": false,
             "text": "<p>Top-Notch Products</p>",
             "link_label": "",
             "link": ""
@@ -59,8 +130,10 @@
         "column_XVjLtH": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_d48c132e9812414b8bc85411ed1cda45.webp",
             "title": "Quantity Discounts",
+            "enable_copy_button": false,
             "text": "<p>Save in Bulk</p>",
             "link_label": "",
             "link": ""
@@ -660,6 +733,7 @@
     }
   },
   "order": [
+    "custom_hero_products_VRXYMH",
     "eab9b35612db452696c45d02867db1be_builder_io_3pQyTX",
     "1154d9de2bca4383b7cb98fa9fda29c1_builder_io_BnmW6N",
     "multicolumn",
