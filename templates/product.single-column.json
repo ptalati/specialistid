@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "custom_discontinued_product_nimJPR": {
+      "type": "custom-discontinued-product",
+      "name": "Discontinued Product",
+      "settings": {
+        "discontinued_text": "This product has been discontinued.",
+        "discontinued_img": "shopify://shop_images/Discontinued.png"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -213,14 +221,6 @@
         "padding_bottom": 12
       }
     },
-    "custom_discontinued_product_nimJPR": {
-      "type": "custom-discontinued-product",
-      "name": "Discontinued Product",
-      "settings": {
-        "discontinued_text": "This product has been discontinued.",
-        "discontinued_img": "shopify://shop_images/Discontinued.png"
-      }
-    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -266,6 +266,14 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "custom_fpd_sliding_popup_md6fVd": {
+      "type": "custom-fpd-sliding-popup",
+      "name": "Sliding Popup",
+      "settings": {
+        "popup_content": "Let us handle your artwork for free!\nClick here to submit your request.",
+        "popup_form": "<form accept-charset=\"UTF-8\" action=\"https://specialistid.wufoo.com/forms/rddg0730k9excr/#public\" autocomplete=\"off\" enctype=\"multipart/form-data\" method=\"post\" name=\"form45\" novalidate=\"\">\n    <header>\n        <h2>We'll make the creation of your artwork easy</h2>\n        <div>Let's create your ideal artwork — just share the following details to get started.</div>\n    </header>\n    <ul>\n        <li>\n            <label for=\"Field1\">First Name</label>\n            <input tabindex=\"0\" name=\"Field1\" size=\"14\" type=\"text\" value=\"\" placeholder=\"\">\n        </li>\n        <li>\n<label for=\"Field2\">Last Name</label><input tabindex=\"0\" name=\"Field2\" size=\"14\" type=\"text\" value=\"\" placeholder=\"\">\n</li>\n        <li>\n            <label for=\"Field3\"> Email </label>\n            <div><input tabindex=\"0\" spellcheck=\"false\" maxlength=\"255\" name=\"Field3\" type=\"email\" value=\"\" placeholder=\"\"></div>\n        </li>\n        <li>\n            <label>Phone Number</label> <input id=\"Field4\" class=\"field text medium\" name=\"Field4\" tabindex=\"0\" placeholder=\"\" type=\"tel\" maxlength=\"255\" value=\"\">\n        </li>\n        <li data-wufoo-field=\"\" data-field-type=\"text\">\n            <label for=\"Field10\"> URL: </label>\n            <div><input tabindex=\"0\" maxlength=\"255\" name=\"Field10\" id=\"support_Field10\" type=\"text\" value=\"\" placeholder=\"\"></div>\n        </li>\n        <li>\n            <label for=\"Field5\"> Tell us about how you want to customize your item. Please attach your high quality logo/elements by using the button below. </label>\n            <div><textarea tabindex=\"0\" spellcheck=\"true\" cols=\"50\" name=\"Field5\" rows=\"10\" placeholder=\"\"></textarea></div>\n        </li>\n        <li>\n            <label for=\"Field6\"> Attach a File </label>\n            <div><input tabindex=\"0\" name=\"Field6\" size=\"12\" type=\"file\" data-file-max-size=\"10\" data-wufoo-field=\"file-upload\"></div>\n        </li>\n        <li>\n            <div><input class=\"color-button_background_2 button button--primary\" name=\"saveForm\" type=\"submit\" value=\"Submit\"></div>\n        </li>\n        <li class=\"hidden\">\n            <label for=\"comment\">Do Not Fill This Out</label> <textarea cols=\"1\" name=\"comment\" rows=\"1\"></textarea> <input name=\"idstamp\" type=\"hidden\" value=\"8HILeDrY6bz6EWUPAZkA14GJm3gP0rsUjsZ8bWbugzU=\">\n            <input name=\"encryptedPassword\" type=\"hidden\" value=\"\">\n        </li>\n    </ul>\n</form>"
+      }
     }
   },
   "order": [
@@ -273,6 +281,7 @@
     "main",
     "related-products",
     "product_custom_info_gcmaXt",
-    "custom_liquid_pBgjQg"
+    "custom_liquid_pBgjQg",
+    "custom_fpd_sliding_popup_md6fVd"
   ]
 }
