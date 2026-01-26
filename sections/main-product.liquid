@@ -112,12 +112,12 @@
               "increment": {{ variant.metafields.inventory.increment.value | json }}
             },
             "custom": {
-              "price_text": {{ variant.metafields.custom.price_text | json }}
+              "price_text": '{{ variant.metafields.custom.price_text | json }}'
             },
             "shipping": {
-              "info": {{ variant.metafields.c_f.variant_lead_time }},
-              "oos_lead_time": {{ variant.metafields.custom.oos_lead_time }},
-              "backordered_lead_time": {{ variant.metafields.custom.backordered_lead_time }}
+              "info": '{{ variant.metafields.c_f.variant_lead_time }}',
+              "oos_lead_time": '{{ variant.metafields.custom.oos_lead_time }}',
+              "backordered_lead_time": '{{ variant.metafields.custom.backordered_lead_time }}'
             }
           }
         }{% unless forloop.last %},{% endunless %}
@@ -134,12 +134,12 @@
           "is_custom": {% if product.tags contains "Custom Logo" %}true{% else %}false{% endif %}
         },
         "shipping": {
-          "info": {{ product.metafields.c_f.variant_lead_time }},
-          "oos_lead_time": {{ product.metafields.custom.oos_lead_time }},
-          "backordered_lead_time": {{ product.metafields.custom.backordered_lead_time }}
+          "info": '{{ product.metafields.c_f.variant_lead_time }}',
+          "oos_lead_time": '{{ product.metafields.custom.oos_lead_time }}',
+          "backordered_lead_time": '{{ product.metafields.custom.backordered_lead_time }}'
         },
         "collection": {
-          "lead_times": {{ collection_lead_times | json }}
+          "lead_times": '{{ collection_lead_times | json }}'
         }
       }
     }
