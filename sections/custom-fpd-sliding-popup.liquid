@@ -1,0 +1,419 @@
+<div id="supportPopup">
+  <div class="supportPopup-content">
+    <div class="support-content-wrapper">
+      {{ section.settings.popup_content }}
+    </div>
+    <span id="closePopup">&times;</span>
+  </div>
+</div>
+<div id="openPopup">Need Design Help?</div>
+
+<div id="overlay-support" class="overlay hidden">
+  <div id="fpd-designer-help-popup" class="popup2 hidden">
+    <span class="close-designer-help-form">X</span>
+    <div class="popup-content2">
+      {{ section.settings.popup_form }}
+    </div>
+  </div>
+</div>
+
+<script>
+  jQuery(document).ready(function ($) {
+    $('.support-content-wrapper, .close-designer-help-form').click(function () {
+      console.log('toggle sliding popup');
+      //$("#overlay-support").toggleClass('hidden');
+      //$("#fpd-designer-help-popup").toggleClass('hidden');
+    });
+
+    $('#support_Field10').val(window.location.href);
+  });
+
+  jQuery(document).ready(function ($) {
+    // Flag to track if form is already being processed
+    var isSubmitting = false;
+    var formIntercepted = false;
+
+    // If Wufoo form is embedded directly in your HTML (not in iframe)
+    function interceptEmbeddedForm() {
+      // Prevent multiple initializations
+      if (formIntercepted) {
+        return;
+      }
+
+      // Wait for Wufoo form to load
+      var checkForm = setInterval(function () {
+        // Look for Wufoo form by its typical class or ID
+        var form = $('#form1, .wufoo, form[name*="form"], form[id*="form"]').first(); // Use .first() to ensure single form
+
+        if (form.length && !form.data('intercepted')) {
+          clearInterval(checkForm);
+          formIntercepted = true;
+
+          // Mark this specific form as intercepted
+          form.data('intercepted', true);
+
+          console.log('Wufoo form found and intercepted!');
+
+          // Remove ALL existing submit handlers first
+          form.off('submit');
+          form.unbind('submit');
+
+          // Remove any inline onsubmit attribute
+          form.attr('onsubmit', null);
+          form.removeAttr('onsubmit');
+
+          // Add our custom submit handler (only once)
+          form.on('submit.wufooIntercept', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation(); // Stop other handlers
+
+            // Prevent multiple simultaneous submissions
+            if (isSubmitting) {
+              console.log('Form submission already in progress, ignoring...');
+              return false;
+            }
+
+            isSubmitting = true;
+            console.log('Submitting form...');
+
+            var $form = $(this);
+            var formData = $form.serialize();
+
+            // Disable submit button
+            var submitBtn = $form.find('input[type="submit"], button[type="submit"]');
+            submitBtn.prop('disabled', true);
+
+            // Submit via AJAX
+            $.ajax({
+              url: $form.attr('action'),
+              type: $form.attr('method') || 'POST',
+              data: formData,
+              dataType: 'json',
+              success: function (response) {
+                console.log('Form submitted successfully');
+                showSuccessMessage();
+                // Reset the form
+                $form[0].reset();
+                // Re-enable submit button after a delay
+                setTimeout(function () {
+                  submitBtn.prop('disabled', false);
+                  isSubmitting = false;
+                }, 3000);
+              },
+              error: function (xhr, status, error) {
+                console.log('Ajax error, status:', xhr.status);
+                // Even if there's an error, it might be due to CORS
+                // Check if it's actually successful
+                if (xhr.status === 0 || xhr.status === 200) {
+                  showSuccessMessage();
+                  $form[0].reset();
+                } else {
+                  showErrorMessage();
+                }
+                // Re-enable submit button after a delay
+                setTimeout(function () {
+                  submitBtn.prop('disabled', false);
+                  isSubmitting = false;
+                }, 3000);
+              },
+            });
+
+            return false;
+          });
+
+          // Also intercept button clicks (with namespace to prevent duplicates)
+          form
+            .find('input[type="submit"], button[type="submit"]')
+            .off('click.wufooIntercept') // Remove any existing handlers
+            .on('click.wufooIntercept', function (e) {
+              e.preventDefault();
+              e.stopPropagation();
+              e.stopImmediatePropagation();
+
+              if (!isSubmitting) {
+                form.trigger('submit.wufooIntercept');
+              }
+              return false;
+            });
+        }
+      }, 100);
+
+      // Stop checking after 10 seconds
+      setTimeout(function () {
+        clearInterval(checkForm);
+      }, 10000);
+    }
+
+    // REMOVED MutationObserver to prevent multiple initializations
+    // The MutationObserver was causing the form to be intercepted multiple times
+
+    // Success message function
+    function showSuccessMessage() {
+      // Create success message container if it doesn't exist
+      if (!$('#customSuccessMessage').length) {
+        $('body').append(`
+                <div id="customSuccessMessage" style="
+                    display: none;
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: #4CAF50;
+                    color: white;
+                    padding: 20px 40px;
+                    border-radius: 5px;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                    z-index: 9999;
+                    font-size: 16px;
+                    text-align: center;
+                ">
+                    <h3 style="margin: 0 0 10px 0;">Success!</h3>
+                    <p style="margin: 0;">Your form has been submitted successfully.</p>
+                </div>
+            `);
+      }
+
+      // Show the message
+      $('#customSuccessMessage').fadeIn(300);
+
+      // Hide after 3 seconds
+      setTimeout(function () {
+        $('#customSuccessMessage').fadeOut(300);
+      }, 3000);
+    }
+
+    // Error message function
+    function showErrorMessage() {
+      if (!$('#customErrorMessage').length) {
+        $('body').append(`
+                <div id="customErrorMessage" style="
+                    display: none;
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: #f44336;
+                    color: white;
+                    padding: 20px 40px;
+                    border-radius: 5px;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                    z-index: 9999;
+                    font-size: 16px;
+                    text-align: center;
+                ">
+                    <h3 style="margin: 0 0 10px 0;">Error</h3>
+                    <p style="margin: 0;">There was an error submitting your form. Please try again.</p>
+                </div>
+            `);
+      }
+
+      $('#customErrorMessage').fadeIn(300);
+
+      setTimeout(function () {
+        $('#customErrorMessage').fadeOut(300);
+      }, 3000);
+    }
+
+    // Initialize only once
+    interceptEmbeddedForm();
+  });
+
+  // Alternative safer version that completely prevents duplicate submissions
+  jQuery(document).ready(function ($) {
+    // Global namespace for our form interceptor
+    window.WufooInterceptor = window.WufooInterceptor || {
+      initialized: false,
+      isSubmitting: false,
+    };
+
+    // Exit if already initialized
+    if (window.WufooInterceptor.initialized) {
+      console.log('WufooInterceptor already initialized, skipping...');
+      return;
+    }
+
+    window.WufooInterceptor.initialized = true;
+
+    function initializeFormInterceptor() {
+      // Use a more specific selector if you know your form's exact ID
+      // For example: $('#wufoo-z1234567') instead of generic selectors
+
+      var attempts = 0;
+      var maxAttempts = 100; // 10 seconds
+
+      var findForm = setInterval(function () {
+        attempts++;
+
+        // Find the form (adjust selector as needed)
+        var form = $('form.wufoo, form[id^="form"], form[name*="form"]').first();
+
+        if (form.length && !form.hasClass('wufoo-intercepted')) {
+          clearInterval(findForm);
+
+          // Mark form to prevent re-initialization
+          form.addClass('wufoo-intercepted');
+
+          console.log('Setting up Wufoo form interceptor...');
+
+          // Store original form action
+          var originalAction = form.attr('action');
+
+          // Clear any existing handlers
+          form.off('.wufoo');
+          form.find('input[type="submit"], button[type="submit"]').off('.wufoo');
+
+          // Single submit handler
+          form.on('submit.wufoo', function (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+
+            if (window.WufooInterceptor.isSubmitting) {
+              console.log('Submission already in progress');
+              return false;
+            }
+
+            window.WufooInterceptor.isSubmitting = true;
+
+            var $form = $(this);
+            var submitBtn = $form.find('input[type="submit"], button[type="submit"]');
+            var originalBtnText = submitBtn.val() || submitBtn.text();
+
+            // Disable button and show loading
+            submitBtn.prop('disabled', true).val('Submitting...');
+
+            // Submit once
+            $.ajax({
+              url: originalAction,
+              type: 'POST',
+              data: $form.serialize(),
+              timeout: 15000,
+              success: function () {
+                handleSuccess($form, submitBtn, originalBtnText);
+              },
+              error: function (xhr) {
+                // CORS errors often succeed anyway
+                if (xhr.status === 0) {
+                  handleSuccess($form, submitBtn, originalBtnText);
+                } else {
+                  handleError(submitBtn, originalBtnText);
+                }
+              },
+            });
+
+            return false;
+          });
+
+          // Prevent button default action
+          form.find('input[type="submit"], button[type="submit"]').on('click.wufoo', function (e) {
+            e.preventDefault();
+            if (!window.WufooInterceptor.isSubmitting) {
+              form.submit();
+            }
+            return false;
+          });
+
+          console.log('Wufoo form interceptor ready!');
+        }
+
+        if (attempts >= maxAttempts) {
+          clearInterval(findForm);
+          console.log('Could not find Wufoo form');
+        }
+      }, 100);
+    }
+
+    function handleSuccess($form, $btn, originalText) {
+      console.log('Form submitted successfully (single submission)');
+
+      // Show success message
+      showMessage('Success!', 'Your form has been submitted successfully.', '#6FB43F');
+
+      // Reset form
+      $form[0].reset();
+
+      // Re-enable button after delay
+      setTimeout(function () {
+        $btn.prop('disabled', false).val(originalText);
+        window.WufooInterceptor.isSubmitting = false;
+      }, 3000);
+    }
+
+    function handleError($btn, originalText) {
+      console.log('Form submission error');
+
+      // Show error message
+      showMessage('Error', 'There was an error submitting your form. Please try again.', '#f44336');
+
+      // Re-enable button
+      setTimeout(function () {
+        $btn.prop('disabled', false).val(originalText);
+        window.WufooInterceptor.isSubmitting = false;
+      }, 3000);
+    }
+
+    function showMessage(title, text, color) {
+      var messageId = 'wufoo-message-' + Date.now();
+
+      var $message = $(`
+            <div id="${messageId}" style="
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: ${color};
+                color: white;
+                padding: 20px 40px;
+                border-radius: 5px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                z-index: 9999;
+                font-size: 16px;
+                text-align: center;
+            ">
+                <h3 style="margin: 0 0 10px 0;">${title}</h3>
+                <p style="margin: 0;">${text}</p>
+            </div>
+        `);
+
+      $('body').append($message);
+      $message.hide().fadeIn(300);
+
+      setTimeout(function () {
+        $message.fadeOut(300, function () {
+          $message.remove();
+          $('#overlay-support').addClass('hidden');
+          $('#fpd-designer-help-popup').addClass('hidden');
+        });
+      }, 3000);
+    }
+
+    // Start initialization
+    initializeFormInterceptor();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Sliding Popup",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "popup_content",
+      "label": "Text",
+      "default": "Need help? Try Our Free Design Service"
+    },
+    {
+      "type": "html",
+      "id": "popup_form",
+      "label": "Form",
+      "default": "Paste form content/html"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Custom",
+      "name": "Sliding Popup"
+    }
+  ]
+}
+{% endschema %}
