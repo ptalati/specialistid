@@ -32,38 +32,28 @@
 
     <!-- Right Products Grid -->
     <div class="hero-products-grid">
-      {% assign product_blocks = section.blocks | where: "type", "product" %}
-      {% for block in product_blocks %}
-        {% assign product = block.settings.product %}
-        {% assign custom_image = block.settings.custom_image %}
-        {% assign custom_label = block.settings.custom_label %}
-        {% assign custom_link = block.settings.custom_link %}
+      {% assign link_blocks = section.blocks | where: "type", "link_card" %}
+      {% for block in link_blocks %}
+        {% assign image = block.settings.image %}
+        {% assign label = block.settings.label %}
+        {% assign link = block.settings.link %}
 
         <div
           class="hero-product-card hero-product-card--{{ forloop.index }}"
           {{ block.shopify_attributes }}
         >
           <a
-            href="{% if custom_link != blank %}{{ custom_link }}{% elsif product != blank %}{{ product.url }}{% else %}#{% endif %}"
+            href="{{ link | default: '#' }}"
             class="hero-product-link"
           >
             <div class="hero-product-image-wrapper">
-              {% if custom_image != blank %}
+              {% if image != blank %}
                 <img
-                  src="{{ custom_image | image_url: width: 600 }}"
-                  alt="{{ custom_label | default: product.title | escape }}"
+                  src="{{ image | image_url: width: 600 }}"
+                  alt="{{ label | escape }}"
                   loading="lazy"
-                  width="{{ custom_image.width }}"
-                  height="{{ custom_image.height }}"
-                  class="hero-product-image"
-                >
-              {% elsif product != blank and product.featured_image != blank %}
-                <img
-                  src="{{ product.featured_image | image_url: width: 600 }}"
-                  alt="{{ product.title | escape }}"
-                  loading="lazy"
-                  width="{{ product.featured_image.width }}"
-                  height="{{ product.featured_image.height }}"
+                  width="{{ image.width }}"
+                  height="{{ image.height }}"
                   class="hero-product-image"
                 >
               {% else %}
@@ -73,23 +63,17 @@
               {% endif %}
             </div>
             <span class="hero-product-label">
-              {% if custom_label != blank %}
-                {{ custom_label }}
-              {% elsif product != blank %}
-                {{ product.title }}
-              {% else %}
-                Product {{ forloop.index }}
-              {% endif %}
+              {{ label | default: 'Add Label' }}
             </span>
           </a>
         </div>
       {% endfor %}
 
-      {% comment %} Fill remaining slots with placeholders if less than 5 products {% endcomment %}
-      {% assign remaining = 5 | minus: product_blocks.size %}
+      {% comment %} Fill remaining slots with placeholders if less than 5 items {% endcomment %}
+      {% assign remaining = 5 | minus: link_blocks.size %}
       {% if remaining > 0 %}
         {% for i in (1..remaining) %}
-          {% assign index = product_blocks.size | plus: forloop.index %}
+          {% assign index = link_blocks.size | plus: forloop.index %}
           <div class="hero-product-card hero-product-card--{{ index }}">
             <div class="hero-product-link">
               <div class="hero-product-image-wrapper">
@@ -97,7 +81,7 @@
                   {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
                 </div>
               </div>
-              <span class="hero-product-label">Product {{ index }}</span>
+              <span class="hero-product-label">Add Item {{ index }}</span>
             </div>
           </div>
         {% endfor %}
@@ -203,32 +187,26 @@
   ],
   "blocks": [
     {
-      "type": "product",
-      "name": "Product",
+      "type": "link_card",
+      "name": "Link Card",
       "limit": 5,
       "settings": [
         {
-          "type": "product",
-          "id": "product",
-          "label": "Product"
-        },
-        {
           "type": "image_picker",
-          "id": "custom_image",
-          "label": "Custom image",
-          "info": "Optional. Overrides product image."
+          "id": "image",
+          "label": "Image"
         },
         {
           "type": "text",
-          "id": "custom_label",
-          "label": "Custom label",
-          "info": "Optional. Overrides product title."
+          "id": "label",
+          "label": "Label",
+          "default": "Category Name"
         },
         {
           "type": "url",
-          "id": "custom_link",
-          "label": "Custom link",
-          "info": "Optional. Overrides product link."
+          "id": "link",
+          "label": "Link",
+          "info": "Link to a product, collection, or page"
         }
       ]
     }
@@ -237,11 +215,11 @@
     {
       "name": "Hero Products Grid",
       "blocks": [
-        { "type": "product" },
-        { "type": "product" },
-        { "type": "product" },
-        { "type": "product" },
-        { "type": "product" }
+        { "type": "link_card" },
+        { "type": "link_card" },
+        { "type": "link_card" },
+        { "type": "link_card" },
+        { "type": "link_card" }
       ]
     }
   ]
