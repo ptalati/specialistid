@@ -194,47 +194,6 @@
   // console.log("template", "{{ template }}")
   // console.log("product", "{{ product.id }}")
   FPD.onlyDoubleEnded = String({{ product.id }}) == "9603349741888"
-
-  // Watch price element for changes and correct if it doesn't match FPD price
-  function setupFpdPriceObserver() {
-    const priceElement = document.querySelector('.product-price.regios-dopp-generic-price-item--sale')
-    if (!priceElement) return
-
-    let isUpdating = false
-    const observer = new MutationObserver(function() {
-      if (isUpdating) return
-
-      const hiddenPrice = document.querySelector(".variant_price")
-      if (!hiddenPrice || !hiddenPrice.value) return
-
-      const expectedPrice = parseFloat(hiddenPrice.value)
-      const displayedText = priceElement.textContent || ''
-      const displayedPrice = parseFloat(displayedText.replace(/[^0-9.]/g, ''))
-
-      if (!isNaN(expectedPrice) && !isNaN(displayedPrice) && Math.abs(expectedPrice - displayedPrice) > 0.01) {
-        console.log('FPD Price mismatch - Expected:', expectedPrice, 'Displayed:', displayedPrice)
-        isUpdating = true
-        if (typeof window.mapMsrpLogic === 'function') {
-          window.mapMsrpLogic()
-        }
-        setTimeout(function() { isUpdating = false }, 100)
-      }
-    })
-
-    observer.observe(priceElement, {
-      childList: true,
-      characterData: true,
-      subtree: true
-    })
-  }
-
-  // Initialize observer when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupFpdPriceObserver)
-  } else {
-    setupFpdPriceObserver()
-  }
-
   // Include the following in the theme.liquid
   //
   // comment  Fancy Product Designer setup - only remove after uninstall endcomment

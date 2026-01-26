@@ -1199,6 +1199,46 @@
   // Expose mapMsrpLogic globally for FPD integration
   window.mapMsrpLogic = mapMsrpLogic;
 
+  // Watch price element for changes and correct if it doesn't match FPD price
+  function setupFpdPriceObserver() {
+    if (!document.body.classList.contains('fpd-enabled')) return;
+
+    const priceElement = document.querySelector('.product-price.regios-dopp-generic-price-item--sale');
+    if (!priceElement) return;
+
+    let isUpdating = false;
+    const observer = new MutationObserver(function() {
+      if (isUpdating) return;
+
+      const hiddenPrice = document.querySelector(".variant_price");
+      if (!hiddenPrice || !hiddenPrice.value) return;
+
+      const expectedPrice = parseFloat(hiddenPrice.value);
+      const displayedText = priceElement.textContent || '';
+      const displayedPrice = parseFloat(displayedText.replace(/[^0-9.]/g, ''));
+
+      if (!isNaN(expectedPrice) && !isNaN(displayedPrice) && Math.abs(expectedPrice - displayedPrice) > 0.01) {
+        debugLog('FPD Price mismatch - Expected: ' + expectedPrice + ', Displayed: ' + displayedPrice);
+        isUpdating = true;
+        mapMsrpLogic();
+        setTimeout(function() { isUpdating = false; }, 100);
+      }
+    });
+
+    observer.observe(priceElement, {
+      childList: true,
+      characterData: true,
+      subtree: true
+    });
+  }
+
+  // Initialize FPD price observer when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupFpdPriceObserver);
+  } else {
+    setupFpdPriceObserver();
+  }
+
   function formatCurrency(amount, locale = 'en-US', currency = 'USD') {
     return new Intl.NumberFormat(locale, {
       style: 'currency',
