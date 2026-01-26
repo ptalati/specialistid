@@ -1201,8 +1201,6 @@
 
   // Watch price element for changes and correct if it doesn't match FPD price
   function setupFpdPriceObserver() {
-    if (!document.body.classList.contains('fpd-enabled')) return;
-
     const priceElement = document.querySelector('.product-price.regios-dopp-generic-price-item--sale');
     if (!priceElement) return;
 
@@ -1232,12 +1230,25 @@
     });
   }
 
-  // Initialize FPD price observer when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupFpdPriceObserver);
-  } else {
-    setupFpdPriceObserver();
+  // Initialize FPD price observer when fpd-enabled class is added to body
+  function waitForFpdEnabled(callback) {
+    if (document.body.classList.contains('fpd-enabled')) {
+      callback();
+      return;
+    }
+    // Watch for fpd-enabled class to be added to body
+    const bodyObserver = new MutationObserver(function() {
+      if (document.body.classList.contains('fpd-enabled')) {
+        bodyObserver.disconnect();
+        callback();
+      }
+    });
+    bodyObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    waitForFpdEnabled(setupFpdPriceObserver);
+  });
 
   function formatCurrency(amount, locale = 'en-US', currency = 'USD') {
     return new Intl.NumberFormat(locale, {
