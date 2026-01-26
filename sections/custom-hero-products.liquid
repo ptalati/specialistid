@@ -1,0 +1,267 @@
+{{ 'custom-hero-products.css' | asset_url | stylesheet_tag }}
+
+<div class="hero-products-section color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width hero-products-container">
+    <!-- Left Content -->
+    <div class="hero-products-content">
+      {% if section.settings.heading != blank %}
+        <h2 class="hero-products-heading {{ section.settings.heading_size }}">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        <div class="hero-products-description">
+          {{ section.settings.description }}
+        </div>
+      {% endif %}
+
+      {% if section.settings.button_label != blank %}
+        <a
+          href="{{ section.settings.button_link }}"
+          class="hero-products-button button"
+          {% if section.settings.button_link == blank %}
+            role="link" aria-disabled="true"
+          {% endif %}
+        >
+          {{ section.settings.button_label }}
+          <span class="hero-products-button-arrow">&rarr;</span>
+        </a>
+      {% endif %}
+    </div>
+
+    <!-- Right Products Grid -->
+    <div class="hero-products-grid">
+      {% assign product_blocks = section.blocks | where: "type", "product" %}
+      {% for block in product_blocks %}
+        {% assign product = block.settings.product %}
+        {% assign custom_image = block.settings.custom_image %}
+        {% assign custom_label = block.settings.custom_label %}
+        {% assign custom_link = block.settings.custom_link %}
+
+        <div
+          class="hero-product-card hero-product-card--{{ forloop.index }}"
+          {{ block.shopify_attributes }}
+        >
+          <a
+            href="{% if custom_link != blank %}{{ custom_link }}{% elsif product != blank %}{{ product.url }}{% else %}#{% endif %}"
+            class="hero-product-link"
+          >
+            <div class="hero-product-image-wrapper">
+              {% if custom_image != blank %}
+                <img
+                  src="{{ custom_image | image_url: width: 600 }}"
+                  alt="{{ custom_label | default: product.title | escape }}"
+                  loading="lazy"
+                  width="{{ custom_image.width }}"
+                  height="{{ custom_image.height }}"
+                  class="hero-product-image"
+                >
+              {% elsif product != blank and product.featured_image != blank %}
+                <img
+                  src="{{ product.featured_image | image_url: width: 600 }}"
+                  alt="{{ product.title | escape }}"
+                  loading="lazy"
+                  width="{{ product.featured_image.width }}"
+                  height="{{ product.featured_image.height }}"
+                  class="hero-product-image"
+                >
+              {% else %}
+                <div class="hero-product-placeholder">
+                  {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              {% endif %}
+            </div>
+            <span class="hero-product-label">
+              {% if custom_label != blank %}
+                {{ custom_label }}
+              {% elsif product != blank %}
+                {{ product.title }}
+              {% else %}
+                Product {{ forloop.index }}
+              {% endif %}
+            </span>
+          </a>
+        </div>
+      {% endfor %}
+
+      {% comment %} Fill remaining slots with placeholders if less than 5 products {% endcomment %}
+      {% assign remaining = 5 | minus: product_blocks.size %}
+      {% if remaining > 0 %}
+        {% for i in (1..remaining) %}
+          {% assign index = product_blocks.size | plus: forloop.index %}
+          <div class="hero-product-card hero-product-card--{{ index }}">
+            <div class="hero-product-link">
+              <div class="hero-product-image-wrapper">
+                <div class="hero-product-placeholder">
+                  {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              </div>
+              <span class="hero-product-label">Product {{ index }}</span>
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero Products Grid",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The Badge Company Your Coworkers are Talking About."
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h3", "label": "Small" },
+        { "value": "h2", "label": "Medium" },
+        { "value": "h1", "label": "Large" },
+        { "value": "h0", "label": "Extra Large" }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p><strong>Family Owned and Operated in the USA since 2001</strong></p>"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Shop Best Sellers"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#f5911f"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom image",
+          "info": "Optional. Overrides product image."
+        },
+        {
+          "type": "text",
+          "id": "custom_label",
+          "label": "Custom label",
+          "info": "Optional. Overrides product title."
+        },
+        {
+          "type": "url",
+          "id": "custom_link",
+          "label": "Custom link",
+          "info": "Optional. Overrides product link."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Products Grid",
+      "blocks": [
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .hero-products-section {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  .hero-products-button {
+    --button-bg: {{ section.settings.button_color }};
+    --button-text: {{ section.settings.button_text_color }};
+    background-color: var(--button-bg);
+    color: var(--button-text);
+  }
+
+  .hero-products-button:hover {
+    background-color: {{ section.settings.button_color | color_darken: 10 }};
+  }
+</style>
