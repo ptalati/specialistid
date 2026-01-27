@@ -1395,13 +1395,7 @@
   // Out of stock popup
   document.addEventListener('DOMContentLoaded', () => {
     // Ensure product data is loaded
-    if (window.location.pathname.includes('/products/')) {
-      loadProductData().then(() => {
-        initOutOfStockPopup();
-      });
-    } else {
-      initOutOfStockPopup();
-    }
+    initOutOfStockPopup();
   });
 
   function initOutOfStockPopup() {
