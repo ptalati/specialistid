@@ -134,7 +134,7 @@
           "is_custom": {% if product.tags contains "Custom Logo" %}true{% else %}false{% endif %}
         },
         "shipping": {
-          "info": "{{ product.metafields.c_f.variant_lead_time }}",
+          "info": "{{ product.metafields.c_f.product_lead_time }}",
           "oos_lead_time": "{{ product.metafields.custom.oos_lead_time }}",
           "backordered_lead_time": "{{ product.metafields.custom.backordered_lead_time }}"
         },
