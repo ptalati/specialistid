@@ -17,7 +17,7 @@
 
   {% assign disable_popup = false %}
   {% for collection in product.collections %}
-    Metafield exists: {{ collection.metafields.custom.disable_oos_popup }}
+    {% comment %} Metafield exists: {{ collection.metafields.custom.disable_oos_popup }} {% endcomment %}
     {% if collection.metafields.custom.disable_oos_popup %}
       {% assign disable_popup = true %}
       {% break %}
