@@ -952,11 +952,11 @@
             lead_time_text = 'Usually ships within 1-2 business days';
           } else {
             if (inventory_policy === 'deny') {
-              document.querySelectorAll("button.product-form__submit").forEach(btn => btn.classList.add('out-of-stock'));
+              document.querySelectorAll("button.product-form__submit").forEach(btn => { btn.classList.add('out-of-stock'); btn.disabled = true; });
               // lead_time_text = 'Out of stock';
               lead_time_text = 'No confirmed stock, but usually ships within a few days';
             } else {
-              document.querySelectorAll("button.product-form__submit").forEach(btn => btn.classList.remove('out-of-stock'));
+              document.querySelectorAll("button.product-form__submit").forEach(btn => { btn.classList.remove('out-of-stock'); btn.disabled = false; });
 
               if (variant_oos_lead_time && variant_oos_lead_time !== '') {
                 lead_time_text = variant_oos_lead_time;
