@@ -1,0 +1,30 @@
+<div id="overlay" class="hidden">
+  <div id="out-of-stock-popup" class="popup2 hidden">
+    <div class="popup-content2">
+      <p>
+        <span>
+          {%- if product.variants.first.inventory_quantity > 0 -%}
+            We currently have {{ product.variants.first.inventory_quantity }} units available to ship immediately. Any
+            additional quantity will ship as soon as it becomes available. If you need full quantity by a specific
+            deadline or would like assistance exploring alternative product options
+          {%- else -%}
+            This item is currently out of stock for immediate shipping. Your order will ship as soon as it becomes
+            available. If you need these items by a specific deadline or would like assistance exploring alternative
+            product options
+          {%- endif -%}</span
+        >, please
+        <span class="retail-contact"
+          ><a href="/pages/contact-us">contact us</a> or call <a href="tel:+18003806726">1.800.380.6726</a></span
+        ><span class="enterprise-contact hide"
+          ><a href="/pages/enterprise-solutions">contact us</a> or call
+          <a href="tel:+18885591940">1.888.559.1940</a></span
+        >
+        - we're here to help!
+      </p>
+      <div class="action-buttons">
+        <button id="continue-add-to-cart" class="button color-button_background_2 button--primary">Continue</button>
+        <button id="close-popup2" class="button">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
