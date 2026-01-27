@@ -80,6 +80,15 @@
     {% assign collection_lead_times = lead_time_array | join: ', ' %}
   {% endif %}
 
+  {% assign disable_popup = false %}
+  {% for collection in product.collections %}
+    Metafield exists: {{ collection.metafields.custom.disable_oos_popup }}
+    {% if collection.metafields.custom.disable_oos_popup %}
+      {% assign disable_popup = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
   <script type="application/json" id="ProductJson-{{ product.id }}">
     {
       "id": {{ product.id | json }},
@@ -141,7 +150,8 @@
           "backordered_lead_time": "{{ product.metafields.custom.backordered_lead_time }}"
         },
         "collection": {
-          "lead_times": {{ collection_lead_times | json }}
+          "lead_times": {{ collection_lead_times | json }},
+          "disable_popup": {% if disable_popup %}true{% else %}false{% endif %}
         }
       }
     }

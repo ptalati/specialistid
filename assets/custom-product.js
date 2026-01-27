@@ -1411,7 +1411,7 @@
       return;
     }
 
-    const disable_oos_popup = getProductMetafield('popup', 'disable_oos');
+    const disable_oos_popup = getProductMetafield('collection', 'disable_popup');
     if (disable_oos_popup === 'true' || disable_oos_popup === true) return;
 
     const variant_id = getVariantId();
