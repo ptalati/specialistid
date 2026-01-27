@@ -167,7 +167,7 @@
     }, 300);
 
     // Color swatch and option clicks
-    document.querySelectorAll("label.color-swatch, label.other-option").forEach(label => {
+    document.querySelectorAll("label.color-swatch, label.other-option, label.swatch-input__label").forEach(label => {
       label.addEventListener('click', function() {
         const bg = document.querySelector(".animated-background");
         if (bg) bg.classList.remove('hidden');
