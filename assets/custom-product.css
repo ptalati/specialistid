@@ -717,3 +717,12 @@ a.custom_button_image img {
 .product__spacer {
     color: transparent;
 }
+
+.out-of-stock {
+    background: #3a3a3cbf !important;
+    color: #ffffff !important;
+}
+
+.out-of-stock:after {
+    background: #3a3a3cbf !important;
+}
