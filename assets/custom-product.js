@@ -173,6 +173,8 @@
         if (bg) bg.classList.remove('hidden');
         var variant_id = this.dataset.id;
 
+        document.querySelectorAll("button.product-form__submit").forEach(btn => { btn.classList.remove('out-of-stock'); btn.disabled = false; });
+
         // Ensure product data is loaded before processing
         loadProductData().then(() => {
           optionLogic(variant_id);
