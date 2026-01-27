@@ -1204,13 +1204,13 @@
     const priceElement = document.querySelector('.product-price.regios-dopp-generic-price-item--sale');
     if (!priceElement) return;
 
-    let isUpdating = false;
+    // let isUpdating = false;
     const observer = new MutationObserver(function() {
-      if (isUpdating) return;
+      // if (isUpdating) return;
 
-      isUpdating = true;
+      // isUpdating = true;
       mapMsrpLogic();
-      setTimeout(function() { isUpdating = false; }, 100);
+      // setTimeout(function() { isUpdating = false; }, 100);
     });
 
     observer.observe(priceElement, {
