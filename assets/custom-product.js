@@ -1585,6 +1585,12 @@
   }
 
   function updateTablePrice() {
+    // Shopify-consistent rounding: round the discount DOWN, then subtract
+    function shopifyDiscountPrice(price, discountPercent) {
+      const discountAmount = Math.floor(price * discountPercent * 100) / 100;
+      return price - discountAmount;
+    }
+
     document.querySelectorAll(".volume_pricing_message").forEach(el => el.classList.add("hidden"));
     document.querySelectorAll(".bulk-ordering-message").forEach(el => el.classList.add("hidden"));
     document.querySelectorAll(".volume_pricing_info").forEach(el => el.classList.add("hidden"));
@@ -1726,10 +1732,9 @@
       }
 
       if (!isNaN(discountPercent)) {
-        const discountedAmount = originalPrice * discountPercent;
-        const discountedPrice = bodyHasPrice ? discountPrice : originalPrice - discountedAmount;
-        const discountedPriceRounded = Math.floor((discountedPrice) * 100) / 100;
-          // Math.floor((  ) * 100) / 100
+        // USE SHOPIFY-CONSISTENT ROUNDING HERE
+        const discountedPrice = bodyHasPrice ? discountPrice : shopifyDiscountPrice(originalPrice, discountPercent);
+        const discountedPriceRounded = Math.round(discountedPrice * 100) / 100;
 
         if (!bodyHasPrice && !priceColumnExists) {
           const priceCell = document.createElement("td");
@@ -1745,7 +1750,7 @@
         if (currentRange && quantity === currentRange.start) {
           originalPriceElement.innerText = formatCurrencyLocal(discountedPriceRounded) + " each";
           
-          const discountedEstimatedTotal = discountedPrice * currentQuantity;
+          const discountedEstimatedTotal = discountedPriceRounded * currentQuantity;
           const totalPriceEl = document.querySelector(".total-price-wrapper .total-price");
           if (totalPriceEl) totalPriceEl.innerHTML = formatCurrencyLocal(discountedEstimatedTotal);
           if (rewardPointsEl) rewardPointsEl.innerHTML = discountedEstimatedTotal.toFixed(2);
