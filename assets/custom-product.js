@@ -166,20 +166,21 @@
       if (bg) bg.classList.remove('hidden');
     }, 300);
 
-    // Color swatch and option clicks
-    document.querySelectorAll("label.color-swatch, label.other-option, label.swatch-input__label").forEach(label => {
-      label.addEventListener('click', function() {
-        const bg = document.querySelector(".animated-background");
-        if (bg) bg.classList.remove('hidden');
-        var variant_id = this.dataset.id;
+    // Color swatch and option clicks (using event delegation for dynamic elements)
+    document.addEventListener('click', function(e) {
+      const label = e.target.closest("label.color-swatch, label.other-option, label.swatch-input__label");
+      if (!label) return;
 
-        document.querySelectorAll("button.product-form__submit").forEach(btn => { btn.classList.remove('out-of-stock'); btn.disabled = false; });
+      const bg = document.querySelector(".animated-background");
+      if (bg) bg.classList.remove('hidden');
+      var variant_id = label.dataset.id;
 
-        // Ensure product data is loaded before processing
-        loadProductData().then(() => {
-          optionLogic(variant_id);
-          setTimeout(() => updateTablePrice(), CONFIG.ANIMATION_DELAY);
-        });
+      document.querySelectorAll("button.product-form__submit").forEach(btn => { btn.classList.remove('out-of-stock'); btn.disabled = false; });
+
+      // Ensure product data is loaded before processing
+      loadProductData().then(() => {
+        optionLogic(variant_id);
+        setTimeout(() => updateTablePrice(), CONFIG.ANIMATION_DELAY);
       });
     });
 
