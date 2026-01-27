@@ -116,6 +116,7 @@
             },
             "shipping": {
               "info": "{{ variant.metafields.c_f.variant_lead_time }}",
+              "inventory_policy": "{{ variant.inventory_policy }}",
               "oos_lead_time": "{{ variant.metafields.custom.oos_lead_time }}",
               "backordered_lead_time": "{{ variant.metafields.custom.backordered_lead_time }}"
             }
@@ -135,6 +136,7 @@
         },
         "shipping": {
           "info": "{{ product.metafields.c_f.product_lead_time }}",
+          "inventory_policy": "{{ product.inventory_policy }}",
           "oos_lead_time": "{{ product.metafields.custom.oos_lead_time }}",
           "backordered_lead_time": "{{ product.metafields.custom.backordered_lead_time }}"
         },
