@@ -910,7 +910,7 @@
         if (variantInventory) {
           var doralQty = variantInventory.inventoryLevels["Specialist ID"] || 0;
 
-          var inventory_policy = variant?.inventory_policy || 'deny';
+          var inventory_policy = getVariantMetafield(variant_id, 'shipping', 'inventory_policy') || getProductMetafield('shipping', 'inventory_policy') || 'deny';
 
           // Get shipping and inventory info from metafields only
           var product_iscustom = getProductMetafield('product', 'is_custom');
