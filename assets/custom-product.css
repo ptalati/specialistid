@@ -672,9 +672,12 @@ tr.current {
 /* --- end popup for out of stock --- */
 
 .hidden,
-.hide,
-.forcehidden {
+.hide {
     display: none;
+}
+
+.forcehidden {
+    display: none !important;
 }
 
 .product--specifications ul {
