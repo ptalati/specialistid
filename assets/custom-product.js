@@ -1411,7 +1411,7 @@
     const variant_id = getVariantId();
     const variant = getVariantData(variant_id);
 
-    const inventory_policy = variant?.inventory_policy || 'deny';
+    const inventory_policy = getVariantMetafield(variant_id, 'shipping', 'inventory_policy') || 'deny';
     const product_oos_lead_time = getProductMetafield('inventory', 'oos_lead_time') || '';
     const variant_oos_lead_time = getVariantMetafield(variant_id, 'inventory', 'oos_lead_time') || '';
     
