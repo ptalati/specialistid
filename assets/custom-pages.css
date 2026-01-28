@@ -320,3 +320,7 @@ a.warning-anchor span.content_wrapper {
     margin-top: 4rem !important;
     margin-bottom: 2rem !important;
 }
+
+.header__heading-link {
+    margin: 0 .75rem !important;
+}
