@@ -446,7 +446,9 @@
               {%- when 'just_price' -%}
                 <div class="actual-price price regios-dopp-generic-price-container">
                   <span class="regios-dopp-generic-price-item--regular visually-hidden"></span>
-                  <strong class="product-price regios-dopp-generic-price-item--sale">${{ product.price }} each</strong>
+                  <strong class="product-price regios-dopp-generic-price-item--sale">
+                    {{ product.price | money }} each
+                  </strong>
                 </div>
               {%- when 'total_price' -%}
                 <div class="total-price-wrapper">
