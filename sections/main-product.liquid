@@ -466,7 +466,7 @@
                     class="product__accordion accordion quick-add-hidden product--specifications"
                     {{ block.shopify_attributes }}
                   >
-                    <details id="Features-{{ block.id }}-{{ section.id }}">
+                    <details id="Features-{{ block.id }}-{{ section.id }}" {% if block.settings.open_by_default %}open{% endif %}>
                       <summary>
                         <div class="summary__title">
                           <h2 class="h4 accordion__title">Product Specifications</h2>
@@ -1386,7 +1386,15 @@
     {
       "type": "product_specifications",
       "name": "Product Specifications",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "open_by_default",
+          "label": "Open by default",
+          "default": false
+        }
+      ]
     },
     {
       "type": "sku",
