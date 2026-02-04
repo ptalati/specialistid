@@ -161,7 +161,9 @@
         },
         "product_specifications_e77dAJ": {
           "type": "product_specifications",
-          "settings": {}
+          "settings": {
+            "open_by_default": true
+          }
         },
         "description": {
           "type": "description",
