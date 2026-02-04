@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "custom_discontinued_product_n3K4J7": {
+      "type": "custom-discontinued-product",
+      "name": "Discontinued Product",
+      "settings": {
+        "discontinued_text": "This product has been discontinued.",
+        "discontinued_img": "shopify://shop_images/Discontinued.png"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -143,11 +151,18 @@
         },
         "collapsible_tab_aiETtU": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Features",
             "icon": "none",
             "content": "{{ block.settings.page.content }}",
             "page": ""
+          }
+        },
+        "product_specifications_qFmPQj": {
+          "type": "product_specifications",
+          "settings": {
+            "open_by_default": true
           }
         },
         "description": {
@@ -186,6 +201,7 @@
         "buy_buttons",
         "customize_quote_buttons_KQYLh3",
         "collapsible_tab_aiETtU",
+        "product_specifications_qFmPQj",
         "description",
         "share"
       ],
@@ -204,14 +220,6 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
-      }
-    },
-    "custom_discontinued_product_n3K4J7": {
-      "type": "custom-discontinued-product",
-      "name": "Discontinued Product",
-      "settings": {
-        "discontinued_text": "This product has been discontinued.",
-        "discontinued_img": "shopify://shop_images/Discontinued.png"
       }
     },
     "related-products": {
