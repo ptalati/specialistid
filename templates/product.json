@@ -165,7 +165,9 @@
         },
         "product_specifications_NAE6hJ": {
           "type": "product_specifications",
-          "settings": {}
+          "settings": {
+            "open_by_default": true
+          }
         },
         "description": {
           "type": "description",
