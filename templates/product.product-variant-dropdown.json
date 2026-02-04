@@ -158,7 +158,9 @@
         },
         "product_specifications_tVnBFc": {
           "type": "product_specifications",
-          "settings": {}
+          "settings": {
+            "open_by_default": true
+          }
         },
         "description": {
           "type": "description",
