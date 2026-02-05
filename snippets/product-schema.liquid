@@ -15,6 +15,15 @@
   | round: 2
 %}
 
+{% comment %} DEBUG: Log price values to console {% endcomment %}
+<script>
+  console.log('Product Debug Values:');
+  console.log('Price:', {{ price_value | json }});
+  console.log('MAP:', {{ map_value | json }});
+  console.log('MSRP:', {{ msrp_value | json }});
+  console.log('Use MAP Price:', {{ use_map_price | json }});
+</script>
+
 {% comment %} Get minimum quantity {% endcomment %}
 {% assign min_qty = product.selected_or_first_available_variant.metafields.c_f.minimum
   | default: product.metafields.c_f.minimum
