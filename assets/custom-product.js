@@ -947,6 +947,7 @@
           var lead_time_text = "";
           
           if (doralQty + 1 > inputQty) {
+            setAddToCartOutOfStock(false);
             if (variant_shipping_info && variant_shipping_info !== '') {
               lead_time_text = variant_shipping_info;
             } else if (product_shipping_info && product_shipping_info !== '') {
@@ -967,8 +968,10 @@
               }
             }
           } else if (product_iscustom === "1") {
+            setAddToCartOutOfStock(false);
             lead_time_text = 'Usually ships within 10-14 business days';
           } else if (variantInventory.inventoryQuantity + 1 > inputQty) {
+            setAddToCartOutOfStock(false);
             lead_time_text = 'Usually ships within 1-2 business days';
           } else {
             if (inventory_policy === 'deny') {
