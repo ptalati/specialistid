@@ -51,6 +51,23 @@
     }
   }
 
+  // Helper to set out-of-stock state on add-to-cart elements
+  function setAddToCartOutOfStock(isOut) {
+    document.querySelectorAll('button.product-form__submit, [name="add"], a.product-form__submit-out-of-stock').forEach(btn => {
+      try {
+        if (isOut) {
+          btn.classList.add('out-of-stock');
+          if ('disabled' in btn) btn.disabled = true;
+          if (btn.setAttribute) btn.setAttribute('aria-disabled', 'true');
+        } else {
+          btn.classList.remove('out-of-stock');
+          if ('disabled' in btn) btn.disabled = false;
+          if (btn.removeAttribute) btn.removeAttribute('aria-disabled');
+        }
+      } catch (e) {}
+    });
+  }
+
   // Debounce helper function
   function debounce(func, wait) {
     let timeout;
@@ -175,7 +192,7 @@
       if (bg) bg.classList.remove('hidden');
       var variant_id = label.dataset.id;
 
-      document.querySelectorAll("button.product-form__submit").forEach(btn => { btn.classList.remove('out-of-stock'); btn.disabled = false; });
+      setAddToCartOutOfStock(false);
 
       // Ensure product data is loaded before processing
       loadProductData().then(() => {
@@ -955,11 +972,11 @@
             lead_time_text = 'Usually ships within 1-2 business days';
           } else {
             if (inventory_policy === 'deny') {
-              document.querySelectorAll("button.product-form__submit").forEach(btn => { btn.classList.add('out-of-stock'); btn.disabled = true; });
+              setAddToCartOutOfStock(true);
               // lead_time_text = 'Out of stock';
               lead_time_text = 'No confirmed stock, but usually ships within a few days';
             } else {
-              document.querySelectorAll("button.product-form__submit").forEach(btn => { btn.classList.remove('out-of-stock'); btn.disabled = false; });
+              setAddToCartOutOfStock(false);
 
               if (variant_oos_lead_time && variant_oos_lead_time !== '') {
                 lead_time_text = variant_oos_lead_time;
