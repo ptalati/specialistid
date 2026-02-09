@@ -38,7 +38,7 @@
           "type": "button",
           "settings": {
             "button_label": "Contact Us",
-            "button_link": "shopify://pages/contact-us-1",
+            "button_link": "shopify://pages/contact-us",
             "button_style_secondary": false
           }
         }
@@ -122,8 +122,10 @@
         "column_dfBQYp": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_efe537e5166b44e19ba2baa80d090297.png",
             "title": "",
+            "enable_copy_button": false,
             "text": "",
             "link_label": "",
             "link": ""
@@ -132,8 +134,10 @@
         "column_NErrYL": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_202141d56d1b4565b47e26fbec0a2387.png",
             "title": "",
+            "enable_copy_button": false,
             "text": "",
             "link_label": "",
             "link": ""
@@ -142,8 +146,10 @@
         "column_EdBNhr": {
           "type": "column",
           "settings": {
+            "wrapper_class": "",
             "image": "shopify://shop_images/assets_cb0f04e1291e41128da91a285c3ce4d4_4dd687bd78db4007a58db51e996ef047.png",
             "title": "",
+            "enable_copy_button": false,
             "text": "",
             "link_label": "",
             "link": ""
