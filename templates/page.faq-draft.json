@@ -561,7 +561,7 @@
           "type": "accordion",
           "settings": {
             "accordion_title": "Are products latex-free and BPA-free?",
-            "accordion_content": "<h6>ChatGPT said:</h6><p>Yes, the majority of our healthcare products are <strong>latex-free and BPA-free</strong>, making them safe for sensitive environments. This includes badge holders, lanyards, and reels commonly used in hospitals. Product specs clearly indicate if they're <strong>hypoallergenic and toxin-free</strong>. Let us know if you need documentation for compliance or patient safety review.</p>"
+            "accordion_content": "<p>Yes, the majority of our healthcare products are <strong>latex-free and BPA-free</strong>, making them safe for sensitive environments. This includes badge holders, lanyards, and reels commonly used in hospitals. Product specs clearly indicate if they're <strong>hypoallergenic and toxin-free</strong>. Let us know if you need documentation for compliance or patient safety review.</p>"
           }
         },
         "accordion_hhGxiw": {
