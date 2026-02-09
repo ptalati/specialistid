@@ -1438,15 +1438,21 @@
 
     if (addToCartButton) {
       addToCartButton.addEventListener('click', (event) => {
+        // Ignore clicks when button is marked out-of-stock or disabled
+        if (addToCartButton.classList.contains('out-of-stock') || addToCartButton.disabled) {
+          event.preventDefault();
+          return;
+        }
+
         if (product_oos_lead_time !== "" || variant_oos_lead_time !== "") return;
-        
+
         const quantity = parseInt(quantityInput?.value, 10);
-    
+
         if (!continueAddingToCart && quantity > maxQuantity) {
           event.preventDefault();
           if (popup) popup.classList.remove('hidden');
           if (overlay) overlay.classList.remove('hidden');
-    
+
           const unitPrice = getVariantPrice(variant_id);
           if (quantityInput.value * unitPrice > CONFIG.ENTERPRISE_THRESHOLD) {
             const retailContact = document.querySelector(".retail-contact");
