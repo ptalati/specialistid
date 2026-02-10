@@ -333,7 +333,7 @@
           "type": "accordion",
           "settings": {
             "accordion_title": "How long does shipping take?",
-            "accordion_content": "<h6>For schools, <strong>standard shipping typically takes 3–5 business days</strong> within the continental U.S. Expedited options like <strong>2-day or overnight shipping</strong> are also available at checkout. Custom or bulk orders may require extra processing time before shipment. Our team will provide tracking and estimated delivery dates once your order ships.</h6>"
+            "accordion_content": "<p>For schools, <strong>standard shipping typically takes 3–5 business days</strong> within the continental U.S. Expedited options like <strong>2-day or overnight shipping</strong> are also available at checkout. Custom or bulk orders may require extra processing time before shipment. Our team will provide tracking and estimated delivery dates once your order ships.</p>"
           }
         },
         "accordion_9qaQVD": {
