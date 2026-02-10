@@ -643,7 +643,7 @@
           "type": "accordion",
           "settings": {
             "accordion_title": "Do you hold a GSA Schedule or can you sell via 4PL platforms(Ability One, DOD eMall)?",
-            "accordion_content": "<h6>While we don’t currently hold a <strong>GSA Schedule</strong>, we can sell through <strong>authorized 4PL platforms</strong> like <strong>AbilityOne and DOD EMALL</strong> via our distribution partners. We’ll coordinate to meet your agency’s procurement guidelines. Let us know your preferred channel, and we’ll route the order accordingly. Compliance and documentation support is included.</h6>"
+            "accordion_content": "<p>While we don’t currently hold a <strong>GSA Schedule</strong>, we can sell through <strong>authorized 4PL platforms</strong> like <strong>AbilityOne and DOD EMALL</strong> via our distribution partners. We’ll coordinate to meet your agency’s procurement guidelines. Let us know your preferred channel, and we’ll route the order accordingly. Compliance and documentation support is included.</p>"
           }
         },
         "accordion_gEwNxn": {
