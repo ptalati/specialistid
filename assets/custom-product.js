@@ -1321,6 +1321,21 @@
       setTimeout(() => updateTablePrice(), 200);
     }
 
+    // Check if product has no reviews and show no-review div
+    const productStarsDiv = document.getElementById('product_just_stars');
+    if (productStarsDiv) {
+      const hasReviewContent = productStarsDiv.textContent.trim().length > 0 && 
+                               productStarsDiv.querySelector('.star') || 
+                               productStarsDiv.querySelector('.rating') ||
+                               productStarsDiv.querySelector('[class*="star"]') ||
+                               productStarsDiv.querySelector('[class*="review"]');
+      
+      if (!hasReviewContent) {
+        const noReviewDiv = document.querySelector('.no-review');
+        if (noReviewDiv) noReviewDiv.classList.remove('hidden');
+      }
+    }
+
     setTimeout(function() {
       // If we have product data, use it for SKU updates
       if (productData && productData.variants) {
