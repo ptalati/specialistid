@@ -358,6 +358,8 @@
                   <!-- Shopper Approved - sections/product-template -->
                   <div id="product_just_stars" class="reg"></div>
                   <!-- END Shopper Approved - sections/product-template -->
+
+                  <div class="no-review hidden">No reviews</div>
                 </div>
               {%- when 'stock_availability_label' -%}
                 <div class="stock_availability_label">
@@ -466,7 +468,12 @@
                     class="product__accordion accordion quick-add-hidden product--specifications"
                     {{ block.shopify_attributes }}
                   >
-                    <details id="Features-{{ block.id }}-{{ section.id }}" {% if block.settings.open_by_default %}open{% endif %}>
+                    <details
+                      id="Features-{{ block.id }}-{{ section.id }}"
+                      {% if block.settings.open_by_default %}
+                        open
+                      {% endif %}
+                    >
                       <summary>
                         <div class="summary__title">
                           <h2 class="h4 accordion__title">Product Specifications</h2>
