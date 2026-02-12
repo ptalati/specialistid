@@ -57,6 +57,26 @@
     width: 70px;
   }
 
+  /* When FPD is enabled, position the help button inside the product media area */
+  body.fpd-enabled .product__media-wrapper {
+    position: relative;
+  }
+
+  body.fpd-enabled #openPopup {
+    position: absolute;
+    left: 20px; /* adjust horizontal offset to match red box */
+    bottom: 16px; /* place just below the product image */
+    top: auto;
+    transform: none;
+    display: block; /* ensure visible on FPD pages */
+    width: auto;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    white-space: nowrap;
+    z-index: 30; /* above images but below modal overlays */
+  }
+
   #overlay-support .close-designer-help-form {
     cursor: pointer;
     position: absolute;

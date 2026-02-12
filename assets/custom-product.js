@@ -977,7 +977,7 @@
             if (inventory_policy === 'deny') {
               setAddToCartOutOfStock(true);
               // lead_time_text = 'Out of stock';
-              lead_time_text = 'No confirmed stock, but usually ships within a few days';
+              lead_time_text = `${variantInventory.inventoryQuantity} in stock. Order now for immediate shipping, Remainder ships within a few days.`;
             } else {
               setAddToCartOutOfStock(false);
 
