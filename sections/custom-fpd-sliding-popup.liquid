@@ -65,8 +65,8 @@
   body.fpd-enabled #openPopup {
     position: absolute;
     left: 20px; /* adjust horizontal offset to match red box */
-    bottom: 16px; /* place just below the product image */
-    top: auto;
+    bottom: auto;
+    top: 100%; /* position below the main product image */
     transform: none;
     display: block; /* ensure visible on FPD pages */
     width: auto;
@@ -75,6 +75,7 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
     white-space: nowrap;
     z-index: 30; /* above images but below modal overlays */
+    margin-top: 10px; /* spacing below the main image */
   }
 
   #overlay-support .close-designer-help-form {
