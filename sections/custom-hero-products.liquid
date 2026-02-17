@@ -5,9 +5,9 @@
     <!-- Left Content -->
     <div class="hero-products-content">
       {% if section.settings.heading != blank %}
-        <h2 class="hero-products-heading {{ section.settings.heading_size }}">
+        <h1 class="hero-products-heading {{ section.settings.heading_size }}">
           {{ section.settings.heading }}
-        </h2>
+        </h1>
       {% endif %}
 
       {% if section.settings.description != blank %}
@@ -32,7 +32,7 @@
 
     <!-- Right Products Grid -->
     <div class="hero-products-grid">
-      {% assign link_blocks = section.blocks | where: "type", "link_card" %}
+      {% assign link_blocks = section.blocks | where: 'type', 'link_card' %}
       {% for block in link_blocks %}
         {% assign image = block.settings.image %}
         {% assign label = block.settings.label %}
