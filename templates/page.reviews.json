@@ -21,6 +21,7 @@
     },
     "custom_liquid_w8h7mn": {
       "type": "custom-liquid",
+      "disabled": true,
       "custom_css": [
         ".builder-custom-code img {width: 80%;}"
       ],
@@ -30,10 +31,26 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "1771334697dcd41cee": {
+      "type": "apps",
+      "blocks": {
+        "shopper_approved_reviews_block_company_widgets_fHGqcK": {
+          "type": "shopify://apps/shopper-approved-reviews/blocks/block-company-widgets/c5ec448f-e109-4c8a-bcd3-9cb4ba7ecfa4",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "shopper_approved_reviews_block_company_widgets_fHGqcK"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
-    "custom_liquid_w8h7mn"
+    "custom_liquid_w8h7mn",
+    "1771334697dcd41cee"
   ]
 }
