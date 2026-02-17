@@ -140,9 +140,22 @@
       <h2 style="text-align: {{ section.settings.text_alignment }}">{{ section.settings.product_heading }}</h2>
    </div>
    <div class="collection-slider-items">
+    {% assign selected_collection = section.settings.collection %}
     {% for block in section.blocks %}
       {% if block.type == 'product' and block.settings.product != blank %}
         {% assign product = block.settings.product %}
+        {% assign product_in_collection = false %}
+        {% if selected_collection == blank %}
+          {% assign product_in_collection = true %}
+        {% else %}
+          {% for col_product in selected_collection.products %}
+            {% if col_product.id == product.id %}
+              {% assign product_in_collection = true %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        {% if product_in_collection %}
         <div class="main-collection-slide" {{ block.shopify_attributes }}>
           <div class="collection-slide-info">
                {% render 'card-product',
@@ -156,6 +169,7 @@
                 %}
           </div>
         </div>
+        {% endif %}
       {% endif %}
     {% endfor %}
    </div>
@@ -241,6 +255,12 @@
           "label": "Text Alignment",
           "default": "center"
        },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection",
+        "info": "Only products belonging to this collection will be displayed. Leave empty to show all selected products."
+      },
       {
         "type":"color",
         "id":"text_color",
