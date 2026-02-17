@@ -10,15 +10,15 @@
      padding-bottom: {{ section.settings.padding_bottom }}px;
     background: #F9FAFB;
 }
-  .collection-slider .main-collection-slide {
+  .collection-slider--{{ section.id }} .main-collection-slide {
     margin: 0 15px;
     position: relative;
 }
-  .collection-slider-items
+  .collection-slider--{{ section.id }} .collection-slider-items
  .slick-list.draggable {
     margin: 0 -15px;
 }
-.collection-slider .collection-slider-heading h2 {
+.collection-slider--{{ section.id }} .collection-slider-heading h2 {
     font-size: 40px;
     line-height: 100%;
     letter-spacing: 0;
@@ -27,7 +27,7 @@
     color: #3A3A3C;
     margin-top:0px;
 }
-  .collection-slider-button.bottom {
+  .collection-slider--{{ section.id }} .collection-slider-button.bottom {
     margin-top: 25px;
     z-index: 0;
     position: relative;
@@ -45,19 +45,19 @@
 }
 
     /*   arrow */
- .collection-slider .slick-prev:before {
+ .collection-slider--{{ section.id }} .slick-prev:before {
     content: "\f104";
     font-family: "FontAwesome";
     color: #ffffff;
     font-size: 16px;
 }
-  .collection-slider .slick-next:before {
+  .collection-slider--{{ section.id }} .slick-next:before {
     content: "\f105";
     font-family: "FontAwesome";
     color: #ffffff;
     font-size: 16px;
 }
-.collection-slider button.slick-arrow {
+.collection-slider--{{ section.id }} button.slick-arrow {
     background: #D3D3D3;
     width: 40px;
     height: 40px;
@@ -66,13 +66,13 @@
     top: 35%;
     transform: translateY(-35%);
 }
-  .collection-slider .slick-prev {   left: -60px;}
-  .collection-slider .slick-next {    right: -60px;}
+  .collection-slider--{{ section.id }} .slick-prev {   left: -60px;}
+  .collection-slider--{{ section.id }} .slick-next {    right: -60px;}
 
-  .collection-slider button.slick-arrow:hover {    background: #F5911F;}
+  .collection-slider--{{ section.id }} button.slick-arrow:hover {    background: #F5911F;}
 
   /* collection-slider-section */
-.collection-slider .main-collection-slide .full-unstyled-link {
+.collection-slider--{{ section.id }} .main-collection-slide .full-unstyled-link {
     font-size: 16px;
     line-height: normal;
     letter-spacing: 0;
@@ -81,7 +81,7 @@
     color: #3A3A3C;
     font-weight: 400 !important;
 }
-.collection-slider .main-collection-slide .price span {
+.collection-slider--{{ section.id }} .main-collection-slide .price span {
     font-weight: 700;
     font-size: 16px;
     line-height: 100%;
@@ -90,10 +90,10 @@
     text-transform: capitalize;
     color: #F5911F !important;
 }
-.collection-slider .main-collection-slide .price {
+.collection-slider--{{ section.id }} .main-collection-slide .price {
     text-align: center;
 }
-.collection-slider .main-collection-slide span.price-item.price-item--sale.price-item--last {
+.collection-slider--{{ section.id }} .main-collection-slide span.price-item.price-item--sale.price-item--last {
     font-weight: 700;
     font-size: 16px;
     line-height: 100%;
@@ -104,113 +104,125 @@
 }
 
  @media(max-width:1750px){
-  .collection-slider .slick-prev {    left: -30px;}
-  .collection-slider .slick-next {    right: -30px;}
+  .collection-slider--{{ section.id }} .slick-prev {    left: -30px;}
+  .collection-slider--{{ section.id }} .slick-next {    right: -30px;}
   }
 
    @media(max-width:1500px){
-    .collection-slider button.slick-arrow {    top: 30%;    transform: translateY(-30%);}
-    .collection-slider .main-collection-slide {    margin: 0 10px; }
-     .collection-slider-items  .slick-list.draggable {    margin: 0 -10px;}
+    .collection-slider--{{ section.id }} button.slick-arrow {    top: 30%;    transform: translateY(-30%);}
+    .collection-slider--{{ section.id }} .main-collection-slide {    margin: 0 10px; }
+     .collection-slider--{{ section.id }} .collection-slider-items  .slick-list.draggable {    margin: 0 -10px;}
   }
 
  @media(max-width:1100px){
-  .collection-slider .collection-slider-heading h2 {    font-size: 35px;}
+  .collection-slider--{{ section.id }} .collection-slider-heading h2 {    font-size: 35px;}
    .collection-slider-section--{{ section.id }} a.collection-slider-btn {    padding: 14px 20px;}
 }
   @media(max-width:989px){
-    .collection-slider-button.bottom {   margin-top: 20px;   display: block;}
+    .collection-slider--{{ section.id }} .collection-slider-button.bottom {   margin-top: 20px;   display: block;}
 }
   @media(max-width:749px){
-    .collection-slider .collection-slider-heading h2 {     font-size: 30px;}
+    .collection-slider--{{ section.id }} .collection-slider-heading h2 {     font-size: 30px;}
   .collection-slider-section--{{ section.id }} {
     padding-top: {{ section.settings.padding_top_mobile }}px;
     padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
   }
 }
-.collection-slider .slick-dots li button:before {   font-size: 0px;}
-.collection-slider .slick-dots {   position: absolute;    bottom: -20px;}
+.collection-slider--{{ section.id }} .slick-dots li button:before {   font-size: 0px;}
+.collection-slider--{{ section.id }} .slick-dots {   position: absolute;    bottom: -20px;}
 
 </style>
 
 <div class="collection-slider-section--{{ section.id }} {% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}">
  <div class="page-width">
-  <div class="collection-slider">
+  <div class="collection-slider--{{ section.id }}">
    <div class="collection-slider-heading">
       <h2 style="text-align: {{ section.settings.text_alignment }}">{{ section.settings.product_heading }}</h2>
    </div>
    <div class="collection-slider-items">
-    {% assign collection = section.settings.collection %}
-    {% for product in collection.products limit: section.settings.products_to_show %}
-    <div class="main-collection-slide">
-      <div class="collection-slide-info">
-           {% render 'card-product',
-              card_product: product,
-              media_aspect_ratio: section.settings.image_ratio,
-              show_secondary_image: section.settings.show_secondary_image,
-              show_vendor: section.settings.show_vendor,
-              show_rating: section.settings.show_rating,
-              show_quick_add: section.settings.enable_quick_add,
-              section_id: section.id
-            %}
-      </div>
-    </div>
+    {% for block in section.blocks %}
+      {% if block.type == 'product' and block.settings.product != blank %}
+        {% assign product = block.settings.product %}
+        <div class="main-collection-slide" {{ block.shopify_attributes }}>
+          <div class="collection-slide-info">
+               {% render 'card-product',
+                  card_product: product,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  show_secondary_image: section.settings.show_secondary_image,
+                  show_vendor: section.settings.show_vendor,
+                  show_rating: section.settings.show_rating,
+                  show_quick_add: section.settings.enable_quick_add,
+                  section_id: section.id
+                %}
+          </div>
+        </div>
+      {% endif %}
     {% endfor %}
    </div>
+    {% if section.settings.button != blank %}
     <div class="collection-slider-button bottom">
-      <a class="collection-slider-btn button" href={{ section.settings.link }}>{{ section.settings.button }}</a>
+      <a class="collection-slider-btn button" href="{{ section.settings.link }}">{{ section.settings.button }}</a>
     </div>
+    {% endif %}
   </div>
  </div>
 </div>
 
 
-
-
 <script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function () {
-  $('.collection-slider-section--{{ section.id }} .collection-slider-items').slick({
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 3,
-    arrows: true,
-    responsive: [
-      {
-        breakpoint: 1100,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          autoplay: false,
-          autoplaySpeed: 1000,
-          arrows: false
+  function initCollectionSlider_{{ section.id | replace: '-', '_' }}() {
+    var $slider = $('.collection-slider-section--{{ section.id }} .collection-slider-items');
+    $slider.not('.slick-initialized').slick({
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 3,
+      arrows: true,
+      responsive: [
+        {
+          breakpoint: 1100,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            autoplay: false,
+            autoplaySpeed: 1000,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            autoplay: false,
+            autoplaySpeed: 1000,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 700,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 1000,
+            arrows: false
+          }
         }
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 3,
-          autoplay: false,
-          autoplaySpeed: 1000,
-          arrows: false
-        }
-      },
-      {
-        breakpoint: 700,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplay: false,
-          autoplaySpeed: 1000,
-          arrows: false
-        }
-      }
-    ]
-  });
-});
+      ]
+    });
+  }
 
+  $(document).ready(function() {
+    initCollectionSlider_{{ section.id | replace: '-', '_' }}();
+  });
+
+  document.addEventListener('shopify:section:load', function(event) {
+    if (event.detail.sectionId === '{{ section.id }}') {
+      initCollectionSlider_{{ section.id | replace: '-', '_' }}();
+    }
+  });
 </script>
 
 
@@ -229,24 +241,10 @@ document.addEventListener("DOMContentLoaded", function () {
           "label": "Text Alignment",
           "default": "center"
        },
-       {
-        "type": "range",
-        "id": "products_to_show",
-        "min": 2,
-        "max": 12,
-        "step": 1,
-        "default": 4,
-        "label": "t:sections.featured-collection.settings.products_to_show.label"
-      },
       {
         "type":"color",
         "id":"text_color",
         "label":"Product title Color"
-      },
-      {
-        "type": "collection",
-        "id": "collection",
-        "label": "Collection"
       },
       {
           "type": "select",
@@ -392,13 +390,26 @@ document.addEventListener("DOMContentLoaded", function () {
       "default": 36
     }
   ],
-    "presets": [
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+  "presets": [
     {
         "name": "Custom collection slider",
         "category": "Custom"
     }
-    ]
-  }
+  ]
+}
 {% endschema %}
 
 {% stylesheet %}
