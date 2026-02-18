@@ -222,20 +222,16 @@ function setBadgeText(txt, secondLine) {
     	badgeText2 = "";
     }
 
-    var safeBadgeText = sanitizeText(badgeText);
-    var safeBadgeText2 = sanitizeText(badgeText2);
-    var safeTxt = sanitizeText(txt);
-
     var html;
 
     if (lineNumber == 2 && secondLine) {
-    	html = '<div id="txtSpan1" style="width:100%;margin-bottom: -13px;"><span id="doubleSpan1" style="display:inline-block">' + safeBadgeText + '</span></div>';
-    	html += '<div id="txtSpan2" style="width:100%;"><span id="doubleSpan2" style="display:inline-block">' + safeTxt + '</span></div>';
+    	html = '<div id="txtSpan1" style="width:100%;margin-bottom: -13px;"><span id="doubleSpan1" style="display:inline-block">' + badgeText + '</span></div>';
+    	html += '<div id="txtSpan2" style="width:100%;"><span id="doubleSpan2" style="display:inline-block">' + txt + '</span></div>';
     } else if (lineNumber == 2) {
-    	html = '<div id="txtSpan1" style="width:100%;margin-bottom: -13px;"><span id="doubleSpan1" style="display:inline-block">' + safeTxt+'</span></div>';
-        html += '<div id="txtSpan2" style="width:100%;"><span id="doubleSpan2" style="display:inline-block">'+ safeBadgeText2 + '</span></div>';
+    	html = '<div id="txtSpan1" style="width:100%;margin-bottom: -13px;"><span id="doubleSpan1" style="display:inline-block">' + txt+'</span></div>';
+        html += '<div id="txtSpan2" style="width:100%;"><span id="doubleSpan2" style="display:inline-block">'+ badgeText2 + '</span></div>';
     } else {
-        html = "<div id='txtSingle' style='width:100%;height:78px;'><span id='singleSpan' style='display:inline-block'>" + safeBadgeText + '</span></div>';
+        html = "<div id='txtSingle' style='width:100%;height:78px;'><span id='singleSpan' style='display:inline-block'>" + badgeText + '</span></div>';
     }
 
     $("#badge-preview-text").html(html);
@@ -333,12 +329,12 @@ function cleanStyleValue(value){
 function replaceKey(value){
     if (!value) return value;
 
-    var val = value;
+    var val = sanitizeText(value);
 
-    if (value.match(/\s/g)) {
+    if (val.match(/\s/g)) {
         val = val.replace(/\s/g, '<span class="myUnderscore">a</span>');
         return val;
-    } else if (value.match('-')) {
+    } else if (val.match('-')) {
         val = val.replace('-', '<span >-</span>');
         return val;
     } else {
