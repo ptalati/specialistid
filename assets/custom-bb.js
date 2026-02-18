@@ -238,47 +238,47 @@ function setBadgeText(txt, secondLine) {
     $("#badge-preview-text").html(html);
 
     if ($.fn.textfill) {
-        $("#txtSpan1").textfill({
-            maxFontPixels:40
-        });
+      $("#txtSpan1").textfill({
+          maxFontPixels:40
+      });
 
-        $("#txtSpan2").textfill({
-            maxFontPixels:40
-        });
+      $("#txtSpan2").textfill({
+          maxFontPixels:40
+      });
 
-        $("#txtSingle").textfill({
-            maxFontPixels:60
-        });
+      $("#txtSingle").textfill({
+          maxFontPixels:60
+      });
     }
 
     // Adjust line-height for descender characters (p, q, y, g, j)
     if(badgeText.length <= 7 && badgeText.length >0 && lineNumber==1){
      	if(checkForKeys(badgeText)){
-			if(!wide){
-				$("#singleSpan").css("line-height","57px");
-			}else{
-				$("#singleSpan").css("line-height","53px");
-			}
+        if(!wide){
+          // $("#singleSpan").css("line-height","57px");
+        }else{
+          // $("#singleSpan").css("line-height","53px");
+        }
      	}
     }
 
     if(badgeText2.length <= 7 && lineNumber==2 && !wide){
     	if(checkForKeys(badgeText2)){
-			$("#doubleSpan2").css("line-height","34px");
+			// $("#doubleSpan2").css("line-height","34px");
     	}
     }
 
     if(badgeText.length <= 7 && lineNumber==2 && !wide){
     	if(checkForKeys(badgeText)){
-			$("#doubleSpan2").css("line-height","34px");
+			  // $("#doubleSpan2").css("line-height","34px");
     	}
     }
 
     if(badgeText2.length < 14 && lineNumber==2 && wide){
     	if(checkForKeys(badgeText2)){
-			$("#doubleSpan2").css("line-height","34px");
+			  // $("#doubleSpan2").css("line-height","34px");
     	}
-	}
+	  }
 
     if(lineNumber==2 && !wide){
     	if(badgeText.length >= 4 && badgeText2.length >=4){
@@ -297,7 +297,7 @@ function setBadgeText(txt, secondLine) {
     	height = $("#singleSpan").css("font-size");
     	height = Number(cleanStyleValue(height));
         if(height<46){
-        	$("#singleSpan").css("line-height","85px");
+        	// $("#singleSpan").css("line-height","85px");
         }
     }
 
@@ -305,10 +305,10 @@ function setBadgeText(txt, secondLine) {
     	height = $("#doubleSpan2").css("font-size");
     	height = Number(cleanStyleValue(height));
     	if(height<25 && !wide){
-    		$("#doubleSpan2").css("line-height","56px");
+    		// $("#doubleSpan2").css("line-height","56px");
         }
     	if(height<24 && wide){
-    		$("#doubleSpan2").css("line-height","52px");
+    		// $("#doubleSpan2").css("line-height","52px");
         }
     }
 }
