@@ -189,6 +189,8 @@ function resetText(){
 }
 
 function fixTextPosition(tab){
+	var targetTab = $('#tab' + tab).length ? '#tab' + tab : '#tab2';
+
 	if(wide){
 		$('#badge-preview-text').attr( "class", "badge-preview-text-tab"+tab +"w");
 	}else{
@@ -199,7 +201,7 @@ function fixTextPosition(tab){
 		$('#badge-preview-text').attr( "class", $('#badge-preview-text').attr( "class") + "line2");
 	}
 
-	$('#badge-preview-text').appendTo('#tab'+tab);
+	$('#badge-preview-text').appendTo(targetTab);
 }
 
 function setBadgeText(txt, secondLine) {
