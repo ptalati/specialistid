@@ -15,7 +15,7 @@ div#tab2.vertical-badge-buddies-1xl {
     width: 401px;
 }
 
-.product.product--thumbnail_slider .selectedColor {
+.product .selectedColor {
     position: relative;
     color: #ffffff;
     background-color: #000000;
@@ -249,10 +249,10 @@ div#tab2.vertical-badge-buddies-1xl {
     background: linear-gradient(to bottom, #ef3e42 0%, #ef3e42 33.33%, #ffffff 33.33%, #ffffff 66.66%, #0167b1 66.66%, #0167b1 100%);
 }
 
-.product.product--thumbnail_slider .badge-preview-text-tab1,
-.product.product--thumbnail_slider .badge-preview-text-tab1w,
-.product.product--thumbnail_slider .badge-preview-text-tab1line2,
-.product.product--thumbnail_slider .badge-preview-text-tab1wline2 {
+.product .badge-preview-text-tab1,
+.product .badge-preview-text-tab1w,
+.product .badge-preview-text-tab1line2,
+.product .badge-preview-text-tab1wline2 {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -270,6 +270,6 @@ div#tab2.vertical-badge-buddies-1xl {
     box-sizing: border-box;
 }
 
-.product.product--thumbnail_slider .myUnderscore {
+.product .myUnderscore {
     color: transparent;
 }
