@@ -1,17 +1,7 @@
-var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-var isChrome = !!window.chrome && !isOpera;
-var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
-var isIE = /*@cc_on!@*/false || !!document.documentMode; // At least IE6
-var isEdge = false;
 var lineNumber = 1;
-var badgeTxt;
+var badgeText = "";
 var badgeText2 = "";
 var colorName = "Blue";
-
-if (/Edge/i.test(navigator.userAgent)){
-    // This is Microsoft Edge
-    isEdge = true;
-}
 
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -23,31 +13,14 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
+function sanitizeText(text) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(text));
+    return div.innerHTML;
+}
+
 function selectVerticalBadgeBottom() {
-  if (isChrome) {
-    $(".selectedColor").css({width: "129px", "margin-left": "68px", "margin-top": "-121px", height: "86px"});
-    // $("#badge-preview-text").css({width: "124px", "margin-top": "-116px"});
-  }
-  if (isFirefox) {
-    $(".selectedColor").css({width: "129px", "margin-left": "68px", "margin-top": "-121px", height: "86px"});
-    // $("#badge-preview-text").css({width: "124px", "margin-top": "-116px"});
-  }
-  if (isIE) {
-    $(".selectedColor").css({width: "129px", "margin-left": "68px", "margin-top": "-121px", height: "86px"});
-    // $("#badge-preview-text").css({
-    //   width: "124px",
-    //   "margin-top": "-116px",
-    //   "margin-left": "72px"
-    // });
-  }
-  if (isEdge) {
-    $(".selectedColor").css({width: "129px", "margin-left": "68px", "margin-top": "-121px", height: "86px"});
-    // $("#badge-preview-text").css({
-    //   width: "124px",
-    //   "margin-top": "-116px",
-    //   "margin-left": "72px"
-    // });
-  }
+  $(".selectedColor").css({width: "129px", "margin-left": "68px", "margin-top": "-121px", height: "86px"});
   $(".selectedBadge").attr("src", "//cdn.shopify.com/s/files/1/1260/4809/files/bbottomvertical.webp?v=1689698730");
 
   $("#imgHorizontal").css("border", "0px");
@@ -99,7 +72,7 @@ function selectVerticalBadgeBuddiesXL() {
 
   $(".verimg").css("display", "none");
   $("#imgVertical").css("border", "3px solid #F5911F");
-  $("#tab2").addClass("vertical-badge-buddies-1xl")
+  $("#tab2").addClass("vertical-badge-buddies-1xl");
 
   $("#imgVertical").css("border", "0px");
   $(".product_code").text("BADGEBOTTOMS-H-1XL");
@@ -111,7 +84,7 @@ function selectVerticalBadgeBuddiesXL() {
 
 function selectHorizontalClear() {
   $(".selectedColor").css({width: "244px", "margin-left": "10px", "margin-top": "-226px", height: "88px"});
-  
+
   $(".selectedBadge").attr("src", "//cdn.shopify.com/s/files/1/1260/4809/files/bbhorizontal.webp?v=1689698297");
   $(".selectedBadge").css({"pointer-events": "none"});
   $(".textHolder").css({"pointer-events": "auto"});
@@ -142,7 +115,7 @@ function selectVerticalClear() {
 
 function selectHorizontal() {
   $(".selectedColor").css({width: "225px", "margin-left": "20px", "margin-top": "-226px", height: "78px"});
-  
+
   $(".selectedBadge").attr("src", "//cdn.shopify.com/s/files/1/1260/4809/files/bbhorizontal.webp?v=1689698297");
   $(".selectedBadge").css({"pointer-events": "none"});
   $(".textHolder").css({"pointer-events": "auto"});
@@ -169,14 +142,10 @@ function selectVertical() {
   resetText();
 }
 
-function selectColor(selColor) {}
-
 function resetApp() {
   $("#inputQuntity").val("6");
 
-  var title = document.getElementsByTagName("title")[0].innerHTML.replace('™', '');
   var custom_bb_type = $(".custom_bb_type").val();
-  console.log(custom_bb_type);
 
   switch (custom_bb_type) {
     case 'Badge Buddy - Horizontal':
@@ -205,34 +174,13 @@ function resetApp() {
       break;
   }
 
-// select vertical
-  // if (title.indexOf("Custom Printed Badge Buddy Vertical") != -1) {
-  //   selectVertical();
-  // } else if (title.indexOf("Oversized Custom Printed Badge Buddy Horizontal XL") != -1) {
-  //   selectHorizontalBadgeBuddiesXL();
-  // } else if (title.indexOf("Oversized Custom Vertical Badge Buddy XL") != -1) {
-  //   selectVerticalBadgeBuddiesXL();
-  // } else if (title.indexOf("Custom Printed BadgeBottoms® Vertical") != -1) {
-  //   selectVerticalBadgeBottom();
-  // } else if (title.indexOf("Custom Printed BadgeBottoms® Horizontal") != -1) {
-  //   selectHorizontalBadgeBottom();
-  // } else {
-  //   selectHorizontal();
-  // }
-  
-// reset txt
   resetText();
-
-// select first color
-  selectColor("rgb(1, 103, 177)");
 }
 
 function resetText(){
-    //reset txt field 1
     $("#inputText1").val("");
     $("#badgeOneLine").val("");
 
-    //reset txt field 2
     $("#inputText2").val("");
     $("#badgeSecondLine").val("");
 
@@ -243,64 +191,55 @@ function resetText(){
 function fixTextPosition(tab){
 	if(wide){
 		$('#badge-preview-text').attr( "class", "badge-preview-text-tab"+tab +"w");
-	}else
-	$('#badge-preview-text').attr( "class", "badge-preview-text-tab"+tab );
-	
+	}else{
+		$('#badge-preview-text').attr( "class", "badge-preview-text-tab"+tab );
+	}
+
 	if(lineNumber==2){
 		$('#badge-preview-text').attr( "class", $('#badge-preview-text').attr( "class") + "line2");
 	}
-	
-	$('#badge-preview-text').appendTo('#tab'+tab);	
+
+	$('#badge-preview-text').appendTo('#tab'+tab);
 }
 
 function setBadgeText(txt, secondLine) {
-  console.log($(".custom-line-2 input[type=text]").length);
 	if(secondLine || ($(".custom-line-2 input[type=text]").length && $(".custom-line-2 input[type=text]").val() != "")){
 		lineNumber = 2;
 	}else{
 		lineNumber = 1;
 	}
 
-    console.log(lineNumber);
-	
     if (secondLine) {
-        this.badgeText2 = txt;
+        badgeText2 = txt;
     } else {
-        this.badgeText = txt;
+        badgeText = txt;
     }
-    if(this.badgeText == undefined){
-    	this.badgeText = "";
-    }
-
-    console.log(secondLine);
-    console.log(this.badgeText2);
-
-    if(this.badgeText2 == undefined){
-    	this.badgeText2 = "";
+    if(badgeText == undefined){
+    	badgeText = "";
     }
 
-    var width = $("#badge-preview-text").width();
+    if(badgeText2 == undefined){
+    	badgeText2 = "";
+    }
+
+    var safeBadgeText = sanitizeText(badgeText);
+    var safeBadgeText2 = sanitizeText(badgeText2);
+    var safeTxt = sanitizeText(txt);
 
     var html;
-	
-    if (lineNumber == 2 && secondLine) { // two lines and editing second line
-    	html = '<div id="txtSpan1" style="width:100%;margin-bottom: -13px;"><span id="doubleSpan1" style="display:inline-block">' + this.badgeText + '</span></div>';
-    	html += '<div id="txtSpan2" style="width:100%;"><span id="doubleSpan2" style="display:inline-block">' + txt + '</span></div>';
-    	        //html = '<table><tr><td>' + this.badgeText;
-        //html += '</td></tr><tr><td>' + txt + '</tr></td></table>';
-    } else if (lineNumber == 2) { // two lines and editing first line
-    	html = '<div id="txtSpan1" style="width:100%;margin-bottom: -13px;"><span id="doubleSpan1" style="display:inline-block">' + txt+'</span></div>';
-        html += '<div id="txtSpan2" style="width:100%;"><span id="doubleSpan2" style="display:inline-block">'+ this.badgeText2 + '</span></div>';
-       // html = '<table><tr><td>' + txt;
-        //html += '</td></tr><tr><td>' + this.badgeText2 + '</tr></td></table>';
-    } else { // only one line of text
-      //  html = '<span style="font-size:' + fontSize + 'pt;">' + txt + '</span>';
-        html = "<div id='txtSingle' style='width:100%;height:78px;'><span id='singleSpan' style='display:inline-block'>" + this.badgeText + '</span></div>';
+
+    if (lineNumber == 2 && secondLine) {
+    	html = '<div id="txtSpan1" style="width:100%;margin-bottom: -13px;"><span id="doubleSpan1" style="display:inline-block">' + safeBadgeText + '</span></div>';
+    	html += '<div id="txtSpan2" style="width:100%;"><span id="doubleSpan2" style="display:inline-block">' + safeTxt + '</span></div>';
+    } else if (lineNumber == 2) {
+    	html = '<div id="txtSpan1" style="width:100%;margin-bottom: -13px;"><span id="doubleSpan1" style="display:inline-block">' + safeTxt+'</span></div>';
+        html += '<div id="txtSpan2" style="width:100%;"><span id="doubleSpan2" style="display:inline-block">'+ safeBadgeText2 + '</span></div>';
+    } else {
+        html = "<div id='txtSingle' style='width:100%;height:78px;'><span id='singleSpan' style='display:inline-block'>" + safeBadgeText + '</span></div>';
     }
 
     $("#badge-preview-text").html(html);
 
-    // Check if textfill is available before using it
     if ($.fn.textfill) {
         $("#txtSpan1").textfill({
             widthOnly: true,
@@ -318,49 +257,37 @@ function setBadgeText(txt, secondLine) {
         });
     }
 
-    //Changes undescroe color
-    // $('.myUnderscore').css("color",$(".selectedColor").css("background-color") );
-
-    //single line vertical and horizonrtal movce up on p,q,y..
-    if(this.badgeText.length <= 7 && this.badgeText.length >0 && lineNumber==1){
-     	if(checkForKeys(this.badgeText)){
+    // Adjust line-height for descender characters (p, q, y, g, j)
+    if(badgeText.length <= 7 && badgeText.length >0 && lineNumber==1){
+     	if(checkForKeys(badgeText)){
 			if(!wide){
-				if(isIE || isChrome){
-					$("#singleSpan").css("line-height","57px");
-				}else
-					$("#singleSpan").css("line-height","57px");
+				$("#singleSpan").css("line-height","57px");
 			}else{
-				if(isIE || isChrome){
-					$("#singleSpan").css("line-height","53px");
-				}else
-					$("#singleSpan").css("line-height","53px");
+				$("#singleSpan").css("line-height","53px");
 			}
      	}
     }
 
-    //vertical 2 lines less tahn 7 chars p,q,y... text field2
-    if(this.badgeText2.length <= 7 && lineNumber==2 && !wide){
-    	if(checkForKeys(this.badgeText2)){
+    if(badgeText2.length <= 7 && lineNumber==2 && !wide){
+    	if(checkForKeys(badgeText2)){
 			$("#doubleSpan2").css("line-height","34px");
     	}
     }
 
-    //vertical 2 lines less tahn 7 chars p,q,y... text field1
-    if(this.badgeText.length <= 7 && lineNumber==2 && !wide){
-    	if(checkForKeys(this.badgeText)){
+    if(badgeText.length <= 7 && lineNumber==2 && !wide){
+    	if(checkForKeys(badgeText)){
 			$("#doubleSpan2").css("line-height","34px");
     	}
     }
 
-    //horizontal move up on the pqy
-    if(this.badgeText2.length < 14 && lineNumber==2 && wide){
-    	if(checkForKeys(this.badgeText2)){
+    if(badgeText2.length < 14 && lineNumber==2 && wide){
+    	if(checkForKeys(badgeText2)){
 			$("#doubleSpan2").css("line-height","34px");
     	}
 	}
-    
+
     if(lineNumber==2 && !wide){
-    	if(this.badgeText.length >= 4 && this.badgeText2.length >=4){
+    	if(badgeText.length >= 4 && badgeText2.length >=4){
     		var fSize1 = cleanStyleValue( $("#doubleSpan1").css("font-size"));
     		var fSize2 = cleanStyleValue( $("#doubleSpan2").css("font-size"));
     		if(fSize1>fSize2){
@@ -369,20 +296,17 @@ function setBadgeText(txt, secondLine) {
     			$("#doubleSpan2").css("font-size",fSize1);
     		}
     	}
-    	
     }
 
     var height;
     if(lineNumber==1){
     	height = $("#singleSpan").css("font-size");
     	height = Number(cleanStyleValue(height));
-    	 //if height is to small stick at one postion vertical / horizontal
         if(height<46){
         	$("#singleSpan").css("line-height","85px");
         }
     }
-    
-    //two lines
+
     if(lineNumber==2){
     	height = $("#doubleSpan2").css("font-size");
     	height = Number(cleanStyleValue(height));
@@ -395,18 +319,15 @@ function setBadgeText(txt, secondLine) {
     }
 }
 
-//check for q and y and reposition margins
 function checkForKeys(text){
-	if (text.search("q")>-1 || text.search("y")>-1 ||  text.search("p")>-1 ||  text.search("g")>-1 ||  text.search("j")>-1 ||  text.search("J")>-1){
+	if (/[qypgjJ]/.test(text)){
 		tilted = true;
 		return true;
 	} else return false;
 }
 
 function cleanStyleValue(value){
-	var val = value;
-	val = val.substring(0,val.length-2);
-	return Number(val);
+	return Number(parseFloat(value));
 }
 
 function replaceKey(value){
@@ -428,149 +349,91 @@ function replaceKey(value){
 function changeColor(color) {
     if (!color) return;
 
-    console.log('Changing color to:', color);
-
-    // Find the product container - try multiple selectors
     var $productContainer = $(".product").first();
     if ($productContainer.length === 0) {
         $productContainer = $("body");
-        console.log('Using body as fallback container');
     }
 
-    // Remove all existing color variant classes
     $productContainer.removeClass(function (index, className) {
         return (className.match (/(^|\s)product-variant-color-\S+/g) || []).join(' ');
     });
 
-    // Convert color name to CSS class format (replace all spaces with dashes, lowercase)
     var colorClass = 'product-variant-color-' + color.replace(/\s+/g, '-').toLowerCase();
-    console.log('Adding class:', colorClass, 'to', $productContainer.attr('class'));
-
     $productContainer.addClass(colorClass);
 }
 
 $(document).ready(function() {
-    //reset app
     resetApp();
 
-    // Debug: Log all possible color inputs
-    console.log('=== COLOR INPUT DEBUG ===');
-    console.log('Color inputs found:', $("input[name='Color']").length);
-    console.log('Fieldset color inputs:', $("fieldset.product-form__input input[name='Color']").length);
-    console.log('All radio inputs:', $("input[type='radio']").length);
-
-    // Check all color inputs and their values
-    $("input[type='radio']").each(function(index) {
-        var inputName = $(this).attr('name');
-        if (inputName && inputName.toLowerCase().indexOf('color') !== -1) {
-            console.log('Color input', index, ':', inputName, '=', $(this).val(), 'checked:', $(this).is(':checked'));
-        }
-    });
-
-    // Check for initial color selection - look for any checked radio with "Color" in name
+    // Detect initial color selection
     var startColor = null;
     $("input[type='radio']:checked").each(function() {
         var inputName = $(this).attr('name');
         if (inputName && inputName.toLowerCase().indexOf('color') !== -1) {
             startColor = $(this).val();
-            console.log('Found initial color from', inputName, ':', startColor);
-            return false; // break the loop
+            return false;
         }
     });
 
-    console.log('Initial color:', startColor);
     if (startColor) {
         changeColor(startColor);
     } else {
-        console.log('No initial color found, looking for first color option...');
-        // If no color is selected, try to find the first color input
         $("input[type='radio']").each(function() {
             var inputName = $(this).attr('name');
             if (inputName && inputName.toLowerCase().indexOf('color') !== -1) {
                 startColor = $(this).val();
-                console.log('Using first available color:', startColor);
                 changeColor(startColor);
-                return false; // break the loop
+                return false;
             }
         });
     }
 
+    // Text input listeners
     $('#infiniteoptions-container').on('input', '.custom-line-1 input[type=text]', function() {
-        console.log($(this).val());
         setBadgeText(replaceKey($(this).val()));
         $("#bb_option_custom_line_1").val($(this).val());
     });
 
     $('#infiniteoptions-container').on('input', '.custom-line-2 input[type=text]', function() {
-        console.log($(this).val());
         setBadgeText(replaceKey($(this).val()), true);
         $("#bb_option_custom_line_2").val($(this).val());
     });
 
-    // Listen for color changes - use delegation for all color-related inputs
-    $(document).on('change click', 'input[name="Color"]', function() {
-        var selectedColor = $(this).val();
-        console.log('>>> Color changed via input[name="Color"]:', selectedColor);
-        changeColor(selectedColor);
-    });
-
-    // Additional listener for fieldset inputs
-    $(document).on('change click', 'fieldset.product-form__input input', function() {
-        if ($(this).attr('name') === 'Color') {
-            var selectedColor = $(this).val();
-            console.log('>>> Color changed via fieldset:', selectedColor);
-            changeColor(selectedColor);
-        }
-    });
-
-    // Catch-all listener for any radio button changes
+    // Single color change listener that handles all color-related radio inputs
     $(document).on('change', 'input[type="radio"]', function() {
         var inputName = $(this).attr('name');
-        var inputValue = $(this).val();
-        console.log('Radio changed:', inputName, '=', inputValue);
-
-        // Check if input name contains "Color" (handles Color, Color-1, Color-2, etc.)
         if (inputName && inputName.toLowerCase().indexOf('color') !== -1) {
-            console.log('>>> Detected color change!');
-            changeColor(inputValue);
+            changeColor($(this).val());
         }
     });
-});
 
-$(document).ready(function() {
-  var target = $('#infiniteoptions-container')[0]; // [0] to get the native DOM element from jQuery object
-  
-  if (target) {
-    var observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        console.log('Detected change in inner HTML');
+    // MutationObserver for infinite options container (pre-fill from URL params)
+    var target = $('#infiniteoptions-container')[0];
 
-        var line1Input = $('.custom-line-1 input[type=text]').val();
-        if (line1Input && line1Input !== "") return;
-        
-        // Perform your logic here
-        var line1 = getParameterByName('line1');
-        var line2 = getParameterByName('line2');
+    if (target) {
+        var observer = new MutationObserver(function() {
+            var line1Input = $('.custom-line-1 input[type=text]').val();
+            if (line1Input && line1Input !== "") return;
 
-        if (line1 || line2) {
-          if (line1) {
-            $('input[name="properties[Custom Line 1]"]').val(line1);
-            setBadgeText(replaceKey(line1));
-            $("#bb_option_custom_line_1").val(line1);
-          }
+            var line1 = getParameterByName('line1');
+            var line2 = getParameterByName('line2');
 
-          if (line2) {
-            $('input[name="properties[Custom Line 2]"]').val(line2);
-            setBadgeText(replaceKey(line2), true);
-            $("#bb_option_custom_line_2").val(line2);
-          }
-        }
-      });
-    });
+            if (line1 || line2) {
+                if (line1) {
+                    $('input[name="properties[Custom Line 1]"]').val(line1);
+                    setBadgeText(replaceKey(line1));
+                    $("#bb_option_custom_line_1").val(line1);
+                }
 
-    var config = { attributes: true, childList: true, characterData: true, subtree: true };
-    observer.observe(target, config);
-  } else {
-    console.log('Element with ID infiniteoptions-container not found');
-  }
+                if (line2) {
+                    $('input[name="properties[Custom Line 2]"]').val(line2);
+                    setBadgeText(replaceKey(line2), true);
+                    $("#bb_option_custom_line_2").val(line2);
+                }
+            }
+        });
+
+        var config = { attributes: true, childList: true, characterData: true, subtree: true };
+        observer.observe(target, config);
+    }
 });
