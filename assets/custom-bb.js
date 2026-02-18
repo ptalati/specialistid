@@ -201,17 +201,20 @@ function fixTextPosition(tab){
 }
 
 function setBadgeText(txt, secondLine) {
-	if(secondLine || ($(".custom-line-2 input[type=text]").length && $(".custom-line-2 input[type=text]").val() != "")){
-		lineNumber = 2;
-	}else{
-		lineNumber = 1;
-	}
-
     if (secondLine) {
         badgeText2 = txt;
     } else {
         badgeText = txt;
     }
+
+    // Determine line count based on whether line 2 actually has content
+    var line2Val = $(".custom-line-2 input[type=text]").val() || "";
+    var hasSecondLine = (badgeText2 && badgeText2 !== "") || (line2Val !== "");
+	if(hasSecondLine){
+		lineNumber = 2;
+	}else{
+		lineNumber = 1;
+	}
     if(badgeText == undefined){
     	badgeText = "";
     }
