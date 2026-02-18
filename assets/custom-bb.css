@@ -253,6 +253,7 @@ div#tab2.vertical-badge-buddies-1xl {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: flex-end;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -261,7 +262,7 @@ div#tab2.vertical-badge-buddies-1xl {
     line-height: normal;
     text-align: center;
     position: absolute;
-    top: 0;
+    bottom: -5px;
     left: 0;
     padding: 4px 0;
     box-sizing: border-box;
