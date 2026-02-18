@@ -225,13 +225,13 @@ function setBadgeText(txt, secondLine) {
     var html;
 
     if (lineNumber == 2 && secondLine) {
-    	html = '<div id="txtSpan1" style="width:100%;height:42px;"><span id="doubleSpan1" style="display:inline-block">' + badgeText + '</span></div>';
-    	html += '<div id="txtSpan2" style="width:100%;height:42px;"><span id="doubleSpan2" style="display:inline-block">' + txt + '</span></div>';
+    	html = '<div id="txtSpan1" style="width:100%;height:50%;"><span id="doubleSpan1" style="display:inline-block">' + badgeText + '</span></div>';
+    	html += '<div id="txtSpan2" style="width:100%;height:50%;"><span id="doubleSpan2" style="display:inline-block">' + txt + '</span></div>';
     } else if (lineNumber == 2) {
-    	html = '<div id="txtSpan1" style="width:100%;height:42px;"><span id="doubleSpan1" style="display:inline-block">' + txt+'</span></div>';
-        html += '<div id="txtSpan2" style="width:100%;height:42px;"><span id="doubleSpan2" style="display:inline-block">'+ badgeText2 + '</span></div>';
+    	html = '<div id="txtSpan1" style="width:100%;height:50%;"><span id="doubleSpan1" style="display:inline-block">' + txt+'</span></div>';
+        html += '<div id="txtSpan2" style="width:100%;height:50%;"><span id="doubleSpan2" style="display:inline-block">'+ badgeText2 + '</span></div>';
     } else {
-        html = "<div id='txtSingle' style='width:100%;height:78px;'><span id='singleSpan' style='display:inline-block'>" + badgeText + '</span></div>';
+        html = "<div id='txtSingle' style='width:100%;height:100%;'><span id='singleSpan' style='display:inline-block'>" + badgeText + '</span></div>';
     }
 
     $("#badge-preview-text").html(html);

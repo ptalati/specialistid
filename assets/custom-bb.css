@@ -255,7 +255,7 @@ div#tab2.vertical-badge-buddies-1xl {
 .product.product--thumbnail_slider .badge-preview-text-tab1wline2 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -266,6 +266,8 @@ div#tab2.vertical-badge-buddies-1xl {
     position: absolute;
     top: 0;
     left: 0;
+    padding: 4px 0;
+    box-sizing: border-box;
 }
 
 .product.product--thumbnail_slider .myUnderscore {
