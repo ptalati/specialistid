@@ -271,3 +271,8 @@ div#tab2.vertical-badge-buddies-1xl {
 #badge-preview-text .myUnderscore {
     color: transparent;
 }
+
+#txtSingle {
+    display: flex;
+    align-items: flex-end;
+}
