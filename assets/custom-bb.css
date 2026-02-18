@@ -250,15 +250,22 @@ div#tab2.vertical-badge-buddies-1xl {
 }
 
 .product.product--thumbnail_slider .badge-preview-text-tab1,
-.product.product--thumbnail_slider .badge-preview-text-tab1w {
-    display: block;
+.product.product--thumbnail_slider .badge-preview-text-tab1w,
+.product.product--thumbnail_slider .badge-preview-text-tab1line2,
+.product.product--thumbnail_slider .badge-preview-text-tab1wline2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 100%;
     font-family: 'minion-pro';
     font-weight: 700;
     line-height: normal;
     text-align: center;
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
 }
 
 .product.product--thumbnail_slider .myUnderscore {
