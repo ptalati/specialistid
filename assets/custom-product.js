@@ -977,7 +977,7 @@
             if (inventory_policy === 'deny') {
               setAddToCartOutOfStock(true);
               // lead_time_text = 'Out of stock';
-              lead_time_text = `${variantInventory.inventoryQuantity} in stock. Order now for immediate shipping, Remainder ships within a few days.`;
+              lead_time_text = `${variantInventory.inventoryQuantity} units available. Need more? Please contact us.`;
             } else {
               setAddToCartOutOfStock(false);
 
@@ -992,7 +992,7 @@
                   lead_time_text = product_backordered_lead_time;
                 } else {
                   if (variantInventory.inventoryQuantity > 0) {
-                    lead_time_text = `${variantInventory.inventoryQuantity} in stock. Order now for immediate shipping, Remainder ships within a few days.`;
+                    lead_time_text = `${variantInventory.inventoryQuantity} units available. Larger orders usually ship in 1-2 days.`;
                   } else {
                     lead_time_text = 'No confirmed stock, but usually ships within a few days';
                   }
