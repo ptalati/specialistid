@@ -277,6 +277,10 @@ div#tab2.vertical-badge-buddies-1xl {
     justify-content: center;
 }
 
+#singleSpan {
+    line-height: 44px;
+}
+
 #txtSpan1,
 #txtSpan2 {
     display: flex;
