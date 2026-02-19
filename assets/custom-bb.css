@@ -255,13 +255,13 @@ div#tab2.vertical-badge-buddies-1xl {
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 80%;
     font-family: 'minion-pro';
     font-weight: 700;
-    line-height: normal;
+    line-height: 23px;
     text-align: center;
     position: absolute;
-    bottom: -5px;
+    bottom: 0px;
     left: 0;
     padding: 4px 0;
     box-sizing: border-box;
@@ -273,5 +273,13 @@ div#tab2.vertical-badge-buddies-1xl {
 
 #txtSingle {
     display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#txtSpan1,
+#txtSpan2 {
+    display: flex;
+    justify-content: center;
     align-items: flex-end;
 }
