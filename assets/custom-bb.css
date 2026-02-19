@@ -253,7 +253,6 @@ div#tab2.vertical-badge-buddies-1xl {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -268,8 +267,8 @@ div#tab2.vertical-badge-buddies-1xl {
     box-sizing: border-box;
 }
 
-#badge-preview-text .myUnderscore {
-    color: transparent;
+#badge-preview-text span {
+    white-space: nowrap;
 }
 
 #txtSingle {

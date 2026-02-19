@@ -326,18 +326,7 @@ function cleanStyleValue(value){
 
 function replaceKey(value){
     if (!value) return value;
-
-    var val = sanitizeText(value);
-
-    if (val.match(/\s/g)) {
-        val = val.replace(/\s/g, '<span class="myUnderscore">a</span>');
-        return val;
-    } else if (val.match('-')) {
-        val = val.replace('-', '<span >-</span>');
-        return val;
-    } else {
-        return val;
-    }
+    return sanitizeText(value);
 }
 
 function changeColor(color) {
