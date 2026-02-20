@@ -239,14 +239,17 @@ function setBadgeText(txt, secondLine) {
 
     if ($.fn.textfill) {
       $("#txtSpan1").textfill({
+          widthOnly: true,
           maxFontPixels:40
       });
 
       $("#txtSpan2").textfill({
+          widthOnly: true,
           maxFontPixels:40
       });
 
       $("#txtSingle").textfill({
+          widthOnly: true,
           maxFontPixels:60
       });
     }
