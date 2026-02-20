@@ -251,73 +251,35 @@ function setBadgeText(txt, secondLine) {
       });
     }
 
-    // Adjust line-height for descender characters (p, q, y, g, j)
-    if(badgeText.length <= 7 && badgeText.length >0 && lineNumber==1){
-     	if(checkForKeys(badgeText)){
-        if(!wide){
-          // $("#singleSpan").css("line-height","57px");
-        }else{
-          // $("#singleSpan").css("line-height","53px");
-        }
-     	}
-    }
-
-    if(badgeText2.length <= 7 && lineNumber==2 && !wide){
-    	if(checkForKeys(badgeText2)){
-			// $("#doubleSpan2").css("line-height","34px");
-    	}
-    }
-
-    if(badgeText.length <= 7 && lineNumber==2 && !wide){
-    	if(checkForKeys(badgeText)){
-			  // $("#doubleSpan2").css("line-height","34px");
-    	}
-    }
-
-    if(badgeText2.length < 14 && lineNumber==2 && wide){
-    	if(checkForKeys(badgeText2)){
-			  // $("#doubleSpan2").css("line-height","34px");
-    	}
-	  }
-
-    if(lineNumber==2 && !wide){
-    	if(badgeText.length >= 4 && badgeText2.length >=4){
-    		var fSize1 = cleanStyleValue( $("#doubleSpan1").css("font-size"));
-    		var fSize2 = cleanStyleValue( $("#doubleSpan2").css("font-size"));
-    		if(fSize1>fSize2){
-    			$("#doubleSpan1").css("font-size",fSize2);
-    		}else {
-    			$("#doubleSpan2").css("font-size",fSize1);
-    		}
-    	}
-    }
-
-    var height;
-    if(lineNumber==1){
-    	height = $("#singleSpan").css("font-size");
-    	height = Number(cleanStyleValue(height));
-        if(height<46){
-        	// $("#singleSpan").css("line-height","85px");
+    // Match line-height to font-size so height is exactly what's needed
+    // Using 1.15 multiplier to account for descenders (p, q, y, g, j) in minion-pro
+    if(lineNumber == 1){
+        var singleSize = parseFloat($("#singleSpan").css("font-size")) || 0;
+        if(singleSize > 0){
+            $("#singleSpan").css("line-height", Math.ceil(singleSize * 1.15) + "px");
         }
     }
 
-    if(lineNumber==2){
-    	height = $("#doubleSpan2").css("font-size");
-    	height = Number(cleanStyleValue(height));
-    	if(height<25 && !wide){
-    		// $("#doubleSpan2").css("line-height","56px");
+    if(lineNumber == 2){
+        var size1 = parseFloat($("#doubleSpan1").css("font-size")) || 0;
+        var size2 = parseFloat($("#doubleSpan2").css("font-size")) || 0;
+
+        // Equalize font sizes between the two lines for consistent look
+        if(size1 > 0 && size2 > 0){
+            var minSize = Math.min(size1, size2);
+            $("#doubleSpan1").css("font-size", minSize + "px");
+            $("#doubleSpan2").css("font-size", minSize + "px");
+            size1 = minSize;
+            size2 = minSize;
         }
-    	if(height<24 && wide){
-    		// $("#doubleSpan2").css("line-height","52px");
+
+        if(size1 > 0){
+            $("#doubleSpan1").css("line-height", Math.ceil(size1 * 1.15) + "px");
+        }
+        if(size2 > 0){
+            $("#doubleSpan2").css("line-height", Math.ceil(size2 * 1.15) + "px");
         }
     }
-}
-
-function checkForKeys(text){
-	if (/[qypgjJ]/.test(text)){
-		tilted = true;
-		return true;
-	} else return false;
 }
 
 function cleanStyleValue(value){

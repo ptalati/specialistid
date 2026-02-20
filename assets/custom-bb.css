@@ -258,7 +258,6 @@ div#tab2.vertical-badge-buddies-1xl {
     height: 80%;
     font-family: 'minion-pro';
     font-weight: 700;
-    line-height: 23px;
     text-align: center;
     position: absolute;
     bottom: 0px;
@@ -275,10 +274,6 @@ div#tab2.vertical-badge-buddies-1xl {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-}
-
-#singleSpan {
-    line-height: 44px;
 }
 
 #txtSpan1,
