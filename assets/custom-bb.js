@@ -285,14 +285,17 @@ function setBadgeText(txt, secondLine) {
         }
     }
 
-    // Add bottom margin when descender characters are present
-    var descenderMargin = "4px";
+    // Add bottom margin when descender characters are present (proportional to font size)
+    var descenderRatio = 0.1;
     if(lineNumber == 1){
-        $("#singleSpan").css("margin-bottom", checkForDescenders(badgeText) ? descenderMargin : "0px");
+        var singleFontSize = parseFloat($("#singleSpan").css("font-size")) || 0;
+        $("#singleSpan").css("margin-bottom", checkForDescenders(badgeText) ? Math.ceil(singleFontSize * descenderRatio) + "px" : "0px");
     }
     if(lineNumber == 2){
-        $("#doubleSpan1").css("margin-bottom", checkForDescenders(badgeText) ? descenderMargin : "0px");
-        $("#doubleSpan2").css("margin-bottom", checkForDescenders(badgeText2) ? descenderMargin : "0px");
+        var font1 = parseFloat($("#doubleSpan1").css("font-size")) || 0;
+        var font2 = parseFloat($("#doubleSpan2").css("font-size")) || 0;
+        $("#doubleSpan1").css("margin-bottom", checkForDescenders(badgeText) ? Math.ceil(font1 * descenderRatio) + "px" : "0px");
+        $("#doubleSpan2").css("margin-bottom", checkForDescenders(badgeText2) ? Math.ceil(font2 * descenderRatio) + "px" : "0px");
     }
 }
 
