@@ -286,7 +286,7 @@ function setBadgeText(txt, secondLine) {
     }
 
     // Add bottom margin when descender characters are present (proportional to font size)
-    var descenderRatio = 0.1;
+    var descenderRatio = 0.2;
     if(lineNumber == 1){
         var singleFontSize = parseFloat($("#singleSpan").css("font-size")) || 0;
         $("#singleSpan").css("margin-bottom", checkForDescenders(badgeText) ? Math.ceil(singleFontSize * descenderRatio) + "px" : "0px");
