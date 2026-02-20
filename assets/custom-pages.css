@@ -18,7 +18,8 @@
     display: none;
 }
 
-main a {
+main a,
+.rte a {
     color: #F5911F;
 }
 
