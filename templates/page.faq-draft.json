@@ -226,6 +226,13 @@
             "accordion_content": "<p>We offer expedited shipping and rush processing where possible. <a href=\"https://www.specialistid.com/pages/contact-us\" title=\"https://www.specialistid.com/pages/contact-us\">Contact us</a> for urgent requests.</p>"
           }
         },
+        "accordion_aHdrUP": {
+          "type": "accordion",
+          "settings": {
+            "accordion_title": "What if my order is delayed by weather or other circumstances?",
+            "accordion_content": "<p>While Specialist ID makes every effort to ensure timely delivery using carriers like USPS, UPS, and FedEx, we are not responsible for delays caused by factors beyond our control. This includes extreme weather (such as hurricanes, snowstorms, or floods), natural disasters, or service disruptions within the carrier networks. Estimated delivery timelines are not guaranteed during these events, and we are not liable for any costs or damages resulting from such delays.</p>"
+          }
+        },
         "category_dTP3Kx": {
           "type": "category",
           "settings": {
@@ -301,6 +308,7 @@
         "accordion_aejbMj",
         "accordion_nMYY8p",
         "accordion_hC7kdC",
+        "accordion_aHdrUP",
         "category_dTP3Kx",
         "accordion_qVzwRz",
         "accordion_Xyprfk",

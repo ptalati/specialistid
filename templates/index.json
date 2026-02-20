@@ -89,6 +89,65 @@
         "builder_content_entry_preview": "e0adef50393346de99ac582c9e531533"
       }
     },
+    "custom_collection_slider_XMiNC8": {
+      "type": "custom-collection-slider",
+      "blocks": {
+        "product_QgzmJn": {
+          "type": "product",
+          "settings": {
+            "product": "magicard-pronto-100-id-card-printer"
+          }
+        },
+        "product_Aw4A9X": {
+          "type": "product",
+          "settings": {
+            "product": "magicard-300-id-card-printer"
+          }
+        },
+        "product_bH9N37": {
+          "type": "product",
+          "settings": {
+            "product": "magicard-600-duo-dual-sided-id-card-printer"
+          }
+        },
+        "product_YKc8hn": {
+          "type": "product",
+          "settings": {
+            "product": "magicard-ma300ymcko-enduro-ymcko-color-ribbon-300-images"
+          }
+        }
+      },
+      "block_order": [
+        "product_QgzmJn",
+        "product_Aw4A9X",
+        "product_bH9N37",
+        "product_YKc8hn"
+      ],
+      "disabled": true,
+      "name": "Custom collection slider",
+      "settings": {
+        "product_heading": "Upgrade Your Security with Magicard",
+        "text_alignment": "center",
+        "collection": "magicard",
+        "text_color": "",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "button": "See all",
+        "link": "shopify://collections/magicard",
+        "button-color": "",
+        "button-back": "",
+        "button-back-hover": "",
+        "button-color-hover": "",
+        "background_style": "none",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -737,6 +796,7 @@
     "custom_hero_products_VRXYMH",
     "eab9b35612db452696c45d02867db1be_builder_io_3pQyTX",
     "1154d9de2bca4383b7cb98fa9fda29c1_builder_io_BnmW6N",
+    "custom_collection_slider_XMiNC8",
     "multicolumn",
     "slideshow_PkyqJL",
     "collection_page_section_B43ELG",
