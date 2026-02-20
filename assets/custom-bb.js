@@ -254,12 +254,13 @@ function setBadgeText(txt, secondLine) {
       });
     }
 
-    // Match line-height to font-size so height is exactly what's needed
-    // Using 1.15 multiplier to account for descenders (p, q, y, g, j) in minion-pro
+    // Match line-height to font-size (ratio 0.733 based on minion-pro: 44px line-height at 60px font-size)
+    var lhRatio = 0.733;
+
     if(lineNumber == 1){
         var singleSize = parseFloat($("#singleSpan").css("font-size")) || 0;
         if(singleSize > 0){
-            $("#singleSpan").css("line-height", Math.ceil(singleSize * 1.15) + "px");
+            $("#singleSpan").css("line-height", Math.ceil(singleSize * lhRatio) + "px");
         }
     }
 
@@ -277,10 +278,10 @@ function setBadgeText(txt, secondLine) {
         }
 
         if(size1 > 0){
-            $("#doubleSpan1").css("line-height", Math.ceil(size1 * 1.15) + "px");
+            $("#doubleSpan1").css("line-height", Math.ceil(size1 * lhRatio) + "px");
         }
         if(size2 > 0){
-            $("#doubleSpan2").css("line-height", Math.ceil(size2 * 1.15) + "px");
+            $("#doubleSpan2").css("line-height", Math.ceil(size2 * lhRatio) + "px");
         }
     }
 }
