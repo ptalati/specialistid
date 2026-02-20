@@ -284,6 +284,21 @@ function setBadgeText(txt, secondLine) {
             $("#doubleSpan2").css("line-height", Math.ceil(size2 * lhRatio) + "px");
         }
     }
+
+    // Add bottom margin when descender characters are present
+    var descenderMargin = "4px";
+    if(lineNumber == 1){
+        $("#singleSpan").css("margin-bottom", checkForDescenders(badgeText) ? descenderMargin : "0px");
+    }
+    if(lineNumber == 2){
+        $("#doubleSpan1").css("margin-bottom", checkForDescenders(badgeText) ? descenderMargin : "0px");
+        $("#doubleSpan2").css("margin-bottom", checkForDescenders(badgeText2) ? descenderMargin : "0px");
+    }
+}
+
+function checkForDescenders(text) {
+    if (!text) return false;
+    return /[qypgj]/.test(text);
 }
 
 function cleanStyleValue(value){
