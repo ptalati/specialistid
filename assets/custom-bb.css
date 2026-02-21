@@ -254,13 +254,14 @@ div#tab2.vertical-badge-buddies-1xl {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    gap: 2px;
     width: 100%;
     height: 80%;
     font-family: 'minion-pro';
     font-weight: 700;
     text-align: center;
     position: absolute;
-    bottom: 0px;
+    bottom: 2px;
     left: 0;
     padding: 4px 10px;
     box-sizing: border-box;
