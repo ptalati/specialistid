@@ -15,9 +15,9 @@ a.tooltip:hover {
 /* Tooltip box that appears on hover */
 a.tooltip::before {
   content: attr(data-tooltip);
-  position: fixed;
-  bottom: var(--tooltip-bottom, -9999px);
-  left: var(--tooltip-left, -9999px);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
   transform: translateX(-50%) translateY(-8px);
 
   /* Box styling */
@@ -41,8 +41,8 @@ a.tooltip::before {
   visibility: hidden;
   pointer-events: none;
 
-  /* Smooth transition — no left/bottom transition, position must update instantly */
-  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  /* Smooth transition */
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, left 0.2s ease;
 
   /* Ensure it appears above other content */
   z-index: 10000;
@@ -93,9 +93,9 @@ a.tooltip.tooltip-adjust-right:hover::after {
 /* Tooltip arrow pointing down */
 a.tooltip::after {
   content: '';
-  position: fixed;
-  bottom: var(--tooltip-bottom, -9999px);
-  left: var(--tooltip-left, -9999px);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
   transform: translateX(-50%) translateY(-2px);
 
   /* Arrow styling */
