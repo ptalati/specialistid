@@ -335,69 +335,82 @@ a.warning-anchor span.content_wrapper {
     padding: 10px;
 }
 
-/* FAQ details/summary in product custom info — matches custom-simple-faq-section style */
+/* FAQ details/summary in product custom info — matches custom-faq-section orange accordion style */
 .custom-info-block .rte details {
-    padding: 2rem 0;
-    border-top: 1px solid #6FB43F;
-}
-
-.custom-info-block .rte details:last-of-type {
-    border-bottom: 1px solid #6FB43F;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 8px;
+    background: #f39c42;
 }
 
 .custom-info-block .rte details summary {
+    background: #f39c42;
+    padding: 20px 24px;
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
-    gap: 2rem;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
     cursor: pointer;
     list-style: none;
+    transition: background 0.3s ease;
 }
 
 .custom-info-block .rte details summary::-webkit-details-marker {
     display: none;
 }
 
-.custom-info-block .rte details summary strong {
-    font-family: var(--font-body-family);
-    font-size: 2rem;
-    line-height: 1.5;
-    font-weight: 500;
-    margin: 0;
-    color: rgba(18, 18, 18, 0.75);
+.custom-info-block .rte details summary:hover,
+.custom-info-block .rte details[open] summary {
+    background: #e8912d;
 }
 
 .custom-info-block .rte details summary::after {
     content: '';
-    display: block;
-    width: 1rem;
-    height: 1rem;
-    border-right: 2px solid rgba(18, 18, 18, 0.75);
-    border-bottom: 2px solid rgba(18, 18, 18, 0.75);
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
     transform: rotate(45deg);
     flex-shrink: 0;
-    margin-top: 0.6rem;
-    transition: transform 0.3s;
+    margin-left: 12px;
+    margin-top: -4px;
+    transition: transform 0.3s ease, margin-top 0.3s ease;
 }
 
 .custom-info-block .rte details[open] summary::after {
     transform: rotate(-135deg);
-    margin-top: 0.9rem;
+    margin-top: 4px;
 }
 
-.custom-info-block .rte details p {
-    margin: 1.7rem 0 0;
-    font-size: 1.8rem;
-    line-height: 1.5;
-    color: rgba(18, 18, 18, 0.5);
+.custom-info-block .rte details p,
+.custom-info-block .rte details ul,
+.custom-info-block .rte details ol {
+    margin: 0;
+    padding: 0 24px 20px 24px;
+    color: white;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
-@media screen and (max-width: 640px) {
-    .custom-info-block .rte details summary strong {
-        font-size: 1.6rem;
+.custom-info-block .rte details a {
+    color: white;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .custom-info-block .rte details summary {
+        padding: 16px 20px;
+        font-size: 15px;
     }
 
-    .custom-info-block .rte details p {
-        font-size: 1.5rem;
+    .custom-info-block .rte details p,
+    .custom-info-block .rte details ul,
+    .custom-info-block .rte details ol {
+        padding: 0 20px 16px 20px;
+        font-size: 14px;
     }
 }
