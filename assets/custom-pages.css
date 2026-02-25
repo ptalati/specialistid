@@ -334,3 +334,70 @@ a.warning-anchor span.content_wrapper {
 .custom-info-block table th {
     padding: 10px;
 }
+
+/* FAQ details/summary in product custom info — matches custom-simple-faq-section style */
+.custom-info-block .rte details {
+    padding: 2rem 0;
+    border-top: 1px solid #6FB43F;
+}
+
+.custom-info-block .rte details:last-of-type {
+    border-bottom: 1px solid #6FB43F;
+}
+
+.custom-info-block .rte details summary {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.custom-info-block .rte details summary::-webkit-details-marker {
+    display: none;
+}
+
+.custom-info-block .rte details summary strong {
+    font-family: var(--font-body-family);
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin: 0;
+    color: rgba(18, 18, 18, 0.75);
+}
+
+.custom-info-block .rte details summary::after {
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-right: 2px solid rgba(18, 18, 18, 0.75);
+    border-bottom: 2px solid rgba(18, 18, 18, 0.75);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+    margin-top: 0.6rem;
+    transition: transform 0.3s;
+}
+
+.custom-info-block .rte details[open] summary::after {
+    transform: rotate(-135deg);
+    margin-top: 0.9rem;
+}
+
+.custom-info-block .rte details p {
+    margin: 1.7rem 0 0;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: rgba(18, 18, 18, 0.5);
+}
+
+@media screen and (max-width: 640px) {
+    .custom-info-block .rte details summary strong {
+        font-size: 1.6rem;
+    }
+
+    .custom-info-block .rte details p {
+        font-size: 1.5rem;
+    }
+}
