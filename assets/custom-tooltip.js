@@ -133,24 +133,20 @@
       tooltip.setAttribute('data-tooltip-initialized', 'true');
 
       tooltip.addEventListener('mouseenter', function() {
-        // Reset classes
         this.classList.remove('tooltip-adjust-left', 'tooltip-adjust-right');
 
-        // Get element position
         const rect = this.getBoundingClientRect();
-        const tooltipWidth = 300; // max-width of tooltip
-        const tooltipLeft = rect.left + (rect.width / 2) - (tooltipWidth / 2);
-        const tooltipRight = rect.left + (rect.width / 2) + (tooltipWidth / 2);
+        const tooltipWidth = 300;
         const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
 
-        // Check if tooltip would overflow on the left
-        if (tooltipLeft < 10) {
-          this.classList.add('tooltip-adjust-left');
-        }
-        // Check if tooltip would overflow on the right
-        else if (tooltipRight > viewportWidth - 10) {
-          this.classList.add('tooltip-adjust-right');
-        }
+        // Clamp horizontal center so tooltip stays within viewport
+        const centerX = rect.left + rect.width / 2;
+        const clampedX = Math.max(tooltipWidth / 2 + 10, Math.min(viewportWidth - tooltipWidth / 2 - 10, centerX));
+
+        // Position fixed relative to viewport
+        this.style.setProperty('--tooltip-left', clampedX + 'px');
+        this.style.setProperty('--tooltip-bottom', (viewportHeight - rect.top) + 'px');
       });
     });
   }

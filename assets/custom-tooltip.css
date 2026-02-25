@@ -15,9 +15,9 @@ a.tooltip:hover {
 /* Tooltip box that appears on hover */
 a.tooltip::before {
   content: attr(data-tooltip);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
+  position: fixed;
+  bottom: var(--tooltip-bottom);
+  left: var(--tooltip-left);
   transform: translateX(-50%) translateY(-8px);
 
   /* Box styling */
@@ -93,9 +93,9 @@ a.tooltip.tooltip-adjust-right:hover::after {
 /* Tooltip arrow pointing down */
 a.tooltip::after {
   content: '';
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
+  position: fixed;
+  bottom: var(--tooltip-bottom);
+  left: var(--tooltip-left);
   transform: translateX(-50%) translateY(-2px);
 
   /* Arrow styling */
