@@ -144,9 +144,9 @@
         const centerX = rect.left + rect.width / 2;
         const clampedX = Math.max(tooltipWidth / 2 + 10, Math.min(viewportWidth - tooltipWidth / 2 - 10, centerX));
 
-        // Position fixed relative to viewport
+        // Position fixed relative to viewport (8px gap above element)
         this.style.setProperty('--tooltip-left', clampedX + 'px');
-        this.style.setProperty('--tooltip-bottom', (viewportHeight - rect.top) + 'px');
+        this.style.setProperty('--tooltip-bottom', (viewportHeight - rect.top + 8) + 'px');
       });
     });
   }
