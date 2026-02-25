@@ -329,3 +329,8 @@ a.warning-anchor span.content_wrapper {
 .header__heading-link {
     padding: 0 !important;
 }
+
+.custom-info-block table td,
+.custom-info-block table th {
+    padding: 10px;
+}
