@@ -102,7 +102,18 @@
           "settings": {
             "wrapper_class": "",
             "title": "Q2SPID10",
-            "enable_copy_button": true,
+            "enable_copy_button": false,
+            "text": "<p>Get 10% off any order below 1000$ or a 100$ off orders over 1000$. (One time use)</p><p><span style=\"text-decoration:underline\"><strong>Expired</strong></span></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FER7n6": {
+          "type": "column",
+          "settings": {
+            "wrapper_class": "",
+            "title": "SPIDSUM10",
+            "enable_copy_button": false,
             "text": "<p>Get 10% off any order below 1000$ or a 100$ off orders over 1000$. (One time use)</p><p><span style=\"text-decoration:underline\"><strong>Expired</strong></span></p>",
             "link_label": "",
             "link": ""
@@ -113,7 +124,8 @@
         "column_N7QpmL",
         "column_cDUdrK",
         "column_iMPAVR",
-        "column_FqE7HY"
+        "column_FqE7HY",
+        "column_FER7n6"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
