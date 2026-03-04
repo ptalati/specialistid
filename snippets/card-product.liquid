@@ -204,7 +204,48 @@
               </p>
             {%- endif -%}
 
-            {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            {%- liquid
+              assign _cv = card_product.selected_or_first_available_variant
+              assign _price_cents = _cv.price | default: card_product.price
+              assign _price_dollars = _price_cents | divided_by: 100.0
+              assign _compare_at_cents = _cv.compare_at_price | default: 0
+
+              assign _map = _cv.metafields.c_f.map | plus: 0
+              if _map == 0
+                assign _map = card_product.metafields.c_f.map | plus: 0
+              endif
+
+              assign _msrp = _cv.metafields.c_f.msrp | plus: 0
+              if _msrp == 0
+                assign _msrp = card_product.metafields.c_f.msrp | plus: 0
+              endif
+            -%}
+            {%- if _compare_at_cents > _price_cents -%}
+              {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            {%- elsif _map > 0 and _price_dollars < _map -%}
+              <div class="price price--on-sale">
+                <div class="price__container">
+                  <div class="price__sale">
+                    <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
+                    <span><s class="price-item price-item--regular">{{ _map | times: 100 | round | money }}</s></span>
+                    <span class="price-item price-item--sale price-item--last">Add to Cart for Price</span>
+                  </div>
+                </div>
+              </div>
+            {%- elsif _msrp > 0 and _price_dollars < _msrp -%}
+              <div class="price price--on-sale">
+                <div class="price__container">
+                  <div class="price__sale">
+                    <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
+                    <span><s class="price-item price-item--regular">{{ _msrp | times: 100 | round | money }}</s></span>
+                    <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
+                    <span class="price-item price-item--sale price-item--last">{{ _price_cents | money }}</span>
+                  </div>
+                </div>
+              </div>
+            {%- else -%}
+              {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            {%- endif -%}
             {%- if card_product.quantity_price_breaks_configured? -%}
               {% if card_product.variants_count == 1 and quick_add == 'bulk' %}
                 {% liquid
