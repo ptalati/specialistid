@@ -45,7 +45,35 @@
 
           {% assign discontinued_value = product.metafields.c_f.discontinued | string | downcase %}
           {% if discontinued_value != 'true' %}
-            <a href="{{ product.metafields.c_f.discontinued }}">Replacement Product</a>
+            {% assign replacement_url = blank %}
+            {% assign replacement_title = blank %}
+            {% assign replacement_product = product.metafields.c_f.discontinued.value %}
+
+            {% if replacement_product != blank and replacement_product.url != blank %}
+              {% assign replacement_url = replacement_product.url %}
+              {% assign replacement_title = replacement_product.title %}
+            {% else %}
+              {% assign replacement_url = product.metafields.c_f.discontinued %}
+            {% endif %}
+
+            {% if replacement_title == blank and replacement_url contains '/products/' %}
+              {% assign replacement_handle = replacement_url | split: '/products/' | last | split: '?' | first | split: '#' | first %}
+              {% assign replacement_lookup = all_products[replacement_handle] %}
+              {% if replacement_lookup != blank %}
+                {% assign replacement_title = replacement_lookup.title %}
+              {% endif %}
+            {% endif %}
+
+            {% if replacement_url != blank %}
+              <a href="{{ replacement_url }}">
+                Replaced with
+                {% if replacement_title != blank %}
+                  {{ replacement_title }}
+                {% else %}
+                  Replacement Product
+                {% endif %}
+              </a>
+            {% endif %}
           {% endif %}
         </div>
       {% endif %}
