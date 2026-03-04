@@ -418,8 +418,9 @@
                   {% endif %}
                   {% if block.settings.customize_quote_button_link != blank %}
                     {% assign _quote_base_url = block.settings.customize_quote_button_link %}
-                    {% if current_variant.sku != blank %}
-                      {% assign _quote_sku = current_variant.sku | url_encode %}
+                    {% assign _quote_initial_sku = product.selected_or_first_available_variant.sku %}
+                    {% if _quote_initial_sku != blank %}
+                      {% assign _quote_sku = _quote_initial_sku | url_encode %}
                       {% assign _quote_href = _quote_base_url | append: '?sku=' | append: _quote_sku %}
                     {% else %}
                       {% assign _quote_href = _quote_base_url %}
