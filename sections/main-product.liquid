@@ -935,7 +935,7 @@
                   data-section-id="{{ section.id }}"
                   data-product-id="{{ product.id }}"
                 >
-                  {%- if recommendations.performed and recommendations.products_count > 0 -%}
+                  {%- if recommendations.performed == false or recommendations.products_count > 0 -%}
                     <aside
                       aria-label="{{ 'accessibility.complementary_products' | t }}"
                       {{ block.shopify_attributes -}}
