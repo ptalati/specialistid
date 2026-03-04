@@ -237,7 +237,7 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "Customers Also Bought",
+        "heading": "Customers like you also choose...",
         "heading_size": "h2",
         "products_to_show": 5,
         "columns_desktop": 5,
