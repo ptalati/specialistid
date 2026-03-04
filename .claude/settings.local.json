@@ -6,7 +6,11 @@
       "Bash(grep:*)",
       "Bash(git pull)",
       "Bash(git commit:*)",
-      "Bash(git push origin main)"
+      "Bash(git push origin main)",
+      "Bash(python3 -c \":*)",
+      "Bash(python -c \":*)",
+      "Bash(node -e \":*)",
+      "Bash(node -e \"const fs=require\\(''fs''\\);const data=JSON.parse\\(fs.readFileSync\\(''e:/Projects/SPID/Theme/specialistid/sections/header-group.json'',''utf-8''\\)\\);const sections=data.sections||{};for\\(const [id,sec] of Object.entries\\(sections\\)\\){if\\(sec.type===''header''\\){const s=sec.settings||{};console.log\\(''ID:'',id\\);console.log\\(''show_icon_labels:'',s.show_icon_labels\\);console.log\\(''cart_icon set:'',s.cart_icon?''YES'':''NO''\\);console.log\\(''cart_icon_empty set:'',s.cart_icon_empty?''YES'':''NO''\\);if\\(s.cart_icon\\)console.log\\(''cart_icon:'',s.cart_icon.substring\\(0,200\\)\\);if\\(s.cart_icon_empty\\)console.log\\(''cart_icon_empty:'',s.cart_icon_empty.substring\\(0,200\\)\\);}}\")"
     ]
   }
 }
