@@ -1417,6 +1417,17 @@
   });
 </script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var params = new URLSearchParams(window.location.search);
+    var sku = params.get('sku');
+    if (sku) {
+      var field = document.getElementById('Field15');
+      if (field) field.value = sku;
+    }
+  });
+</script>
+
 {% schema %}
 {
   "name": "Quote request  contact",
