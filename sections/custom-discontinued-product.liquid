@@ -43,36 +43,64 @@
         <div class="discontinued-content">
           <p class="discontinued-text">{{ section.settings.discontinued_text }}</p>
 
-          {% assign discontinued_value = product.metafields.c_f.discontinued | string | downcase %}
-          {% if discontinued_value != 'true' %}
+          {% assign discontinued_raw = product.metafields.c_f.discontinued | string | strip %}
+          {% assign discontinued_value = discontinued_raw | downcase %}
+          {% if discontinued_value != 'true' and discontinued_raw != blank %}
             {% assign replacement_url = blank %}
             {% assign replacement_title = blank %}
+            {% assign replacement_handle = blank %}
             {% assign replacement_product = product.metafields.c_f.discontinued.value %}
 
-            {% if replacement_product != blank and replacement_product.url != blank %}
-              {% assign replacement_url = replacement_product.url %}
-              {% assign replacement_title = replacement_product.title %}
-            {% else %}
-              {% assign replacement_url = product.metafields.c_f.discontinued %}
+            {% if replacement_product != blank %}
+              {% if replacement_product.url != blank %}
+                {% assign replacement_url = replacement_product.url %}
+              {% endif %}
+              {% if replacement_product.title != blank %}
+                {% assign replacement_title = replacement_product.title %}
+              {% endif %}
             {% endif %}
 
-            {% if replacement_title == blank and replacement_url contains '/products/' %}
+            {% if replacement_url == blank %}
+              {% assign replacement_url = discontinued_raw %}
+            {% endif %}
+
+            {% if replacement_url contains '/products/' %}
               {% assign replacement_handle = replacement_url | split: '/products/' | last | split: '?' | first | split: '#' | first %}
+            {% else %}
+              {% assign has_scheme = false %}
+              {% assign has_slash = false %}
+              {% if discontinued_raw contains '://' %}
+                {% assign has_scheme = true %}
+              {% endif %}
+              {% if discontinued_raw contains '/' %}
+                {% assign has_slash = true %}
+              {% endif %}
+              {% if has_scheme == false and has_slash == false %}
+                {% assign replacement_handle = discontinued_raw %}
+              {% endif %}
+            {% endif %}
+
+            {% if replacement_title == blank and replacement_handle != blank %}
               {% assign replacement_lookup = all_products[replacement_handle] %}
               {% if replacement_lookup != blank %}
                 {% assign replacement_title = replacement_lookup.title %}
+                {% if replacement_url == discontinued_raw and replacement_lookup.url != blank %}
+                  {% assign replacement_url = replacement_lookup.url %}
+                {% endif %}
               {% endif %}
             {% endif %}
 
             {% if replacement_url != blank %}
-              <a href="{{ replacement_url }}">
+              <p>
                 Replaced with
-                {% if replacement_title != blank %}
-                  {{ replacement_title }}
-                {% else %}
-                  Replacement Product
-                {% endif %}
-              </a>
+                <a href="{{ replacement_url }}">
+                  {% if replacement_title != blank %}
+                    {{ replacement_title }}
+                  {% else %}
+                    {{ replacement_url }}
+                  {% endif %}
+                </a>
+              </p>
             {% endif %}
           {% endif %}
         </div>
