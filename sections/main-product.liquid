@@ -594,6 +594,14 @@
                   <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
+              {%- when 'enterprise_cta' -%}
+                <p class="enterprise-cta" {{ block.shopify_attributes }}>
+                  {%- if block.settings.text_before != blank -%}{{ block.settings.text_before }} {%- endif -%}
+                  {%- if block.settings.link_url != blank -%}
+                    <a href="{{ block.settings.link_url }}">{{ block.settings.link_text }}</a>
+                  {%- endif -%}
+                  {%- if block.settings.text_after != blank -%} {{ block.settings.text_after }}{%- endif -%}
+                </p>
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
@@ -1454,6 +1462,37 @@
           ],
           "default": "body",
           "label": "t:sections.main-product.blocks.sku.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "type": "enterprise_cta",
+      "name": "Enterprise CTA",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text_before",
+          "label": "Text before link",
+          "default": "Bulk Ordering? Complex Project?"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link text",
+          "default": "Click Here"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL",
+          "default": "/pages/enterprise-solutions"
+        },
+        {
+          "type": "text",
+          "id": "text_after",
+          "label": "Text after link",
+          "default": ""
         }
       ]
     },
