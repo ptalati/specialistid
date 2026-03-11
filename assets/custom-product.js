@@ -1447,8 +1447,8 @@
     const variant = getVariantData(variant_id);
 
     const inventory_policy = getVariantMetafield(variant_id, 'shipping', 'inventory_policy') || 'deny';
-    const product_oos_lead_time = getProductMetafield('inventory', 'oos_lead_time') || '';
-    const variant_oos_lead_time = getVariantMetafield(variant_id, 'inventory', 'oos_lead_time') || '';
+    const product_oos_lead_time = getProductMetafield('shipping', 'oos_lead_time') || '';
+    const variant_oos_lead_time = getVariantMetafield(variant_id, 'shipping', 'oos_lead_time') || '';
     
     const addToCartButton = document.querySelector('[name="add"]');
     const quantityInput = document.querySelector('[name="quantity"]');
