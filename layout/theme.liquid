@@ -17,6 +17,12 @@
 
     <title>
       {{ page_title }}
+      {%- if template.name == 'product' -%}
+        {%- assign selected_variant = product.selected_or_first_available_variant -%}
+        {%- if product.variants.size > 1 and selected_variant.title != 'Default Title' -%}
+          &ndash; {{ selected_variant.title }}
+        {%- endif -%}
+      {%- endif -%}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
