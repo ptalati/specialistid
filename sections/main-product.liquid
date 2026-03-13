@@ -597,9 +597,8 @@
               {%- when 'enterprise_cta' -%}
                 <p class="enterprise-cta" {{ block.shopify_attributes }}>
                   {%- if block.settings.text_before != blank -%}{{ block.settings.text_before }} {%- endif -%}
-                  {%- if block.settings.link_url != blank -%}
-                    <a href="{{ block.settings.link_url }}">{{ block.settings.link_text }}</a>
-                  {%- endif -%}
+                  {%- assign _enterprise_url = block.settings.link_url | default: '/pages/enterprise-solutions' -%}
+                  <a href="{{ _enterprise_url }}">{{ block.settings.link_text | default: 'Click Here' }}</a>
                   {%- if block.settings.text_after != blank -%} {{ block.settings.text_after }}{%- endif -%}
                 </p>
               {%- when 'custom_liquid' -%}
@@ -1485,8 +1484,7 @@
         {
           "type": "url",
           "id": "link_url",
-          "label": "Link URL",
-          "default": "/pages/enterprise-solutions"
+          "label": "Link URL"
         },
         {
           "type": "text",
