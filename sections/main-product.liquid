@@ -568,7 +568,7 @@
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
               {%- when 'enterprise_cta' -%}
-                <p class="enterprise-cta" {{ block.shopify_attributes }}>
+                <p class="enterprise-cta hidden" {{ block.shopify_attributes }}>
                   {%- if block.settings.text_before != blank -%}{{ block.settings.text_before }} {%- endif -%}
                   {%- assign _enterprise_url = block.settings.link_url | default: '/pages/enterprise-solutions' -%}
                   <a href="{{ _enterprise_url }}">{{ block.settings.link_text | default: 'Click Here' }}</a>
