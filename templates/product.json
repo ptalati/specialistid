@@ -116,7 +116,7 @@
           "settings": {
             "text_before": "Bulk Ordering? Complex Project?",
             "link_text": "Click Here",
-            "link_url": "",
+            "link_url": "shopify://pages/enterprise-solutions",
             "text_after": ""
           }
         },
