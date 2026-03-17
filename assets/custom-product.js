@@ -1623,6 +1623,19 @@
   }
 
   function updateTablePrice() {
+    // Toggle enterprise CTA based on total order value (quantity × price > 800)
+    const enterpriseCta = document.querySelector(".enterprise-cta");
+    if (enterpriseCta) {
+      const _variant_id = getVariantId();
+      const _price = _variant_id ? getVariantPrice(_variant_id) : 0;
+      const _qty = parseFloat(document.querySelector(".quantity__input")?.value) || 1;
+      if (_qty * _price > 800) {
+        enterpriseCta.classList.remove("hidden");
+      } else {
+        enterpriseCta.classList.add("hidden");
+      }
+    }
+
     // Shopify-consistent rounding: round the discount DOWN, then subtract
     function shopifyDiscountPrice(price, discountPercent) {
       const discountAmount = Math.floor(price * discountPercent * 100) / 100;
@@ -1675,16 +1688,6 @@
 
     // Don't exit if price is 0 - it might be a valid price or just not loaded yet
     const currentQuantity = parseFloat(document.querySelector(".quantity__input")?.value) || 1;
-
-    // Toggle enterprise CTA based on total order value
-    const enterpriseCta = document.querySelector(".enterprise-cta");
-    if (enterpriseCta) {
-      if (currentQuantity * originalPrice > 800) {
-        enterpriseCta.classList.remove("hidden");
-      } else {
-        enterpriseCta.classList.add("hidden");
-      }
-    }
     // Get minimum quantity with same priority logic as optionLogic
     const minQuantity = parseInt(getVariantMetafield(variant_id, 'c_f', 'minimum')) ||
                         parseInt(getVariantMetafield(variant_id, 'inventory', 'minimum')) ||
