@@ -393,7 +393,7 @@
     {%- endif -%}
 
     <script src="{{ 'custom-pages.js' | asset_url }}" defer="defer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script>window.__tooltipDataUrl = {{ 'tooltip-data.json' | asset_url | json }};</script>
     <script src="{{ 'custom-tooltip.js' | asset_url }}" defer="defer"></script>
     <script>
       // Re-initialize Searchanise autocomplete after all scripts have loaded
