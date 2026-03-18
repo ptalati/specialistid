@@ -82,11 +82,64 @@
         "builder_content_entry_preview": "2260b9b2f9c44628b6152ea29a4edd58"
       }
     },
-    "1154d9de2bca4383b7cb98fa9fda29c1_builder_io_BnmW6N": {
-      "type": "1154d9de2bca4383b7cb98fa9fda29c1-builder-io",
-      "name": "Product categories sectio",
+    "custom_product_categories_native": {
+      "type": "custom-product-categories",
+      "blocks": {
+        "cat_badge_holders": {
+          "type": "category",
+          "settings": {
+            "label": "Badge Holders",
+            "link": "/collections/id-badge-holders"
+          }
+        },
+        "cat_lanyards": {
+          "type": "category",
+          "settings": {
+            "label": "Lanyards",
+            "link": "/collections/lanyards"
+          }
+        },
+        "cat_badge_reels": {
+          "type": "category",
+          "settings": {
+            "label": "Badge Reels",
+            "link": "/collections/badge-reels"
+          }
+        },
+        "cat_badge_buddies": {
+          "type": "category",
+          "settings": {
+            "label": "Badge Buddies",
+            "link": "/collections/badge-buddies"
+          }
+        },
+        "cat_luggage_tags": {
+          "type": "category",
+          "settings": {
+            "label": "Luggage Tags",
+            "link": "/collections/luggage-accessories"
+          }
+        },
+        "cat_programmable_cards": {
+          "type": "category",
+          "settings": {
+            "label": "Programmable Cards",
+            "link": "/collections/proximity-smart-cards"
+          }
+        }
+      },
+      "block_order": [
+        "cat_badge_holders",
+        "cat_lanyards",
+        "cat_badge_reels",
+        "cat_badge_buddies",
+        "cat_luggage_tags",
+        "cat_programmable_cards"
+      ],
       "settings": {
-        "builder_content_entry_preview": "e0adef50393346de99ac582c9e531533"
+        "heading": "Product Categories",
+        "padding_top": 0,
+        "padding_bottom": 20
       }
     },
     "multicolumn": {
@@ -736,7 +789,7 @@
   "order": [
     "custom_hero_products_VRXYMH",
     "eab9b35612db452696c45d02867db1be_builder_io_3pQyTX",
-    "1154d9de2bca4383b7cb98fa9fda29c1_builder_io_BnmW6N",
+    "custom_product_categories_native",
     "multicolumn",
     "slideshow_PkyqJL",
     "collection_page_section_B43ELG",
