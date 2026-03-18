@@ -1,121 +1,95 @@
 /**
  * Custom Page JavaScript - Tooltip Functionality
- * This file handles tooltip replacement from Google Sheets data
+ * This file handles tooltip replacement from static JSON data
  */
 
 (function() {
   'use strict';
 
-  // Configuration
-  const CONFIG = {
-    GOOGLE_SHEET_URL: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR0zkaovoP8dVMb1Dqbhfzno7Oprzkn03ONaYrwI6-fZKedWVcT93iXkFhwLFk4hLSNNZXHia0k3jtB/pub?gid=0&single=true&output=csv'
-  };
-
   // Wait for DOM to be ready
   function initTooltips() {
-    // Check if Papa Parse is loaded
-    if (typeof Papa === 'undefined') {
-      console.warn('PapaParse library not loaded. Tooltips will not work.');
+    // Tooltip data URL is set via Liquid in theme.liquid as window.__tooltipDataUrl
+    var dataUrl = window.__tooltipDataUrl;
+    if (!dataUrl) {
+      console.warn('Tooltip data URL not set. Tooltips will not work.');
       return;
     }
 
-    // Load and apply tooltips from Google Sheet
-    fetch(CONFIG.GOOGLE_SHEET_URL)
-      .then(response => response.text())
-      .then(data => {
-        console.log('Tooltip data fetched successfully');
-        Papa.parse(data, {
-          complete: function(results) {
-            console.log('Parsed tooltip data:', results.data);
-            var wordsToReplace = results.data.map(function(row) {
-              var word = row[0] && row[0].trim();
-              var url = row[1] && row[1].trim();
-              var tooltip = row[2] && row[2].trim();
-              if (word && url && tooltip) {
-                return { word, url, tooltip };
+    fetch(dataUrl)
+      .then(response => response.json())
+      .then(wordsToReplace => {
+        function replaceText(node) {
+          wordsToReplace.forEach(function(item) {
+            var regex = new RegExp(`\\b${item.word}\\b`, "gi");
+            if (node.nodeType === 3) {
+              if (node.parentNode && node.parentNode.tagName === 'SCRIPT') {
+                return;
               }
-            }).filter(Boolean);
 
-            console.log('Words to replace:', wordsToReplace);
+              // Check if replacement is needed
+              if (!regex.test(node.nodeValue)) {
+                return;
+              }
 
-            function replaceText(node) {
-              wordsToReplace.forEach(function(item) {
-                var regex = new RegExp(`\\b${item.word}\\b`, "gi");
-                if (node.nodeType === 3) {
-                  if (node.parentNode && node.parentNode.tagName === 'SCRIPT') {
-                    return;
-                  }
+              // Create elements safely without innerHTML
+              const fragment = document.createDocumentFragment();
+              const parts = node.nodeValue.split(regex);
+              const matches = node.nodeValue.match(regex) || [];
 
-                  // Check if replacement is needed
-                  if (!regex.test(node.nodeValue)) {
-                    return;
-                  }
+              parts.forEach(function(part, index) {
+                if (part) {
+                  fragment.appendChild(document.createTextNode(part));
+                }
 
-                  // Create elements safely without innerHTML
-                  const fragment = document.createDocumentFragment();
-                  const parts = node.nodeValue.split(regex);
-                  const matches = node.nodeValue.match(regex) || [];
-
-                  parts.forEach(function(part, index) {
-                    if (part) {
-                      fragment.appendChild(document.createTextNode(part));
-                    }
-
-                    if (index < matches.length) {
-                      const link = document.createElement('a');
-                      let itemUrl = item.url.trim();
-                      if (itemUrl === "#") itemUrl = "javascript:void(0);";
-                      link.href = itemUrl;
-                      link.className = 'tooltip';
-                      // Use data-tooltip instead of title to avoid browser default tooltip
-                      link.setAttribute('data-tooltip', item.tooltip);
-                      link.textContent = matches[index];
-                      fragment.appendChild(link);
-                    }
-                  });
-
-                  if (fragment.hasChildNodes()) {
-                    node.parentNode.replaceChild(fragment, node);
-                  }
+                if (index < matches.length) {
+                  const link = document.createElement('a');
+                  let itemUrl = item.url.trim();
+                  if (itemUrl === "#") itemUrl = "javascript:void(0);";
+                  link.href = itemUrl;
+                  link.className = 'tooltip';
+                  // Use data-tooltip instead of title to avoid browser default tooltip
+                  link.setAttribute('data-tooltip', item.tooltip);
+                  link.textContent = matches[index];
+                  fragment.appendChild(link);
                 }
               });
-            }
 
-            function traverseNodes(node) {
-              if (node.nodeType === 1) {
-                // Skip headers, links, and buttons
-                if (/^(h1|h2|h3|h4|h5|h6|a|button)$/i.test(node.tagName)) {
-                  return;
-                }
-                // Skip if parent is a button or link
-                var parent = node.parentNode;
-                while (parent) {
-                  if (/^(a|button)$/i.test(parent.tagName)) {
-                    return;
-                  }
-                  parent = parent.parentNode;
-                }
-                var children = Array.from(node.childNodes);
-                for (var i = 0; i < children.length; i++) {
-                  traverseNodes(children[i]);
-                }
-              } else {
-                replaceText(node);
+              if (fragment.hasChildNodes()) {
+                node.parentNode.replaceChild(fragment, node);
               }
             }
+          });
+        }
 
-            traverseNodes(document.body);
-            console.log('Tooltips created:', document.querySelectorAll('a.tooltip').length);
-
-            // Add viewport boundary detection for tooltips after DOM updates
-            setTimeout(function() {
-              adjustTooltipPositions();
-            }, 100);
-          },
-          error: function(error) {
-            console.error("Parsing error:", error);
+        function traverseNodes(node) {
+          if (node.nodeType === 1) {
+            // Skip headers, links, and buttons
+            if (/^(h1|h2|h3|h4|h5|h6|a|button)$/i.test(node.tagName)) {
+              return;
+            }
+            // Skip if parent is a button or link
+            var parent = node.parentNode;
+            while (parent) {
+              if (/^(a|button)$/i.test(parent.tagName)) {
+                return;
+              }
+              parent = parent.parentNode;
+            }
+            var children = Array.from(node.childNodes);
+            for (var i = 0; i < children.length; i++) {
+              traverseNodes(children[i]);
+            }
+          } else {
+            replaceText(node);
           }
-        });
+        }
+
+        traverseNodes(document.body);
+
+        // Add viewport boundary detection for tooltips after DOM updates
+        setTimeout(function() {
+          adjustTooltipPositions();
+        }, 100);
       })
       .catch(err => console.error('Error fetching tooltip data:', err));
   }
