@@ -312,6 +312,64 @@
         "padding_bottom_mobile": 24
       }
     },
+    "custom_collection_slider_dUmJYA": {
+      "type": "custom-collection-slider",
+      "blocks": {
+        "product_kzdWP8": {
+          "type": "product",
+          "settings": {
+            "product": "magicard-pronto-100-id-card-printer"
+          }
+        },
+        "product_CdtxJC": {
+          "type": "product",
+          "settings": {
+            "product": "magicard-300-id-card-printer"
+          }
+        },
+        "product_ULPcE7": {
+          "type": "product",
+          "settings": {
+            "product": "magicard-600-duo-dual-sided-id-card-printer"
+          }
+        },
+        "product_TNkw4T": {
+          "type": "product",
+          "settings": {
+            "product": "magicard-ma300ymcko-color-ribbon-enduro"
+          }
+        }
+      },
+      "block_order": [
+        "product_kzdWP8",
+        "product_CdtxJC",
+        "product_ULPcE7",
+        "product_TNkw4T"
+      ],
+      "name": "Custom collection slider",
+      "settings": {
+        "product_heading": "Magicard Security with HoloKote® watermarking",
+        "text_alignment": "center",
+        "collection": "magicard",
+        "text_color": "",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "button": "See all",
+        "link": "shopify://collections/magicard",
+        "button-color": "",
+        "button-back": "",
+        "button-back-hover": "",
+        "button-color-hover": "",
+        "background_style": "primary",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -804,6 +862,7 @@
     "custom_product_categories_native",
     "slideshow_PkyqJL",
     "collection_page_section_B43ELG",
+    "custom_collection_slider_dUmJYA",
     "multicolumn",
     "custom_product_slider_U7fgnJ",
     "image_with_text_MNXeia",
