@@ -22,14 +22,23 @@
           "type": "title",
           "settings": {}
         },
+        "text_km7dhF": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>$60,000 - Inquire for details.</strong>",
+            "text_style": "body"
+          }
+        },
         "just_price_zpYWQi": {
           "type": "just_price",
+          "disabled": true,
           "settings": {}
         }
       },
       "block_order": [
         "product_media_ENbA96",
         "title",
+        "text_km7dhF",
         "just_price_zpYWQi"
       ],
       "settings": {
@@ -177,6 +186,7 @@
         "heading_rKANLH",
         "text_dBTTWX"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -186,6 +196,57 @@
         "section_css_class": "Type your own CSS class",
         "padding_top": 60,
         "padding_bottom": 60
+      }
+    },
+    "image_with_text_FXQt8W": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_8j3bMU": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Not a normal product. A PR engine.</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_DThcEq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This piece was not created to sit quietly in a drawer. It was designed for moments where access is already rare and visibility is already high.<br/><br/>Concerts. Championship games. Private suites. Red carpets. Artist compounds. VIP hospitality. Tunnel walks. Premium arrivals.<br/><br/>The right placement does more than elevate the person wearing it. It creates conversation, attracts attention, and puts Specialist ID in the kind of environments where ordinary marketing never gets invited.<br/><br/><strong>A badge may be required. The way it is worn does not have to be ordinary.</strong></p>",
+            "text_style": "body"
+          }
+        },
+        "button_Ch84kD": {
+          "type": "button",
+          "settings": {
+            "button_label": "Request Pricing & Concierge Details",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_8j3bMU",
+        "text_DThcEq",
+        "button_Ch84kD"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-lifestyle-1.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
       }
     },
     "multicolumn_MNpbdW": {
@@ -529,6 +590,7 @@
     "rich_text_Aq9qeC",
     "image_with_text_d7cYVc",
     "rich_text_Mdzhj8",
+    "image_with_text_FXQt8W",
     "multicolumn_MNpbdW",
     "multicolumn_cGMiKx",
     "related-products",
