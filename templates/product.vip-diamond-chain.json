@@ -73,9 +73,9 @@
         "button_GNeKkj": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Request Pricing & Concierge Details",
             "button_link": "",
-            "button_style_secondary": false,
+            "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -92,10 +92,10 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
-        "full_width": true,
+        "full_width": false,
         "section_css_class": "Type your own CSS class",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 60,
+        "padding_bottom": 72
       }
     },
     "image_with_text_d7cYVc": {
@@ -104,23 +104,23 @@
         "heading_9FPkXY": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "<strong>Luxury jewelry. Credential functionality. Zero compromise.</strong>",
             "heading_size": "h1"
           }
         },
         "text_cLgrxR": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Designed by Specialist ID in collaboration with Top Jewelers, this custom piece features a diamond-studded dual swivel lobster claw attachment system engineered to move seamlessly between form and function.<br/><br/>At 27.5 inches, it can be worn as a traditional statement chain, adapted for single slot-punch or double-ended credential formats, or styled as a luxury wallet chain or chain accessory.<br/><br/>The result is a convertible access piece built for real-world VIP environments without sacrificing the visual impact of the chain itself.<br/><br/></p>",
             "text_style": "body"
           }
         },
         "button_CD4J6m": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Inquire About a Custom Build",
             "button_link": "",
-            "button_style_secondary": false
+            "button_style_secondary": true
           }
         }
       },
@@ -131,6 +131,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-hero-3.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -142,10 +143,10 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "section_css_class": "Type your own CSS class",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
       }
     },
     "rich_text_Mdzhj8": {
@@ -161,7 +162,7 @@
         "text_dBTTWX": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<p>This piece was not created to sit quietly in a drawer. It was designed for moments where access is already rare and visibility is already high.<br/><br/>Concerts. Championship games. Private suites. Red carpets. Artist compounds. VIP hospitality. Tunnel walks. Premium arrivals.<br/><br/>The right placement does more than elevate the person wearing it. It creates conversation, attracts attention, and puts Specialist ID in the kind of environments where ordinary marketing never gets invited.<br/><br/><strong>A badge may be required. The way it is worn does not have to be ordinary.</strong></p>"
           }
         },
         "button_bTkc4c": {
@@ -188,8 +189,8 @@
         "color_scheme": "",
         "full_width": true,
         "section_css_class": "Type your own CSS class",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "multicolumn_MNpbdW": {
@@ -199,9 +200,9 @@
           "type": "column",
           "settings": {
             "wrapper_class": "",
-            "title": "Column",
+            "title": "<strong>Celebrity talent and artist teams</strong>",
             "enable_copy_button": false,
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>For talent-facing environments where the credential is visible from arrival to access.</p>",
             "link_label": "",
             "link": ""
           }
@@ -210,9 +211,9 @@
           "type": "column",
           "settings": {
             "wrapper_class": "",
-            "title": "Column",
+            "title": "<strong>Athlete representatives and premium sports access</strong>",
             "enable_copy_button": false,
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Built for courtside, tunnel, sideline, suite, and field-level environments where presentation matters.</p>",
             "link_label": "",
             "link": ""
           }
@@ -221,9 +222,9 @@
           "type": "column",
           "settings": {
             "wrapper_class": "",
-            "title": "Column",
+            "title": "<strong>Luxury hospitality and VIP guest experiences</strong>",
             "enable_copy_button": false,
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>For premium hosts, concierge-led programs, and high-visibility guest environments where image matters.</p>",
             "link_label": "",
             "link": ""
           }
@@ -237,6 +238,69 @@
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36,
+        "section_css_class": "Type your own CSS class"
+      }
+    },
+    "multicolumn_cGMiKx": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_YMqw6b": {
+          "type": "column",
+          "settings": {
+            "wrapper_class": "",
+            "title": "<strong>Submit Request</strong>",
+            "enable_copy_button": false,
+            "text": "<p>Tell us who the piece is for, the event, venue, timeline, and who we should coordinate with.<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jjEYbk": {
+          "type": "column",
+          "settings": {
+            "wrapper_class": "",
+            "title": "<strong>Confirm Fit</strong>",
+            "enable_copy_button": false,
+            "text": "<p>We review the use case, credential format, service area, timing, and logistics to make sure the piece and experience are the right fit.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_E8DJTG": {
+          "type": "column",
+          "settings": {
+            "wrapper_class": "",
+            "title": "<strong>Concierge Delivery</strong>",
+            "enable_copy_button": false,
+            "text": "<p>For qualified placements, Specialist ID coordinates delivery to the approved contact, location, or representative before the event.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_YMqw6b",
+        "column_jjEYbk",
+        "column_E8DJTG"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>Specialist ID | Private Placement</strong>",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -274,70 +338,26 @@
         "padding_bottom": 28
       }
     },
-    "rich_text_Fmcqrg": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_XTj4P9": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text_acNWfY": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "button_PrekY6": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_XTj4P9",
-        "text_acNWfY",
-        "button_PrekY6"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "section_css_class": "Type your own CSS class",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "rich_text_FAcYJn": {
       "type": "rich-text",
       "blocks": {
         "heading_a4kxHc": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "<strong>Own this one-off piece or commission your own.</strong>",
             "heading_size": "h1"
           }
         },
         "text_kagehe": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<ol><li>Custom order versions are available with lead times of approximately 2 to 3 months, with bespoke options for length, metal configuration, finish, stone selection, credential format, and use-case-specific attachment styling.<br/><br/>Alternative luxury-inspired versions in other metal and stone configurations are also available upon request.</li><li><strong>Post-event retrieval</strong> can also be coordinated for qualified placements so the experience remains seamless, controlled, and white-glove from start to finish.<br/><br/>For select qualified opportunities in the Miami-Fort Lauderdale market, Specialist ID may offer hand delivery, concierge coordination, and post-event pickup.<br/><br/><strong>Not available for direct online purchase. Inquiry required.</strong></li></ol>"
           }
         },
         "button_6HEKTz": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Inquire About a Custom Build",
             "button_link": "",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -492,8 +512,8 @@
     "image_with_text_d7cYVc",
     "rich_text_Mdzhj8",
     "multicolumn_MNpbdW",
+    "multicolumn_cGMiKx",
     "related-products",
-    "rich_text_Fmcqrg",
     "rich_text_FAcYJn",
     "collapsible_content_ktijKi",
     "rich_text_wGpghe",
