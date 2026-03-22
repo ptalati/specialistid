@@ -52,6 +52,17 @@
     "rich_text_Aq9qeC": {
       "type": "rich-text",
       "blocks": {
+        "button_dYecNP": {
+          "type": "button",
+          "settings": {
+            "button_label": "Request Pricing & Concierge Details",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
         "heading_GiRzpN": {
           "type": "heading",
           "settings": {
@@ -68,8 +79,8 @@
         "button_GNeKkj": {
           "type": "button",
           "settings": {
-            "button_label": "Request Pricing & Concierge Details",
-            "button_link": "",
+            "button_label": "",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
             "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -78,6 +89,7 @@
         }
       },
       "block_order": [
+        "button_dYecNP",
         "heading_GiRzpN",
         "text_nzURbR",
         "button_GNeKkj"
@@ -114,7 +126,7 @@
           "type": "button",
           "settings": {
             "button_label": "Inquire About a Custom Build",
-            "button_link": "",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
             "button_style_secondary": true
           }
         }
@@ -150,7 +162,7 @@
         "heading_rKANLH": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "<strong>Not a normal product. A PR engine.</strong>",
             "heading_size": "h1"
           }
         },
@@ -172,8 +184,8 @@
         "color_scheme": "",
         "full_width": true,
         "section_css_class": "Type your own CSS class",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "multicolumn_MNpbdW": {
@@ -232,8 +244,8 @@
         "color_scheme": "",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36,
         "section_css_class": "Type your own CSS class"
@@ -283,7 +295,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "<strong>Specialist ID | Private Placement</strong>",
+        "title": "<strong>How private placement works</strong>",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -295,8 +307,8 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "padding_top_mobile": 36,
         "padding_bottom_mobile": 36,
         "section_css_class": "Type your own CSS class"
@@ -334,15 +346,15 @@
         "text_kagehe": {
           "type": "text",
           "settings": {
-            "text": "<ol><li>Custom order versions are available with lead times of approximately 2 to 3 months, with bespoke options for length, metal configuration, finish, stone selection, credential format, and use-case-specific attachment styling.<br/><br/>Alternative luxury-inspired versions in other metal and stone configurations are also available upon request.</li><li><strong>Post-event retrieval</strong> can also be coordinated for qualified placements so the experience remains seamless, controlled, and white-glove from start to finish.<br/><br/>For select qualified opportunities in the Miami-Fort Lauderdale market, Specialist ID may offer hand delivery, concierge coordination, and post-event pickup.<br/><br/><strong>Not available for direct online purchase. Inquiry required.</strong></li></ol>"
+            "text": "<p>This in-stock piece is a true one-off. It represents the highest-expression version of the concept as it exists today.<br/></p><p>Custom order versions are available with lead times of approximately 2 to 3 months, with bespoke options for length, metal configuration, finish, stone selection, credential format, and use-case-specific attachment styling.<br/><br/>Alternative luxury-inspired versions in other metal and stone configurations are also available upon request.<br/><br/>Post-event retrieval can also be coordinated for qualified placements so the experience remains seamless, controlled, and white-glove from start to finish.<br/><br/>For select qualified opportunities in the Miami-Fort Lauderdale market, Specialist ID may offer hand delivery, concierge coordination, and post-event pickup.<br/><br/><em><strong>Not available for direct online purchase. Inquiry required.</strong></em></p>"
           }
         },
         "button_6HEKTz": {
           "type": "button",
           "settings": {
             "button_label": "Inquire About a Custom Build",
-            "button_link": "",
-            "button_style_secondary": false,
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
+            "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -424,7 +436,7 @@
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
-        "heading": "<strong>Quick answers</strong>",
+        "heading": "<strong>Before you inquire</strong>",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
@@ -453,6 +465,17 @@
             "text": "<p>If you are representing celebrity talent, an athlete, a premium guest, an event production team, or a high-end hospitality program, Specialist ID can review fit, timing, credential format, and concierge requirements directly.</p>"
           }
         },
+        "button_fDawUd": {
+          "type": "button",
+          "settings": {
+            "button_label": "Request Pricing & Concierge Details",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
         "button_F8i3hw": {
           "type": "button",
           "settings": {
@@ -468,6 +491,7 @@
       "block_order": [
         "heading_y39aar",
         "text_nigEm4",
+        "button_fDawUd",
         "button_F8i3hw"
       ],
       "name": "t:sections.rich-text.presets.name",
