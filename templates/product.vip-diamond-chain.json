@@ -25,17 +25,12 @@
         "just_price_zpYWQi": {
           "type": "just_price",
           "settings": {}
-        },
-        "lead_time_KgVKHP": {
-          "type": "lead_time",
-          "settings": {}
         }
       },
       "block_order": [
         "product_media_ENbA96",
         "title",
-        "just_price_zpYWQi",
-        "lead_time_KgVKHP"
+        "just_price_zpYWQi"
       ],
       "settings": {
         "enable_sticky_info": true,
