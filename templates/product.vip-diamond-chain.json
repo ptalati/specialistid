@@ -388,36 +388,45 @@
         "collapsible_row_mTKUbx": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "Is this available for direct online checkout?",
+            "icon": "none",
+            "row_content": "<p>No. Requests are handled through a private inquiry process so we can confirm fit, timing, logistics, and service requirements before moving forward.</p>",
             "page": ""
           }
         },
         "collapsible_row_FXwG6j": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "Can it be worn as a normal chain?",
+            "icon": "none",
+            "row_content": "<p>Yes. The custom attachment system allows it to be worn as a traditional statement chain when not being used in credential mode.</p>",
             "page": ""
           }
         },
         "collapsible_row_nqPHLD": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "What credential types can it support?",
+            "icon": "none",
+            "row_content": "<p>It is designed to work with compatible single slot-punch and double-ended credential formats, depending on the attachment and event setup.<br/></p>",
             "page": ""
           }
         },
         "collapsible_row_nwhKMe": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "Are custom versions available?",
+            "icon": "none",
+            "row_content": "<p>Yes. Custom versions are available by inquiry and can be built with different lengths, metal configurations, finishes, and stone options.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_rHpBHn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where is concierge service available?",
+            "icon": "none",
+            "row_content": "<p>Current focus is Miami-Fort Lauderdale and approved surrounding event zones, subject to scheduling, logistics, and fit.</p>",
             "page": ""
           }
         }
@@ -426,12 +435,13 @@
         "collapsible_row_mTKUbx",
         "collapsible_row_FXwG6j",
         "collapsible_row_nqPHLD",
-        "collapsible_row_nwhKMe"
+        "collapsible_row_nwhKMe",
+        "collapsible_row_rHpBHn"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
-        "heading": "Collapsible content",
+        "heading": "<strong>Quick answers</strong>",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
