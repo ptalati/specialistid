@@ -394,6 +394,57 @@
         "padding_bottom": 28
       }
     },
+    "image_with_text_QnyLtm": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_erBX8a": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Own this one-off piece or commission your own.</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_akPNFC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This in-stock piece is a true one-off. It represents the highest-expression version of the concept as it exists today.<br/></p><p>Custom order versions are available with lead times of approximately 2 to 3 months, with bespoke options for length, metal configuration, finish, stone selection, credential format, and use-case-specific attachment styling.<br/><br/>Alternative luxury-inspired versions in other metal and stone configurations are also available upon request.<br/><br/>Post-event retrieval can also be coordinated for qualified placements so the experience remains seamless, controlled, and white-glove from start to finish.<br/><br/>For select qualified opportunities in the Miami-Fort Lauderdale market, Specialist ID may offer hand delivery, concierge coordination, and post-event pickup.<br/><br/><em><strong>Not available for direct online purchase. Inquiry required.</strong></em></p>",
+            "text_style": "body"
+          }
+        },
+        "button_cHCYEY": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_erBX8a",
+        "text_akPNFC",
+        "button_cHCYEY"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-lifestyle-2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "rich_text_FAcYJn": {
       "type": "rich-text",
       "blocks": {
@@ -427,6 +478,7 @@
         "text_kagehe",
         "button_6HEKTz"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -594,6 +646,7 @@
     "multicolumn_MNpbdW",
     "multicolumn_cGMiKx",
     "related-products",
+    "image_with_text_QnyLtm",
     "rich_text_FAcYJn",
     "collapsible_content_ktijKi",
     "rich_text_wGpghe",
