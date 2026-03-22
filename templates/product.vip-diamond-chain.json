@@ -407,16 +407,16 @@
         "text_akPNFC": {
           "type": "text",
           "settings": {
-            "text": "<p>This in-stock piece is a true one-off. It represents the highest-expression version of the concept as it exists today.<br/></p><p>Custom order versions are available with lead times of approximately 2 to 3 months, with bespoke options for length, metal configuration, finish, stone selection, credential format, and use-case-specific attachment styling.<br/><br/>Alternative luxury-inspired versions in other metal and stone configurations are also available upon request.<br/><br/>Post-event retrieval can also be coordinated for qualified placements so the experience remains seamless, controlled, and white-glove from start to finish.<br/><br/>For select qualified opportunities in the Miami-Fort Lauderdale market, Specialist ID may offer hand delivery, concierge coordination, and post-event pickup.<br/><br/><em><strong>Not available for direct online purchase. Inquiry required.</strong></em></p>",
+            "text": "<p>This in-stock piece is a true one-off. It represents the highest-expression version of the concept as it exists today.</p><p>Custom order versions are available with lead times of approximately 2 to 3 months, with bespoke options for length, metal configuration, finish, stone selection, credential format, and use-case-specific attachment styling.<br/><br/>Alternative luxury-inspired versions in other metal and stone configurations are also available upon request.<br/><br/>Post-event retrieval can also be coordinated for qualified placements so the experience remains seamless, controlled, and white-glove from start to finish.<br/><br/>For select qualified opportunities in the Miami-Fort Lauderdale market, Specialist ID may offer hand delivery, concierge coordination, and post-event pickup.<br/><br/><em><strong>Not available for direct online purchase. Inquiry required.</strong></em></p>",
             "text_style": "body"
           }
         },
         "button_cHCYEY": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
+            "button_label": "Request Pricing & Concierge Details",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
+            "button_style_secondary": true
           }
         }
       },
