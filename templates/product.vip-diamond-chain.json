@@ -164,23 +164,11 @@
           "settings": {
             "text": "<p>This piece was not created to sit quietly in a drawer. It was designed for moments where access is already rare and visibility is already high.<br/><br/>Concerts. Championship games. Private suites. Red carpets. Artist compounds. VIP hospitality. Tunnel walks. Premium arrivals.<br/><br/>The right placement does more than elevate the person wearing it. It creates conversation, attracts attention, and puts Specialist ID in the kind of environments where ordinary marketing never gets invited.<br/><br/><strong>A badge may be required. The way it is worn does not have to be ordinary.</strong></p>"
           }
-        },
-        "button_bTkc4c": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
         "heading_rKANLH",
-        "text_dBTTWX",
-        "button_bTkc4c"
+        "text_dBTTWX"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -237,11 +225,11 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Multicolumn",
+        "title": "<strong>Built for the exact room where status is visible.</strong>",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
@@ -304,7 +292,7 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
@@ -460,20 +448,20 @@
         "heading_y39aar": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "<strong>Request pricing, availability, or a private consultation.</strong>",
             "heading_size": "h1"
           }
         },
         "text_nigEm4": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<p>If you are representing celebrity talent, an athlete, a premium guest, an event production team, or a high-end hospitality program, Specialist ID can review fit, timing, credential format, and concierge requirements directly.</p>"
           }
         },
         "button_F8i3hw": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "",
             "button_link": "",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -512,6 +500,7 @@
       "block_order": [
         "custom_info_AimhCD"
       ],
+      "disabled": true,
       "name": "Product Custom Info",
       "settings": {}
     }
