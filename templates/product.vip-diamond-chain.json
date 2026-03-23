@@ -22,24 +22,17 @@
           "type": "title",
           "settings": {}
         },
-        "text_km7dhF": {
-          "type": "text",
+        "custom_liquid_nmtdrA": {
+          "type": "custom_liquid",
           "settings": {
-            "text": "<strong>$60,000 - Inquire for details.</strong>",
-            "text_style": "body"
+            "custom_liquid": "<div style=\"margin-top: 18px; max-width: 520px;\">\n<div style=\"font-family: Poppins, sans-serif; font-size: 28px; line-height: 1.15; font-weight: 600; color: #3A3A3C; margin-bottom: 14px;\">\nStarting at $60,000\n</div>\n\n<div style=\"font-family: Rubik, sans-serif; font-size: 16px; line-height: 1.6; color: #3A3A3C; margin-bottom: 18px;\">\nPrivate inquiry only. Custom commissions available.\n</div>\n\n<a href=\"#request-pricing\"\nstyle=\"display: inline-block; background: #F5911F; color: #FFFFFF; text-decoration: none; font-family: 'Open Sans', sans-serif; font-size: 15px; font-weight: 700; padding: 14px 22px; border-radius: 6px; margin-bottom: 14px;\">\nRequest Pricing &amp; Concierge Details\n</a>\n<div style=\"font-family: Rubik, sans-serif; font-size: 14px; line-height: 1.6; color: #6B6B6B;\">\nWhite-glove coordination available for qualified placements.\n</div>\n</div>"
           }
-        },
-        "just_price_zpYWQi": {
-          "type": "just_price",
-          "disabled": true,
-          "settings": {}
         }
       },
       "block_order": [
         "product_media_ENbA96",
         "title",
-        "text_km7dhF",
-        "just_price_zpYWQi"
+        "custom_liquid_nmtdrA"
       ],
       "settings": {
         "enable_sticky_info": true,
