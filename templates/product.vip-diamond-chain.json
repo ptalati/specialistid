@@ -583,10 +583,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div id=\"request-pricing\"></div>",
+        "custom_liquid": "<div id=\"request-pricing\" style=\"scroll-margin-top: 80px;\"></div>",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "rich_text_wGpghe": {
