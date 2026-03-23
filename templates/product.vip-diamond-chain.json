@@ -462,51 +462,6 @@
         "padding_bottom_mobile": 36
       }
     },
-    "rich_text_FAcYJn": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_a4kxHc": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>Own this one-off piece or commission your own.</strong>",
-            "heading_size": "h1"
-          }
-        },
-        "text_kagehe": {
-          "type": "text",
-          "settings": {
-            "text": "<p>This in-stock piece is a true one-off. It represents the highest-expression version of the concept as it exists today.<br/></p><p>Custom order versions are available with lead times of approximately 2 to 3 months, with bespoke options for length, metal configuration, finish, stone selection, credential format, and use-case-specific attachment styling.<br/><br/>Alternative luxury-inspired versions in other metal and stone configurations are also available upon request.<br/><br/>Post-event retrieval can also be coordinated for qualified placements so the experience remains seamless, controlled, and white-glove from start to finish.<br/><br/>For select qualified opportunities in the Miami-Fort Lauderdale market, Specialist ID may offer hand delivery, concierge coordination, and post-event pickup.<br/><br/><em><strong>Not available for direct online purchase. Inquiry required.</strong></em></p>"
-          }
-        },
-        "button_6HEKTz": {
-          "type": "button",
-          "settings": {
-            "button_label": "Inquire About a Custom Build",
-            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
-            "button_style_secondary": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_a4kxHc",
-        "text_kagehe",
-        "button_6HEKTz"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "section_css_class": "Type your own CSS class",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "collapsible_content_ktijKi": {
       "type": "collapsible-content",
       "blocks": {
@@ -579,81 +534,6 @@
         "padding_bottom": 60
       }
     },
-    "rich_text_wGpghe": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_y39aar": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>Request pricing, availability, or a private consultation.</strong>",
-            "heading_size": "h1"
-          }
-        },
-        "text_nigEm4": {
-          "type": "text",
-          "settings": {
-            "text": "<p>If you are representing celebrity talent, an athlete, a premium guest, an event production team, or a high-end hospitality program, Specialist ID can review fit, timing, credential format, and concierge requirements directly.</p>"
-          }
-        },
-        "button_fDawUd": {
-          "type": "button",
-          "settings": {
-            "button_label": "Request Pricing & Concierge Details",
-            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        },
-        "button_F8i3hw": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_y39aar",
-        "text_nigEm4",
-        "button_fDawUd",
-        "button_F8i3hw"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "section_css_class": "Type your own CSS class",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "product_custom_info_gcmaXt": {
-      "type": "product-custom-info",
-      "blocks": {
-        "custom_info_AimhCD": {
-          "type": "custom_info",
-          "settings": {
-            "heading": "Description",
-            "content": "{{ product.description }}"
-          }
-        }
-      },
-      "block_order": [
-        "custom_info_AimhCD"
-      ],
-      "disabled": true,
-      "name": "Product Custom Info",
-      "settings": {}
-    },
     "custom_liquid_BbGiWm": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -676,10 +556,7 @@
     "multicolumn_cGMiKx",
     "related-products",
     "image_with_text_QnyLtm",
-    "rich_text_FAcYJn",
     "collapsible_content_ktijKi",
-    "rich_text_wGpghe",
-    "product_custom_info_gcmaXt",
     "custom_liquid_BbGiWm"
   ]
 }
