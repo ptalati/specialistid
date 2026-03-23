@@ -579,6 +579,16 @@
         "padding_bottom": 60
       }
     },
+    "custom_liquid_rNEEhK": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div id=\"request-pricing\"></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "rich_text_wGpghe": {
       "type": "rich-text",
       "blocks": {
@@ -667,6 +677,7 @@
     "image_with_text_QnyLtm",
     "rich_text_FAcYJn",
     "collapsible_content_ktijKi",
+    "custom_liquid_rNEEhK",
     "rich_text_wGpghe",
     "product_custom_info_gcmaXt"
   ]
