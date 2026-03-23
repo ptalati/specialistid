@@ -220,7 +220,7 @@
           "settings": {
             "button_label": "Request Pricing & Concierge Details",
             "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
-            "button_style_secondary": true
+            "button_style_secondary": false
           }
         }
       },
