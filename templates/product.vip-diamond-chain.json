@@ -51,6 +51,57 @@
         "padding_bottom": 12
       }
     },
+    "image_with_text_Eq9cRX": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_fhHYGJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Street Cred™ by Specialist ID </strong>— <strong>The credential is part of the image.</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_RfXGf9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In the world of celebrity, sports, nightlife, luxury hospitality, and backstage access, the credential is never just functional. It is visible. It is photographed. It becomes part of the look, part of the arrival, and part of the impression.</p><p>The Ultimate Diamond Studded 24 Karat White Gold VIP Credential Chain was created for exactly those moments. It transforms a required event credential into a statement-level wearable designed to stand out in the rooms where access is already exclusive and every detail is noticed.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_qdVXBX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Request Pricing & Concierge Details",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fhHYGJ",
+        "text_RfXGf9",
+        "button_qdVXBX"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-lifestyle-3-vip-badge-worn-tattooed-model-hands-up.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
     "rich_text_Aq9qeC": {
       "type": "rich-text",
       "blocks": {
@@ -96,6 +147,7 @@
         "text_nzURbR",
         "button_GNeKkj"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -140,7 +192,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-lifestyle-3-vip-badge-worn-tattooed-model-hands-up.jpg",
+        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-detail-4-chain-badge-connector-hooks-dark.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -224,7 +276,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-hero-3-white-bg.jpg",
+        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-lifestyle-2-chain-worn-side-profile-neon-logo.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -444,7 +496,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-hero-5-vip-badge-chain-clasps-handheld-full.jpg",
+        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-detail-5-snap-clasp-iced-out-macro-detail.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -547,6 +599,7 @@
   },
   "order": [
     "main",
+    "image_with_text_Eq9cRX",
     "rich_text_Aq9qeC",
     "image_with_text_d7cYVc",
     "rich_text_Mdzhj8",
