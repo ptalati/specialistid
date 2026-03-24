@@ -38,7 +38,7 @@
         "enable_sticky_info": true,
         "single_column_fpd": false,
         "color_scheme": "",
-        "media_size": "small",
+        "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "gallery_layout": "thumbnail_slider",
