@@ -43,7 +43,7 @@
         "media_fit": "contain",
         "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "hide",
-        "media_position": "right",
+        "media_position": "left",
         "image_zoom": "hover",
         "hide_variants": true,
         "enable_video_looping": false,
