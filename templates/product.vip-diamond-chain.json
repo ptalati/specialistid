@@ -140,7 +140,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-hero-3.jpg",
+        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-lifestyle-3-vip-badge-worn-tattooed-model-hands-up.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -224,7 +224,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-lifestyle-1.jpg",
+        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-hero-3-white-bg.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -444,7 +444,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-lifestyle-2.jpg",
+        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-hero-5-vip-badge-chain-clasps-handheld-full.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
