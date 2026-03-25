@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__list_pages",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__navigate_page",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__performance_start_trace",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__list_network_requests",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__evaluate_script",
+      "WebFetch(domain:pagespeed.web.dev)",
+      "WebFetch(domain:www.googleapis.com)",
+      "WebFetch(domain:docs.google.com)",
+      "Bash(curl -sL \"https://docs.google.com/spreadsheets/d/e/2PACX-1vR0zkaovoP8dVMb1Dqbhfzno7Oprzkn03ONaYrwI6-fZKedWVcT93iXkFhwLFk4hLSNNZXHia0k3jtB/pub?gid=0&single=true&output=csv\")",
+      "Bash(node scripts/update-tooltip-data.js)",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__take_screenshot",
+      "Bash(zip builder-io-backup.zip sections/1154d9de2bca4383b7cb98fa9fda29c1-builder-io.liquid sections/eab9b35612db452696c45d02867db1be-builder-io.liquid snippets/content.e0adef50393346de99ac582c9e531533.builder.liquid snippets/content.2260b9b2f9c44628b6152ea29a4edd58.builder.liquid snippets/model.product-categories-section.builder.liquid snippets/model.shop-best-sellers-home-section.builder.liquid)",
+      "Bash(powershell -Command \"Compress-Archive -Path ''sections/1154d9de2bca4383b7cb98fa9fda29c1-builder-io.liquid'',''sections/eab9b35612db452696c45d02867db1be-builder-io.liquid'',''snippets/content.e0adef50393346de99ac582c9e531533.builder.liquid'',''snippets/content.2260b9b2f9c44628b6152ea29a4edd58.builder.liquid'',''snippets/model.product-categories-section.builder.liquid'',''snippets/model.shop-best-sellers-home-section.builder.liquid'' -DestinationPath ''builder-io-backup.zip''\")"
+    ]
+  }
+}
