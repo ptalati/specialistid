@@ -163,3 +163,14 @@ a.tooltip[title] {
     transform: translateX(6px) translateY(-50%) rotate(-90deg);
   }
 }
+
+/* Prevent tooltip ::before from extending past scroll containers */
+.accordion__content a.tooltip::before {
+  left: auto;
+  right: 0;
+  transform: translateY(-8px);
+}
+
+.accordion__content a.tooltip:hover::before {
+  transform: translateY(-4px);
+}
