@@ -85,7 +85,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-detail-4-chain-badge-connector-hooks-dark.jpg",
+        "image": "shopify://shop_images/diamond-studded-10k-white-gold-vip-credential-chain-detail-4-chain-badge-connector-hooks-dark.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -193,7 +193,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-hero-5-vip-badge-chain-clasps-handheld-full.jpg",
+        "image": "shopify://shop_images/diamond-studded-10k-white-gold-vip-credential-chain-hero-5-vip-badge-chain-clasps-handheld-full.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -277,7 +277,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-lifestyle-2-chain-worn-side-profile-neon-logo.jpg",
+        "image": "shopify://shop_images/diamond-studded-10k-white-gold-vip-credential-chain-lifestyle-2-chain-worn-side-profile-neon-logo.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -497,7 +497,7 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/diamond-studded-24k-white-gold-vip-credential-chain-detail-5-snap-clasp-iced-out-macro-detail.jpg",
+        "image": "shopify://shop_images/diamond-studded-10k-white-gold-vip-credential-chain-detail-5-snap-clasp-iced-out-macro-detail.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
