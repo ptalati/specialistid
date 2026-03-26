@@ -73,7 +73,7 @@
           "type": "button",
           "settings": {
             "button_label": "Request Pricing & Concierge Details",
-            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-10WG-DIA-275",
             "button_style_secondary": false
           }
         }
@@ -181,7 +181,7 @@
           "type": "button",
           "settings": {
             "button_label": "Inquire About a Custom Build",
-            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-10WG-DIA-275",
             "button_style_secondary": false
           }
         }
@@ -265,7 +265,7 @@
           "type": "button",
           "settings": {
             "button_label": "Request Pricing & Concierge Details",
-            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-10WG-DIA-275",
             "button_style_secondary": false
           }
         }
@@ -485,7 +485,7 @@
           "type": "button",
           "settings": {
             "button_label": "Request Pricing & Concierge Details",
-            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-10WG-DIA-275",
             "button_style_secondary": false
           }
         }
