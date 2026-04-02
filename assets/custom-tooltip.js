@@ -54,7 +54,7 @@
                 }
               });
 
-              if (fragment.hasChildNodes()) {
+              if (fragment.hasChildNodes() && node.parentNode) {
                 node.parentNode.replaceChild(fragment, node);
               }
             }
