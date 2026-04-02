@@ -164,13 +164,37 @@ a.tooltip[title] {
   }
 }
 
-/* Prevent tooltip ::before from extending past scroll containers */
+/* ── Accordion tooltip fix ─────────────────────────────────────────────
+   .accordion__content has overflow-x:auto which clips tooltips rendered
+   above the term. Solution: allow overflow and render tooltip BELOW the
+   term instead. This works for top, mid, and end-of-list terms alike. */
+
+.accordion__content {
+  overflow: visible !important;
+}
+
+/* Tooltip box: render below the term */
 .accordion__content a.tooltip::before {
-  left: auto;
-  right: 0;
-  transform: translateY(-8px);
+  bottom: auto;
+  top: 100%;
+  left: 0;
+  right: auto;
+  transform: translateY(8px);
 }
 
 .accordion__content a.tooltip:hover::before {
-  transform: translateY(-4px);
+  transform: translateY(4px);
+}
+
+/* Arrow: flip to point upward (toward the term) */
+.accordion__content a.tooltip::after {
+  bottom: auto;
+  top: 100%;
+  left: 20px;
+  right: auto;
+  transform: translateY(0) rotate(180deg);
+}
+
+.accordion__content a.tooltip:hover::after {
+  transform: translateY(-2px) rotate(180deg);
 }
