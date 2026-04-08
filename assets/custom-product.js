@@ -1487,18 +1487,24 @@
           if (popup) popup.classList.remove('hidden');
           if (overlay) overlay.classList.remove('hidden');
 
-          const unitPrice = getVariantPrice(variant_id);
-          if (quantityInput.value * unitPrice > CONFIG.ENTERPRISE_THRESHOLD) {
-            const retailContact = document.querySelector(".retail-contact");
-            const enterpriseContact = document.querySelector(".enterprise-contact");
-            if (retailContact) retailContact.classList.add("hide");
-            if (enterpriseContact) enterpriseContact.classList.remove("hide");
-          } else {
-            const retailContact = document.querySelector(".retail-contact");
-            const enterpriseContact = document.querySelector(".enterprise-contact");
-            if (retailContact) retailContact.classList.remove("hide");
-            if (enterpriseContact) enterpriseContact.classList.add("hide");
-          }
+          // const unitPrice = getVariantPrice(variant_id);
+          // if (quantityInput.value * unitPrice > CONFIG.ENTERPRISE_THRESHOLD) {
+          //   const retailContact = document.querySelector(".retail-contact");
+          //   const enterpriseContact = document.querySelector(".enterprise-contact");
+          //   if (retailContact) retailContact.classList.add("hide");
+          //   if (enterpriseContact) enterpriseContact.classList.remove("hide");
+          // } else {
+          //   const retailContact = document.querySelector(".retail-contact");
+          //   const enterpriseContact = document.querySelector(".enterprise-contact");
+          //   if (retailContact) retailContact.classList.remove("hide");
+          //   if (enterpriseContact) enterpriseContact.classList.add("hide");
+          // }
+
+          // Always show both contact options
+          const retailContact = document.querySelector(".retail-contact");
+          const enterpriseContact = document.querySelector(".enterprise-contact");
+          if (retailContact) retailContact.classList.remove("hide");
+          if (enterpriseContact) enterpriseContact.classList.remove("hide");
         }
       });
     }
