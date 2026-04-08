@@ -143,7 +143,7 @@
         "type": "shopify://apps/regios-discounts/blocks/regios_discounts_embed/dc1514bb-4830-4102-bffa-e8b300bac5bd",
         "disabled": false,
         "settings": {
-          "theme_type": "auto_detect",
+          "theme_type": "dawn",
           "currency_code_enabled": false,
           "discount_description": "[discount_message]",
           "discount_description_css": "",
