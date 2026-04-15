@@ -115,20 +115,22 @@
 </div>
 
 <script>
-  $('.faq_block').each(function () {
-    $(this)
-      .find('.faq_question')
-      .click(function () {
-        $(this).siblings('.faq_answer').slideToggle().closest('.faq_block').siblings().find('.faq_answer').slideUp();
-        $(this)
-          .find('span')
-          .toggleClass('rot')
-          .closest('.faq_block')
-          .siblings()
-          .find('.faq_question')
-          .find('span')
-          .removeClass('rot');
-      });
+  document.addEventListener('DOMContentLoaded', function () {
+    $('.faq_block').each(function () {
+      $(this)
+        .find('.faq_question')
+        .click(function () {
+          $(this).siblings('.faq_answer').slideToggle().closest('.faq_block').siblings().find('.faq_answer').slideUp();
+          $(this)
+            .find('span')
+            .toggleClass('rot')
+            .closest('.faq_block')
+            .siblings()
+            .find('.faq_question')
+            .find('span')
+            .removeClass('rot');
+        });
+    });
   });
 </script>
 
