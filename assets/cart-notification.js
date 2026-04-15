@@ -48,32 +48,8 @@ class CartNotification extends HTMLElement {
       }
     });
 
-    // Update recommended section separately (fetch from section)
-    this.updateRecommendedSection();
-
     if (this.header) this.header.reveal();
     this.open();
-  }
-
-  updateRecommendedSection() {
-    const recommendedContainer = document.getElementById('cart-notification-recommended');
-    if (!recommendedContainer) return;
-
-    fetch(window.location.pathname + '?sections=cart-notification-recommended')
-      .then(response => response.json())
-      .then(sections => {
-        if (sections['cart-notification-recommended']) {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(sections['cart-notification-recommended'], 'text/html');
-          const newContent = doc.querySelector('.shopify-section');
-          if (newContent) {
-            recommendedContainer.innerHTML = newContent.innerHTML;
-          }
-        }
-      })
-      .catch(error => {
-        console.error('Error updating recommended section:', error);
-      });
   }
 
   getSectionsToRender() {
@@ -122,75 +98,3 @@ class CartNotification extends HTMLElement {
 
 customElements.define('cart-notification', CartNotification);
 
-// Function to add recommended product to cart from notification
-function addRecommendedProductToCart(button) {
-  const variantId = button.dataset.variantId;
-  if (!variantId) return;
-
-  button.disabled = true;
-  const originalText = button.textContent;
-  button.textContent = 'Adding...';
-
-  const formData = {
-    items: [{
-      id: parseInt(variantId),
-      quantity: 1
-    }]
-  };
-
-  fetch(window.Shopify.routes.root + 'cart/add.js', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
-  })
-  .then(response => response.json())
-  .then(data => {
-    // Fetch updated sections
-    const sectionsToFetch = ['cart-notification-product', 'cart-notification-button', 'cart-icon-bubble'];
-    const sectionsUrl = sectionsToFetch.map(s => `sections=${s}`).join('&');
-
-    return fetch(window.Shopify.routes.root + `?${sectionsUrl}`)
-      .then(res => res.json())
-      .then(sections => {
-        // Update cart notification product section
-        const productSection = document.getElementById('cart-notification-product');
-        if (productSection && sections['cart-notification-product']) {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(sections['cart-notification-product'], 'text/html');
-          const newContent = doc.querySelector('.shopify-section');
-          if (newContent) {
-            productSection.innerHTML = newContent.innerHTML;
-          }
-        }
-
-        // Update cart button
-        const buttonSection = document.getElementById('cart-notification-button');
-        if (buttonSection && sections['cart-notification-button']) {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(sections['cart-notification-button'], 'text/html');
-          const newContent = doc.querySelector('.shopify-section');
-          if (newContent) {
-            buttonSection.innerHTML = newContent.innerHTML;
-          }
-        }
-
-        // Update cart icon bubble
-        const iconBubble = document.getElementById('cart-icon-bubble');
-        if (iconBubble && sections['cart-icon-bubble']) {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(sections['cart-icon-bubble'], 'text/html');
-          const newContent = doc.querySelector('.shopify-section');
-          if (newContent) {
-            iconBubble.innerHTML = newContent.innerHTML;
-          }
-        }
-      });
-  })
-  .catch(error => {
-    console.error('Error adding to cart:', error);
-    button.disabled = false;
-    button.textContent = originalText;
-  });
-}

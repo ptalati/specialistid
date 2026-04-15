@@ -976,8 +976,7 @@
           } else {
             if (inventory_policy === 'deny') {
               setAddToCartOutOfStock(true);
-              // lead_time_text = 'Out of stock';
-              lead_time_text = `${variantInventory.inventoryQuantity} units available. Need more? Please contact us.`;
+              lead_time_text = 'Out of stock';
             } else {
               setAddToCartOutOfStock(false);
 
@@ -992,7 +991,7 @@
                   lead_time_text = product_backordered_lead_time;
                 } else {
                   if (variantInventory.inventoryQuantity > 0) {
-                    lead_time_text = `${variantInventory.inventoryQuantity} units available. Larger orders usually ship in 1-2 days.`;
+                    lead_time_text = `${variantInventory.inventoryQuantity} in stock. Order now for immediate shipping, Remainder ships within a few days.`;
                   } else {
                     lead_time_text = 'No confirmed stock, but usually ships within a few days';
                   }
@@ -1447,8 +1446,8 @@
     const variant = getVariantData(variant_id);
 
     const inventory_policy = getVariantMetafield(variant_id, 'shipping', 'inventory_policy') || 'deny';
-    const product_oos_lead_time = getProductMetafield('inventory', 'oos_lead_time') || '';
-    const variant_oos_lead_time = getVariantMetafield(variant_id, 'inventory', 'oos_lead_time') || '';
+    const product_oos_lead_time = getProductMetafield('shipping', 'oos_lead_time') || '';
+    const variant_oos_lead_time = getVariantMetafield(variant_id, 'shipping', 'oos_lead_time') || '';
     
     const addToCartButton = document.querySelector('[name="add"]');
     const quantityInput = document.querySelector('[name="quantity"]');
@@ -1488,18 +1487,24 @@
           if (popup) popup.classList.remove('hidden');
           if (overlay) overlay.classList.remove('hidden');
 
-          const unitPrice = getVariantPrice(variant_id);
-          if (quantityInput.value * unitPrice > CONFIG.ENTERPRISE_THRESHOLD) {
-            const retailContact = document.querySelector(".retail-contact");
-            const enterpriseContact = document.querySelector(".enterprise-contact");
-            if (retailContact) retailContact.classList.add("hide");
-            if (enterpriseContact) enterpriseContact.classList.remove("hide");
-          } else {
-            const retailContact = document.querySelector(".retail-contact");
-            const enterpriseContact = document.querySelector(".enterprise-contact");
-            if (retailContact) retailContact.classList.remove("hide");
-            if (enterpriseContact) enterpriseContact.classList.add("hide");
-          }
+          // const unitPrice = getVariantPrice(variant_id);
+          // if (quantityInput.value * unitPrice > CONFIG.ENTERPRISE_THRESHOLD) {
+          //   const retailContact = document.querySelector(".retail-contact");
+          //   const enterpriseContact = document.querySelector(".enterprise-contact");
+          //   if (retailContact) retailContact.classList.add("hide");
+          //   if (enterpriseContact) enterpriseContact.classList.remove("hide");
+          // } else {
+          //   const retailContact = document.querySelector(".retail-contact");
+          //   const enterpriseContact = document.querySelector(".enterprise-contact");
+          //   if (retailContact) retailContact.classList.remove("hide");
+          //   if (enterpriseContact) enterpriseContact.classList.add("hide");
+          // }
+
+          // Always show both contact options
+          const retailContact = document.querySelector(".retail-contact");
+          const enterpriseContact = document.querySelector(".enterprise-contact");
+          if (retailContact) retailContact.classList.remove("hide");
+          if (enterpriseContact) enterpriseContact.classList.remove("hide");
         }
       });
     }
@@ -1623,19 +1628,6 @@
   }
 
   function updateTablePrice() {
-    // Toggle enterprise CTA based on total order value (quantity × price > 800)
-    const enterpriseCta = document.querySelector(".enterprise-cta");
-    if (enterpriseCta) {
-      const _variant_id = getVariantId();
-      const _price = _variant_id ? getVariantPrice(_variant_id) : 0;
-      const _qty = parseFloat(document.querySelector(".quantity__input")?.value) || 1;
-      if (_qty * _price > 800) {
-        enterpriseCta.classList.remove("hidden");
-      } else {
-        enterpriseCta.classList.add("hidden");
-      }
-    }
-
     // Shopify-consistent rounding: round the discount DOWN, then subtract
     function shopifyDiscountPrice(price, discountPercent) {
       const discountAmount = Math.floor(price * discountPercent * 100) / 100;

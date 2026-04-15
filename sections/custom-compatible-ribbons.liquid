@@ -195,67 +195,69 @@
 {% endif %}
 
 <script>
-  var swiper = new Swiper('.cr-{{ section.id }}', {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 0,
+  document.addEventListener('DOMContentLoaded', function() {
+    var swiper = new Swiper('.cr-{{ section.id }}', {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
-      499: {
-        slidesPerView: 2,
-        spaceBetween: 0,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        499: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        799: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1099: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
       },
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      799: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      1099: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-    },
-  });
-
-  $('.cr_quantity_a2c').each(function () {
-    $(this)
-      .find('.cr_a2c ')
-      .click(function () {
-        $(this).closest('.card__information').siblings('.quick-add').find('button').click();
-        console.log('clicked');
-      });
-  });
-
-  $('.cr_plus').each(function () {
-    $(this).click(function () {
-      let quan = $(this).siblings('#cr_quan');
-      let quantity = $(this).closest('.card__information').siblings('.quick-add').find('input[name="quantity"]');
-      let value = Number(quantity.val()) + 1;
-      quantity.val(value);
-      quan.val(value);
     });
-  });
 
-  $('.cr_minus').each(function () {
-    $(this).click(function () {
-      let quan = $(this).siblings('#cr_quan');
-      let quantity = $(this).closest('.card__information').siblings('.quick-add').find('input[name="quantity"]');
-      let v = Number(quantity.val());
-      console.log(v);
-      if (v > 1) {
-        let value = Number(quantity.val()) - 1;
+    $('.cr_quantity_a2c').each(function () {
+      $(this)
+        .find('.cr_a2c ')
+        .click(function () {
+          $(this).closest('.card__information').siblings('.quick-add').find('button').click();
+          console.log('clicked');
+        });
+    });
+
+    $('.cr_plus').each(function () {
+      $(this).click(function () {
+        let quan = $(this).siblings('#cr_quan');
+        let quantity = $(this).closest('.card__information').siblings('.quick-add').find('input[name="quantity"]');
+        let value = Number(quantity.val()) + 1;
         quantity.val(value);
         quan.val(value);
-      }
+      });
+    });
+
+    $('.cr_minus').each(function () {
+      $(this).click(function () {
+        let quan = $(this).siblings('#cr_quan');
+        let quantity = $(this).closest('.card__information').siblings('.quick-add').find('input[name="quantity"]');
+        let v = Number(quantity.val());
+        console.log(v);
+        if (v > 1) {
+          let value = Number(quantity.val()) - 1;
+          quantity.val(value);
+          quan.val(value);
+        }
+      });
     });
   });
 </script>

@@ -104,9 +104,9 @@
                       class="newsletter-form__button field__button"
                       name="commit"
                       id="Subscribe"
-                      aria-label="{{ 'newsletter.button_label' | t }}"
                     >
-                      <span class="svg-wrapper">
+                      <span class="visually-hidden">{{ 'newsletter.button_label' | t }}</span>
+                      <span class="svg-wrapper" aria-hidden="true">
                         {{- 'icon-arrow.svg' | inline_asset_content -}}
                       </span>
                     </button>

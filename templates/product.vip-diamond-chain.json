@@ -1,0 +1,616 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "product_media_ENbA96": {
+          "type": "product_media",
+          "settings": {
+            "hide_preview_image": false
+          }
+        },
+        "title": {
+          "type": "title",
+          "disabled": true,
+          "settings": {}
+        },
+        "custom_liquid_nmtdrA": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"max-width: 560px; text-align: center; margin: 40px auto 0 auto;\">\n<div style=\"font-family: 'Open Sans', sans-serif; font-size: 13px; line-height: 1.4; letter-spacing: 0.08em; text-transform: uppercase; color: #6B6B6B; margin-bottom: 12px;\">\nStreet Cred™ by Specialist ID\n</div>\n<div style=\"font-family: Poppins, sans-serif; font-size: 40px; line-height: 1.1; font-weight: 600; color: #3A3A3C; margin-bottom: 16px;\">\nUltimate Diamond Studded 10 Karat White Gold VIP Credential Chain\n</div>\n\n<div style=\"font-family: Poppins, sans-serif; font-size: 28px; line-height: 1.15; font-weight: 600; color: #3A3A3C; margin-bottom: 14px;\">\nStarting at $60,000\n</div>\n\n<div style=\"font-family: Rubik, sans-serif; font-size: 16px; line-height: 1.6; color: #3A3A3C; margin-bottom: 18px;\">\nPrivate inquiry only. Custom commissions available.\n</div>\n\n<a href=\"#request-pricing\"\nstyle=\"display: inline-block; background: #F5911F; color: #FFFFFF; text-decoration: none; font-family: 'Open Sans', sans-serif; font-size: 15px; font-weight: 700; padding: 14px 22px; border-radius: 6px; margin-bottom: 18px;\">\nRequest Pricing &amp; Concierge Details\n</a>\n\n<div style=\"font-family: Rubik, sans-serif; font-size: 14px; line-height: 1.7; color: #6B6B6B; margin-bottom: 14px;\">\n<div>Genuine diamonds throughout</div>\n<div>Real 10 karat white gold</div>\n<div>Custom diamond-studded attachment system</div>\n</div>\n\n<div style=\"font-family: Rubik, sans-serif; font-size: 14px; line-height: 1.6; color: #3A3A3C;\">\nDesigned by Specialist ID in collaboration with Top Jewelers.\n</div>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "product_media_ENbA96",
+        "title",
+        "custom_liquid_nmtdrA"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "single_column_fpd": false,
+        "color_scheme": "",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 24,
+        "padding_bottom": 12
+      }
+    },
+    "image_with_text_Eq9cRX": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_fhHYGJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Street Cred™ by Specialist ID </strong>— <strong>The credential is part of the image.</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_RfXGf9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In the world of celebrity, sports, nightlife, luxury hospitality, and backstage access, the credential is never just functional. It is visible. It is photographed. It becomes part of the look, part of the arrival, and part of the impression.</p><p>The Ultimate Diamond Studded 10 Karat White Gold VIP Credential Chain was created for exactly those moments. It transforms a required event credential into a statement-level wearable designed to stand out in the rooms where access is already exclusive and every detail is noticed.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_qdVXBX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Request Pricing & Concierge Details",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-10WG-DIA-275",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fhHYGJ",
+        "text_RfXGf9",
+        "button_qdVXBX"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/diamond-studded-10k-white-gold-vip-credential-chain-detail-4-chain-badge-connector-hooks-dark.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "rich_text_Aq9qeC": {
+      "type": "rich-text",
+      "blocks": {
+        "button_dYecNP": {
+          "type": "button",
+          "settings": {
+            "button_label": "Request Pricing & Concierge Details",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "heading_GiRzpN": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Street Cred™ by Specialist ID </strong>— <strong>The credential is part of the image.</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_nzURbR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In the world of celebrity, sports, nightlife, luxury hospitality, and backstage access, the credential is never just functional. It is visible. It is photographed. It becomes part of the look, part of the arrival, and part of the impression.</p><p>The Ultimate Diamond Studded 24 Karat White Gold VIP Credential Chain was created for exactly those moments. It transforms a required event credential into a statement-level wearable designed to stand out in the rooms where access is already exclusive and every detail is noticed.</p>"
+          }
+        },
+        "button_GNeKkj": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-24WG-DIA-275",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_dYecNP",
+        "heading_GiRzpN",
+        "text_nzURbR",
+        "button_GNeKkj"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": false,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 60,
+        "padding_bottom": 72
+      }
+    },
+    "image_with_text_d7cYVc": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_9FPkXY": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Luxury jewelry. Credential functionality. Zero compromise.</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_cLgrxR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Designed by Specialist ID in collaboration with Top Jewelers, this custom piece features a diamond-studded dual swivel lobster claw attachment system engineered to move seamlessly between form and function.<br/><br/>At 27.5 inches, it can be worn as a traditional statement chain, adapted for single slot-punch or double-ended credential formats, or styled as a luxury wallet chain or chain accessory.<br/><br/>The result is a convertible access piece built for real-world VIP environments without sacrificing the visual impact of the chain itself.<br/><br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_CD4J6m": {
+          "type": "button",
+          "settings": {
+            "button_label": "Inquire About a Custom Build",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-10WG-DIA-275",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_9FPkXY",
+        "text_cLgrxR",
+        "button_CD4J6m"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/diamond-studded-10k-white-gold-vip-credential-chain-hero-5-vip-badge-chain-clasps-handheld-full.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "rich_text_Mdzhj8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rKANLH": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Not a normal product. A PR engine.</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_dBTTWX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This piece was not created to sit quietly in a drawer. It was designed for moments where access is already rare and visibility is already high.<br/><br/>Concerts. Championship games. Private suites. Red carpets. Artist compounds. VIP hospitality. Tunnel walks. Premium arrivals.<br/><br/>The right placement does more than elevate the person wearing it. It creates conversation, attracts attention, and puts Specialist ID in the kind of environments where ordinary marketing never gets invited.<br/><br/><strong>A badge may be required. The way it is worn does not have to be ordinary.</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rKANLH",
+        "text_dBTTWX"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "image_with_text_FXQt8W": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_8j3bMU": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Not a normal product. A PR engine.</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_DThcEq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This piece was not created to sit quietly in a drawer. It was designed for moments where access is already rare and visibility is already high.<br/><br/>Concerts. Championship games. Private suites. Red carpets. Artist compounds. VIP hospitality. Tunnel walks. Premium arrivals.<br/><br/>The right placement does more than elevate the person wearing it. It creates conversation, signals access, and turns a required credential into part of the presence.<br/><br/><strong>A badge may be required. The way it is worn does not have to be ordinary.</strong></p>",
+            "text_style": "body"
+          }
+        },
+        "button_Ch84kD": {
+          "type": "button",
+          "settings": {
+            "button_label": "Request Pricing & Concierge Details",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-10WG-DIA-275",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_8j3bMU",
+        "text_DThcEq",
+        "button_Ch84kD"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/diamond-studded-10k-white-gold-vip-credential-chain-lifestyle-2-chain-worn-side-profile-neon-logo.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "multicolumn_MNpbdW": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Ar4fex": {
+          "type": "column",
+          "settings": {
+            "wrapper_class": "",
+            "title": "<strong>Celebrity talent and artist teams</strong>",
+            "enable_copy_button": false,
+            "text": "<p>For talent-facing environments where the credential is visible from arrival to access.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_CTDBQE": {
+          "type": "column",
+          "settings": {
+            "wrapper_class": "",
+            "title": "<strong>Athlete representatives and premium sports access</strong>",
+            "enable_copy_button": false,
+            "text": "<p>Built for courtside, tunnel, sideline, suite, and field-level environments where presentation matters.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_H8F8yh": {
+          "type": "column",
+          "settings": {
+            "wrapper_class": "",
+            "title": "<strong>Luxury hospitality and VIP guest experiences</strong>",
+            "enable_copy_button": false,
+            "text": "<p>For premium hosts, concierge-led programs, and high-visibility guest environments where image matters.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Ar4fex",
+        "column_CTDBQE",
+        "column_H8F8yh"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>Built for the exact room where status is visible.</strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36,
+        "section_css_class": "Type your own CSS class"
+      }
+    },
+    "rich_text_M78LFd": {
+      "type": "rich-text",
+      "blocks": {
+        "text_FDVeKg": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Three steps. White-glove from the start.</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_FDVeKg"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 60,
+        "padding_bottom": 4
+      }
+    },
+    "multicolumn_cGMiKx": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_YMqw6b": {
+          "type": "column",
+          "settings": {
+            "wrapper_class": "",
+            "title": "<strong>Submit Request</strong>",
+            "enable_copy_button": false,
+            "text": "<p>Tell us who the piece is for, the event, venue, timeline, and who we should coordinate with.<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jjEYbk": {
+          "type": "column",
+          "settings": {
+            "wrapper_class": "",
+            "title": "<strong>Confirm Fit</strong>",
+            "enable_copy_button": false,
+            "text": "<p>We review the use case, credential format, service area, timing, and logistics to make sure the piece and experience are the right fit.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_E8DJTG": {
+          "type": "column",
+          "settings": {
+            "wrapper_class": "",
+            "title": "<strong>Concierge Delivery</strong>",
+            "enable_copy_button": false,
+            "text": "<p>For qualified placements, Specialist ID coordinates delivery to the approved contact, location, or representative before the event.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_YMqw6b",
+        "column_jjEYbk",
+        "column_E8DJTG"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "<strong>How private placement works</strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 4,
+        "padding_bottom": 60,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36,
+        "section_css_class": "Type your own CSS class"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "Customers like you also choose...",
+        "heading_size": "h2",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_QnyLtm": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_erBX8a": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Own this one-off piece or commission your own.</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_akPNFC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This in-stock piece is a true one-off. It represents the highest-expression version of the concept as it exists today.</p><p>Custom order versions are available with lead times of approximately 2 to 3 months, with bespoke options for length, metal configuration, finish, stone selection, credential format, and use-case-specific attachment styling.<br/><br/>Alternative luxury-inspired versions in other metal and stone configurations are also available upon request.<br/><br/>Post-event retrieval can also be coordinated for qualified placements so the experience remains seamless, controlled, and white-glove from start to finish.<br/><br/>For select qualified opportunities in the Miami-Fort Lauderdale market, Specialist ID may offer hand delivery, concierge coordination, and post-event pickup.<br/><br/><em><strong>Not available for direct online purchase. Inquiry required.</strong></em></p>",
+            "text_style": "body"
+          }
+        },
+        "button_cHCYEY": {
+          "type": "button",
+          "settings": {
+            "button_label": "Request Pricing & Concierge Details",
+            "button_link": "/pages/request-a-quote?sku=SC-ULT-VIP-10WG-DIA-275",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_erBX8a",
+        "text_akPNFC",
+        "button_cHCYEY"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/diamond-studded-10k-white-gold-vip-credential-chain-detail-5-snap-clasp-iced-out-macro-detail.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "section_css_class": "Type your own CSS class",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "custom_liquid_BbGiWm": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div id=\"request-pricing\" style=\"scroll-margin-top: 80px; max-width: 760px; margin: 0 auto; text-align: center;\">\n<h2 style=\"font-family: Poppins, sans-serif; font-size: 34px; line-height: 1.15; font-weight: 600; color: #3A3A3C; margin: 0 0 16px 0;\">\nRequest pricing, availability, or a private consultation.\n</h2>\n\n<div style=\"font-family: Rubik, sans-serif; font-size: 16px; line-height: 1.7; color: #3A3A3C; margin: 0 0 22px 0;\">\nSpecialist ID will review fit, timing, credential format, and any concierge requirements directly.\n</div>\n\n<a href=\"/pages/contact-us\"\nstyle=\"display: inline-block; background: #F5911F; color: #FFFFFF; text-decoration: none; font-family: 'Open Sans', sans-serif; font-size: 15px; font-weight: 700; padding: 14px 22px; border-radius: 6px; margin-bottom: 14px;\">\nRequest Pricing &amp; Concierge Details\n</a>\n\n<div style=\"font-family: Rubik, sans-serif; font-size: 14px; line-height: 1.6; color: #6B6B6B;\">\nPrivate inquiry only. Custom commissions available.\n</div>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collapsible_content_ktijKi": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_mTKUbx": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is this available for direct online checkout?",
+            "icon": "none",
+            "row_content": "<p>No. Requests are handled through a private inquiry process so we can confirm fit, timing, logistics, and service requirements before moving forward.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_FXwG6j": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can it be worn as a normal chain?",
+            "icon": "none",
+            "row_content": "<p>Yes. The custom attachment system allows it to be worn as a traditional statement chain when not being used in credential mode.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_nqPHLD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What credential types can it support?",
+            "icon": "none",
+            "row_content": "<p>It is designed to work with compatible single slot-punch and double-ended credential formats, depending on the attachment and event setup.<br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_nwhKMe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are custom versions available?",
+            "icon": "none",
+            "row_content": "<p>Yes. Custom versions are available by inquiry. Options may include different gold purities, stone configurations, lengths, and lab diamond or moissanite variations.</p><p></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_rHpBHn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where is concierge service available?",
+            "icon": "none",
+            "row_content": "<p>Current focus is Miami-Fort Lauderdale and approved surrounding event zones, subject to scheduling, logistics, and fit.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_mTKUbx",
+        "collapsible_row_FXwG6j",
+        "collapsible_row_nqPHLD",
+        "collapsible_row_nwhKMe",
+        "collapsible_row_rHpBHn"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "<strong>Before you inquire</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_Eq9cRX",
+    "rich_text_Aq9qeC",
+    "image_with_text_d7cYVc",
+    "rich_text_Mdzhj8",
+    "image_with_text_FXQt8W",
+    "multicolumn_MNpbdW",
+    "rich_text_M78LFd",
+    "multicolumn_cGMiKx",
+    "related-products",
+    "image_with_text_QnyLtm",
+    "custom_liquid_BbGiWm",
+    "collapsible_content_ktijKi"
+  ]
+}

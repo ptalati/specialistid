@@ -416,9 +416,36 @@
                     </a>
                   {% endif %}
                   {% if block.settings.customize_quote_button_link != blank %}
-                    <a href="{{ block.settings.customize_quote_button_link }}" class="button button-white"
+                    {% assign _quote_base_url = block.settings.customize_quote_button_link %}
+                    {% assign _quote_initial_sku = product.selected_or_first_available_variant.sku %}
+                    {% if _quote_initial_sku != blank %}
+                      {% assign _quote_sku = _quote_initial_sku | url_encode %}
+                      {% assign _quote_href = _quote_base_url | append: '?sku=' | append: _quote_sku %}
+                    {% else %}
+                      {% assign _quote_href = _quote_base_url %}
+                    {% endif %}
+                    <a
+                      href="{{ _quote_href }}"
+                      class="button button-white"
+                      id="quote-btn-{{ section.id }}"
+                      data-base-url="{{ _quote_base_url }}"
                       >Get a Quote</a
                     >
+                    <script>
+                      document.addEventListener('DOMContentLoaded', function () {
+                        if (typeof subscribe !== 'function') return;
+                        subscribe('variant-change', function (event) {
+                          var btn = document.getElementById('quote-btn-{{ section.id }}');
+                          if (!btn) return;
+                          var variant = event.data && event.data.variant;
+                          var sku = variant ? variant.sku || '' : '';
+                          var baseUrl = btn.dataset.baseUrl;
+                          btn.href = sku
+                            ? baseUrl + (baseUrl.indexOf('?') !== -1 ? '&' : '?') + 'sku=' + encodeURIComponent(sku)
+                            : baseUrl;
+                        });
+                      });
+                    </script>
                   {% endif %}
                 </div>
               {%- when 'custom_availability' -%}
@@ -567,7 +594,7 @@
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
               {%- when 'enterprise_cta' -%}
-                <p class="enterprise-cta hidden" {{ block.shopify_attributes }}>
+                <p class="enterprise-cta" {{ block.shopify_attributes }}>
                   {%- if block.settings.text_before != blank -%}{{ block.settings.text_before }} {%- endif -%}
                   {%- assign _enterprise_url = block.settings.link_url | default: '/pages/enterprise-solutions' -%}
                   <a href="{{ _enterprise_url }}">{{ block.settings.link_text | default: 'Click Here' }}</a>
