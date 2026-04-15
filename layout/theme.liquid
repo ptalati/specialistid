@@ -274,7 +274,7 @@
     {{ 'custom-pages.css' | asset_url | stylesheet_tag }}
     {{ 'custom-tooltip.css' | asset_url | stylesheet_tag }}
     {{ 'swiper.css' | asset_url | stylesheet_tag }}
-    {{ 'swiper.js' | asset_url | script_tag }}
+    <script src="{{ 'swiper.js' | asset_url }}" defer="defer"></script>
     {{ 'slick.css' | asset_url | stylesheet_tag }}
     {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
 
@@ -313,8 +313,8 @@
       >
     {%- endif -%}
 
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    {{ 'slick.min.js' | asset_url | script_tag }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer="defer"></script>
+    <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
 
     <script>
       if (Shopify.designMode) {
