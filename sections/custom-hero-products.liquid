@@ -51,7 +51,12 @@
                 <img
                   src="{{ image | image_url: width: 600 }}"
                   alt="{{ label | escape }}"
-                  loading="lazy"
+                  {% if forloop.first %}
+                    loading="eager"
+                    fetchpriority="high"
+                  {% else %}
+                    loading="lazy"
+                  {% endif %}
                   width="{{ image.width }}"
                   height="{{ image.height }}"
                   class="hero-product-image"
