@@ -27,7 +27,7 @@
     ANIMATION_DELAY: 500,
     POPUP_DELAY: 3000,
     POPUP_HIDE_DELAY: 5000,
-    API_URL: 'https://pratiktalati.com/custom/api.php',
+    API_URL: 'https://script.google.com/macros/s/AKfycbzu1pRcuX2jiLG2FWDki5QjMk9nVQJ5cSWo89KMjGmzhpw_LYzysDhPIwui_7BD8dsG/exec',
     GOOGLE_SHEET_URL: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR0zkaovoP8dVMb1Dqbhfzno7Oprzkn03ONaYrwI6-fZKedWVcT93iXkFhwLFk4hLSNNZXHia0k3jtB/pub?gid=0&single=true&output=csv',
     ENTERPRISE_THRESHOLD: 1000, // Price threshold for enterprise vs retail contact
     HIDDEN_ROW_HEIGHT: 46, // Height of each hidden table row in pixels
