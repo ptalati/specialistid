@@ -72,7 +72,7 @@
                 <p class="kc-spec-part">{{ spec.part_number.value | escape }}</p>
                 <div class="kc-spec-actions">
                   <a
-                    href="{{ spec.pdf_link.value }}"
+                    href="{{ spec.pdf_link.value.url }}"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="kc-btn kc-btn--primary kc-btn--sm"
@@ -81,7 +81,7 @@
                     View
                   </a>
                   <a
-                    href="{{ spec.pdf_link.value }}"
+                    href="{{ spec.pdf_link.value.url }}"
                     download
                     class="kc-btn kc-btn--outline kc-btn--sm"
                   >
