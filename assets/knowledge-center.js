@@ -6,7 +6,21 @@
 (function () {
   'use strict';
 
-  const NAV_OFFSET = 80; // px — accounts for sticky nav height
+  // ── Header height tracking ──────────────────────────────────────────────────
+  const header = document.querySelector('.section-header');
+
+  const setHeaderOffset = () => {
+    const h = header ? Math.round(header.getBoundingClientRect().height) : 0;
+    document.documentElement.style.setProperty('--kc-header-h', `${h}px`);
+  };
+
+  setHeaderOffset();
+  window.addEventListener('resize', setHeaderOffset);
+
+  // Re-measure after a short delay to catch any header animations on load
+  setTimeout(setHeaderOffset, 300);
+
+  const NAV_OFFSET = header ? Math.round(header.getBoundingClientRect().height) + 16 : 80;
 
   // ── Nav buttons & section targets ──────────────────────────────────────────
   const navButtons = document.querySelectorAll('.kc-nav-btn');
