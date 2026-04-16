@@ -49,7 +49,7 @@
 /* ── Sticky Nav ────────────────────────────────────────────── */
 .kc-nav-wrapper {
   position: sticky;
-  top: 0;
+  top: var(--kc-header-h, 0px);
   z-index: 50;
   background: rgba(255, 255, 255, 0.97);
   border-bottom: 1px solid var(--kc-border);
@@ -111,7 +111,7 @@
 
 /* ── Section scaffold ──────────────────────────────────────── */
 .kc-section {
-  scroll-margin-top: calc(var(--kc-nav-height) + 1.5rem);
+  scroll-margin-top: calc(var(--kc-header-h, 0px) + var(--kc-nav-height) + 1rem);
 }
 
 .kc-section-header {
