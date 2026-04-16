@@ -1,0 +1,426 @@
+{{ 'knowledge-center.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign kc_blog = blogs['news']
+-%}
+
+<div class="kc-page">
+
+  {%- comment -%} ── Page Header ─────────────────────────────────────────── {%- endcomment -%}
+  <div class="kc-header">
+    <h1 class="kc-title">Knowledge Center</h1>
+    <p class="kc-subtitle">
+      Spec sheets, tutorials, case studies, and industry insights — everything you need to get the most from your badge and ID solutions.
+    </p>
+  </div>
+
+  {%- comment -%} ── Sticky Navigation ────────────────────────────────────── {%- endcomment -%}
+  <div class="kc-nav-wrapper">
+    <div class="kc-nav-inner">
+      <button class="kc-nav-btn kc-nav-btn--active" data-target="kc-specs">Specification Sheets</button>
+      <button class="kc-nav-btn" data-target="kc-tutorials">Tutorials / Troubleshoot</button>
+      <button class="kc-nav-btn" data-target="kc-case-studies">Case Studies</button>
+      <button class="kc-nav-btn" data-target="kc-blogs">Blogs</button>
+    </div>
+  </div>
+
+  <main class="kc-main">
+
+    {%- comment -%} ── Section 1: Specification Sheets ──────────────────────── {%- endcomment -%}
+    <section id="kc-specs" class="kc-section">
+      <div class="kc-section-header">
+        <div class="kc-section-heading-group">
+          <div class="kc-heading-bar"></div>
+          <h2 class="kc-section-title">Specification Sheets</h2>
+        </div>
+        <div class="kc-search-wrap">
+          <svg class="kc-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input
+            id="kc-spec-search"
+            class="kc-search-input"
+            type="text"
+            placeholder="Search by name or part #"
+            aria-label="Search specification sheets"
+          />
+        </div>
+      </div>
+
+      {%- assign specs = shop.metaobjects['specification_sheet'].values -%}
+      {%- if specs.size > 0 -%}
+        <div class="kc-specs-grid" id="kc-specs-grid">
+          {%- for spec in specs -%}
+            <div class="kc-spec-card" data-title="{{ spec.title.value | downcase }}" data-part="{{ spec.part_number.value | downcase }}">
+              <div class="kc-spec-image">
+                {%- if spec.image.value != blank -%}
+                  <img
+                    src="{{ spec.image.value | image_url: width: 400 }}"
+                    alt="{{ spec.title.value | escape }}"
+                    width="400"
+                    height="400"
+                    loading="lazy"
+                  />
+                {%- else -%}
+                  <div class="kc-spec-image-placeholder">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                  </div>
+                {%- endif -%}
+              </div>
+              <div class="kc-spec-body">
+                <h3 class="kc-spec-title">{{ spec.title.value | escape }}</h3>
+                <p class="kc-spec-part">{{ spec.part_number.value | escape }}</p>
+                <div class="kc-spec-actions">
+                  <a
+                    href="{{ spec.pdf_link.value }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="kc-btn kc-btn--primary kc-btn--sm"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    View
+                  </a>
+                  <a
+                    href="{{ spec.pdf_link.value }}"
+                    download
+                    class="kc-btn kc-btn--outline kc-btn--sm"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    PDF
+                  </a>
+                </div>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+        <p class="kc-no-results" id="kc-no-results" hidden>No results found.</p>
+      {%- else -%}
+        <p class="kc-empty">No specification sheets available yet.</p>
+      {%- endif -%}
+
+      <div class="kc-view-all">
+        <a href="/pages/specification-sheets" class="kc-view-all-btn">
+          Consult all Specification Sheets
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    {%- comment -%} ── Section 2: Tutorials / Troubleshoot ───────────────────── {%- endcomment -%}
+    <section id="kc-tutorials" class="kc-section">
+      <div class="kc-section-heading-group kc-mb-8">
+        <div class="kc-heading-bar"></div>
+        <h2 class="kc-section-title">Tutorials / Troubleshoot</h2>
+      </div>
+
+      <div class="kc-tutorials-grid">
+        {%- comment -%} Featured video — editable via schema settings {%- endcomment -%}
+        <div class="kc-featured-video">
+          <a
+            href="{{ section.settings.featured_video_url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="kc-video-thumb kc-video-thumb--featured"
+            aria-label="Watch: {{ section.settings.featured_video_title | escape }}"
+          >
+            {%- if section.settings.featured_video_thumbnail != blank -%}
+              <img
+                src="{{ section.settings.featured_video_thumbnail | image_url: width: 900 }}"
+                alt="{{ section.settings.featured_video_title | escape }}"
+                width="900"
+                height="506"
+                loading="lazy"
+              />
+            {%- else -%}
+              <div class="kc-video-placeholder"></div>
+            {%- endif -%}
+            <div class="kc-play-btn">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+            </div>
+            {%- if section.settings.featured_video_duration != blank -%}
+              <span class="kc-video-duration">{{ section.settings.featured_video_duration }}</span>
+            {%- endif -%}
+            <span class="kc-featured-badge">Featured</span>
+          </a>
+          <h3 class="kc-video-title">{{ section.settings.featured_video_title | escape }}</h3>
+          <div class="kc-video-meta">
+            {%- if section.settings.featured_video_views != blank -%}
+              <span>{{ section.settings.featured_video_views }}</span>
+              <span class="kc-meta-sep">·</span>
+            {%- endif -%}
+            {%- if section.settings.featured_video_date != blank -%}
+              <span>{{ section.settings.featured_video_date }}</span>
+            {%- endif -%}
+          </div>
+        </div>
+
+        {%- comment -%} Latest uploads — up to 3 video blocks {%- endcomment -%}
+        <div class="kc-latest-videos">
+          <h4 class="kc-latest-title">Latest Uploads</h4>
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'video' -%}
+              <a
+                href="{{ block.settings.url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="kc-video-row"
+                {{ block.shopify_attributes }}
+              >
+                <div class="kc-video-thumb kc-video-thumb--small">
+                  {%- if block.settings.thumbnail != blank -%}
+                    <img
+                      src="{{ block.settings.thumbnail | image_url: width: 240 }}"
+                      alt="{{ block.settings.title | escape }}"
+                      width="240"
+                      height="135"
+                      loading="lazy"
+                    />
+                  {%- else -%}
+                    <div class="kc-video-placeholder"></div>
+                  {%- endif -%}
+                  <div class="kc-play-btn kc-play-btn--sm">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                  </div>
+                  {%- if block.settings.duration != blank -%}
+                    <span class="kc-video-duration kc-video-duration--sm">{{ block.settings.duration }}</span>
+                  {%- endif -%}
+                </div>
+                <div class="kc-video-info">
+                  <p class="kc-video-row-title">{{ block.settings.title | escape }}</p>
+                  {%- if block.settings.date != blank -%}
+                    <span class="kc-video-row-date">{{ block.settings.date }}</span>
+                  {%- endif -%}
+                </div>
+              </a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+
+      <div class="kc-view-all">
+        <a href="{{ section.settings.tutorials_url | default: '#' }}" class="kc-view-all-btn">
+          Watch all Tutorials
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    {%- comment -%} ── Section 3: Case Studies ───────────────────────────────── {%- endcomment -%}
+    <section id="kc-case-studies" class="kc-section">
+      <div class="kc-section-heading-group kc-mb-8">
+        <div class="kc-heading-bar"></div>
+        <h2 class="kc-section-title">Case Studies</h2>
+      </div>
+
+      {%- assign case_studies = shop.metaobjects['case_study'].values -%}
+      {%- if case_studies.size > 0 -%}
+        <div class="kc-cards-grid">
+          {%- for cs in case_studies limit: 3 -%}
+            <div class="kc-card">
+              <div class="kc-card-image">
+                {%- if cs.image.value != blank -%}
+                  <img
+                    src="{{ cs.image.value | image_url: width: 600 }}"
+                    alt="{{ cs.title.value | escape }}"
+                    width="600"
+                    height="338"
+                    loading="lazy"
+                  />
+                {%- else -%}
+                  <div class="kc-card-image-placeholder"></div>
+                {%- endif -%}
+                {%- if cs.category.value != blank -%}
+                  <span class="kc-badge kc-badge--green">{{ cs.category.value | escape }}</span>
+                {%- endif -%}
+              </div>
+              <div class="kc-card-body">
+                <h3 class="kc-card-title">{{ cs.title.value | escape }}</h3>
+                <p class="kc-card-desc">{{ cs.description.value | escape }}</p>
+                <div class="kc-card-footer">
+                  <a href="{{ cs.link.value | default: '#' }}" class="kc-btn kc-btn--primary kc-btn--sm">Read Case Study</a>
+                  {%- if cs.read_time.value != blank -%}
+                    <span class="kc-read-time">{{ cs.read_time.value }}</span>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- else -%}
+        <p class="kc-empty">No case studies available yet.</p>
+      {%- endif -%}
+
+      <div class="kc-view-all">
+        <a href="{{ section.settings.case_studies_url | default: '#' }}" class="kc-view-all-btn">
+          View all Case Studies
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    {%- comment -%} ── Section 4: Blogs ──────────────────────────────────────── {%- endcomment -%}
+    <section id="kc-blogs" class="kc-section">
+      <div class="kc-section-heading-group kc-mb-8">
+        <div class="kc-heading-bar"></div>
+        <h2 class="kc-section-title">Blogs</h2>
+      </div>
+
+      {%- assign kc_blog = blogs['news'] -%}
+      {%- if kc_blog.articles.size > 0 -%}
+        <div class="kc-cards-grid">
+          {%- for article in kc_blog.articles limit: 3 -%}
+            <a href="{{ article.url }}" class="kc-card kc-card--blog">
+              <div class="kc-card-image">
+                {%- if article.image != blank -%}
+                  <img
+                    src="{{ article.image | image_url: width: 600 }}"
+                    alt="{{ article.image.alt | default: article.title | escape }}"
+                    width="600"
+                    height="300"
+                    loading="lazy"
+                  />
+                {%- else -%}
+                  <div class="kc-card-image-placeholder kc-card-image-placeholder--blog"></div>
+                {%- endif -%}
+                {%- if article.tags.size > 0 -%}
+                  <span class="kc-badge kc-badge--white">{{ article.tags.first }}</span>
+                {%- endif -%}
+              </div>
+              <div class="kc-card-body">
+                <h3 class="kc-card-title">{{ article.title | escape }}</h3>
+                <div class="kc-article-meta">
+                  <span>{{ article.published_at | date: '%b %d, %Y' }}</span>
+                  {%- if article.read_time != blank -%}
+                    <span class="kc-meta-sep">·</span>
+                    <span>{{ article.read_time }} min read</span>
+                  {%- endif -%}
+                </div>
+                <p class="kc-card-desc">{{ article.excerpt | strip_html | truncate: 120 }}</p>
+                <span class="kc-read-link">
+                  Read Article
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </span>
+              </div>
+            </a>
+          {%- endfor -%}
+        </div>
+      {%- else -%}
+        <p class="kc-empty">No blog posts available yet.</p>
+      {%- endif -%}
+
+      <div class="kc-view-all">
+        <a href="{{ kc_blog.url }}" class="kc-view-all-btn">
+          Read all Blog Posts
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="{{ 'knowledge-center.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Knowledge Center",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Featured Tutorial Video"
+    },
+    {
+      "type": "text",
+      "id": "featured_video_url",
+      "label": "Video URL",
+      "placeholder": "https://www.youtube.com/watch?v=..."
+    },
+    {
+      "type": "text",
+      "id": "featured_video_title",
+      "label": "Video Title",
+      "default": "Featured Tutorial"
+    },
+    {
+      "type": "image_picker",
+      "id": "featured_video_thumbnail",
+      "label": "Thumbnail Image"
+    },
+    {
+      "type": "text",
+      "id": "featured_video_duration",
+      "label": "Duration",
+      "placeholder": "5:24"
+    },
+    {
+      "type": "text",
+      "id": "featured_video_views",
+      "label": "View count (display only)",
+      "placeholder": "12.4K views"
+    },
+    {
+      "type": "text",
+      "id": "featured_video_date",
+      "label": "Upload date (display only)",
+      "placeholder": "Mar 2024"
+    },
+    {
+      "type": "header",
+      "content": "View All Links"
+    },
+    {
+      "type": "url",
+      "id": "tutorials_url",
+      "label": "Watch All Tutorials link"
+    },
+    {
+      "type": "url",
+      "id": "case_studies_url",
+      "label": "View All Case Studies link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Latest Video",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "url",
+          "label": "Video URL"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "thumbnail",
+          "label": "Thumbnail"
+        },
+        {
+          "type": "text",
+          "id": "duration",
+          "label": "Duration",
+          "placeholder": "2:15"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Upload date",
+          "placeholder": "Apr 2024"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Knowledge Center"
+    }
+  ]
+}
+{% endschema %}
