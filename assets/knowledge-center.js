@@ -39,10 +39,14 @@
   };
 
   // ── Scroll-to on click ──────────────────────────────────────────────────────
-  // Suppress the IntersectionObserver during programmatic scroll so it doesn't
-  // override the active state mid-animation.
+  // Suppress the IntersectionObserver during programmatic scroll and on initial
+  // load so it doesn't override the default active state.
   let scrollingTimer = null;
-  let isScrolling = false;
+  let isScrolling = true; // suppress on load
+
+  // Set first tab active by default, then release observer after render settles
+  setActive(sectionIds[0]);
+  setTimeout(() => { isScrolling = false; }, 600);
 
   navButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
