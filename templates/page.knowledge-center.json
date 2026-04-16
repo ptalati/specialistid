@@ -1,9 +1,62 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-knowledge-center",
-      "settings": {}
+      "blocks": {
+        "video_c3KWPP": {
+          "type": "video",
+          "settings": {
+            "url": "",
+            "title": "Test",
+            "duration": "12:05",
+            "date": "2025-03-03"
+          }
+        },
+        "video_A378FT": {
+          "type": "video",
+          "settings": {
+            "url": "",
+            "title": "Test",
+            "duration": "12:05",
+            "date": "2025-03-03"
+          }
+        },
+        "video_XXfkNM": {
+          "type": "video",
+          "settings": {
+            "url": "",
+            "title": "Test",
+            "duration": "12:05",
+            "date": "2025-03-03"
+          }
+        }
+      },
+      "block_order": [
+        "video_c3KWPP",
+        "video_A378FT",
+        "video_XXfkNM"
+      ],
+      "settings": {
+        "featured_video_url": "",
+        "featured_video_title": "Featured Tutorial",
+        "featured_video_duration": "",
+        "featured_video_views": "",
+        "featured_video_date": "",
+        "tutorials_url": "",
+        "case_studies_url": ""
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }
