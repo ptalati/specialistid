@@ -20,37 +20,63 @@
   // Re-measure after a short delay to catch any header animations on load
   setTimeout(setHeaderOffset, 300);
 
-  const NAV_OFFSET = header ? Math.round(header.getBoundingClientRect().height) + 16 : 80;
+  const kcNav = document.querySelector('.kc-nav-wrapper');
+  const NAV_OFFSET = () => {
+    const hh = header ? Math.round(header.getBoundingClientRect().height) : 0;
+    const nh = kcNav  ? Math.round(kcNav.getBoundingClientRect().height)  : 0;
+    return hh + nh + 8;
+  };
 
   // ── Nav buttons & section targets ──────────────────────────────────────────
   const navButtons = document.querySelectorAll('.kc-nav-btn');
   const sectionIds = Array.from(navButtons).map((btn) => btn.dataset.target);
 
+  // ── Active state ────────────────────────────────────────────────────────────
+  const setActive = (id) => {
+    navButtons.forEach((btn) => {
+      btn.classList.toggle('kc-nav-btn--active', btn.dataset.target === id);
+    });
+  };
+
   // ── Scroll-to on click ──────────────────────────────────────────────────────
+  // Suppress the IntersectionObserver during programmatic scroll so it doesn't
+  // override the active state mid-animation.
+  let scrollingTimer = null;
+  let isScrolling = false;
+
   navButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
       const target = document.getElementById(btn.dataset.target);
       if (!target) return;
-      const top = target.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
+
+      // Set active immediately from the click
+      setActive(btn.dataset.target);
+      isScrolling = true;
+
+      const top = target.getBoundingClientRect().top + window.scrollY - NAV_OFFSET();
       window.scrollTo({ top, behavior: 'smooth' });
+
+      // Re-enable observer once scroll settles (~800ms is enough for smooth scroll)
+      clearTimeout(scrollingTimer);
+      scrollingTimer = setTimeout(() => { isScrolling = false; }, 800);
     });
   });
 
-  // ── Active state via IntersectionObserver ───────────────────────────────────
-  const setActive = (id) => {
-    navButtons.forEach((btn) => {
-      const isActive = btn.dataset.target === id;
-      btn.classList.toggle('kc-nav-btn--active', isActive);
-    });
+  // ── Active state via IntersectionObserver (scroll-based) ────────────────────
+  const getObserverMargin = () => {
+    const hh = header ? Math.round(header.getBoundingClientRect().height) : 0;
+    const nh = kcNav  ? Math.round(kcNav.getBoundingClientRect().height)  : 0;
+    return `${hh + nh}px`;
   };
 
   const observer = new IntersectionObserver(
     (entries) => {
+      if (isScrolling) return; // ignore during click-triggered scroll
       entries.forEach((entry) => {
         if (entry.isIntersecting) setActive(entry.target.id);
       });
     },
-    { rootMargin: `-${NAV_OFFSET}px 0px -55% 0px` }
+    { rootMargin: `-${getObserverMargin()} 0px -50% 0px` }
   );
 
   sectionIds.forEach((id) => {
