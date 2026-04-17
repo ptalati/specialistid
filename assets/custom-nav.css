@@ -1,0 +1,149 @@
+/* =========================================================
+   Custom Desktop Navigation — replaces Meteor Menu
+   ========================================================= */
+
+/* --- Nav bar --- */
+.custom-nav__bar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 1700px) {
+  .custom-nav__bar {
+    gap: 10px;
+  }
+}
+
+.custom-nav__item {
+  position: static;
+}
+
+.custom-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  color: rgba(58, 58, 60, 0.75);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 6px 0;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.custom-nav__link:hover,
+.custom-nav__link:focus-visible,
+.custom-nav__item--open .custom-nav__link {
+  color: rgba(58, 58, 60, 1);
+  outline: none;
+}
+
+.custom-nav__link:focus-visible {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.custom-nav__caret {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  vertical-align: middle;
+  transition: transform 0.15s ease;
+}
+
+.custom-nav__item--open .custom-nav__caret {
+  transform: rotate(180deg);
+}
+
+/* --- Dropdown panel --- */
+
+/* .header__menu-below must be position: relative (set in header.liquid) */
+.custom-nav__dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 4;
+  background-color: rgba(255, 255, 255, 1);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.custom-nav__item--open .custom-nav__dropdown {
+  display: block;
+}
+
+.custom-nav__dropdown-inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  padding: 15px;
+  gap: 0;
+  max-width: 100%;
+}
+
+/* --- Tiles --- */
+.custom-nav__tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90px;
+  text-decoration: none;
+  color: rgb(30, 30, 30);
+  cursor: pointer;
+  padding: 6px 4px;
+  border-radius: 4px;
+  transition: background-color 0.15s ease;
+}
+
+.custom-nav__tile:hover,
+.custom-nav__tile:focus-visible {
+  background-color: rgba(0, 0, 0, 0.04);
+  color: rgb(0, 0, 0);
+  outline: none;
+}
+
+.custom-nav__tile:focus-visible {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+.custom-nav__tile-img {
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.custom-nav__tile-img--placeholder {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.custom-nav__tile-label {
+  font-size: 11px;
+  font-weight: 400;
+  font-family: Poppins, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: inherit;
+  margin-top: 5px;
+  line-height: 1.2;
+  word-break: break-word;
+}

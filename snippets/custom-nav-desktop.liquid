@@ -1,0 +1,79 @@
+{%- comment -%}
+  Custom desktop navigation — replaces Meteor Menu app block.
+  Driven by Shopify's native menu linklist (section.settings.menu).
+  Images: custom.nav_image metafield (file_reference) on each child link,
+  with fallback to the collection or product featured image.
+
+  Usage: {% render 'custom-nav-desktop', menu: section.settings.menu %}
+{%- endcomment -%}
+
+<ul class="custom-nav__bar" role="menubar" aria-label="Main navigation">
+  {%- for link in menu.links -%}
+    <li class="custom-nav__item" role="none">
+      <a
+        href="{{ link.url }}"
+        class="custom-nav__link"
+        role="menuitem"
+        tabindex="0"
+        {%- if link.links != blank %}
+          aria-haspopup="true"
+          aria-expanded="false"
+        {%- endif %}
+        {%- if link.current %} aria-current="page"{% endif %}
+      >
+        {{- link.title | escape -}}
+        {%- if link.links != blank -%}
+          <svg
+            width="20" height="20" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            class="custom-nav__caret"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M10 14a.997.997 0 0 1-.707-.293l-5-5a.999.999 0 1 1 1.414-1.414l4.293 4.293 4.293-4.293a.999.999 0 1 1 1.414 1.414l-5 5a.997.997 0 0 1-.707.293z" fill="currentColor"/>
+          </svg>
+        {%- endif -%}
+      </a>
+
+      {%- if link.links != blank -%}
+        <div
+          class="custom-nav__dropdown"
+          role="menu"
+          aria-label="{{ link.title | escape }} submenu"
+          tabindex="-1"
+        >
+          <div class="custom-nav__dropdown-inner">
+            {%- for childlink in link.links -%}
+              {%- comment -%} Option B: metafield image; Option A fallback: collection/product image {%- endcomment -%}
+              {%- assign nav_img = childlink.metafields.custom.nav_image -%}
+              {%- if nav_img == blank -%}
+                {%- if childlink.type == 'collection_link' -%}
+                  {%- assign nav_img = childlink.object.image -%}
+                {%- elsif childlink.type == 'product_link' -%}
+                  {%- assign nav_img = childlink.object.featured_image -%}
+                {%- endif -%}
+              {%- endif -%}
+
+              <a
+                href="{{ childlink.url }}"
+                class="custom-nav__tile"
+                role="menuitem"
+                tabindex="-1"
+                {%- if childlink.current %} aria-current="page"{% endif %}
+              >
+                <div
+                  class="custom-nav__tile-img{% if nav_img == blank %} custom-nav__tile-img--placeholder{% endif %}"
+                  aria-hidden="true"
+                  {%- if nav_img != blank %}
+                    style="background-image: url('{{ nav_img | image_url: width: 200 }}')"
+                  {%- endif %}
+                ></div>
+                <span class="custom-nav__tile-label">{{ childlink.title | escape }}</span>
+              </a>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+    </li>
+  {%- endfor -%}
+</ul>

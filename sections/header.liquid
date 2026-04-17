@@ -16,6 +16,11 @@
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
+{%- if section.settings.menu_type_desktop == 'custom' -%}
+  <link rel="stylesheet" href="{{ 'custom-nav.css' | asset_url }}" media="print" onload="this.media='all'">
+  <script src="{{ 'custom-nav.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
 <style>
   header-drawer {
     justify-self: start;
@@ -126,19 +131,6 @@
       line-height: 24px;
       letter-spacing: 0;
       opacity:1;
-  }
-
-  .meteor-menu {
-      margin-top: 6px !important;
-  }
-
-  a.Meteor-Navigation__Link__desktop {
-    font-size: 14px !important;
-    font-weight: 400 !important;
-    line-height: 100%;
-    letter-spacing: 0 !important;
-    text-transform: capitalize !important;
-    color: rgba(58, 58, 60, 0.75) !important;
   }
 
   a.header__icon.header__icon--custom.link.Sample svg {
@@ -306,8 +298,9 @@
   .menu-opening svg.icon.icon-close {     margin-left: 20px; }
   .menu-opening svg.icon.icon-close path {     fill: #f5911f; }
 
-  @media (max-width: 1700px) {
-    #meteor-desktop-nav {    gap: 10px !important;}
+  /* Custom nav needs header__menu-below as positioning context for full-width dropdown */
+  .header__menu-below {
+    position: relative;
   }
 
  @media (max-width: 1120px) {
@@ -621,7 +614,9 @@ a.menu-drawer__account.header__icon.link.focus-inset.h5.medium-hide.large-up-hid
 {%- if section.settings.menu != blank and section.settings.menu_position == 'below_fullscreen' -%}
   <div class="header__menu-below header-wrapper--border-bottom" role="navigation" aria-label="Main menu below header">
     <div class="header__menu-below-inner page-width">
-      {%- if section.settings.menu_type_desktop == 'dropdown' -%}
+      {%- if section.settings.menu_type_desktop == 'custom' -%}
+        {% render 'custom-nav-desktop', menu: section.settings.menu %}
+      {%- elsif section.settings.menu_type_desktop == 'dropdown' -%}
         {% render 'header-dropdown-menu' %}
       {%- elsif section.settings.menu_type_desktop != 'drawer' -%}
         {% render 'header-mega-menu' %}
@@ -864,6 +859,10 @@ a.menu-drawer__account.header__icon.link.focus-inset.h5.medium-hide.large-up-hid
         {
           "value": "drawer",
           "label": "t:sections.header.settings.menu_type_desktop.options__3.label"
+        },
+        {
+          "value": "custom",
+          "label": "Custom Nav (image tiles)"
         }
       ],
       "default": "dropdown",
