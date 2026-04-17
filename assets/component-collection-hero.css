@@ -120,23 +120,32 @@
   font-size: 1.6rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   max-width: 100%;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+}
+
+@media screen and (max-width: 749px) {
+  .collection-hero__title + .collection-hero__description-wrapper .collection-hero__description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .collection-hero__description-wrapper--expanded .collection-hero__description,
+  .collection-hero__description-wrapper--no-clamp .collection-hero__description {
+    -webkit-line-clamp: unset;
+    display: block;
+    overflow: visible;
+  }
 }
 
 @media screen and (min-width: 750px) {
   .collection-hero__title + .collection-hero__description-wrapper .collection-hero__description {
     font-size: 1.8rem;
   }
-}
 
-.collection-hero__description-wrapper--expanded .collection-hero__description,
-.collection-hero__description-wrapper--no-clamp .collection-hero__description {
-  -webkit-line-clamp: unset;
-  display: block;
-  overflow: visible;
+  .collection-hero__description-toggle {
+    display: none !important;
+  }
 }
 
 .collection-hero__description-toggle {
