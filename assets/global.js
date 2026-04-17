@@ -751,8 +751,13 @@ class SliderComponent extends HTMLElement {
     this.sliderItemsToShow = Array.from(this.sliderItems).filter((element) => element.clientWidth > 0);
     if (this.sliderItemsToShow.length < 2) return;
     this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
+    this.cachedSliderWidth = this.slider.clientWidth;
+    this.sliderItemsToShow.forEach((element) => {
+      element.dataset.cachedOffsetLeft = element.offsetLeft;
+      element.dataset.cachedWidth = element.clientWidth;
+    });
     this.slidesPerPage = Math.floor(
-      (this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset
+      (this.cachedSliderWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset
     );
     this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
     this.update();
@@ -803,8 +808,12 @@ class SliderComponent extends HTMLElement {
   }
 
   isSlideVisible(element, offset = 0) {
-    const lastVisibleSlide = this.slider.clientWidth + this.slider.scrollLeft - offset;
-    return element.offsetLeft + element.clientWidth <= lastVisibleSlide && element.offsetLeft >= this.slider.scrollLeft;
+    const scrollLeft = this.slider.scrollLeft;
+    const sliderWidth = this.cachedSliderWidth ?? this.slider.clientWidth;
+    const elementLeft = element.dataset.cachedOffsetLeft != null ? Number(element.dataset.cachedOffsetLeft) : element.offsetLeft;
+    const elementWidth = element.dataset.cachedWidth != null ? Number(element.dataset.cachedWidth) : element.clientWidth;
+    const lastVisibleSlide = sliderWidth + scrollLeft - offset;
+    return elementLeft + elementWidth <= lastVisibleSlide && elementLeft >= scrollLeft;
   }
 
   onButtonClick(event) {
