@@ -130,8 +130,8 @@
     overflow: hidden;
   }
 
-  .collection-hero__description-wrapper--expanded .collection-hero__description,
-  .collection-hero__description-wrapper--no-clamp .collection-hero__description {
+  .collection-hero__title + .collection-hero__description-wrapper--expanded .collection-hero__description,
+  .collection-hero__title + .collection-hero__description-wrapper--no-clamp .collection-hero__description {
     -webkit-line-clamp: unset;
     display: block;
     overflow: visible;
