@@ -1,5 +1,25 @@
 (() => {
+  // Eject Meteor Menu if its global ScriptTag injects into our nav bar.
+  // Meteor's app script runs store-wide regardless of app block removal.
+  function ejectMeteorFromCustomNav() {
+    const bar = document.querySelector('.custom-nav__bar');
+    if (!bar) return;
+
+    function clean() {
+      const meteor = bar.querySelector('#meteor-desktop-nav');
+      if (meteor) meteor.remove();
+      bar.removeAttribute('data-meteor-mounted');
+      bar.removeAttribute('data-meteor-platform');
+    }
+
+    clean();
+    const observer = new MutationObserver(clean);
+    observer.observe(bar, { childList: true, attributes: true });
+  }
+
   function initCustomNav() {
+    ejectMeteorFromCustomNav();
+
     const items = document.querySelectorAll('.custom-nav__item');
     if (!items.length) return;
 

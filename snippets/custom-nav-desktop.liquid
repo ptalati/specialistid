@@ -7,8 +7,10 @@
   Usage: {% render 'custom-nav-desktop', menu: section.settings.menu %}
 {%- endcomment -%}
 
+{%- assign nav_menu = menu | default: linklists['main-menu'] -%}
+
 <ul class="custom-nav__bar" role="menubar" aria-label="Main navigation">
-  {%- for link in menu.links -%}
+  {%- for link in nav_menu.links -%}
     <li class="custom-nav__item" role="none">
       <a
         href="{{ link.url }}"
@@ -44,14 +46,13 @@
         >
           <div class="custom-nav__dropdown-inner">
             {%- for childlink in link.links -%}
-              {%- comment -%} Option B: metafield image; Option A fallback: collection/product image {%- endcomment -%}
-              {%- assign nav_img = childlink.metafields.custom.nav_image -%}
-              {%- if nav_img == blank -%}
-                {%- if childlink.type == 'collection_link' -%}
-                  {%- assign nav_img = childlink.object.image -%}
-                {%- elsif childlink.type == 'product_link' -%}
-                  {%- assign nav_img = childlink.object.featured_image -%}
-                {%- endif -%}
+              {%- assign nav_img = blank -%}
+              {%- if childlink.type == 'collection_link' -%}
+                {%- assign nav_img = childlink.object.metafields.custom.nav_image -%}
+                {%- if nav_img == blank -%}{%- assign nav_img = childlink.object.image -%}{%- endif -%}
+              {%- elsif childlink.type == 'product_link' -%}
+                {%- assign nav_img = childlink.object.metafields.custom.nav_image -%}
+                {%- if nav_img == blank -%}{%- assign nav_img = childlink.object.featured_image -%}{%- endif -%}
               {%- endif -%}
 
               <a
