@@ -17,8 +17,63 @@
         {{- collection.title | escape -}}
       </h1>
 
-      {%- if section.settings.show_collection_description -%}
-        <div class="collection-hero__description rte">{{ collection.description }}</div>
+      {%- if section.settings.show_collection_description and collection.description != blank -%}
+        <div class="collection-hero__description-wrapper" data-collection-description>
+          <div class="collection-hero__description rte" data-collection-description-content>
+            {{ collection.description }}
+          </div>
+          <button
+            type="button"
+            class="collection-hero__description-toggle"
+            data-collection-description-toggle
+            aria-expanded="false"
+            hidden
+          >
+            <span data-collection-description-toggle-label>Read More</span>
+            <svg class="collection-hero__description-toggle-icon" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <script>
+          (function () {
+            var wrapper = document.currentScript.previousElementSibling;
+            if (!wrapper || !wrapper.matches('[data-collection-description]')) return;
+            var content = wrapper.querySelector('[data-collection-description-content]');
+            var toggle = wrapper.querySelector('[data-collection-description-toggle]');
+            var label = wrapper.querySelector('[data-collection-description-toggle-label]');
+            if (!content || !toggle || !label) return;
+            var labelMore = 'Read More';
+            var labelLess = 'Read Less';
+
+            function evaluateOverflow() {
+              wrapper.classList.remove('collection-hero__description-wrapper--expanded');
+              toggle.setAttribute('aria-expanded', 'false');
+              label.textContent = labelMore;
+              var overflowing = content.scrollHeight - content.clientHeight > 1;
+              toggle.hidden = !overflowing;
+              if (!overflowing) {
+                wrapper.classList.add('collection-hero__description-wrapper--no-clamp');
+              } else {
+                wrapper.classList.remove('collection-hero__description-wrapper--no-clamp');
+              }
+            }
+
+            toggle.addEventListener('click', function () {
+              var expanded = wrapper.classList.toggle('collection-hero__description-wrapper--expanded');
+              toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+              label.textContent = expanded ? labelLess : labelMore;
+            });
+
+            evaluateOverflow();
+
+            var resizeTimer;
+            window.addEventListener('resize', function () {
+              clearTimeout(resizeTimer);
+              resizeTimer = setTimeout(evaluateOverflow, 150);
+            });
+          })();
+        </script>
       {%- endif -%}
     </div>
 
