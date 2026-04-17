@@ -218,9 +218,19 @@
           "reload_in_unsupported_themes": true
         }
       },
+      "5140161176031010482": {
+        "type": "shopify://apps/dr-cart-shipping-rates/blocks/instant-load/6fdcf202-26c0-4288-be36-8b389f5d262c",
+        "disabled": false,
+        "settings": {}
+      },
+      "2567389343055140935": {
+        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
+        "disabled": false,
+        "settings": {}
+      },
       "12645029315662244871": {
         "type": "shopify://apps/meteor-mega-menu/blocks/app_embed/9412d6a7-f8f8-4d65-b9ae-2737c2f0f45b",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "navigation_link_caret_style": "outline",
           "navigation_link_spacing": 16,
@@ -241,16 +251,6 @@
           "mobile_nav_selector": "",
           "addons_enabled": false
         }
-      },
-      "5140161176031010482": {
-        "type": "shopify://apps/dr-cart-shipping-rates/blocks/instant-load/6fdcf202-26c0-4288-be36-8b389f5d262c",
-        "disabled": false,
-        "settings": {}
-      },
-      "2567389343055140935": {
-        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
-        "disabled": false,
-        "settings": {}
       }
     },
     "color_schemes": {
