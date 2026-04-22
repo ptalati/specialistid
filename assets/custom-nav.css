@@ -133,6 +133,11 @@
   flex-shrink: 0;
 }
 
+/* Override base.css "div:empty { display:none }" — tile-img is an empty div with a background-image */
+.custom-nav__tile .custom-nav__tile-img {
+  display: block;
+}
+
 .custom-nav__tile-img--placeholder {
   background-color: rgba(0, 0, 0, 0.05);
 }
