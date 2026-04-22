@@ -1,0 +1,179 @@
+{{ 'case-studies.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign case_studies = shop.metaobjects['case_study'].values
+-%}
+
+<div class="cs-page">
+
+  {%- comment -%} ── Page header ─────────────────────────────────────────────── {%- endcomment -%}
+  <div class="cs-header">
+    <div class="cs-header-inner">
+      <h1 class="cs-title">Case Studies</h1>
+      <p class="cs-subtitle">Real-world results from organisations that trust SpecialistId for their badge and ID solutions.</p>
+    </div>
+  </div>
+
+  <div class="cs-body">
+
+    {%- comment -%} ── Controls: category pills + search ───────────────────────── {%- endcomment -%}
+    <div class="cs-controls">
+      <div class="cs-pills" id="cs-pills" role="group" aria-label="Filter by category">
+        {%- comment -%} Pills built by JS from data-category attributes {%- endcomment -%}
+      </div>
+      <div class="cs-search-wrap">
+        <svg class="cs-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input
+          id="cs-search"
+          class="cs-search-input"
+          type="text"
+          placeholder="Search case studies…"
+          aria-label="Search case studies"
+          autocomplete="off"
+        />
+      </div>
+    </div>
+
+    {%- comment -%} ── Card grid ───────────────────────────────────────────────── {%- endcomment -%}
+    {%- if case_studies.size > 0 -%}
+
+      <div
+        class="cs-grid"
+        id="cs-grid"
+        data-per-page="{{ section.settings.items_per_page | default: 9 }}"
+      >
+        {%- for cs in case_studies -%}
+          <article
+            class="cs-card"
+            data-title="{{ cs.title.value | downcase | escape }}"
+            data-category="{{ cs.category.value | escape }}"
+          >
+            {%- comment -%} ── Card image ────────────────────────────────────── {%- endcomment -%}
+            <div class="cs-card-image">
+              {%- if cs.image.value != blank -%}
+                <img
+                  src="{{ cs.image.value | image_url: width: 600 }}"
+                  alt="{{ cs.title.value | escape }}"
+                  width="600"
+                  height="338"
+                  loading="lazy"
+                />
+              {%- else -%}
+                <div class="cs-card-image-placeholder" aria-hidden="true"></div>
+              {%- endif -%}
+              {%- if cs.category.value != blank -%}
+                <span class="cs-badge">{{ cs.category.value | escape }}</span>
+              {%- endif -%}
+            </div>
+
+            {%- comment -%} ── Card body ─────────────────────────────────────── {%- endcomment -%}
+            <div class="cs-card-body">
+              <h3 class="cs-card-title">{{ cs.title.value | escape }}</h3>
+              {%- if cs.description.value != blank -%}
+                <p class="cs-card-desc">{{ cs.description.value | truncate: 140 | escape }}</p>
+              {%- endif -%}
+              <div class="cs-card-footer">
+                <a
+                  href="{{ cs.link.value | default: '#' }}"
+                  class="cs-btn"
+                  {% unless cs.link.value == blank %}
+                    aria-label="Read {{ cs.title.value | escape }} case study"
+                  {% endunless %}
+                >
+                  Read Case Study
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"/>
+                  </svg>
+                </a>
+                <span class="cs-card-meta">
+                  {%- if cs.read_time.value != blank -%}
+                    {{ cs.read_time.value | escape }}
+                  {%- endif -%}
+                  {%- if cs.read_time.value != blank and cs.date.value != blank -%}
+                    &nbsp;&bull;&nbsp;
+                  {%- endif -%}
+                  {%- if cs.date.value != blank -%}
+                    {{ cs.date.value | escape }}
+                  {%- endif -%}
+                </span>
+              </div>
+            </div>
+          </article>
+        {%- endfor -%}
+      </div>
+
+      {%- comment -%} ── No results ────────────────────────────────────────────── {%- endcomment -%}
+      <div class="cs-empty" id="cs-no-results" hidden aria-live="polite">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <p class="cs-empty-title">No case studies found</p>
+        <p class="cs-empty-sub">Try adjusting your search or category filter.</p>
+      </div>
+
+      {%- comment -%} ── Pagination ────────────────────────────────────────────── {%- endcomment -%}
+      <nav class="cs-pagination" id="cs-pagination" aria-label="Pagination"></nav>
+
+    {%- else -%}
+      <div class="cs-empty">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+        <p class="cs-empty-title">No case studies available yet.</p>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} ── Footer CTA ──────────────────────────────────────────────── {%- endcomment -%}
+    {%- if section.settings.contact_url != blank -%}
+      <div class="cs-cta">
+        <div class="cs-cta-inner">
+          <h2 class="cs-cta-title">Have a success story?</h2>
+          <p class="cs-cta-text">We'd love to feature how your organisation uses SpecialistId products. Get in touch and tell us about your experience.</p>
+          <a href="{{ section.settings.contact_url }}" class="cs-cta-btn">
+            {{ section.settings.contact_label | default: 'Contact Us' }}
+          </a>
+        </div>
+      </div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+<script src="{{ 'case-studies.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Case Studies",
+  "tag": "section",
+  "class": "cs-section",
+  "settings": [
+    {
+      "type": "number",
+      "id": "items_per_page",
+      "label": "Items per page",
+      "default": 9,
+      "info": "Number of cards per pagination page. Recommended: 6 or 9."
+    },
+    {
+      "type": "url",
+      "id": "contact_url",
+      "label": "Contact URL",
+      "info": "Link for the footer CTA. Leave blank to hide the CTA section entirely."
+    },
+    {
+      "type": "text",
+      "id": "contact_label",
+      "label": "Contact button label",
+      "default": "Contact Us"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Case Studies"
+    }
+  ]
+}
+{% endschema %}
