@@ -20,14 +20,20 @@
 <ul class="custom-nav__bar" role="menubar" aria-label="Main navigation">
   {%- for link in nav_menu.links -%}
 
-    {%- comment -%} Detect dropdown style by URL pattern — works for HTTP and native link types {%- endcomment -%}
+    {%- comment -%}
+      Detect dropdown style by URL pattern — works for HTTP and native link types.
+      "Shop By Industry" and "Customize It" are forced to list style even though their
+      children are collection links — they present as category/concept navigation, not product tiles.
+    {%- endcomment -%}
     {%- assign dropdown_style = 'list' -%}
-    {%- for childlink in link.links -%}
-      {%- if childlink.url contains '/collections/' or childlink.url contains '/products/' -%}
-        {%- assign dropdown_style = 'tiles' -%}
-        {%- break -%}
-      {%- endif -%}
-    {%- endfor -%}
+    {%- unless link.title == 'Shop By Industry' or link.title == 'Customize It' -%}
+      {%- for childlink in link.links -%}
+        {%- if childlink.url contains '/collections/' or childlink.url contains '/products/' -%}
+          {%- assign dropdown_style = 'tiles' -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endunless -%}
 
     <li class="custom-nav__item" role="none">
       <a
