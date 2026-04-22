@@ -1,0 +1,199 @@
+{{ 'tutorials.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign tutorials = shop.metaobjects['tutorial'].values
+-%}
+
+{%- comment -%} ── Video modal (single, populated + cleared by JS) ──────────── {%- endcomment -%}
+<div class="tr-modal" id="tr-modal" hidden aria-modal="true" role="dialog" aria-labelledby="tr-modal-title">
+  <div class="tr-modal-backdrop" id="tr-modal-backdrop"></div>
+  <div class="tr-modal-box">
+    <div class="tr-modal-player">
+      <iframe
+        id="tr-modal-iframe"
+        src=""
+        title="Tutorial video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="tr-modal-info">
+      <div class="tr-modal-text">
+        <h3 class="tr-modal-title" id="tr-modal-title"></h3>
+        <p  class="tr-modal-desc"  id="tr-modal-desc"></p>
+        <div class="tr-modal-meta" id="tr-modal-meta"></div>
+      </div>
+      <button class="tr-modal-close" id="tr-modal-close" aria-label="Close video">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="tr-page">
+
+  {%- comment -%} ── Page header ─────────────────────────────────────────────── {%- endcomment -%}
+  <div class="tr-header">
+    <div class="tr-header-inner">
+      <h1 class="tr-title">Tutorials &amp; Troubleshoot</h1>
+      <p class="tr-subtitle">Master your ID equipment with step-by-step video guides — from printer setup to badge holder demos.</p>
+    </div>
+  </div>
+
+  <div class="tr-body">
+
+    {%- comment -%} ── Controls: category pills + search ───────────────────────── {%- endcomment -%}
+    <div class="tr-controls">
+      <div class="tr-pills" id="tr-pills" role="group" aria-label="Filter by category">
+        {%- comment -%} Pills built by JS from data-category attrs — placeholder here {%- endcomment -%}
+      </div>
+      <div class="tr-search-wrap">
+        <svg class="tr-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input
+          id="tr-search"
+          class="tr-search-input"
+          type="text"
+          placeholder="Find a tutorial…"
+          aria-label="Search tutorials"
+          autocomplete="off"
+        />
+      </div>
+    </div>
+
+    {%- comment -%} ── Video grid ──────────────────────────────────────────────── {%- endcomment -%}
+    {%- if tutorials.size > 0 -%}
+
+      <div class="tr-grid" id="tr-grid">
+        {%- for tut in tutorials -%}
+          <article
+            class="tr-card"
+            data-title="{{ tut.title.value | downcase | escape }}"
+            data-category="{{ tut.category.value | escape }}"
+            data-video-url="{{ tut.video_url.value | escape }}"
+            data-description="{{ tut.description.value | newline_to_br | strip_html | truncate: 200 | escape }}"
+            data-duration="{{ tut.duration.value | escape }}"
+            data-views="{{ tut.views.value | escape }}"
+            data-display-title="{{ tut.title.value | escape }}"
+          >
+            {%- comment -%} ── Thumbnail ─────────────────────────────────────── {%- endcomment -%}
+            <button class="tr-card-thumb" aria-label="Watch: {{ tut.title.value | escape }}">
+              {%- if tut.thumbnail.value != blank -%}
+                <img
+                  src="{{ tut.thumbnail.value | image_url: width: 640 }}"
+                  alt="{{ tut.title.value | escape }}"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                />
+              {%- else -%}
+                <div class="tr-thumb-placeholder" aria-hidden="true"></div>
+              {%- endif -%}
+
+              <div class="tr-play-overlay" aria-hidden="true">
+                <div class="tr-play-btn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <polygon points="5 3 19 12 5 21 5 3" fill="#F5911F"/>
+                  </svg>
+                </div>
+              </div>
+
+              {%- if tut.duration.value != blank -%}
+                <span class="tr-duration-badge" aria-label="Duration: {{ tut.duration.value | escape }}">
+                  {{ tut.duration.value | escape }}
+                </span>
+              {%- endif -%}
+            </button>
+
+            {%- comment -%} ── Card body ─────────────────────────────────────── {%- endcomment -%}
+            <div class="tr-card-body">
+              {%- if tut.category.value != blank -%}
+                <span class="tr-card-cat">{{ tut.category.value | escape }}</span>
+              {%- endif -%}
+
+              <h3 class="tr-card-title">{{ tut.title.value | escape }}</h3>
+
+              {%- if tut.description.value != blank -%}
+                <p class="tr-card-desc">{{ tut.description.value | truncate: 120 | escape }}</p>
+              {%- endif -%}
+
+              <button class="tr-watch-btn" aria-label="Watch {{ tut.title.value | escape }}">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/>
+                </svg>
+                Watch Video
+              </button>
+            </div>
+          </article>
+        {%- endfor -%}
+      </div>
+
+      {%- comment -%} ── No results state ──────────────────────────────────────── {%- endcomment -%}
+      <div class="tr-empty" id="tr-no-results" hidden aria-live="polite">
+        <div class="tr-empty-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </div>
+        <h3 class="tr-empty-title">No tutorials found</h3>
+        <p class="tr-empty-sub">Try adjusting your search or category filter.</p>
+      </div>
+
+    {%- else -%}
+      <div class="tr-empty">
+        <div class="tr-empty-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+          </svg>
+        </div>
+        <h3 class="tr-empty-title">No tutorials available yet.</h3>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} ── Footer CTA ──────────────────────────────────────────────── {%- endcomment -%}
+    <div class="tr-cta">
+      <div class="tr-cta-inner">
+        <h2 class="tr-cta-title">Still need help?</h2>
+        <p class="tr-cta-text">Our support team is available Mon–Fri to help with any technical questions about your ID equipment.</p>
+        {%- if section.settings.contact_url != blank -%}
+          <a href="{{ section.settings.contact_url }}" class="tr-cta-btn">
+            {{ section.settings.contact_label | default: 'Contact Support' }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="{{ 'tutorials.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Tutorials",
+  "tag": "section",
+  "class": "tr-section",
+  "settings": [
+    {
+      "type": "url",
+      "id": "contact_url",
+      "label": "Contact support URL",
+      "info": "Link for the footer CTA button. Leave blank to hide the CTA."
+    },
+    {
+      "type": "text",
+      "id": "contact_label",
+      "label": "Contact button label",
+      "default": "Contact Support"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tutorials"
+    }
+  ]
+}
+{% endschema %}
