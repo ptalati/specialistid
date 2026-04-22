@@ -66,7 +66,7 @@
   transform: rotate(180deg);
 }
 
-/* --- Dropdown panel --- */
+/* --- Dropdown panel (shared) --- */
 
 /* .header__menu-below must be position: relative (set in header.liquid) */
 .custom-nav__dropdown {
@@ -85,6 +85,8 @@
   display: block;
 }
 
+/* --- Style A: image-tile mega menu (collection / product links) --- */
+
 .custom-nav__dropdown-inner {
   display: flex;
   flex-direction: row;
@@ -96,7 +98,6 @@
   max-width: 100%;
 }
 
-/* --- Tiles --- */
 .custom-nav__tile {
   display: flex;
   flex-direction: column;
@@ -146,4 +147,44 @@
   margin-top: 5px;
   line-height: 1.2;
   word-break: break-word;
+}
+
+/* --- Style B: simple text-list dropdown (page / generic links) --- */
+
+.custom-nav__dropdown--list {
+  left: auto;
+  right: auto;
+  min-width: 200px;
+}
+
+.custom-nav__dropdown--list .custom-nav__dropdown-inner {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px 0;
+  gap: 0;
+}
+
+.custom-nav__list-link {
+  display: block;
+  width: 100%;
+  padding: 9px 20px;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(58, 58, 60, 0.85);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.12s ease, color 0.12s ease;
+}
+
+.custom-nav__list-link:hover,
+.custom-nav__list-link:focus-visible {
+  background-color: rgba(0, 0, 0, 0.04);
+  color: rgb(30, 30, 30);
+  outline: none;
+}
+
+.custom-nav__list-link:focus-visible {
+  outline: 2px solid #1a73e8;
+  outline-offset: -2px;
 }
