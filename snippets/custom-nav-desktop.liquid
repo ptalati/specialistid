@@ -2,13 +2,15 @@
   Custom desktop navigation — replaces Meteor Menu app block.
   Driven by Shopify's native menu linklist (section.settings.menu).
 
-  Dropdown style is auto-detected per top-level item:
-    • If children are collection/product links  → image-tile mega menu
-    • If children are page/generic links        → simple text list
+  Dropdown style is auto-detected per top-level item by URL pattern:
+    • Child links containing /collections/ or /products/ → image-tile mega menu
+    • All other child links                              → simple text list
 
-  Images (tile style only):
-    1. collection.metafields.custom.nav_image  (file_reference, set in Admin)
+  Images (tile style only) — resolved by parsing the URL handle:
+    1. collection.metafields.custom.nav_image  (file_reference, set per collection)
     2. Fallback: collection.image / product.featured_image
+
+  Works regardless of whether links are HTTP, collection_link, or product_link type.
 
   Usage: {% render 'custom-nav-desktop', menu: section.settings.menu %}
 {%- endcomment -%}
@@ -18,10 +20,10 @@
 <ul class="custom-nav__bar" role="menubar" aria-label="Main navigation">
   {%- for link in nav_menu.links -%}
 
-    {%- comment -%} Detect dropdown style: any collection/product child → tile mega menu {%- endcomment -%}
+    {%- comment -%} Detect dropdown style by URL pattern — works for HTTP and native link types {%- endcomment -%}
     {%- assign dropdown_style = 'list' -%}
     {%- for childlink in link.links -%}
-      {%- if childlink.type == 'collection_link' or childlink.type == 'product_link' -%}
+      {%- if childlink.url contains '/collections/' or childlink.url contains '/products/' -%}
         {%- assign dropdown_style = 'tiles' -%}
         {%- break -%}
       {%- endif -%}
@@ -66,12 +68,34 @@
 
               {%- for childlink in link.links -%}
                 {%- assign nav_img = blank -%}
+
                 {%- if childlink.type == 'collection_link' -%}
+                  {%- comment -%} Native collection link — use object directly {%- endcomment -%}
                   {%- assign nav_img = childlink.object.metafields.custom.nav_image -%}
                   {%- if nav_img == blank -%}{%- assign nav_img = childlink.object.image -%}{%- endif -%}
+
                 {%- elsif childlink.type == 'product_link' -%}
+                  {%- comment -%} Native product link — use object directly {%- endcomment -%}
                   {%- assign nav_img = childlink.object.metafields.custom.nav_image -%}
                   {%- if nav_img == blank -%}{%- assign nav_img = childlink.object.featured_image -%}{%- endif -%}
+
+                {%- elsif childlink.url contains '/collections/' -%}
+                  {%- comment -%} HTTP collection link — look up by handle from URL {%- endcomment -%}
+                  {%- assign col_handle = childlink.url | split: '/collections/' | last | split: '?' | first | split: '#' | first -%}
+                  {%- assign col_obj = collections[col_handle] -%}
+                  {%- if col_obj -%}
+                    {%- assign nav_img = col_obj.metafields.custom.nav_image -%}
+                    {%- if nav_img == blank -%}{%- assign nav_img = col_obj.image -%}{%- endif -%}
+                  {%- endif -%}
+
+                {%- elsif childlink.url contains '/products/' -%}
+                  {%- comment -%} HTTP product link — look up by handle from URL {%- endcomment -%}
+                  {%- assign prod_handle = childlink.url | split: '/products/' | last | split: '?' | first | split: '#' | first -%}
+                  {%- assign prod_obj = all_products[prod_handle] -%}
+                  {%- if prod_obj -%}
+                    {%- assign nav_img = prod_obj.metafields.custom.nav_image -%}
+                    {%- if nav_img == blank -%}{%- assign nav_img = prod_obj.featured_image -%}{%- endif -%}
+                  {%- endif -%}
                 {%- endif -%}
 
                 <a
