@@ -12,8 +12,9 @@
 
 {%- assign badge_preview_image = product.metafields.productdata.badge_preview_image.value -%}
 {%- assign badge_preview_tab_class = null -%}
+{%- assign badge_preview_bb_type = product.metafields.productdata.custom_bb_type.value | default: product.metafields.productdata.custom_bb_type -%}
 
-{%- case product.metafields.productdata.custom_bb_type -%}
+{%- case badge_preview_bb_type -%}
   {%- when 'Badge Buddy - Horizontal' -%}
     {%- assign badge_preview_overlay_style = 'width:225px;margin-left:20px;margin-top:-226px;height:78px;' -%}
   {%- when 'Badge Buddy - Vertical' -%}
