@@ -192,12 +192,14 @@ p.shipping-description-bottom a {
 </div>
 
 <script>
-  $('.faqq_block').each(function(){
-    $(this).find('.faqq_question').click(function(){
-      $(this).siblings('.faqq_answer').slideToggle().closest('.faqq_block').siblings().find('.faqq_answer').slideUp();
-      $(this).find('.vert').toggleClass('rot').closest('.faqq_block').siblings().find('.faqq_question').find('.vert').removeClass('rot');
+  document.addEventListener('DOMContentLoaded', function () {
+    $('.faqq_block').each(function(){
+      $(this).find('.faqq_question').click(function(){
+        $(this).siblings('.faqq_answer').slideToggle().closest('.faqq_block').siblings().find('.faqq_answer').slideUp();
+        $(this).find('.vert').toggleClass('rot').closest('.faqq_block').siblings().find('.faqq_question').find('.vert').removeClass('rot');
+      })
     })
-  })
+  });
 </script>
 
 {% schema %}
