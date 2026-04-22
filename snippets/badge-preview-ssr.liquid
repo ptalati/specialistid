@@ -1,0 +1,36 @@
+{%- comment -%}
+  Resolves SSR inputs for the Badge Designer initial preview.
+
+  Outputs (set as variables on the caller's scope):
+    - badge_preview_image: MediaImage from product metafield, or null
+    - badge_preview_overlay_style: inline CSS for .selectedColor
+    - badge_preview_tab_class: extra class for #tab2, or null
+
+  Overlay values mirror the per-variant CSS in assets/custom-bb.js so the
+  server-rendered layout matches what the script applies post-hydration.
+{%- endcomment -%}
+
+{%- assign badge_preview_image = product.metafields.productdata.badge_preview_image.value -%}
+{%- assign badge_preview_tab_class = null -%}
+
+{%- case product.metafields.productdata.custom_bb_type -%}
+  {%- when 'Badge Buddy - Horizontal' -%}
+    {%- assign badge_preview_overlay_style = 'width:225px;margin-left:20px;margin-top:-226px;height:78px;' -%}
+  {%- when 'Badge Buddy - Vertical' -%}
+    {%- assign badge_preview_overlay_style = 'width:129px;margin-left:70px;margin-top:-136px;height:86px;' -%}
+  {%- when 'Badge Buddy Clear - Horizontal' -%}
+    {%- assign badge_preview_overlay_style = 'width:244px;margin-left:10px;margin-top:-226px;height:88px;' -%}
+    {%- assign badge_preview_tab_class = 'badge-buddies-clear-horizontal' -%}
+  {%- when 'Badge Buddy Clear - Vertical' -%}
+    {%- assign badge_preview_overlay_style = 'width:146px;margin-left:60px;margin-top:-136px;height:95px;' -%}
+    {%- assign badge_preview_tab_class = 'badge-buddies-clear-vertical' -%}
+  {%- when 'Badge Buddy - XL - Horizontal' -%}
+    {%- assign badge_preview_overlay_style = 'width:183px;margin-left:53px;margin-top:-83px;height:61px;' -%}
+  {%- when 'Badge Buddy - XL - Vertical' -%}
+    {%- assign badge_preview_overlay_style = 'width:122px;margin-left:143px;margin-top:-116px;height:84px;' -%}
+    {%- assign badge_preview_tab_class = 'vertical-badge-buddies-1xl' -%}
+  {%- when 'Badge Bottoms - Horizontal' -%}
+    {%- assign badge_preview_overlay_style = 'width:190px;margin-left:45px;margin-top:-90px;height:61px;' -%}
+  {%- when 'Badge Bottoms - Vertical' -%}
+    {%- assign badge_preview_overlay_style = 'width:129px;margin-left:68px;margin-top:-121px;height:86px;' -%}
+{%- endcase -%}

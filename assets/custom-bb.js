@@ -19,9 +19,22 @@ function sanitizeText(text) {
     return div.innerHTML;
 }
 
+// Skips the first src write when Liquid has already server-rendered the
+// preview image (flagged via data-ssr-rendered). Prevents a double-fetch
+// of the LCP image on initial page load; subsequent variant changes work
+// normally because the flag is removed after the first skip.
+function setSelectedBadgeSrc(url) {
+  var $img = $(".selectedBadge");
+  if ($img.attr("data-ssr-rendered") === "true") {
+    $img.removeAttr("data-ssr-rendered");
+    return;
+  }
+  $img.attr("src", url);
+}
+
 function selectVerticalBadgeBottom() {
   $(".selectedColor").css({width: "129px", "margin-left": "68px", "margin-top": "-121px", height: "86px"});
-  $(".selectedBadge").attr("src", "//cdn.shopify.com/s/files/1/1260/4809/files/bbottomvertical.webp?v=1689698730");
+  setSelectedBadgeSrc("//cdn.shopify.com/s/files/1/1260/4809/files/bbottomvertical.webp?v=1689698730");
 
   $("#imgHorizontal").css("border", "0px");
   $(".horimg").css("display", "none");
@@ -36,7 +49,7 @@ function selectVerticalBadgeBottom() {
 function selectHorizontalBadgeBottom() {
   $(".selectedColor").css({width: "190px", "margin-left": "45px", "margin-top": "-90px", height: "61px"});
   $("#tab1").css({"margin-bottom": "-100px"});
-  $(".selectedBadge").attr("src", "//cdn.shopify.com/s/files/1/1260/4809/files/bbottomhorizon.jpg?v=1689699832");
+  setSelectedBadgeSrc("//cdn.shopify.com/s/files/1/1260/4809/files/bbottomhorizon.jpg?v=1689699832");
 
   $(".verimg").css("display", "none");
   $("#imgHorizontal").css("border", "3px solid #F5911F");
@@ -52,7 +65,7 @@ function selectHorizontalBadgeBottom() {
 function selectHorizontalBadgeBuddiesXL() {
   $(".selectedColor").css({width: "183px", "margin-left": "53px", "margin-top": "-83px", height: "61px"});
   $("#tab1").css({"margin-bottom": "-100px"});
-  $(".selectedBadge").attr('src', '//cdn.shopify.com/s/files/1/1260/4809/products/BB-1XL-CUSTOM-BLUE-H.png?v=1688152738');
+  setSelectedBadgeSrc('//cdn.shopify.com/s/files/1/1260/4809/products/BB-1XL-CUSTOM-BLUE-H.png?v=1688152738');
 
   $(".verimg").css("display", "none");
   $("#imgHorizontal").css("border", "3px solid #F5911F");
@@ -68,7 +81,7 @@ function selectHorizontalBadgeBuddiesXL() {
 function selectVerticalBadgeBuddiesXL() {
   $(".selectedColor").css({width: "122px", "margin-left": "143px", "margin-top": "-116px", height: "84px"});
   $("#tab1").css({"margin-bottom": "-100px"});
-  $(".selectedBadge").attr('src', '//www.specialistid.com/cdn/shop/t/68/assets/BB-1XL-CUSTOM-RED-V_800x800.png?v=136908169347785232851690782186');
+  setSelectedBadgeSrc('//www.specialistid.com/cdn/shop/t/68/assets/BB-1XL-CUSTOM-RED-V_800x800.png?v=136908169347785232851690782186');
 
   $(".verimg").css("display", "none");
   $("#imgVertical").css("border", "3px solid #F5911F");
@@ -85,7 +98,7 @@ function selectVerticalBadgeBuddiesXL() {
 function selectHorizontalClear() {
   $(".selectedColor").css({width: "244px", "margin-left": "10px", "margin-top": "-226px", height: "88px"});
 
-  $(".selectedBadge").attr("src", "//cdn.shopify.com/s/files/1/1260/4809/files/bbhorizontal.webp?v=1689698297");
+  setSelectedBadgeSrc("//cdn.shopify.com/s/files/1/1260/4809/files/bbhorizontal.webp?v=1689698297");
   $(".selectedBadge").css({"pointer-events": "none"});
   $(".textHolder").css({"pointer-events": "auto"});
 
@@ -102,7 +115,7 @@ function selectHorizontalClear() {
 function selectVerticalClear() {
   $(".selectedColor").css({width: "146px", "margin-left": "60px", "margin-top": "-136px", height: "95px"});
 
-  $(".selectedBadge").attr("src", "//cdn.shopify.com/s/files/1/1260/4809/files/bbvertical.webp?v=1689698740");
+  setSelectedBadgeSrc("//cdn.shopify.com/s/files/1/1260/4809/files/bbvertical.webp?v=1689698740");
   $("#imgHorizontal").css("border", "0px");
   $("#imgVertical").css("border", "3px solid #F5911F");
   wide = false;
@@ -116,7 +129,7 @@ function selectVerticalClear() {
 function selectHorizontal() {
   $(".selectedColor").css({width: "225px", "margin-left": "20px", "margin-top": "-226px", height: "78px"});
 
-  $(".selectedBadge").attr("src", "//cdn.shopify.com/s/files/1/1260/4809/files/bbhorizontal.webp?v=1689698297");
+  setSelectedBadgeSrc("//cdn.shopify.com/s/files/1/1260/4809/files/bbhorizontal.webp?v=1689698297");
   $(".selectedBadge").css({"pointer-events": "none"});
   $(".textHolder").css({"pointer-events": "auto"});
 
@@ -132,7 +145,7 @@ function selectHorizontal() {
 function selectVertical() {
   $(".selectedColor").css({width: "129px", "margin-left": "70px", "margin-top": "-136px", height: "86px"});
 
-  $(".selectedBadge").attr("src", "//cdn.shopify.com/s/files/1/1260/4809/files/bbvertical.webp?v=1689698740");
+  setSelectedBadgeSrc("//cdn.shopify.com/s/files/1/1260/4809/files/bbvertical.webp?v=1689698740");
   $("#imgHorizontal").css("border", "0px");
   $("#imgVertical").css("border", "3px solid #F5911F");
   wide = false;
