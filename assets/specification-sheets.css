@@ -186,9 +186,8 @@
   background: var(--ss-bg-soft);
 }
 
-/* Hide native radio, replace with custom dot */
+/* Custom radio button */
 .ss-radio-track {
-  position: relative;
   display: flex;
   align-items: center;
   flex-shrink: 0;
@@ -197,38 +196,35 @@
 .ss-radio {
   appearance: none;
   -webkit-appearance: none;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.8rem;
+  height: 1.8rem;
   border: 2px solid var(--ss-border);
   border-radius: 50%;
   background: #fff;
   cursor: pointer;
-  transition: border-color 0.15s, background 0.15s;
-  display: block;
+  display: grid;
+  place-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.2s;
+}
+
+/* Inner dot — scales in when checked */
+.ss-radio::before {
+  content: '';
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: var(--ss-green);
+  transform: scale(0);
+  transition: transform 0.15s ease;
 }
 
 .ss-radio:checked {
   border-color: var(--ss-green);
-  background: var(--ss-green);
 }
 
-/* White centre dot when checked */
-.ss-radio-dot {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-}
-
-.ss-radio:checked ~ .ss-radio-dot::after {
-  content: '';
-  display: block;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background: #fff;
+.ss-radio:checked::before {
+  transform: scale(1);
 }
 
 .ss-radio-text {
