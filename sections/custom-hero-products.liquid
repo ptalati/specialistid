@@ -1,3 +1,16 @@
+{%- liquid
+  assign hero_preload_block = section.blocks | where: 'type', 'link_card' | first
+  assign hero_preload_image = hero_preload_block.settings.image
+-%}
+{%- if hero_preload_image != blank -%}
+  <link
+    rel="preload"
+    as="image"
+    href="{{ hero_preload_image | image_url: width: 600 }}"
+    fetchpriority="high"
+    type="image/webp">
+{%- endif -%}
+
 {{ 'custom-hero-products.css' | asset_url | stylesheet_tag }}
 
 <div class="hero-products-section color-{{ section.settings.color_scheme }} gradient">
