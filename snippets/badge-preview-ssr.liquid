@@ -12,9 +12,9 @@
 
 {%- assign badge_preview_image = product.metafields.productdata.badge_preview_image.value -%}
 {%- assign badge_preview_tab_class = null -%}
-{%- assign badge_preview_bb_type = product.metafields.productdata.custom_bb_type.value | default: product.metafields.productdata.custom_bb_type -%}
+{%- assign badge_preview_bb_type = product.metafields.productdata.custom_bb_type | append: '' -%}
 
-<!-- badge-preview-ssr debug: bb_type=[{{ badge_preview_bb_type }}] image_present=[{% if badge_preview_image %}yes{% else %}no{% endif %}] image_class=[{{ badge_preview_image.class }}] -->
+<!-- badge-preview-ssr debug: bb_type=[{{ badge_preview_bb_type }}] bb_type_raw=[{{ product.metafields.productdata.custom_bb_type }}] image_mf_present=[{% if product.metafields.productdata.badge_preview_image %}yes{% else %}no{% endif %}] image_value_present=[{% if product.metafields.productdata.badge_preview_image.value %}yes{% else %}no{% endif %}] image_type=[{{ product.metafields.productdata.badge_preview_image.type }}] -->
 
 {%- case badge_preview_bb_type -%}
   {%- when 'Badge Buddy - Horizontal' -%}
