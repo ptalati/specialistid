@@ -1,0 +1,252 @@
+{{ 'specification-sheets.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign specs = shop.metaobjects['specification_sheet'].values
+
+  comment
+    Build a deduplicated category list from all spec metaobjects.
+    Separator "|||" is safe — no product category will contain three pipes.
+  endcomment
+  assign cat_raw = ''
+  for spec in specs
+    assign cat = spec.category.value
+    if cat != blank
+      unless cat_raw contains cat
+        assign cat_raw = cat_raw | append: cat | append: '|||'
+      endunless
+    endif
+  endfor
+  assign categories = cat_raw | split: '|||'
+-%}
+
+<div class="ss-page">
+
+  {%- comment -%} ── Page Header ─────────────────────────────────────────────── {%- endcomment -%}
+  <div class="ss-header-band">
+    <div class="ss-header-inner">
+      <div class="ss-header-text">
+        <h1 class="ss-title">Specification Sheets</h1>
+        <p class="ss-subtitle">Technical documents for every product — filter by category or search by name and SKU.</p>
+      </div>
+      <div class="ss-search-wrap">
+        <svg class="ss-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input
+          id="ss-search"
+          class="ss-search-input"
+          type="text"
+          placeholder="Search by product name or SKU…"
+          aria-label="Search specification sheets"
+          autocomplete="off"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="ss-body">
+
+    {%- comment -%} ── Mobile filter toggle ─────────────────────────────────── {%- endcomment -%}
+    <button class="ss-filter-toggle" id="ss-filter-toggle" aria-expanded="false" aria-controls="ss-sidebar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="4" y1="6" x2="20" y2="6"/>
+        <line x1="8" y1="12" x2="16" y2="12"/>
+        <line x1="11" y1="18" x2="13" y2="18"/>
+      </svg>
+      Filter Specifications
+    </button>
+
+    <div class="ss-layout">
+
+      {%- comment -%} ── Sidebar ──────────────────────────────────────────────── {%- endcomment -%}
+      <aside class="ss-sidebar" id="ss-sidebar" aria-label="Category filters">
+        <div class="ss-sidebar-inner">
+          <h3 class="ss-sidebar-heading">Categories</h3>
+          <div class="ss-radio-list" role="radiogroup" aria-label="Filter by category">
+
+            <label class="ss-radio-label">
+              <span class="ss-radio-track">
+                <input class="ss-radio" type="radio" name="ss-category" value="All" checked />
+                <span class="ss-radio-dot"></span>
+              </span>
+              <span class="ss-radio-text ss-radio-text--active">All</span>
+            </label>
+
+            {%- for cat in categories -%}
+              {%- if cat != blank -%}
+                <label class="ss-radio-label">
+                  <span class="ss-radio-track">
+                    <input class="ss-radio" type="radio" name="ss-category" value="{{ cat | escape }}" />
+                    <span class="ss-radio-dot"></span>
+                  </span>
+                  <span class="ss-radio-text">{{ cat | escape }}</span>
+                </label>
+              {%- endif -%}
+            {%- endfor -%}
+
+          </div>
+
+          {%- comment -%} ── Sidebar promo ──────────────────────────────────── {%- endcomment -%}
+          {%- if section.settings.contact_url != blank -%}
+            <div class="ss-sidebar-promo">
+              <p class="ss-promo-text">Need help finding a specific sheet?</p>
+              <a class="ss-promo-link" href="{{ section.settings.contact_url }}">Contact Support &rarr;</a>
+            </div>
+          {%- endif -%}
+        </div>
+      </aside>
+
+      {%- comment -%} ── Main content ────────────────────────────────────────── {%- endcomment -%}
+      <main class="ss-main" aria-label="Specification sheets">
+
+        {%- if specs.size > 0 -%}
+
+          <div
+            class="ss-grid"
+            id="ss-grid"
+            data-per-page="{{ section.settings.items_per_page | default: 12 }}"
+          >
+            {%- for spec in specs -%}
+              <article
+                class="ss-card"
+                data-title="{{ spec.title.value | downcase | escape }}"
+                data-sku="{{ spec.part_number.value | downcase | escape }}"
+                data-category="{{ spec.category.value | escape }}"
+              >
+                {%- comment -%} ── Card image / icon ─────────────────────────── {%- endcomment -%}
+                <div class="ss-card-thumb">
+                  {%- if spec.image.value != blank -%}
+                    <img
+                      src="{{ spec.image.value | image_url: width: 400 }}"
+                      alt="{{ spec.title.value | escape }}"
+                      width="400"
+                      height="400"
+                      loading="lazy"
+                    />
+                  {%- else -%}
+                    <div class="ss-card-icon" aria-hidden="true">
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10 9 9 9 8 9"/>
+                      </svg>
+                    </div>
+                  {%- endif -%}
+                </div>
+
+                {%- comment -%} ── Card body ──────────────────────────────────── {%- endcomment -%}
+                <div class="ss-card-body">
+                  {%- if spec.category.value != blank -%}
+                    <span class="ss-card-badge">{{ spec.category.value | escape }}</span>
+                  {%- endif -%}
+
+                  <h3 class="ss-card-title">{{ spec.title.value | escape }}</h3>
+
+                  <p class="ss-card-meta">
+                    {%- if spec.part_number.value != blank -%}
+                      SKU: {{ spec.part_number.value | escape }}
+                    {%- endif -%}
+                    {%- if spec.part_number.value != blank and spec.updated_date.value != blank -%}
+                      &nbsp;&bull;&nbsp;
+                    {%- endif -%}
+                    {%- if spec.updated_date.value != blank -%}
+                      Updated {{ spec.updated_date.value | escape }}
+                    {%- endif -%}
+                  </p>
+
+                  {%- if spec.pdf_link.value != blank -%}
+                    <div class="ss-card-actions">
+                      <a
+                        href="{{ spec.pdf_link.value.url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="ss-btn ss-btn--primary"
+                        aria-label="View {{ spec.title.value | escape }} specification sheet"
+                      >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                          <polyline points="14 2 14 8 20 8"/>
+                          <line x1="16" y1="13" x2="8" y2="13"/>
+                          <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                        View
+                      </a>
+                      <a
+                        href="{{ spec.pdf_link.value.url }}"
+                        download
+                        class="ss-btn ss-btn--outline"
+                        aria-label="Download {{ spec.title.value | escape }} PDF"
+                      >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                          <polyline points="7 10 12 15 17 10"/>
+                          <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        PDF
+                      </a>
+                    </div>
+                  {%- endif -%}
+                </div>
+              </article>
+            {%- endfor -%}
+          </div>
+
+          {%- comment -%} ── Empty / no-results state ──────────────────────── {%- endcomment -%}
+          <div class="ss-empty" id="ss-no-results" hidden aria-live="polite">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            <p class="ss-empty-title">No specification sheets found</p>
+            <p class="ss-empty-sub">Try adjusting your filters or search query.</p>
+          </div>
+
+          {%- comment -%} ── Pagination ────────────────────────────────────── {%- endcomment -%}
+          <nav class="ss-pagination" id="ss-pagination" aria-label="Pagination"></nav>
+
+        {%- else -%}
+          <div class="ss-empty">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            <p class="ss-empty-title">No specification sheets available yet.</p>
+          </div>
+        {%- endif -%}
+
+      </main>
+    </div>
+  </div>
+</div>
+
+<script src="{{ 'specification-sheets.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Specification Sheets",
+  "tag": "section",
+  "class": "ss-section",
+  "settings": [
+    {
+      "type": "number",
+      "id": "items_per_page",
+      "label": "Items per page",
+      "default": 12,
+      "info": "Number of cards shown per pagination page (recommended: 9 or 12)."
+    },
+    {
+      "type": "url",
+      "id": "contact_url",
+      "label": "Contact support URL",
+      "info": "Link shown at the bottom of the sidebar. Leave blank to hide."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Specification Sheets"
+    }
+  ]
+}
+{% endschema %}
