@@ -64,16 +64,19 @@
         },
         "volume_pricing_info_label_p6ebk7": {
           "type": "volume_pricing_info_label",
+          "disabled": true,
           "settings": {
             "volume_pricing_available_text": "Volume Pricing Available"
           }
         },
         "discount_progress_bar_qEUjei": {
           "type": "discount_progress_bar",
+          "disabled": true,
           "settings": {}
         },
         "volume_pricing_available_PDNPnr": {
           "type": "volume_pricing_available",
+          "disabled": true,
           "settings": {
             "show_volume_pricing_available": true,
             "volume_pricing_available_text": "Volume Pricing Available",
@@ -82,12 +85,14 @@
         },
         "regios_discounts_product_page_discount_BHiKmA": {
           "type": "shopify://apps/regios-discounts/blocks/product_page_discount/dc1514bb-4830-4102-bffa-e8b300bac5bd",
+          "disabled": true,
           "settings": {
             "product": "{{product}}"
           }
         },
         "regios_discounts_volume_pricing_table_L36WtN": {
           "type": "shopify://apps/regios-discounts/blocks/volume_pricing_table/dc1514bb-4830-4102-bffa-e8b300bac5bd",
+          "disabled": true,
           "settings": {
             "table_bg": "",
             "cell_title_quantity": "Quantity",
